@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b776810ebfa374d7ba8f0fb5ed6e3265, type: 3}
   m_Name: Forever And a Night_SettingsManager
   m_EditorClassIdentifier: 
-  saveFileName: Forever And a Night
-  saveTimeDisplay: 0
+  saveFileName: ForeverAndaNight
+  saveTimeDisplay: 1
   customSaveFormat: MMMM dd, yyyy
-  takeSaveScreenshots: 0
+  takeSaveScreenshots: 1
   useProfiles: 0
   maxSaves: 5
   orderSavesByUpdateTime: 0
@@ -29,11 +29,11 @@ MonoBehaviour:
   players: []
   movementMethod: 0
   inputMethod: 0
-  interactionMethod: 0
-  selectInteractions: 0
+  interactionMethod: 2
+  selectInteractions: 2
   autoHideInteractionIcons: 1
-  cancelInteractions: 0
-  seeInteractions: 0
+  cancelInteractions: 1
+  seeInteractions: 1
   closeInteractionMenuIfTapHotspot: 1
   stopPlayerOnClickHotspot: 0
   cycleInventoryCursors: 1

@@ -201,8 +201,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 7401750171866051200}
-  - {fileID: 3484868459739436255}
-  - {fileID: 606414373}
   m_Father: {fileID: 1247218057}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -324,7 +322,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 350394538}
   m_LocalRotation: {x: -0, y: -0, z: -0.35707465, w: 0.93407583}
-  m_LocalPosition: {x: 62.76, y: -5.47, z: 0}
+  m_LocalPosition: {x: 62.816, y: -1.865, z: 0}
   m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
   m_Children: []
   m_Father: {fileID: 0}
@@ -525,110 +523,150 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6000000, guid: ead02cb43d742407ba1be2b3ab274614, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.size
-      value: 13
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 6000000, guid: ead02cb43d742407ba1be2b3ab274614, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[2].x
-      value: 15.265499
+      value: -13.051662
       objectReference: {fileID: 0}
     - target: {fileID: 6000000, guid: ead02cb43d742407ba1be2b3ab274614, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[2].y
-      value: -1.809715
+      value: -2.6982882
       objectReference: {fileID: 0}
     - target: {fileID: 6000000, guid: ead02cb43d742407ba1be2b3ab274614, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[1].x
-      value: 15.052769
+      value: -16.93138
       objectReference: {fileID: 0}
     - target: {fileID: 6000000, guid: ead02cb43d742407ba1be2b3ab274614, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[1].y
-      value: -0.7095072
+      value: -2.035486
       objectReference: {fileID: 0}
     - target: {fileID: 6000000, guid: ead02cb43d742407ba1be2b3ab274614, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[3].x
-      value: 16.436127
+      value: -8.561939
       objectReference: {fileID: 0}
     - target: {fileID: 6000000, guid: ead02cb43d742407ba1be2b3ab274614, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[3].y
-      value: -2.8307579
+      value: -2.122142
       objectReference: {fileID: 0}
     - target: {fileID: 6000000, guid: ead02cb43d742407ba1be2b3ab274614, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[4].x
-      value: 20.00877
+      value: -8.560759
       objectReference: {fileID: 0}
     - target: {fileID: 6000000, guid: ead02cb43d742407ba1be2b3ab274614, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[4].y
-      value: -2.5427635
+      value: -0.64699244
       objectReference: {fileID: 0}
     - target: {fileID: 6000000, guid: ead02cb43d742407ba1be2b3ab274614, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[5].x
-      value: 23.712269
-      objectReference: {fileID: 0}
-    - target: {fileID: 6000000, guid: ead02cb43d742407ba1be2b3ab274614, type: 3}
-      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[5].y
-      value: -2.4206617
-      objectReference: {fileID: 0}
-    - target: {fileID: 6000000, guid: ead02cb43d742407ba1be2b3ab274614, type: 3}
-      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[0].x
       value: 12.521687
       objectReference: {fileID: 0}
     - target: {fileID: 6000000, guid: ead02cb43d742407ba1be2b3ab274614, type: 3}
-      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[0].y
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[5].y
       value: -0.8005502
       objectReference: {fileID: 0}
     - target: {fileID: 6000000, guid: ead02cb43d742407ba1be2b3ab274614, type: 3}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[0].x
+      value: -16.789413
+      objectReference: {fileID: 0}
+    - target: {fileID: 6000000, guid: ead02cb43d742407ba1be2b3ab274614, type: 3}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[0].y
+      value: -0.69572663
+      objectReference: {fileID: 0}
+    - target: {fileID: 6000000, guid: ead02cb43d742407ba1be2b3ab274614, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[6].x
-      value: 24.605095
+      value: 15.052769
       objectReference: {fileID: 0}
     - target: {fileID: 6000000, guid: ead02cb43d742407ba1be2b3ab274614, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[6].y
-      value: -1.8946788
+      value: -0.7095072
       objectReference: {fileID: 0}
     - target: {fileID: 6000000, guid: ead02cb43d742407ba1be2b3ab274614, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[7].x
-      value: 25.025627
+      value: 15.265499
       objectReference: {fileID: 0}
     - target: {fileID: 6000000, guid: ead02cb43d742407ba1be2b3ab274614, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[7].y
-      value: -0.2646587
+      value: -1.809715
       objectReference: {fileID: 0}
     - target: {fileID: 6000000, guid: ead02cb43d742407ba1be2b3ab274614, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[8].x
-      value: 30.130577
+      value: 16.436127
       objectReference: {fileID: 0}
     - target: {fileID: 6000000, guid: ead02cb43d742407ba1be2b3ab274614, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[8].y
-      value: -0.24900603
+      value: -2.8307579
       objectReference: {fileID: 0}
     - target: {fileID: 6000000, guid: ead02cb43d742407ba1be2b3ab274614, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[9].x
-      value: 95.46928
+      value: 20.00877
       objectReference: {fileID: 0}
     - target: {fileID: 6000000, guid: ead02cb43d742407ba1be2b3ab274614, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[9].y
-      value: 0.081376076
+      value: -2.5427635
       objectReference: {fileID: 0}
     - target: {fileID: 6000000, guid: ead02cb43d742407ba1be2b3ab274614, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[10].x
-      value: 95.15064
+      value: 23.712269
       objectReference: {fileID: 0}
     - target: {fileID: 6000000, guid: ead02cb43d742407ba1be2b3ab274614, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[10].y
-      value: -4.7250986
+      value: -2.4206617
       objectReference: {fileID: 0}
     - target: {fileID: 6000000, guid: ead02cb43d742407ba1be2b3ab274614, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[11].x
-      value: -56.95604
+      value: 24.605095
       objectReference: {fileID: 0}
     - target: {fileID: 6000000, guid: ead02cb43d742407ba1be2b3ab274614, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[11].y
-      value: -4.499646
+      value: -1.8946788
       objectReference: {fileID: 0}
     - target: {fileID: 6000000, guid: ead02cb43d742407ba1be2b3ab274614, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[12].x
-      value: -56.942024
+      value: 25.025627
       objectReference: {fileID: 0}
     - target: {fileID: 6000000, guid: ead02cb43d742407ba1be2b3ab274614, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[12].y
+      value: -0.2646587
+      objectReference: {fileID: 0}
+    - target: {fileID: 6000000, guid: ead02cb43d742407ba1be2b3ab274614, type: 3}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[13].x
+      value: 30.130577
+      objectReference: {fileID: 0}
+    - target: {fileID: 6000000, guid: ead02cb43d742407ba1be2b3ab274614, type: 3}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[13].y
+      value: -0.24900603
+      objectReference: {fileID: 0}
+    - target: {fileID: 6000000, guid: ead02cb43d742407ba1be2b3ab274614, type: 3}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[14].x
+      value: 95.46928
+      objectReference: {fileID: 0}
+    - target: {fileID: 6000000, guid: ead02cb43d742407ba1be2b3ab274614, type: 3}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[14].y
+      value: 0.081376076
+      objectReference: {fileID: 0}
+    - target: {fileID: 6000000, guid: ead02cb43d742407ba1be2b3ab274614, type: 3}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[15].x
+      value: 95.15064
+      objectReference: {fileID: 0}
+    - target: {fileID: 6000000, guid: ead02cb43d742407ba1be2b3ab274614, type: 3}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[15].y
+      value: -4.7250986
+      objectReference: {fileID: 0}
+    - target: {fileID: 6000000, guid: ead02cb43d742407ba1be2b3ab274614, type: 3}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[16].x
+      value: -56.95604
+      objectReference: {fileID: 0}
+    - target: {fileID: 6000000, guid: ead02cb43d742407ba1be2b3ab274614, type: 3}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[16].y
+      value: -4.499646
+      objectReference: {fileID: 0}
+    - target: {fileID: 6000000, guid: ead02cb43d742407ba1be2b3ab274614, type: 3}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[17].x
+      value: -56.942024
+      objectReference: {fileID: 0}
+    - target: {fileID: 6000000, guid: ead02cb43d742407ba1be2b3ab274614, type: 3}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[17].y
       value: 0.17057085
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -813,109 +851,6 @@ Transform:
   m_Father: {fileID: 2036064610}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &606414370
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 606414373}
-  - component: {fileID: 606414372}
-  - component: {fileID: 606414371}
-  m_Layer: 2
-  m_Name: StreetCam - Shop
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &606414371
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 606414370}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad1782e1498c14d42b981391318e14d0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  targetIsPlayer: 1
-  target: {fileID: 0}
-  isDragControlled: 0
-  focalDistance: 10
-  is2D: 0
-  lockHorizontal: 1
-  lockVertical: 1
-  limitHorizontal: 0
-  limitVertical: 0
-  constrainHorizontal: {x: 0, y: 0}
-  constrainVertical: {x: 0, y: 0}
-  freedom: {x: 0, y: 0}
-  dampSpeed: 0.9
-  directionInfluence: {x: 0, y: 0}
-  afterOffset: {x: 0, y: 0}
-  doSnapping: 0
-  unitSnap: 0.1
---- !u!20 &606414372
-Camera:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 606414370}
-  m_Enabled: 0
-  serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0.019607844}
-  m_projectionMatrixMode: 1
-  m_SensorSize: {x: 36, y: 24}
-  m_LensShift: {x: 0, y: 0}
-  m_GateFitMode: 2
-  m_FocalLength: 50
-  m_NormalizedViewPortRect:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 1
-    height: 1
-  near clip plane: 0.3
-  far clip plane: 1000
-  field of view: 60
-  orthographic: 1
-  orthographic size: 8.156267
-  m_Depth: 0
-  m_CullingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_RenderingPath: -1
-  m_TargetTexture: {fileID: 0}
-  m_TargetDisplay: 0
-  m_TargetEye: 3
-  m_HDR: 0
-  m_AllowMSAA: 1
-  m_AllowDynamicResolution: 0
-  m_ForceIntoRT: 0
-  m_OcclusionCulling: 1
-  m_StereoConvergence: 10
-  m_StereoSeparation: 0.022
---- !u!4 &606414373
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 606414370}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 89.52, y: 0, z: -1}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 307191174}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &693139623
 GameObject:
   m_ObjectHideFlags: 0
@@ -1025,6 +960,85 @@ Transform:
   m_Father: {fileID: 2036064610}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &776710874
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 776710876}
+  - component: {fileID: 776710875}
+  m_Layer: 0
+  m_Name: The Boy
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!212 &776710875
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 776710874}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 55060cf0107fa86408035b94b377ea28, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 7.38, y: 8.45}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!4 &776710876
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 776710874}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 27.025408, y: -2.2553074, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 21
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &835066161
 GameObject:
   m_ObjectHideFlags: 0
@@ -1056,6 +1070,109 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &854590845
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea4c3ba658ee84d51a7ccd6f9fc22176, type: 3}
+  m_Name: ActionRunActionList(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)
+  m_EditorClassIdentifier: 
+  id: 0
+  category: 0
+  title: Run
+  description: Runs any ActionList (either scene-based like Cutscenes, Triggers and
+    Interactions, or ActionList assets). If the new ActionList takes parameters, this
+    Action can be used to set them.
+  isDisplayed: 1
+  showComment: 0
+  comment: 
+  showOutputSockets: 1
+  numSockets: 1
+  willWait: 1
+  isRunning: 0
+  lastResult:
+    resultAction: 0
+    skipAction: -10
+    skipActionActual: {fileID: 0}
+    linkedCutscene: {fileID: 0}
+    linkedAsset: {fileID: 0}
+  endAction: 0
+  skipAction: 1
+  skipActionActual: {fileID: 1089592145}
+  linkedCutscene: {fileID: 0}
+  linkedAsset: {fileID: 0}
+  isEnabled: 1
+  isAssetFile: 0
+  isMarked: 0
+  isBreakPoint: 0
+  nodeRect:
+    serializedVersion: 2
+    x: 14
+    y: 14
+    width: 300
+    height: 237
+  nodeHeight: 0
+  listSource: 1
+  actionList: {fileID: 0}
+  constantID: 0
+  parameterID: -1
+  invActionList: {fileID: 11400000, guid: 34049db4ef2840141a5cb34b747a0dab, type: 2}
+  assetParameterID: -1
+  runFromStart: 1
+  jumpToAction: 0
+  jumpToActionParameterID: -1
+  jumpToActionActual: {fileID: 0}
+  runInParallel: 1
+  isSkippable: 0
+  localParameters:
+  - label: Parameter 1
+    ID: 0
+    parameterType: 0
+    intValue: 0
+    floatValue: 0
+    stringValue: 
+    gameObject: {fileID: 350394538}
+    objectValue: {fileID: 0}
+    vector3Value: {x: 0, y: 0, z: 0}
+    gameObjectParameterReferences: 0
+  - label: Parameter 2
+    ID: 1
+    parameterType: 0
+    intValue: 0
+    floatValue: 0
+    stringValue: 
+    gameObject: {fileID: 8696234318783925755}
+    objectValue: {fileID: 0}
+    vector3Value: {x: 0, y: 0, z: 0}
+    gameObjectParameterReferences: 0
+  - label: Parameter 3
+    ID: 2
+    parameterType: 0
+    intValue: 0
+    floatValue: 0
+    stringValue: 
+    gameObject: {fileID: 3544127354540537959}
+    objectValue: {fileID: 0}
+    vector3Value: {x: 0, y: 0, z: 0}
+    gameObjectParameterReferences: 0
+  - label: Parameter 4
+    ID: 3
+    parameterType: 1
+    intValue: 0
+    floatValue: 0
+    stringValue: 
+    gameObject: {fileID: 0}
+    objectValue: {fileID: 0}
+    vector3Value: {x: 0, y: 0, z: 0}
+    gameObjectParameterReferences: 0
+  parameterIDs: ffffffffffffffffffffffffffffffff
+  setParameters: 1
+  hasUpgradedAgain: 1
 --- !u!1 &856080136
 GameObject:
   m_ObjectHideFlags: 0
@@ -1086,6 +1203,53 @@ Transform:
   m_Father: {fileID: 490479504}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &932978467
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9289eb0ca58ef471f9062a5f77161403, type: 3}
+  m_Name: ActionPause(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)
+  m_EditorClassIdentifier: 
+  id: 1
+  category: 6
+  title: Wait
+  description: Waits a set time before continuing.
+  isDisplayed: 1
+  showComment: 0
+  comment: 
+  showOutputSockets: 1
+  numSockets: 1
+  willWait: 0
+  isRunning: 0
+  lastResult:
+    resultAction: 0
+    skipAction: -10
+    skipActionActual: {fileID: 0}
+    linkedCutscene: {fileID: 0}
+    linkedAsset: {fileID: 0}
+  endAction: 0
+  skipAction: -1
+  skipActionActual: {fileID: 0}
+  linkedCutscene: {fileID: 0}
+  linkedAsset: {fileID: 0}
+  isEnabled: 1
+  isAssetFile: 0
+  isMarked: 0
+  isBreakPoint: 0
+  nodeRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 300
+    height: 60
+  nodeHeight: 0
+  parameterID: -1
+  timeToPause: 0
 --- !u!4 &936721696 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6836829404582979485, guid: 4140b8f9890e96e4f9726632a2b195e8,
@@ -1122,53 +1286,6 @@ Transform:
   m_Father: {fileID: 490479504}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1036442822
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9289eb0ca58ef471f9062a5f77161403, type: 3}
-  m_Name: ActionPause(Clone)(Clone)(Clone)
-  m_EditorClassIdentifier: 
-  id: 0
-  category: 6
-  title: Wait
-  description: Waits a set time before continuing.
-  isDisplayed: 1
-  showComment: 0
-  comment: 
-  showOutputSockets: 1
-  numSockets: 1
-  willWait: 0
-  isRunning: 0
-  lastResult:
-    resultAction: 0
-    skipAction: -10
-    skipActionActual: {fileID: 0}
-    linkedCutscene: {fileID: 0}
-    linkedAsset: {fileID: 0}
-  endAction: 0
-  skipAction: -1
-  skipActionActual: {fileID: 0}
-  linkedCutscene: {fileID: 0}
-  linkedAsset: {fileID: 0}
-  isEnabled: 1
-  isAssetFile: 0
-  isMarked: 0
-  isBreakPoint: 0
-  nodeRect:
-    serializedVersion: 2
-    x: 14
-    y: 14
-    width: 300
-    height: 86
-  nodeHeight: 0
-  parameterID: -1
-  timeToPause: 0
 --- !u!1 &1057065392
 GameObject:
   m_ObjectHideFlags: 0
@@ -1203,6 +1320,72 @@ Transform:
   m_Father: {fileID: 490479504}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1089592145
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed656dc9f403a441f8fe89408c7a7189, type: 3}
+  m_Name: ActionSpeech
+  m_EditorClassIdentifier: 
+  id: 0
+  category: 4
+  title: Play speech
+  description: "Makes a Character talk, or \u2013 if no Character is specified \u2013
+    displays a message. Subtitles only appear if they are enabled from the Options
+    menu. A 'thinking' effect can be produced by opting to not play any animation."
+  isDisplayed: 1
+  showComment: 0
+  comment: 
+  showOutputSockets: 1
+  numSockets: 1
+  willWait: 0
+  isRunning: 0
+  lastResult:
+    resultAction: 0
+    skipAction: -10
+    skipActionActual: {fileID: 0}
+    linkedCutscene: {fileID: 0}
+    linkedAsset: {fileID: 0}
+  endAction: 1
+  skipAction: 1
+  skipActionActual: {fileID: 1089592145}
+  linkedCutscene: {fileID: 0}
+  linkedAsset: {fileID: 0}
+  isEnabled: 1
+  isAssetFile: 0
+  isMarked: 0
+  isBreakPoint: 0
+  nodeRect:
+    serializedVersion: 2
+    x: 14
+    y: 281
+    width: 300
+    height: 140
+  nodeHeight: 0
+  constantID: 0
+  parameterID: -1
+  messageParameterID: -1
+  isPlayer: 1
+  speaker: {fileID: 0}
+  messageText: Wierd Lolipop... I Should pick it up
+  lineID: -1
+  multiLineIDs: 
+  isBackground: 0
+  noAnimation: 0
+  headClip: {fileID: 0}
+  mouthClip: {fileID: 0}
+  play2DHeadAnim: 0
+  headClip2D: 
+  headLayer: 0
+  play2DMouthAnim: 0
+  mouthClip2D: 
+  mouthLayer: 0
+  waitTimeOffset: 0
 --- !u!1 &1092388166
 GameObject:
   m_ObjectHideFlags: 0
@@ -1309,6 +1492,53 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ffb48ecf9de44666b3779fe84044e36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1139355097
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9289eb0ca58ef471f9062a5f77161403, type: 3}
+  m_Name: ActionPause(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)
+  m_EditorClassIdentifier: 
+  id: 0
+  category: 6
+  title: Wait
+  description: Waits a set time before continuing.
+  isDisplayed: 1
+  showComment: 0
+  comment: 
+  showOutputSockets: 1
+  numSockets: 1
+  willWait: 0
+  isRunning: 0
+  lastResult:
+    resultAction: 0
+    skipAction: -10
+    skipActionActual: {fileID: 0}
+    linkedCutscene: {fileID: 0}
+    linkedAsset: {fileID: 0}
+  endAction: 0
+  skipAction: -1
+  skipActionActual: {fileID: 0}
+  linkedCutscene: {fileID: 0}
+  linkedAsset: {fileID: 0}
+  isEnabled: 1
+  isAssetFile: 0
+  isMarked: 0
+  isBreakPoint: 0
+  nodeRect:
+    serializedVersion: 2
+    x: 14
+    y: 14
+    width: 300
+    height: 86
+  nodeHeight: 0
+  parameterID: -1
+  timeToPause: 0
 --- !u!1 &1195117448
 GameObject:
   m_ObjectHideFlags: 0
@@ -1465,6 +1695,67 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1258883743
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1d11677f69f745f88dbe9922511d53f, type: 3}
+  m_Name: ActionScene
+  m_EditorClassIdentifier: 
+  id: 0
+  category: 15
+  title: Switch
+  description: 'Moves the Player to a new scene. The scene must be listed in Unity''s
+    Build Settings. By default, the screen will cut to black during the transition,
+    but the last frame of the current scene can instead be overlayed. This allows
+    for cinematic effects: if the next scene fades in, it will cause a crossfade effect;
+    if the next scene doesn''t fade, it will cause a straight cut.'
+  isDisplayed: 1
+  showComment: 0
+  comment: 
+  showOutputSockets: 1
+  numSockets: 0
+  willWait: 0
+  isRunning: 0
+  lastResult:
+    resultAction: 0
+    skipAction: -10
+    skipActionActual: {fileID: 0}
+    linkedCutscene: {fileID: 0}
+    linkedAsset: {fileID: 0}
+  endAction: 0
+  skipAction: -1
+  skipActionActual: {fileID: 0}
+  linkedCutscene: {fileID: 0}
+  linkedAsset: {fileID: 0}
+  isEnabled: 1
+  isAssetFile: 0
+  isMarked: 0
+  isBreakPoint: 0
+  nodeRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 300
+    height: 60
+  nodeHeight: 0
+  chooseSceneBy: 1
+  sceneNumber: 0
+  sceneNumberParameterID: -1
+  sceneName: Room 201 - Well Inside
+  sceneNameParameterID: -1
+  assignScreenOverlay: 0
+  onlyPreload: 0
+  relativePosition: 0
+  relativeMarker: {fileID: 0}
+  relativeMarkerID: 0
+  relativeMarkerParameterID: -1
+  forceReload: 0
 --- !u!1 &1269886911
 GameObject:
   m_ObjectHideFlags: 0
@@ -1586,6 +1877,72 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea52220853ef74eb1b84cc002ce3d474, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1378225953
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed656dc9f403a441f8fe89408c7a7189, type: 3}
+  m_Name: ActionSpeech(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)
+  m_EditorClassIdentifier: 
+  id: 0
+  category: 4
+  title: Play speech
+  description: "Makes a Character talk, or \u2013 if no Character is specified \u2013
+    displays a message. Subtitles only appear if they are enabled from the Options
+    menu. A 'thinking' effect can be produced by opting to not play any animation."
+  isDisplayed: 1
+  showComment: 0
+  comment: 
+  showOutputSockets: 1
+  numSockets: 1
+  willWait: 0
+  isRunning: 0
+  lastResult:
+    resultAction: 0
+    skipAction: -10
+    skipActionActual: {fileID: 0}
+    linkedCutscene: {fileID: 0}
+    linkedAsset: {fileID: 0}
+  endAction: 1
+  skipAction: 1
+  skipActionActual: {fileID: 1378225953}
+  linkedCutscene: {fileID: 0}
+  linkedAsset: {fileID: 0}
+  isEnabled: 1
+  isAssetFile: 0
+  isMarked: 0
+  isBreakPoint: 0
+  nodeRect:
+    serializedVersion: 2
+    x: 14
+    y: 281
+    width: 300
+    height: 140
+  nodeHeight: 0
+  constantID: 0
+  parameterID: -1
+  messageParameterID: -1
+  isPlayer: 1
+  speaker: {fileID: 0}
+  messageText: Wierd Lolipop... I Should pick it up
+  lineID: -1
+  multiLineIDs: 
+  isBackground: 0
+  noAnimation: 0
+  headClip: {fileID: 0}
+  mouthClip: {fileID: 0}
+  play2DHeadAnim: 0
+  headClip2D: 
+  headLayer: 0
+  play2DMouthAnim: 0
+  mouthClip2D: 
+  mouthLayer: 0
+  waitTimeOffset: 0
 --- !u!1 &1475199131
 GameObject:
   m_ObjectHideFlags: 0
@@ -1649,6 +2006,53 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1528582313
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9289eb0ca58ef471f9062a5f77161403, type: 3}
+  m_Name: ActionPause(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)
+  m_EditorClassIdentifier: 
+  id: 0
+  category: 6
+  title: Wait
+  description: Waits a set time before continuing.
+  isDisplayed: 1
+  showComment: 0
+  comment: 
+  showOutputSockets: 1
+  numSockets: 1
+  willWait: 0
+  isRunning: 0
+  lastResult:
+    resultAction: 0
+    skipAction: -10
+    skipActionActual: {fileID: 0}
+    linkedCutscene: {fileID: 0}
+    linkedAsset: {fileID: 0}
+  endAction: 0
+  skipAction: -1
+  skipActionActual: {fileID: 0}
+  linkedCutscene: {fileID: 0}
+  linkedAsset: {fileID: 0}
+  isEnabled: 1
+  isAssetFile: 0
+  isMarked: 0
+  isBreakPoint: 0
+  nodeRect:
+    serializedVersion: 2
+    x: 14
+    y: 14
+    width: 300
+    height: 86
+  nodeHeight: 0
+  parameterID: -1
+  timeToPause: 0
 --- !u!1001 &1531376882
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2007,6 +2411,67 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1980917106
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1d11677f69f745f88dbe9922511d53f, type: 3}
+  m_Name: ActionScene(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)
+  m_EditorClassIdentifier: 
+  id: 0
+  category: 15
+  title: Switch
+  description: 'Moves the Player to a new scene. The scene must be listed in Unity''s
+    Build Settings. By default, the screen will cut to black during the transition,
+    but the last frame of the current scene can instead be overlayed. This allows
+    for cinematic effects: if the next scene fades in, it will cause a crossfade effect;
+    if the next scene doesn''t fade, it will cause a straight cut.'
+  isDisplayed: 1
+  showComment: 0
+  comment: 
+  showOutputSockets: 1
+  numSockets: 0
+  willWait: 0
+  isRunning: 0
+  lastResult:
+    resultAction: 0
+    skipAction: -10
+    skipActionActual: {fileID: 0}
+    linkedCutscene: {fileID: 0}
+    linkedAsset: {fileID: 0}
+  endAction: 1
+  skipAction: -1
+  skipActionActual: {fileID: 0}
+  linkedCutscene: {fileID: 0}
+  linkedAsset: {fileID: 0}
+  isEnabled: 1
+  isAssetFile: 0
+  isMarked: 0
+  isBreakPoint: 0
+  nodeRect:
+    serializedVersion: 2
+    x: 14
+    y: 14
+    width: 300
+    height: 150
+  nodeHeight: 0
+  chooseSceneBy: 1
+  sceneNumber: 0
+  sceneNumberParameterID: -1
+  sceneName: Room 202 - Shop
+  sceneNameParameterID: -1
+  assignScreenOverlay: 0
+  onlyPreload: 0
+  relativePosition: 0
+  relativeMarker: {fileID: 0}
+  relativeMarkerID: 0
+  relativeMarkerParameterID: -1
+  forceReload: 0
 --- !u!1 &2003042622
 GameObject:
   m_ObjectHideFlags: 0
@@ -2308,7 +2773,7 @@ MonoBehaviour:
   previousSceneName: Room 201 - Well Inside
   fadeInOnStart: 1
   fadeSpeed: 0.5
-  cameraOnStart: {fileID: 3484868459728256287}
+  cameraOnStart: {fileID: 7401750171876907840}
 --- !u!114 &1481908715653858838
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2321,7 +2786,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3adbc08fa3d5641d4bf0544d11b7fb59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  actions: []
+  actions:
+  - {fileID: 1528582313}
+  - {fileID: 932978467}
   isSkippable: 1
   triggerTime: 0
   autosaveAfter: 0
@@ -2564,7 +3031,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a1e6413216104fd580c7ce85907039c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  actions: []
+  actions:
+  - {fileID: 1258883743}
   isSkippable: 1
   triggerTime: 0
   autosaveAfter: 0
@@ -2620,7 +3088,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a1e6413216104fd580c7ce85907039c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  actions: []
+  actions:
+  - {fileID: 1980917106}
   isSkippable: 1
   triggerTime: 0
   autosaveAfter: 0
@@ -2633,109 +3102,6 @@ MonoBehaviour:
   parameters: []
   tagID: 0
   syncParamValues: 1
---- !u!114 &3484868459728256287
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3484868459739531519}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad1782e1498c14d42b981391318e14d0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  targetIsPlayer: 1
-  target: {fileID: 0}
-  isDragControlled: 0
-  focalDistance: 10
-  is2D: 0
-  lockHorizontal: 1
-  lockVertical: 1
-  limitHorizontal: 0
-  limitVertical: 0
-  constrainHorizontal: {x: 0, y: 0}
-  constrainVertical: {x: 0, y: 0}
-  freedom: {x: 0, y: 0}
-  dampSpeed: 0.9
-  directionInfluence: {x: 0, y: 0}
-  afterOffset: {x: 0, y: 0}
-  doSnapping: 0
-  unitSnap: 0.1
---- !u!20 &3484868459737893599
-Camera:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3484868459739531519}
-  m_Enabled: 0
-  serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0.019607844}
-  m_projectionMatrixMode: 1
-  m_SensorSize: {x: 36, y: 24}
-  m_LensShift: {x: 0, y: 0}
-  m_GateFitMode: 2
-  m_FocalLength: 50
-  m_NormalizedViewPortRect:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 1
-    height: 1
-  near clip plane: 0.3
-  far clip plane: 1000
-  field of view: 60
-  orthographic: 1
-  orthographic size: 8.156267
-  m_Depth: 0
-  m_CullingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_RenderingPath: -1
-  m_TargetTexture: {fileID: 0}
-  m_TargetDisplay: 0
-  m_TargetEye: 3
-  m_HDR: 0
-  m_AllowMSAA: 1
-  m_AllowDynamicResolution: 0
-  m_ForceIntoRT: 0
-  m_OcclusionCulling: 1
-  m_StereoConvergence: 10
-  m_StereoSeparation: 0.022
---- !u!4 &3484868459739436255
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3484868459739531519}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 61, y: 0, z: -1}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 307191174}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &3484868459739531519
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 3484868459739436255}
-  - component: {fileID: 3484868459737893599}
-  - component: {fileID: 3484868459728256287}
-  m_Layer: 2
-  m_Name: StreetCam - Well
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!1 &3544127354540537959
 GameObject:
   m_ObjectHideFlags: 0
@@ -2777,13 +3143,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3544127354540537959}
-  m_LocalRotation: {x: -0, y: -0, z: -0.37700245, w: 0.92621225}
-  m_LocalPosition: {x: 61.48, y: -7.07, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: 0.5053077, w: 0.86293936}
+  m_LocalPosition: {x: 65.18, y: -5.18, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1475199132}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -44.296}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 60.704002}
 --- !u!114 &3544127354547621255
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2857,7 +3223,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   actions:
-  - {fileID: 1036442822}
+  - {fileID: 854590845}
+  - {fileID: 1378225953}
   isSkippable: 1
   triggerTime: 0
   autosaveAfter: 0
@@ -2896,7 +3263,7 @@ GameObject:
   - component: {fileID: 3844148227250126560}
   - component: {fileID: 3844148227257174785}
   m_Layer: 0
-  m_Name: 'Hotspot : Lolipop_Item: Look at'
+  m_Name: 'Hotspot : Lolipop_Item: Pick up'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3290,7 +3657,7 @@ MonoBehaviour:
   previousSceneName: Room 202 - Shop
   fadeInOnStart: 1
   fadeSpeed: 0.5
-  cameraOnStart: {fileID: 606414371}
+  cameraOnStart: {fileID: 7401750171876907840}
 --- !u!4 &6452366126982294122
 Transform:
   m_ObjectHideFlags: 0
@@ -3368,7 +3735,7 @@ MonoBehaviour:
     customScriptFunction: 
     isDisabled: 0
     invID: 0
-    iconID: 0
+    iconID: 5
     selectItemMode: 0
     playerAction: 3
     setProximity: 0
@@ -3573,13 +3940,29 @@ GameObject:
   - component: {fileID: 7401750171866051200}
   - component: {fileID: 7401750171867655296}
   - component: {fileID: 7401750171876907840}
+  - component: {fileID: 7401750171866148513}
   m_Layer: 2
-  m_Name: StreetCam - Left
+  m_Name: StreetCamera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &7401750171866148513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7401750171866148512}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f72e60470f1fa4fd1825cd67ce482cf6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  constantID: 17668
+  retainInPrefab: 0
+  autoManual: 0
 --- !u!20 &7401750171867655296
 Camera:
   m_ObjectHideFlags: 0
@@ -3643,12 +4026,12 @@ MonoBehaviour:
   lockVertical: 0
   limitHorizontal: 1
   limitVertical: 1
-  constrainHorizontal: {x: 0.91, y: 0}
+  constrainHorizontal: {x: 115, y: 0}
   constrainVertical: {x: 0, y: 0}
-  freedom: {x: 5, y: 0}
+  freedom: {x: 3.5, y: 0}
   dampSpeed: 0.9
   directionInfluence: {x: 0, y: 0}
-  afterOffset: {x: 3, y: 0}
+  afterOffset: {x: 1.5, y: 0}
   doSnapping: 0
   unitSnap: 0.1
 --- !u!212 &8023923797601710128
@@ -3755,7 +4138,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a1e6413216104fd580c7ce85907039c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  actions: []
+  actions:
+  - {fileID: 1139355097}
   isSkippable: 1
   triggerTime: 0
   autosaveAfter: 0
@@ -3905,7 +4289,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8696234318783925755}
   m_LocalRotation: {x: -0, y: -0, z: -0.26613858, w: 0.9639348}
-  m_LocalPosition: {x: 62.81, y: -5.38, z: 0}
+  m_LocalPosition: {x: 62.866005, y: -1.7750002, z: 0}
   m_LocalScale: {x: 5.3770657, y: 5.213422, z: 0.05}
   m_Children: []
   m_Father: {fileID: 1057065393}
