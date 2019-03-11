@@ -4,7 +4,8 @@
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -28,7 +29,7 @@ MonoBehaviour:
     textValLineID: -1
     popUpsLineID: -1
     description: 
-    showInFilter: 0
+    showInFilter: 1
   - label: Placed worm
     id: 1
     type: 0
@@ -45,7 +46,7 @@ MonoBehaviour:
     textValLineID: -1
     popUpsLineID: -1
     description: 
-    showInFilter: 0
+    showInFilter: 1
   - label: Lunch fallen
     id: 2
     type: 0
@@ -62,6 +63,6 @@ MonoBehaviour:
     textValLineID: -1
     popUpsLineID: -1
     description: 
-    showInFilter: 0
+    showInFilter: 1
   varPresets: []
   updateRuntime: 1

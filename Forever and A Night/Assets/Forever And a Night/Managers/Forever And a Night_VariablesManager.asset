@@ -13,7 +13,11 @@ MonoBehaviour:
   m_Name: Forever And a Night_VariablesManager
   m_EditorClassIdentifier: 
   vars:
+<<<<<<< HEAD
   - label: Rope used
+=======
+  - label: Well Access
+>>>>>>> bd3cc864df49cd73ef6f6d3896a0427701d55b65
     id: 0
     type: 0
     val: 0
