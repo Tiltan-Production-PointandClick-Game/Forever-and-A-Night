@@ -11,11 +11,11 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f5a2543a119f842959d20e84db3140dd, type: 3}
   m_Name: Forever And a Night_InventoryManager
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier:
   items:
   - label: Weird Lolipop
     id: 0
-    altLabel: 
+    altLabel:
     carryOnStart: 0
     carryOnStartNotDefault: 0
     carryOnStartID: 0
@@ -62,7 +62,7 @@ MonoBehaviour:
     lookActionList: {fileID: 0}
     interactions: []
     combineActionList: []
-    combineID: 
+    combineID:
     unhandledActionList: {fileID: 0}
     unhandledCombineActionList: {fileID: 0}
     showInFilter: 1
