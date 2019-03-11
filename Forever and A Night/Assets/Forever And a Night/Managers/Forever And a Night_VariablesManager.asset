@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e62f4daee811464dbcf224bb5b367b4, type: 3}
   m_Name: Forever And a Night_VariablesManager
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   vars:
 <<<<<<< HEAD
   - label: Rope used
@@ -34,5 +35,8 @@ MonoBehaviour:
     popUpsLineID: -1
     description: 
     showInFilter: 1
+=======
+  vars: []
+>>>>>>> parent of 0126752... POC ready and delivered
   varPresets: []
   updateRuntime: 1
