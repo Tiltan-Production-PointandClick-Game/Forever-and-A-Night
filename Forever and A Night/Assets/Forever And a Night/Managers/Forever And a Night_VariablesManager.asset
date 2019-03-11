@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Forever And a Night_VariablesManager
   m_EditorClassIdentifier: 
 <<<<<<< HEAD
+<<<<<<< HEAD
   vars:
 <<<<<<< HEAD
   - label: Rope used
@@ -35,6 +36,9 @@ MonoBehaviour:
     popUpsLineID: -1
     description: 
     showInFilter: 1
+=======
+  vars: []
+>>>>>>> parent of 0126752... POC ready and delivered
 =======
   vars: []
 >>>>>>> parent of 0126752... POC ready and delivered
