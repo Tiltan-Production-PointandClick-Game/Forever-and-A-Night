@@ -58,6 +58,7 @@ MonoBehaviour:
     hotspotPrefix2:
       label: on
       lineID: -1
+<<<<<<< HEAD
     useActionList: {fileID: 11400000, guid: 8c57587fef07ef9458e9d0f647ba44d3, type: 2}
     lookActionList: {fileID: 0}
     interactions: []
@@ -65,6 +66,13 @@ MonoBehaviour:
 <<<<<<< HEAD
     combineID:
 =======
+    combineID: 
+>>>>>>> parent of 0126752... POC ready and delivered
+=======
+    useActionList: {fileID: 0}
+    lookActionList: {fileID: 0}
+    interactions: []
+    combineActionList: []
     combineID: 
 >>>>>>> parent of 0126752... POC ready and delivered
     unhandledActionList: {fileID: 0}
