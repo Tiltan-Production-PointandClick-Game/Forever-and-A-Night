@@ -45,7 +45,7 @@ MonoBehaviour:
     frameSpeeds: []
     alwaysAnimate: 0
   pointerIcon:
-    texture: {fileID: 2800000, guid: 67aa9c0f9cff4c142816c368d17ad5f4, type: 3}
+    texture: {fileID: 2800000, guid: 30b6d90cff7af844e9a5cc8e1819c6d5, type: 3}
     isAnimated: 0
     numFrames: 1
     numRows: 1
@@ -71,7 +71,7 @@ MonoBehaviour:
     frameSpeeds: []
     alwaysAnimate: 0
   mouseOverIcon:
-    texture: {fileID: 2800000, guid: 95700204c552a3b4b839d39600d27b6e, type: 3}
+    texture: {fileID: 2800000, guid: 22ad5cee1c5cb2a40b4b9544fad00b0c, type: 3}
     isAnimated: 0
     numFrames: 1
     numRows: 1
@@ -113,8 +113,8 @@ MonoBehaviour:
     label: Use
     lineID: -1
     id: 0
-  - texture: {fileID: 2800000, guid: d44719a8efc4f914786c51fd9d7c9bf5, type: 3}
-    isAnimated: 0
+  - texture: {fileID: 2800000, guid: 33476e9df62d08f4a8a863ec164eea01, type: 3}
+    isAnimated: 1
     numFrames: 1
     numRows: 1
     numCols: 1
@@ -123,13 +123,14 @@ MonoBehaviour:
     endAnimOnLastFrame: 0
     skipFirstFrameWhenLooping: 0
     clickOffset: {x: 0, y: 0}
-    frameSpeeds: []
+    frameSpeeds:
+    - 1
     alwaysAnimate: 0
     dontCycle: 0
     label: Talk to
     lineID: -1
     id: 1
-  - texture: {fileID: 2800000, guid: fd6b86e931de9244d81d65566c9ab389, type: 3}
+  - texture: {fileID: 2800000, guid: 3bdc038566d697a49abdff83a59f7bcf, type: 3}
     isAnimated: 0
     numFrames: 1
     numRows: 1
@@ -145,7 +146,7 @@ MonoBehaviour:
     label: Look at
     lineID: -1
     id: 2
-  - texture: {fileID: 2800000, guid: 6b4be1f873050b14f8eb5025c447c5f2, type: 3}
+  - texture: {fileID: 2800000, guid: c3ce9104a9ec71c4385d2ef9b8b4cd5f, type: 3}
     isAnimated: 0
     numFrames: 1
     numRows: 1
@@ -161,7 +162,7 @@ MonoBehaviour:
     label: Pick Up
     lineID: -1
     id: 3
-  - texture: {fileID: 2800000, guid: 4e243ddd19e03084f96fabe9fc5e40c4, type: 3}
+  - texture: {fileID: 2800000, guid: 426871baab03c234980733b4dc732172, type: 3}
     isAnimated: 0
     numFrames: 1
     numRows: 1
@@ -177,7 +178,7 @@ MonoBehaviour:
     label: Use Item
     lineID: -1
     id: 4
-  - texture: {fileID: 2800000, guid: 652796c59154a9d4cab5856d302d35a3, type: 3}
+  - texture: {fileID: 2800000, guid: 548b147c50d851b43ae16be232b98ce8, type: 3}
     isAnimated: 0
     numFrames: 1
     numRows: 1
@@ -193,7 +194,7 @@ MonoBehaviour:
     label: Enter Room
     lineID: -1
     id: 5
-  - texture: {fileID: 2800000, guid: 114505c5418a9dd478d0230c5018f8ec, type: 3}
+  - texture: {fileID: 2800000, guid: 62e8655e30ca1dd4d93d2e8817b37c13, type: 3}
     isAnimated: 0
     numFrames: 1
     numRows: 1
