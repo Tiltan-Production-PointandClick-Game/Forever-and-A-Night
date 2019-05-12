@@ -1,7 +1,7 @@
 /*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2018
+ *	by Chris Burton, 2013-2019
  *	
  *	"RememberHotspot.cs"
  * 
@@ -35,15 +35,17 @@ namespace AC
 		{
 			if (loadedData) return;
 
-			if (KickStarter.settingsManager && GameIsPlaying () && GetComponent <Hotspot>())
+			if (OwnHotspot != null &&
+				KickStarter.settingsManager &&
+				GameIsPlaying ())
 			{
 				if (startState == AC_OnOff.On)
 				{
-					GetComponent <Hotspot>().TurnOn ();
+					OwnHotspot.TurnOn ();
 				}
 				else
 				{
-					GetComponent <Hotspot>().TurnOff ();
+					OwnHotspot.TurnOff ();
 				}
 			}
 		}
@@ -59,14 +61,13 @@ namespace AC
 			hotspotData.objectID = constantID;
 			hotspotData.savePrevented = savePrevented;
 
-			if (GetComponent <Hotspot>())
+			if (OwnHotspot != null)
 			{
-				Hotspot _hotspot = GetComponent <Hotspot>();
-				hotspotData.isOn = _hotspot.IsOn ();
-				hotspotData.buttonStates = ButtonStatesToString (_hotspot);
+				hotspotData.isOn = OwnHotspot.IsOn ();
+				hotspotData.buttonStates = ButtonStatesToString (OwnHotspot);
 
-				hotspotData.hotspotName = _hotspot.GetName (0);
-				hotspotData.displayLineID = _hotspot.displayLineID;
+				hotspotData.hotspotName = OwnHotspot.GetName (0);
+				hotspotData.displayLineID = OwnHotspot.displayLineID;
 			}
 			
 			return Serializer.SaveScriptData <HotspotData> (hotspotData);
@@ -96,26 +97,24 @@ namespace AC
 				gameObject.layer = LayerMask.NameToLayer (KickStarter.settingsManager.deactivatedLayer);
 			}
 
-			if (GetComponent <Hotspot>())
+			if (OwnHotspot != null)
 			{
-				Hotspot _hotspot = GetComponent <Hotspot>();
-
 				if (data.isOn)
 				{
-					_hotspot.TurnOn ();
+					OwnHotspot.TurnOn ();
 				}
 				else
 				{
-					_hotspot.TurnOff ();
+					OwnHotspot.TurnOff ();
 				}
 
-				StringToButtonStates (_hotspot, data.buttonStates);
+				StringToButtonStates (OwnHotspot, data.buttonStates);
 
 				if (data.hotspotName != "")
 				{
-					_hotspot.SetName (data.hotspotName, data.displayLineID);
+					OwnHotspot.SetName (data.hotspotName, data.displayLineID);
 				}
-				_hotspot.ResetMainIcon ();
+				OwnHotspot.ResetMainIcon ();
 			}
 
 			loadedData = true;
@@ -244,6 +243,20 @@ namespace AC
 			}
 			
 			return true;
+		}
+
+
+		private Hotspot ownHotspot;
+		private Hotspot OwnHotspot
+		{
+			get
+			{
+				if (ownHotspot == null)
+				{
+					ownHotspot = GetComponent <Hotspot>();
+				}
+				return ownHotspot;
+			}
 		}
 
 	}

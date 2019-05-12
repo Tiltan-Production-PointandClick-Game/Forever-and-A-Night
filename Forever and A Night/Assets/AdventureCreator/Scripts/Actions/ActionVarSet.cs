@@ -1,7 +1,7 @@
 /*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2018
+ *	by Chris Burton, 2013-2019
  *	
  *	"ActionVarSet.cs"
  * 
@@ -659,20 +659,20 @@ namespace AC
 		{
 			if (location == VariableLocation.Local && !isAssetFile)
 			{
-				if (localVariables)
+				if (localVariables != null)
 				{
 					return GetLabelString (localVariables.localVars);
 				}
 			}
 			else
 			{
-				if (AdvGame.GetReferences ().variablesManager)
+				if (AdvGame.GetReferences ().variablesManager != null)
 				{
 					return GetLabelString (AdvGame.GetReferences ().variablesManager.vars);
 				}
 			}
 			
-			return "";
+			return string.Empty;
 		}
 
 
@@ -682,7 +682,7 @@ namespace AC
 
 			if (vars.Count > 0 && variableNumber > -1 && vars.Count > variableNumber)
 			{
-				labelAdd = " (" + vars [variableNumber].label;
+				labelAdd = vars [variableNumber].label;
 
 				if (vars[variableNumber].type == VariableType.Integer)
 				{
@@ -765,8 +765,6 @@ namespace AC
 						labelAdd += " = " + elementName;
 					}
 				}
-
-				labelAdd += ")";
 			}
 
 			return labelAdd;

@@ -1,7 +1,7 @@
 /*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2018
+ *	by Chris Burton, 2013-2019
  *	
  *	"ActionInputCheck.cs"
  * 
@@ -152,7 +152,7 @@ namespace AC
 		
 		public override string SetLabel ()
 		{
-			return (" (" + inputName + ")");
+			return inputName;
 		}
 		
 		#endif

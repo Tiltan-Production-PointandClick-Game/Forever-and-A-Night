@@ -12,31 +12,7 @@ namespace AC
 		{
 			GameCamera _target = (GameCamera) target;
 			
-			EditorGUILayout.BeginVertical ("Button");
-			EditorGUILayout.LabelField ("Cursor influence", EditorStyles.boldLabel);
-			_target.followCursor = CustomGUILayout.Toggle ("Follow cursor?", _target.followCursor, "", "If True, then the camera will rotate towards the cursor's position on-screen");
-			if (_target.followCursor)
-			{
-				_target.cursorInfluence = CustomGUILayout.Vector2Field ("Panning factor:", _target.cursorInfluence, "", "The influence that the cursor's position has on rotation");
-				_target.constrainCursorInfluenceX = CustomGUILayout.ToggleLeft ("Constrain panning in X direction?", _target.constrainCursorInfluenceX, "", "If True, then camera rotation according to the cursor's X position will be limited");
-				if (_target.constrainCursorInfluenceX)
-				{
-					_target.limitCursorInfluenceX[0] = CustomGUILayout.Slider ("Minimum X constraint:", _target.limitCursorInfluenceX[0], -1.4f, 0f, "", "The cursor influence's lower limit in the X-direction");
-					_target.limitCursorInfluenceX[1] = CustomGUILayout.Slider ("Maximum X constraint:", _target.limitCursorInfluenceX[1], 0f, 1.4f, "", "The cursor influence's upper limit in the X-direction");
-				}
-				_target.constrainCursorInfluenceY = CustomGUILayout.ToggleLeft ("Constrain panning in Y direction?", _target.constrainCursorInfluenceY, "", "If True, then camera rotation according to the cursor's Y position will be limited");
-				if (_target.constrainCursorInfluenceY)
-				{
-					_target.limitCursorInfluenceY[0] = CustomGUILayout.Slider ("Minimum Y constraint:", _target.limitCursorInfluenceY[0], -1.4f, 0f, "", "The cursor influence's lower limit in the Y-direction");
-					_target.limitCursorInfluenceY[1] = CustomGUILayout.Slider ("Maximum Y constraint:", _target.limitCursorInfluenceY[1], 0f, 1.4f, "", "The cursor influence's upper limit in the Y-direction");
-				}
-
-				if (Application.isPlaying && KickStarter.mainCamera != null && KickStarter.mainCamera.attachedCamera == _target)
-				{
-					EditorGUILayout.HelpBox ("Changes made to this panel will not be felt until the MainCamera switches to this camera again.", MessageType.Info);
-				}
-			}
-			EditorGUILayout.EndVertical ();
+			_target.ShowCursorInfluenceGUI ();
 			EditorGUILayout.Space ();
 			
 			EditorGUILayout.BeginVertical ("Button");
@@ -283,7 +259,7 @@ namespace AC
 				_target.actFromDefaultPlayerStart = CustomGUILayout.Toggle ("Use default PlayerStart?", _target.actFromDefaultPlayerStart, "", "If True, then the camera's position will be relative to the scene's default PlayerStart, rather then the Player's initial position. This ensures that camera movement is the same regardless of where the Player begins in the scene");
 				EditorGUILayout.EndVertical ();
 			}
-			
+
 			UnityVersionHandler.CustomSetDirty (_target);
 		}
 	}

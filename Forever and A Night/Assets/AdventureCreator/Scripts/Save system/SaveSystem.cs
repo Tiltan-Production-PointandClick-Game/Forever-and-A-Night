@@ -1,7 +1,7 @@
 /*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2018
+ *	by Chris Burton, 2013-2019
  *	
  *	"SaveSystem.cs"
  * 
@@ -58,6 +58,8 @@ namespace AC
 		private SaveFile requestedLoad = null;
 		private SaveFile requestedImport = null;
 		private SaveFile requestedSave = null;
+
+		private bool isTakingSaveScreenshot;
 
 
 		#if UNITY_5_4_OR_NEWER
@@ -430,7 +432,7 @@ namespace AC
 
 				if (!string.IsNullOrEmpty (saveFileContents))
 				{
-					KickStarter.eventManager.Call_OnLoad (FileAccessState.Before);
+					KickStarter.eventManager.Call_OnLoad (FileAccessState.Before, saveFile.saveID, saveFile);
 
 					int divider = saveFileContents.IndexOf ("||");
 					string mainData = saveFileContents.Substring (0, divider);
@@ -447,12 +449,14 @@ namespace AC
 					KillActionLists ();
 					
 					// If player has changed, destroy the old one and load in the new one
+					bool resetPlayer = false;
 					if (KickStarter.settingsManager.playerSwitching == PlayerSwitching.Allow)
 					{
 						if ((KickStarter.player == null && saveData.mainData.currentPlayerID != KickStarter.settingsManager.GetEmptyPlayerID ()) ||
 							(KickStarter.player != null && KickStarter.player.ID != saveData.mainData.currentPlayerID))
 						{
 							KickStarter.ResetPlayer (GetPlayerByID (saveData.mainData.currentPlayerID), saveData.mainData.currentPlayerID, true, Quaternion.identity, false, true);
+							resetPlayer = true;
 						}
 					}
 
@@ -462,6 +466,12 @@ namespace AC
 					bool forceReload = KickStarter.settingsManager.reloadSceneWhenLoading;
 					if (forceReload || (newScene != UnityVersionHandler.GetCurrentSceneNumber () && activeSelectiveLoad.loadScene))
 					{
+						if (resetPlayer && KickStarter.settingsManager.reloadSceneWhenLoading)
+						{
+							// Force a fade-out to hide the player switch
+							KickStarter.mainCamera.FadeOut (0f);
+						}
+
 						loadingGame = LoadingGame.InNewScene;
 						KickStarter.sceneChanger.ChangeScene (new SceneInfo ("", newScene), false, forceReload);
 					}
@@ -487,7 +497,7 @@ namespace AC
 				}
 				else
 				{
-					KickStarter.eventManager.Call_OnLoad (FileAccessState.Fail);
+					KickStarter.eventManager.Call_OnLoad (FileAccessState.Fail, saveFile.saveID);
 				}
 			}
 		}
@@ -582,7 +592,7 @@ namespace AC
 				ReturnMainData ();
 				KickStarter.levelStorage.ReturnCurrentLevelData (true);
 				CustomLoadHook ();
-				KickStarter.eventManager.Call_OnLoad (FileAccessState.After);
+				KickStarter.eventManager.Call_OnLoad (FileAccessState.After, -1);
 			}
 					
 			if (KickStarter.runtimeInventory)
@@ -733,11 +743,11 @@ namespace AC
 			if (GetNumSaves () >= KickStarter.settingsManager.maxSaves && !DoesSaveExist (saveID))
 			{
 				ACDebug.LogWarning ("Cannot save - maximum number of save files has already been reached.");
-				KickStarter.eventManager.Call_OnSave (FileAccessState.Fail);
+				KickStarter.eventManager.Call_OnSave (FileAccessState.Fail, saveID);
 				return;
 			}
 
-			KickStarter.eventManager.Call_OnSave (FileAccessState.Before);
+			KickStarter.eventManager.Call_OnSave (FileAccessState.Before, saveID);
 			CustomSaveHook ();
 			KickStarter.levelStorage.StoreAllOpenLevelData ();
 			
@@ -843,7 +853,8 @@ namespace AC
 			#if !SAVE_IN_PLAYERPREFS
 			if (KickStarter.settingsManager.takeSaveScreenshots)
 			{
-				KickStarter.stateHandler.PreScreenshotBackup ();
+				isTakingSaveScreenshot = true;
+				KickStarter.playerMenus.PreScreenshotBackup ();
 
 				yield return new WaitForEndOfFrame ();
 				
@@ -857,8 +868,9 @@ namespace AC
 				SaveFileHandler.SaveScreenshot (saveFile);
 				saveFile.screenShot = screenshotTex;
 				Destroy (screenshotTex);
-				
-				KickStarter.stateHandler.PostScreenshotBackup ();
+
+				KickStarter.playerMenus.PostScreenshotBackup ();
+				isTakingSaveScreenshot = false;
 			}
 			#endif
 
@@ -883,7 +895,7 @@ namespace AC
 
 				if (!wasSuccesful)
 				{
-					KickStarter.eventManager.Call_OnSave (FileAccessState.Fail);
+					KickStarter.eventManager.Call_OnSave (FileAccessState.Fail, saveFile.saveID);
 					return;
 				}
 			
@@ -910,13 +922,13 @@ namespace AC
 
 				UpdateSaveFileLabels ();
 			
-				KickStarter.eventManager.Call_OnSave (FileAccessState.After);
+				KickStarter.eventManager.Call_OnSave (FileAccessState.After, saveFile.saveID, saveFile);
 			}
 		}
 
 
 		/**
-		 * Stores the PlayerData of the active Player.
+		 * <summary>Stores the PlayerData of the active Player.</summary>
 		 */
 		public void SaveCurrentPlayerData ()
 		{
@@ -947,6 +959,7 @@ namespace AC
 
 			PlayerData playerData = SavePlayerData (KickStarter.player);
 			saveData.playerData.Add (playerData);
+			return;
 		}
 
 
@@ -1987,6 +2000,18 @@ namespace AC
 				}
 			}
 			return numFound;
+		}
+
+
+		/**
+		 * If True, then a save-game screenshot is being taken
+		 */
+		public bool IsTakingSaveScreenshot
+		{
+			get
+			{
+				return isTakingSaveScreenshot;
+			}
 		}
 
 

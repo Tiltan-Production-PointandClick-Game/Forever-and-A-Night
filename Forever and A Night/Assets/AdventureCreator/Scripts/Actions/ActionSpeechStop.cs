@@ -1,7 +1,7 @@
 ﻿/*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2018
+ *	by Chris Burton, 2013-2019
  *	
  *	"ActionSpeechStop.cs"
  * 
@@ -69,7 +69,7 @@ namespace AC
 		
 		public override string SetLabel ()
 		{
-			return (" (" + speechMenuLimit.ToString () + ")");
+			return speechMenuLimit.ToString ();
 		}
 		
 		#endif

@@ -1,7 +1,7 @@
 /*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2018
+ *	by Chris Burton, 2013-2019
  *	
  *	"ActionSendMessage.cs"
  * 
@@ -28,6 +28,8 @@ namespace AC
 		public int parameterID = -1;
 		public bool isPlayer;
 		public GameObject linkedObject;
+		protected GameObject runtimeLinkedObject;
+
 		public bool affectChildren = false;
 		
 		public MessageToSend messageToSend;
@@ -59,12 +61,12 @@ namespace AC
 			{
 				if (KickStarter.player != null)
 				{
-					linkedObject = KickStarter.player.gameObject;
+					runtimeLinkedObject = KickStarter.player.gameObject;
 				}
 			}
 			else
 			{
-				linkedObject = AssignFile (parameters, parameterID, constantID, linkedObject);
+				runtimeLinkedObject = AssignFile (parameters, parameterID, constantID, linkedObject);
 			}
 
 			customMessage = AssignString (parameters, customMessageParameterID, customMessage);
@@ -74,7 +76,7 @@ namespace AC
 		
 		override public float Run ()
 		{
-			if (linkedObject)
+			if (runtimeLinkedObject != null)
 			{
 				if (messageToSend == MessageToSend.Custom)
 				{
@@ -82,22 +84,22 @@ namespace AC
 					{
 						if (!sendValue)
 						{
-							linkedObject.BroadcastMessage (customMessage, SendMessageOptions.DontRequireReceiver);
+							runtimeLinkedObject.BroadcastMessage (customMessage, SendMessageOptions.DontRequireReceiver);
 						}
 						else
 						{
-							linkedObject.BroadcastMessage (customMessage, customValue, SendMessageOptions.DontRequireReceiver);
+							runtimeLinkedObject.BroadcastMessage (customMessage, customValue, SendMessageOptions.DontRequireReceiver);
 						}
 					}
 					else
 					{
 						if (!sendValue)
 						{
-							linkedObject.SendMessage (customMessage);
+							runtimeLinkedObject.SendMessage (customMessage);
 						}
 						else
 						{
-							linkedObject.SendMessage (customMessage, customValue);
+							runtimeLinkedObject.SendMessage (customMessage, customValue);
 						}
 					}
 				}
@@ -105,11 +107,11 @@ namespace AC
 				{
 					if (affectChildren)
 					{
-						linkedObject.BroadcastMessage (messageToSend.ToString (), SendMessageOptions.DontRequireReceiver);
+						runtimeLinkedObject.BroadcastMessage (messageToSend.ToString (), SendMessageOptions.DontRequireReceiver);
 					}
 					else
 					{
-						linkedObject.SendMessage (messageToSend.ToString ());
+						runtimeLinkedObject.SendMessage (messageToSend.ToString ());
 					}
 				}
 			}
@@ -130,11 +132,10 @@ namespace AC
 		public override ActionEnd End (List<AC.Action> actions)
 		{
 			// If the linkedObject is an immediately-starting ActionList, don't end the cutscene
-			if (linkedObject && messageToSend == MessageToSend.Interact && linkedObject.GetComponent <Cutscene>())
+			if (runtimeLinkedObject && messageToSend == MessageToSend.Interact)
 			{
-				Cutscene tempAction = linkedObject.GetComponent<Cutscene>();
-				
-				if (tempAction.triggerTime <= 0f)
+				Cutscene tempAction = runtimeLinkedObject.GetComponent<Cutscene>();
+				if (tempAction != null && tempAction.triggerTime <= 0f)
 				{
 					ActionEnd actionEnd = new ActionEnd ();
 					actionEnd.resultAction = ResultAction.RunCutscene;
@@ -195,7 +196,7 @@ namespace AC
 		}
 
 
-		override public void AssignConstantIDs (bool saveScriptsToo)
+		override public void AssignConstantIDs (bool saveScriptsToo, bool fromAssetFile)
 		{
 			AssignConstantID (linkedObject, constantID, parameterID);
 		}
@@ -203,35 +204,34 @@ namespace AC
 		
 		public override string SetLabel ()
 		{
-			string labelAdd = "";
-			
-			if (linkedObject)
+			if (linkedObject != null)
 			{
+				string labelAdd = string.Empty;
 				if (messageToSend == MessageToSend.TurnOn)
 				{
-					labelAdd += " ('Turn on' ";
+					labelAdd = "'Turn on' ";
 				}
 				else if (messageToSend == MessageToSend.TurnOff)
 				{
-					labelAdd += " ('Turn off' ";
+					labelAdd = "'Turn off' ";
 				}
 				else if (messageToSend == MessageToSend.Interact)
 				{
-					labelAdd += " ('Interact' ";
+					labelAdd = "'Interact' ";
 				}
 				else if (messageToSend == MessageToSend.Kill)
 				{
-					labelAdd += " ('Kill' ";
+					labelAdd = "'Kill' ";
 				}
 				else
 				{
-					labelAdd += " ('" + customMessage + "' ";
+					labelAdd = "'" + customMessage + "' ";
 				}
 				
-				labelAdd += " to " + linkedObject.name + ")";
+				labelAdd += "to " + linkedObject.name;
+				return labelAdd;
 			}
-			
-			return labelAdd;
+			return string.Empty;
 		}
 		
 		#endif

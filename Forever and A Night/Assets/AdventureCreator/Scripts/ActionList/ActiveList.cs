@@ -1,7 +1,7 @@
 ﻿/*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2018
+ *	by Chris Burton, 2013-2019
  *	
  *	"ActiveList.cs"
  * 
@@ -158,6 +158,16 @@ namespace AC
 		}
 
 
+		public bool CanResetSkipVars ()
+		{
+			if (isRunning || inSkipQueue)
+			{
+				return false;
+			}
+			return true;
+		}
+
+
 		/**
 		 * Shows some information about the associated ActionList, if it is running.
 		 */
@@ -217,8 +227,16 @@ namespace AC
 			{
 				if (actionListAsset != null)
 				{
+					bool isRunningBackup = isRunning;
+					bool inSkipQueueBackup = inSkipQueue;
+
 					// Destroy old list, but don't go through ActionListManager's Reset code, to bypass changing GameState etc
 					KickStarter.actionListAssetManager.DestroyAssetList (actionListAsset);
+
+					// Revert to backup so CanResetSkipVars returns correct value after destroying list
+					isRunning = isRunningBackup;
+					inSkipQueue = inSkipQueueBackup;
+
 					actionList = AdvGame.SkipActionListAsset (actionListAsset, startIndex, conversationOnEnd);
 				}
 				else if (actionList != null)

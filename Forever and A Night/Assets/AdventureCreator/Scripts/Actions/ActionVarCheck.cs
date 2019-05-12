@@ -1,7 +1,7 @@
 /*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2018
+ *	by Chris Burton, 2013-2019
  *	
  *	"ActionVarCheck.cs"
  * 
@@ -549,7 +549,7 @@ namespace AC
 				}
 			}
 
-			return "";
+			return string.Empty;
 		}
 
 
@@ -559,7 +559,7 @@ namespace AC
 
 			if (vars.Count > 0 && vars.Count > variableNumber && variableNumber > -1)
 			{
-				labelAdd = " (" + vars[variableNumber].label;
+				labelAdd = vars[variableNumber].label;
 				
 				if (vars [variableNumber].type == VariableType.Boolean)
 				{
@@ -581,8 +581,6 @@ namespace AC
 				{
 					labelAdd += " " + intCondition.ToString () + " " + vars[variableNumber].popUps[intValue];
 				}
-				
-				labelAdd += ")";
 			}
 
 			return labelAdd;

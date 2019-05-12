@@ -1,7 +1,7 @@
 ﻿/*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2018
+ *	by Chris Burton, 2013-2019
  *	
  *	"BackgroundImage.cs"
  * 
@@ -270,7 +270,7 @@ namespace AC
 					_guiTexture = GetComponent<GUITexture>();
 					if (_guiTexture == null)
 					{
-						ACDebug.LogWarning (this.name + " has no GUITexture component");
+						ACDebug.LogWarning (this.name + " has no GUITexture component", this);
 					}
 				}
 				return _guiTexture;

@@ -1,7 +1,7 @@
 ﻿/*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2018
+ *	by Chris Burton, 2013-2019
  *	
  *	"DragBase.cs"
  * 
@@ -22,6 +22,9 @@ namespace AC
 	#endif
 	public class DragBase : Moveable
 	{
+
+		/** If assigned, then the Hotspot will only be interactive when the player is within this Trigger Collider's boundary */
+		public InteractiveBoundary interactiveBoundary;
 
 		/** If True, the object is currently held by the player */
 		public bool isHeld = false;
@@ -378,6 +381,21 @@ namespace AC
 			}
 			
 			return KickStarter.cursorManager.GetCursorIconFromID (iconID);
+		}
+
+
+		/**
+		 * <summary>Checks if the Player is within the draggables's interactableBoundary, if assigned.</summary>
+		 * <returns>True if the Player is within the draggables's interactableBoundary, if assigned.  If no InteractableBoundary is assigned, or there is no Player, then True will be returned.</returns>
+		 */
+		public bool PlayerIsWithinBoundary ()
+		{
+			if (interactiveBoundary == null || KickStarter.player == null)
+			{
+				return true;
+			}
+
+			return interactiveBoundary.PlayerIsPresent;
 		}
 
 	}

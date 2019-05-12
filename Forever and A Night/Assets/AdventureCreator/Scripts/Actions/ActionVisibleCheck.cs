@@ -1,7 +1,7 @@
 ﻿/*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2018
+ *	by Chris Burton, 2013-2019
  *	
  *	"ActionVisibleCheck.cs"
  * 
@@ -26,6 +26,7 @@ namespace AC
 		public int parameterID = -1;
 		public int constantID = 0;
 		public GameObject obToAffect;
+		protected GameObject runtimeObToAffect;
 
 		public CheckVisState checkVisState = CheckVisState.InScene;
 
@@ -41,26 +42,27 @@ namespace AC
 		
 		override public void AssignValues (List<ActionParameter> parameters)
 		{
-			obToAffect = AssignFile (parameters, parameterID, constantID, obToAffect);
+			runtimeObToAffect = AssignFile (parameters, parameterID, constantID, obToAffect);
 		}
 
 
 		override public bool CheckCondition ()
 		{
-			if (obToAffect)
+			if (runtimeObToAffect)
 			{
-				if (obToAffect.GetComponent <Renderer>())
+				Renderer _renderer = runtimeObToAffect.GetComponent <Renderer>();
+				if (_renderer != null)
 				{
 					if (checkVisState == CheckVisState.InCamera)
 					{
-						return obToAffect.GetComponent <Renderer>().isVisible;
+						return _renderer.isVisible;
 					}
 					else if (checkVisState == CheckVisState.InScene)
 					{
-						return obToAffect.GetComponent <Renderer>().enabled;
+						return _renderer.enabled;
 					}
 				}
-				ACDebug.LogWarning ("Cannot check visibility of " + obToAffect.name + " as it has no renderer component");
+				ACDebug.LogWarning ("Cannot check visibility of " + runtimeObToAffect.name + " as it has no renderer component");
 			}
 			return false;
 		}
@@ -88,7 +90,7 @@ namespace AC
 		}
 
 
-		override public void AssignConstantIDs (bool saveScriptsToo)
+		override public void AssignConstantIDs (bool saveScriptsToo, bool fromAssetFile)
 		{
 			AssignConstantID (obToAffect, constantID, parameterID);
 		}
@@ -96,12 +98,11 @@ namespace AC
 		
 		override public string SetLabel ()
 		{
-			string labelAdd = "";
-			
-			if (obToAffect)
-				labelAdd = " (" + obToAffect.name + ")";
-			
-			return labelAdd;
+			if (obToAffect != null)
+			{
+				return obToAffect.name;
+			}
+			return string.Empty;
 		}
 		
 		#endif

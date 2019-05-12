@@ -1,7 +1,7 @@
 /*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2018
+ *	by Chris Burton, 2013-2019
  *	
  *	"ActionTransform.cs"
  * 
@@ -25,9 +25,11 @@ namespace AC
 
 		public bool isPlayer;
 
-		public Marker marker;
 		public int markerParameterID = -1;
 		public int markerID = 0;
+		public Marker marker;
+		protected Marker runtimeMarker;
+
 		public bool doEulerRotation = false;
 		public bool clearExisting = true;
 		public bool inWorldSpace = false;
@@ -37,6 +39,7 @@ namespace AC
 		public int parameterID = -1;
 		public int constantID = 0;
 		public Moveable linkedProp;
+		protected Moveable runtimeLinkedProp;
 
 		public enum SetVectorMethod { EnteredHere, FromVector3Variable };
 		public SetVectorMethod setVectorMethod = SetVectorMethod.EnteredHere;
@@ -75,24 +78,24 @@ namespace AC
 			{
 				if (KickStarter.player != null)
 				{
-					linkedProp = KickStarter.player.GetComponent <Moveable>();
+					runtimeLinkedProp = KickStarter.player.GetComponent <Moveable>();
 
-					if (linkedProp == null)
+					if (runtimeLinkedProp == null)
 					{
 						ACDebug.LogWarning ("The player " + KickStarter.player + " requires a Moveable component to be moved with the 'Object: Transform' Action.", KickStarter.player);
 					}
 				}
 				else
 				{
-					linkedProp = null;
+					runtimeLinkedProp = null;
 				}
 			}
 			else
 			{
-				linkedProp = AssignFile <Moveable> (parameters, parameterID, constantID, linkedProp);
+				runtimeLinkedProp = AssignFile <Moveable> (parameters, parameterID, constantID, linkedProp);
 			}
 
-			marker = AssignFile <Marker> (parameters, markerParameterID, markerID, marker);
+			runtimeMarker = AssignFile <Marker> (parameters, markerParameterID, markerID, marker);
 			transitionTime = AssignFloat (parameters, transitionTimeParameterID, transitionTime);
 			newVector = AssignVector3 (parameters, newVectorParameterID, newVector);
 			vectorVarID = AssignVariableID (parameters, vectorVarParameterID, vectorVarID);
@@ -112,7 +115,7 @@ namespace AC
 			{
 				isRunning = true;
 				
-				if (linkedProp)
+				if (runtimeLinkedProp != null)
 				{
 					float _transitionTime = Mathf.Max (transitionTime, 0f);
 					RunToTime (_transitionTime, false);
@@ -125,9 +128,9 @@ namespace AC
 			}
 			else
 			{
-				if (linkedProp)
+				if (runtimeLinkedProp != null)
 				{
-					if (!linkedProp.IsMoving (transformType))
+					if (!runtimeLinkedProp.IsMoving (transformType))
 					{
 						isRunning = false;
 					}
@@ -144,7 +147,7 @@ namespace AC
 		
 		override public void Skip ()	
 		{
-			if (linkedProp)
+			if (runtimeLinkedProp != null)
 			{
 				RunToTime (0f, true);
 			}
@@ -155,9 +158,9 @@ namespace AC
 		{
 			if (transformType == TransformType.CopyMarker)
 			{
-				if (marker)
+				if (runtimeMarker != null)
 				{
-					linkedProp.Move (marker, moveMethod, inWorldSpace, _time, timeCurve);
+					runtimeLinkedProp.Move (runtimeMarker, moveMethod, inWorldSpace, _time, timeCurve);
 				}
 			}
 			else
@@ -184,7 +187,7 @@ namespace AC
 				{
 					if (toBy == ToBy.By)
 					{
-						targetVector = SetRelativeTarget (targetVector, isSkipping, linkedProp.transform.localPosition);
+						targetVector = SetRelativeTarget (targetVector, isSkipping, runtimeLinkedProp.transform.localPosition);
 					}
 				}
 				else if (transformType == TransformType.Rotate)
@@ -198,14 +201,14 @@ namespace AC
 
 						if (numZeros == 2)
 						{
-							targetVector = SetRelativeTarget (targetVector, isSkipping, linkedProp.transform.eulerAngles);
+							targetVector = SetRelativeTarget (targetVector, isSkipping, runtimeLinkedProp.transform.eulerAngles);
 						}
 						else
 						{
-							Quaternion currentRotation = linkedProp.transform.localRotation;
-							linkedProp.transform.Rotate (targetVector, Space.World);
-							targetVector = linkedProp.transform.localEulerAngles;
-							linkedProp.transform.localRotation = currentRotation;
+							Quaternion currentRotation = runtimeLinkedProp.transform.localRotation;
+							runtimeLinkedProp.transform.Rotate (targetVector, Space.World);
+							targetVector = runtimeLinkedProp.transform.localEulerAngles;
+							runtimeLinkedProp.transform.localRotation = currentRotation;
 						}
 					}
 				}
@@ -213,17 +216,17 @@ namespace AC
 				{
 					if (toBy == ToBy.By)
 					{
-						targetVector = SetRelativeTarget (targetVector, isSkipping, linkedProp.transform.localScale);
+						targetVector = SetRelativeTarget (targetVector, isSkipping, runtimeLinkedProp.transform.localScale);
 					}
 				}
 				
 				if (transformType == TransformType.Rotate)
 				{
-					linkedProp.Move (targetVector, moveMethod, inWorldSpace, _time, transformType, doEulerRotation, timeCurve, clearExisting);
+					runtimeLinkedProp.Move (targetVector, moveMethod, inWorldSpace, _time, transformType, doEulerRotation, timeCurve, clearExisting);
 				}
 				else
 				{
-					linkedProp.Move (targetVector, moveMethod, inWorldSpace, _time, transformType, false, timeCurve, clearExisting);
+					runtimeLinkedProp.Move (targetVector, moveMethod, inWorldSpace, _time, transformType, false, timeCurve, clearExisting);
 				}
 			}
 		}
@@ -369,7 +372,7 @@ namespace AC
 		}
 
 
-		override public void AssignConstantIDs (bool saveScriptsToo = false)
+		override public void AssignConstantIDs (bool saveScriptsToo, bool fromAssetFile)
 		{
 			if (saveScriptsToo)
 			{
@@ -382,13 +385,11 @@ namespace AC
 
 		override public string SetLabel ()
 		{
-			string labelAdd = "";
-			if (linkedProp)
+			if (linkedProp != null)
 			{
-				labelAdd = " (" + linkedProp.name + ")";
+				return linkedProp.name;
 			}
-			
-			return labelAdd;
+			return string.Empty;
 		}
 		
 		#endif

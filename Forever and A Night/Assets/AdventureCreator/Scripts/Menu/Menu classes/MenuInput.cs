@@ -1,7 +1,7 @@
 ﻿/*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2018
+ *	by Chris Burton, 2013-2019
  *	
  *	"MenuInput.cs"
  * 
@@ -163,6 +163,10 @@ namespace AC
 				}
 				characterLimit = CustomGUILayout.IntField ("Character limit:", characterLimit, apiPrefix + ".characterLimit", "The character limit on text that can be entered");
 
+				#if (UNITY_IPHONE || UNITY_ANDROID) && !UNITY_2018_3_OR_NEWER
+				EditorGUILayout.HelpBox ("For the character limit to be obeyed on Android and iOS, Unity 2018.3 or later must be used.", MessageType.Info);
+				#endif
+
 				linkedButton = CustomGUILayout.TextField ("'Enter' key's linked Button:", linkedButton, apiPrefix + ".linkedPrefab", "The name of the MenuButton element that is synced with the 'Return' key when this element is active");
 				requireSelection = CustomGUILayout.ToggleLeft ("Require selection to accept input?", requireSelection, apiPrefix + ".requireSelection", "If True, then the element will need to be selected before it receives input");
 			}
@@ -254,7 +258,7 @@ namespace AC
 			base.Display (_style, _slot, zoom, isActive);
 
 			string fullText = label;
-			if (Application.isPlaying && inputType != AC_InputType.AllowSpecialCharacters && (isSelected || isActive))
+			if (Application.isPlaying && (isSelected || isActive))
 			{
 				fullText = AdvGame.CombineLanguageString (fullText, "|", Options.GetLanguage (), false);
 			}
@@ -272,14 +276,7 @@ namespace AC
 			}
 			else
 			{
-				if (inputType == AC_InputType.AllowSpecialCharacters)
-				{
-					label = GUI.TextField (ZoomRect (relativeRect, zoom), fullText, characterLimit, _style);
-				}
-				else
-				{
-					GUI.Label (ZoomRect (relativeRect, zoom), fullText, _style);
-				}
+				GUI.Label (ZoomRect (relativeRect, zoom), fullText, _style);
 			}
 		}
 
@@ -319,18 +316,27 @@ namespace AC
 
 
 		/**
-		 * Processes input entered by the player, and applies it to the text box (OnGUI-based Menus only).
+		 * <summary>Processes input entered by the player, and applies it to the text box (OnGUI-based Menus only).</summary>
+		 * <param name = "keycode">The keycode of the Event that recorded input</param>
+		 * <param name = "character">The character of the Event that recorded input</param>
+		 * <param name = "shift">If True, shift was held down</param>
+		 * <param name = "menuName">The name of the Menu that stores this element</param>
 		 */
-		public void CheckForInput (string input, bool shift, string menuName)
+		public void CheckForInput (string keycode, string character, bool shift, string menuName)
 		{
 			if (uiInput != null)
 			{
 				return;
 			}
+
+			string input = keycode;
+
 			if (inputType == AC_InputType.AllowSpecialCharacters)
 			{
-				ProcessReturn (input, menuName);
-				return;
+				if (!(input == "KeypadEnter" || input == "Return" || input == "Enter" || input == "Backspace"))
+				{
+					input = character;
+				}
 			}
 
 			bool rightToLeft = KickStarter.runtimeLanguages.LanguageReadsRightToLeft (Options.GetLanguage ());
@@ -360,17 +366,22 @@ namespace AC
 			}
 			else if ((inputType == AC_InputType.AlphaNumeric && (input.Length == 1 || input.Contains ("Alpha"))) ||
 			         (inputType == AC_InputType.NumbericOnly && input.Contains ("Alpha")) ||
-			         (inputType == AC_InputType.AlphaNumeric && allowSpaces && input == "Space"))
+			         (inputType == AC_InputType.AlphaNumeric && allowSpaces && input == "Space") ||
+			         (inputType == AC_InputType.AllowSpecialCharacters && (input.Length == 1 || input == "Space")))
 			{
 				input = input.Replace ("Alpha", "");
 				input = input.Replace ("Space", " ");
-				if (shift)
+
+				if (inputType != AC_InputType.AllowSpecialCharacters)
 				{
-					input = input.ToUpper ();
-				}
-				else
-				{
-					input = input.ToLower ();
+					if (shift)
+					{
+						input = input.ToUpper ();
+					}
+					else
+					{
+						input = input.ToLower ();
+					}
 				}
 
 				if (characterLimit == 1)

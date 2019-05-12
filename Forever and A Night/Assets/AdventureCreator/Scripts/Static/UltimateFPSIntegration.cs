@@ -1,7 +1,7 @@
 ﻿/*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2018
+ *	by Chris Burton, 2013-2019
  *	
  *	"UltimateFPSIntegration.cs"
  * 
@@ -92,15 +92,15 @@ namespace AC
 			
 			if (fpController == null)
 			{
-				ACDebug.LogWarning ("Cannot find UFPS script 'vp_FPController' anywhere on '" + gameObject.name + "'.");
+				ACDebug.LogWarning ("Cannot find UFPS script 'vp_FPController' anywhere on '" + gameObject.name + "'.", gameObject);
 			}
 			if (fpInput == null)
 			{
-				ACDebug.LogWarning ("Cannot find UFPS script 'vp_FPInput' anywhere on '" + gameObject.name + "'.");
+				ACDebug.LogWarning ("Cannot find UFPS script 'vp_FPInput' anywhere on '" + gameObject.name + "'.", gameObject);
 			}
 			if (fpCamera == null)
 			{
-				ACDebug.LogWarning ("Cannot find UFPS script 'vp_FPCamera' anywhere on '" + gameObject.name + "'.");
+				ACDebug.LogWarning ("Cannot find UFPS script 'vp_FPCamera' anywhere on '" + gameObject.name + "'.", gameObject);
 			}
 			if (KickStarter.settingsManager != null && KickStarter.settingsManager.movementMethod != MovementMethod.FirstPerson)
 			{

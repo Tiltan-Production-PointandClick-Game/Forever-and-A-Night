@@ -1,7 +1,7 @@
 /*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2018
+ *	by Chris Burton, 2013-2019
  *	
  *	"ActionConversation.cs"
  * 
@@ -25,6 +25,7 @@ namespace AC
 		public int parameterID = -1;
 		public int constantID = 0;
 		public Conversation conversation;
+		protected Conversation runtimeConversation;
 
 		public bool overrideOptions = false;
 
@@ -41,15 +42,20 @@ namespace AC
 
 		override public void AssignValues (List<ActionParameter> parameters)
 		{
-			conversation = AssignFile <Conversation> (parameters, parameterID, constantID, conversation);
+			runtimeConversation = AssignFile <Conversation> (parameters, parameterID, constantID, conversation);
 		}
 
 		
 		override public float Run ()
 		{
+			if (runtimeConversation == null)
+			{
+				return 0f;
+			}
+
 			if (isRunning)
 			{
-				if (conversation.IsActive (true))
+				if (runtimeConversation.IsActive (true))
 				{
 					return defaultPauseTime;
 				}
@@ -62,7 +68,7 @@ namespace AC
 
 			if (overrideOptions)
 			{
-				if (conversation != null && conversation.lastOption >= 0)
+				if (runtimeConversation.lastOption >= 0)
 				{
 					KickStarter.actionListManager.ignoreNextConversationSkip = true;
 					return 0f;
@@ -70,21 +76,19 @@ namespace AC
 				KickStarter.actionListManager.ignoreNextConversationSkip = false;
 			}
 
-			if (conversation)
-			{
-				if (overrideOptions)
-				{
-					conversation.Interact (this);
-				}
-				else
-				{
-					conversation.Interact ();
 
-					if (willWait && !KickStarter.settingsManager.allowGameplayDuringConversations)
-					{
-						isRunning = true;
-						return defaultPauseTime;
-					}
+			if (overrideOptions)
+			{
+				runtimeConversation.Interact (this);
+			}
+			else
+			{
+				runtimeConversation.Interact ();
+
+				if (willWait && !KickStarter.settingsManager.allowGameplayDuringConversations)
+				{
+					isRunning = true;
+					return defaultPauseTime;
 				}
 			}
 			
@@ -99,16 +103,17 @@ namespace AC
 				KickStarter.actionListManager.ignoreNextConversationSkip = false;
 				return;
 			}
+
 			Run ();
 		}
 
 		
 		override public ActionEnd End (List<AC.Action> actions)
 		{
-			if (conversation)
+			if (runtimeConversation)
 			{
-				int _chosenOptionIndex = conversation.lastOption;
-				conversation.lastOption = -1;
+				int _chosenOptionIndex = runtimeConversation.lastOption;
+				runtimeConversation.lastOption = -1;
 
 				if (overrideOptions && _chosenOptionIndex >= 0 && endings.Count > _chosenOptionIndex)
 				{
@@ -196,7 +201,7 @@ namespace AC
 		}
 
 
-		override public void AssignConstantIDs (bool saveScriptsToo)
+		override public void AssignConstantIDs (bool saveScriptsToo, bool fromAssetFile)
 		{
 			if (saveScriptsToo)
 			{
@@ -208,18 +213,15 @@ namespace AC
 		
 		override public string SetLabel ()
 		{
-			string labelAdd = "";
-			
-			if (conversation)
+			if (conversation != null)
 			{
-				labelAdd = " (" + conversation + ")";
+				return conversation.name;
 			}
-			
-			return labelAdd;
+			return string.Empty;
 		}
 
 		#endif
-		
+
 	}
 
 }

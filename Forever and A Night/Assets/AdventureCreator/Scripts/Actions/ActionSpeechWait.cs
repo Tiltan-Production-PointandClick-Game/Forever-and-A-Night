@@ -1,7 +1,7 @@
 ﻿/*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2018
+ *	by Chris Burton, 2013-2019
  *	
  *	"ActionSpeechWait.cs"
  * 
@@ -28,6 +28,7 @@ namespace AC
 
 		public bool isPlayer;
 		public Char speaker;
+		protected Char runtimeSpeaker;
 
 		
 		public ActionSpeechWait ()
@@ -41,18 +42,50 @@ namespace AC
 		
 		override public void AssignValues (List<ActionParameter> parameters)
 		{
-			speaker = AssignFile <Char> (parameters, parameterID, constantID, speaker);
+			runtimeSpeaker = AssignFile <Char> (parameters, parameterID, constantID, speaker);
+
+			// Special case: Use associated NPC
+			if (runtimeSpeaker != null &&
+				runtimeSpeaker is Player &&
+				KickStarter.settingsManager.playerSwitching == PlayerSwitching.Allow &&
+				KickStarter.player != null)
+			{
+				// Make sure not the active Player
+				ConstantID speakerID = speaker.GetComponent <ConstantID>();
+				ConstantID playerID = KickStarter.player.GetComponent <ConstantID>();
+				if ((speakerID == null && playerID != null) ||
+					(speakerID != null && playerID == null) ||
+					(speakerID != null && playerID != null && speakerID.constantID != playerID.constantID))
+				{
+					Player speakerPlayer = runtimeSpeaker as Player;
+					foreach (PlayerPrefab playerPrefab in KickStarter.settingsManager.players)
+					{
+						if (playerPrefab != null && playerPrefab.playerOb == speakerPlayer)
+						{
+							if (speakerPlayer.associatedNPCPrefab != null)
+							{
+								ConstantID npcConstantID = speakerPlayer.associatedNPCPrefab.GetComponent <ConstantID>();
+								if (npcConstantID != null)
+								{
+									runtimeSpeaker = AssignFile <Char> (parameters, parameterID, npcConstantID.constantID, runtimeSpeaker);
+								}
+							}
+							break;
+						}
+					}
+				}
+			}
 
 			if (isPlayer)
 			{
-				speaker = KickStarter.player;
+				runtimeSpeaker = KickStarter.player;
 			}
 		}
 
 
 		override public float Run ()
 		{
-			if (speaker == null)
+			if (runtimeSpeaker == null)
 			{
 				ACDebug.LogWarning ("No speaker set.");
 			}
@@ -60,14 +93,14 @@ namespace AC
 			{
 				isRunning = true;
 
-				if (KickStarter.dialog.CharacterIsSpeaking (speaker))
+				if (KickStarter.dialog.CharacterIsSpeaking (runtimeSpeaker))
 				{
 					return defaultPauseTime;
 				}
 			}
 			else
 			{
-				if (KickStarter.dialog.CharacterIsSpeaking (speaker))
+				if (KickStarter.dialog.CharacterIsSpeaking (runtimeSpeaker))
 				{
 					return defaultPauseTime;
 				}
@@ -124,7 +157,7 @@ namespace AC
 		}
 
 
-		override public void AssignConstantIDs (bool saveScriptsToo)
+		override public void AssignConstantIDs (bool saveScriptsToo, bool fromAssetFile)
 		{
 			AssignConstantID <Char> (speaker, constantID, parameterID);
 		}
@@ -134,16 +167,16 @@ namespace AC
 		{
 			if (parameterID == -1)
 			{
-				if (speaker)
+				if (isPlayer)
 				{
-					return " (" + speaker.gameObject.name + ")";
+					return "Player";
 				}
-				else if (isPlayer)
+				else if (speaker != null)
 				{
-					return " (Player)";
+					return speaker.gameObject.name;
 				}
 			}
-			return "";
+			return string.Empty;
 		}
 		
 		#endif

@@ -1,7 +1,7 @@
 ﻿/*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2018
+ *	by Chris Burton, 2013-2019
  *	
  *	"ActionDialogOptionRename.cs"
  * 
@@ -28,6 +28,7 @@ namespace AC
 
 		public int constantID;
 		public Conversation linkedConversation;
+		protected Conversation runtimeLinkedConversation;
 		
 		
 		public ActionDialogOptionRename ()
@@ -41,15 +42,15 @@ namespace AC
 
 		override public void AssignValues ()
 		{
-			linkedConversation = AssignFile <Conversation> (constantID, linkedConversation);
+			runtimeLinkedConversation = AssignFile <Conversation> (constantID, linkedConversation);
 		}
 
 		
 		override public float Run ()
 		{
-			if (linkedConversation)
+			if (runtimeLinkedConversation != null)
 			{
-				linkedConversation.RenameOption (optionID, newLabel, lineID);
+				runtimeLinkedConversation.RenameOption (optionID, newLabel, lineID);
 			}
 			
 			return 0f;
@@ -130,13 +131,23 @@ namespace AC
 		}
 
 
-		override public void AssignConstantIDs (bool saveScriptsToo)
+		override public void AssignConstantIDs (bool saveScriptsToo, bool fromAssetFile)
 		{
 			if (saveScriptsToo)
 			{
 				AddSaveScript <RememberConversation> (linkedConversation);
 			}
 			AssignConstantID <Conversation> (linkedConversation, constantID, 0);
+		}
+
+
+		override public string SetLabel ()
+		{
+			if (linkedConversation != null)
+			{
+				return linkedConversation.name;
+			}
+			return string.Empty;
 		}
 
 

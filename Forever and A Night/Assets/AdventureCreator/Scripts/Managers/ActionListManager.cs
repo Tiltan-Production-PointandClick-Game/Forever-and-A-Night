@@ -1,7 +1,7 @@
 ﻿/*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2018
+ *	by Chris Burton, 2013-2019
  *	
  *	"ActionListManager.cs"
  * 
@@ -189,6 +189,37 @@ namespace AC
 		}
 
 
+		public bool CanResetSkipVars (ActionList actionList)
+		{
+			if (actionList is RuntimeActionList)
+			{
+				RuntimeActionList runtimeActionList = (RuntimeActionList) actionList;
+				foreach (ActiveList activeList in KickStarter.actionListAssetManager.activeLists)
+				{
+					if (activeList.IsFor (runtimeActionList))
+					{
+						return activeList.CanResetSkipVars ();
+					}
+					if (activeList.IsFor (runtimeActionList.assetSource))
+					{
+						return activeList.CanResetSkipVars ();
+					}
+				}
+				return true;
+			}
+
+			foreach (ActiveList activeList in activeLists)
+			{
+				if (activeList.IsFor (actionList))
+				{
+					return activeList.CanResetSkipVars ();
+				}
+			}
+			
+			return true;
+		}
+
+
 		/**
 		 * <summary>Checks if any currently-running ActionLists pause gameplay.</summary>
 		 * <param title = "_actionToIgnore">Any ActionList that contains this Action will be excluded from the check</param>
@@ -339,120 +370,6 @@ namespace AC
 			}
 			
 			return false;
-		}
-
-
-		/**
-		 * <summary>Draws the ActionList debug window in the top-left corner of the Game window</summar>
-		 */
-		public void DrawDebugWindow ()
-		{
-			if (KickStarter.settingsManager.showActiveActionLists != DebugWindowDisplays.Never)
-			{
-				#if !UNITY_EDITOR
-				if (KickStarter.settingsManager.showActiveActionLists == DebugWindowDisplays.EditorOnly)
-				{
-					return;
-				}
-				#endif
-				debugWindowRect.height = 21f;
-				debugWindowRect = GUILayout.Window (10, debugWindowRect, StatusWindow, "AC status", GUILayout.Width (260));
-			}
-		}
-		private Rect debugWindowRect = new Rect (0, 0, 260, 500);
-
-
-		private void StatusWindow (int windowID)
-		{
-			GUISkin testSkin = (GUISkin) Resources.Load ("SceneManagerSkin");
-			GUI.skin = testSkin;
-			
-			GUILayout.Label ("Current game state: " + KickStarter.stateHandler.gameState.ToString ());
-
-			if (KickStarter.settingsManager.useProfiles)
-			{
-				GUILayout.Label ("Current profile ID: " + Options.GetActiveProfileID ());
-			}
-
-			if (KickStarter.player != null)
-			{
-				if (GUILayout.Button ("Current player: " + KickStarter.player.gameObject.name))
-				{
-					#if UNITY_EDITOR
-					UnityEditor.EditorGUIUtility.PingObject (KickStarter.player.gameObject);
-					#endif
-				}
-			}
-
-			if (KickStarter.mainCamera != null && KickStarter.mainCamera.attachedCamera != null && KickStarter.mainCamera.IsEnabled ())
-			{
-				if (GUILayout.Button ("Current camera: " + KickStarter.mainCamera.attachedCamera.gameObject.name))
-				{
-					#if UNITY_EDITOR
-					UnityEditor.EditorGUIUtility.PingObject (KickStarter.mainCamera.attachedCamera.gameObject);
-					#endif
-				}
-			}
-
-			if (KickStarter.stateHandler.gameState == GameState.DialogOptions && KickStarter.playerInput.IsInConversation ())
-			{
-				if (GUILayout.Button ("Conversation: " + KickStarter.playerInput.activeConversation.gameObject.name))
-				{
-					#if UNITY_EDITOR
-					UnityEditor.EditorGUIUtility.PingObject (KickStarter.playerInput.activeConversation.gameObject);
-					#endif
-				}
-			}
-			
-			GUILayout.Space (4f);
-
-			bool anyRunning = false;
-			foreach (ActiveList activeList in activeLists)
-			{
-				if (activeList.IsRunning ())
-				{
-					anyRunning = true;
-					break;
-				}
-			}
-
-			if (anyRunning)
-			{
-				GUILayout.Label ("ActionLists running:");
-
-				for (int i=0; i<activeLists.Count; i++)
-				{
-					activeLists[i].ShowGUI ();
-				}
-			}
-
-			anyRunning = false;
-			foreach (ActiveList activeList in KickStarter.actionListAssetManager.activeLists)
-			{
-				if (activeList.IsRunning ())
-				{
-					anyRunning = true;
-					break;
-				}
-			}
-
-			if (anyRunning)
-			{
-				GUILayout.Label ("ActionList Assets running:");
-				
-				foreach (ActiveList activeList in KickStarter.actionListAssetManager.activeLists)
-				{
-					activeList.ShowGUI ();
-				}
-			}
-
-			if (IsGameplayBlocked ())
-			{
-				GUILayout.Space (4f);
-				GUILayout.Label ("Gameplay is blocked");
-			}
-
-			GUI.DragWindow ();
 		}
 
 

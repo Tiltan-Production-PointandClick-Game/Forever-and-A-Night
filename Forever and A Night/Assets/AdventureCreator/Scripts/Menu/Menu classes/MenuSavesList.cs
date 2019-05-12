@@ -1,7 +1,7 @@
 /*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2018
+ *	by Chris Burton, 2013-2019
  *	
  *	"MenuSavesList.cs"
  * 
@@ -53,6 +53,8 @@ namespace AC
 		/** If checkImportBool = True, the ID number of the Boolean global variable that must = True, for an import file to be listed */
 		public int checkImportVar;
 
+		/** If True, then all slots will be shown even if they are not already assigned a save file. */
+		public bool allowEmptySlots;
 		/** If True, then only one save slot will be shown */
 		public bool fixedOption;
 		/** The index number of the save slot to show, if fixedOption = true */
@@ -75,6 +77,8 @@ namespace AC
 
 		private string[] labels = null;
 		private bool newSaveSlot = false;
+		private Menu eventMenu;
+		private int eventSlot;
 
 
 		/**
@@ -101,6 +105,7 @@ namespace AC
 			displayType = SaveDisplayType.LabelOnly;
 			blankSlotTexture = null;
 
+			allowEmptySlots = false;
 			fixedOption = false;
 			optionToShow = 1;
 			hideIfNotValid = false;
@@ -150,6 +155,7 @@ namespace AC
 			actionListOnSave = _element.actionListOnSave;
 			displayType = _element.displayType;
 			blankSlotTexture = _element.blankSlotTexture;
+			allowEmptySlots = _element.allowEmptySlots;
 			fixedOption = _element.fixedOption;
 			optionToShow = _element.optionToShow;
 			hideIfNotValid = _element.hideIfNotValid;
@@ -236,8 +242,12 @@ namespace AC
 			saveListType = (AC_SaveListType) CustomGUILayout.EnumPopup ("List type:", saveListType, apiPrefix + ".savesListType", "How this list behaves");
 			if (saveListType == AC_SaveListType.Save)
 			{
-				showNewSaveOption = CustomGUILayout.Toggle ("Show 'New save' option?", showNewSaveOption, apiPrefix + ".showNewSaveOption", "If True, a slot that represents a 'new save' space can be displayed if appropriate");
-				if (showNewSaveOption)
+				if (fixedOption || !allowEmptySlots)
+				{
+					showNewSaveOption = CustomGUILayout.Toggle ("Show 'New save' option?", showNewSaveOption, apiPrefix + ".showNewSaveOption", "If True, a slot that represents a 'new save' space can be displayed if appropriate");
+				}
+
+				if ((!fixedOption && allowEmptySlots) || showNewSaveOption)
 				{
 					newSaveText = CustomGUILayout.TextField ("'New save' text:", newSaveText, apiPrefix + ".newSaveText", "The display text when a slot represents a 'new save' space");
 				}
@@ -304,10 +314,18 @@ namespace AC
 			else
 			{
 				maxSlots = CustomGUILayout.IntField ("Maximum number of slots:", maxSlots, apiPrefix + ".maxSlots", "The maximum number of slots that can be displayed at once");
+				allowEmptySlots = CustomGUILayout.Toggle ("Allow empty slots?", allowEmptySlots, apiPrefix + ".allowEmptySlots", "If True, then all slots will be shown even if they are not already assigned a save file.");
 
 				if (source == MenuSource.AdventureCreator)
 				{
-					numSlots = CustomGUILayout.IntSlider ("Test slots:", numSlots, 1, maxSlots, apiPrefix + ".numSlots");
+					if (allowEmptySlots)
+					{
+						numSlots = maxSlots;
+					}
+					else
+					{
+						numSlots = CustomGUILayout.IntSlider ("Test slots:", numSlots, 1, maxSlots, apiPrefix + ".numSlots");
+					}
 					slotSpacing = CustomGUILayout.Slider ("Slot spacing:", slotSpacing, 0f, 20f, apiPrefix + ".slotSpacing");
 					orientation = (ElementOrientation) CustomGUILayout.EnumPopup ("Slot orientation:", orientation, apiPrefix + ".orientation");
 					if (orientation == ElementOrientation.Grid)
@@ -427,7 +445,7 @@ namespace AC
 				}
 				if (found)
 				{
-					if (fixedOption)
+					if (fixedOption || allowEmptySlots)
 					{
 						EditorGUILayout.LabelField ("(= Save ID #)");
 					}
@@ -463,26 +481,46 @@ namespace AC
 		 * <param name = "languageNumber">The index number of the language number to get the text in</param>
 		 * <returns>The display text of the element's slot, or the whole element if it only has one slot</returns>
 		 */
-		public override string GetLabel (int slot, int languageNumber)
+		public override string GetLabel (int _slot, int languageNumber)
 		{
-			if (newSaveSlot && saveListType == AC_SaveListType.Save)
+			if (saveListType == AC_SaveListType.Save)
 			{
-				if (fixedOption)
+				if (newSaveSlot)
 				{
-					if (SaveSystem.DoesSaveExist (optionToShow))
+					if (fixedOption)
 					{
-						return TranslateLabel (newSaveText, languageNumber);
+						if (!SaveSystem.DoesSaveExist (optionToShow))
+						{
+							return TranslateLabel (newSaveText, languageNumber);
+						}
+					}
+					else
+					{
+						if ((_slot + offset) == (numSlots - 1))
+						{
+							return TranslateLabel (newSaveText, languageNumber);
+						}
 					}
 				}
-				else
+				else if (!fixedOption && allowEmptySlots)
 				{
-					if ((slot + offset) == (numSlots - 1))
+					if (!SaveSystem.DoesSaveExist (_slot + offset))
 					{
 						return TranslateLabel (newSaveText, languageNumber);
 					}
 				}
 			}
-			return SaveSystem.GetSaveSlotLabel (slot + offset, optionToShow, fixedOption);
+			return SaveSystem.GetSaveSlotLabel (_slot + offset, GetOptionID (_slot), fixedOption || allowEmptySlots);
+		}
+
+
+		private int GetOptionID (int _slot)
+		{
+			if (fixedOption)
+			{
+				return optionToShow;
+			}
+			return _slot + offset;
 		}
 
 
@@ -515,7 +553,7 @@ namespace AC
 		{
 			if (displayType != SaveDisplayType.ScreenshotOnly)
 			{
-				string fullText = "";
+				string fullText = string.Empty;
 
 				if (newSaveSlot && saveListType == AC_SaveListType.Save)
 				{
@@ -526,22 +564,32 @@ namespace AC
 					else if (fixedOption)
 					{
 						fullText = TranslateLabel (newSaveText, languageNumber);
-
 					}
 					else
 					{
-						fullText = SaveSystem.GetSaveSlotLabel (_slot + offset, optionToShow, fixedOption);
+						fullText = SaveSystem.GetSaveSlotLabel (_slot + offset, GetOptionID (_slot), fixedOption || allowEmptySlots);
+					}
+				}
+				else if (saveListType == AC_SaveListType.Save && !fixedOption && allowEmptySlots)
+				{
+					if (SaveSystem.DoesSaveExist (GetOptionID (_slot)))
+					{
+						fullText = SaveSystem.GetSaveSlotLabel (_slot + offset, GetOptionID (_slot), fixedOption || allowEmptySlots);
+					}
+					else
+					{
+						fullText = TranslateLabel (newSaveText, languageNumber);
 					}
 				}
 				else
 				{
 					if (saveListType == AC_SaveListType.Import)
 					{
-						fullText = SaveSystem.GetImportSlotLabel (_slot + offset, optionToShow, fixedOption);
+						fullText = SaveSystem.GetImportSlotLabel (_slot + offset, GetOptionID (_slot), fixedOption || allowEmptySlots);
 					}
 					else
 					{
-						fullText = SaveSystem.GetSaveSlotLabel (_slot + offset, optionToShow, fixedOption);
+						fullText = SaveSystem.GetSaveSlotLabel (_slot + offset, GetOptionID (_slot), fixedOption || allowEmptySlots);
 					}
 				}
 
@@ -579,11 +627,11 @@ namespace AC
 						Texture2D tex = null;
 						if (saveListType == AC_SaveListType.Import)
 						{
-							tex = SaveSystem.GetImportSlotScreenshot (_slot + offset, optionToShow, fixedOption);
+							tex = SaveSystem.GetImportSlotScreenshot (_slot + offset, GetOptionID (_slot), fixedOption || allowEmptySlots);
 						}
 						else
 						{
-							tex = SaveSystem.GetSaveSlotScreenshot (_slot + offset, optionToShow, fixedOption);
+							tex = SaveSystem.GetSaveSlotScreenshot (_slot + offset, GetOptionID (_slot), fixedOption || allowEmptySlots);
 						}
 						if (tex == null)
 						{
@@ -617,11 +665,11 @@ namespace AC
 				Texture2D tex = null;
 				if (saveListType == AC_SaveListType.Import)
 				{
-					tex = SaveSystem.GetImportSlotScreenshot (_slot + offset, optionToShow, fixedOption);
+					tex = SaveSystem.GetImportSlotScreenshot (_slot + offset, GetOptionID (_slot), fixedOption || allowEmptySlots);
 				}
 				else
 				{
-					tex = SaveSystem.GetSaveSlotScreenshot (_slot + offset, optionToShow, fixedOption);
+					tex = SaveSystem.GetSaveSlotScreenshot (_slot + offset, GetOptionID (_slot), fixedOption || allowEmptySlots);
 				}
 				if (tex == null && blankSlotTexture != null)
 				{
@@ -680,7 +728,7 @@ namespace AC
 				if (autoHandle)
 				{
 					EventManager.OnFinishSaving += OnCompleteSave;
-					EventManager.OnFailSaving += OnFailSave;
+					EventManager.OnFailSaving += OnFailSaveLoad;
 
 					if (newSaveSlot && _slot == (numSlots - 1))
 					{
@@ -697,7 +745,7 @@ namespace AC
 					}
 					else
 					{
-						SaveSystem.SaveGame (_slot + offset, optionToShow, fixedOption);
+						SaveSystem.SaveGame (_slot + offset, GetOptionID (_slot), fixedOption || allowEmptySlots);
 					}
 				}
 				else
@@ -710,9 +758,9 @@ namespace AC
 				if (autoHandle)
 				{
 					EventManager.OnFinishLoading += OnCompleteLoad;
-					EventManager.OnFailLoading += OnFailLoad;
+					EventManager.OnFailLoading += OnFailSaveLoad;
 
-					SaveSystem.LoadGame (_slot + offset, optionToShow, fixedOption);
+					SaveSystem.LoadGame (_slot + offset, GetOptionID (_slot), fixedOption || allowEmptySlots);
 				}
 				else
 				{
@@ -724,16 +772,14 @@ namespace AC
 				EventManager.OnFinishImporting += OnCompleteImport;
 				EventManager.OnFailImporting += OnFailImport;
 
-				SaveSystem.ImportGame (_slot + offset, optionToShow, fixedOption);
+				SaveSystem.ImportGame (_slot + offset, GetOptionID (_slot), fixedOption || allowEmptySlots);
 			}
 	
 			base.ProcessClick (_menu, _slot, _mouseState);
 		}
 
-		private Menu eventMenu;
-		private int eventSlot;
 
-		private void OnCompleteSave ()
+		private void OnCompleteSave (SaveFile saveFile)
 		{
 			ClearAllEvents ();
 
@@ -766,18 +812,7 @@ namespace AC
 		}
 
 
-		private void OnFailSave ()
-		{
-			ClearAllEvents ();
-
-			if (!autoHandle)
-			{
-				RunActionList (eventSlot);
-			}
-		}
-
-
-		private void OnFailLoad ()
+		private void OnFailSaveLoad (int saveID)
 		{
 			ClearAllEvents ();
 
@@ -797,10 +832,10 @@ namespace AC
 		private void ClearAllEvents ()
 		{
 			EventManager.OnFinishSaving -= OnCompleteSave;
-			EventManager.OnFailSaving -= OnFailSave;
+			EventManager.OnFailSaving -= OnFailSaveLoad;
 
 			EventManager.OnFinishLoading -= OnCompleteLoad;
-			EventManager.OnFailLoading -= OnFailLoad;
+			EventManager.OnFailLoading -= OnFailSaveLoad;
 
 			EventManager.OnFinishImporting -= OnCompleteImport;
 			EventManager.OnFailImporting -= OnFailImport;
@@ -851,6 +886,11 @@ namespace AC
 						newSaveSlot = !SaveSystem.DoesSaveExist (optionToShow);
 					}
 				}
+				else if (allowEmptySlots)
+				{
+					numSlots = maxSlots;
+					offset = Mathf.Min (offset, GetMaxOffset ());
+				}
 				else
 				{
 					if (saveListType == AC_SaveListType.Import)
@@ -861,7 +901,10 @@ namespace AC
 					{
 						numSlots = SaveSystem.GetNumSlots ();
 
-						if (saveListType == AC_SaveListType.Save && numSlots < KickStarter.settingsManager.maxSaves && showNewSaveOption)
+						if (saveListType == AC_SaveListType.Save &&
+							numSlots < KickStarter.settingsManager.maxSaves &&
+							numSlots < maxSlots &&
+							showNewSaveOption)
 						{
 							newSaveSlot = true;
 							numSlots ++;
@@ -985,6 +1028,10 @@ namespace AC
 
 		private int GetNumFilledSlots ()
 		{
+			if (!fixedOption && allowEmptySlots)
+			{
+				return KickStarter.settingsManager.maxSaves;
+			}
 			if (saveListType == AC_SaveListType.Save && !fixedOption && newSaveSlot && showNewSaveOption)
 			{
 				return KickStarter.saveSystem.GetNumSaves () + 1;
@@ -1049,7 +1096,10 @@ namespace AC
 		{
 			if (saveListType == AC_SaveListType.Save && showNewSaveOption)
 			{
-				return !string.IsNullOrEmpty (newSaveText);
+				if ((!fixedOption && allowEmptySlots) || showNewSaveOption)
+				{
+					return !string.IsNullOrEmpty (newSaveText);
+				}
 			}
 			return false;
 		}

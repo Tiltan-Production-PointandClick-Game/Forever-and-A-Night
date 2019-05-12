@@ -1,7 +1,7 @@
 /*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2018
+ *	by Chris Burton, 2013-2019
  *	
  *	"GVar.cs"
  * 
@@ -696,6 +696,23 @@ namespace AC
 			{
 				return popUpsLineID;
 			}
+		}
+
+
+		/**
+		 * <summary>Checks if this Variable is defined under the Variable Manager's list of Global Variables</summary>
+		 * <returns>True if the variable is Global</returns> 
+		 */
+		public bool IsGlobalVariable ()
+		{
+			foreach (GVar gVar in KickStarter.runtimeVariables.globalVars)
+			{
+				if (gVar == this)
+				{
+					return true;
+				}
+			}
+			return false;
 		}
 
 

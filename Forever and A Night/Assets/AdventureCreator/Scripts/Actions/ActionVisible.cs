@@ -1,7 +1,7 @@
 /*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2018
+ *	by Chris Burton, 2013-2019
  *	
  *	"ActionVisible.cs"
  * 
@@ -26,6 +26,8 @@ namespace AC
 		public int parameterID = -1;
 		public int constantID = 0;
 		public GameObject obToAffect;
+		protected GameObject runtimeObToAffect;
+
 		public bool affectChildren;
 		public VisState visState = 0;
 		
@@ -41,7 +43,7 @@ namespace AC
 
 		override public void AssignValues (List<ActionParameter> parameters)
 		{
-			obToAffect = AssignFile (parameters, parameterID, constantID, obToAffect);
+			runtimeObToAffect = AssignFile (parameters, parameterID, constantID, obToAffect);
 		}
 		
 		
@@ -53,20 +55,20 @@ namespace AC
 				state = true;
 			}
 			
-			if (obToAffect)
+			if (runtimeObToAffect != null)
 			{
-				if (obToAffect.GetComponent <LimitVisibility>())
+				if (runtimeObToAffect.GetComponent <LimitVisibility>())
 				{
-					obToAffect.GetComponent <LimitVisibility>().isLockedOff = !state;
+					runtimeObToAffect.GetComponent <LimitVisibility>().isLockedOff = !state;
 				}
-				else if (obToAffect.GetComponent <Renderer>())
+				else if (runtimeObToAffect.GetComponent <Renderer>())
 				{
-					obToAffect.GetComponent <Renderer>().enabled = state;
+					runtimeObToAffect.GetComponent <Renderer>().enabled = state;
 				}
 
 				if (affectChildren)
 				{
-					foreach (Renderer _renderer in obToAffect.GetComponentsInChildren <Renderer>())
+					foreach (Renderer _renderer in runtimeObToAffect.GetComponentsInChildren <Renderer>())
 					{
 						_renderer.enabled = state;
 					}
@@ -103,7 +105,7 @@ namespace AC
 		}
 
 
-		override public void AssignConstantIDs (bool saveScriptsToo)
+		override public void AssignConstantIDs (bool saveScriptsToo, bool fromAssetFile)
 		{
 			if (saveScriptsToo)
 			{
@@ -115,12 +117,11 @@ namespace AC
 		
 		override public string SetLabel ()
 		{
-			string labelAdd = "";
-			
-			if (obToAffect)
-					labelAdd = " (" + obToAffect.name + ")";
-			
-			return labelAdd;
+			if (obToAffect != null)
+			{
+				return obToAffect.name;
+			}
+			return string.Empty;
 		}
 
 		#endif

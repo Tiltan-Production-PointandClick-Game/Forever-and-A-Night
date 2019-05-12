@@ -1,7 +1,7 @@
 /*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2018
+ *	by Chris Burton, 2013-2019
  *	
  *	"RememberTransform.cs"
  * 
@@ -161,7 +161,7 @@ namespace AC
 				else
 				{
 					transformData.parentID = 0;
-					ACDebug.LogWarning ("Could not save " + this.name + "'s parent since it has no Constant ID");
+					ACDebug.LogWarning ("Could not save " + this.name + "'s parent since it has no Constant ID", this);
 				}
 			}
 

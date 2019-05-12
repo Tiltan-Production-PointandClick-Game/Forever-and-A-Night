@@ -1,7 +1,7 @@
 ﻿/*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2018
+ *	by Chris Burton, 2013-2019
  *	
  *	"ActionVarPreset.cs"
  * 
@@ -180,7 +180,7 @@ namespace AC
 					return GetLabelString (AdvGame.GetReferences ().variablesManager.varPresets);
 				}
 			}
-			return "";
+			return string.Empty;
 		}
 		
 		
@@ -190,10 +190,10 @@ namespace AC
 			{
 				if (varPreset.ID == presetID)
 				{
-					return " (" + varPreset.label + ")";
+					return varPreset.label;
 				}
 			}
-			return "";
+			return string.Empty;
 		}
 		
 		#endif

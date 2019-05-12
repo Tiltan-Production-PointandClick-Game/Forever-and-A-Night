@@ -1,7 +1,7 @@
 ﻿/*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2018
+ *	by Chris Burton, 2013-2019
  *	
  *	"FaceFXIntegration.cs"
  * 
@@ -30,7 +30,7 @@ namespace AC
 	 * A class the contains a number of static functions to assist with FaceFX integration.
 	 * To use FaceFX with Adventure Creator, the 'FaceFXIsPresent' preprocessor must be defined.
 	 */
-	public class FaceFXIntegration : ScriptableObject
+	public class FaceFXIntegration
 	{
 
 		/**

@@ -1,7 +1,7 @@
 ﻿/*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2018
+ *	by Chris Burton, 2013-2019
  *	
  *	"ActionCheck.cs"
  * 
@@ -157,7 +157,8 @@ namespace AC
 				
 				for (int i = 0; i < actions.Count; i++)
 				{
-					labelList.Add (i.ToString () + ": " + actions [i].title);
+					//labelList.Add (i.ToString () + ": " + actions [i].title);
+					labelList.Add ("(" + i.ToString () + ") " + ((KickStarter.actionsManager != null) ? KickStarter.actionsManager.GetActionTypeLabel (actions[i]) : string.Empty));
 					
 					if (skipActionTrueActual == actions [i])
 					{
@@ -182,7 +183,7 @@ namespace AC
 				if (actions.Count > 1)
 				{
 					EditorGUILayout.BeginHorizontal();
-					EditorGUILayout.LabelField ("  Action to skip to:");
+					EditorGUILayout.LabelField ("  Action to skip to:", GUILayout.Width (155f));
 					tempSkipAction = EditorGUILayout.Popup (skipActionTrue, labelList.ToArray());
 					skipActionTrue = tempSkipAction;
 					EditorGUILayout.EndHorizontal();
@@ -223,8 +224,8 @@ namespace AC
 				
 				for (int i = 0; i < actions.Count; i++)
 				{
-					labelList.Add (i.ToString () + ": " + actions [i].title);
-					
+					labelList.Add ("(" + i.ToString () + ") " + ((KickStarter.actionsManager != null) ? KickStarter.actionsManager.GetActionTypeLabel (actions[i]) : string.Empty));
+
 					if (skipActionFailActual == actions [i])
 					{
 						skipActionFail = i;
@@ -248,7 +249,7 @@ namespace AC
 				if (actions.Count > 1)
 				{
 					EditorGUILayout.BeginHorizontal();
-					EditorGUILayout.LabelField ("  Action to skip to:");
+					EditorGUILayout.LabelField ("  Action to skip to:", GUILayout.Width (155f));
 					tempSkipAction = EditorGUILayout.Popup (skipActionFail, labelList.ToArray());
 					skipActionFail = tempSkipAction;
 					EditorGUILayout.EndHorizontal();

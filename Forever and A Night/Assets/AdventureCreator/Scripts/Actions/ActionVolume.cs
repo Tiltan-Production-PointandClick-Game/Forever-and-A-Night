@@ -1,7 +1,7 @@
 ﻿/*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2018
+ *	by Chris Burton, 2013-2019
  *	
  *	"ActionVolume.cs"
  * 
@@ -25,6 +25,7 @@ namespace AC
 		public int constantID = 0;
 		public int parameterID = -1;
 		public Sound soundObject;
+		protected Sound runtimeSoundObject;
 		
 		public float newRelativeVolume = 1f;
 		public int newRelativeVolumeParameterID = -1;
@@ -44,7 +45,7 @@ namespace AC
 		
 		override public void AssignValues (List<ActionParameter> parameters)
 		{
-			soundObject = AssignFile <Sound> (parameters, parameterID, constantID, soundObject);
+			runtimeSoundObject = AssignFile <Sound> (parameters, parameterID, constantID, soundObject);
 			newRelativeVolume = AssignFloat (parameters, newRelativeVolumeParameterID, newRelativeVolume);
 			changeTime = AssignFloat (parameters, changeTimeParameterID, changeTime);
 		}
@@ -54,9 +55,9 @@ namespace AC
 		{
 			if (!isRunning)
 			{
-				if (soundObject)
+				if (runtimeSoundObject != null)
 				{
-					soundObject.ChangeRelativeVolume (newRelativeVolume, changeTime);
+					runtimeSoundObject.ChangeRelativeVolume (newRelativeVolume, changeTime);
 
 					if (willWait && changeTime > 0f)
 					{
@@ -113,7 +114,7 @@ namespace AC
 		}
 
 
-		override public void AssignConstantIDs (bool saveScriptsToo)
+		override public void AssignConstantIDs (bool saveScriptsToo, bool fromAssetFile)
 		{
 			if (saveScriptsToo)
 			{
@@ -125,13 +126,11 @@ namespace AC
 		
 		override public string SetLabel ()
 		{
-			string labelAdd = "";
-			if (soundObject)
+			if (soundObject != null)
 			{
-				labelAdd = " (" + soundObject.name + " to " + newRelativeVolume.ToString () + ")";
+				return soundObject.name + " to " + newRelativeVolume.ToString ();
 			}
-			
-			return labelAdd;
+			return string.Empty;
 		}
 		
 		#endif

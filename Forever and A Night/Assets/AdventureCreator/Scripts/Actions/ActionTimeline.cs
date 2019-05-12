@@ -1,7 +1,7 @@
 ﻿/*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2018
+ *	by Chris Burton, 2013-2019
  *	
  *	"ActionDirector.cs"
  * 
@@ -36,6 +36,7 @@ namespace AC
 
 		#if CAN_USE_TIMELINE
 		public PlayableDirector director;
+		protected PlayableDirector runtimeDirector;
 		public TimelineAsset newTimeline;
 		public int directorConstantID = 0;
 		public int directorParameterID = -1;
@@ -61,13 +62,27 @@ namespace AC
 		override public void AssignValues (List<ActionParameter> parameters)
 		{
 			#if CAN_USE_TIMELINE
-			director = AssignFile <PlayableDirector> (parameters, directorParameterID, directorConstantID, director);
+			runtimeDirector = AssignFile <PlayableDirector> (parameters, directorParameterID, directorConstantID, director);
 
 			if (newBindings != null)
 			{
 				for (int i=0; i<newBindings.Length; i++)
 				{
-					newBindings[i].gameObject = AssignFile (parameters, newBindings[i].parameterID, newBindings[i].constantID, newBindings[i].gameObject);
+					if (newBindings[i].isPlayer)
+					{
+						if (KickStarter.player != null)
+						{
+							newBindings[i].gameObject = KickStarter.player.gameObject;
+						}
+						else
+						{
+							ACDebug.LogWarning ("Cannot bind timeline track to Player, because no Player was found!", runtimeDirector);
+						}
+					}
+					else
+					{
+						newBindings[i].gameObject = AssignFile (parameters, newBindings[i].parameterID, newBindings[i].constantID, newBindings[i].gameObject);
+					}
 				}
 			}
 			#endif
@@ -81,7 +96,7 @@ namespace AC
 			{
 				isRunning = true;
 
-				if (director != null)
+				if (runtimeDirector != null)
 				{
 					if (method == ActionDirectorMethod.Play)
 					{
@@ -91,14 +106,13 @@ namespace AC
 						{
 							PrepareDirector ();
 
-							director.time = 0f;
-							director.Play ();
+							runtimeDirector.time = 0f;
+							runtimeDirector.Play ();
 						}
 						else
 						{
-							director.Resume ();
+							runtimeDirector.Resume ();
 						}
-
 
 						if (willWait)
 						{
@@ -106,7 +120,7 @@ namespace AC
 							{
 								KickStarter.mainCamera.Disable ();
 							}
-							return ((float) director.duration - (float) director.time);
+							return ((float) runtimeDirector.duration - (float) runtimeDirector.time);
 						}
 					}
 					else if (method == ActionDirectorMethod.Stop)
@@ -118,12 +132,14 @@ namespace AC
 
 						if (pause)
 						{
-							director.Pause ();
+							runtimeDirector.Pause ();
 						}
 						else
 						{
-							director.time = director.duration;
-							director.Stop ();
+							PrepareDirectorEnd ();
+
+							runtimeDirector.time = runtimeDirector.duration;
+							runtimeDirector.Stop ();
 						}
 					}
 				}
@@ -135,6 +151,7 @@ namespace AC
 					KickStarter.mainCamera.Enable ();
 				}
 
+				PrepareDirectorEnd ();
 				isRunning = false;
 			}
 			#endif
@@ -146,7 +163,7 @@ namespace AC
 		override public void Skip ()
 		{
 			#if CAN_USE_TIMELINE
-			if (director != null)
+			if (runtimeDirector != null)
 			{
 				if (disableCamera)
 				{
@@ -155,37 +172,49 @@ namespace AC
 
 				if (method == ActionDirectorMethod.Play)
 				{
-					if (director.extrapolationMode == DirectorWrapMode.Loop)
+					if (runtimeDirector.extrapolationMode == DirectorWrapMode.Loop)
 					{
 						PrepareDirector ();
 
 						if (restart)
 						{
-							director.Play ();
+							runtimeDirector.Play ();
 						}
 						else
 						{
-							director.Resume ();
+							runtimeDirector.Resume ();
 						}
 						return;
 					}
 
-					director.Stop ();
-					director.time = director.duration;
+					PrepareDirectorEnd ();
+
+					runtimeDirector.Stop ();
+					runtimeDirector.time = runtimeDirector.duration;
 				}
 				else if (method == ActionDirectorMethod.Stop)
 				{
 					if (pause)
 					{
-						director.Pause ();
+						runtimeDirector.Pause ();
 					}
 					else
 					{
-						director.Stop ();
+						runtimeDirector.Stop ();
 					}
 				}
 			}
 			#endif
+		}
+
+
+		public override void Reset (ActionList actionList)
+		{
+			if (isRunning)
+			{
+				isRunning = false;
+				Skip ();
+			}
 		}
 
 		
@@ -210,46 +239,47 @@ namespace AC
 				director = IDToField <PlayableDirector> (director, directorConstantID, false);
 			}
 
-			if (method == ActionDirectorMethod.Play)
+			if (director != null || directorParameterID >= 0)
 			{
-				restart = EditorGUILayout.Toggle ("Play from beginning?", restart);
-				if (restart)
+				if (method == ActionDirectorMethod.Play)
 				{
-					newTimeline = (TimelineAsset) EditorGUILayout.ObjectField ("Timeline (optional):", newTimeline, typeof (TimelineAsset), false);
-					EditorGUILayout.BeginVertical (CustomStyles.thinBox);
-					updateBindings = EditorGUILayout.Toggle ("Remap bindings?", updateBindings);
-					if (updateBindings)
+					restart = EditorGUILayout.Toggle ("Play from beginning?", restart);
+					if (restart)
 					{
-						if (newTimeline)
+						newTimeline = (TimelineAsset) EditorGUILayout.ObjectField ("Timeline (optional):", newTimeline, typeof (TimelineAsset), false);
+						updateBindings = EditorGUILayout.Toggle ("Remap bindings?", updateBindings);
+						if (updateBindings)
 						{
-							ShowBindingsUI (newTimeline, parameters);
+							if (newTimeline)
+							{
+								ShowBindingsUI (newTimeline, parameters);
+							}
+							else if (director != null && director.playableAsset != null)
+							{
+								ShowBindingsUI (director.playableAsset as TimelineAsset, parameters);
+							}
+							else
+							{
+								EditorGUILayout.HelpBox ("A Director or Timeline must be assigned in order to update bindings.", MessageType.Warning);
+							}
 						}
-						else if (director != null && director.playableAsset != null)
+						else if (newTimeline != null)
 						{
-							ShowBindingsUI (director.playableAsset as TimelineAsset, parameters);
-						}
-						else
-						{
-							EditorGUILayout.HelpBox ("A Director or Timeline must be assigned in order to update bindings.", MessageType.Warning);
+							EditorGUILayout.HelpBox ("The existing bindings will be transferred onto the new Timeline.", MessageType.Info);
 						}
 					}
-					else if (newTimeline != null)
-					{
-						EditorGUILayout.HelpBox ("The existing bindings will be transferred onto the new Timeline.", MessageType.Info);
-					}
-					EditorGUILayout.EndVertical ();
-				}
-				willWait = EditorGUILayout.Toggle ("Wait until finish?", willWait);
+					willWait = EditorGUILayout.Toggle ("Wait until finish?", willWait);
 
-				if (willWait)
-				{
-					disableCamera = EditorGUILayout.Toggle ("Disable AC camera?", disableCamera);
+					if (willWait)
+					{
+						disableCamera = EditorGUILayout.Toggle ("Disable AC camera?", disableCamera);
+					}
 				}
-			}
-			else if (method == ActionDirectorMethod.Stop)
-			{
-				pause = EditorGUILayout.Toggle ("Pause timeline?", pause);
-				disableCamera = EditorGUILayout.Toggle ("Enable AC camera?", disableCamera);
+				else if (method == ActionDirectorMethod.Stop)
+				{
+					pause = EditorGUILayout.Toggle ("Pause timeline?", pause);
+					disableCamera = EditorGUILayout.Toggle ("Enable AC camera?", disableCamera);
+				}
 			}
 
 			#else
@@ -261,6 +291,8 @@ namespace AC
 
 
 		#if CAN_USE_TIMELINE
+
+		private int rebindTrackIndex;
 		private void ShowBindingsUI (TimelineAsset timelineAsset, List<ActionParameter> parameters)
 		{
 			if (timelineAsset == null) return;
@@ -287,9 +319,35 @@ namespace AC
 				}
 			}
 
+			string[] popUpLabels = new string[newBindings.Length];
 			for (int i=0; i<newBindings.Length; i++)
 			{
-				newBindings[i].parameterID = Action.ChooseParameterGUI ("Track #" + i + ":", parameters, newBindings[i].parameterID, ParameterType.GameObject);
+				string trackName = (timelineAsset.GetOutputTrack (i) != null) ? timelineAsset.GetOutputTrack (i).name : " Track";
+				if (string.IsNullOrEmpty (trackName))
+				{
+					trackName = " Unnamed";
+				}
+				popUpLabels[i] = "#" + i.ToString () + ": " + trackName;
+			}
+
+			EditorGUILayout.BeginVertical (CustomStyles.thinBox);
+			rebindTrackIndex = EditorGUILayout.Popup ("Select a track:", rebindTrackIndex, popUpLabels);
+			ShowBindingUI (rebindTrackIndex, parameters);
+
+			if (newBindings.Length > 1)
+			{
+				EditorGUILayout.HelpBox ("Note: All bindings will be affected - not just the one selected above.", MessageType.Info);
+			}
+			EditorGUILayout.EndVertical ();
+		}
+
+
+		private void ShowBindingUI (int i, List<ActionParameter> parameters)
+		{
+			newBindings[i].isPlayer = EditorGUILayout.Toggle ("Bind to Player?", newBindings[i].isPlayer);
+			if (!newBindings[i].isPlayer)
+			{
+				newBindings[i].parameterID = Action.ChooseParameterGUI ("Bind to:", parameters, newBindings[i].parameterID, ParameterType.GameObject);
 				if (newBindings[i].parameterID >= 0)
 				{
 					newBindings[i].constantID = 0;
@@ -297,7 +355,7 @@ namespace AC
 				}
 				else
 				{
-					newBindings[i].gameObject = (GameObject) EditorGUILayout.ObjectField ("Track #" + i + ":", newBindings[i].gameObject, typeof (GameObject), true);
+					newBindings[i].gameObject = (GameObject) EditorGUILayout.ObjectField ("Bind to:", newBindings[i].gameObject, typeof (GameObject), true);
 
 					newBindings[i].constantID = FieldToID (newBindings[i].gameObject, newBindings[i].constantID);
 					newBindings[i].gameObject = IDToField (newBindings[i].gameObject, newBindings[i].constantID, false);
@@ -318,7 +376,7 @@ namespace AC
 		#endif
 
 
-		override public void AssignConstantIDs (bool saveScriptsToo)
+		override public void AssignConstantIDs (bool saveScriptsToo, bool fromAssetFile)
 		{
 			#if CAN_USE_TIMELINE
 			if (saveScriptsToo)
@@ -350,10 +408,10 @@ namespace AC
 			#if CAN_USE_TIMELINE
 			if (director != null)
 			{
-				return " (" + method.ToString () + " " + director.gameObject.name + ")";
+				return method.ToString () + " " + director.gameObject.name;
 			}
 			#endif
-			return "";
+			return string.Empty;
 		}
 		
 		#endif
@@ -365,17 +423,17 @@ namespace AC
 		{
 			if (newTimeline != null)
 			{
-				if (director.playableAsset != null && director.playableAsset is TimelineAsset)
+				if (runtimeDirector.playableAsset != null && runtimeDirector.playableAsset is TimelineAsset)
 				{
-					TimelineAsset oldTimeline = (TimelineAsset) director.playableAsset;
+					TimelineAsset oldTimeline = (TimelineAsset) runtimeDirector.playableAsset;
 					GameObject[] transferBindings = new GameObject[oldTimeline.outputTrackCount];
 					for (int i=0; i<transferBindings.Length; i++)
 					{
 						TrackAsset trackAsset = oldTimeline.GetOutputTrack (i);
-						transferBindings[i] = director.GetGenericBinding (trackAsset) as GameObject;
+						transferBindings[i] = runtimeDirector.GetGenericBinding (trackAsset) as GameObject;
 					}
 
-					director.playableAsset = newTimeline;
+					runtimeDirector.playableAsset = newTimeline;
 
 					for (int i=0; i<transferBindings.Length; i++)
 					{
@@ -384,34 +442,83 @@ namespace AC
 							var track = newTimeline.GetOutputTrack (i);
 							if (track != null)
 							{
-								director.SetGenericBinding (track, transferBindings[i].gameObject);
+								runtimeDirector.SetGenericBinding (track, transferBindings[i].gameObject);
 							}
 		                }
 					}
 				}
 				else
 				{
-					director.playableAsset = newTimeline;
+					runtimeDirector.playableAsset = newTimeline;
 				}
 			}
 
-			if (updateBindings && newBindings != null)
+			TimelineAsset timelineAsset = runtimeDirector.playableAsset as TimelineAsset;
+			if (timelineAsset != null)
 			{
-				TimelineAsset timelineAsset = director.playableAsset as TimelineAsset;
-				if (timelineAsset != null)
+				for (int i=0; i<timelineAsset.outputTrackCount; i++)
 				{
-					for (var i=0; i<newBindings.Length; i++)
+					TrackAsset trackAsset = timelineAsset.GetOutputTrack (i);
+
+					if (updateBindings && newBindings != null && i < newBindings.Length && newBindings[i] != null)
 					{
-						if (newBindings[i] != null)
+						if (trackAsset != null && newBindings[i].gameObject != null)
 						{
-							var track = timelineAsset.GetOutputTrack (i);
-							if (track != null)
-							{
-								director.SetGenericBinding (track, newBindings[i].gameObject);
-							}
-		                }
-		            }
-				}
+							runtimeDirector.SetGenericBinding (trackAsset, newBindings[i].gameObject);
+						}
+	                }
+
+					GameObject bindingObject = runtimeDirector.GetGenericBinding (trackAsset) as GameObject;
+					if (bindingObject == null)
+					{
+						Animator bindingAnimator = runtimeDirector.GetGenericBinding (trackAsset) as Animator;
+						if (bindingAnimator != null)
+						{
+							bindingObject = bindingAnimator.gameObject;
+						}
+					}
+
+					if (bindingObject != null)
+					{
+						Char bindingObjectChar = bindingObject.GetComponent <Char>();
+						if (bindingObjectChar != null)
+						{
+							bindingObjectChar.OnEnterTimeline (runtimeDirector, i);
+						}
+					}
+	            }
+			}
+		}
+
+
+		private void PrepareDirectorEnd ()
+		{
+			TimelineAsset timelineAsset = runtimeDirector.playableAsset as TimelineAsset;
+			if (timelineAsset != null)
+			{
+				for (int i=0; i<timelineAsset.outputTrackCount; i++)
+				{
+					TrackAsset trackAsset = timelineAsset.GetOutputTrack (i);
+
+					GameObject bindingObject = runtimeDirector.GetGenericBinding (trackAsset) as GameObject;
+					if (bindingObject == null)
+					{
+						Animator bindingAnimator = runtimeDirector.GetGenericBinding (trackAsset) as Animator;
+						if (bindingAnimator != null)
+						{
+							bindingObject = bindingAnimator.gameObject;
+						}
+					}
+
+					if (bindingObject != null)
+					{
+						Char bindingObjectChar = bindingObject.GetComponent <Char>();
+						if (bindingObjectChar != null)
+						{
+							bindingObjectChar.OnExitTimeline (runtimeDirector, i);
+						}
+					}
+	            }
 			}
 		}
 
@@ -421,6 +528,7 @@ namespace AC
 		{
 
 			public GameObject gameObject;
+			public bool isPlayer;
 			public int constantID;
 			public int parameterID = -1;
 
@@ -428,6 +536,7 @@ namespace AC
 			public BindingData ()
 			{
 				gameObject = null;
+				isPlayer = false;
 				constantID = 0;
 				parameterID = -1;
 			}
@@ -436,6 +545,7 @@ namespace AC
 			public BindingData (BindingData bindingData)
 			{
 				gameObject = bindingData.gameObject;
+				isPlayer = bindingData.isPlayer;
 				constantID = bindingData.constantID;
 				parameterID = bindingData.parameterID;
 			}

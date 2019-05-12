@@ -1,7 +1,7 @@
 /*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2018
+ *	by Chris Burton, 2013-2019
  *	
  *	"MenuInventoryBox.cs"
  * 
@@ -53,6 +53,8 @@ namespace AC
 		public LinkUIGraphic linkUIGraphic = LinkUIGraphic.ImageComponent;
 		/** If True, then no interactions will work, but items can still be selected and re-arranged as normal */
 		public bool preventInteractions = false;
+		/** If True, and the element is scrolled by an offset larger than the number of new items to show, then the offset amount will be reduced to only show those new items. */
+		public bool limitMaxScroll = true;
 
 		/** DisplayType != ConversationDisplayType.IconOnly, Hotspot labels will only update when hovering over items if this is True */
 		public bool updateHotspotLabelWhenHover = false;
@@ -107,6 +109,7 @@ namespace AC
 			autoOpenDocument = true;
 			updateHotspotLabelWhenHover = false;
 			preventInteractions = false;
+			limitMaxScroll = true;
 		}
 
 
@@ -149,6 +152,7 @@ namespace AC
 			autoOpenDocument = _element.autoOpenDocument;
 			updateHotspotLabelWhenHover = _element.updateHotspotLabelWhenHover;
 			preventInteractions = _element.preventInteractions;
+			limitMaxScroll = _element.limitMaxScroll;
 
 			UpdateLimitCategory ();
 
@@ -327,6 +331,12 @@ namespace AC
 					numSlots = CustomGUILayout.IntField ("Test slots:", numSlots, apiPrefix + ".numSlots");
 				}
 				maxSlots = CustomGUILayout.IntSlider ("Max number of slots:", maxSlots, 1, 30, apiPrefix + ".maxSlots", "The maximum number of inventory items that can be shown at once");
+			}
+
+			if (inventoryBoxType != AC_InventoryBoxType.DisplayLastSelected &&
+				inventoryBoxType != AC_InventoryBoxType.DisplaySelected)
+			{
+				limitMaxScroll = CustomGUILayout.Toggle ("Limit maximum scroll?", limitMaxScroll, apiPrefix + ".limitMaxScroll", "If True, and the element is scrolled by an offset larger than the number of new items to show, then the offset amount will be reduced to only show those new items.");
 			}
 
 			if (inventoryBoxType == AC_InventoryBoxType.Default || inventoryBoxType == AC_InventoryBoxType.Container)
@@ -791,7 +801,7 @@ namespace AC
 				{
 					if (items.Count <= trueIndex || items[trueIndex] == null)
 					{
-						// Black space
+						// Blank space
 						if (KickStarter.runtimeInventory.SelectedItem != null && KickStarter.settingsManager.canReorderItems)
 						{
 							if (limitToCategory && categoryIDs != null && categoryIDs.Count > 0)
@@ -1072,6 +1082,8 @@ namespace AC
 						newItemList.Add (_item);
 					}
 				}
+
+				newItemList = AddExtraNulls (newItemList);
 			}
 			else
 			{
@@ -1114,6 +1126,23 @@ namespace AC
 			}
 
 			return newItemList;
+		}
+
+
+		private List<InvItem> AddExtraNulls (List<InvItem> _items)
+		{
+			if (inventoryBoxType != AC_InventoryBoxType.DisplayLastSelected &&
+				inventoryBoxType != AC_InventoryBoxType.DisplaySelected &&
+				!limitMaxScroll &&
+				_items.Count > 0 &&
+				_items.Count % maxSlots != 0)
+			{
+				while (_items.Count % maxSlots != 0)
+				{
+					_items.Add (null);
+				}
+			}
+			return _items;
 		}
 
 
@@ -1248,6 +1277,8 @@ namespace AC
 				{
 					nonLinkedItemsToLimit = KickStarter.runtimeInventory.RemoveEmptySlots (nonLinkedItemsToLimit);
 				}
+
+				nonLinkedItemsToLimit = AddExtraNulls (nonLinkedItemsToLimit);
 			}
 
 			return new LimitedItemList (nonLinkedItemsToLimit, offset);

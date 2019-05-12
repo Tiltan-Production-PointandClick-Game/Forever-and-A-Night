@@ -1,7 +1,7 @@
 ﻿/*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2018
+ *	by Chris Burton, 2013-2019
  *	
  *	"ActionPlatformCheck.cs"
  * 
@@ -104,6 +104,12 @@ namespace AC
 		override public void ShowGUI ()
 		{
 			platformType = (PlatformType) EditorGUILayout.EnumPopup ("Platform is:", platformType);
+		}
+
+
+		public override string SetLabel ()
+		{
+			return platformType.ToString ();
 		}
 
 		#endif

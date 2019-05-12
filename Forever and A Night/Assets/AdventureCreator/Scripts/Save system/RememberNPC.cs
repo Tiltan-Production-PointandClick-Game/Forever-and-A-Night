@@ -1,7 +1,7 @@
 /*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2018
+ *	by Chris Burton, 2013-2019
  *	
  *	"RememberNPC.cs"
  * 
@@ -35,15 +35,18 @@ namespace AC
 		{
 			if (loadedData) return;
 
-			if (KickStarter.settingsManager && GetComponent <RememberHotspot>() == null && GameIsPlaying ())
+			if (OwnHotspot != null &&
+				GetComponent <RememberHotspot>() == null &&
+				KickStarter.settingsManager &&
+				GameIsPlaying ())
 			{
 				if (startState == AC_OnOff.On)
 				{
-					this.gameObject.layer = LayerMask.NameToLayer (KickStarter.settingsManager.hotspotLayer);
+					OwnHotspot.TurnOn ();
 				}
 				else
 				{
-					this.gameObject.layer = LayerMask.NameToLayer (KickStarter.settingsManager.deactivatedLayer);
+					OwnHotspot.TurnOff ();
 				}
 			}
 		}
@@ -60,13 +63,9 @@ namespace AC
 			npcData.objectID = constantID;
 			npcData.savePrevented = savePrevented;
 
-			if (gameObject.layer == LayerMask.NameToLayer (KickStarter.settingsManager.hotspotLayer))
+			if (OwnHotspot != null)
 			{
-				npcData.isOn = true;
-			}
-			else
-			{
-				npcData.isOn = false;
+				npcData.isOn = OwnHotspot.IsOn ();
 			}
 			
 			npcData.LocX = transform.position.x;
@@ -105,14 +104,30 @@ namespace AC
 			}
 			SavePrevented = data.savePrevented; if (savePrevented) return;
 
-			if (data.isOn)
+			if (GetComponent <RememberHotspot>() == null)
 			{
-				gameObject.layer = LayerMask.NameToLayer (KickStarter.settingsManager.hotspotLayer);
+				/*if (data.isOn)
+				{
+					gameObject.layer = LayerMask.NameToLayer (KickStarter.settingsManager.hotspotLayer);
+				}
+				else
+				{
+					gameObject.layer = LayerMask.NameToLayer (KickStarter.settingsManager.deactivatedLayer);
+				}*/
+
+				if (OwnHotspot != null)
+				{
+					if (data.isOn)
+					{
+						OwnHotspot.TurnOn ();
+					}
+					else
+					{
+						OwnHotspot.TurnOff ();
+					}
+				}
 			}
-			else
-			{
-				gameObject.layer = LayerMask.NameToLayer (KickStarter.settingsManager.deactivatedLayer);
-			}
+
 			transform.position = new Vector3 (data.LocX, data.LocY, data.LocZ);
 			transform.eulerAngles = new Vector3 (data.RotX, data.RotY, data.RotZ);
 			transform.localScale = new Vector3 (data.ScaleX, data.ScaleY, data.ScaleZ);
@@ -125,6 +140,20 @@ namespace AC
 			}
 
 			loadedData = true;
+		}
+
+
+		private Hotspot ownHotspot;
+		private Hotspot OwnHotspot
+		{
+			get
+			{
+				if (ownHotspot == null)
+				{
+					ownHotspot = GetComponent <Hotspot>();
+				}
+				return ownHotspot;
+			}
 		}
 
 	}
@@ -231,6 +260,8 @@ namespace AC
 		public bool followFaceWhenIdle = false;
 		/** If True, the NPC will stand a random direction from their target */
 		public bool followRandomDirection = false;
+		/** If True, the NPC is playing a custom animation */
+		public bool inCustomCharState = false;
 
 		/** True if the NPC's head is pointed towards a target */
 		public bool isHeadTurning = false;

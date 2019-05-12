@@ -1,9 +1,7 @@
 fileFormatVersion: 2
 guid: 554d449a9517f40a0850abaa04f70d7a
-timeCreated: 1456932388
-licenseType: Store
 ModelImporter:
-  serializedVersion: 19
+  serializedVersion: 23
   fileIDToRecycleName:
     100000: Arm.L
     100002: Arm.R
@@ -131,20 +129,32 @@ ModelImporter:
     9500000: //RootNode
     11100000: //RootNode
     13700000: Robot
+    2186277476908879412: ImportLogs
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Robot
+    second: {fileID: 2100000, guid: f6df2c90cc63d40ba801bd2240edaa77, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
     materialSearch: 1
+    materialLocation: 0
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
-    resampleRotations: 1
-    optimizeGameObjects: 0
+    resampleCurves: 1
+    optimizeGameObjects: 1
     motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
     animationImportErrors: 
     animationImportWarnings: 
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
     animationCompression: 0
     animationRotationError: 0.5
     animationPositionError: 0.5
@@ -154,6 +164,7 @@ ModelImporter:
     - rRobot/Base/WheelPosition/Leg/Chest/Arm.L/Forearm.L/Hand.L/Hold.L
     - rRobot/Base/WheelPosition/Leg/Chest/Arm.R/Forearm.R/Hand.R/Hold.R
     - rRobot/Base/WheelPosition/Leg/Chest/Neck/Head/Jaw
+    extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
       name: Robot_Appear
@@ -169,10 +180,10 @@ ModelImporter:
       loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
-      loopBlendPositionY: 0
+      loopBlendPositionY: 1
       loopBlendPositionXZ: 0
       keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
+      keepOriginalPositionY: 0
       keepOriginalPositionXZ: 0
       heightFromFeet: 0
       mirror: 0
@@ -279,7 +290,7 @@ ModelImporter:
       loopTime: 1
       loopBlend: 0
       loopBlendOrientation: 0
-      loopBlendPositionY: 0
+      loopBlendPositionY: 1
       loopBlendPositionXZ: 0
       keepOriginalOrientation: 0
       keepOriginalPositionY: 1
@@ -486,116 +497,6 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Robot_Blink
-      takeName: rRobot|Robot_Blink
-      firstFrame: 0
-      lastFrame: 122
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      hasAdditiveReferencePose: 0
-      loopTime: 1
-      loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask:
-      - path: 
-        weight: 1
-      - path: Robot
-        weight: 1
-      - path: rRobot
-        weight: 1
-      - path: rRobot/Base
-        weight: 1
-      - path: rRobot/Base/WheelPosition
-        weight: 1
-      - path: rRobot/Base/WheelPosition/Leg
-        weight: 1
-      - path: rRobot/Base/WheelPosition/Leg/Chest
-        weight: 1
-      - path: rRobot/Base/WheelPosition/Leg/Chest/Arm.L
-        weight: 1
-      - path: rRobot/Base/WheelPosition/Leg/Chest/Arm.L/Elbow.L
-        weight: 1
-      - path: rRobot/Base/WheelPosition/Leg/Chest/Arm.L/Elbow.L/Elbow.L_end
-        weight: 1
-      - path: rRobot/Base/WheelPosition/Leg/Chest/Arm.L/Forearm.L
-        weight: 1
-      - path: rRobot/Base/WheelPosition/Leg/Chest/Arm.L/Forearm.L/Hand.L
-        weight: 1
-      - path: rRobot/Base/WheelPosition/Leg/Chest/Arm.L/Forearm.L/Hand.L/Fingers.L
-        weight: 1
-      - path: rRobot/Base/WheelPosition/Leg/Chest/Arm.L/Forearm.L/Hand.L/Fingers.L/Fingers.L_end
-        weight: 1
-      - path: rRobot/Base/WheelPosition/Leg/Chest/Arm.L/Forearm.L/Hand.L/Hold.L
-        weight: 1
-      - path: rRobot/Base/WheelPosition/Leg/Chest/Arm.L/Forearm.L/Hand.L/Hold.L/Hold.L_end
-        weight: 1
-      - path: rRobot/Base/WheelPosition/Leg/Chest/Arm.L/Forearm.L/Hand.L/Thumb.L
-        weight: 1
-      - path: rRobot/Base/WheelPosition/Leg/Chest/Arm.L/Forearm.L/Hand.L/Thumb.L/Thumb.L_end
-        weight: 1
-      - path: rRobot/Base/WheelPosition/Leg/Chest/Arm.R
-        weight: 1
-      - path: rRobot/Base/WheelPosition/Leg/Chest/Arm.R/Elbow.R
-        weight: 1
-      - path: rRobot/Base/WheelPosition/Leg/Chest/Arm.R/Elbow.R/Elbow.R_end
-        weight: 1
-      - path: rRobot/Base/WheelPosition/Leg/Chest/Arm.R/Forearm.R
-        weight: 1
-      - path: rRobot/Base/WheelPosition/Leg/Chest/Arm.R/Forearm.R/Hand.R
-        weight: 1
-      - path: rRobot/Base/WheelPosition/Leg/Chest/Arm.R/Forearm.R/Hand.R/Fingers.R
-        weight: 1
-      - path: rRobot/Base/WheelPosition/Leg/Chest/Arm.R/Forearm.R/Hand.R/Fingers.R/Fingers.R_end
-        weight: 1
-      - path: rRobot/Base/WheelPosition/Leg/Chest/Arm.R/Forearm.R/Hand.R/Hold.R
-        weight: 1
-      - path: rRobot/Base/WheelPosition/Leg/Chest/Arm.R/Forearm.R/Hand.R/Hold.R/Hold.R_end
-        weight: 1
-      - path: rRobot/Base/WheelPosition/Leg/Chest/Arm.R/Forearm.R/Hand.R/Thumb.R
-        weight: 1
-      - path: rRobot/Base/WheelPosition/Leg/Chest/Arm.R/Forearm.R/Hand.R/Thumb.R/Thumb.R_end
-        weight: 1
-      - path: rRobot/Base/WheelPosition/Leg/Chest/Neck
-        weight: 1
-      - path: rRobot/Base/WheelPosition/Leg/Chest/Neck/Head
-        weight: 1
-      - path: rRobot/Base/WheelPosition/Leg/Chest/Neck/Head/Eye.L
-        weight: 1
-      - path: rRobot/Base/WheelPosition/Leg/Chest/Neck/Head/Eye.L/Eye.L_end
-        weight: 1
-      - path: rRobot/Base/WheelPosition/Leg/Chest/Neck/Head/Eye.R
-        weight: 1
-      - path: rRobot/Base/WheelPosition/Leg/Chest/Neck/Head/Eye.R/Eye.R_end
-        weight: 1
-      - path: rRobot/Base/WheelPosition/Leg/Chest/Neck/Head/Jaw
-        weight: 1
-      - path: rRobot/Base/WheelPosition/Leg/Chest/Neck/Head/Jaw/Jaw_end
-        weight: 1
-      - path: rRobot/Base/WheelPosition/Leg/Chest/Neck/Head/Tail
-        weight: 1
-      - path: rRobot/Base/WheelPosition/Leg/Chest/Neck/Head/Tail/Tail_end
-        weight: 1
-      - path: rRobot/Base/WheelPosition/Wheel
-        weight: 1
-      - path: rRobot/Base/WheelPosition/Wheel/Wheel_end
-        weight: 1
-      maskType: 0
-      maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
-    - serializedVersion: 16
       name: Robot_HopAlong
       takeName: rRobot|Robot_HopAlong
       firstFrame: 0
@@ -609,11 +510,11 @@ ModelImporter:
       loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
       keepOriginalOrientation: 0
       keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
+      keepOriginalPositionXZ: 1
       heightFromFeet: 0
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
@@ -719,11 +620,11 @@ ModelImporter:
       loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
       keepOriginalOrientation: 0
       keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
+      keepOriginalPositionXZ: 1
       heightFromFeet: 0
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
@@ -829,11 +730,11 @@ ModelImporter:
       loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
       keepOriginalOrientation: 0
       keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
+      keepOriginalPositionXZ: 1
       heightFromFeet: 0
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
@@ -939,7 +840,7 @@ ModelImporter:
       loopTime: 1
       loopBlend: 0
       loopBlendOrientation: 0
-      loopBlendPositionY: 0
+      loopBlendPositionY: 1
       loopBlendPositionXZ: 0
       keepOriginalOrientation: 0
       keepOriginalPositionY: 1
@@ -1710,10 +1611,10 @@ ModelImporter:
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
+      loopBlendPositionXZ: 1
       keepOriginalOrientation: 0
       keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
+      keepOriginalPositionXZ: 1
       heightFromFeet: 0
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
@@ -1929,7 +1830,7 @@ ModelImporter:
       loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
-      loopBlendPositionY: 0
+      loopBlendPositionY: 1
       loopBlendPositionXZ: 0
       keepOriginalOrientation: 0
       keepOriginalPositionY: 1
@@ -2039,7 +1940,7 @@ ModelImporter:
       loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
-      loopBlendPositionY: 0
+      loopBlendPositionY: 1
       loopBlendPositionXZ: 0
       keepOriginalOrientation: 0
       keepOriginalPositionY: 1
@@ -2149,7 +2050,7 @@ ModelImporter:
       loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
-      loopBlendPositionY: 0
+      loopBlendPositionY: 1
       loopBlendPositionXZ: 0
       keepOriginalOrientation: 0
       keepOriginalPositionY: 1
@@ -2369,7 +2270,7 @@ ModelImporter:
       loopTime: 1
       loopBlend: 0
       loopBlendOrientation: 0
-      loopBlendPositionY: 0
+      loopBlendPositionY: 1
       loopBlendPositionXZ: 0
       keepOriginalOrientation: 0
       keepOriginalPositionY: 1
@@ -3029,11 +2930,11 @@ ModelImporter:
       loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
       keepOriginalOrientation: 0
       keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
+      keepOriginalPositionXZ: 1
       heightFromFeet: 0
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
@@ -3138,10 +3039,10 @@ ModelImporter:
       hasAdditiveReferencePose: 0
       loopTime: 0
       loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
       loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
+      keepOriginalOrientation: 1
       keepOriginalPositionY: 1
       keepOriginalPositionXZ: 0
       heightFromFeet: 0
@@ -3249,7 +3150,7 @@ ModelImporter:
       loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
-      loopBlendPositionY: 0
+      loopBlendPositionY: 1
       loopBlendPositionXZ: 0
       keepOriginalOrientation: 0
       keepOriginalPositionY: 1
@@ -3359,7 +3260,7 @@ ModelImporter:
       loopTime: 1
       loopBlend: 0
       loopBlendOrientation: 0
-      loopBlendPositionY: 0
+      loopBlendPositionY: 1
       loopBlendPositionXZ: 0
       keepOriginalOrientation: 0
       keepOriginalPositionY: 1
@@ -3571,25 +3472,38 @@ ModelImporter:
     globalScale: 1
     meshCompression: 0
     addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 0
     importBlendShapes: 1
+    importCameras: 0
+    importLights: 0
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
     optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 1
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
     useFileScale: 1
+    previousCalculatedGlobalScale: 0.01
+    hasPreviousCalculatedGlobalScale: 1
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
     tangentImportMode: 4
+    normalCalculationMode: 0
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
   importAnimation: 1
   copyAvatar: 0
   humanDescription:
+    serializedVersion: 2
     human: []
     skeleton: []
     armTwist: 0.5
@@ -3599,8 +3513,10 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    rootMotionBoneName: 
+    rootMotionBoneName: Base
     hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 0
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   animationType: 2
   humanoidOversampling: 1

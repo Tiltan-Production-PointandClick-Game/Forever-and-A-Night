@@ -436,67 +436,6 @@ Transform:
   m_Father: {fileID: 227722641}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &569840029
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f1d11677f69f745f88dbe9922511d53f, type: 3}
-  m_Name: ActionScene(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)
-  m_EditorClassIdentifier: 
-  id: 0
-  category: 15
-  title: Switch
-  description: 'Moves the Player to a new scene. The scene must be listed in Unity''s
-    Build Settings. By default, the screen will cut to black during the transition,
-    but the last frame of the current scene can instead be overlayed. This allows
-    for cinematic effects: if the next scene fades in, it will cause a crossfade effect;
-    if the next scene doesn''t fade, it will cause a straight cut.'
-  isDisplayed: 1
-  showComment: 0
-  comment: 
-  showOutputSockets: 1
-  numSockets: 0
-  willWait: 0
-  isRunning: 0
-  lastResult:
-    resultAction: 0
-    skipAction: -10
-    skipActionActual: {fileID: 0}
-    linkedCutscene: {fileID: 0}
-    linkedAsset: {fileID: 0}
-  endAction: 1
-  skipAction: -1
-  skipActionActual: {fileID: 0}
-  linkedCutscene: {fileID: 0}
-  linkedAsset: {fileID: 0}
-  isEnabled: 1
-  isAssetFile: 0
-  isMarked: 0
-  isBreakPoint: 0
-  nodeRect:
-    serializedVersion: 2
-    x: 14
-    y: 14
-    width: 300
-    height: 150
-  nodeHeight: 0
-  chooseSceneBy: 1
-  sceneNumber: 0
-  sceneNumberParameterID: -1
-  sceneName: Stage 1 - 103 Well Street
-  sceneNameParameterID: -1
-  assignScreenOverlay: 1
-  onlyPreload: 0
-  relativePosition: 0
-  relativeMarker: {fileID: 0}
-  relativeMarkerID: 0
-  relativeMarkerParameterID: -1
-  forceReload: 0
 --- !u!1 &586083330
 GameObject:
   m_ObjectHideFlags: 0
@@ -558,67 +497,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &734394449
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a0643024da91f402a9281e781736a4c6, type: 3}
-  m_Name: ActionCharPathFind(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)
-  m_EditorClassIdentifier: 
-  id: 0
-  category: 2
-  title: Move to point
-  description: Moves a character to a given Marker object. By default, the character
-    will attempt to pathfind their way to the marker, but can optionally just move
-    in a straight line.
-  isDisplayed: 1
-  showComment: 0
-  comment: 
-  showOutputSockets: 1
-  numSockets: 1
-  willWait: 1
-  isRunning: 0
-  lastResult:
-    resultAction: 0
-    skipAction: -10
-    skipActionActual: {fileID: 0}
-    linkedCutscene: {fileID: 0}
-    linkedAsset: {fileID: 0}
-  endAction: 0
-  skipAction: 2
-  skipActionActual: {fileID: 848199312}
-  linkedCutscene: {fileID: 0}
-  linkedAsset: {fileID: 0}
-  isEnabled: 1
-  isAssetFile: 0
-  isMarked: 0
-  isBreakPoint: 0
-  nodeRect:
-    serializedVersion: 2
-    x: 406
-    y: 141
-    width: 300
-    height: 184
-  nodeHeight: 0
-  charToMoveParameterID: -1
-  markerParameterID: -1
-  charToMoveID: 0
-  markerID: 0
-  marker: {fileID: 354503502486480437}
-  isPlayer: 1
-  charToMove: {fileID: 0}
-  speed: 0
-  pathFind: 1
-  doFloat: 0
-  doTimeLimit: 0
-  maxTimeParameterID: -1
-  maxTime: 10
-  onReachTimeLimit: 0
 --- !u!1 &798157132
 GameObject:
   m_ObjectHideFlags: 0
@@ -702,7 +580,7 @@ MonoBehaviour:
   direction: 3
   charToMove: {fileID: 0}
   isPlayer: 1
---- !u!114 &983089344
+--- !u!114 &1105026741
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -711,77 +589,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ee55ab6fc4c1a4080a3e890703f10e69, type: 3}
-  m_Name: ActionSceneCheck(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)
-  m_EditorClassIdentifier: 
-  id: 0
-  category: 15
-  title: Check
-  description: Queries either the current scene, or the last one visited.
-  isDisplayed: 1
-  showComment: 0
-  comment: 
-  showOutputSockets: 1
-  numSockets: 2
-  willWait: 0
-  isRunning: 0
-  lastResult:
-    resultAction: 0
-    skipAction: -10
-    skipActionActual: {fileID: 0}
-    linkedCutscene: {fileID: 0}
-    linkedAsset: {fileID: 0}
-  endAction: 0
-  skipAction: -1
-  skipActionActual: {fileID: 0}
-  linkedCutscene: {fileID: 0}
-  linkedAsset: {fileID: 0}
-  isEnabled: 1
-  isAssetFile: 0
-  isMarked: 0
-  isBreakPoint: 0
-  nodeRect:
-    serializedVersion: 2
-    x: 14
-    y: 14
-    width: 300
-    height: 140
-  nodeHeight: 0
-  resultActionTrue: 0
-  skipActionTrue: -1
-  skipActionTrueActual: {fileID: 0}
-  linkedCutsceneTrue: {fileID: 0}
-  linkedAssetTrue: {fileID: 0}
-  resultActionFail: 1
-  skipActionFail: -1
-  skipActionFailActual: {fileID: 0}
-  linkedCutsceneFail: {fileID: 0}
-  linkedAssetFail: {fileID: 0}
-  chooseSceneBy: 1
-  sceneToCheck: 1
-  sceneNumberParameterID: -1
-  sceneNumber: 0
-  sceneNameParameterID: -1
-  sceneName: Main Street_1
-  intCondition: 0
---- !u!114 &1004536829
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a0643024da91f402a9281e781736a4c6, type: 3}
-  m_Name: ActionCharPathFind(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)
+  m_Script: {fileID: 11500000, guid: dc97f6c6b883c492b87b252ed835136e, type: 3}
+  m_Name: ActionCharFaceDirection(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)
   m_EditorClassIdentifier: 
   id: 0
   category: 2
-  title: Move to point
-  description: Moves a character to a given Marker object. By default, the character
-    will attempt to pathfind their way to the marker, but can optionally just move
-    in a straight line.
+  title: Face direction
+  description: "Makes a Character turn, either instantly or over time, to face a direction
+    relative to the camera \u2013 i.e. up, down, left or right."
   isDisplayed: 1
   showComment: 0
   comment: 
@@ -795,9 +610,9 @@ MonoBehaviour:
     skipActionActual: {fileID: 0}
     linkedCutscene: {fileID: 0}
     linkedAsset: {fileID: 0}
-  endAction: 0
-  skipAction: 3
-  skipActionActual: {fileID: 0}
+  endAction: 1
+  skipAction: 2
+  skipActionActual: {fileID: 1105026741}
   linkedCutscene: {fileID: 0}
   linkedAsset: {fileID: 0}
   isEnabled: 1
@@ -806,25 +621,17 @@ MonoBehaviour:
   isBreakPoint: 0
   nodeRect:
     serializedVersion: 2
-    x: 25
-    y: 201
+    x: 405
+    y: 382
     width: 300
-    height: 184
+    height: 140
   nodeHeight: 0
   charToMoveParameterID: -1
-  markerParameterID: -1
   charToMoveID: 0
-  markerID: 0
-  marker: {fileID: 354503502486480437}
-  isPlayer: 1
+  isInstant: 0
+  direction: 3
   charToMove: {fileID: 0}
-  speed: 0
-  pathFind: 1
-  doFloat: 0
-  doTimeLimit: 0
-  maxTimeParameterID: -1
-  maxTime: 10
-  onReachTimeLimit: 0
+  isPlayer: 1
 --- !u!1 &1113243026
 GameObject:
   m_ObjectHideFlags: 0
@@ -951,6 +758,68 @@ Transform:
   m_Father: {fileID: 1113243027}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1229890877
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee55ab6fc4c1a4080a3e890703f10e69, type: 3}
+  m_Name: ActionSceneCheck(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)
+  m_EditorClassIdentifier: 
+  id: 0
+  category: 15
+  title: Check
+  description: Queries either the current scene, or the last one visited.
+  isDisplayed: 1
+  showComment: 0
+  comment: 
+  showOutputSockets: 1
+  numSockets: 2
+  willWait: 0
+  isRunning: 0
+  lastResult:
+    resultAction: 0
+    skipAction: -10
+    skipActionActual: {fileID: 0}
+    linkedCutscene: {fileID: 0}
+    linkedAsset: {fileID: 0}
+  endAction: 0
+  skipAction: -1
+  skipActionActual: {fileID: 0}
+  linkedCutscene: {fileID: 0}
+  linkedAsset: {fileID: 0}
+  isEnabled: 1
+  isAssetFile: 0
+  isMarked: 0
+  isBreakPoint: 0
+  nodeRect:
+    serializedVersion: 2
+    x: 14
+    y: 14
+    width: 300
+    height: 140
+  nodeHeight: 0
+  resultActionTrue: 0
+  skipActionTrue: -1
+  skipActionTrueActual: {fileID: 0}
+  linkedCutsceneTrue: {fileID: 0}
+  linkedAssetTrue: {fileID: 0}
+  resultActionFail: 1
+  skipActionFail: -1
+  skipActionFailActual: {fileID: 0}
+  linkedCutsceneFail: {fileID: 0}
+  linkedAssetFail: {fileID: 0}
+  chooseSceneBy: 1
+  sceneToCheck: 1
+  sceneNumberParameterID: -1
+  sceneNumber: 0
+  sceneNameParameterID: -1
+  sceneName: Main Street_1
+  intCondition: 0
 --- !u!1 &1248557045
 GameObject:
   m_ObjectHideFlags: 0
@@ -981,6 +850,67 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1261290909
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0643024da91f402a9281e781736a4c6, type: 3}
+  m_Name: ActionCharPathFind(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)
+  m_EditorClassIdentifier: 
+  id: 0
+  category: 2
+  title: Move to point
+  description: Moves a character to a given Marker object. By default, the character
+    will attempt to pathfind their way to the marker, but can optionally just move
+    in a straight line.
+  isDisplayed: 1
+  showComment: 0
+  comment: 
+  showOutputSockets: 1
+  numSockets: 1
+  willWait: 1
+  isRunning: 0
+  lastResult:
+    resultAction: 0
+    skipAction: -10
+    skipActionActual: {fileID: 0}
+    linkedCutscene: {fileID: 0}
+    linkedAsset: {fileID: 0}
+  endAction: 0
+  skipAction: 2
+  skipActionActual: {fileID: 848199312}
+  linkedCutscene: {fileID: 0}
+  linkedAsset: {fileID: 0}
+  isEnabled: 1
+  isAssetFile: 0
+  isMarked: 0
+  isBreakPoint: 0
+  nodeRect:
+    serializedVersion: 2
+    x: 406
+    y: 141
+    width: 300
+    height: 184
+  nodeHeight: 0
+  charToMoveParameterID: -1
+  markerParameterID: -1
+  charToMoveID: 0
+  markerID: 0
+  marker: {fileID: 354503502486480437}
+  isPlayer: 1
+  charToMove: {fileID: 0}
+  speed: 0
+  pathFind: 1
+  doFloat: 0
+  doTimeLimit: 0
+  maxTimeParameterID: -1
+  maxTime: 10
+  onReachTimeLimit: 0
 --- !u!1 &1282134696
 GameObject:
   m_ObjectHideFlags: 0
@@ -1202,6 +1132,67 @@ Transform:
   m_Father: {fileID: 227722641}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1512351271
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0643024da91f402a9281e781736a4c6, type: 3}
+  m_Name: ActionCharPathFind(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)
+  m_EditorClassIdentifier: 
+  id: 0
+  category: 2
+  title: Move to point
+  description: Moves a character to a given Marker object. By default, the character
+    will attempt to pathfind their way to the marker, but can optionally just move
+    in a straight line.
+  isDisplayed: 1
+  showComment: 0
+  comment: 
+  showOutputSockets: 1
+  numSockets: 1
+  willWait: 1
+  isRunning: 0
+  lastResult:
+    resultAction: 0
+    skipAction: -10
+    skipActionActual: {fileID: 0}
+    linkedCutscene: {fileID: 0}
+    linkedAsset: {fileID: 0}
+  endAction: 0
+  skipAction: 3
+  skipActionActual: {fileID: 0}
+  linkedCutscene: {fileID: 0}
+  linkedAsset: {fileID: 0}
+  isEnabled: 1
+  isAssetFile: 0
+  isMarked: 0
+  isBreakPoint: 0
+  nodeRect:
+    serializedVersion: 2
+    x: 25
+    y: 201
+    width: 300
+    height: 184
+  nodeHeight: 0
+  charToMoveParameterID: -1
+  markerParameterID: -1
+  charToMoveID: 0
+  markerID: 0
+  marker: {fileID: 354503502486480437}
+  isPlayer: 1
+  charToMove: {fileID: 0}
+  speed: 0
+  pathFind: 1
+  doFloat: 0
+  doTimeLimit: 0
+  maxTimeParameterID: -1
+  maxTime: 10
+  onReachTimeLimit: 0
 --- !u!1 &1577062672
 GameObject:
   m_ObjectHideFlags: 0
@@ -1263,7 +1254,7 @@ Transform:
   m_Father: {fileID: 1113243027}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1841911130
+--- !u!114 &1650893384
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1272,20 +1263,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc97f6c6b883c492b87b252ed835136e, type: 3}
-  m_Name: ActionCharFaceDirection(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)
+  m_Script: {fileID: 11500000, guid: f1d11677f69f745f88dbe9922511d53f, type: 3}
+  m_Name: ActionScene(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)
   m_EditorClassIdentifier: 
   id: 0
-  category: 2
-  title: Face direction
-  description: "Makes a Character turn, either instantly or over time, to face a direction
-    relative to the camera \u2013 i.e. up, down, left or right."
+  category: 15
+  title: Switch
+  description: 'Moves the Player to a new scene. The scene must be listed in Unity''s
+    Build Settings. By default, the screen will cut to black during the transition,
+    but the last frame of the current scene can instead be overlayed. This allows
+    for cinematic effects: if the next scene fades in, it will cause a crossfade effect;
+    if the next scene doesn''t fade, it will cause a straight cut.'
   isDisplayed: 1
   showComment: 0
   comment: 
   showOutputSockets: 1
-  numSockets: 1
-  willWait: 1
+  numSockets: 0
+  willWait: 0
   isRunning: 0
   lastResult:
     resultAction: 0
@@ -1294,8 +1288,8 @@ MonoBehaviour:
     linkedCutscene: {fileID: 0}
     linkedAsset: {fileID: 0}
   endAction: 1
-  skipAction: 2
-  skipActionActual: {fileID: 1841911130}
+  skipAction: -1
+  skipActionActual: {fileID: 0}
   linkedCutscene: {fileID: 0}
   linkedAsset: {fileID: 0}
   isEnabled: 1
@@ -1304,17 +1298,23 @@ MonoBehaviour:
   isBreakPoint: 0
   nodeRect:
     serializedVersion: 2
-    x: 405
-    y: 382
+    x: 14
+    y: 14
     width: 300
-    height: 140
+    height: 150
   nodeHeight: 0
-  charToMoveParameterID: -1
-  charToMoveID: 0
-  isInstant: 0
-  direction: 3
-  charToMove: {fileID: 0}
-  isPlayer: 1
+  chooseSceneBy: 1
+  sceneNumber: 0
+  sceneNumberParameterID: -1
+  sceneName: Stage 1 - 103 Well Street
+  sceneNameParameterID: -1
+  assignScreenOverlay: 1
+  onlyPreload: 0
+  relativePosition: 0
+  relativeMarker: {fileID: 0}
+  relativeMarkerID: 0
+  relativeMarkerParameterID: -1
+  forceReload: 0
 --- !u!1 &1925599038
 GameObject:
   m_ObjectHideFlags: 0
@@ -1920,6 +1920,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   narratorSound: {fileID: 0}
   conversationDelay: 0.3
+  richTextTags:
+  - b
+  - i
+  - size=
+  - color=
 --- !u!114 &2610920017887727718
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2287,6 +2292,13 @@ MonoBehaviour:
   isDragControlled: 0
   focalDistance: 10
   is2D: 0
+  followCursor: 0
+  cursorInfluence: {x: 0.3, y: 0.1}
+  constrainCursorInfluenceX: 0
+  limitCursorInfluenceX: {x: 0, y: 0}
+  constrainCursorInfluenceY: 0
+  limitCursorInfluenceY: {x: 0, y: 0}
+  followCursorSpeed: 3
   lockHorizontal: 1
   lockVertical: 1
   limitHorizontal: 0
@@ -2402,10 +2414,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   actions:
-  - {fileID: 983089344}
-  - {fileID: 734394449}
-  - {fileID: 1841911130}
-  - {fileID: 1004536829}
+  - {fileID: 1229890877}
+  - {fileID: 1261290909}
+  - {fileID: 1105026741}
+  - {fileID: 1512351271}
   isSkippable: 1
   triggerTime: 0
   autosaveAfter: 0
@@ -2462,7 +2474,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   actions:
-  - {fileID: 569840029}
+  - {fileID: 1650893384}
   isSkippable: 1
   triggerTime: 0
   autosaveAfter: 0

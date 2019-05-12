@@ -1,7 +1,7 @@
 /*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2018
+ *	by Chris Burton, 2013-2019
  *	
  *	"NPC.cs"
  * 
@@ -87,7 +87,7 @@ namespace AC
 				{
 					if (charState == CharState.Move)
 					{
-						charState = CharState.Decelerate;
+						StartDecelerating ();
 					}
 					else if (charState == CharState.Custom)
 					{
@@ -204,7 +204,7 @@ namespace AC
 				Paths path = GetComponent <Paths>();
 				if (path == null)
 				{
-					ACDebug.LogWarning ("Cannot move a character with no Paths component");
+					ACDebug.LogWarning ("Cannot move a character with no Paths component", gameObject);
 				}
 				else
 				{
@@ -315,9 +315,14 @@ namespace AC
 				_followTarget = KickStarter.player;
 			}
 
-			if (_followTarget == null || _followFrequency <= 0f || _followFrequency < 0f || _followDistance <= 0f || _followDistanceMax <= 0f)
+			if (_followTarget == null || _followFrequency <= 0f || _followDistance <= 0f || _followDistanceMax <= 0f)
 			{
 				StopFollowing ();
+
+				if (_followTarget == null) ACDebug.LogWarning ("NPC " + name + " cannot follow because no target was set.", this);
+				else if (_followFrequency <= 0f) ACDebug.LogWarning ("NPC " + name + " cannot follow because frequency was zero.", this);
+				else if (_followDistance <= 0f) ACDebug.LogWarning ("NPC " + name + " cannot follow because distance was zero.", this);
+				else if (_followDistanceMax <= 0f) ACDebug.LogWarning ("NPC " + name + " cannot follow because max distance was zero.", this);
 				return;
 			}
 
@@ -355,6 +360,8 @@ namespace AC
 			npcData.RotX = TransformRotation.eulerAngles.x;
 			npcData.RotY = TransformRotation.eulerAngles.y;
 			npcData.RotZ = TransformRotation.eulerAngles.z;
+
+			npcData.inCustomCharState = (charState == CharState.Custom && GetAnimator () != null && GetAnimator ().GetComponent <RememberAnimator>());
 
 			if (animationEngine == AnimationEngine.Sprites2DToolkit || animationEngine == AnimationEngine.SpritesUnity)
 			{
@@ -420,7 +427,7 @@ namespace AC
 			if (GetPath ())
 			{
 				npcData.targetNode = GetTargetNode ();
-				npcData.prevNode = GetPrevNode ();
+				npcData.prevNode = GetPreviousNode ();
 				npcData.isRunning = isRunning;
 				npcData.pathAffectY = GetPath ().affectY;
 				
@@ -436,7 +443,7 @@ namespace AC
 					}
 					else
 					{
-						ACDebug.LogWarning ("Want to save path data for " + name + " but path has no ID!");
+						ACDebug.LogWarning ("Want to save path data for " + name + " but path has no ID!", gameObject);
 					}
 				}
 			}
@@ -452,7 +459,7 @@ namespace AC
 				}
 				else
 				{
-					ACDebug.LogWarning ("Want to save previous path data for " + name + " but path has no ID!");
+					ACDebug.LogWarning ("Want to save previous path data for " + name + " but path has no ID!", gameObject);
 				}
 			}
 			
@@ -472,7 +479,7 @@ namespace AC
 					}
 					else
 					{
-						ACDebug.LogWarning ("Want to save follow data for " + name + " but " + followTarget.name + " has no ID!");
+						ACDebug.LogWarning ("Want to save follow data for " + name + " but " + followTarget.name + " has no ID!", gameObject);
 					}
 				}
 				else
@@ -504,7 +511,7 @@ namespace AC
 				npcData.headTargetID = Serializer.GetConstantID (headTurnTarget);
 				if (npcData.headTargetID == 0)
 				{
-					ACDebug.LogWarning ("The NPC " + gameObject.name + "'s head-turning target Transform, " + headTurnTarget + ", was not saved because it has no Constant ID");
+					ACDebug.LogWarning ("The NPC " + gameObject.name + "'s head-turning target Transform, " + headTurnTarget + ", was not saved because it has no Constant ID", gameObject);
 				}
 				npcData.headTargetX = headTurnTargetOffset.x;
 				npcData.headTargetY = headTurnTargetOffset.y;
@@ -556,6 +563,8 @@ namespace AC
 		 */
 		public void LoadData (NPCData data)
 		{
+			charState = (data.inCustomCharState) ? CharState.Custom : CharState.Idle;
+
 			EndPath ();
 			
 			if (animationEngine == AnimationEngine.Sprites2DToolkit || animationEngine == AnimationEngine.SpritesUnity)
@@ -639,8 +648,15 @@ namespace AC
 					charToFollow = followNPC.GetComponent <AC.Char>();
 				}
 			}
-			
-			FollowAssign (charToFollow, data.followTargetIsPlayer, data.followFrequency, data.followDistance, data.followDistanceMax, data.followFaceWhenIdle, data.followRandomDirection);
+
+			if (charToFollow != null || (data.followTargetIsPlayer && KickStarter.player != null))
+			{
+				FollowAssign (charToFollow, data.followTargetIsPlayer, data.followFrequency, data.followDistance, data.followDistanceMax, data.followFaceWhenIdle, data.followRandomDirection);
+			}
+			else
+			{
+				StopFollowing ();
+			}
 			Halt ();
 			
 			if (data.pathData != null && data.pathData != "" && GetComponent <Paths>())
@@ -660,7 +676,7 @@ namespace AC
 				}
 				else
 				{
-					ACDebug.LogWarning ("Trying to assign a path for NPC " + this.name + ", but the path was not found - was it deleted?");
+					ACDebug.LogWarning ("Trying to assign a path for NPC " + this.name + ", but the path was not found - was it deleted?", gameObject);
 				}
 			}
 			
@@ -674,7 +690,7 @@ namespace AC
 				}
 				else
 				{
-					ACDebug.LogWarning ("Trying to assign the previous path for NPC " + this.name + ", but the path was not found - was it deleted?");
+					ACDebug.LogWarning ("Trying to assign the previous path for NPC " + this.name + ", but the path was not found - was it deleted?", gameObject);
 				}
 			}
 			
@@ -704,9 +720,13 @@ namespace AC
 				foreach (FollowSortingMap followSortingMap in followSortingMaps)
 				{
 					followSortingMap.followSortingMap = data.followSortingMap;
-					if (!data.followSortingMap)
+					if (!data.followSortingMap && customSortingMap != null)
 					{
 						followSortingMap.SetSortingMap (customSortingMap);
+					}
+					else
+					{
+						followSortingMap.SetSortingMap (KickStarter.sceneSettings.sortingMap);
 					}
 				}
 			}

@@ -1,7 +1,11 @@
-﻿/*
+﻿#if UNITY_STANDALONE && (UNITY_5 || UNITY_2017_1_OR_NEWER || UNITY_PRO_LICENSE) && !UNITY_2018_2_OR_NEWER
+#define ALLOW_MOVIETEXTURES
+#endif
+
+/*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2018
+ *	by Chris Burton, 2013-2019
  *	
  *	"CursorIcon.cs"
  * 
@@ -473,9 +477,12 @@ namespace AC
 					try
 					{
 						Color[] pix = Texture2D.GetPixels (x, y, width, height);
-						Texture2D frameTex = new Texture2D ((int) (frameWidth * Texture2D.width), (int) (frameHeight * Texture2D.height));
+						Texture2D frameTex = new Texture2D ((int) (frameWidth * Texture2D.width), (int) (frameHeight * Texture2D.height), TextureFormat.RGBA32, false);
 						frameTex.SetPixels (pix);
 						frameTex.filterMode = texture.filterMode;
+						#if UNITY_EDITOR
+						frameTex.alphaIsTransparency = true;
+						#endif
 						frameTex.Apply ();
 						return frameTex;
 					}
@@ -582,6 +589,11 @@ namespace AC
 		 */
 		public Rect GetAnimatedRect ()
 		{
+			if (frameWidth < 0f)
+			{
+				Reset ();
+			}
+
 			int currentRow = 1;
 			int frameInRow = 1;
 
@@ -725,41 +737,46 @@ namespace AC
 				clickOffset = CustomGUILayout.Vector2Field ("", clickOffset, string.IsNullOrEmpty (apiPrefix) ? "" : (apiPrefix + ".clickOffset"));
 				EditorGUILayout.EndHorizontal ();
 			}
-			
-			isAnimated = CustomGUILayout.Toggle ("Animate?", isAnimated, string.IsNullOrEmpty (apiPrefix) ? "" : (apiPrefix + ".isAnimated"));
-			if (isAnimated)
+
+			#if ALLOW_MOVIETEXTURE
+			if (!(texture is MovieTexture))
+			#endif
 			{
-				EditorGUILayout.BeginHorizontal ();
-				EditorGUILayout.LabelField ("Frames:", GUILayout.Width (50f));
-				numFrames = CustomGUILayout.IntField (numFrames, GUILayout.Width (70f), string.IsNullOrEmpty (apiPrefix) ? "" : (apiPrefix + ".numFrames"));
-				EditorGUILayout.LabelField ("Rows:", GUILayout.Width (50f));
-				numRows = CustomGUILayout.IntField (numRows, GUILayout.Width (70f), string.IsNullOrEmpty (apiPrefix) ? "" : (apiPrefix + ".numRows"));
-				EditorGUILayout.LabelField ("Columns:", GUILayout.Width (50f));
-				numCols = CustomGUILayout.IntField (numCols, GUILayout.Width (70f), string.IsNullOrEmpty (apiPrefix) ? "" : (apiPrefix + ".numCols"));
-				EditorGUILayout.EndHorizontal ();
-				
-				animSpeed = CustomGUILayout.FloatField ("Animation speed:", animSpeed, string.IsNullOrEmpty (apiPrefix) ? "" : (apiPrefix + ".animSpeed"));
-
-				showExtra = EditorGUILayout.Foldout (showExtra, "Additional settings:");
-				if (showExtra)
+				isAnimated = CustomGUILayout.Toggle ("Animate?", isAnimated, string.IsNullOrEmpty (apiPrefix) ? "" : (apiPrefix + ".isAnimated"));
+				if (isAnimated)
 				{
-					EditorGUILayout.BeginVertical (CustomStyles.thinBox);
-					if (includeAlwaysAnimate)
-					{
-						alwaysAnimate = CustomGUILayout.ToggleLeft ("Always animate?", alwaysAnimate, string.IsNullOrEmpty (apiPrefix) ? "" : (apiPrefix + ".alwaysAnimate"));
-					}
-					endAnimOnLastFrame = CustomGUILayout.ToggleLeft ("End on last frame?", endAnimOnLastFrame, string.IsNullOrEmpty (apiPrefix) ? "" : (apiPrefix + ".endAnimOnLastFrame"));
-					skipFirstFrameWhenLooping = CustomGUILayout.ToggleLeft ("Skip first when animating?", skipFirstFrameWhenLooping, string.IsNullOrEmpty (apiPrefix) ? "" : (apiPrefix + ".skipFirstFrameWhenLooping"));
+					EditorGUILayout.BeginHorizontal ();
+					EditorGUILayout.LabelField ("Frames:", GUILayout.Width (50f));
+					numFrames = CustomGUILayout.IntField (numFrames, GUILayout.Width (70f), string.IsNullOrEmpty (apiPrefix) ? "" : (apiPrefix + ".numFrames"));
+					EditorGUILayout.LabelField ("Rows:", GUILayout.Width (50f));
+					numRows = CustomGUILayout.IntField (numRows, GUILayout.Width (70f), string.IsNullOrEmpty (apiPrefix) ? "" : (apiPrefix + ".numRows"));
+					EditorGUILayout.LabelField ("Columns:", GUILayout.Width (50f));
+					numCols = CustomGUILayout.IntField (numCols, GUILayout.Width (70f), string.IsNullOrEmpty (apiPrefix) ? "" : (apiPrefix + ".numCols"));
+					EditorGUILayout.EndHorizontal ();
+					
+					animSpeed = CustomGUILayout.FloatField ("Animation speed:", animSpeed, string.IsNullOrEmpty (apiPrefix) ? "" : (apiPrefix + ".animSpeed"));
 
-					SyncFrameSpeeds ();
-					for (int i=0; i<numFrames; i++)
+					showExtra = EditorGUILayout.Foldout (showExtra, "Additional settings:");
+					if (showExtra)
 					{
-						if (i == 0 && skipFirstFrameWhenLooping) continue;
-						if (i == (numFrames-1) && endAnimOnLastFrame) continue;
+						EditorGUILayout.BeginVertical (CustomStyles.thinBox);
+						if (includeAlwaysAnimate)
+						{
+							alwaysAnimate = CustomGUILayout.ToggleLeft ("Always animate?", alwaysAnimate, string.IsNullOrEmpty (apiPrefix) ? "" : (apiPrefix + ".alwaysAnimate"));
+						}
+						endAnimOnLastFrame = CustomGUILayout.ToggleLeft ("End on last frame?", endAnimOnLastFrame, string.IsNullOrEmpty (apiPrefix) ? "" : (apiPrefix + ".endAnimOnLastFrame"));
+						skipFirstFrameWhenLooping = CustomGUILayout.ToggleLeft ("Skip first when animating?", skipFirstFrameWhenLooping, string.IsNullOrEmpty (apiPrefix) ? "" : (apiPrefix + ".skipFirstFrameWhenLooping"));
 
-						frameSpeeds[i] = EditorGUILayout.Slider ("Frame #" + (i+1).ToString () + " relative speed:", frameSpeeds[i], 0.01f, 1f);
+						SyncFrameSpeeds ();
+						for (int i=0; i<numFrames; i++)
+						{
+							if (i == 0 && skipFirstFrameWhenLooping) continue;
+							if (i == (numFrames-1) && endAnimOnLastFrame) continue;
+
+							frameSpeeds[i] = EditorGUILayout.Slider ("Frame #" + (i+1).ToString () + " relative speed:", frameSpeeds[i], 0.01f, 1f);
+						}
+						EditorGUILayout.EndVertical ();
 					}
-					EditorGUILayout.EndVertical ();
 				}
 			}
 		}

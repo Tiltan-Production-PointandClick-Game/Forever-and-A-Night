@@ -1,7 +1,7 @@
 /*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2018
+ *	by Chris Burton, 2013-2019
  *	
  *	"PlayerMovement.cs"
  * 
@@ -61,7 +61,7 @@ namespace AC
 
 				if (firstPersonCamera == null && KickStarter.settingsManager.movementMethod == MovementMethod.FirstPerson && KickStarter.player.FirstPersonCamera == null)
 				{
-					ACDebug.LogWarning ("Could not find a FirstPersonCamera script on the Player - one is necessary for first-person movement.");
+					ACDebug.LogWarning ("Could not find a FirstPersonCamera script on the Player - one is necessary for first-person movement.", KickStarter.player);
 				}
 
 				if (firstPersonCamera != null)
@@ -243,7 +243,7 @@ namespace AC
 			{
 				if (KickStarter.player.charState == CharState.Move)
 				{
-					KickStarter.player.charState = CharState.Decelerate;
+					KickStarter.player.StartDecelerating ();
 				}
 				return;
 			}
@@ -254,7 +254,7 @@ namespace AC
 				
 				if (KickStarter.player.charState == CharState.Move && KickStarter.player.GetPath () == null)
 				{
-					KickStarter.player.charState = CharState.Decelerate;
+					KickStarter.player.StartDecelerating ();
 				}
 			}
 
@@ -293,13 +293,13 @@ namespace AC
 
 						List<Vector3> pointArray = new List<Vector3>();
 						pointArray.Add (clickPoint);
-						KickStarter.player.MoveAlongPoints (pointArray.ToArray (), run);
+						PointMovePlayer (pointArray.ToArray (), run);
 					}
 					else
 					{
 						if (KickStarter.player.charState == CharState.Move)
 						{
-							KickStarter.player.charState = CharState.Decelerate;
+							KickStarter.player.StartDecelerating ();
 						}
 					}
 				}
@@ -340,7 +340,7 @@ namespace AC
 								else
 								{
 									Vector3[] pointArray = KickStarter.navigationManager.navigationEngine.GetPointsArray (KickStarter.player.transform.position, clickPoint, KickStarter.player);
-									KickStarter.player.MoveAlongPoints (pointArray, run);
+									PointMovePlayer (pointArray, run);
 									moveStraightToCursorUpdateTime = KickStarter.settingsManager.pathfindUpdateFrequency;
 
 									movingFromHold = true;
@@ -362,7 +362,7 @@ namespace AC
 					{
 						if (KickStarter.player.charState == CharState.Move)
 						{
-							KickStarter.player.charState = CharState.Decelerate;
+							KickStarter.player.StartDecelerating ();
 							movingFromHold = false;
 						}
 					}
@@ -378,7 +378,7 @@ namespace AC
 				{
 					if (KickStarter.player.charState == CharState.Move)
 					{
-						KickStarter.player.charState = CharState.Decelerate;
+						KickStarter.player.StartDecelerating ();
 						movingFromHold = false;
 					}
 
@@ -397,7 +397,7 @@ namespace AC
 					{
 						if (KickStarter.player.charState == CharState.Move)
 						{
-							KickStarter.player.charState = CharState.Decelerate;
+							KickStarter.player.StartDecelerating ();
 						}
 
 						if (KickStarter.player.GetPath ())
@@ -623,7 +623,7 @@ namespace AC
 				{
 					if (KickStarter.player.charState == CharState.Move && KickStarter.playerInteraction.GetHotspotMovingTo () == null)
 					{
-						KickStarter.player.charState = CharState.Decelerate;
+						KickStarter.player.StartDecelerating ();
 					}
 				}
 			}
@@ -657,7 +657,7 @@ namespace AC
 				{
 					if (KickStarter.player.charState == CharState.Move && KickStarter.playerInteraction.GetHotspotMovingTo () == null)
 					{
-						KickStarter.player.charState = CharState.Decelerate;
+						KickStarter.player.StartDecelerating ();
 					}
 				}
 			}
@@ -706,7 +706,6 @@ namespace AC
 						{
 							KickStarter.player.SetLookDirection (moveDirectionInput, KickStarter.settingsManager.directTurnsInstantly);
 							KickStarter.player.SetMoveDirectionAsForward ();
-			
 						}
 					}
 				}
@@ -804,7 +803,7 @@ namespace AC
 			{
 				if (KickStarter.player.charState == CharState.Move)
 				{
-					KickStarter.player.charState = CharState.Decelerate;
+					KickStarter.player.StartDecelerating ();
 				}
 			}
 		}
@@ -828,7 +827,7 @@ namespace AC
 			{
 				if (KickStarter.player.GetPath () == null && KickStarter.player.charState == CharState.Move)
 				{
-					KickStarter.player.charState = CharState.Decelerate;
+					KickStarter.player.StartDecelerating ();
 				}
 				return;
 			}
@@ -960,7 +959,7 @@ namespace AC
 			}
 			else if (KickStarter.player.GetPath () == null && KickStarter.player.charState == CharState.Move)
 			{
-				KickStarter.player.charState = CharState.Decelerate;
+				KickStarter.player.StartDecelerating ();
 			}
 		}
 
@@ -996,8 +995,15 @@ namespace AC
 			}
 
 			Vector3[] pointArray = KickStarter.navigationManager.navigationEngine.GetPointsArray (KickStarter.player.transform.position, hitPoint, KickStarter.player);
-			KickStarter.player.MoveAlongPoints (pointArray, run);
+			PointMovePlayer (pointArray, run);
 			return true;
+		}
+
+
+		private void PointMovePlayer (Vector3[] pointArray, bool run)
+		{
+			KickStarter.eventManager.Call_OnPointAndClick (pointArray, run);
+			KickStarter.player.MoveAlongPoints (pointArray, run);
 		}
 
 
@@ -1104,21 +1110,29 @@ namespace AC
 
 		private void FirstPersonControlPlayer ()
 		{
-			if (firstPersonCamera)
+			Vector2 freeAim = KickStarter.playerInput.GetFreeAim ();
+			if (freeAim.magnitude > KickStarter.settingsManager.dragWalkThreshold / 10f)
 			{
-				Vector2 freeAim = KickStarter.playerInput.GetFreeAim ();
-				if (freeAim.magnitude > KickStarter.settingsManager.dragWalkThreshold / 10f)
-				{
-					freeAim.Normalize ();
-					freeAim *= KickStarter.settingsManager.dragWalkThreshold / 10f;
-				}
-
-				float rotationX = KickStarter.player.transform.localEulerAngles.y + freeAim.x * firstPersonCamera.sensitivity.x;
-				firstPersonCamera.IncreasePitch (-freeAim.y);
-				Quaternion rot = Quaternion.AngleAxis (rotationX, Vector3.up);
-				KickStarter.player.SetRotation (rot);
-				KickStarter.player.ForceTurnFloat (freeAim.x * 2f);
+				freeAim.Normalize ();
+				freeAim *= KickStarter.settingsManager.dragWalkThreshold / 10f;
 			}
+
+			//float rotationX = KickStarter.player.transform.localEulerAngles.y + freeAim.x * firstPersonCamera.sensitivity.x;
+			//float rotationX = KickStarter.player.TransformRotation.eulerAngles.y + (freeAim.x * firstPersonCamera.sensitivity.x);
+			float rotationX = KickStarter.player.TransformRotation.eulerAngles.y;
+			if (firstPersonCamera != null)
+			{
+				rotationX += (freeAim.x * firstPersonCamera.sensitivity.x);
+				firstPersonCamera.IncreasePitch (-freeAim.y);
+			}
+			else
+			{
+				rotationX += (freeAim.x * 15f);
+			}
+
+			Quaternion rot = Quaternion.AngleAxis (rotationX, Vector3.up);
+			KickStarter.player.SetRotation (rot);
+			KickStarter.player.ForceTurnFloat (freeAim.x * 2f);
 		}
 
 

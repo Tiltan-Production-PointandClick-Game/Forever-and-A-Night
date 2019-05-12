@@ -1,7 +1,7 @@
 /*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2018
+ *	by Chris Burton, 2013-2019
  *	
  *	"ActionMoveableCheck.cs"
  * 
@@ -27,6 +27,7 @@ namespace AC
 		public Moveable_Drag dragObject;
 		public int dragConstantID = 0;
 		public int dragParameterID = -1;
+		protected Moveable_Drag runtimeDragObject;
 
 		public float checkPosition;
 		public int checkPositionParameterID = -1;
@@ -46,7 +47,7 @@ namespace AC
 
 		override public void AssignValues (List<ActionParameter> parameters)
 		{
-			dragObject = AssignFile <Moveable_Drag> (parameters, dragParameterID, dragConstantID, dragObject);
+			runtimeDragObject = AssignFile <Moveable_Drag> (parameters, dragParameterID, dragConstantID, dragObject);
 			
 			checkPosition = AssignFloat (parameters, checkPositionParameterID, checkPosition);
 			checkPosition = Mathf.Max (0f, checkPosition);
@@ -62,7 +63,9 @@ namespace AC
 		
 		override public bool CheckCondition ()
 		{
-			float actualPositionAlong = dragObject.GetPositionAlong ();
+			if (runtimeDragObject == null) return false;
+
+			float actualPositionAlong = runtimeDragObject.GetPositionAlong ();
 
 			if (condition == IntCondition.EqualTo)
 			{
@@ -135,7 +138,7 @@ namespace AC
 		}
 
 
-		override public void AssignConstantIDs (bool saveScriptsToo)
+		override public void AssignConstantIDs (bool saveScriptsToo, bool fromAssetFile)
 		{
 			AssignConstantID <Moveable_Drag> (dragObject, dragConstantID, dragParameterID);
 		}
@@ -147,7 +150,7 @@ namespace AC
 			{
 				return (dragObject.gameObject.name + " " + condition.ToString () + " " + checkPosition);
 			}
-			return "";
+			return string.Empty;
 		}
 
 		#endif

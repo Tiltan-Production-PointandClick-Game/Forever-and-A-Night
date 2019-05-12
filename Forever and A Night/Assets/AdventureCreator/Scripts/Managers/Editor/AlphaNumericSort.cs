@@ -1,16 +1,15 @@
 ﻿/*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2018
+ *	by Chris Burton, 2013-2019
  *	
  *	"AlphaNumericSort.cs"
  * 
- *	This script adds an option to the Hierarchy window
- *	to sort GameObjects alphanumerically.
+ *	This script is now deprecated.
  * 
  */
 
-namespace AC
+/*namespace AC
 {
 
 	#if !UNITY_ANDROID && !(UNITY_5 || UNITY_2017_1_OR_NEWER)
@@ -26,4 +25,4 @@ namespace AC
 	}
 	#endif
 
-}
+}*/

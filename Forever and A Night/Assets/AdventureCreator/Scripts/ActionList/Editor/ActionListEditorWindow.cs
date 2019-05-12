@@ -133,13 +133,22 @@ namespace AC
 			ActionListEditorScrollWheel scrollWheel = ActionListEditorScrollWheel.PansWindow;
 			bool invertPanning = false;
 			float speedFactor = 1f;
+			bool autoPanNearWindowEdge = false;
 			if (AdvGame.GetReferences () && AdvGame.GetReferences ().actionsManager)
 			{
 				scrollWheel = AdvGame.GetReferences ().actionsManager.actionListEditorScrollWheel;
 				invertPanning = AdvGame.GetReferences ().actionsManager.invertPanning;
 				speedFactor = AdvGame.GetReferences ().actionsManager.panSpeed;
+				autoPanNearWindowEdge = AdvGame.GetReferences ().actionsManager.autoPanNearWindowEdge;
 			}
 			invertPanning = !invertPanning;
+
+			if (Event.current.alt)
+			{
+				scrollWheel = (scrollWheel == ActionListEditorScrollWheel.PansWindow)
+							  ? ActionListEditorScrollWheel.ZoomsWindow
+							  : ActionListEditorScrollWheel.PansWindow; 
+			}
 
 			if (scrollWheel == ActionListEditorScrollWheel.ZoomsWindow && Event.current.type == EventType.ScrollWheel)
 			{
@@ -180,6 +189,45 @@ namespace AC
 				}
 				
 				Event.current.Use ();
+			}
+
+			if (autoPanNearWindowEdge && Event.current.type == EventType.MouseDrag && Event.current.button == 0)
+			{
+				Vector2 mousePosition = Event.current.mousePosition;
+				Vector2 newDrag = Event.current.delta;
+				Vector2 margin = new Vector2 (0.2f, 0.25f);
+
+				if (newDrag.x < 0f)
+				{
+					if (mousePosition.x > position.width * margin.x)
+					{
+						newDrag.x = 0f;
+					}
+				}
+				else if (newDrag.x > 0f)
+				{
+					if (mousePosition.x < position.width * (1f - margin.x))
+					{
+						newDrag.x = 0f;
+					}
+				}
+
+				if (newDrag.y < 0f)
+				{
+					if (mousePosition.y > position.height * margin.y)
+					{
+						newDrag.y = 0f;
+					}
+				}
+				else if (newDrag.y > 0f)
+				{
+					if (mousePosition.y < position.height * (1f - margin.y))
+					{
+						newDrag.y = 0f;
+					}
+				}
+
+				scrollPosition += newDrag;
 			}
 		}
 		
@@ -479,7 +527,7 @@ namespace AC
 				GUI.enabled = false;
 			}
 
-			if (ToolbarButton (midX - buttonWidth + 10f, buttonWidth, showLabel, "Cut", CustomStyles.IconCut))
+			if (ToolbarButton (midX - buttonWidth, buttonWidth, showLabel, "Cut", CustomStyles.IconCut))
 			{
 				PerformEmptyCallBack ("Cut selected");
 			}
@@ -945,6 +993,10 @@ namespace AC
 						}
 
 						string extraLabel = _action.SetLabel ();
+						if (!string.IsNullOrEmpty (extraLabel))
+						{
+							extraLabel = " (" + extraLabel + ")";
+						}
 						if (_action is ActionComment)
 						{
 							if (extraLabel.Length > 40)
@@ -1070,7 +1122,7 @@ namespace AC
 				menuPosition = e.mousePosition;
 				CreateEmptyMenu (isAsset);
 			}
-			
+
 			EndWindows ();
 			GUI.EndScrollView ();
 			EditorZoomArea.End ();

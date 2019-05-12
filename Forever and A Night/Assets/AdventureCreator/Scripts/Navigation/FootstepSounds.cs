@@ -1,7 +1,7 @@
 ﻿/*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2018
+ *	by Chris Burton, 2013-2019
  *	
  *	"FootstepSounds.cs"
  * 
@@ -98,7 +98,7 @@ namespace AC
 			{
 				if (doGroundedCheck && character != null)
 				{
-					if (!character.IsGrounded ())
+					if (!character.IsGrounded (true))
 					{
 						return;
 					}

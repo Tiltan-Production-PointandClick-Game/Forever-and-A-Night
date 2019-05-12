@@ -1,7 +1,7 @@
 ﻿/*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2018
+ *	by Chris Burton, 2013-2019
  *	
  *	"tk2DIntegration.cs"
  * 
@@ -25,7 +25,7 @@ namespace AC
 	 * A class the contains a number of static functions to assist with 2D Toolkit integration.
 	 * To use 2D Toolkit with Adventure Creator, the 'tk2DIsPresent' preprocessor must be defined.
 	 */
-	public class tk2DIntegration : ScriptableObject
+	public class tk2DIntegration
 	{
 
 		/**

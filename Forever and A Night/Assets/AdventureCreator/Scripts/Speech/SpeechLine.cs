@@ -1,7 +1,7 @@
 /*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2018
+ *	by Chris Burton, 2013-2019
  *	
  *	"SpeechLine.cs"
  * 
@@ -83,6 +83,29 @@ namespace AC
 			customLipsyncFile = _speechLine.customLipsyncFile;
 			customTranslationAudioClips = _speechLine.customTranslationAudioClips;
 			customTranslationLipsyncFiles = _speechLine.customTranslationLipsyncFiles;
+			tagID = _speechLine.tagID;
+
+			#if UNITY_EDITOR
+			orderID = _speechLine.orderID;
+			orderPrefix = _speechLine.orderPrefix;
+			#endif
+		}
+
+
+		public SpeechLine (SpeechLine _speechLine, int language)
+		{
+			isPlayer = _speechLine.isPlayer;
+			lineID = _speechLine.lineID;
+			scene = _speechLine.scene;
+			owner = _speechLine.owner;
+			text = _speechLine.text;
+			description = _speechLine.description;
+			textType = _speechLine.textType;
+			translationText = _speechLine.translationText;
+			customAudioClip = (language == 0 || KickStarter.speechManager.fallbackAudio) ? _speechLine.customAudioClip : null;
+			customLipsyncFile = (language == 0 || KickStarter.speechManager.fallbackAudio) ? _speechLine.customLipsyncFile : null;
+			customTranslationAudioClips = GetAudioListForTranslation (_speechLine.customTranslationAudioClips, language);
+			customTranslationLipsyncFiles = GetLipsyncListForTranslation (_speechLine.customTranslationLipsyncFiles, language);
 			tagID = _speechLine.tagID;
 
 			#if UNITY_EDITOR
@@ -203,7 +226,7 @@ namespace AC
 
 				ShowField ("Type:", textType.ToString (), false, apiPrefix + ".textType");
 				ShowField ("Original text:", text, true, apiPrefix + ".text");
-				
+
 				string sceneName = scene.Replace ("Assets/", string.Empty);
 				sceneName = sceneName.Replace (".unity", string.Empty);
 				ShowField ("Scene:", sceneName, true, apiPrefix + ".scene");
@@ -264,18 +287,36 @@ namespace AC
 								}
 								else
 								{
-									if (speechManager.UseFileBasedLipSyncing ())
+									if (speechManager.useAssetBundles)
 									{
+										if (speechManager.UseFileBasedLipSyncing ())
+										{
+											if (!string.IsNullOrEmpty (speechManager.languageLipsyncAssetBundles[i]))
+											{
+												ShowField (" (Lipsync AB):", "StreamingAssets/" + speechManager.languageLipsyncAssetBundles[i], false);
+											}
+										}
+
+										if (!string.IsNullOrEmpty (speechManager.languageAudioAssetBundles[i]))
+										{
+											ShowField (" (Audio AB):", "StreamingAssets/" + speechManager.languageAudioAssetBundles[i], false);
+										}
+									}
+									else
+									{
+										if (speechManager.UseFileBasedLipSyncing ())
+										{
+											EditorGUILayout.BeginHorizontal ();
+											ShowField (" (Lipsync path):", GetFolderName (language, true), false);
+											ShowLocateButton (i, true);
+											EditorGUILayout.EndHorizontal ();
+										}
+
 										EditorGUILayout.BeginHorizontal ();
-										ShowField (" (Lipsync path):", GetFolderName (language, true), false);
-										ShowLocateButton (i, true);
+										ShowField (" (Audio path):", GetFolderName (language), false);
+										ShowLocateButton (i);
 										EditorGUILayout.EndHorizontal ();
 									}
-
-									EditorGUILayout.BeginHorizontal ();
-									ShowField (" (Audio path):", GetFolderName (language), false);
-									ShowLocateButton (i);
-									EditorGUILayout.EndHorizontal ();
 								}
 							}
 							else
@@ -327,18 +368,36 @@ namespace AC
 							}
 							else
 							{
-								if (speechManager.UseFileBasedLipSyncing ())
+								if (speechManager.useAssetBundles)
 								{
+									if (speechManager.UseFileBasedLipSyncing ())
+									{
+										if (!string.IsNullOrEmpty (speechManager.languageLipsyncAssetBundles[0]))
+										{
+											ShowField ("Lipsync AB:", "StreamingAssets/" + speechManager.languageLipsyncAssetBundles[0], false);
+										}
+									}
+
+									if (!string.IsNullOrEmpty (speechManager.languageAudioAssetBundles[0]))
+									{
+										ShowField ("Audio AB:", "StreamingAssets/" + speechManager.languageAudioAssetBundles[0], false);
+									}
+								}
+								else
+								{
+									if (speechManager.UseFileBasedLipSyncing ())
+									{
+										EditorGUILayout.BeginHorizontal ();
+										ShowField ("Lipsync path:", GetFolderName (string.Empty, true), false);
+										ShowLocateButton (0, true);
+										EditorGUILayout.EndHorizontal ();
+									}
+
 									EditorGUILayout.BeginHorizontal ();
-									ShowField ("Lipsync path:", GetFolderName (string.Empty, true), false);
-									ShowLocateButton (0, true);
+									ShowField ("Audio Path:", GetFolderName (string.Empty), false);
+									ShowLocateButton (0);
 									EditorGUILayout.EndHorizontal ();
 								}
-
-								EditorGUILayout.BeginHorizontal ();
-								ShowField ("Audio Path:", GetFolderName (string.Empty), false);
-								ShowLocateButton (0);
-								EditorGUILayout.EndHorizontal ();
 							}
 						}
 						else
@@ -680,10 +739,21 @@ namespace AC
 
 							if (forLipSync)
 							{
-								TextAsset textFile = Resources.Load (fullName) as TextAsset;
-								if (textFile != null)
+								if (KickStarter.speechManager.lipSyncMode == LipSyncMode.RogoLipSync)
 								{
-									foundClp = textFile;
+									Object lipSyncFile = RogoLipSyncIntegration.GetObjectToPing (fullName);
+									if (lipSyncFile != null)
+									{
+										foundClp = lipSyncFile;
+									}
+								}
+								else
+								{
+									TextAsset textFile = Resources.Load (fullName) as TextAsset;
+									if (textFile != null)
+									{
+										foundClp = textFile;
+									}
 								}
 							}
 							else
@@ -704,8 +774,15 @@ namespace AC
 
 					if (forLipSync)
 					{
-						TextAsset textFile = Resources.Load (fullName) as TextAsset;
-						foundClp = textFile;
+						if (KickStarter.speechManager.lipSyncMode == LipSyncMode.RogoLipSync)
+						{
+							foundClp = RogoLipSyncIntegration.GetObjectToPing (fullName);
+						}
+						else
+						{
+							TextAsset textFile = Resources.Load (fullName) as TextAsset;
+							foundClp = textFile;
+						}
 					}
 					else
 					{
@@ -958,6 +1035,42 @@ namespace AC
 					customTranslationLipsyncFiles.Add (null);
 				}
 			}
+		}
+
+
+		private List<AudioClip> GetAudioListForTranslation (List<AudioClip> audioClips, int language)
+		{
+			List<AudioClip> audioList = new List<AudioClip>();
+
+			if (language > 0)
+			{
+				int indexToKeep = language-1;
+
+				for (int i=0; i<audioClips.Count; i++)
+				{
+					audioList.Add ((indexToKeep == i) ? audioClips[i] : null);
+				}
+			}
+
+			return audioList;
+		}
+
+
+		private List<Object> GetLipsyncListForTranslation (List<Object> lipsyncFiles, int language)
+		{
+			List<Object> lipsyncList = new List<Object>();
+
+			if (language > 0)
+			{
+				int indexToKeep = language-1;
+
+				for (int i=0; i<lipsyncFiles.Count; i++)
+				{
+					lipsyncList.Add ((indexToKeep == i) ? lipsyncFiles[i] : null);
+				}
+			}
+
+			return lipsyncList;
 		}
 
 

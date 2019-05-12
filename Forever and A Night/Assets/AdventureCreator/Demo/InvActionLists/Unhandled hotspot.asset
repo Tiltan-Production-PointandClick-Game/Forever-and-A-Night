@@ -4,7 +4,8 @@
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -25,7 +26,8 @@ MonoBehaviour:
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -71,7 +73,7 @@ MonoBehaviour:
   parameterID: -1
   messageParameterID: -1
   isPlayer: 1
-  speaker: {fileID: 11400004, guid: 0f5b84e91ea55416889c97bf7e999a0c, type: 2}
+  speaker: {fileID: 11400004, guid: 0f5b84e91ea55416889c97bf7e999a0c, type: 3}
   messageText: I can't cut that.
   lineID: 54
   multiLineIDs: 

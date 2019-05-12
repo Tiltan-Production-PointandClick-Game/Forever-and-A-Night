@@ -1,7 +1,7 @@
 ﻿/*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2018
+ *	by Chris Burton, 2013-2019
  *	
  *	"TintMap.cs"
  * 
@@ -28,6 +28,8 @@ namespace AC
 
 		/** An optional texture to make use of. If this field is null, then the texture found on the attached MeshRenderer's material will be used instead */
 		public Texture2D tintMapTexture;
+		/** A Color to multiply the textured color by */
+		public Color colorModifier = Color.white;
 		/** If True, then the MeshRenderer component will be disabled automatically when the game begins */
 		public bool disableRenderer = true;
 
@@ -61,7 +63,7 @@ namespace AC
 		/**
 		 * <summary>Gets the colour tint at a specific position in the scene.</summary>
 		 * <param name = "position">The 2D position in the scene to get the colour tint at</param>
-		 * <param name = "intensity">The intensity of the effect, where 0 = fully white, 1 = fully tinted</param>
+		 * <param name = "intensity">The intensity of the effect, where 0 = no effect, 1 = fully tinted</param>
 		 * <param name = "alpha">The alpha value to give the final Color</param>
 		 * <returns>The colour tint. If no appropriate texture is found, Color.white will be returned</returns>
 		 */
@@ -73,7 +75,7 @@ namespace AC
 				var ray = new Ray (new Vector3 (position.x, position.y, transform.position.z - 0.0005f), Vector3.forward);
 				if (!Physics.Raycast (ray, out hit, 0.001f))
 				{
-					return new Color (1f, 1f, 1f, alpha);
+					return new Color (1f, 1f, 1f, alpha) * colorModifier;
 				}
 				Vector2 pixelUV = hit.textureCoord;
 
@@ -81,12 +83,18 @@ namespace AC
 				{
 					Color fullyTintedColor = actualTexture.GetPixelBilinear (pixelUV.x, pixelUV.y);
 					fullyTintedColor.a = alpha;
-					return fullyTintedColor;
+					return fullyTintedColor * colorModifier;
 				}
-				Color newColour = Color.Lerp (Color.white, actualTexture.GetPixelBilinear (pixelUV.x, pixelUV.y), intensity);
+				Color newColour = Color.Lerp (Color.white, actualTexture.GetPixelBilinear (pixelUV.x, pixelUV.y) * colorModifier, intensity);
 				return new Color (newColour.r, newColour.g, newColour.b, alpha);
 			}
-			return new Color (1f, 1f, 1f, alpha);
+			//return new Color (intensity, intensity, intensity, alpha) * colorModifier;
+			//return new Color (1f, 1f, 1f, alpha) * colorModifier;
+			else
+			{
+				Color newColour = Color.Lerp (Color.white, new Color (1f, 1f, 1f, alpha) * colorModifier, intensity);
+				return new Color (newColour.r, newColour.g, newColour.b, alpha);
+			}
 		}
 
 	}

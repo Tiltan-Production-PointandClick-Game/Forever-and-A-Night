@@ -1,7 +1,7 @@
 ﻿/*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2018
+ *	by Chris Burton, 2013-2019
  *	
  *	"ActionSaveCheck.cs"
  * 
@@ -229,7 +229,7 @@ namespace AC
 		
 		public override string SetLabel ()
 		{
-			return (" (" + saveCheck.ToString () + ")");
+			return saveCheck.ToString ();
 		}
 		
 		#endif

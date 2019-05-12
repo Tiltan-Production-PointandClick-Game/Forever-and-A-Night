@@ -1,7 +1,7 @@
 /*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2018
+ *	by Chris Burton, 2013-2019
  *	
  *	"MainCamera.cs"
  * 
@@ -140,7 +140,7 @@ namespace AC
 
 			if (this.transform.parent && this.transform.parent.name != "_Cameras")
 			{
-				ACDebug.LogWarning ("Note: The MainCamera is parented to an unknown object. Be careful when moving the parent, as it may cause mis-alignment when the MainCamera is attached to a GameCamera.");
+				ACDebug.LogWarning ("Note: The MainCamera is parented to an unknown object. Be careful when moving the parent, as it may cause mis-alignment when the MainCamera is attached to a GameCamera.", this);
 			}
 
 			if (KickStarter.settingsManager != null && KickStarter.settingsManager.forceAspectRatio)
@@ -528,7 +528,6 @@ namespace AC
 					}
 					
 					shakeIntensity = Mathf.Lerp (shakeStartIntensity, 0f, AdvGame.Interpolate (shakeStartTime, shakeDuration, MoveMethod.Linear, null));
-					
 					transform.position += shakePosition;
 					transform.localEulerAngles += shakeRotation;
 				}
@@ -1138,7 +1137,7 @@ namespace AC
 			{
 				if (fadeTexture == null)
 				{
-					ACDebug.LogWarning ("Cannot draw camera borders because no Fade texture is assigned in the MainCamera!");
+					ACDebug.LogWarning ("Cannot draw camera borders because no Fade texture is assigned in the MainCamera!", gameObject);
 					return;
 				}
 
@@ -1571,6 +1570,7 @@ namespace AC
 					return (_Camera) lastNavCamera;
 				}
 			}
+			ACDebug.LogWarning ("Could not get the last gameplay camera - was it previously set?");
 			return null;
 		}
 
@@ -1596,6 +1596,10 @@ namespace AC
 			if (attachedCamera)
 			{
 				playerData.gameCamera = Serializer.GetConstantID (attachedCamera.gameObject);
+				if (KickStarter.sceneChanger.GetSubSceneIndexOfGameObject (attachedCamera.gameObject) > 0)
+				{
+					ACDebug.LogWarning ("Cannot save the active camera '" + attachedCamera.gameObject.name + "' as it is not in the active scene.", attachedCamera.gameObject);
+				}
 			}
 			if (lastNavCamera)
 			{
@@ -1747,7 +1751,7 @@ namespace AC
 
 						if (ownCamera == null)
 						{
-							ACDebug.LogError ("The MainCamera script requires a Camera component.");
+							ACDebug.LogError ("The MainCamera script requires a Camera component.", gameObject);
 						}
 					}
 				}
@@ -1789,11 +1793,46 @@ namespace AC
 		}
 
 
+		/**
+		 * Displays information about the MainCamera section of the 'AC Status' box.
+		 */
+		public void DrawStatus ()
+		{
+			if (IsEnabled ())
+			{
+				if (timelineOverride)
+				{
+					GUILayout.Label ("Current camera: Set by Timeline");
+				}
+				else if (attachedCamera != null)
+				{
+					if (GUILayout.Button ("Current camera: " + attachedCamera.gameObject.name))
+					{
+						#if UNITY_EDITOR
+						UnityEditor.EditorGUIUtility.PingObject (attachedCamera.gameObject);
+						#endif
+					}
+				}
+			}
+			else
+			{
+				GUILayout.Label ("MainCamera: Disabled");
+			}
+		}
+
+
 		/* Timeline */
 
 		private bool timelineOverride;
 
-		public void SetTimelineOverride (_Camera cam1, _Camera cam2, float cam2Weight)
+		/**
+		 * <summary>Overrides the MainCamera's normal behaviour, using Timeline to control it.</summary>
+		 * <param name = "cam1">The first AC camera in the Timeline track mix</param>
+		 * <param name = "cam2">The second AC camera in the Timeline track mix</param>
+		 * <param name = "cam2Weight">The weight of the second AC camera in the Timeline track mix</param>
+		 * <param name = "shakeIntensity">The intensity of a camera shaking effect</param>
+		 */
+		public void SetTimelineOverride (_Camera cam1, _Camera cam2, float cam2Weight, float _shakeIntensity = 0f)
 		{
 			#if UNITY_EDITOR
 			if ((!timelineOverride && !Application.isPlaying) || currentFrameCameraData == null)
@@ -1804,7 +1843,18 @@ namespace AC
 				currentFrameCameraData = new GameCameraData (this);
 			}
 
+
 			timelineOverride = true;
+
+			if (_shakeIntensity > 0f)
+			{
+				shakeEffect = CameraShakeEffect.TranslateAndRotate;
+				shakeIntensity = _shakeIntensity * 0.2f;
+			}
+			else
+			{
+				shakeIntensity = 0f;
+			}
 
 			if (cam1 == null)
 			{
@@ -1828,6 +1878,15 @@ namespace AC
 		public void ReleaseTimelineOverride ()
 		{
 			timelineOverride = false;
+
+			shakeIntensity = 0f;
+
+			#if UNITY_EDITOR
+			if (!Application.isPlaying && currentFrameCameraData != null)
+			{
+				ApplyCameraData (currentFrameCameraData);
+			}
+			#endif
 		}
 
 
@@ -1936,18 +1995,34 @@ namespace AC
 				position = _camera.transform.position;
 				rotation = _camera.transform.rotation;
 
+				is2D = _camera.Is2D ();
 				Vector2 cursorOffset = _camera.CreateRotationOffset ();
-				rotation *= Quaternion.Euler (5f * new Vector3 (-cursorOffset.y, cursorOffset.x, 0f));
+
+				if (is2D)
+				{
+					if (_camera.Camera.orthographic)
+					{
+						position += (Vector3) cursorOffset;
+					}
+				}
+				else
+				{
+					rotation *= Quaternion.Euler (5f * new Vector3 (-cursorOffset.y, cursorOffset.x, 0f));
+				}
 
 				fieldOfView = _camera.Camera.fieldOfView;
 				isOrthographic = _camera.Camera.orthographic;
 				orthographicSize = _camera.Camera.orthographicSize;
 				focalDistance = _camera.focalDistance;
 
-				is2D = _camera.Is2D ();
 				perspectiveOffset = (is2D)
 									? _camera.GetPerspectiveOffset ()
 									: Vector2.zero;
+
+				if (is2D && !_camera.Camera.orthographic)
+				{
+					perspectiveOffset += cursorOffset;
+				}
 
 				#if ALLOW_PHYSICAL_CAMERA
 				usePhysicalProperties = _camera.Camera.usePhysicalProperties;

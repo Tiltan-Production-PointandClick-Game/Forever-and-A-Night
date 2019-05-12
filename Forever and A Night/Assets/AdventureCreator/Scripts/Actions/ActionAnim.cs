@@ -1,7 +1,7 @@
 /*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2018
+ *	by Chris Burton, 2013-2019
  *	
  *	"ActionAnim.cs"
  * 
@@ -30,13 +30,16 @@ namespace AC
 		// 3D variables
 		
 		public Animation _anim;
+		public Animation runtimeAnim;
 		public AnimationClip clip;
 		public float fadeTime = 0f;
 		
 		// 2D variables
 		
 		public Transform _anim2D;
+		public Transform runtimeAnim2D;
 		public Animator animator;
+		public Animator runtimeAnimator;
 		public string clip2D;
 		public int clip2DParameterID = -1;
 		public enum WrapMode2D { Once, Loop, PingPong };
@@ -46,6 +49,7 @@ namespace AC
 		// BlendShape variables
 
 		public Shapeable shapeObject;
+		public Shapeable runtimeShapeObject;
 		public int shapeKey = 0;
 		public float shapeValue = 0f;
 		public bool isPlayer = false;
@@ -57,6 +61,7 @@ namespace AC
 		public string parameterName;
 		public int parameterNameID = -1;
 		public float parameterValue;
+		public int parameterValueParameterID = -1;
 
 		// Regular variables
 		
@@ -98,11 +103,11 @@ namespace AC
 			{
 				if (KickStarter.player && KickStarter.player.GetComponent <Shapeable>())
 				{
-					shapeObject = KickStarter.player.GetComponent <Shapeable>();
+					runtimeShapeObject = KickStarter.player.GetComponent <Shapeable>();
 				}
 				else
 				{
-					shapeObject = null;
+					runtimeShapeObject = null;
 					ACDebug.LogWarning ("Cannot BlendShape Player since cannot find Shapeable script on Player.");
 				}
 			}
@@ -155,36 +160,48 @@ namespace AC
 		
 		override public string SetLabel ()
 		{
-			string labelAdd = "";
-
 			if (animEngine)
 			{
-				labelAdd = " (" + animEngine.ActionAnimLabel (this) + ")";
+				return animEngine.ActionAnimLabel (this);
 			}
-
-			return labelAdd;
+			return string.Empty;
 		}
 
 
-		override public void AssignConstantIDs (bool saveScriptsToo)
+		override public void AssignConstantIDs (bool saveScriptsToo, bool fromAssetFile)
 		{
-			if (!isPlayer && saveScriptsToo)
+			if (saveScriptsToo)
 			{
-				ResetAnimationEngine ();
-
-				if (method == AnimMethod.PlayCustom)
+				if (method == AnimMethod.BlendShape)
 				{
-					if (animEngine != null && animator != null)
+					if (isPlayer)
 					{
-						animEngine.AddSaveScript (this, animator.gameObject);
+						if (!fromAssetFile && GameObject.FindObjectOfType <Player>() != null)
+						{
+							Player player = GameObject.FindObjectOfType <Player>();
+							shapeObject = player.GetComponent <Shapeable>();
+						}
+
+						if (shapeObject == null && AdvGame.GetReferences ().settingsManager)
+						{
+							Player player = AdvGame.GetReferences ().settingsManager.GetDefaultPlayer ();
+							if (player != null)
+							{
+								shapeObject = player.GetComponent <Shapeable>();
+							}
+						}
 					}
-				}
-				else if (method == AnimMethod.BlendShape)
-				{
+
 					if (shapeObject != null)
 					{
 						AddSaveScript <RememberShapeable> (shapeObject);
 					}
+				}
+
+				ResetAnimationEngine ();
+				if (animEngine != null && animator != null && animEngine.RequiresRememberAnimator (this))
+				{
+					animEngine.AddSaveScript (this, animator.gameObject);
 				}
 			}
 		}
@@ -204,7 +221,7 @@ namespace AC
 				className = "AnimEngine_" + animationEngine.ToString ();
 			}
 				
-			if (className != "" && (animEngine == null || animEngine.ToString () != className))
+			if (!string.IsNullOrEmpty (className) && (animEngine == null || animEngine.ToString () != className))
 			{
 				animEngine = (AnimEngine) ScriptableObject.CreateInstance (className);
 			}

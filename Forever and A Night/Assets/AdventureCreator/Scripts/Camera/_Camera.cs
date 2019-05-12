@@ -1,7 +1,7 @@
 /*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2018
+ *	by Chris Burton, 2013-2019
  *	
  *	"_Camera.cs"
  * 
@@ -296,12 +296,37 @@ namespace AC
 					}
 					if (_camera == null)
 					{
-						ACDebug.LogWarning (this.name + " has no Camera component!");
+						ACDebug.LogWarning (this.name + " has no Camera component!", this);
 					}
 				}
 				return _camera;
 			}
 		}
+
+
+		#if UNITY_EDITOR
+
+		[ContextMenu ("Make active")]
+		protected void MakeActive ()
+		{
+			if (Application.isPlaying)
+			{
+				if (KickStarter.mainCamera != null)
+				{
+					KickStarter.mainCamera.SetGameCamera (this);
+				}
+				else
+				{
+					ACDebug.LogWarning ("Cannot find a MainCamera in the scene!");
+				}
+			}
+			else
+			{
+				ACDebug.Log ("Cannot switch active camera outside of Play mode.");
+			}
+		}
+
+		#endif
 
 	}
 

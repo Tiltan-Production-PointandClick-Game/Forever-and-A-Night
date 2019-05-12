@@ -1,7 +1,7 @@
 /*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2018
+ *	by Chris Burton, 2013-2019
  *	
  *	"Options.cs"
  * 
@@ -43,6 +43,8 @@ namespace AC
 			}
 
 			LoadPrefs ();
+
+			KickStarter.runtimeLanguages.LoadAssetBundle (GetLanguage ());
 
 			if (KickStarter.settingsManager.IsInLoadingScene ())
 			{
@@ -718,6 +720,7 @@ namespace AC
 				Options.SavePrefs ();
 
 				KickStarter.eventManager.Call_OnChangeLanguage (i);
+				KickStarter.runtimeLanguages.LoadAssetBundle (i);
 			}
 			else
 			{
@@ -913,4 +916,4 @@ namespace AC
 		
 	}
 	
-}
+}	

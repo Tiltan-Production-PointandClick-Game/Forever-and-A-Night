@@ -1,7 +1,7 @@
 /*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2018
+ *	by Chris Burton, 2013-2019
  *	
  *	"ActionCharHold.cs"
  * 
@@ -29,10 +29,13 @@ namespace AC
 		public int objectToHoldID = 0;
 
 		public GameObject objectToHold;
+
 		public bool isPlayer;
 		public Char _char;
+		protected Char runtimeChar;
+
 		public bool rotate90;
-		private GameObject loadedObject = null;
+		protected GameObject loadedObject = null;
 		
 		public Hand hand;
 		
@@ -48,7 +51,7 @@ namespace AC
 
 		override public void AssignValues (List<ActionParameter> parameters)
 		{
-			_char = AssignFile <Char> (_charID, _char);
+			runtimeChar = AssignFile <Char> (_charID, _char);
 			objectToHold = AssignFile (parameters, objectToHoldParameterID, objectToHoldID, objectToHold);
 
 			if (objectToHold != null && !objectToHold.activeInHierarchy)
@@ -58,7 +61,7 @@ namespace AC
 
 			if (isPlayer)
 			{
-				_char = KickStarter.player;
+				runtimeChar = KickStarter.player;
 			}
 		}
 
@@ -75,11 +78,11 @@ namespace AC
 		
 		override public float Run ()
 		{
-			if (_char)
+			if (runtimeChar)
 			{
-				if (_char.GetAnimEngine () != null && _char.GetAnimEngine ().ActionCharHoldPossible ())
+				if (runtimeChar.GetAnimEngine () != null && runtimeChar.GetAnimEngine ().ActionCharHoldPossible ())
 				{
-					if (_char.HoldObject (GetObjectToHold (), hand))
+					if (runtimeChar.HoldObject (GetObjectToHold (), hand))
 					{
 						if (rotate90)
 						{
@@ -164,7 +167,7 @@ namespace AC
 		}
 
 
-		override public void AssignConstantIDs (bool saveScriptsToo)
+		override public void AssignConstantIDs (bool saveScriptsToo, bool fromAssetFile)
 		{
 			if (saveScriptsToo)
 			{
@@ -194,14 +197,11 @@ namespace AC
 		
 		public override string SetLabel ()
 		{
-			string labelAdd = "";
-			
-			if (_char && objectToHold)
+			if (_char != null && objectToHold != null)
 			{
-				labelAdd = "(" + _char.name + " hold " + objectToHold.name + ")";
+				return _char.name + " hold " + objectToHold.name;
 			}
-			
-			return labelAdd;
+			return string.Empty;
 		}
 		
 		#endif

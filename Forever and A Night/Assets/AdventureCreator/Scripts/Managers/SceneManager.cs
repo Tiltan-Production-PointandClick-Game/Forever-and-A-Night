@@ -1,7 +1,7 @@
 /*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2018
+ *	by Chris Burton, 2013-2019
  *	
  *	"SceneManager.cs"
  * 
@@ -250,6 +250,15 @@ namespace AC
 								KickStarter.sceneSettings.defaultPlayerStart.cameraOnStart = newCamera;
 							}
 							EditorGUIUtility.PingObject (KickStarter.sceneSettings.defaultPlayerStart.cameraOnStart);
+						}
+					}
+					else
+					{
+						if (KickStarter.settingsManager != null && KickStarter.settingsManager.movementMethod == MovementMethod.FirstPerson)
+						{
+							EditorGUILayout.EndHorizontal ();
+							EditorGUILayout.HelpBox ("Since this is a First Person game, the scene's default camera will be overridden during gameplay by the Player's first person camera.", MessageType.Info);
+							EditorGUILayout.BeginHorizontal ();
 						}
 					}
 					EditorGUILayout.EndHorizontal ();
@@ -671,6 +680,7 @@ namespace AC
 							ACDebug.Log ("Untagged MainCamera '" + oldMainCam.name + "'.");
 							oldMainCam.tag = Tags.untagged;
 							oldMainCam.GetComponent <Camera>().enabled = false;
+							if (camName == "Main Camera") oldMainCam.gameObject.name += " (Untagged)";
 						}
 					}
 					else
@@ -704,7 +714,11 @@ namespace AC
 			{
 				GameObject mainCamOb = AddPrefab ("Automatic", "MainCamera", false, false, false);
 				#if NEW_PREFABS
-				PrefabUtility.UnpackPrefabInstance (mainCamOb, PrefabUnpackMode.Completely, InteractionMode.AutomatedAction);
+				try
+				{
+					PrefabUtility.UnpackPrefabInstance (mainCamOb, PrefabUnpackMode.Completely, InteractionMode.AutomatedAction);
+				}
+				catch {}
 				#else
 				PrefabUtility.DisconnectPrefabInstance (mainCamOb);
 				#endif

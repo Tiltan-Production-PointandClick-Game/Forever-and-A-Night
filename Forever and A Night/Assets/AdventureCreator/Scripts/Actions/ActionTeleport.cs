@@ -1,7 +1,7 @@
 /*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2018
+ *	by Chris Burton, 2013-2019
  *	
  *	"ActionTeleport.cs"
  * 
@@ -26,8 +26,13 @@ namespace AC
 
 		public int obToMoveParameterID = -1;
 		public int obToMoveID = 0;
+		public GameObject obToMove;
+		protected GameObject runtimeObToMove;
+
 		public int markerParameterID = -1;
 		public int markerID = 0;
+		public Marker teleporter;
+		protected Marker runtimeTeleporter;
 
 		public GameObject relativeGameObject = null;
 		public int relativeGameObjectID = 0;
@@ -45,8 +50,7 @@ namespace AC
 		public bool recalculateActivePathFind = false;
 		public bool isPlayer;
 		public bool snapCamera;
-		public GameObject obToMove;
-		public Marker teleporter;
+
 		public bool copyRotation;
 		
 
@@ -61,33 +65,34 @@ namespace AC
 		
 		override public void AssignValues (List<ActionParameter> parameters)
 		{
-			obToMove = AssignFile (parameters, obToMoveParameterID, obToMoveID, obToMove);
-			teleporter = AssignFile <Marker> (parameters, markerParameterID, markerID, teleporter);
+			runtimeObToMove = AssignFile (parameters, obToMoveParameterID, obToMoveID, obToMove);
+			runtimeTeleporter = AssignFile <Marker> (parameters, markerParameterID, markerID, teleporter);
 			relativeGameObject = AssignFile (parameters, relativeGameObjectParameterID, relativeGameObjectID, relativeGameObject);
+
 			relativeVector = AssignVector3 (parameters, relativeVectorParameterID, relativeVector);
 			vectorVarID = AssignVariableID (parameters, vectorVarParameterID, vectorVarID);
 
 			if (isPlayer && KickStarter.player)
 			{
-				obToMove = KickStarter.player.gameObject;
+				runtimeObToMove = KickStarter.player.gameObject;
 			}
 		}
 		
 		
 		override public float Run ()
 		{
-			if (teleporter && obToMove)
+			if (runtimeTeleporter != null && runtimeObToMove != null)
 			{
-				Vector3 position = teleporter.transform.position;
-				Quaternion rotation = teleporter.transform.rotation;
+				Vector3 position = runtimeTeleporter.transform.position;
+				Quaternion rotation = runtimeTeleporter.transform.rotation;
 
 				if (positionRelativeTo == PositionRelativeTo.RelativeToActiveCamera)
 				{
 					Transform mainCam = KickStarter.mainCamera.transform;
 
-					float right = teleporter.transform.position.x;
-					float up = teleporter.transform.position.y;
-					float forward = teleporter.transform.position.z;
+					float right = runtimeTeleporter.transform.position.x;
+					float up = runtimeTeleporter.transform.position.y;
+					float forward = runtimeTeleporter.transform.position.z;
 
 					position = mainCam.position + (mainCam.forward * forward) + (mainCam.right * right) + (mainCam.up * up);
 					rotation.eulerAngles += mainCam.transform.rotation.eulerAngles;
@@ -96,14 +101,14 @@ namespace AC
 				{
 					if (KickStarter.player)
 					{
-						Transform playerTranform = KickStarter.player.transform;
+						Transform playerTransform = KickStarter.player.transform;
 
-						float right = teleporter.transform.position.x;
-						float up = teleporter.transform.position.y;
-						float forward = teleporter.transform.position.z;
+						float right = runtimeTeleporter.transform.position.x;
+						float up = runtimeTeleporter.transform.position.y;
+						float forward = runtimeTeleporter.transform.position.z;
 						
-						position = playerTranform.position + (playerTranform.forward * forward) + (playerTranform.right * right) + (playerTranform.up * up);
-						rotation.eulerAngles += playerTranform.rotation.eulerAngles;
+						position = playerTransform.position + (playerTransform.forward * forward) + (playerTransform.right * right) + (playerTransform.up * up);
+						rotation.eulerAngles += playerTransform.rotation.eulerAngles;
 					}
 				}
 				else if (positionRelativeTo == PositionRelativeTo.RelativeToGameObject)
@@ -112,9 +117,9 @@ namespace AC
 					{
 						Transform relativeTransform = relativeGameObject.transform;
 
-						float right = teleporter.transform.position.x;
-						float up = teleporter.transform.position.y;
-						float forward = teleporter.transform.position.z;
+						float right = runtimeTeleporter.transform.position.x;
+						float up = runtimeTeleporter.transform.position.y;
+						float forward = runtimeTeleporter.transform.position.z;
 						
 						position = relativeTransform.position + (relativeTransform.forward * forward) + (relativeTransform.right * right) + (relativeTransform.up * up);
 						rotation.eulerAngles += relativeTransform.rotation.eulerAngles;
@@ -136,25 +141,26 @@ namespace AC
 					}
 				}
 
+				Char charToMove = runtimeObToMove.GetComponent <Char>();
 				if (copyRotation)
 				{
-					obToMove.transform.rotation = rotation;
+					runtimeObToMove.transform.rotation = rotation;
 
-					if (obToMove.GetComponent <Char>())
+					if (charToMove != null)
 					{
 						// Is a character, so set the lookDirection, otherwise will revert back to old rotation
-						obToMove.GetComponent <Char>().SetLookDirection (teleporter.transform.forward, true);
-						obToMove.GetComponent <Char>().Halt ();
+						charToMove.SetLookDirection (runtimeTeleporter.transform.forward, true);
+						charToMove.Halt ();
 					}
 				}
 
-				if (obToMove.GetComponent <Char>())
+				if (charToMove != null)
 				{
-					obToMove.GetComponent <Char>().Teleport (position, recalculateActivePathFind);
+					charToMove.Teleport (position, recalculateActivePathFind);
 				}
 				else
 				{
-					obToMove.transform.position = position;
+					runtimeObToMove.transform.position = position;
 				}
 
 				if (isPlayer && snapCamera)
@@ -277,7 +283,7 @@ namespace AC
 		}
 
 
-		override public void AssignConstantIDs (bool saveScriptsToo)
+		override public void AssignConstantIDs (bool saveScriptsToo, bool fromAssetFile)
 		{
 			if (saveScriptsToo && obToMove != null)
 			{
@@ -301,21 +307,18 @@ namespace AC
 		
 		override public string SetLabel ()
 		{
-			string labelAdd = "";
-			
-			if (teleporter)
+			if (teleporter != null)
 			{
-				if (obToMove)
+				if (obToMove != null)
 				{
-					labelAdd = " (" + obToMove.name + " to " + teleporter.name + ")";
+					return obToMove.name + " to " + teleporter.name;
 				}
 				else if (isPlayer)
 				{
-					labelAdd = " (Player to " + teleporter.name + ")";
+					return "Player to " + teleporter.name;
 				}
 			}
-			
-			return labelAdd;
+			return string.Empty;
 		}
 		
 		#endif

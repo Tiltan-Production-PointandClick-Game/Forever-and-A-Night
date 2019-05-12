@@ -1,4 +1,8 @@
-﻿#if UNITY_ANDROID || UNITY_IOS
+﻿#if UNITY_2017_1_OR_NEWER
+#define CAN_USE_TIMELINE
+#endif
+
+#if UNITY_ANDROID || UNITY_IOS
 #define ON_MOBILE
 #endif
 
@@ -303,7 +307,8 @@ namespace AC
 					else
 					{
 						ACDebug.LogWarning ("Cannot find Default_CursorManager asset to copy from!");
-					}	
+					}
+						
 					references.cursorManager.allowMainCursor = true;
 					EditorUtility.SetDirty (references.cursorManager);
 
@@ -320,6 +325,7 @@ namespace AC
 						{
 							System.IO.Directory.CreateDirectory (Application.dataPath + "/" + gameName + "/UI");
 						}
+
 						foreach (Menu defaultMenu in defaultMenuManager.menus)
 						{
 							float progress = (float) defaultMenuManager.menus.IndexOf (defaultMenu) / (float) defaultMenuManager.menus.Count;
@@ -369,13 +375,29 @@ namespace AC
 									ACDebug.LogWarning ("Null element found in " + newMenu.title + " - the interface may not be set up correctly.");
 								}
 							}
-							AssetDatabase.AddObjectToAsset (newMenu, references.menuManager);
-							newMenu.hideFlags = HideFlags.HideInHierarchy;
 
-							references.menuManager.menus.Add (newMenu);
+							if (newMenu != null)
+							{
+								AssetDatabase.AddObjectToAsset (newMenu, references.menuManager);
+								newMenu.hideFlags = HideFlags.HideInHierarchy;
+
+								references.menuManager.menus.Add (newMenu);
+							}
+							else
+							{
+								ACDebug.LogWarning ("Unable to create new Menu from original '" + defaultMenu.title + "'");
+							}
 						}
 
 						EditorUtility.SetDirty (references.menuManager);
+
+						#if CAN_USE_TIMELINE
+						if (references.speechManager != null)
+						{
+							references.speechManager.previewMenuName = "Subtitles";
+							EditorUtility.SetDirty (references.speechManager);
+						}
+						#endif
 					}
 					else
 					{
@@ -514,7 +536,7 @@ namespace AC
 				if (cameraPerspective_int == 0)
 				{
 					GUILayout.Space (5f);
-					GUILayout.Label ("By default, 2D games are built entirely in the X-Z plane, and characters are scaled to achieve a depth effect.\nIf you prefer, you can position your characters in 3D space, so that they scale accurately due to camera perspective.");
+					GUILayout.Label ("By default, 2D games are built entirely in the X-Y plane, and characters are scaled to achieve a depth effect.\nIf you prefer, you can position your characters in 3D space, so that they scale accurately due to camera perspective.");
 					screenSpace = EditorGUILayout.ToggleLeft ("I'll position my characters in 3D space", screenSpace);
 				}
 				else if (cameraPerspective_int == 1)

@@ -1,7 +1,7 @@
 ﻿/*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2018
+ *	by Chris Burton, 2013-2019
  *	
  *	"PlayMakerIntegration.cs"
  * 
@@ -29,7 +29,7 @@ namespace AC
 	 * A class the contains a number of static functions to assist with PlayMaker integration.
 	 * To use PlayMaker with Adventure Creator, the 'PlayMakerIsPresent' preprocessor must be defined.
 	 */
-	public class PlayMakerIntegration : ScriptableObject
+	public class PlayMakerIntegration
 	{
 
 		/**

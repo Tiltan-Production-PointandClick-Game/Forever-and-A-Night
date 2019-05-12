@@ -1,7 +1,7 @@
 ﻿/*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2018
+ *	by Chris Burton, 2013-2019
  *	
  *	"SpriteFader.cs"
  * 
@@ -26,6 +26,9 @@ namespace AC
 	public class SpriteFader : MonoBehaviour
 	{
 
+		/** If True, then child Sprite will also be affected */
+		public bool affectChildren = false;
+
 		/** True if the Sprite attached to the GameObject this script is attached to is currently fading */
 		[HideInInspector] public bool isFading = true;
 		/** The time at which the sprite began fading */
@@ -36,11 +39,17 @@ namespace AC
 		[HideInInspector] public FadeType fadeType;
 
 		private SpriteRenderer spriteRenderer;
+		private SpriteRenderer[] spriteRenderers;
 
 
 		private void Awake ()
 		{
 			spriteRenderer = GetComponent <SpriteRenderer>();
+
+			if (affectChildren)
+			{
+				spriteRenderers = GetComponentsInChildren <SpriteRenderer>();
+			}
 		}
 
 
@@ -50,9 +59,17 @@ namespace AC
 		 */
 		public void SetAlpha (float _alpha)
 		{
-			Color color = GetComponent <SpriteRenderer>().color;
-			color.a = _alpha;
-			GetComponent <SpriteRenderer>().color = color;
+			if (affectChildren && spriteRenderers != null)
+			{
+				foreach (SpriteRenderer childRenderer in spriteRenderers)
+				{
+					SetSpriteAlpha (childRenderer, _alpha);
+				}
+			}
+			else
+			{
+				SetSpriteAlpha (spriteRenderer, _alpha);
+			}
 		}
 
 
@@ -77,7 +94,8 @@ namespace AC
 			{
 				if (spriteRenderer.enabled == false)
 				{
-					spriteRenderer.enabled = true;
+					SetEnabledState (true);
+
 					if (_fadeType == FadeType.fadeIn)
 					{
 						currentAlpha = 0f;
@@ -117,22 +135,43 @@ namespace AC
 			StopCoroutine ("DoFade");
 
 			isFading = false;
-			Color color = spriteRenderer.color;
+
 			if (fadeType == FadeType.fadeIn)
 			{
-				color.a = 1f;
+				SetAlpha (1f);
 			}
 			else
 			{
-				color.a = 0f;
+				SetAlpha (0f);
 			}
-			spriteRenderer.color = color;
+		}
+
+
+		private void SetSpriteAlpha (SpriteRenderer _spriteRenderer, float alpha)
+		{
+			Color color = _spriteRenderer.color;
+			color.a = alpha;
+			_spriteRenderer.color = color;
+		}
+
+
+		private void SetEnabledState (bool value)
+		{
+			spriteRenderer.enabled = value;
+			if (affectChildren && spriteRenderers != null)
+			{
+				foreach (SpriteRenderer childRenderer in spriteRenderers)
+				{
+					childRenderer.enabled = value;
+				}
+			}
 		}
 
 
 		private IEnumerator DoFade ()
 		{
-			spriteRenderer.enabled = true;
+			SetEnabledState (true);
+
 			isFading = true;
 
 			float alpha = spriteRenderer.color.a;
@@ -142,20 +181,20 @@ namespace AC
 				while (alpha < 1f)
 				{
 					alpha = -1f + AdvGame.Interpolate (fadeStartTime, fadeTime, MoveMethod.Linear, null);
-					spriteRenderer.color = new Color (spriteRenderer.color.r, spriteRenderer.color.g, spriteRenderer.color.b, alpha);
+					SetAlpha (alpha);
 					yield return new WaitForFixedUpdate ();
 				}
-				spriteRenderer.color = new Color (spriteRenderer.color.r, spriteRenderer.color.g, spriteRenderer.color.b, 1f);
+				SetAlpha (1f);
 			}
 			else
 			{
 				while (alpha > 0f)
 				{
 					alpha = 2f - AdvGame.Interpolate (fadeStartTime, fadeTime, MoveMethod.Linear, null);
-					spriteRenderer.color = new Color (spriteRenderer.color.r, spriteRenderer.color.g, spriteRenderer.color.b, alpha);
+					SetAlpha (alpha);
 					yield return new WaitForFixedUpdate ();
 				}
-				spriteRenderer.color = new Color (spriteRenderer.color.r, spriteRenderer.color.g, spriteRenderer.color.b, 0f);
+				SetAlpha (0f);
 			}
 			isFading = false;
 		}

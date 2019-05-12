@@ -1,7 +1,7 @@
 ﻿/*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2018
+ *	by Chris Burton, 2013-2019
  *	
  *	"ActionInstantiate.cs"
  * 
@@ -104,7 +104,7 @@ namespace AC
 					}
 					else
 					{
-						ACDebug.LogWarning (gameObject.name + " won't be instantiated, as it is already present in the scene.");
+						ACDebug.LogWarning (_gameObject.name + " won't be instantiated, as it is already present in the scene.", _gameObject);
 						return 0f;
 					}
 				}
@@ -188,7 +188,7 @@ namespace AC
 				GameObject oldOb = AssignFile (constantID, _gameObject);
 				if (gameObject.activeInHierarchy || (oldOb != null && oldOb.activeInHierarchy))
 				{
-					ACDebug.Log (gameObject.name + " won't be instantiated, as it is already present in the scene.");
+					ACDebug.Log (_gameObject.name + " won't be instantiated, as it is already present in the scene.", _gameObject);
 					return 0f;
 				}
 
@@ -308,7 +308,7 @@ namespace AC
 		}
 
 
-		override public void AssignConstantIDs (bool saveScriptsToo)
+		override public void AssignConstantIDs (bool saveScriptsToo, bool fromAssetFile)
 		{
 			if (saveScriptsToo)
 			{
@@ -338,12 +338,11 @@ namespace AC
 		
 		public override string SetLabel ()
 		{
-			string labelAdd = " (" + invAction.ToString ();
-			if (gameObject)
+			string labelAdd = invAction.ToString ();
+			if (gameObject != null)
 			{
 				labelAdd += " " + gameObject.name;
 			}
-			labelAdd += ")";
 			return labelAdd;
 		}
 		
