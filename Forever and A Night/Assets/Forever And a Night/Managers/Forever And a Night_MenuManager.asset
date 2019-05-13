@@ -2607,13 +2607,13 @@ MonoBehaviour:
   rectTransformID: 13953742
   uiTransitionType: 1
   uiPositionType: 0
-  isEditing: 0
+  isEditing: 1
   isLocked: 0
   id: 4
   title: InGame
-  manualSize: {x: 7.3, y: 5.966667}
+  manualSize: {x: 7.3, y: 6.580347}
   positionType: 1
-  manualPosition: {x: 15.33, y: 349.25998}
+  manualPosition: {x: 22.484001, y: 334.616}
   positionSmoothing: 0
   alignment: 6
   toggleKey: 
@@ -2681,13 +2681,13 @@ MonoBehaviour:
   speechProximityLimit: 0
   speechProximityDistance: 10
   deleteUIWhenTurnOff: 0
-  biggestElementSize: {x: 28.56, y: 19.380001}
+  biggestElementSize: {x: 41.888, y: 19.688002}
   rect:
     serializedVersion: 2
     x: 0
-    y: 338.52
-    width: 30.66
-    height: 21.480001
+    y: 323.232
+    width: 44.968002
+    height: 22.768002
   showInFilter: 1
 --- !u!114 &114415566242296512
 MonoBehaviour:
@@ -4779,7 +4779,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ID: 0
-  isEditing: 0
+  isEditing: 1
   title: MenuButton
   slotSize: {x: 6.3, y: 4.8}
   sizeType: 1
@@ -4805,10 +4805,10 @@ MonoBehaviour:
   linkedUiID: 13963684
   relativeRect:
     serializedVersion: 2
-    x: 2.1
-    y: 2.1
-    width: 26.46
-    height: 17.28
+    x: 3.08
+    y: 3.08
+    width: 38.808
+    height: 16.608002
   relativePosition: {x: 0, y: 0}
   numSlots: 1
   uiButton: {fileID: 0}
@@ -5124,7 +5124,7 @@ MonoBehaviour:
   rectTransformID: 74892
   uiTransitionType: 0
   uiPositionType: 0
-  isEditing: 1
+  isEditing: 0
   isLocked: 0
   id: 13
   title: Document

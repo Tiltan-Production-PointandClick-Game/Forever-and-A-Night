@@ -2,14 +2,17 @@ version: 2
 importPivots: 1
 tpsheetFileNames:
 - Assets/codeandweb.com/Example/SpriteSheet/sprites.tpsheet
-- Assets/Forever And a Night/Art&Graphics/Characters/Player/Animations/Sprites/FrontIdleSpriteSheet/frontIdleSpriteS.tpsheet
+- Assets/Forever And a Night/Art&Graphics/Characters/Player/Animations/Sprites/BackIdleSpriteSheet/BackIdleSpriteSheeet.tpsheet
+- Assets/Forever And a Night/Art&Graphics/Characters/Player/Animations/Sprites/FrontIdle_SpriteSheets/frontIdleSpriteS.tpsheet
 - Assets/Forever And a Night/Art&Graphics/Characters/Player/Animations/Sprites/SideWalkSpriteSheet/Sidewalk.tpsheet
 textureFileNames:
 - Assets/codeandweb.com/Example/SpriteSheet/sprites.png
-- Assets/Forever And a Night/Art&Graphics/Characters/Player/Animations/Sprites/FrontIdleSpriteSheet/frontIdleSpriteS.png
+- Assets/Forever And a Night/Art&Graphics/Characters/Player/Animations/Sprites/BackIdleSpriteSheet/BackIdleSpriteSheeet.png
+- Assets/Forever And a Night/Art&Graphics/Characters/Player/Animations/Sprites/FrontIdle_SpriteSheets/frontIdleSpriteS.png
 - Assets/Forever And a Night/Art&Graphics/Characters/Player/Animations/Sprites/SideWalkSpriteSheet/Sidewalk.png
 normalmapFileNames:
 - Assets/codeandweb.com/Example/SpriteSheet/sprites_n.png
-- Assets/Forever And a Night/Art&Graphics/Characters/Player/Animations/Sprites/FrontIdleSpriteSheet/frontIdleSpriteS_n.png
+- Assets/Forever And a Night/Art&Graphics/Characters/Player/Animations/Sprites/BackIdleSpriteSheet/BackIdleSpriteSheeet_n.png
+- Assets/Forever And a Night/Art&Graphics/Characters/Player/Animations/Sprites/FrontIdle_SpriteSheets/frontIdleSpriteS_n.png
 - Assets/Forever And a Night/Art&Graphics/Characters/Player/Animations/Sprites/SideWalkSpriteSheet/Sidewalk_n.png
 enableDebugOutput: 0
