@@ -1,0 +1,1140 @@
+fileFormatVersion: 2
+guid: 7bbbe7bf4f7fba24ea33d4ddb6f36248
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: frontIdleSpriteS
+    21300002: Armature_FrontIdle_00
+    21300004: Armature_FrontIdle_01
+    21300006: Armature_FrontIdle_02
+    21300008: Armature_FrontIdle_03
+    21300010: Armature_FrontIdle_04
+    21300012: Armature_FrontIdle_05
+    21300014: Armature_FrontIdle_06
+    21300016: Armature_FrontIdle_07
+    21300018: Armature_FrontIdle_08
+    21300020: Armature_FrontIdle_09
+    21300022: Armature_FrontIdle_10
+    21300024: Armature_FrontIdle_11
+    21300026: Armature_FrontIdle_12
+    21300028: Armature_FrontIdle_13
+    21300030: Armature_FrontIdle_14
+    21300032: Armature_FrontIdle_15
+    21300034: Armature_FrontIdle_16
+    21300036: Armature_FrontIdle_17
+    21300038: Armature_FrontIdle_18
+    21300040: Armature_FrontIdle_19
+    21300042: Armature_FrontIdle_20
+    21300044: Armature_FrontIdle_21
+    21300046: Armature_FrontIdle_22
+    21300048: Armature_FrontIdle_23
+    21300050: Armature_FrontIdle_24
+    21300052: Armature_FrontIdle_25
+    21300054: Armature_FrontIdle_26
+    21300056: Armature_FrontIdle_27
+    21300058: Armature_FrontIdle_28
+    21300060: Armature_FrontIdle_29
+    21300062: Armature_FrontIdle_30
+    21300064: Armature_FrontIdle_31
+    21300066: Armature_FrontIdle_32
+    21300068: Armature_FrontIdle_33
+    21300070: Armature_FrontIdle_34
+    21300072: Armature_FrontIdle_35
+    21300074: Armature_FrontIdle_36
+    21300076: Armature_FrontIdle_37
+    21300078: Armature_FrontIdle_38
+    21300080: Armature_FrontIdle_39
+    21300082: Armature_FrontIdle_40
+    21300084: Armature_FrontIdle_41
+    21300086: Armature_FrontIdle_42
+    21300088: Armature_FrontIdle_43
+    21300090: Armature_FrontIdle_44
+    21300092: Armature_FrontIdle_45
+    21300094: Armature_FrontIdle_46
+    21300096: Armature_FrontIdle_47
+    21300098: Armature_FrontIdle_48
+  externalObjects: {}
+  serializedVersion: 9
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 50
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Armature_FrontIdle_00
+      rect:
+        serializedVersion: 2
+        x: 346
+        y: 1617
+        width: 168
+        height: 430
+      alignment: 9
+      pivot: {x: 0.49702382, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a3ceee9b7854224f830da8f2ed45863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Armature_FrontIdle_01
+      rect:
+        serializedVersion: 2
+        x: 684
+        y: 321
+        width: 167
+        height: 430
+      alignment: 9
+      pivot: {x: 0.49401197, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51fc2f969938abc45b93e578149e68b6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Armature_FrontIdle_02
+      rect:
+        serializedVersion: 2
+        x: 853
+        y: 321
+        width: 167
+        height: 430
+      alignment: 9
+      pivot: {x: 0.49401197, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: efe62526307b9504cb309cab69cd853e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Armature_FrontIdle_03
+      rect:
+        serializedVersion: 2
+        x: 854
+        y: 753
+        width: 166
+        height: 430
+      alignment: 9
+      pivot: {x: 0.49698794, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 072ff93397894b547ba9cc7fe3c94688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Armature_FrontIdle_04
+      rect:
+        serializedVersion: 2
+        x: 855
+        y: 1617
+        width: 166
+        height: 430
+      alignment: 9
+      pivot: {x: 0.49698794, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2808d0a5574c4cf4086b0dfc3cbb449b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Armature_FrontIdle_05
+      rect:
+        serializedVersion: 2
+        x: 686
+        y: 1617
+        width: 167
+        height: 430
+      alignment: 9
+      pivot: {x: 0.49401197, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 553eec9cbdb24f44d9a9feb5bde2ecc5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Armature_FrontIdle_06
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 753
+        width: 169
+        height: 430
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f042151d0c6fb54eac8fdb7dbcee751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Armature_FrontIdle_07
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 321
+        width: 169
+        height: 430
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 419a314d9278f494b8f0bd73fd436995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Armature_FrontIdle_08
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 753
+        width: 169
+        height: 430
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 10c1f2ca7eac3ea4c859381f350d7541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Armature_FrontIdle_09
+      rect:
+        serializedVersion: 2
+        x: 346
+        y: 1185
+        width: 168
+        height: 430
+      alignment: 9
+      pivot: {x: 0.49702382, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7925ff46cb4032e40a56f443985f3a23
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Armature_FrontIdle_10
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 321
+        width: 169
+        height: 430
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc18115dff9e40d46b4b82f4504e2f7e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Armature_FrontIdle_11
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 1617
+        width: 169
+        height: 430
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dcfe65b1ce6991e4697368ec071fc955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Armature_FrontIdle_12
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1617
+        width: 172
+        height: 430
+      alignment: 9
+      pivot: {x: 0.49127907, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d3b8958133876b40a672c1da1b2313a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Armature_FrontIdle_13
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1185
+        width: 172
+        height: 430
+      alignment: 9
+      pivot: {x: 0.49127907, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8783a6b331d4fee468abde11052b40e1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Armature_FrontIdle_14
+      rect:
+        serializedVersion: 2
+        x: 686
+        y: 1185
+        width: 167
+        height: 430
+      alignment: 9
+      pivot: {x: 0.49401197, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e8930ab6e84e694f9840ace0ba2b20b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Armature_FrontIdle_15
+      rect:
+        serializedVersion: 2
+        x: 514
+        y: 753
+        width: 168
+        height: 430
+      alignment: 9
+      pivot: {x: 0.49702382, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ac9c2ac30a73fa43b77e8bfb17f871e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Armature_FrontIdle_16
+      rect:
+        serializedVersion: 2
+        x: 514
+        y: 321
+        width: 168
+        height: 430
+      alignment: 9
+      pivot: {x: 0.49702382, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: abf999d352ae75042886e488ba5659ce
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Armature_FrontIdle_17
+      rect:
+        serializedVersion: 2
+        x: 855
+        y: 1185
+        width: 166
+        height: 430
+      alignment: 9
+      pivot: {x: 0.49698794, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 035137b6025bbde478fb2bc34d9dde81
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Armature_FrontIdle_18
+      rect:
+        serializedVersion: 2
+        x: 1022
+        y: 753
+        width: 166
+        height: 430
+      alignment: 9
+      pivot: {x: 0.49698794, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 513230abed96de947bddec50c4eff882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Armature_FrontIdle_19
+      rect:
+        serializedVersion: 2
+        x: 516
+        y: 1617
+        width: 168
+        height: 430
+      alignment: 9
+      pivot: {x: 0.5029762, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7050a4dcd8603884881a630fd3c55515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Armature_FrontIdle_20
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 1185
+        width: 169
+        height: 430
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95c910fc530cf4f4491ff2a68f705e36
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Armature_FrontIdle_21
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 753
+        width: 169
+        height: 430
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5695f0e74d1fc594db105daad05ec32b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Armature_FrontIdle_22
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 321
+        width: 169
+        height: 430
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7029b5bc8ea59c4bae5c7a4ca5508f5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Armature_FrontIdle_23
+      rect:
+        serializedVersion: 2
+        x: 516
+        y: 1185
+        width: 168
+        height: 430
+      alignment: 9
+      pivot: {x: 0.49702382, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2b212cd94970464fab7185d39ff861e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Armature_FrontIdle_24
+      rect:
+        serializedVersion: 2
+        x: 684
+        y: 753
+        width: 168
+        height: 430
+      alignment: 9
+      pivot: {x: 0.49702382, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62a3263d71542c4438067194d4e714cf
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Armature_FrontIdle_25
+      rect:
+        serializedVersion: 2
+        x: 516
+        y: 1185
+        width: 168
+        height: 430
+      alignment: 9
+      pivot: {x: 0.49702382, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a567822e010ee44b927a2b0749c1ed3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Armature_FrontIdle_26
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 321
+        width: 169
+        height: 430
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c814d644996f57a4b9a7b6ab7116eed0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Armature_FrontIdle_27
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 753
+        width: 169
+        height: 430
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5090e0dc30ee3b346ae078bea6ef4fee
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Armature_FrontIdle_28
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 1185
+        width: 169
+        height: 430
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be5e914fb6660ad46aaca68957f03043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Armature_FrontIdle_29
+      rect:
+        serializedVersion: 2
+        x: 516
+        y: 1617
+        width: 168
+        height: 430
+      alignment: 9
+      pivot: {x: 0.5029762, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb52c60f059c07c41b95ed39cd418284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Armature_FrontIdle_30
+      rect:
+        serializedVersion: 2
+        x: 1022
+        y: 753
+        width: 166
+        height: 430
+      alignment: 9
+      pivot: {x: 0.49698794, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 465cac533d15d454ab20d4aef527122d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Armature_FrontIdle_31
+      rect:
+        serializedVersion: 2
+        x: 855
+        y: 1185
+        width: 166
+        height: 430
+      alignment: 9
+      pivot: {x: 0.49698794, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd2a63468f8f93e409fa93ac45e87a3e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Armature_FrontIdle_32
+      rect:
+        serializedVersion: 2
+        x: 514
+        y: 321
+        width: 168
+        height: 430
+      alignment: 9
+      pivot: {x: 0.49702382, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08423c00adc724c4497595e3c57dadbb
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Armature_FrontIdle_33
+      rect:
+        serializedVersion: 2
+        x: 514
+        y: 753
+        width: 168
+        height: 430
+      alignment: 9
+      pivot: {x: 0.49702382, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a9380c7e02b5f14298b040bd6a7615f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Armature_FrontIdle_34
+      rect:
+        serializedVersion: 2
+        x: 686
+        y: 1185
+        width: 167
+        height: 430
+      alignment: 9
+      pivot: {x: 0.49401197, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06a0a1612e66faa4b9b781e2c202d2f4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Armature_FrontIdle_35
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1185
+        width: 172
+        height: 430
+      alignment: 9
+      pivot: {x: 0.49127907, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d0ff220c69210154ba7eb18eebab3292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Armature_FrontIdle_36
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1617
+        width: 172
+        height: 430
+      alignment: 9
+      pivot: {x: 0.49127907, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 964991090bff45c41bb8ef5c460c10e3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Armature_FrontIdle_37
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 1617
+        width: 169
+        height: 430
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e215d5672680004c8db59e34c562cfd
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Armature_FrontIdle_38
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 321
+        width: 169
+        height: 430
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe4214d8c7f45e54094328c0f2071c65
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Armature_FrontIdle_39
+      rect:
+        serializedVersion: 2
+        x: 346
+        y: 1185
+        width: 168
+        height: 430
+      alignment: 9
+      pivot: {x: 0.49702382, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33b9fa9875263904084d057925185cb9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Armature_FrontIdle_40
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 753
+        width: 169
+        height: 430
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5db5d468a793f464f931ca50ee7cdb9e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Armature_FrontIdle_41
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 321
+        width: 169
+        height: 430
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3c3a57fa5d86454eb2ebfca9357c2be
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Armature_FrontIdle_42
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 753
+        width: 169
+        height: 430
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c986b934929ad2546af953ddf6262732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Armature_FrontIdle_43
+      rect:
+        serializedVersion: 2
+        x: 686
+        y: 1617
+        width: 167
+        height: 430
+      alignment: 9
+      pivot: {x: 0.49401197, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a37d795a0b9382e449ac7040f994b7e9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Armature_FrontIdle_44
+      rect:
+        serializedVersion: 2
+        x: 855
+        y: 1617
+        width: 166
+        height: 430
+      alignment: 9
+      pivot: {x: 0.49698794, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: beff9f0d2d136f5449f7d7d22b2a42b5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Armature_FrontIdle_45
+      rect:
+        serializedVersion: 2
+        x: 854
+        y: 753
+        width: 166
+        height: 430
+      alignment: 9
+      pivot: {x: 0.49698794, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12e40344b3bc9cd4b849153a2289edd4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Armature_FrontIdle_46
+      rect:
+        serializedVersion: 2
+        x: 853
+        y: 321
+        width: 167
+        height: 430
+      alignment: 9
+      pivot: {x: 0.49401197, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72d9ad522ec0acf4ea20fb65b338921b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Armature_FrontIdle_47
+      rect:
+        serializedVersion: 2
+        x: 684
+        y: 321
+        width: 167
+        height: 430
+      alignment: 9
+      pivot: {x: 0.49401197, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc9abc1edc8fcf14185f890d28402b76
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Armature_FrontIdle_48
+      rect:
+        serializedVersion: 2
+        x: 346
+        y: 1617
+        width: 168
+        height: 430
+      alignment: 9
+      pivot: {x: 0.49702382, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a303b32b4b71e24aae0f93c08d41d1d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: fdeedfa65933d16489910c9455330da5
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
