@@ -1,7 +1,7 @@
 ﻿/*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2019
+ *	by Chris Burton, 2013-2018
  *	
  *	"NavigationEngine_meshCollider.cs"
  * 
@@ -52,7 +52,7 @@ namespace AC
 			
 			if (KickStarter.sceneSettings.navigationMethod == AC_NavigationMethod.meshCollider && navMesh.GetComponent <Collider>() == null)
 			{
-				ACDebug.LogWarning ("A Collider component must be attached to " + navMesh.gameObject.name + " for pathfinding to work - please attach one.", navMesh.gameObject);
+				ACDebug.LogWarning ("A Collider component must be attached to " + navMesh.gameObject.name + " for pathfinding to work - please attach one.");
 			}
 		}
 
@@ -150,11 +150,11 @@ namespace AC
 				if (navMesh.GetComponent <MeshFilter>() && navMesh.GetComponent <MeshFilter>().sharedMesh)
 				{
 					navMesh.GetComponent <MeshCollider>().sharedMesh = navMesh.GetComponent <MeshFilter>().sharedMesh;
-					ACDebug.LogWarning (navMesh.gameObject.name + " has no MeshCollider mesh - temporarily using MeshFilter mesh instead.", navMesh.gameObject);
+					ACDebug.LogWarning (navMesh.gameObject.name + " has no MeshCollider mesh - temporarily using MeshFilter mesh instead.");
 				}
 				else
 				{
-					ACDebug.LogWarning (navMesh.gameObject.name + " has no MeshCollider mesh.", navMesh.gameObject);
+					ACDebug.LogWarning (navMesh.gameObject.name + " has no MeshCollider mesh.");
 				}
 			}
 		}
@@ -341,7 +341,7 @@ namespace AC
 			Mesh mesh = KickStarter.sceneSettings.navMesh.transform.GetComponent <MeshCollider>().sharedMesh;
 			if (mesh == null)
 			{
-				ACDebug.LogWarning ("Active NavMesh has no mesh!", KickStarter.sceneSettings.navMesh.gameObject);
+				ACDebug.LogWarning ("Active NavMesh has no mesh!");
 				return null;
 			}
 			Vector3[] _vertices = mesh.vertices;

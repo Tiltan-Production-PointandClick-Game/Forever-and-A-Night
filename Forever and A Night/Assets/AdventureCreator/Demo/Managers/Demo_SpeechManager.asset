@@ -4,8 +4,7 @@
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -29,7 +28,6 @@ MonoBehaviour:
   skipThresholdTime: 0
   endScrollBeforeSkip: 1
   scrollingTextFactorsLength: 0
-  useAssetBundles: 0
   searchAudioFiles: 1
   autoNameSpeechFiles: 1
   autoSpeechFolder: Speech
@@ -37,7 +35,7 @@ MonoBehaviour:
   forceSubtitles: 1
   translateAudio: 0
   fallbackAudio: 0
-  keepTextInBuffer: 0
+  keepTextInBuffer: 1
   relegateBackgroundSpeechAudio: 0
   usePlayerRealName: 0
   separateSharedPlayerAudio: 0
@@ -1695,12 +1693,6 @@ MonoBehaviour:
   - Original
   - French
   languageIsRightToLeft: 0000
-  languageAudioAssetBundles:
-  - 
-  - 
-  languageLipsyncAssetBundles:
-  - 
-  - 
   ignoreOriginalText: 0
   sfxDucking: 0
   musicDucking: 0
@@ -1717,8 +1709,7 @@ MonoBehaviour:
   speechIDRecycling: 0
   sceneFiles:
   - Assets/AdventureCreator/Demo/Scenes/Basement.unity
-  activeLineID: 11
+  activeLineID: 54
   mergeMatchingSpeechIDs: 0
   useSpeechTags: 0
   speechTags: []
-  previewMenuName: Subtitles

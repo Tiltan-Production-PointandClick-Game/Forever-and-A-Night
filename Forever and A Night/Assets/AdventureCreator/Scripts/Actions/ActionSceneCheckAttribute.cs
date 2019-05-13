@@ -1,7 +1,7 @@
 ﻿/*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2019
+ *	by Chris Burton, 2013-2018
  *	
  *	"ActionSceneCheckAttribute.cs"
  * 
@@ -316,21 +316,22 @@ namespace AC
 
 		override public string SetLabel ()
 		{
-			if (sceneSettings != null)
+			if (sceneSettings)
 			{
 				return GetLabelString (sceneSettings.attributes);
 			}
-			return string.Empty;
+
+			return "";
 		}
 
 
 		private string GetLabelString (List<InvVar> attributes)
 		{
-			string labelAdd = string.Empty;
+			string labelAdd = "";
 
 			if (attributes.Count > 0 && attributes.Count > attributeNumber && attributeNumber > -1)
 			{
-				labelAdd = attributes[attributeNumber].label;
+				labelAdd = " (" + attributes[attributeNumber].label;
 				
 				if (attributes [attributeNumber].type == VariableType.Boolean)
 				{
@@ -352,6 +353,8 @@ namespace AC
 				{
 					labelAdd += " " + intCondition.ToString () + " " + attributes[attributeNumber].popUps[intValue];
 				}
+				
+				labelAdd += ")";
 			}
 
 			return labelAdd;

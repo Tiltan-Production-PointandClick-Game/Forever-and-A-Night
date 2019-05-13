@@ -1,7 +1,7 @@
 ﻿/*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2019
+ *	by Chris Burton, 2013-2018
  *	
  *	"MenuInteraction.cs"
  * 
@@ -296,7 +296,7 @@ namespace AC
 			if (uiButton != null)
 			{
 				UpdateUISelectable (uiButton, uiSelectableHideStyle);
-					
+
 				if (displayType != AC_DisplayType.IconOnly && uiText != null)
 				{
 					uiText.text = label;

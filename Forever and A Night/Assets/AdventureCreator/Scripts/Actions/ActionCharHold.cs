@@ -1,7 +1,7 @@
 /*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2019
+ *	by Chris Burton, 2013-2018
  *	
  *	"ActionCharHold.cs"
  * 
@@ -29,13 +29,10 @@ namespace AC
 		public int objectToHoldID = 0;
 
 		public GameObject objectToHold;
-
 		public bool isPlayer;
 		public Char _char;
-		protected Char runtimeChar;
-
 		public bool rotate90;
-		protected GameObject loadedObject = null;
+		private GameObject loadedObject = null;
 		
 		public Hand hand;
 		
@@ -51,7 +48,7 @@ namespace AC
 
 		override public void AssignValues (List<ActionParameter> parameters)
 		{
-			runtimeChar = AssignFile <Char> (_charID, _char);
+			_char = AssignFile <Char> (_charID, _char);
 			objectToHold = AssignFile (parameters, objectToHoldParameterID, objectToHoldID, objectToHold);
 
 			if (objectToHold != null && !objectToHold.activeInHierarchy)
@@ -61,7 +58,7 @@ namespace AC
 
 			if (isPlayer)
 			{
-				runtimeChar = KickStarter.player;
+				_char = KickStarter.player;
 			}
 		}
 
@@ -78,11 +75,11 @@ namespace AC
 		
 		override public float Run ()
 		{
-			if (runtimeChar)
+			if (_char)
 			{
-				if (runtimeChar.GetAnimEngine () != null && runtimeChar.GetAnimEngine ().ActionCharHoldPossible ())
+				if (_char.GetAnimEngine () != null && _char.GetAnimEngine ().ActionCharHoldPossible ())
 				{
-					if (runtimeChar.HoldObject (GetObjectToHold (), hand))
+					if (_char.HoldObject (GetObjectToHold (), hand))
 					{
 						if (rotate90)
 						{
@@ -167,7 +164,7 @@ namespace AC
 		}
 
 
-		override public void AssignConstantIDs (bool saveScriptsToo, bool fromAssetFile)
+		override public void AssignConstantIDs (bool saveScriptsToo)
 		{
 			if (saveScriptsToo)
 			{
@@ -197,11 +194,14 @@ namespace AC
 		
 		public override string SetLabel ()
 		{
-			if (_char != null && objectToHold != null)
+			string labelAdd = "";
+			
+			if (_char && objectToHold)
 			{
-				return _char.name + " hold " + objectToHold.name;
+				labelAdd = "(" + _char.name + " hold " + objectToHold.name + ")";
 			}
-			return string.Empty;
+			
+			return labelAdd;
 		}
 		
 		#endif

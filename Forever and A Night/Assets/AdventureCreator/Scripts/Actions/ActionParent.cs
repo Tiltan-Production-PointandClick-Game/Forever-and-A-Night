@@ -1,7 +1,7 @@
 /*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2019
+ *	by Chris Burton, 2013-2018
  *	
  *	"ActionParent.cs"
  * 
@@ -32,10 +32,8 @@ namespace AC
 		public ParentAction parentAction;
 
 		public Transform parentTransform;
-		protected Transform runtimeParentTransform;
 		
 		public GameObject obToAffect;
-		protected GameObject runtimeObToAffect;
 		public bool isPlayer;
 		
 		public bool setPosition;
@@ -56,36 +54,36 @@ namespace AC
 
 		override public void AssignValues (List<ActionParameter> parameters)
 		{
-			runtimeParentTransform = AssignFile (parameters, parentTransformParameterID, parentTransformID, parentTransform);
-			runtimeObToAffect = AssignFile (parameters, obToAffectParameterID, obToAffectID, obToAffect);
+			parentTransform = AssignFile (parameters, parentTransformParameterID, parentTransformID, parentTransform);
+			obToAffect = AssignFile (parameters, obToAffectParameterID, obToAffectID, obToAffect);
 
 			if (isPlayer && KickStarter.player)
 			{
-				runtimeObToAffect = KickStarter.player.gameObject;
+				obToAffect = KickStarter.player.gameObject;
 			}
 		}
 		
 		
 		override public float Run ()
 		{
-			if (parentAction == ParentAction.SetParent && runtimeParentTransform)
+			if (parentAction == ParentAction.SetParent && parentTransform)
 			{
-				runtimeObToAffect.transform.parent = runtimeParentTransform;
+				obToAffect.transform.parent = parentTransform;
 				
 				if (setPosition)
 				{
-					runtimeObToAffect.transform.localPosition = newPosition;
+					obToAffect.transform.localPosition = newPosition;
 				}
 				
 				if (setRotation)
 				{
-					runtimeObToAffect.transform.localRotation = Quaternion.LookRotation (newRotation);
+					obToAffect.transform.localRotation = Quaternion.LookRotation (newRotation);
 				}
 			}
 
 			else if (parentAction == ParentAction.ClearParent)
 			{
-				runtimeObToAffect.transform.parent = null;
+				obToAffect.transform.parent = null;
 			}
 			
 			return 0f;
@@ -148,7 +146,7 @@ namespace AC
 		}
 
 
-		override public void AssignConstantIDs (bool saveScriptsToo, bool fromAssetFile)
+		override public void AssignConstantIDs (bool saveScriptsToo)
 		{
 			if (saveScriptsToo)
 			{
@@ -175,11 +173,14 @@ namespace AC
 		
 		override public string SetLabel ()
 		{
-			if (obToAffect != null)
+			string labelAdd = "";
+			
+			if (obToAffect)
 			{
-				return obToAffect.name;
+				labelAdd = " (" + obToAffect.name + ")";
 			}
-			return string.Empty;
+			
+			return labelAdd;
 		}
 
 		#endif

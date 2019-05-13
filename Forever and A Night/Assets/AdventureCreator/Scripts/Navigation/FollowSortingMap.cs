@@ -1,7 +1,7 @@
 ﻿/*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2019
+ *	by Chris Burton, 2013-2018
  *	
  *	"FollowSortingMap.cs"
  * 
@@ -66,18 +66,17 @@ namespace AC
 
 			renderers = GetComponentsInChildren <Renderer>();
 
-			_renderer = GetComponent <Renderer>();
-			if (_renderer == null && !affectChildren)
+			if (GetComponent <Renderer>())
 			{
-				ACDebug.LogWarning ("FollowSortingMap on " + gameObject.name + " must be attached alongside a Renderer component.");
+				_renderer = GetComponent <Renderer>();
 			}
-
-			if (GetComponent <Char>() != null && Application.isPlaying)
+			else
 			{
-				ACDebug.LogWarning ("The 'Follow Sorting Map' component attached to the character '" + gameObject.name + " is on the character's root - it should instead be placed on their sprite child.  To prevent movement locking, the Follow Sorting Map has been disabled.", this);
-				enabled = false;
+				if (!affectChildren)
+				{
+					ACDebug.LogWarning ("FollowSortingMap on " + gameObject.name + " must be attached alongside a Renderer component.");
+				}
 			}
-
 			SetOriginalDepth ();
 		}
 
@@ -287,18 +286,10 @@ namespace AC
 		 */
 		public SortingMap GetSortingMap ()
 		{
-			if (!followSortingMap && customSortingMap != null)
-			{
-				return customSortingMap;
-			}
 			return sortingMap;
 		}
 
 
-		/**
-		 * <summary>Sets the SortingMap that this component follows.</summary>
-		 * <param name = "_sortingMap">The SortingMap to follow.  If this is null, then it will revert to the scene's default.</param>
-		 */
 		public void SetSortingMap (SortingMap _sortingMap)
 		{
 			if (_sortingMap == null)

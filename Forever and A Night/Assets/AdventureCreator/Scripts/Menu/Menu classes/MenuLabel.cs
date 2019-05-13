@@ -1,7 +1,7 @@
 /*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2019
+ *	by Chris Burton, 2013-2018
  *	
  *	"MenuLabel.cs"
  * 
@@ -340,7 +340,7 @@ namespace AC
 		{
 			if (labelType == AC_LabelType.DialogueLine || labelType == AC_LabelType.DialogueSpeaker)
 			{
-				newLabel = string.Empty;
+				newLabel = "";
 			}
 		}
 
@@ -361,7 +361,131 @@ namespace AC
 		{
 			if (Application.isPlaying)
 			{
-				UpdateLabelText (languageNumber);
+				switch (labelType)
+				{
+					case AC_LabelType.Normal:
+						newLabel = TranslateLabel (label, languageNumber);
+						break;
+
+					case AC_LabelType.Hotspot:
+						string _newLabel = "";
+						if (invItem != null)
+						{
+							_newLabel = invItem.GetFullLabel (languageNumber);
+						}
+						else if (hotspot != null)
+						{
+							_newLabel = hotspot.GetFullLabel (languageNumber);
+						}
+						else if (showPendingWhileMovingToHotspot &&
+								 KickStarter.playerInteraction.GetHotspotMovingTo () != null && 
+								 KickStarter.playerCursor.GetSelectedCursorID () == -1)
+						{
+							_newLabel = KickStarter.playerInteraction.MovingToHotspotLabel;
+						}
+						else
+						{
+							_newLabel = KickStarter.playerMenus.GetHotspotLabel ();
+						}
+
+						if (_newLabel != "" || updateIfEmpty)
+						{
+							newLabel = _newLabel;
+						}
+						break;
+
+					case AC_LabelType.GlobalVariable:
+						GVar variable = GlobalVariables.GetVariable (variableID);
+						if (variable != null)
+						{
+							newLabel = variable.GetValue (languageNumber);
+						}
+						else
+						{
+							ACDebug.LogWarning ("Label element '" + title + "' cannot display Global Variable " + variableID + " as it does not exist!");
+						}
+						break;
+
+					case AC_LabelType.ActiveSaveProfile:
+						newLabel = KickStarter.options.GetProfileName ();
+						break;
+
+					case AC_LabelType.InventoryProperty:
+						newLabel = "";
+						if (inventoryPropertyType == InventoryPropertyType.SelectedItem)
+						{
+							newLabel = GetPropertyDisplayValue (languageNumber, KickStarter.runtimeInventory.SelectedItem);
+						}
+						else if (inventoryPropertyType == InventoryPropertyType.LastClickedItem)
+						{
+							newLabel = GetPropertyDisplayValue (languageNumber, KickStarter.runtimeInventory.lastClickedItem);
+						}
+						else if (inventoryPropertyType == InventoryPropertyType.MouseOverItem)
+						{
+							newLabel = GetPropertyDisplayValue (languageNumber, KickStarter.runtimeInventory.hoverItem);
+						}
+						break;
+
+					case AC_LabelType.DialogueLine:
+					case AC_LabelType.DialogueSpeaker:
+						if (linkedMenu != null && linkedMenu.IsFadingOut ())
+						{
+							return;
+						}
+
+						UpdateSpeechLink ();
+
+						if (labelType == AC_LabelType.DialogueLine)
+						{
+							if (speech != null)
+							{
+								string line = speech.displayText;
+								if (line != "" || updateIfEmpty)
+								{
+									newLabel = line;
+								}
+
+								if (useCharacterColour)
+								{
+									speechColour = speech.GetColour ();
+									if (uiText)
+									{
+										uiText.color = speechColour;
+									}
+								}
+							}
+							else if (!KickStarter.speechManager.keepTextInBuffer)
+							{
+								newLabel = string.Empty;
+							}
+						}
+						else if (labelType == AC_LabelType.DialogueSpeaker)
+						{
+							if (speech != null)
+							{
+								string line = speech.GetSpeaker (languageNumber);
+
+								if (line != "" || updateIfEmpty || speech.GetSpeakingCharacter () == null)
+								{
+									newLabel = line;
+								}
+							}
+							else if (!KickStarter.speechManager.keepTextInBuffer)
+							{
+								newLabel = "";
+							}
+						}
+						break;
+
+					case AC_LabelType.DocumentTitle:
+						if (Document != null)
+						{
+							newLabel = KickStarter.runtimeLanguages.GetTranslation (Document.title,
+																					Document.titleLineID,
+																					languageNumber);
+						}
+						break;
+				}
 			}
 			else
 			{
@@ -374,139 +498,6 @@ namespace AC
 			{
 				uiText.text = newLabel;
 				UpdateUIElement (uiText);
-			}
-		}
-
-
-		/**
-		 * Updates the label's text buffer.  This is normally done internally at runtime, but can be called manually to update it in Edit mode.
-		 */
-		public void UpdateLabelText (int languageNumber = 0)
-		{
-			switch (labelType)
-			{
-				case AC_LabelType.Normal:
-					newLabel = TranslateLabel (label, languageNumber);
-					break;
-
-				case AC_LabelType.Hotspot:
-					string _newLabel = string.Empty;
-					if (invItem != null)
-					{
-						_newLabel = invItem.GetFullLabel (languageNumber);
-					}
-					else if (hotspot != null)
-					{
-						_newLabel = hotspot.GetFullLabel (languageNumber);
-					}
-					else if (showPendingWhileMovingToHotspot &&
-							 KickStarter.playerInteraction.GetHotspotMovingTo () != null && 
-							 KickStarter.playerCursor.GetSelectedCursorID () == -1)
-					{
-						_newLabel = KickStarter.playerInteraction.MovingToHotspotLabel;
-					}
-					else
-					{
-						_newLabel = KickStarter.playerMenus.GetHotspotLabel ();
-					}
-
-					if (_newLabel != "" || updateIfEmpty)
-					{
-						newLabel = _newLabel;
-					}
-					break;
-
-				case AC_LabelType.GlobalVariable:
-					GVar variable = GlobalVariables.GetVariable (variableID);
-					if (variable != null)
-					{
-						newLabel = variable.GetValue (languageNumber);
-					}
-					else
-					{
-						ACDebug.LogWarning ("Label element '" + title + "' cannot display Global Variable " + variableID + " as it does not exist!");
-					}
-					break;
-
-				case AC_LabelType.ActiveSaveProfile:
-					newLabel = KickStarter.options.GetProfileName ();
-					break;
-
-				case AC_LabelType.InventoryProperty:
-					newLabel = "";
-					if (inventoryPropertyType == InventoryPropertyType.SelectedItem)
-					{
-						newLabel = GetPropertyDisplayValue (languageNumber, KickStarter.runtimeInventory.SelectedItem);
-					}
-					else if (inventoryPropertyType == InventoryPropertyType.LastClickedItem)
-					{
-						newLabel = GetPropertyDisplayValue (languageNumber, KickStarter.runtimeInventory.lastClickedItem);
-					}
-					else if (inventoryPropertyType == InventoryPropertyType.MouseOverItem)
-					{
-						newLabel = GetPropertyDisplayValue (languageNumber, KickStarter.runtimeInventory.hoverItem);
-					}
-					break;
-
-				case AC_LabelType.DialogueLine:
-				case AC_LabelType.DialogueSpeaker:
-					if (linkedMenu != null && linkedMenu.IsFadingOut ())
-					{
-						return;
-					}
-
-					UpdateSpeechLink ();
-
-					if (labelType == AC_LabelType.DialogueLine)
-					{
-						if (speech != null)
-						{
-							string line = speech.displayText;
-							if (line != string.Empty || updateIfEmpty)
-							{
-								newLabel = line;
-							}
-
-							if (useCharacterColour)
-							{
-								speechColour = speech.GetColour ();
-								if (uiText)
-								{
-									uiText.color = speechColour;
-								}
-							}
-						}
-						else if (!KickStarter.speechManager.keepTextInBuffer)
-						{
-							newLabel = string.Empty;
-						}
-					}
-					else if (labelType == AC_LabelType.DialogueSpeaker)
-					{
-						if (speech != null)
-						{
-							string line = speech.GetSpeaker (languageNumber);
-
-							if (line != string.Empty || updateIfEmpty || speech.GetSpeakingCharacter () == null)
-							{
-								newLabel = line;
-							}
-						}
-						else if (!KickStarter.speechManager.keepTextInBuffer)
-						{
-							newLabel = string.Empty;
-						}
-					}
-					break;
-
-				case AC_LabelType.DocumentTitle:
-					if (Document != null)
-					{
-						newLabel = KickStarter.runtimeLanguages.GetTranslation (Document.title,
-																				Document.titleLineID,
-																				languageNumber);
-					}
-					break;
 			}
 		}
 

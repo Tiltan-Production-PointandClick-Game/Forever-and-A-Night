@@ -1,7 +1,7 @@
 ﻿/*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2019
+ *	by Chris Burton, 2013-2018
  *	
  *	"ActionVarProperty.cs"
  * 
@@ -359,17 +359,20 @@ namespace AC
 				}
 			}
 			
-			return string.Empty;
+			return "";
 		}
 
 
 		private string GetLabelString (List<GVar> vars, int variableNumber)
 		{
+			string labelAdd = "";
+
 			if (vars.Count > 0 && variableNumber > -1 && vars.Count > variableNumber)
 			{
-				return vars [variableNumber].label;
+				labelAdd = " (" + vars [variableNumber].label + ")";
 			}
-			return string.Empty;
+
+			return labelAdd;
 		}
 
 

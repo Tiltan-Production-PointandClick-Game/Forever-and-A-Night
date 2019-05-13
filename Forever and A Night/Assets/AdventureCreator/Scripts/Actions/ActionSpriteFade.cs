@@ -1,7 +1,7 @@
 ﻿/*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2019
+ *	by Chris Burton, 2013-2018
  *	
  *	"ActionSpriteFade.cs"
  * 
@@ -25,7 +25,6 @@ namespace AC
 		public int constantID = 0;
 		public int parameterID = -1;
 		public SpriteFader spriteFader;
-		protected SpriteFader runtimeSpriteFader;
 		
 		public FadeType fadeType = FadeType.fadeIn;
 		public float fadeSpeed;
@@ -42,13 +41,13 @@ namespace AC
 		
 		override public void AssignValues (List<ActionParameter> parameters)
 		{
-			runtimeSpriteFader = AssignFile <SpriteFader> (parameters, parameterID, constantID, spriteFader);
+			spriteFader = AssignFile <SpriteFader> (parameters, parameterID, constantID, spriteFader);
 		}
 		
 		
 		override public float Run ()
 		{
-			if (runtimeSpriteFader == null)
+			if (spriteFader == null)
 			{
 				return 0f;
 			}
@@ -57,7 +56,7 @@ namespace AC
 			{
 				isRunning = true;
 
-				runtimeSpriteFader.Fade (fadeType, fadeSpeed);
+				spriteFader.Fade (fadeType, fadeSpeed);
 
 				if (willWait)
 				{
@@ -75,9 +74,9 @@ namespace AC
 
 		override public void Skip ()
 		{
-			if (runtimeSpriteFader != null)
+			if (spriteFader != null)
 			{
-				runtimeSpriteFader.Fade (fadeType, 0f);
+				spriteFader.Fade (fadeType, 0f);
 			}
 		}
 	
@@ -109,7 +108,7 @@ namespace AC
 		}
 
 
-		override public void AssignConstantIDs (bool saveScriptsToo, bool fromAssetFile)
+		override public void AssignConstantIDs (bool saveScriptsToo)
 		{
 			if (saveScriptsToo)
 			{
@@ -121,11 +120,14 @@ namespace AC
 		
 		override public string SetLabel ()
 		{
+			string labelAdd = "";
+			
 			if (spriteFader != null)
 			{
-				return fadeType.ToString () + " " + spriteFader.gameObject.name;
+				labelAdd = " (" + fadeType.ToString () + " " + spriteFader.gameObject.name + ")";
 			}
-			return string.Empty;
+			
+			return labelAdd;
 		}
 		
 		#endif

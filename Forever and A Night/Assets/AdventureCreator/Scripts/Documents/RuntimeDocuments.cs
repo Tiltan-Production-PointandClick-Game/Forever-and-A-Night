@@ -1,7 +1,7 @@
 ﻿/*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2019
+ *	by Chris Burton, 2013-2018
  *	
  *	"RuntimeDocuments.cs"
  * 
@@ -91,27 +91,6 @@ namespace AC
 				KickStarter.eventManager.Call_OnHandleDocument (activeDocument, false);
 				activeDocument = null;
 			}
-		}
-
-
-		/**
-		 * <summary>Checks if a particular Document is in the Player's collection</summary>
-		 * <param name = "ID">The ID number of the Document to check for</param>
-		 * <returns>True if the Document is in the Player's collection</returns>
-		 */
-		public bool DocumentIsInCollection (int ID)
-		{
-			if (collectedDocuments != null)
-			{
-				foreach (int documentID in collectedDocuments)
-				{
-					if (documentID == ID)
-					{
-						return true;
-					}
-				}
-			}
-			return false;
 		}
 
 

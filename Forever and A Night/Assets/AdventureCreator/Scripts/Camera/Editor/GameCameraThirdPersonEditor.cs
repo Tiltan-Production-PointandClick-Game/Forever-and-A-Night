@@ -33,10 +33,10 @@ namespace AC
 
 			if (_target.detectCollisions)
 			{
-				_target.collisionRadius = CustomGUILayout.FloatField ("Collision radius:", _target.collisionRadius, "", "The size of the SphereCast to use when detecting collisions");
-				if (_target.collisionRadius < 0f)
+				_target.collisionOffset = CustomGUILayout.FloatField ("Collision offset:", _target.collisionOffset, "", "The distance to keep away from Colliders");
+				if (_target.collisionOffset < 0f)
 				{
-					_target.collisionRadius = 0f;
+					_target.collisionOffset = 0f;
 				}
 				_target.collisionLayerMask = AdvGame.LayerMaskField ("Collision layer(s):", _target.collisionLayerMask, "The layers to check for when detecting collisions");
 			}

@@ -1,7 +1,7 @@
 /*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2019
+ *	by Chris Burton, 2013-2018
  *	
  *	"ActionNavMesh.cs"
  * 
@@ -137,7 +137,7 @@ namespace AC
 
 					if (newNavMesh.GetComponent <ConstantID>() == null)
 					{
-						ACDebug.LogWarning ("Warning: Changing to new NavMesh with no ConstantID - change will not be recognised by saved games.", newNavMesh);
+						ACDebug.LogWarning ("Warning: Changing to new NavMesh with no ConstantID - change will not be recognised by saved games.");
 					}
 				}
 
@@ -153,7 +153,7 @@ namespace AC
 
 				if (playerStart.GetComponent <ConstantID>() == null)
 				{
-					ACDebug.LogWarning ("Warning: Changing to new default PlayerStart with no ConstantID - change will not be recognised by saved games.", playerStart);
+					ACDebug.LogWarning ("Warning: Changing to new default PlayerStart with no ConstantID - change will not be recognised by saved games.");
 				}
 			}
 			else if (sceneSetting == SceneSetting.SortingMap && sortingMap)
@@ -163,7 +163,7 @@ namespace AC
 
 				if (sortingMap.GetComponent <ConstantID>() == null)
 				{
-					ACDebug.LogWarning ("Warning: Changing to new SortingMap with no ConstantID - change will not be recognised by saved games.", sortingMap);
+					ACDebug.LogWarning ("Warning: Changing to new SortingMap with no ConstantID - change will not be recognised by saved games.");
 				}
 			}
 			else if (sceneSetting == SceneSetting.TintMap && tintMap)
@@ -179,7 +179,7 @@ namespace AC
 				
 				if (tintMap.GetComponent <ConstantID>() == null)
 				{
-					ACDebug.LogWarning ("Warning: Changing to new TintMap with no ConstantID - change will not be recognised by saved games.", tintMap);
+					ACDebug.LogWarning ("Warning: Changing to new TintMap with no ConstantID - change will not be recognised by saved games.");
 				}
 			}
 			else if (sceneSetting == SceneSetting.OnLoadCutscene)
@@ -190,9 +190,9 @@ namespace AC
 				{
 					ACDebug.LogWarning ("Warning: As the Scene Manager relies on asset files for its cutscenes, changes made with the 'Scene: Change setting' Action will not be felt.");
 				}
-				else if (cutscene != null && cutscene.GetComponent <ConstantID>() == null)
+				else if (cutscene.GetComponent <ConstantID>() == null)
 				{
-					ACDebug.LogWarning ("Warning: Changing to Cutscene On Load with no ConstantID - change will not be recognised by saved games.", cutscene);
+					ACDebug.LogWarning ("Warning: Changing to Cutscene On Load with no ConstantID - change will not be recognised by saved games.");
 				}
 			}
 			else if (sceneSetting == SceneSetting.OnStartCutscene)
@@ -203,9 +203,9 @@ namespace AC
 				{
 					ACDebug.LogWarning ("Warning: As the Scene Manager relies on asset files for its cutscenes, changes made with the 'Scene: Change setting' Action will not be felt.");
 				}
-				else if (cutscene != null && cutscene.GetComponent <ConstantID>() == null)
+				else if (cutscene.GetComponent <ConstantID>() == null)
 				{
-					ACDebug.LogWarning ("Warning: Changing to Cutscene On Start with no ConstantID - change will not be recognised by saved games.", cutscene);
+					ACDebug.LogWarning ("Warning: Changing to Cutscene On Start with no ConstantID - change will not be recognised by saved games.");
 				}
 			}
 			
@@ -382,7 +382,7 @@ namespace AC
 		}
 
 
-		override public void AssignConstantIDs (bool saveScriptsToo, bool fromAssetFile)
+		override public void AssignConstantIDs (bool saveScriptsToo)
 		{
 			if (sceneSetting == SceneSetting.DefaultNavMesh)
 			{
@@ -442,7 +442,11 @@ namespace AC
 		
 		override public string SetLabel ()
 		{
-			return sceneSetting.ToString ();
+			string labelAdd = string.Empty;
+			
+			labelAdd = " (" + sceneSetting.ToString () + ")";
+
+			return labelAdd;
 		}
 
 		#endif

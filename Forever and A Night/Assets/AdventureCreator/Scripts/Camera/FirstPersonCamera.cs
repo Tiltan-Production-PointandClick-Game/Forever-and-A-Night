@@ -1,7 +1,7 @@
 /*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2019
+ *	by Chris Burton, 2013-2018
  *	
  *	"FirstPersonCamera.cs"
  * 
@@ -59,14 +59,11 @@ namespace AC
 		/** The name of the float parameter in headBobAnimator to set as the head-bob speed, if headBob = True and headBobMethod = FirstPersonHeadBobMethod.CustomAnimation */
 		public string headBobSpeedParameter;
 		
-		private float actualTilt = 0f;
+		private float rotationY = 0f;
 		private float bobTimer = 0f;
 		private float height = 0f;
 		private float deltaHeight = 0f;
 		private Player player;
-
-		private LerpUtils.FloatLerp tiltLerp = new LerpUtils.FloatLerp ();
-		private float targetTilt;
 
 
 		/**
@@ -99,18 +96,6 @@ namespace AC
 		 */
 		public void _UpdateFPCamera ()
 		{
-			if (actualTilt != targetTilt)
-			{
-				if (player != null)
-				{
-					actualTilt = tiltLerp.Update (actualTilt, targetTilt, player.turnSpeed);
-				}
-				else
-				{
-					actualTilt = tiltLerp.Update (actualTilt, targetTilt, 7f);
-				}
-			}
-
 			if (headBob)
 			{
 				if (headBobMethod == FirstPersonHeadBobMethod.BuiltIn)
@@ -168,7 +153,7 @@ namespace AC
 		 */
 		public float GetHeadBobSpeed ()
 		{
-			if (player != null && player.IsGrounded (true))
+			if (player != null && player.IsGrounded ())
 			{
 				return Mathf.Abs (player.GetMoveSpeed ());
 			}
@@ -178,26 +163,18 @@ namespace AC
 		
 		private void FixedUpdate ()
 		{
-			actualTilt = Mathf.Clamp (actualTilt, minY, maxY);
-			transform.localEulerAngles = new Vector3 (actualTilt, 0f, 0f);
+			rotationY = Mathf.Clamp (rotationY, minY, maxY);
+			transform.localEulerAngles = new Vector3 (rotationY, 0f, 0f);
 		}
 		
 
 		/**
 		 * <summary>Sets the pitch to a specific angle.</summary>
 		 * <param name = "angle">The new pitch angle</param>
-		 * <param nae = "isInstant">If True, then the pitch will be set instantly. Otherwise, it will move over time according to the Player's turnSpeed</param>
 		 */
-		public void SetPitch (float angle, bool isInstant = true)
+		public void SetPitch (float angle)
 		{
-			if (isInstant)
-			{
-				actualTilt = targetTilt = angle;
-			}
-			else
-			{
-				targetTilt = angle;
-			}
+			rotationY = angle;
 		}
 
 
@@ -207,26 +184,7 @@ namespace AC
 		 */
 		public void IncreasePitch (float increase)
 		{
-			actualTilt += increase * sensitivity.y;
-			targetTilt = actualTilt;
-		}
-
-
-		/**
-		 * Checks if the camera is looking up or down.
-		 */
-		public bool IsTilting ()
-		{
-			return (actualTilt != 0f);
-		}
-
-
-		/**
-		 * Gets the angle by which the camera is looking up or down, with negative values looking upward.
-		 */
-		public float GetTilt ()
-		{
-			return actualTilt;
+			rotationY += increase * sensitivity.y;
 		}
 
 	}

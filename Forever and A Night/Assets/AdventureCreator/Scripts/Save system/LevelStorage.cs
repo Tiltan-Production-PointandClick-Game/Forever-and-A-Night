@@ -1,7 +1,7 @@
 /*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2019
+ *	by Chris Burton, 2013-2018
  *	
  *	"LevelStorage.cs"
  * 
@@ -69,14 +69,16 @@ namespace AC
 		 */
 		public void ReturnCurrentLevelData (bool restoringSaveFile)
 		{
-			SingleLevelData levelData = GetLevelData ();
-
-			if (levelData == null)
+			// Main scene
+			foreach (SingleLevelData levelData in allLevelData)
 			{
-				return;
+				if (levelData.sceneNumber == UnityVersionHandler.GetCurrentSceneNumber ())
+				{
+					SendDataToScene (levelData, restoringSaveFile);
+					break;
+				}
 			}
 
-			SendDataToScene (levelData, restoringSaveFile);
 			AssetLoader.UnloadAssets ();
 		}
 
@@ -88,72 +90,12 @@ namespace AC
 		 */
 		public void ReturnSubSceneData (SubScene subScene, bool restoringSaveFile)
 		{
-			SingleLevelData levelData = GetLevelData (subScene.SceneInfo.number);
-
-			if (levelData == null)
-			{
-				return;
-			}
-
-			SendDataToScene (levelData, restoringSaveFile, subScene);
-			AssetLoader.UnloadAssets ();
-		}
-
-
-		private SingleLevelData GetLevelData ()
-		{
-			return GetLevelData (UnityVersionHandler.GetCurrentSceneNumber ());
-		}
-
-
-		private SingleLevelData GetLevelData (int sceneNumber)
-		{
+			// Sub-scenes
 			foreach (SingleLevelData levelData in allLevelData)
 			{
-				if (levelData.sceneNumber == sceneNumber)
+				if (subScene.SceneInfo.number == levelData.sceneNumber)
 				{
-					return levelData;
-				}
-			}
-			return null;
-		}
-
-
-		/**
-		 * <summary>Returns the currently-loaded scene's save data to the appropriate Remember components, provided they are on the Player.</summary>
-		 */
-		public void ReturnCurrentLevelPlayerData ()
-		{
-			SingleLevelData levelData = GetLevelData ();
-
-			if (levelData == null)
-			{
-				return;
-			}
-
-			foreach (ScriptData _scriptData in levelData.allScriptData)
-			{
-				if (_scriptData.data != null && _scriptData.data.Length > 0)
-				{
-					// Get objects in active scene, and "DontDestroyOnLoad" scene
-					Remember[] saveObjects = Serializer.returnComponents <Remember> (_scriptData.objectID);
-
-					foreach (Remember saveObject in saveObjects)
-					{
-						if (saveObject != null)
-						{
-							if ((saveObject.transform.parent == null && saveObject.tag == Tags.player) ||
-								(saveObject.transform.parent != null && saveObject.transform.root != null && saveObject.transform.root.tag == Tags.player))
-							{
-								// May have more than one Remember script on the same object, so check all
-								Remember[] saveScripts = saveObject.gameObject.GetComponents <Remember>();
-								foreach (Remember saveScript in saveScripts)
-								{
-									saveScript.LoadData (_scriptData.data, true);
-								}
-							}
-						}
-					}
+					SendDataToScene (levelData, restoringSaveFile, subScene);
 				}
 			}
 
@@ -187,9 +129,9 @@ namespace AC
 					{
 						if (saveObject != null)
 						{
-							if ((subScene != null && UnityVersionHandler.ObjectIsInScene (saveObject.gameObject, levelData.sceneNumber, restoringSaveFile))
+							if ((subScene != null && UnityVersionHandler.ObjectIsInScene (saveObject.gameObject, levelData.sceneNumber))
 								||
-								(subScene == null && UnityVersionHandler.ObjectIsInActiveScene (saveObject.gameObject, restoringSaveFile)))
+								(subScene == null && UnityVersionHandler.ObjectIsInActiveScene (saveObject.gameObject)))
 							{
 								// May have more than one Remember script on the same object, so check all
 								Remember[] saveScripts = saveObject.gameObject.GetComponents <Remember>();
@@ -404,7 +346,7 @@ namespace AC
 				}
 				else
 				{
-					ACDebug.LogWarning ("GameObject " + _transform.name + " was not saved because its ConstantID has not been set!", _transform);
+					ACDebug.LogWarning ("GameObject " + _transform.name + " was not saved because its ConstantID has not been set!");
 				}
 			}
 			

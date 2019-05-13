@@ -1,7 +1,7 @@
 /*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2019
+ *	by Chris Burton, 2013-2018
  *	
  *	"Hotspot.cs"
  * 
@@ -286,11 +286,11 @@ namespace AC
 
 				if (Application.isPlaying)
 				{
-					ACDebug.Log ("Hotspot '" + gameObject.name + "' has been temporarily upgraded - please view its Inspector when the game ends and save the scene.", gameObject);
+					ACDebug.Log ("Hotspot '" + gameObject.name + "' has been temporarily upgraded - please view its Inspector when the game ends and save the scene.");
 				}
 				else
 				{
-					ACDebug.Log ("Upgraded Hotspot '" + gameObject.name + "', please save the scene.", gameObject);
+					ACDebug.Log ("Upgraded Hotspot '" + gameObject.name + "', please save the scene.");
 				}
 
 				return true;
@@ -539,7 +539,7 @@ namespace AC
 					}
 					else
 					{
-						ACDebug.LogWarning ("Cannot display correct Hotspot Icon alpha on " + name + " because it has no associated Highlight object.", gameObject);
+						ACDebug.LogWarning ("Cannot display correct Hotspot Icon alpha on " + name + " because it has no associated Highlight object.");
 					}
 				}
 				else if (KickStarter.settingsManager.hotspotIconDisplay == HotspotIconDisplay.Always)
@@ -726,17 +726,13 @@ namespace AC
 
 			if (manualSet)
 			{
-				if (!isOn && KickStarter.eventManager != null)
+				if (!isOn)
 				{
 					KickStarter.eventManager.Call_OnTurnHotspot (this, true);
 				}
 
 				isOn = true;
-
-				if (KickStarter.mainCamera != null)
-				{
-					LimitToCamera (KickStarter.mainCamera.attachedCamera);
-				}
+				LimitToCamera (KickStarter.mainCamera.attachedCamera);
 			}
 		}
 
@@ -760,7 +756,7 @@ namespace AC
 
 			if (manualSet)
 			{
-				if (isOn && KickStarter.eventManager != null)
+				if (isOn)
 				{
 					KickStarter.eventManager.Call_OnTurnHotspot (this, false);
 				}
@@ -966,11 +962,24 @@ namespace AC
 			
 			if (_collider != null)
 			{
-				worldPoint = _collider.bounds.center;
+				if (_collider is BoxCollider)
+				{
+					BoxCollider boxCollider = (BoxCollider) _collider;
+					worldPoint += boxCollider.center;
+				}
+				else if (_collider is CapsuleCollider)
+				{
+					CapsuleCollider capsuleCollider = (CapsuleCollider) _collider;
+					worldPoint += capsuleCollider.center;
+				}
 			}
 			else if (_collider2D != null)
 			{
-				worldPoint = _collider2D.bounds.center;
+				if (_collider2D is BoxCollider2D)
+				{
+					BoxCollider2D boxCollider = (BoxCollider2D) _collider2D;
+					worldPoint += UnityVersionHandler.Get2DHotspotOffset (boxCollider, transform);
+				}
 			}
 
 			if (inLocalSpace)

@@ -1,7 +1,7 @@
 /*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2019
+ *	by Chris Burton, 2013-2018
  *	
  *	"Dialog.cs"
  * 
@@ -31,21 +31,6 @@ namespace AC
 		public Sound narratorSound;
 		/** The delay in seconds between choosing a Conversation's dialogue option and it triggering */
 		[Range (0f, 1f)] public float conversationDelay = 0.3f;
-		/** An array of rich-text tag names that can be detected when scrolling speech, to prevent them from displaying incorrectly.  If a name ends with an '=' symbol, the tag has a parameter */
-		public string[] richTextTags = new string[]
-		{
-			#if TextMeshProIsPresent
-			"s",
-			"u",
-			"sub",
-			"sup",
-			"link=",
-			#endif
-			"b",
-			"i",
-			"size=",
-			"color="
-		};
 
 		private AudioSource defaultAudioSource;
 		private AudioSource narratorAudioSource;
@@ -118,10 +103,9 @@ namespace AC
 		 * <param name = "isBackground">True if the line should play in the background, and not interrupt any Actions or gameplay</param>
 		 * <param name = "lineID">The ID number of the line, if it is listed in the Speech Manager</param>
 		 * <param name = "noAnimation">True if the character should not play a talking animation</param>
-		 * <param name = "preventSkipping">True if the speech cannot be skipped regardless of subtitle settings in the Speech Manager</param>
 		 * <returns>The generated Speech line</returns>
 		 */
-		public Speech StartDialog (Char _speaker, string _text, bool isBackground = false, int lineID = -1, bool noAnimation = false, bool preventSkipping = false)
+		public Speech StartDialog (Char _speaker, string _text, bool isBackground = false, int lineID = -1, bool noAnimation = false)
 		{
 			if (!KickStarter.actionListManager.IsGameplayBlocked () && !KickStarter.stateHandler.IsInScriptedCutscene ())
 			{
@@ -148,7 +132,7 @@ namespace AC
 				}
 			}
 			
-			Speech speech = new Speech (_speaker, _text, lineID, _language, isBackground, noAnimation, preventSkipping);
+			Speech speech = new Speech (_speaker, _text, lineID, _language, isBackground, noAnimation);
 			speechList.Add (speech);
 
 			KickStarter.runtimeVariables.AddToSpeechLog (speech.log);
@@ -306,27 +290,6 @@ namespace AC
 			if (speechList.Count > 0)
 			{
 				return speechList [speechList.Count - 1];
-			}
-			return null;
-		}
-
-
-		/**
-		 * <summary>Gets a speech line with a specific ID, that's currently being spoken</summary>
-		 * <param name = "lineID">The ID number of the speech line to get</param>
-		 * <returns>The active speech line</returns>
-		 */
-		public Speech GetLiveSpeechWithID (int lineID)
-		{
-			if (speechList.Count > 0)
-			{
-				foreach (Speech speech in speechList)
-				{
-					if (speech.LineID == lineID)
-					{
-						return speech;
-					}
-				}
 			}
 			return null;
 		}
@@ -525,7 +488,36 @@ namespace AC
 			
 			if (lineID > -1 && _speaker != null && KickStarter.speechManager.searchAudioFiles && KickStarter.speechManager.UseFileBasedLipSyncing ())
 			{
-				textFile = (TextAsset) KickStarter.runtimeLanguages.GetSpeechLipsyncFile <TextAsset> (lineID, _speaker);
+				if (KickStarter.speechManager.autoNameSpeechFiles)
+				{
+					string fullName = KickStarter.speechManager.GetAutoAssetPathAndName (lineID, _speaker, language, true);
+					textFile = Resources.Load (fullName) as TextAsset;
+
+					if (textFile == null && KickStarter.speechManager.fallbackAudio && Options.GetLanguage () > 0)
+					{
+						fullName = KickStarter.speechManager.GetAutoAssetPathAndName (lineID, _speaker, string.Empty, true);
+						textFile = Resources.Load (fullName) as TextAsset;
+					}
+
+					if (textFile == null)
+					{
+						ACDebug.LogWarning ("Lipsync file 'Resources/" + fullName + ".txt' not found.");
+					}
+				}
+				else
+				{
+					UnityEngine.Object _object = KickStarter.runtimeLanguages.GetLineCustomLipsyncFile (lineID, Options.GetLanguage ());
+
+					if (_object == null && KickStarter.speechManager.fallbackAudio && Options.GetLanguage () > 0)
+					{
+						_object = KickStarter.runtimeLanguages.GetLineCustomLipsyncFile (lineID, 0);
+					}
+
+					if (_object is TextAsset)
+					{
+						textFile = (TextAsset) KickStarter.runtimeLanguages.GetLineCustomLipsyncFile (lineID, Options.GetLanguage ());
+					}
+				}
 			}
 			
 			if (_lipSyncMode == LipSyncMode.ReadPamelaFile && textFile != null)
@@ -720,23 +712,6 @@ namespace AC
 				}
 			}
 		}
-
-
-		/**
-		 * <summary>Ends speech spoken by a given character</summary>
-		 * <param name = "character">The character to stop speaking</param>
-		 */
-		public void EndSpeechByCharacter (Char character)
-		{
-			for (int i=0; i<speechList.Count; i++)
-			{
-				if (speechList[i].GetSpeakingCharacter () == character)
-				{
-					EndSpeech (i, true);
-					return;
-				}
-			}
-		}
 		
 		
 		private void EndSpeech (int i, bool stopCharacter = false)
@@ -763,7 +738,7 @@ namespace AC
 			}
 
 			// Call event
-			KickStarter.eventManager.Call_OnStopSpeech (oldSpeech, oldSpeech.GetSpeakingCharacter ());
+			KickStarter.eventManager.Call_OnStopSpeech (oldSpeech.GetSpeakingCharacter ());
 		}
 
 

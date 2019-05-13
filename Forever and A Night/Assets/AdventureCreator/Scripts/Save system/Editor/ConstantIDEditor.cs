@@ -26,15 +26,12 @@ namespace AC
 
 			_target.retainInPrefab = CustomGUILayout.Toggle ("Retain in prefab?", _target.retainInPrefab, "", "If True, prefabs will share the same Constant ID as their scene-based counterparts");
 
-			bool ignoreDirty = false;
 			if (UnityVersionHandler.IsPrefabFile (_target.gameObject))
 			{
 				// Prefab
 				if (!_target.retainInPrefab && _target.constantID != 0)
 				{
 					_target.constantID = 0;
-					// Don't flag as dirty, otherwise get problems with scene instances
-					ignoreDirty = true;
 				}
 				else if (_target.retainInPrefab && _target.constantID == 0)
 				{
@@ -59,10 +56,7 @@ namespace AC
 			EditorGUILayout.EndHorizontal ();
 			EditorGUILayout.EndVertical ();
 
-			if (!ignoreDirty)
-			{
-				UnityVersionHandler.CustomSetDirty (_target);
-			}
+			UnityVersionHandler.CustomSetDirty (_target);
 		}
 
 	}

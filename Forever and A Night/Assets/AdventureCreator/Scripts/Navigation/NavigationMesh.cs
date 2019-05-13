@@ -1,7 +1,7 @@
 /*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2019
+ *	by Chris Burton, 2013-2018
  *	
  *	"NavigationMesh.cs"
  * 
@@ -67,7 +67,7 @@ namespace AC
 
 			if (GetComponent <RememberNavMesh2D>() == null)
 			{
-				ACDebug.LogWarning ("Changes to " + this.gameObject.name + "'s holes will not be saved because it has no RememberNavMesh2D script", gameObject);
+				ACDebug.LogWarning ("Changes to " + this.gameObject.name + "'s holes will not be saved because it has no RememberNavMesh2D script");
 			}
 		}
 

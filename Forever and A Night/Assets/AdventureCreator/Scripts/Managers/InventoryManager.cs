@@ -1,7 +1,7 @@
 /*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2019
+ *	by Chris Burton, 2013-2018
  *	
  *	"InventoryManager.cs"
  * 
@@ -773,22 +773,6 @@ namespace AC
 				menu.AddItem (new GUIContent ("Re-arrange/Move to bottom"), false, DocumentCallback, "Move to bottom");
 			}
 
-			menu.AddSeparator ("");
-			menu.AddItem (new GUIContent ("Find references"), false, DocumentCallback, "Find references");
-
-			if (Application.isPlaying)
-			{
-				menu.AddSeparator ("");
-				if (KickStarter.runtimeDocuments.DocumentIsInCollection (document.ID))
-				{
-					menu.AddDisabledItem (new GUIContent ("Held by Player"));
-				}
-				else
-				{
-					menu.AddItem (new GUIContent ("Give to Player"), false, DocumentCallback, "Give to Player");
-				}
-			}
-
 			menu.ShowAsContext ();
 		}
 
@@ -798,7 +782,7 @@ namespace AC
 			if (sideDocument >= 0)
 			{
 				Document tempDocument = documents[sideDocument];
-
+				
 				switch (obj.ToString ())
 				{
 					case "Insert after":
@@ -838,15 +822,6 @@ namespace AC
 						documents.Add (tempDocument);
 						documents.RemoveAt (sideDocument);
 						break;
-
-					case "Find references":
-						FindReferences (tempDocument);
-						break;
-
-					case "Give to Player":
-						KickStarter.runtimeDocuments.AddToCollection (tempDocument);
-						ACDebug.Log ("Document " + tempDocument.ID.ToString () + " added to Player's inventory");
-						break;
 				}
 			}
 			
@@ -857,7 +832,7 @@ namespace AC
 		}
 
 
-		public static int DocumentSelectorList (int ID, string label = "Document:")
+		public static int DocumentSelectorList (int ID)
 		{
 			if (KickStarter.inventoryManager != null && KickStarter.inventoryManager.documents != null && KickStarter.inventoryManager.documents.Count > 0)
 			{
@@ -883,7 +858,7 @@ namespace AC
 					ID = 0;
 				}
 
-				tempNumber = UnityEditor.EditorGUILayout.Popup (label, tempNumber, labelList);
+				tempNumber = UnityEditor.EditorGUILayout.Popup ("Document:", tempNumber, labelList);
 				ID = KickStarter.inventoryManager.documents [tempNumber].ID;
 			}
 			else
@@ -1007,7 +982,6 @@ namespace AC
 					}
 
 					EditorGUILayout.EndScrollView ();
-					EditorGUILayout.HelpBox ("Filtering " + numInFilter + " out of " + items.Count + " items.", MessageType.Info);
 				}
 				else if (items.Count > 0)
 				{
@@ -1192,11 +1166,6 @@ namespace AC
 			GenericMenu menu = new GenericMenu ();
 			menu.AddItem (new GUIContent ("Import items..."), false, ExportCallback, "Import");
 			menu.AddItem (new GUIContent ("Export items..."), false, ExportCallback, "Export");
-
-			if (Application.isPlaying && items.Count > 0)
-			{
-				menu.AddItem (new GUIContent ("Give all to Player"), false, ExportCallback, "Give all to Player");
-			}
 			menu.ShowAsContext ();
 		}
 
@@ -1211,14 +1180,6 @@ namespace AC
 
 				case "Export":
 					InvItemExportWizardWindow.Init (this);
-					break;
-
-				case "Give all to Player":
-					foreach (InvItem item in items)
-					{
-						KickStarter.runtimeInventory.Add (item.id);
-					}
-					ACDebug.Log ("All items added to Player's inventory");
 					break;
 			}
 		}
@@ -1251,18 +1212,6 @@ namespace AC
 
 			menu.AddSeparator ("");
 			menu.AddItem (new GUIContent ("Find references"), false, Callback, "Find references");
-
-			if (Application.isPlaying)
-			{
-				if (KickStarter.runtimeInventory.IsCarryingItem (item.id))
-				{
-					menu.AddDisabledItem (new GUIContent ("Held by Player"));
-				}
-				else
-				{
-					menu.AddItem (new GUIContent ("Give to Player"), false, Callback, "Give to Player");
-				}
-			}
 
 			menu.ShowAsContext ();
 		}
@@ -1402,11 +1351,6 @@ namespace AC
 
 				case "Find references":
 					FindReferences (tempItem);
-					break;
-
-				case "Give to Player":
-					KickStarter.runtimeInventory.Add (tempItem.id);
-					ACDebug.Log ("Item " + tempItem.label + " added to Player's inventory");
 					break;
 				}
 			}
@@ -1986,66 +1930,6 @@ namespace AC
 					}
 
 					EditorUtility.DisplayDialog ("Inventory search complete", "In total, found " + totalNumReferences + " references to inventory item '" + item.label + "' in the project.  Please see the Console window for full details.", "OK");
-				}
-			}
-		}
-
-
-		private void FindReferences (Document document)
-		{
-			if (document == null) return;
-
-			if (EditorUtility.DisplayDialog ("Search '" + document.Title + "' references?", "The Editor will search assets, and active scenes listed in the Build Settings, for references to the document.  The current scene will need to be saved and listed to be included in the search process. Continue?", "OK", "Cancel"))
-			{
-				if (UnityVersionHandler.SaveSceneIfUserWants ())
-				{
-					int totalNumReferences = 0;
-					int thisNumReferences = 0;
-
-					// Search scenes
-					string originalScene = UnityVersionHandler.GetCurrentSceneFilepath ();
-					string[] sceneFiles = AdvGame.GetSceneFiles ();
-
-					foreach (string sceneFile in sceneFiles)
-					{
-						UnityVersionHandler.OpenScene (sceneFile);
-
-						ActionList[] actionLists = FindObjectsOfType <ActionList>();
-						foreach (ActionList actionList in actionLists)
-						{
-							foreach (Action action in actionList.actions)
-							{
-								thisNumReferences = action.GetDocumentReferences (actionList.parameters, document.ID);
-								if (thisNumReferences > 0)
-								{
-									totalNumReferences += thisNumReferences;
-									ACDebug.Log ("Found " + thisNumReferences + " references to document '" + document.title + "' in Action #" + actionList.actions.IndexOf (action) + " of ActionList '" + actionList + "' in scene '" + sceneFile + "'", actionList);
-								}
-							}
-						}
-					}
-
-					UnityVersionHandler.OpenScene (originalScene);
-
-					// Search assets
-					if (AdvGame.GetReferences ().speechManager != null)
-					{
-						ActionListAsset[] allActionListAssets = AdvGame.GetReferences ().speechManager.GetAllActionListAssets ();
-						foreach (ActionListAsset actionListAsset in allActionListAssets)
-						{
-							foreach (Action action in actionListAsset.actions)
-							{
-								thisNumReferences = action.GetDocumentReferences (actionListAsset.parameters, document.ID);
-								if (thisNumReferences > 0)
-								{
-									totalNumReferences += thisNumReferences;
-									ACDebug.Log ("Found " + thisNumReferences + " references to inventory item '" + document.Title + "' in Action #" + actionListAsset.actions.IndexOf (action) + " of ActionList asset '" + actionListAsset.name + "'", actionListAsset);
-								}
-							}
-						}
-					}
-
-					EditorUtility.DisplayDialog ("Document search complete", "In total, found " + totalNumReferences + " references to document '" + document.Title + "' in the project.  Please see the Console window for full details.", "OK");
 				}
 			}
 		}

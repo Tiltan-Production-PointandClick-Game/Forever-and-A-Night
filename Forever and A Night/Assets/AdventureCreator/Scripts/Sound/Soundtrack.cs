@@ -23,7 +23,6 @@ namespace AC
 		private float delayFadeTime;
 		private bool delayLoop;
 		private bool delayResumeIfPlayedBefore;
-		private int delayNewTrackTimeSamples;
 
 
 		protected void Awake ()
@@ -89,7 +88,7 @@ namespace AC
 						MusicStorage musicStorage = GetSoundtrack (queuedSoundtrack[0].trackID);
 						if (musicStorage != null && musicStorage.audioClip != null)
 						{
-							int nextTimeSamples = (queuedSoundtrack[0].doResume) ? GetSoundtrackSample (queuedSoundtrack[0].trackID) : queuedSoundtrack[0].newTimeSamples;
+							int nextTimeSamples = (queuedSoundtrack[0].doResume) ? GetSoundtrackSample (queuedSoundtrack[0].trackID) : 0;
 
 							SetRelativeVolume (musicStorage.relativeVolume);
 							Play (musicStorage.audioClip, queuedSoundtrack[0].trackLoop, nextTimeSamples);
@@ -101,7 +100,7 @@ namespace AC
 					QueuedSoundtrack nextSoundtrack = queuedSoundtrack[1];
 					if (nextSoundtrack.fadeTime > 0f)
 					{
-						int nextTimeSamples = (nextSoundtrack.doResume) ? GetSoundtrackSample (nextSoundtrack.trackID) : nextSoundtrack.newTimeSamples;
+						int nextTimeSamples = (nextSoundtrack.doResume) ? GetSoundtrackSample (nextSoundtrack.trackID) : 0;
 
 						// Need to pre-empt next track
 						float thresholdProportion = (audioSource.clip.length - nextSoundtrack.fadeTime) / audioSource.clip.length;
@@ -125,7 +124,7 @@ namespace AC
 							}
 							else
 							{
-								FadeOutThenIn (musicStorage, nextSoundtrack.fadeTime, nextSoundtrack.trackLoop, nextSoundtrack.doResume, nextSoundtrack.newTimeSamples);
+								FadeOutThenIn (musicStorage, nextSoundtrack.fadeTime, nextSoundtrack.trackLoop, nextSoundtrack.doResume);
 							}
 						}
 					}
@@ -143,12 +142,10 @@ namespace AC
 		 * <param name = "isQueued">If True, the track will be queued until the current track has finished playing</param>
 		 * <param name = "fadeTime">The fade-in duration, in seconds</param>
 		 * <param name = "resumeIfPlayedBefore">If True, and the track has been both played before and stopped before it finished, the track will be resumed</param>
-		 * <param name = "newTrackTimeSamples">The timeSamples to play the new track from, if not overridden with resumeIfPlayedBefore</param>
-		 * <returns>The duration, in seconds, for the new track to begin playing and the previous track transition to end</reuturns>
 		 */
-		public float Play (int trackID, bool loop, bool isQueued, float fadeTime, bool resumeIfPlayedBefore = false, int newTrackTimeSamples = 0)
+		public float Play (int trackID, bool loop, bool isQueued, float fadeTime, bool resumeIfPlayedBefore = false)
 		{
-			return HandlePlay (trackID, loop, isQueued, fadeTime, false, resumeIfPlayedBefore, newTrackTimeSamples);
+			return HandlePlay (trackID, loop, isQueued, fadeTime, false, resumeIfPlayedBefore);
 		}
 
 
@@ -159,12 +156,10 @@ namespace AC
 		 * <param name = "isQueued">If True, the track will be queued until the current track has finished playing</param>
 		 * <param name = "fadeTime">The crossfade duration, in seconds</param>
 		 * <param name = "resumeIfPlayedBefore">If True, and the track has been both played before and stopped before it finished, the track will be resumed</param>
-		 * <param name = "newTrackTimeSamples">The timeSamples to play the new track from, if not overridden with resumeIfPlayedBefore</param>
-		 * <returns>The duration, in seconds, for the new track to begin playing and the previous track transition to end</reuturns>
 		 */
-		public float Crossfade (int trackID, bool loop, bool isQueued, float fadeTime, bool resumeIfPlayedBefore = false, int newTrackTimeSamples = 0)
+		public float Crossfade (int trackID, bool loop, bool isQueued, float fadeTime, bool resumeIfPlayedBefore = false)
 		{
-			return HandlePlay (trackID, loop, isQueued, fadeTime, true, resumeIfPlayedBefore, newTrackTimeSamples);
+			return HandlePlay (trackID, loop, isQueued, fadeTime, true, resumeIfPlayedBefore);
 		}
 
 
@@ -172,7 +167,6 @@ namespace AC
 		 * <summary>Resumes the last-played soundtrack queue</summary>
 		 * <param name = "fadeTime">The fade-in time in seconds, if greater than zero</param>
 		 * <param name = "playFromStart">If True, the track will play from the beginning</param>
-		 * <returns>The duration, in seconds, for the new track to begin playing and the previous track transition to end</reuturns>
 		 */
 		public float ResumeLastQueue (float fadeTime, bool playFromStart)
 		{
@@ -219,7 +213,7 @@ namespace AC
 		}
 
 
-		private float HandlePlay (int trackID, bool loop, bool isQueued, float fadeTime, bool isCrossfade, bool resumeIfPlayedBefore, int newTrackTimeSamples = 0)
+		private float HandlePlay (int trackID, bool loop, bool isQueued, float fadeTime, bool isCrossfade, bool resumeIfPlayedBefore)
 		{
 			if (crossfade)
 			{
@@ -235,7 +229,7 @@ namespace AC
 
 			if (isQueued && queuedSoundtrack.Count > 0)
 			{
-				queuedSoundtrack.Add (new QueuedSoundtrack (trackID, loop, fadeTime, isCrossfade, resumeIfPlayedBefore, newTrackTimeSamples));
+				queuedSoundtrack.Add (new QueuedSoundtrack (trackID, loop, fadeTime, isCrossfade, resumeIfPlayedBefore));
 				return 0f;
 			}
 			else
@@ -255,10 +249,7 @@ namespace AC
 					StoreSoundtrackSampleByIndex (0);
 				}
 
-				if (resumeIfPlayedBefore)
-				{
-					newTrackTimeSamples = GetSoundtrackSample (trackID);
-				}
+				int newTrackTimeSamples = (resumeIfPlayedBefore) ? GetSoundtrackSample (trackID) : 0;
 				
 				queuedSoundtrack.Clear ();
 				queuedSoundtrack.Add (new QueuedSoundtrack (trackID, loop));
@@ -284,7 +275,7 @@ namespace AC
 						}
 						else
 						{
-							FadeOutThenIn (musicStorage, fadeTime, loop, resumeIfPlayedBefore, newTrackTimeSamples);
+							FadeOutThenIn (musicStorage, fadeTime, loop, resumeIfPlayedBefore);
 							return (fadeTime * 2f);
 						}
 					}
@@ -392,7 +383,7 @@ namespace AC
 		}
 
 
-		private void FadeOutThenIn (MusicStorage musicStorage, float fadeTime, bool loop, bool resumeIfPlayedBefore, int newTrackTimeSamples)
+		private void FadeOutThenIn (MusicStorage musicStorage, float fadeTime, bool loop, bool resumeIfPlayedBefore)
 		{
 			FadeOut (fadeTime);
 
@@ -401,7 +392,6 @@ namespace AC
 			delayFadeTime = fadeTime;
 			delayLoop = loop;
 			delayResumeIfPlayedBefore = resumeIfPlayedBefore;
-			delayNewTrackTimeSamples = newTrackTimeSamples;
 		}
 
 
@@ -414,7 +404,7 @@ namespace AC
 				MusicStorage musicStorage = GetSoundtrack (delayAudioID);
 				if (musicStorage != null)
 				{
-					int timeSamples = (delayResumeIfPlayedBefore) ? GetSoundtrackSample (delayAudioID) : delayNewTrackTimeSamples;
+					int timeSamples = (delayResumeIfPlayedBefore) ? GetSoundtrackSample (delayAudioID) : 0;
 
 					audioSource.clip = musicStorage.audioClip;
 					SetRelativeVolume (musicStorage.relativeVolume);
@@ -733,16 +723,14 @@ namespace AC
 			public float fadeTime;
 			public bool isCrossfade;
 			public bool doResume;
-			public int newTimeSamples;
 
 
-			public QueuedSoundtrack (int _trackID, bool _trackLoop, float _fadeTime = 0f, bool _isCrossfade = false, bool _doResume = false, int _newTimeSamples = 0)
+			public QueuedSoundtrack (int _trackID, bool _trackLoop, float _fadeTime = 0f, bool _isCrossfade = false, bool _doResume = false)
 			{
 				trackID = _trackID;
 				trackLoop = _trackLoop;
 				fadeTime = _fadeTime;
 				doResume = _doResume;
-				newTimeSamples = _newTimeSamples;
 
 				if (fadeTime > 0f)
 				{
@@ -762,7 +750,6 @@ namespace AC
 				fadeTime = _queuedSoundtrack.fadeTime;
 				isCrossfade = _queuedSoundtrack.isCrossfade;
 				doResume = false;
-				newTimeSamples = 0;
 			}
 
 		}

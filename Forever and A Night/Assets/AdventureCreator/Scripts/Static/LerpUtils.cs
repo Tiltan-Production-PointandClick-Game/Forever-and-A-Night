@@ -1,7 +1,7 @@
 ﻿/*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2019
+ *	by Chris Burton, 2013-2018
  *	
  *	"LerpUtils.cs"
  * 
@@ -88,12 +88,6 @@ namespace AC
 
 					return Mathf.Lerp (startValue, targetValue, t);
 				}
-			}
-
-
-			public void Reset ()
-			{
-				isRunning = false;
 			}
 
 

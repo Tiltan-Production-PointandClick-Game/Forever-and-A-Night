@@ -1,7 +1,7 @@
 ﻿/*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2019
+ *	by Chris Burton, 2013-2018
  *	
  *	"ActionMovie.cs"
  * 
@@ -18,7 +18,7 @@ using System.Collections.Generic;
 using UnityEditor;
 #endif
 
-#if UNITY_5_6_OR_NEWER && !UNITY_SWITCH
+#if UNITY_5_6_OR_NEWER
 using UnityEngine.Video;
 #endif
 
@@ -29,16 +29,15 @@ namespace AC
 	public class ActionMovie : Action
 	{
 
-		#if UNITY_5_6_OR_NEWER && !UNITY_SWITCH
+		#if UNITY_5_6_OR_NEWER
 		public MovieClipType movieClipType = MovieClipType.VideoPlayer;
 		#else
 		public MovieClipType movieClipType = MovieClipType.FullScreen;
 		#endif
 		public MovieMaterialMethod movieMaterialMethod = MovieMaterialMethod.PlayMovie;
 
-		#if UNITY_5_6_OR_NEWER && !UNITY_SWITCH
+		#if UNITY_5_6_OR_NEWER
 		public VideoPlayer videoPlayer;
-		protected VideoPlayer runtimeVideoPlayer;
 		public int videoPlayerParameterID = -1;
 		public int videoPlayerConstantID;
 		public bool prepareOnly = false;
@@ -88,8 +87,8 @@ namespace AC
 
 		override public void AssignValues (List<ActionParameter> parameters)
 		{
-			#if UNITY_5_6_OR_NEWER && !UNITY_SWITCH
-			runtimeVideoPlayer = AssignFile <VideoPlayer> (parameters, videoPlayerParameterID, videoPlayerConstantID, videoPlayer);
+			#if UNITY_5_6_OR_NEWER
+			videoPlayer = AssignFile <VideoPlayer> (parameters, videoPlayerParameterID, videoPlayerConstantID, videoPlayer);
 			isPaused = false;
 
 				#if UNITY_WEBGL
@@ -111,8 +110,8 @@ namespace AC
 		{
 			if (movieClipType == MovieClipType.VideoPlayer)
 			{
-				#if UNITY_5_6_OR_NEWER && !UNITY_SWITCH
-				if (runtimeVideoPlayer != null)
+				#if UNITY_5_6_OR_NEWER
+				if (videoPlayer != null)
 				{
 					if (!isRunning)
 					{
@@ -123,18 +122,18 @@ namespace AC
 							#if UNITY_WEBGL
 							if (!string.IsNullOrEmpty (movieURL))
 							{
-								runtimeVideoPlayer.url = movieURL;
+								videoPlayer.url = movieURL;
 							}
 							#else
 							if (newClip != null)
 							{
-								runtimeVideoPlayer.clip = newClip;
+								videoPlayer.clip = newClip;
 							}
 							#endif
 
 							if (prepareOnly)
 							{
-								runtimeVideoPlayer.Prepare ();
+								videoPlayer.Prepare ();
 
 								if (willWait)
 								{
@@ -144,11 +143,11 @@ namespace AC
 							else
 							{
 								KickStarter.playerInput.skipMovieKey = "";
-								runtimeVideoPlayer.Play ();
+								videoPlayer.Play ();
 
-								if (runtimeVideoPlayer.isLooping)
+								if (videoPlayer.isLooping)
 								{
-									ACDebug.LogWarning ("Cannot wait for " + runtimeVideoPlayer.name + " to finish because it is looping!", runtimeVideoPlayer);
+									ACDebug.LogWarning ("Cannot wait for " + videoPlayer.name + " to finish because it is looping!");
 									return 0f;
 								}
 
@@ -165,11 +164,11 @@ namespace AC
 						}
 						else if (movieMaterialMethod == MovieMaterialMethod.PauseMovie)
 						{
-							runtimeVideoPlayer.Pause ();
+							videoPlayer.Pause ();
 						}
 						else if (movieMaterialMethod == MovieMaterialMethod.StopMovie)
 						{
-							runtimeVideoPlayer.Stop ();
+							videoPlayer.Stop ();
 						}
 
 						return 0f;
@@ -178,7 +177,7 @@ namespace AC
 					{
 						if (prepareOnly)
 						{
-							if (!runtimeVideoPlayer.isPrepared)
+							if (!videoPlayer.isPrepared)
 							{
 								return defaultPauseTime;
 							}
@@ -189,37 +188,37 @@ namespace AC
 							{
 								if (KickStarter.stateHandler.gameState == GameState.Paused)
 								{
-									if (runtimeVideoPlayer.isPlaying && !isPaused)
+									if (videoPlayer.isPlaying && !isPaused)
 									{
-										runtimeVideoPlayer.Pause ();
+										videoPlayer.Pause ();
 										isPaused = true;
 									}
 									return defaultPauseTime;
 								}
 								else
 								{
-									if (!runtimeVideoPlayer.isPlaying && isPaused)
+									if (!videoPlayer.isPlaying && isPaused)
 									{
 										isPaused = false;
-										runtimeVideoPlayer.Play ();
+										videoPlayer.Play ();
 									}
 								}
 							}
 
 							if (canSkip && skipKey != "" && KickStarter.playerInput.skipMovieKey == "")
 							{
-								runtimeVideoPlayer.Stop ();
+								videoPlayer.Stop ();
 								isRunning = false;
 								return 0f;
 							}
 
-							if (!runtimeVideoPlayer.isPrepared || runtimeVideoPlayer.isPlaying)
+							if (!videoPlayer.isPrepared || videoPlayer.isPlaying)
 							{
 								return defaultPauseTime;
 							}
 						}
 
-						runtimeVideoPlayer.Stop ();
+						videoPlayer.Stop ();
 						isRunning = false;
 						return 0f;
 					}
@@ -376,16 +375,16 @@ namespace AC
 		{
 			if (movieClipType == MovieClipType.VideoPlayer)
 			{
-				#if UNITY_5_6_OR_NEWER && !UNITY_SWITCH
-				if (runtimeVideoPlayer != null)
+				#if UNITY_5_6_OR_NEWER
+				if (videoPlayer != null)
 				{
 					if (prepareOnly)
 					{
-						runtimeVideoPlayer.Prepare ();
+						videoPlayer.Prepare ();
 					}
 					else
 					{
-						runtimeVideoPlayer.Stop ();
+						videoPlayer.Stop ();
 					}
 				}
 				#endif
@@ -425,7 +424,7 @@ namespace AC
 
 			if (movieClipType == MovieClipType.VideoPlayer)
 			{
-				#if UNITY_5_6_OR_NEWER && !UNITY_SWITCH
+				#if UNITY_5_6_OR_NEWER
 
 				videoPlayerParameterID = Action.ChooseParameterGUI ("Video player:", parameters, videoPlayerParameterID, ParameterType.GameObject);
 				if (videoPlayerParameterID >= 0)
@@ -468,10 +467,6 @@ namespace AC
 						}
 					}
 				}
-
-				#elif UNITY_SWITCH
-
-				EditorGUILayout.HelpBox ("This option not available on Switch.", MessageType.Info);
 
 				#else
 
@@ -563,9 +558,9 @@ namespace AC
 		}
 
 
-		override public void AssignConstantIDs (bool saveScriptsToo, bool fromAssetFile)
+		override public void AssignConstantIDs (bool saveScriptsToo)
 		{
-			#if UNITY_5_6_OR_NEWER && !UNITY_SWITCH
+			#if UNITY_5_6_OR_NEWER
 			if (movieClipType == MovieClipType.VideoPlayer && videoPlayer != null)
 			{
 				if (saveScriptsToo)
@@ -583,31 +578,32 @@ namespace AC
 		{
 			if (movieClipType == MovieClipType.VideoPlayer)
 			{
-				#if UNITY_5_6_OR_NEWER && !UNITY_SWITCH
-				string labelAdd = movieMaterialMethod.ToString ();
+				#if UNITY_5_6_OR_NEWER
+				string labelAdd = " (" + movieMaterialMethod.ToString ();
 				if (videoPlayer != null) labelAdd += " " + videoPlayer.name.ToString ();
+				labelAdd += ")";
 				return labelAdd;
 				#else
-				return string.Empty;
+				return "";
 				#endif
 			}
 
 			#if (UNITY_IOS || UNITY_ANDROID || UNITY_WP8 || UNITY_TVOS)
 
-			if (!string.IsNullOrEmpty (filePath))
+			if (filePath != "")
 			{
-				return filePath;
+				return " (" + filePath + ")";
 			}
 
 			#elif UNITY_STANDALONE && (UNITY_5 || UNITY_2017_1_OR_NEWER || UNITY_PRO_LICENSE) && !UNITY_2017_2_OR_NEWER
 
-			if (movieClip != null)
+			if (movieClip)
 			{
-				return movieClip.name;
+				return " (" + movieClip.name + ")";
 			}
 
 			#endif
-			return string.Empty;
+			return "";
 		}
 		
 		#endif

@@ -1,7 +1,7 @@
 /*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2019
+ *	by Chris Burton, 2013-2018
  *	
  *	"SceneHandler.cs"
  * 
@@ -45,6 +45,9 @@ namespace AC
 		private bool triggerIsOff = false;
 		private bool playerIsOff = false;
 
+		private bool originalMenuState;
+		private bool originalCursorState;
+
 		private bool runAtLeastOnce = false;
 		private bool hasGameEngine = false;
 
@@ -53,7 +56,6 @@ namespace AC
 		private List<Parallax2D> parallax2Ds = new List<Parallax2D>();
 		private List<Hotspot> hotspots = new List<Hotspot>();
 		private List<Highlight> highlights = new List<Highlight>();
-		private List<AC_Trigger> triggers = new List<AC_Trigger>();
 		private List<_Camera> cameras = new List<_Camera>();
 		private List<Sound> sounds = new List<Sound>();
 		private List<LimitVisibility> limitVisibilitys = new List<LimitVisibility>();
@@ -88,8 +90,6 @@ namespace AC
 
 		private void InitPersistentEngine ()
 		{
-			KickStarter.localVariables.OnStart ();
-
 			KickStarter.runtimeLanguages.OnAwake ();
 			KickStarter.sceneChanger.OnAwake ();
 			KickStarter.levelStorage.OnAwake ();
@@ -327,14 +327,6 @@ namespace AC
 				}
 			}
 
-			if (!triggerIsOff)
-			{
-				for (_i=0; _i<triggers.Count; _i++)
-				{
-					triggers[_i]._Update ();
-				}
-			}
-
 			if (!menuIsOff)
 			{
 				KickStarter.playerMenus.UpdateAllMenus ();
@@ -531,7 +523,7 @@ namespace AC
 				return;
 			}
 
-			StatusBox.DrawDebugWindow ();
+			KickStarter.actionListManager.DrawDebugWindow ();
 
 			if (KickStarter.settingsManager.IsInLoadingScene () || KickStarter.sceneChanger.IsLoading ())
 			{
@@ -550,7 +542,7 @@ namespace AC
 				return;
 			}
 
-			if (!cursorIsOff && !KickStarter.saveSystem.IsTakingSaveScreenshot)
+			if (!cursorIsOff)
 			{
 				if (KickStarter.settingsManager.hotspotIconDisplay != HotspotIconDisplay.Never &&
 				   KickStarter.settingsManager.hotspotDrawing == ScreenWorld.ScreenSpace)
@@ -711,16 +703,6 @@ namespace AC
 
 
 		/**
-		 * <summary>Checks if the game is currently paused.</summary>
-		 * <returns>True if the game is currently paused</returns>
-		 */
-		public bool IsPaused ()
-		{
-			return (!isACDisabled && gameState == GameState.Paused);
-		}
-
-
-		/**
 		 * <summary>Checks if the game is currently in regular gameplay.</summary>
 		 * <returns>True if the game is currently in regular gameplay</returns>
 		 */
@@ -755,6 +737,38 @@ namespace AC
 		public bool IsACEnabled ()
 		{
 			return !isACDisabled;
+		}
+
+
+		/**
+		 * Backs up the state of the menu and cursor systems, and disables them, before taking a screenshot.
+		 */
+		public void PreScreenshotBackup ()
+		{
+			originalMenuState = menuIsOff;
+			originalCursorState = cursorIsOff;
+			menuIsOff = true;
+			cursorIsOff = true;
+
+			foreach (Menu menu in PlayerMenus.GetMenus ())
+			{
+				menu.PreScreenshotBackup ();
+			}
+		}
+
+
+		/**
+		 * Restores the menu and cursor systems to their former states, after taking a screenshot.
+		 */
+		public void PostScreenshotBackup ()
+		{
+			menuIsOff = originalMenuState;
+			cursorIsOff = originalCursorState;
+
+			foreach (Menu menu in PlayerMenus.GetMenus ())
+			{
+				menu.PostScreenshotBackup ();
+			}
 		}
 
 
@@ -1162,32 +1176,6 @@ namespace AC
 			if (highlights.Contains (_object))
 			{
 				highlights.Remove (_object);
-			}
-		}
-
-
-		/**
-		 * <summary>Registers a AC_Trigger, so that it can be updated</summary>
-		 * <param name = "_object">The AC_Trigger to register</param>
-		 */
-		public void Register (AC_Trigger _object)
-		{
-			if (!triggers.Contains (_object))
-			{
-				triggers.Add (_object);
-			}
-		}
-
-
-		/**
-		 * <summary>Unregisters a AC_Trigger, so that it is no longer updated</summary>
-		 * <param name = "_object">The AC_Trigger to unregister</param>
-		 */
-		public void Unregister (AC_Trigger _object)
-		{
-			if (triggers.Contains (_object))
-			{
-				triggers.Remove (_object);
 			}
 		}
 

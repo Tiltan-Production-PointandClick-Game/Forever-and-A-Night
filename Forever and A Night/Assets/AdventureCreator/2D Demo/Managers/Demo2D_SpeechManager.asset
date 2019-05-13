@@ -4,8 +4,7 @@
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -23,13 +22,12 @@ MonoBehaviour:
   playAnimationForever: 1
   canSkipWithMouseClicks: 1
   minimumDisplayTime: 1
-  screenTimeFactor: 2
+  screenTimeFactor: 0.1
   allowSpeechSkipping: 1
   allowGameplaySpeechSkipping: 0
   skipThresholdTime: 0
   endScrollBeforeSkip: 0
   scrollingTextFactorsLength: 0
-  useAssetBundles: 0
   searchAudioFiles: 0
   autoNameSpeechFiles: 1
   autoSpeechFolder: Speech
@@ -49,10 +47,6 @@ MonoBehaviour:
   languages:
   - Original
   languageIsRightToLeft: 00
-  languageAudioAssetBundles:
-  - 
-  languageLipsyncAssetBundles:
-  - 
   ignoreOriginalText: 0
   sfxDucking: 0
   musicDucking: 0
@@ -76,4 +70,3 @@ MonoBehaviour:
   mergeMatchingSpeechIDs: 0
   useSpeechTags: 0
   speechTags: []
-  previewMenuName: Subtitles

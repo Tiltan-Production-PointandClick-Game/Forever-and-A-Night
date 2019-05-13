@@ -1,7 +1,7 @@
 ﻿/*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2019
+ *	by Chris Burton, 2013-2018
  *	
  *	"LocalVariables.cs"
  * 
@@ -32,10 +32,7 @@ namespace AC
 		[HideInInspector] public List<VarPreset> varPresets = new List<VarPreset>();
 
 
-		/**
-		 * Creates run-time translations of local variables.
-		 */
-		public void OnStart ()
+		private void Awake ()
 		{
 			foreach (GVar _var in localVars)
 			{

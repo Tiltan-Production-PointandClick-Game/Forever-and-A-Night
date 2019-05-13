@@ -1,7 +1,7 @@
 /*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2019
+ *	by Chris Burton, 2013-2018
  *	
  *	"RuntimeActionList.cs"
  * 
@@ -89,24 +89,12 @@ namespace AC
 			foreach (AC.Action action in actionListAsset.actions)
 			{
 				ActionEnd _lastResult = action.lastResult;
-
-				if (action != null)
-				{
-					// Really we should re-instantiate all Actions, but this is 'safer'
-					Action newAction = (actionListAsset.canRunMultipleInstances)
-										? (Object.Instantiate (action) as Action)
-										: action;
 				
-					if (doSkip)
-					{
-						newAction.lastResult = _lastResult;
-					}
-
-					actions.Add (newAction);
-				}
-				else
+				actions.Add (action);
+				
+				if (doSkip && action != null)
 				{
-					actions.Add (null);
+					actions[actions.Count-1].lastResult = _lastResult;
 				}
 			}
 
@@ -141,15 +129,14 @@ namespace AC
 		{
 			KickStarter.eventManager.Call_OnBeginActionList (this, assetSource, i, isSkipping);
 
-			if (KickStarter.actionListAssetManager != null)
+			if (KickStarter.actionListManager)
 			{
-				KickStarter.actionListAssetManager.AddToList (this, assetSource, addToSkipQueue, i, isSkipping);
-
+				KickStarter.actionListAssetManager.AddToList (this, assetSource, addToSkipQueue, i);
 				ProcessAction (i);
 			}
 			else
 			{
-				ACDebug.LogWarning ("Cannot run " + this.name + " because no ActionListManager was found.", this);
+				ACDebug.LogWarning ("Cannot run " + this.name + " because no ActionListManager was found.");
 			}
 		}
 
@@ -158,7 +145,7 @@ namespace AC
 		{
 			if (KickStarter.actionListAssetManager == null)
 			{
-				ACDebug.LogWarning ("Cannot run " + this.name + " because no ActionListAssetManager was found.", this);
+				ACDebug.LogWarning ("Cannot run " + this.name + " because no ActionListAssetManager was found.");
 				return;
 			}
 			KickStarter.actionListAssetManager.AddToList (this, assetSource, true, startIndex);
@@ -170,9 +157,10 @@ namespace AC
 		 */
 		public override void Kill ()
 		{
-			StopAllCoroutines ();
-
-			KickStarter.eventManager.Call_OnEndActionList (this, assetSource, isSkipping);
+			StopCoroutine ("PauseUntilStart");
+			StopCoroutine ("RunAction");
+			StopCoroutine ("EndCutscene");
+			
 			KickStarter.actionListAssetManager.EndAssetList (this);
 		}
 

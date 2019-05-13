@@ -1,7 +1,7 @@
 ﻿/*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2019
+ *	by Chris Burton, 2013-2018
  *	
  *	"ActionSceneAdd.cs"
  * 
@@ -155,9 +155,9 @@ namespace AC
 		{
 			if (chooseSceneBy == ChooseSceneBy.Name)
 			{
-				return sceneAddRemove.ToString () + " " + sceneName;
+				return (" (" + sceneAddRemove.ToString () + " " + sceneName + ")");
 			}
-			return sceneAddRemove.ToString () + " " + sceneNumber;
+			return (" (" + sceneAddRemove.ToString () + " " + sceneNumber + ")");
 		}
 
 		#endif

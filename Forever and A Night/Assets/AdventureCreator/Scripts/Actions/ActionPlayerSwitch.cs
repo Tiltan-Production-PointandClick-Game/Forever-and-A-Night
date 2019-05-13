@@ -1,7 +1,7 @@
 ﻿/*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2019
+ *	by Chris Burton, 2013-2018
  *	
  *	"ActionPlayerSwitch.cs"
  * 
@@ -28,8 +28,8 @@ namespace AC
 	{
 		
 		public int playerID;
-		public int playerIDParameterID = -1;
-
+		public int playerNumber;
+		
 		public NewPlayerPosition newPlayerPosition = NewPlayerPosition.ReplaceNPC;
 		public OldPlayer oldPlayer = OldPlayer.RemoveFromScene;
 		
@@ -42,15 +42,12 @@ namespace AC
 		
 		public int oldPlayerNPC_ID;
 		public NPC oldPlayerNPC;
-		protected NPC runtimeOldPlayerNPC;
 		
 		public int newPlayerNPC_ID;
 		public NPC newPlayerNPC;
-		protected NPC runtimeNewPlayerNPC;
 		
 		public int newPlayerMarker_ID;
 		public Marker newPlayerMarker;
-		protected Marker runtimeNewPlayerMarker;
 
 		#if UNITY_EDITOR
 		private SettingsManager settingsManager;
@@ -66,10 +63,10 @@ namespace AC
 		}
 		
 		
-		override public void AssignValues (List<ActionParameter> parameters)
+		override public void AssignValues ()
 		{
-			runtimeNewPlayerNPC = AssignFile <NPC> (newPlayerNPC_ID, newPlayerNPC);
-			runtimeNewPlayerMarker = AssignFile <Marker> (newPlayerMarker_ID, newPlayerMarker);
+			newPlayerNPC = AssignFile <NPC> (newPlayerNPC_ID, newPlayerNPC);
+			newPlayerMarker = AssignFile <Marker> (newPlayerMarker_ID, newPlayerMarker);
 
 			if (oldPlayer == OldPlayer.ReplaceWithAssociatedNPC)
 			{
@@ -86,8 +83,7 @@ namespace AC
 				}
 			}
 
-			runtimeOldPlayerNPC = AssignFile <NPC> (oldPlayerNPC_ID, oldPlayerNPC);
-			playerID = AssignInteger (parameters, playerIDParameterID, playerID);
+			oldPlayerNPC = AssignFile <NPC> (oldPlayerNPC_ID, oldPlayerNPC);
 		}
 		
 		
@@ -95,9 +91,13 @@ namespace AC
 		{
 			if (KickStarter.settingsManager.playerSwitching == PlayerSwitching.Allow)
 			{
-				PlayerPrefab newPlayerPrefab = KickStarter.settingsManager.GetPlayerPrefab (playerID);
+				if (KickStarter.sceneChanger.GetSubScenes ().Length > 0)
+				{
+				//	ACDebug.LogWarning ("Cannot switch players while multiple scenes are open!");
+				//	return 0f;	
+				}
 
-				if (newPlayerPrefab != null)
+				if (KickStarter.settingsManager.players.Count > 0 && KickStarter.settingsManager.players.Count > playerNumber && playerNumber > -1)
 				{
 					if (KickStarter.player != null && KickStarter.player.ID == playerID)
 					{
@@ -105,68 +105,53 @@ namespace AC
 						return 0f;
 					}
 					
-					if (newPlayerPrefab.playerOb != null)
+					if (KickStarter.settingsManager.players[playerNumber].playerOb != null)
 					{
 						KickStarter.saveSystem.SaveCurrentPlayerData ();
 						
 						Vector3 oldPlayerPosition = Vector3.zero;
 						Quaternion oldPlayerRotation = new Quaternion ();
 						Vector3 oldPlayerScale = Vector3.one;
-
-						PlayerData oldPlayerData = new PlayerData ();
-						NPCData oldNPCData = new NPCData ();
-						bool recordedOldPlayerData = false;
-						bool recordedOldNPCData = false;
-
+						
 						if (KickStarter.player != null)
 						{
 							oldPlayerPosition = KickStarter.player.transform.position;
 							oldPlayerRotation = KickStarter.player.TransformRotation;
 							oldPlayerScale = KickStarter.player.transform.localScale;
-
-							oldPlayerData = KickStarter.player.SavePlayerData (oldPlayerData);
-							recordedOldPlayerData = true;
 						}
 
 						if (newPlayerPosition != NewPlayerPosition.ReplaceCurrentPlayer)
 						{
-							if (oldPlayer == OldPlayer.ReplaceWithAssociatedNPC &&
-								(runtimeOldPlayerNPC == null || !runtimeOldPlayerNPC.gameObject.activeInHierarchy) &&
-								KickStarter.player.associatedNPCPrefab != null)
+							if (oldPlayer == OldPlayer.ReplaceWithAssociatedNPC && (oldPlayerNPC == null || !oldPlayerNPC.gameObject.activeInHierarchy) && KickStarter.player.associatedNPCPrefab != null)
 							{
 								GameObject newObject = (GameObject) Instantiate (KickStarter.player.associatedNPCPrefab.gameObject);
 								newObject.name = KickStarter.player.associatedNPCPrefab.gameObject.name;
-								runtimeOldPlayerNPC = newObject.GetComponent <NPC>();
+								oldPlayerNPC = newObject.GetComponent <NPC>();
 							}
 
 							if ((oldPlayer == OldPlayer.ReplaceWithNPC || oldPlayer == OldPlayer.ReplaceWithAssociatedNPC) &&
-								runtimeOldPlayerNPC != null && runtimeOldPlayerNPC.gameObject.activeInHierarchy)
+								oldPlayerNPC != null && oldPlayerNPC.gameObject.activeInHierarchy)
 							{
-								runtimeOldPlayerNPC.transform.position = oldPlayerPosition;
-								runtimeOldPlayerNPC.TransformRotation = oldPlayerRotation;
-								runtimeOldPlayerNPC.transform.localScale = oldPlayerScale;
-
-								if (recordedOldPlayerData)
-								{
-									ApplyRenderData (runtimeOldPlayerNPC, oldPlayerData);
-								}
+								oldPlayerNPC.transform.position = oldPlayerPosition;
+								oldPlayerNPC.TransformRotation = oldPlayerRotation;
+								oldPlayerNPC.transform.localScale = oldPlayerScale;
 
 								// Force the rotation / sprite child to update
-								runtimeOldPlayerNPC._Update ();
+								oldPlayerNPC._Update ();
 							}
 						}
 
-						if (runtimeNewPlayerNPC == null || newPlayerPosition == NewPlayerPosition.ReplaceAssociatedNPC)
+						if (newPlayerNPC == null || newPlayerPosition == NewPlayerPosition.ReplaceAssociatedNPC)
 						{
 							// Try to find from associated NPC prefab
 
-							if (newPlayerPrefab.playerOb.associatedNPCPrefab != null)
+							if (KickStarter.settingsManager.players[playerNumber].playerOb.associatedNPCPrefab != null)
 							{
-								ConstantID prefabID = newPlayerPrefab.playerOb.associatedNPCPrefab.GetComponent <ConstantID>();
+								ConstantID prefabID = KickStarter.settingsManager.players[playerNumber].playerOb.associatedNPCPrefab.GetComponent <ConstantID>();
 								if (prefabID != null && prefabID.constantID != 0)
 								{
 									newPlayerNPC_ID = prefabID.constantID;
-									runtimeNewPlayerNPC = AssignFile <NPC> (prefabID.constantID, null);
+									newPlayerNPC = AssignFile <NPC> (prefabID.constantID, null);
 								}
 							}
 						}
@@ -176,37 +161,27 @@ namespace AC
 						{
 							newRotation = oldPlayerRotation;
 						}
-						else if (newPlayerPosition == NewPlayerPosition.ReplaceNPC && runtimeNewPlayerNPC != null)
+						else if (newPlayerPosition == NewPlayerPosition.ReplaceNPC && newPlayerNPC)
 						{
-							newRotation = runtimeNewPlayerNPC.TransformRotation;
+							newRotation = newPlayerNPC.TransformRotation;
 						}
-						else if (newPlayerPosition == NewPlayerPosition.AppearAtMarker && runtimeNewPlayerMarker != null)
+						else if (newPlayerPosition == NewPlayerPosition.AppearAtMarker && newPlayerMarker)
 						{
-							newRotation = runtimeNewPlayerMarker.transform.rotation;
-						}
-
-						if (runtimeNewPlayerNPC != null)
-						{
-							oldNPCData = runtimeNewPlayerNPC.SaveData (oldNPCData);
+							newRotation = newPlayerMarker.transform.rotation;
 						}
 
 						bool replacesOldPlayer = newPlayerPosition == NewPlayerPosition.ReplaceCurrentPlayer &&
 												 (!restorePreviousData || !KickStarter.saveSystem.DoesPlayerDataExist (playerID, true));
 						
-						KickStarter.ResetPlayer (newPlayerPrefab.playerOb, playerID, true, newRotation, keepInventory, false, replacesOldPlayer);
+						KickStarter.ResetPlayer (KickStarter.settingsManager.players[playerNumber].playerOb, playerID, true, newRotation, keepInventory, false, replacesOldPlayer);
 						Player newPlayer = KickStarter.player;
 						PlayerMenus.ResetInventoryBoxes ();
 
-						if (replacesOldPlayer && recordedOldPlayerData)
-						{
-							ApplyRenderData (newPlayer, oldPlayerData);
-						}
-
 						if (restorePreviousData && KickStarter.saveSystem.DoesPlayerDataExist (playerID, true))
 						{
-							if (runtimeNewPlayerNPC != null)
+							if (newPlayerNPC)
 							{
-								runtimeNewPlayerNPC.transform.position += new Vector3 (100f, -100f, 100f);
+								newPlayerNPC.transform.position += new Vector3 (100f, -100f, 100f);
 							}
 
 							int sceneToLoad = KickStarter.saveSystem.GetPlayerScene (playerID);
@@ -237,27 +212,22 @@ namespace AC
 							}
 							else if (newPlayerPosition == NewPlayerPosition.ReplaceNPC || newPlayerPosition == NewPlayerPosition.ReplaceAssociatedNPC)
 							{
-								if (runtimeNewPlayerNPC != null)
+								if (newPlayerNPC)
 								{
-									newPlayer.Teleport (runtimeNewPlayerNPC.transform.position);
-									newPlayer.SetRotation (runtimeNewPlayerNPC.TransformRotation);
-									newPlayer.transform.localScale = runtimeNewPlayerNPC.transform.localScale;
+									newPlayer.Teleport (newPlayerNPC.transform.position);
+									newPlayer.SetRotation (newPlayerNPC.TransformRotation);
+									newPlayer.transform.localScale = newPlayerNPC.transform.localScale;
 									
-									runtimeNewPlayerNPC.transform.position += new Vector3 (100f, -100f, 100f);
-
-									if (recordedOldNPCData)
-									{
-										ApplyRenderData (newPlayer, oldNPCData);
-									}
+									newPlayerNPC.transform.position += new Vector3 (100f, -100f, 100f);
 								}
 							}
 							else if (newPlayerPosition == NewPlayerPosition.AppearAtMarker)
 							{
-								if (runtimeNewPlayerMarker)
+								if (newPlayerMarker)
 								{
-									newPlayer.Teleport (runtimeNewPlayerMarker.transform.position);
-									newPlayer.SetRotation (runtimeNewPlayerMarker.transform.rotation);
-									newPlayer.transform.localScale = runtimeNewPlayerMarker.transform.localScale;
+									newPlayer.Teleport (newPlayerMarker.transform.position);
+									newPlayer.SetRotation (newPlayerMarker.transform.rotation);
+									newPlayer.transform.localScale = newPlayerMarker.transform.localScale;
 								}
 							}
 							else if (newPlayerPosition == NewPlayerPosition.AppearInOtherScene)
@@ -266,22 +236,23 @@ namespace AC
 									(chooseNewSceneBy == ChooseSceneBy.Number && newPlayerScene == UnityVersionHandler.GetCurrentSceneNumber ()))
 								{
 									// Already in correct scene
-									if (runtimeNewPlayerNPC && runtimeNewPlayerNPC.gameObject.activeInHierarchy)
+									if (newPlayerNPC && newPlayerNPC.gameObject.activeInHierarchy)
 									{
-										newPlayer.Teleport (runtimeNewPlayerNPC.transform.position);
-										newPlayer.SetRotation (runtimeNewPlayerNPC.TransformRotation);
-										newPlayer.transform.localScale = runtimeNewPlayerNPC.transform.localScale;
+										newPlayer.Teleport (newPlayerNPC.transform.position);
+										newPlayer.SetRotation (newPlayerNPC.TransformRotation);
+										newPlayer.transform.localScale = newPlayerNPC.transform.localScale;
 										
-										runtimeNewPlayerNPC.transform.position += new Vector3 (100f, -100f, 100f);
+										newPlayerNPC.transform.position += new Vector3 (100f, -100f, 100f);
 									}
 								}
 								else
 								{
-									if (runtimeNewPlayerNPC && runtimeNewPlayerNPC.gameObject.activeInHierarchy)
+									if (newPlayerNPC && newPlayerNPC.gameObject.activeInHierarchy)
 									{
-										runtimeNewPlayerNPC.transform.position += new Vector3 (100f, -100f, 100f);
+										newPlayerNPC.transform.position += new Vector3 (100f, -100f, 100f);
 									}
 
+									//KickStarter.saveSystem.loadingGame = LoadingGame.JustSwitchingPlayer;
 									KickStarter.sceneChanger.ChangeScene (new SceneInfo (chooseNewSceneBy, newPlayerSceneName, newPlayerScene), true, false, newPlayerNPC_ID, true);
 								}
 							}
@@ -303,131 +274,11 @@ namespace AC
 			
 			return 0f;
 		}
-
-
-		private void ApplyRenderData (Char character, PlayerData playerData)
-		{
-			character.lockDirection = playerData.playerLockDirection;
-			character.lockScale = playerData.playerLockScale;
-			if (character.spriteChild && character.spriteChild.GetComponent <FollowSortingMap>())
-			{
-				character.spriteChild.GetComponent <FollowSortingMap>().lockSorting = playerData.playerLockSorting;
-			}
-			else if (character.GetComponent <FollowSortingMap>())
-			{
-				character.GetComponent <FollowSortingMap>().lockSorting = playerData.playerLockSorting;
-			}
-			else
-			{
-				character.ReleaseSorting ();
-			}
-			
-			if (playerData.playerLockDirection)
-			{
-				character.spriteDirection = playerData.playerSpriteDirection;
-			}
-			if (playerData.playerLockScale)
-			{
-				character.spriteScale = playerData.playerSpriteScale;
-			}
-			if (playerData.playerLockSorting)
-			{
-				if (character.spriteChild && character.spriteChild.GetComponent <Renderer>())
-				{
-					character.spriteChild.GetComponent <Renderer>().sortingOrder = playerData.playerSortingOrder;
-					character.spriteChild.GetComponent <Renderer>().sortingLayerName = playerData.playerSortingLayer;
-				}
-				else if (character.GetComponent <Renderer>())
-				{
-					character.GetComponent <Renderer>().sortingOrder = playerData.playerSortingOrder;
-					character.GetComponent <Renderer>().sortingLayerName = playerData.playerSortingLayer;
-				}
-			}
-
-			if (character.GetComponentsInChildren <FollowSortingMap>() != null)
-			{
-				FollowSortingMap[] followSortingMaps = character.GetComponentsInChildren <FollowSortingMap>();
-				SortingMap customSortingMap = Serializer.returnComponent <SortingMap> (playerData.customSortingMapID);
-				
-				foreach (FollowSortingMap followSortingMap in followSortingMaps)
-				{
-					followSortingMap.followSortingMap = playerData.followSortingMap;
-					if (!playerData.followSortingMap && customSortingMap != null)
-					{
-						followSortingMap.SetSortingMap (customSortingMap);
-					}
-					else
-					{
-						followSortingMap.SetSortingMap (KickStarter.sceneSettings.sortingMap);
-					}
-				}
-			}
-		}
-
-
-		private void ApplyRenderData (Char character, NPCData npcData)
-		{
-			character.lockDirection = npcData.lockDirection;
-			character.lockScale = npcData.lockScale;
-			if (character.spriteChild && character.spriteChild.GetComponent <FollowSortingMap>())
-			{
-				character.spriteChild.GetComponent <FollowSortingMap>().lockSorting = npcData.lockSorting;
-			}
-			else if (character.GetComponent <FollowSortingMap>())
-			{
-				character.GetComponent <FollowSortingMap>().lockSorting = npcData.lockSorting;
-			}
-			else
-			{
-				character.ReleaseSorting ();
-			}
-			
-			if (npcData.lockDirection)
-			{
-				character.spriteDirection = npcData.spriteDirection;
-			}
-			if (npcData.lockScale)
-			{
-				character.spriteScale = npcData.spriteScale;
-			}
-			if (npcData.lockSorting)
-			{
-				if (character.spriteChild && character.spriteChild.GetComponent <Renderer>())
-				{
-					character.spriteChild.GetComponent <Renderer>().sortingOrder = npcData.sortingOrder;
-					character.spriteChild.GetComponent <Renderer>().sortingLayerName = npcData.sortingLayer;
-				}
-				else if (character.GetComponent <Renderer>())
-				{
-					character.GetComponent <Renderer>().sortingOrder = npcData.sortingOrder;
-					character.GetComponent <Renderer>().sortingLayerName = npcData.sortingLayer;
-				}
-			}
-
-			if (character.GetComponentsInChildren <FollowSortingMap>() != null)
-			{
-				FollowSortingMap[] followSortingMaps = character.GetComponentsInChildren <FollowSortingMap>();
-				SortingMap customSortingMap = Serializer.returnComponent <SortingMap> (npcData.customSortingMapID);
-
-				foreach (FollowSortingMap followSortingMap in followSortingMaps)
-				{
-					followSortingMap.followSortingMap = npcData.followSortingMap;
-					if (!npcData.followSortingMap && customSortingMap != null)
-					{
-						followSortingMap.SetSortingMap (customSortingMap);
-					}
-					else
-					{
-						followSortingMap.SetSortingMap (KickStarter.sceneSettings.sortingMap);
-					}
-				}
-			}
-		}
-
+		
 		
 		#if UNITY_EDITOR
 		
-		override public void ShowGUI (List<ActionParameter> parameters)
+		override public void ShowGUI ()
 		{
 			if (!settingsManager)
 			{
@@ -445,50 +296,46 @@ namespace AC
 				return;
 			}
 			
+			// Create a string List of the field's names (for the PopUp box)
+			List<string> labelList = new List<string>();
+			
+			int i = 0;
+			playerNumber = -1;
+			
 			if (settingsManager.players.Count > 0)
 			{
-				playerIDParameterID = Action.ChooseParameterGUI ("New Player ID:", parameters, playerIDParameterID, ParameterType.Integer);
-				if (playerIDParameterID == -1)
+				foreach (PlayerPrefab playerPrefab in settingsManager.players)
 				{
-					// Create a string List of the field's names (for the PopUp box)
-					List<string> labelList = new List<string>();
-					
-					int i = 0;
-					int playerNumber = -1;
-
-					foreach (PlayerPrefab playerPrefab in settingsManager.players)
+					if (playerPrefab.playerOb != null)
 					{
-						if (playerPrefab.playerOb != null)
-						{
-							labelList.Add (playerPrefab.playerOb.name);
-						}
-						else
-						{
-							labelList.Add ("(Undefined prefab)");
-						}
-						
-						// If a player has been removed, make sure selected player is still valid
-						if (playerPrefab.ID == playerID)
-						{
-							playerNumber = i;
-						}
-						
-						i++;
+						labelList.Add (playerPrefab.playerOb.name);
+					}
+					else
+					{
+						labelList.Add ("(Undefined prefab)");
 					}
 					
-					if (playerNumber == -1)
+					// If a player has been removed, make sure selected player is still valid
+					if (playerPrefab.ID == playerID)
 					{
-						// Wasn't found (item was possibly deleted), so revert to zero
-						ACDebug.LogWarning ("Previously chosen Player no longer exists!");
-						
-						playerNumber = 0;
-						playerID = 0;
+						playerNumber = i;
 					}
-				
-					playerNumber = EditorGUILayout.Popup ("New Player:", playerNumber, labelList.ToArray());
-					playerID = settingsManager.players[playerNumber].ID;
+					
+					i++;
 				}
-
+				
+				if (playerNumber == -1)
+				{
+					// Wasn't found (item was possibly deleted), so revert to zero
+					ACDebug.LogWarning ("Previously chosen Player no longer exists!");
+					
+					playerNumber = 0;
+					playerID = 0;
+				}
+				
+				playerNumber = EditorGUILayout.Popup ("New Player:", playerNumber, labelList.ToArray());
+				playerID = settingsManager.players[playerNumber].ID;
+				
 				if (AdvGame.GetReferences ().settingsManager == null || !AdvGame.GetReferences ().settingsManager.shareInventory)
 				{
 					keepInventory = EditorGUILayout.Toggle ("Transfer inventory?", keepInventory);
@@ -568,10 +415,12 @@ namespace AC
 					}
 				}
 			}
+			
 			else
 			{
 				EditorGUILayout.LabelField ("No players exist!");
 				playerID = -1;
+				playerNumber = -1;
 			}
 			
 			EditorGUILayout.Space ();
@@ -580,7 +429,7 @@ namespace AC
 		}
 
 
-		override public void AssignConstantIDs (bool saveScriptsToo, bool fromAssetFile)
+		override public void AssignConstantIDs (bool saveScriptsToo)
 		{
 			if (saveScriptsToo)
 			{
@@ -596,30 +445,27 @@ namespace AC
 		
 		public override string SetLabel ()
 		{
-			if (playerIDParameterID >= 0) return string.Empty;
-
-			if (settingsManager == null)
+			if (!settingsManager)
 			{
 				settingsManager = AdvGame.GetReferences ().settingsManager;
 			}
 			
-			if (settingsManager != null && settingsManager.playerSwitching == PlayerSwitching.Allow)
+			if (settingsManager && settingsManager.playerSwitching == PlayerSwitching.Allow)
 			{
-				PlayerPrefab newPlayerPrefab = settingsManager.GetPlayerPrefab (playerID);
-				if (newPlayerPrefab != null)
+				if (settingsManager.players.Count > 0 && settingsManager.players.Count > playerNumber && playerNumber > -1)
 				{
-					if (newPlayerPrefab.playerOb != null)
+					if (settingsManager.players[playerNumber].playerOb != null)
 					{
-						return newPlayerPrefab.playerOb.name;
+						return " (" + settingsManager.players[playerNumber].playerOb.name + ")";
 					}
 					else
 					{
-						return "Undefined prefab";
+						return (" (Undefined prefab");
 					}
 				}
 			}
 			
-			return string.Empty;
+			return "";
 		}
 		
 		#endif

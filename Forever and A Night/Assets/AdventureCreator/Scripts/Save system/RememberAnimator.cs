@@ -1,7 +1,7 @@
 ﻿/*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2019
+ *	by Chris Burton, 2013-2018
  *	
  *	"RememberAnimator.cs"
  * 
@@ -139,7 +139,10 @@ namespace AC
 			{
 				if (stateInfo.loop)
 				{
-					timeAlong = (timeAlong % 1);
+					while (timeAlong > 1f)
+					{
+						timeAlong -= 1f;
+					}
 				}
 				else
 				{

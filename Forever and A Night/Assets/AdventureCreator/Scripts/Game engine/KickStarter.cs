@@ -1,7 +1,7 @@
 /*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2019
+ *	by Chris Burton, 2013-2018
  *	
  *	"KickStarter.cs"
  * 
@@ -123,24 +123,14 @@ namespace AC
 					{
 						persistentEnginePrefab = (GameObject) Instantiate (Resources.Load (Resource.persistentEngine));
 						persistentEnginePrefab.name = AdvGame.GetName (Resource.persistentEngine);
+						stateHandler = persistentEnginePrefab.GetComponent <StateHandler>();
+						stateHandler.OnAwake ();
 					}
 					catch (System.Exception e)
 		 			{
 						ACDebug.LogWarning ("Could not create PersistentEngine - make sure " + Resource.persistentEngine + ", prefab is present in a Resources folder. Exception: " + e);
 		 			}
-
-		 			if (persistentEnginePrefab != null)
-		 			{
-						stateHandler = persistentEnginePrefab.GetComponent <StateHandler>();
-						if (stateHandler != null)
-						{
-							stateHandler.OnAwake ();
-						}
-						else
-						{
-							ACDebug.LogWarning ("Could not find StateHandler component on the PersistentEngine - is one attached?", persistentEnginePrefab);
-						}
-					}
+					
 				}
 			}
 		}
@@ -942,8 +932,7 @@ namespace AC
 					}
 				}
 
-				newPlayer.Initialise (true);
-
+				newPlayer.Initialise ();
 				if (KickStarter.eventManager != null) KickStarter.eventManager.Call_OnSetPlayer (newPlayer);
 			}
 
@@ -969,7 +958,7 @@ namespace AC
 		{
 			if (GetComponent <MultiSceneChecker>() == null)
 			{
-				ACDebug.LogError ("A 'MultiSceneChecker' component must be attached to the GameEngine prefab - please re-import AC.", gameObject);
+				ACDebug.LogError ("A 'MultiSceneChecker' component must be attached to the GameEngine prefab - please re-import AC.");
 			}
 		}
 

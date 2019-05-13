@@ -1,7 +1,7 @@
 ﻿/*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2019
+ *	by Chris Burton, 2013-2018
  *	
  *	"ActionBlendShape.cs"
  * 
@@ -36,9 +36,7 @@ namespace AC
 		public float fadeTime = 0f;
 		public MoveMethod moveMethod = MoveMethod.Smooth;
 		public AnimationCurve timeCurve = new AnimationCurve (new Keyframe(0, 0), new Keyframe(1, 1));
-
-		protected Shapeable runtimeShapeObject;
-
+				
 
 		public ActionBlendShape ()
 		{
@@ -51,17 +49,17 @@ namespace AC
 		
 		public override void AssignValues (List<ActionParameter> parameters)
 		{
-			runtimeShapeObject = AssignFile <Shapeable> (parameters, parameterID, constantID, shapeObject);
+			shapeObject = AssignFile <Shapeable> (parameters, parameterID, constantID, shapeObject);
 			
 			if (isPlayer)
 			{
 				if (KickStarter.player && KickStarter.player.GetShapeable ())
 				{
-					runtimeShapeObject = KickStarter.player.GetShapeable ();
+					shapeObject = KickStarter.player.GetShapeable ();
 				}
 				else
 				{
-					runtimeShapeObject = null;
+					shapeObject = null;
 					ACDebug.LogWarning ("Cannot BlendShape Player since cannot find Shapeable script on Player.");
 				}
 			}
@@ -74,7 +72,7 @@ namespace AC
 			{
 				isRunning = true;
 			   
-				if (runtimeShapeObject != null)
+				if (shapeObject)
 				{
 					DoShape (fadeTime);
 					
@@ -101,15 +99,15 @@ namespace AC
 
 		private void DoShape (float _time)
 		{
-			if (runtimeShapeObject != null)
+			if (shapeObject)
 			{
 				if (disableAllKeys)
 				{
-					runtimeShapeObject.DisableAllKeys (shapeGroupID, _time, moveMethod, timeCurve);
+					shapeObject.DisableAllKeys (shapeGroupID, _time, moveMethod, timeCurve);
 				}
 				else
 				{
-					runtimeShapeObject.SetActiveKey (shapeGroupID, shapeKeyID, shapeValue, _time, moveMethod, timeCurve);
+					shapeObject.SetActiveKey (shapeGroupID, shapeKeyID, shapeValue, _time, moveMethod, timeCurve);
 				}
 			}
 		}
@@ -205,9 +203,9 @@ namespace AC
 		{
 			if (shapeObject)
 			{
-				return shapeObject.gameObject.name;
+				return (" (" + shapeObject.gameObject.name + ")");
 			}
-			return string.Empty;
+			return "";
 		}
 
 
@@ -225,11 +223,11 @@ namespace AC
 				{
 					if (shapeGroup.label != "")
 					{
-						labelList.Add (shapeGroup.ID + ": " + shapeGroup.label);
+						labelList.Add (shapeGroup.label);
 					}
 					else
 					{
-						labelList.Add (shapeGroup.ID + ": (Untitled)");
+						labelList.Add ("(Untitled)");
 					}
 					if (shapeGroup.ID == groupID)
 					{
@@ -303,29 +301,16 @@ namespace AC
 		}
 
 
-		override public void AssignConstantIDs (bool saveScriptsToo, bool fromAssetFile)
+		override public void AssignConstantIDs (bool saveScriptsToo)
 		{
-			Shapeable obToUpdate = shapeObject;
-
-			if (isPlayer)
+			if (!isPlayer)
 			{
-				if (!fromAssetFile && GameObject.FindObjectOfType <Player>() != null)
+				if (saveScriptsToo)
 				{
-					obToUpdate = GameObject.FindObjectOfType <Player>().GetShapeable ();
+					AddSaveScript <RememberShapeable> (shapeObject);
 				}
-
-				if (obToUpdate == null && AdvGame.GetReferences ().settingsManager != null)
-				{
-					Player player = AdvGame.GetReferences ().settingsManager.GetDefaultPlayer ();
-					obToUpdate = player.GetShapeable ();
-				}
+				AssignConstantID <Shapeable> (shapeObject, constantID, parameterID);
 			}
-
-			if (saveScriptsToo)
-			{
-				AddSaveScript <RememberShapeable> (obToUpdate);
-			}
-			AssignConstantID <Shapeable> (obToUpdate, constantID, parameterID);
 		}
 		
 		#endif

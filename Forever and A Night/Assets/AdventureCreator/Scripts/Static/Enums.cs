@@ -1,7 +1,7 @@
 /*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2019
+ *	by Chris Burton, 2013-2018
  *	
  *	"Enums.cs"
  * 
@@ -147,7 +147,7 @@ namespace AC
 	public enum InputCheckType { Button, Axis, SingleTapOrClick, DoubleTapOrClick };
 	public enum IntCondition { EqualTo, NotEqualTo, LessThan, MoreThan };
 	public enum RightClickInventory { DeselectsItem, ExaminesItem, DoesNothing };
-	public enum ParameterType { GameObject, InventoryItem, GlobalVariable, LocalVariable, String, Float, Integer, Boolean, UnityObject, Vector3, Document };
+	public enum ParameterType { GameObject, InventoryItem, GlobalVariable, LocalVariable, String, Float, Integer, Boolean, UnityObject, Vector3 };
 	
 	public enum ChangeNavMeshMethod { ChangeNavMesh, ChangeNumberOfHoles };
 	public enum InvAction { Add, Remove, Replace };
@@ -241,7 +241,5 @@ namespace AC
 	public enum SpeechProximityLimit { NoLimit, LimitByDistanceToPlayer, LimitByDistanceToCamera };
 	public enum SpeechIDRecycling { NeverRecycle, AlwaysRecycle, RecycleHighestOnly };
 	public enum GameObjectParameterReferences { ReferencePrefab=0, ReferenceSceneInstance=1 };
-
-	public enum TriggerDetectionMethod { RigidbodyCollision, TransformPosition };
 
 }

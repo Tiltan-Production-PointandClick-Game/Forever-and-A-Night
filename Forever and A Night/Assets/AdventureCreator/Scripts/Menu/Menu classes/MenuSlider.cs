@@ -1,7 +1,7 @@
 /*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2019
+ *	by Chris Burton, 2013-2018
  *	
  *	"MenuSlider.cs"
  * 
@@ -627,10 +627,7 @@ namespace AC
 			}
 			else
 			{
-				if (KickStarter.playerInput.canKeyboardControlMenusDuringGameplay &&
-					(KickStarter.stateHandler.gameState == GameState.DialogOptions ||
-					 KickStarter.stateHandler.gameState == GameState.Paused ||
-					 (KickStarter.stateHandler.IsInGameplay () && KickStarter.playerInput.canKeyboardControlMenusDuringGameplay)))
+				if (KickStarter.settingsManager.inputMethod == InputMethod.KeyboardOrController)
 				{
 					Change ();
 				}

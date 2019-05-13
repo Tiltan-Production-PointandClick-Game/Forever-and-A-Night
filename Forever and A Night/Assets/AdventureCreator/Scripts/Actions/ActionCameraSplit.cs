@@ -1,7 +1,7 @@
 ﻿/*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2019
+ *	by Chris Burton, 2013-2018
  *	
  *	"ActionCameraSplit.cs"
  * 
@@ -35,9 +35,6 @@ namespace AC
 		public _Camera cam1;
 		public _Camera cam2;
 
-		protected _Camera runtimeCam1;
-		protected _Camera runtimeCam2;
-
 		public bool turnOff;
 		public MenuOrientation orientation;
 		public bool mainIsTopLeft;
@@ -54,8 +51,8 @@ namespace AC
 
 		override public void AssignValues (List<ActionParameter> parameters)
 		{
-			runtimeCam1 = AssignFile <_Camera> (parameters, parameterID1, constantID1, cam1);
-			runtimeCam2 = AssignFile <_Camera> (parameters, parameterID2, constantID2, cam2);
+			cam1 = AssignFile <_Camera> (parameters, parameterID1, constantID1, cam1);
+			cam2 = AssignFile <_Camera> (parameters, parameterID2, constantID2, cam2);
 		}
 		
 		
@@ -64,18 +61,18 @@ namespace AC
 			MainCamera mainCamera = KickStarter.mainCamera;
 			mainCamera.RemoveSplitScreen ();
 
-			if (turnOff || runtimeCam1 == null || runtimeCam2 == null)
+			if (turnOff || cam1 == null || cam2 == null)
 			{
 				return 0f;
 			}
 
 			if (mainIsTopLeft)
 			{
-				mainCamera.SetSplitScreen (runtimeCam1, runtimeCam2, orientation, mainIsTopLeft, splitAmount1, splitAmount2);
+				mainCamera.SetSplitScreen (cam1, cam2, orientation, mainIsTopLeft, splitAmount1, splitAmount2);
 			}
 			else
 			{
-				mainCamera.SetSplitScreen (runtimeCam2, runtimeCam1, orientation, mainIsTopLeft, splitAmount1, splitAmount2);
+				mainCamera.SetSplitScreen (cam2, cam1, orientation, mainIsTopLeft, splitAmount1, splitAmount2);
 			}
 
 			return 0f;
@@ -140,7 +137,7 @@ namespace AC
 		}
 
 
-		override public void AssignConstantIDs (bool saveScriptsToo, bool fromAssetFile)
+		override public void AssignConstantIDs (bool saveScriptsToo)
 		{
 			if (saveScriptsToo)
 			{
@@ -155,7 +152,7 @@ namespace AC
 		
 		public override string SetLabel ()
 		{
-			return orientation.ToString ();
+			return (" (" + orientation.ToString () + ")");
 		}
 		
 		#endif

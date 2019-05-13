@@ -1,7 +1,7 @@
 ﻿/*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2019
+ *	by Chris Burton, 2013-2018
  *	
  *	"AnimEngine_Mecanim.cs"
  * 
@@ -27,7 +27,6 @@ namespace AC
 		{
 			character = _character;
 			turningStyle = TurningStyle.RootMotion;
-			updateHeadAlways = (character != null && character.ikHeadTurning);
 		}
 
 
@@ -36,7 +35,7 @@ namespace AC
 			#if UNITY_EDITOR
 			
 			EditorGUILayout.BeginVertical ("Button");
-			EditorGUILayout.LabelField ("Mecanim parameters", EditorStyles.boldLabel);
+			EditorGUILayout.LabelField ("Mecanim parameters:", EditorStyles.boldLabel);
 
 			character.moveSpeedParameter = CustomGUILayout.TextField ("Move speed float:", character.moveSpeedParameter, "", "The name of the Animator float parameter set to the movement speed");
 			character.turnParameter = CustomGUILayout.TextField ("Turn float:", character.turnParameter, "", "The name of the Animator float parameter set to the turning direction");
@@ -84,7 +83,7 @@ namespace AC
 
 			EditorGUILayout.EndVertical ();
 			EditorGUILayout.BeginVertical ("Button");
-			EditorGUILayout.LabelField ("Mecanim settings", EditorStyles.boldLabel);
+			EditorGUILayout.LabelField ("Mecanim settings:", EditorStyles.boldLabel);
 
 			if (SceneSettings.IsTopDown ())
 			{
@@ -93,7 +92,7 @@ namespace AC
 			else
 			{
 				character.spriteChild = null;
-				character.customAnimator = (Animator) CustomGUILayout.ObjectField <Animator> ("Animator (optional):", character.customAnimator, true, "", "The Animator, if not on the root GameObject");
+				character.customAnimator = (Animator) CustomGUILayout.ObjectField <Transform> ("Animator (optional):", character.customAnimator, true, "", "The Animator, if not on the root GameObject");
 			}
 
 			character.headLayer = CustomGUILayout.IntField ("Head layer #:", character.headLayer, "", "The Animator layer used to play head animations while talking");
@@ -102,13 +101,6 @@ namespace AC
 			character.ikHeadTurning = CustomGUILayout.Toggle ("IK head-turning?", character.ikHeadTurning, "", "If True, then inverse-kinematics will be used to turn the character's head dynamically, rather than playing pre-made animations");
 			if (character.ikHeadTurning)
 			{
-				if (character.neckBone == null && character.GetComponent <CapsuleCollider>() == null && character.GetComponent <CharacterController>())
-				{
-					EditorGUILayout.HelpBox ("For IK head-turning, a 'Neck bone' must be defined, or a Capsule Collider / Character Controller must be placed on this GameObject.", MessageType.Warning);
-				}
-				character.headIKTurnFactor = CustomGUILayout.Slider ("Head-turn factor:", character.headIKTurnFactor, 0f, 1f, "", "How much the head is influenced by IK head-turning.");
-				character.bodyIKTurnFactor = CustomGUILayout.Slider ("Body-turn factor:", character.bodyIKTurnFactor, 0f, 1f, "", "How much the body is influenced by IK head-turning.");
-				character.eyesIKTurnFactor = CustomGUILayout.Slider ("Eyes-turn factor:", character.eyesIKTurnFactor, 0f, 1f, "", "How much the eyes is influenced by IK head-turning.");
 				#if UNITY_5 || UNITY_2017_1_OR_NEWER || UNITY_PRO_LICENSE
 				EditorGUILayout.HelpBox ("'IK Pass' must be enabled for this character's Base layer.", MessageType.Info);
 				#else
@@ -125,7 +117,7 @@ namespace AC
 			{
 				character.rootTurningFactor = CustomGUILayout.Slider ("Root Motion turning:", character.rootTurningFactor, 0f, 1f, "", "The factor by which the job of turning is left to Mecanim root motion");
 			}
-			character.doWallReduction = CustomGUILayout.Toggle ("Slow movement near walls?", character.doWallReduction, "", "If True, then characters will slow down when walking into walls");
+			character.doWallReduction = CustomGUILayout.Toggle ("Slow movement near wall colliders?", character.doWallReduction, "", "If True, then characters will slow down when walking into walls");
 			if (character.doWallReduction)
 			{
 				character.wallLayer = CustomGUILayout.TextField ("Wall collider layer:", character.wallLayer, "", "The layer that walls are expected to be placed on");
@@ -135,7 +127,7 @@ namespace AC
 
 			EditorGUILayout.EndVertical ();
 			EditorGUILayout.BeginVertical ("Button");
-			EditorGUILayout.LabelField ("Bone transforms", EditorStyles.boldLabel);
+			EditorGUILayout.LabelField ("Bone transforms:", EditorStyles.boldLabel);
 
 			character.neckBone = (Transform) CustomGUILayout.ObjectField <Transform> ("Neck bone:", character.neckBone, true, "", "The 'Neck bone' Transform");
 			character.leftHandBone = (Transform) CustomGUILayout.ObjectField <Transform> ("Left hand:", character.leftHandBone, true, "", "The 'Left hand bone' transform");
@@ -235,31 +227,19 @@ namespace AC
 				action.mecanimParameterType = (MecanimParameterType) EditorGUILayout.EnumPopup ("Parameter type:", action.mecanimParameterType);
 				if (action.mecanimParameterType == MecanimParameterType.Bool)
 				{
-					action.parameterValueParameterID = Action.ChooseParameterGUI ("Set as value:", parameters, action.parameterValueParameterID, ParameterType.Boolean);
-					if (action.parameterValueParameterID < 0)
-					{
-						bool value = (action.parameterValue <= 0f) ? false : true;
-						value = EditorGUILayout.Toggle ("Set as value:", value);
-						action.parameterValue = (value) ? 1f : 0f;
-					}
+					bool value = (action.parameterValue <= 0f) ? false : true;
+					value = EditorGUILayout.Toggle ("Set as value:", value);
+					action.parameterValue = (value) ? 1f : 0f;
 				}
 				else if (action.mecanimParameterType == MecanimParameterType.Int)
 				{
-					action.parameterValueParameterID = Action.ChooseParameterGUI ("Set as value:", parameters, action.parameterValueParameterID, ParameterType.Integer);
-					if (action.parameterValueParameterID < 0)
-					{
-						int value = (int) action.parameterValue;
-						value = EditorGUILayout.IntField ("Set as value:", value);
-						action.parameterValue = (float) value;
-					}
+					int value = (int) action.parameterValue;
+					value = EditorGUILayout.IntField ("Set as value:", value);
+					action.parameterValue = (float) value;
 				}
 				else if (action.mecanimParameterType == MecanimParameterType.Float)
 				{
-					action.parameterValueParameterID = Action.ChooseParameterGUI ("Set as value:", parameters, action.parameterValueParameterID, ParameterType.Float);
-					if (action.parameterValueParameterID < 0)
-					{
-						action.parameterValue = EditorGUILayout.FloatField ("Set as value:", action.parameterValue);
-					}
+					action.parameterValue = EditorGUILayout.FloatField ("Set as value:", action.parameterValue);
 				}
 				else if (action.mecanimParameterType == MecanimParameterType.Trigger)
 				{
@@ -320,33 +300,6 @@ namespace AC
 
 			#endif
 		}
-
-
-		public override void ActionCharAnimAssignValues (ActionCharAnim action, List<ActionParameter> parameters)
-		{
-			if (action.methodMecanim == AnimMethodCharMecanim.ChangeParameterValue)
-			{
-				switch (action.mecanimParameterType)
-				{
-					case MecanimParameterType.Bool:
-						BoolValue boolValue = (action.parameterValue <= 0f) ? BoolValue.False : BoolValue.True;
-						boolValue = action.AssignBoolean (parameters, action.parameterValueParameterID, boolValue);
-						action.parameterValue = (boolValue == BoolValue.True) ? 1f : 0f;
-						break;
-
-					case MecanimParameterType.Int:
-						action.parameterValue = (float) action.AssignInteger (parameters, action.parameterValueParameterID, (int) action.parameterValue);
-						break;
-
-					case MecanimParameterType.Float:
-						action.parameterValue = action.AssignFloat (parameters, action.parameterValueParameterID, action.parameterValue);
-						break;
-
-					default:
-						break;
-				}
-			}
-		}
 		
 		
 		public override float ActionCharAnimRun (ActionCharAnim action)
@@ -369,7 +322,7 @@ namespace AC
 				{
 					if (action.parameterName != "")
 					{
-						character.moveSpeedParameter = action.parameterName;
+						action.animChar.moveSpeedParameter = action.parameterName;
 					}
 
 					if (action.changeSpeed)
@@ -382,21 +335,21 @@ namespace AC
 					{
 						if (action.standard == AnimStandard.Walk)
 						{
-							character.walkSound = action.newSound;
+							action.animChar.walkSound = action.newSound;
 						}
 						else if (action.standard == AnimStandard.Run)
 						{
-							character.runSound = action.newSound;
+							action.animChar.runSound = action.newSound;
 						}
 					}
 				}
 				else if (action.mecanimCharParameter == MecanimCharParameter.TalkBool)
 				{
-					character.talkParameter = action.parameterName;
+					action.animChar.talkParameter = action.parameterName;
 				}
 				else if (action.mecanimCharParameter == MecanimCharParameter.TurnFloat)
 				{
-					character.turnParameter = action.parameterName;
+					action.animChar.turnParameter = action.parameterName;
 				}
 				
 				return 0f;
@@ -443,7 +396,7 @@ namespace AC
 						string clip2DNew = action.clip2D;
 						if (action.includeDirection)
 						{
-							clip2DNew += character.GetSpriteDirection ();
+							clip2DNew += action.animChar.GetSpriteDirection ();
 						}
 						character.GetAnimator ().CrossFade (clip2DNew, action.fadeTime, action.layerInt);
 						
@@ -515,34 +468,21 @@ namespace AC
 				}
 
 				action.mecanimParameterType = (MecanimParameterType) EditorGUILayout.EnumPopup ("Parameter type:", action.mecanimParameterType);
-
 				if (action.mecanimParameterType == MecanimParameterType.Bool)
 				{
-					action.parameterValueParameterID = Action.ChooseParameterGUI ("Set as value:", parameters, action.parameterValueParameterID, ParameterType.Boolean);
-					if (action.parameterValueParameterID < 0)
-					{
-						bool value = (action.parameterValue <= 0f) ? false : true;
-						value = EditorGUILayout.Toggle ("Set as value:", value);
-						action.parameterValue = (value) ? 1f : 0f;
-					}
+					bool value = (action.parameterValue <= 0f) ? false : true;
+					value = EditorGUILayout.Toggle ("Set as value:", value);
+					action.parameterValue = (value) ? 1f : 0f;
 				}
 				else if (action.mecanimParameterType == MecanimParameterType.Int)
 				{
-					action.parameterValueParameterID = Action.ChooseParameterGUI ("Set as value:", parameters, action.parameterValueParameterID, ParameterType.Integer);
-					if (action.parameterValueParameterID < 0)
-					{
-						int value = (int) action.parameterValue;
-						value = EditorGUILayout.IntField ("Set as value:", value);
-						action.parameterValue = (float) value;
-					}
+					int value = (int) action.parameterValue;
+					value = EditorGUILayout.IntField ("Set as value:", value);
+					action.parameterValue = (float) value;
 				}
 				else if (action.mecanimParameterType == MecanimParameterType.Float)
 				{
-					action.parameterValueParameterID = Action.ChooseParameterGUI ("Set as value:", parameters, action.parameterValueParameterID, ParameterType.Float);
-					if (action.parameterValueParameterID < 0)
-					{
-						action.parameterValue = EditorGUILayout.FloatField ("Set as value:", action.parameterValue);
-					}
+					action.parameterValue = EditorGUILayout.FloatField ("Set as value:", action.parameterValue);
 				}
 				else if (action.mecanimParameterType == MecanimParameterType.Trigger)
 				{
@@ -621,31 +561,8 @@ namespace AC
 
 		public override void ActionAnimAssignValues (ActionAnim action, List<ActionParameter> parameters)
 		{
-			action.runtimeAnimator = action.AssignFile <Animator> (parameters, action.parameterID, action.constantID, action.animator);
-			action.runtimeShapeObject = action.AssignFile <Shapeable> (parameters, action.parameterID, action.constantID, action.shapeObject);
-
-			if (action.methodMecanim == AnimMethodMecanim.ChangeParameterValue)
-			{
-				switch (action.mecanimParameterType)
-				{
-					case MecanimParameterType.Bool:
-						BoolValue boolValue = (action.parameterValue <= 0f) ? BoolValue.False : BoolValue.True;
-						boolValue = action.AssignBoolean (parameters, action.parameterValueParameterID, boolValue);
-						action.parameterValue = (boolValue == BoolValue.True) ? 1f : 0f;
-						break;
-
-					case MecanimParameterType.Int:
-						action.parameterValue = (float) action.AssignInteger (parameters, action.parameterValueParameterID, (int) action.parameterValue);
-						break;
-
-					case MecanimParameterType.Float:
-						action.parameterValue = action.AssignFloat (parameters, action.parameterValueParameterID, action.parameterValue);
-						break;
-
-					default:
-						break;
-				}
-			}
+			action.animator = action.AssignFile <Animator> (parameters, action.parameterID, action.constantID, action.animator);
+			action.shapeObject = action.AssignFile <Shapeable> (parameters, action.parameterID, action.constantID, action.shapeObject);
 		}
 
 
@@ -659,9 +576,9 @@ namespace AC
 		{
 			if (action.methodMecanim == AnimMethodMecanim.BlendShape)
 			{
-				if (action.runtimeShapeObject != null)
+				if (action.shapeObject)
 				{
-					action.runtimeShapeObject.Change (action.shapeKey, action.shapeValue, action.fadeTime);
+					action.shapeObject.Change (action.shapeKey, action.shapeValue, action.fadeTime);
 				}
 			}
 			else
@@ -677,53 +594,53 @@ namespace AC
 			{
 				action.isRunning = true;
 
-				if (action.methodMecanim == AnimMethodMecanim.ChangeParameterValue && action.runtimeAnimator && action.parameterName != "")
+				if (action.methodMecanim == AnimMethodMecanim.ChangeParameterValue && action.animator && action.parameterName != "")
 				{
 					if (action.mecanimParameterType == MecanimParameterType.Float)
 					{
-						action.runtimeAnimator.SetFloat (action.parameterName, action.parameterValue);
+						action.animator.SetFloat (action.parameterName, action.parameterValue);
 					}
 					else if (action.mecanimParameterType == MecanimParameterType.Int)
 					{
-						action.runtimeAnimator.SetInteger (action.parameterName, (int) action.parameterValue);
+						action.animator.SetInteger (action.parameterName, (int) action.parameterValue);
 					}
 					else if (action.mecanimParameterType == MecanimParameterType.Bool)
 					{
 						bool paramValue = (action.parameterValue > 0f) ? true : false;
-						action.runtimeAnimator.SetBool (action.parameterName, paramValue);
+						action.animator.SetBool (action.parameterName, paramValue);
 					}
 					else if (action.mecanimParameterType == MecanimParameterType.Trigger)
 					{
 						if (!isSkipping || action.parameterValue < 1f)
 						{
-							action.runtimeAnimator.SetTrigger (action.parameterName);
+							action.animator.SetTrigger (action.parameterName);
 						}
 					}
 					
 					return 0f;
 				}
 
-				else if (action.methodMecanim == AnimMethodMecanim.PlayCustom && action.runtimeAnimator)
+				else if (action.methodMecanim == AnimMethodMecanim.PlayCustom && action.animator)
 				{
 					if (action.clip2D != "")
 					{
 						#if UNITY_EDITOR && (UNITY_5 || UNITY_2017_1_OR_NEWER)
 
 						int hash = Animator.StringToHash (action.clip2D);
-						if (action.runtimeAnimator.HasState (0, hash))
+						if (action.animator.HasState (0, hash))
 						{
-							action.runtimeAnimator.CrossFade (hash, action.fadeTime, action.layerInt);
+							action.animator.CrossFade (hash, action.fadeTime, action.layerInt);
 						}
 						else
 						{
-							ACDebug.LogError ("Cannot play clip " + action.clip2D + " on " + action.runtimeAnimator.name, action.runtimeAnimator);
+							ACDebug.LogError ("Cannot play clip " + action.clip2D + " on " + action.animator.name, action.animator);
 						}
 						
 						#else
 						
 						try
 						{
-							action.runtimeAnimator.CrossFade (action.clip2D, action.fadeTime, action.layerInt);
+							action.animator.CrossFade (action.clip2D, action.fadeTime, action.layerInt);
 						}
 						catch
 						{}
@@ -739,9 +656,9 @@ namespace AC
 				
 				else if (action.methodMecanim == AnimMethodMecanim.BlendShape && action.shapeKey > -1)
 				{
-					if (action.runtimeShapeObject != null)
+					if (action.shapeObject)
 					{
-						action.runtimeShapeObject.Change (action.shapeKey, action.shapeValue, action.fadeTime);
+						action.shapeObject.Change (action.shapeKey, action.shapeValue, action.fadeTime);
 						
 						if (action.willWait)
 						{
@@ -752,16 +669,16 @@ namespace AC
 			}
 			else
 			{
-				if (action.methodMecanim == AnimMethodMecanim.BlendShape && action.runtimeShapeObject != null)
+				if (action.methodMecanim == AnimMethodMecanim.BlendShape && action.shapeObject)
 				{
 					action.isRunning = false;
 					return 0f;
 				}
 				else if (action.methodMecanim == AnimMethodMecanim.PlayCustom)
 				{
-					if (action.runtimeAnimator && !string.IsNullOrEmpty (action.clip2D))
+					if (action.animator && action.clip2D != "")
 					{
-						if (action.runtimeAnimator.GetCurrentAnimatorStateInfo (action.layerInt).normalizedTime < 1f)
+						if (action.animator.GetCurrentAnimatorStateInfo (action.layerInt).normalizedTime < 1f)
 						{
 							return (action.defaultPauseTime / 6f);
 						}
@@ -802,21 +719,21 @@ namespace AC
 		{
 			if (action.renderLock_scale == RenderLock.Set)
 			{
-				character.lockScale = true;
+				action._char.lockScale = true;
 				float _scale = (float) action.scale / 100f;
 				
-				if (character.spriteChild != null)
+				if (action._char.spriteChild != null)
 				{
-					character.spriteScale = _scale;
+					action._char.spriteScale = _scale;
 				}
 				else
 				{
-					character.transform.localScale = new Vector3 (_scale, _scale, _scale);
+					action._char.transform.localScale = new Vector3 (_scale, _scale, _scale);
 				}
 			}
 			else if (action.renderLock_scale == RenderLock.Release)
 			{
-				character.lockScale = false;
+				action._char.lockScale = false;
 			}
 			
 			return 0f;
@@ -952,7 +869,7 @@ namespace AC
 
 			if (!string.IsNullOrEmpty (character.isGroundedParameter))
 			{
-				character.GetAnimator ().SetBool (character.isGroundedParameter, character.IsGrounded (true));
+				character.GetAnimator ().SetBool (character.isGroundedParameter, character.IsGrounded ());
 			}
 		}
 
@@ -1013,29 +930,7 @@ namespace AC
 		}
 
 
-		#if UNITY_EDITOR
-
-		public override bool RequiresRememberAnimator (ActionCharAnim action)
-		{
-			if (action.methodMecanim == AnimMethodCharMecanim.ChangeParameterValue ||
-				action.methodMecanim == AnimMethodCharMecanim.PlayCustom)
-			{
-				return true;
-			}
-			return false;
-		}
-
-
-		public override bool RequiresRememberAnimator (ActionAnim action)
-		{
-			if (action.methodMecanim == AnimMethodMecanim.ChangeParameterValue ||
-				action.methodMecanim == AnimMethodMecanim.PlayCustom)
-			{
-				return true;
-			}
-			return false;
-		}
-
+		#if UNITY_EDITOR && (UNITY_5 || UNITY_2017_1_OR_NEWER)
 
 		public override void AddSaveScript (Action _action, GameObject _gameObject)
 		{

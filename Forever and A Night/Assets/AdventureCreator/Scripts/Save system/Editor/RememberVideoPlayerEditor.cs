@@ -1,4 +1,4 @@
-﻿#if UNITY_5_6_OR_NEWER && !UNITY_SWITCH
+﻿#if UNITY_5_6_OR_NEWER
 
 using UnityEditor;
 

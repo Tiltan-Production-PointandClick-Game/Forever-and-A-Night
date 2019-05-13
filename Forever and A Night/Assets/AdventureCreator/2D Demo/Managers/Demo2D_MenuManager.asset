@@ -4,8 +4,7 @@
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -38,8 +37,7 @@ MonoBehaviour:
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -57,7 +55,7 @@ MonoBehaviour:
   isLocked: 0
   id: 1
   title: Pause
-  manualSize: {x: 10.300001, y: 36.990753}
+  manualSize: {x: 10.3, y: 36.157352}
   positionType: 2
   manualPosition: {x: 20, y: 60}
   positionSmoothing: 0
@@ -71,7 +69,6 @@ MonoBehaviour:
   actionListOnTurnOn: {fileID: 11400000, guid: c6e29f6ea3d084d049c474742119836c, type: 2}
   actionListOnTurnOff: {fileID: 0}
   updateWhenFadeOut: 1
-  hideDuringSaveScreenshots: 1
   fitWithinScreen: 1
   backgroundTexture: {fileID: 0}
   visibleElements:
@@ -136,20 +133,19 @@ MonoBehaviour:
   speechProximityLimit: 0
   speechProximityDistance: 10
   deleteUIWhenTurnOff: 0
-  biggestElementSize: {x: 74.186005, y: 153.72429}
+  biggestElementSize: {x: 58.359, y: 140.5672}
   rect:
     serializedVersion: 2
-    x: 112.414505
-    y: 176.82608
-    width: 77.97101
-    height: 157.5093
+    x: 143.18176
+    y: 166.42767
+    width: 61.336502
+    height: 143.5447
   showInFilter: 1
 --- !u!114 &11400006
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -181,7 +177,6 @@ MonoBehaviour:
   actionListOnTurnOn: {fileID: 0}
   actionListOnTurnOff: {fileID: 0}
   updateWhenFadeOut: 1
-  hideDuringSaveScreenshots: 1
   fitWithinScreen: 1
   backgroundTexture: {fileID: 0}
   visibleElements:
@@ -259,8 +254,7 @@ MonoBehaviour:
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -292,7 +286,6 @@ MonoBehaviour:
   actionListOnTurnOn: {fileID: 0}
   actionListOnTurnOff: {fileID: 0}
   updateWhenFadeOut: 1
-  hideDuringSaveScreenshots: 1
   fitWithinScreen: 1
   backgroundTexture: {fileID: 0}
   visibleElements:
@@ -365,8 +358,7 @@ MonoBehaviour:
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -398,7 +390,6 @@ MonoBehaviour:
   actionListOnTurnOn: {fileID: 0}
   actionListOnTurnOff: {fileID: 0}
   updateWhenFadeOut: 1
-  hideDuringSaveScreenshots: 1
   fitWithinScreen: 1
   backgroundTexture: {fileID: 0}
   visibleElements:
@@ -471,8 +462,7 @@ MonoBehaviour:
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -530,8 +520,7 @@ MonoBehaviour:
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -563,7 +552,6 @@ MonoBehaviour:
   actionListOnTurnOn: {fileID: 0}
   actionListOnTurnOff: {fileID: 0}
   updateWhenFadeOut: 1
-  hideDuringSaveScreenshots: 1
   fitWithinScreen: 1
   backgroundTexture: {fileID: 0}
   visibleElements:
@@ -634,8 +622,7 @@ MonoBehaviour:
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -667,7 +654,6 @@ MonoBehaviour:
   actionListOnTurnOn: {fileID: 0}
   actionListOnTurnOff: {fileID: 0}
   updateWhenFadeOut: 1
-  hideDuringSaveScreenshots: 1
   fitWithinScreen: 1
   backgroundTexture: {fileID: 2800000, guid: 5f4f3dd6223164fe49aea7eb6c0bc529, type: 3}
   visibleElements:
@@ -754,8 +740,7 @@ MonoBehaviour:
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -787,7 +772,6 @@ MonoBehaviour:
   actionListOnTurnOn: {fileID: 0}
   actionListOnTurnOff: {fileID: 0}
   updateWhenFadeOut: 1
-  hideDuringSaveScreenshots: 1
   fitWithinScreen: 1
   backgroundTexture: {fileID: 0}
   visibleElements:
@@ -858,8 +842,7 @@ MonoBehaviour:
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -877,7 +860,7 @@ MonoBehaviour:
   isLocked: 0
   id: 9
   title: Subtitles
-  manualSize: {x: 44, y: 17}
+  manualSize: {x: 5.2057095, y: 5.037783}
   positionType: 6
   manualPosition: {x: 50, y: 50}
   positionSmoothing: 0
@@ -891,7 +874,6 @@ MonoBehaviour:
   actionListOnTurnOn: {fileID: 0}
   actionListOnTurnOff: {fileID: 0}
   updateWhenFadeOut: 1
-  hideDuringSaveScreenshots: 1
   fitWithinScreen: 1
   backgroundTexture: {fileID: 0}
   visibleElements:
@@ -910,7 +892,7 @@ MonoBehaviour:
   elements:
   - {fileID: 11400068}
   spacing: 0
-  sizeType: 1
+  sizeType: 0
   autoSizeEveryFrame: 0
   orientation: 1
   transitionType: 4
@@ -948,20 +930,19 @@ MonoBehaviour:
   speechProximityLimit: 0
   speechProximityDistance: 10
   deleteUIWhenTurnOff: 0
-  biggestElementSize: {x: 0, y: 0}
+  biggestElementSize: {x: 31, y: 20}
   rect:
     serializedVersion: 2
-    x: 211.96
-    y: 176.8064
-    width: 333.08
-    height: 72.38722
+    x: 337
+    y: 188.5
+    width: 31
+    height: 20
   showInFilter: 1
 --- !u!114 &11400032
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -995,10 +976,10 @@ MonoBehaviour:
   linkedUiID: 0
   relativeRect:
     serializedVersion: 2
-    x: 3.785
-    y: 3.785
-    width: 70.401
-    height: 26.959858
+    x: 2.9775
+    y: 2.9775
+    width: 55.3815
+    height: 25.13594
   relativePosition: {x: 0, y: 0}
   numSlots: 1
   uiButton: {fileID: 0}
@@ -1030,8 +1011,7 @@ MonoBehaviour:
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -1065,10 +1045,10 @@ MonoBehaviour:
   linkedUiID: 0
   relativeRect:
     serializedVersion: 2
-    x: 3.785
-    y: 34.529858
-    width: 70.401
-    height: 26.959858
+    x: 2.9775
+    y: 31.090942
+    width: 55.3815
+    height: 25.13594
   relativePosition: {x: 0, y: 0}
   numSlots: 1
   uiButton: {fileID: 0}
@@ -1100,8 +1080,7 @@ MonoBehaviour:
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -1135,10 +1114,10 @@ MonoBehaviour:
   linkedUiID: 0
   relativeRect:
     serializedVersion: 2
-    x: 3.785
-    y: 65.27472
-    width: 70.401
-    height: 26.959858
+    x: 2.9775
+    y: 59.204384
+    width: 55.3815
+    height: 25.13594
   relativePosition: {x: 0, y: 0}
   numSlots: 1
   uiButton: {fileID: 0}
@@ -1170,8 +1149,7 @@ MonoBehaviour:
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -1205,10 +1183,10 @@ MonoBehaviour:
   linkedUiID: 0
   relativeRect:
     serializedVersion: 2
-    x: 3.785
-    y: 96.01958
-    width: 70.401
-    height: 26.959858
+    x: 2.9775
+    y: 87.317825
+    width: 55.3815
+    height: 25.13594
   relativePosition: {x: 0, y: 0}
   numSlots: 1
   uiButton: {fileID: 0}
@@ -1240,8 +1218,7 @@ MonoBehaviour:
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -1275,10 +1252,10 @@ MonoBehaviour:
   linkedUiID: 0
   relativeRect:
     serializedVersion: 2
-    x: 3.785
-    y: 126.764435
-    width: 70.401
-    height: 26.959858
+    x: 2.9775
+    y: 115.43127
+    width: 55.3815
+    height: 25.13594
   relativePosition: {x: 0, y: 0}
   numSlots: 1
   uiButton: {fileID: 0}
@@ -1310,8 +1287,7 @@ MonoBehaviour:
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -1369,8 +1345,7 @@ MonoBehaviour:
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -1431,8 +1406,7 @@ MonoBehaviour:
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -1493,8 +1467,7 @@ MonoBehaviour:
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -1552,8 +1525,7 @@ MonoBehaviour:
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -1606,7 +1578,6 @@ MonoBehaviour:
   importSaveFilename: 
   checkImportBool: 0
   checkImportVar: 0
-  allowEmptySlots: 0
   fixedOption: 0
   optionToShow: 0
   parameterID: -1
@@ -1620,8 +1591,7 @@ MonoBehaviour:
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -1690,8 +1660,7 @@ MonoBehaviour:
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -1760,8 +1729,7 @@ MonoBehaviour:
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -1814,7 +1782,6 @@ MonoBehaviour:
   categoryIDs: 
   linkUIGraphic: 0
   preventInteractions: 0
-  limitMaxScroll: 1
   updateHotspotLabelWhenHover: 0
   items:
   - label: Poster
@@ -2514,8 +2481,7 @@ MonoBehaviour:
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -2568,7 +2534,6 @@ MonoBehaviour:
   importSaveFilename: 
   checkImportBool: 0
   checkImportVar: 0
-  allowEmptySlots: 0
   fixedOption: 0
   optionToShow: 0
   parameterID: -1
@@ -2582,8 +2547,7 @@ MonoBehaviour:
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -2636,7 +2600,6 @@ MonoBehaviour:
   categoryIDs: 
   linkUIGraphic: 0
   preventInteractions: 0
-  limitMaxScroll: 1
   updateHotspotLabelWhenHover: 0
   items:
   - label: Worm
@@ -2718,8 +2681,7 @@ MonoBehaviour:
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -2779,8 +2741,7 @@ MonoBehaviour:
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -2790,8 +2751,8 @@ MonoBehaviour:
   ID: 0
   isEditing: 1
   title: SubsLineLabel
-  slotSize: {x: 44, y: 4.6332045}
-  sizeType: 1
+  slotSize: {x: 5.2057095, y: 5.037783}
+  sizeType: 0
   positionType: 0
   slotSpacing: 0
   lineID: -1
@@ -2816,8 +2777,8 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 333.08002
-    height: 19.728518
+    width: 31
+    height: 20
   relativePosition: {x: 0, y: 0}
   numSlots: 1
   uiText: {fileID: 0}
@@ -2838,8 +2799,7 @@ MonoBehaviour:
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -2888,8 +2848,7 @@ MonoBehaviour:
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -2958,8 +2917,7 @@ MonoBehaviour:
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -3020,8 +2978,7 @@ MonoBehaviour:
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -3039,7 +2996,7 @@ MonoBehaviour:
   isLocked: 0
   id: 5
   title: Interaction
-  manualSize: {x: 12.349999, y: 7.2487555}
+  manualSize: {x: 12.35, y: 7.2100005}
   positionType: 4
   manualPosition: {x: 50, y: 50}
   positionSmoothing: 0
@@ -3053,7 +3010,6 @@ MonoBehaviour:
   actionListOnTurnOn: {fileID: 0}
   actionListOnTurnOff: {fileID: 0}
   updateWhenFadeOut: 1
-  hideDuringSaveScreenshots: 1
   fitWithinScreen: 1
   backgroundTexture: {fileID: 2800000, guid: 2de7d16b4ac4b402182d4f2ca40e0b2d, type: 3}
   visibleElements:
@@ -3116,20 +3072,19 @@ MonoBehaviour:
   speechProximityLimit: 0
   speechProximityDistance: 10
   deleteUIWhenTurnOff: 0
-  biggestElementSize: {x: 50.8392, y: 16.5998}
+  biggestElementSize: {x: 72.9432, y: 28.135801}
   rect:
     serializedVersion: 2
-    x: 189.7155
-    y: 108.28819
-    width: 51.128998
-    height: 16.8896
+    x: 315.3205
+    y: 183.7242
+    width: 73.359
+    height: 28.551601
   showInFilter: 1
 --- !u!114 &11400078
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -3163,10 +3118,10 @@ MonoBehaviour:
   linkedUiID: 0
   relativeRect:
     serializedVersion: 2
-    x: 0.2898
-    y: 0.2898
-    width: 16.56
-    height: 16.31
+    x: 0.4158
+    y: 0.4158
+    width: 23.76
+    height: 27.720001
   relativePosition: {x: 0, y: 0}
   numSlots: 1
   uiButton: {fileID: 0}
@@ -3183,8 +3138,7 @@ MonoBehaviour:
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -3218,10 +3172,10 @@ MonoBehaviour:
   linkedUiID: 0
   relativeRect:
     serializedVersion: 2
-    x: 17.1396
-    y: 0.2898
-    width: 16.56
-    height: 16.31
+    x: 24.5916
+    y: 0.4158
+    width: 23.76
+    height: 27.720001
   relativePosition: {x: 0, y: 0}
   numSlots: 1
   uiButton: {fileID: 0}
@@ -3238,8 +3192,7 @@ MonoBehaviour:
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -3273,10 +3226,10 @@ MonoBehaviour:
   linkedUiID: 0
   relativeRect:
     serializedVersion: 2
-    x: 33.9894
-    y: 0.2898
-    width: 16.56
-    height: 16.31
+    x: 48.7674
+    y: 0.4158
+    width: 23.76
+    height: 27.720001
   relativePosition: {x: 0, y: 0}
   numSlots: 1
   uiButton: {fileID: 0}
@@ -3293,8 +3246,7 @@ MonoBehaviour:
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -3328,10 +3280,10 @@ MonoBehaviour:
   linkedUiID: 0
   relativeRect:
     serializedVersion: 2
-    x: 50.8392
-    y: 0.2898
+    x: 72.9432
+    y: 0.4158
     width: 0
-    height: 16.31
+    height: 27.720001
   relativePosition: {x: 0, y: 0}
   numSlots: 0
   uiSlots: []
@@ -3347,10 +3299,9 @@ MonoBehaviour:
   categoryIDs: 
   linkUIGraphic: 0
   preventInteractions: 0
-  limitMaxScroll: 1
   updateHotspotLabelWhenHover: 0
   items:
-  - label: Poster
+  - label: Worm
     id: 0
     altLabel: 
     carryOnStart: 0
@@ -3361,643 +3312,7 @@ MonoBehaviour:
     count: 1
     useSeparateSlots: 0
     selectSingle: 0
-    tex: {fileID: 2800000, guid: b0c7c70f1bc5440aaaf203227b10a9d2, type: 3}
-    activeTex: {fileID: 0}
-    selectedTex: {fileID: 0}
-    linkedPrefab: {fileID: 0}
-    cursorIcon:
-      texture: {fileID: 0}
-      isAnimated: 0
-      numFrames: 1
-      numRows: 1
-      numCols: 1
-      size: 0.04
-      animSpeed: 4
-      endAnimOnLastFrame: 0
-      skipFirstFrameWhenLooping: 0
-      clickOffset: {x: 0, y: 0}
-      frameSpeeds: []
-      alwaysAnimate: 0
-      dontCycle: 0
-      label: Icon 1
-      lineID: -1
-      id: 0
-    lineID: -1
-    useIconID: 0
-    binID: -1
-    isEditing: 0
-    recipeSlot: -1
-    lastInteractionIndex: 0
-    overrideUseSyntax: 0
-    hotspotPrefix1:
-      label: Use
-      lineID: -1
-    hotspotPrefix2:
-      label: on
-      lineID: -1
-    useActionList: {fileID: 0}
-    lookActionList: {fileID: 0}
-    interactions: []
-    combineActionList: []
-    combineID: 
-    unhandledActionList: {fileID: 0}
-    unhandledCombineActionList: {fileID: 0}
-    showInFilter: 0
-  - label: Sea Urchin
-    id: 1
-    altLabel: 
-    carryOnStart: 0
-    carryOnStartNotDefault: 0
-    carryOnStartID: 0
-    vars: []
-    canCarryMultiple: 0
-    count: 1
-    useSeparateSlots: 0
-    selectSingle: 0
-    tex: {fileID: 2800000, guid: 9ff475011dff148129502d8d3559f966, type: 3}
-    activeTex: {fileID: 0}
-    selectedTex: {fileID: 0}
-    linkedPrefab: {fileID: 0}
-    cursorIcon:
-      texture: {fileID: 0}
-      isAnimated: 0
-      numFrames: 1
-      numRows: 1
-      numCols: 1
-      size: 0.04
-      animSpeed: 4
-      endAnimOnLastFrame: 0
-      skipFirstFrameWhenLooping: 0
-      clickOffset: {x: 0, y: 0}
-      frameSpeeds: []
-      alwaysAnimate: 0
-      dontCycle: 0
-      label: Icon 1
-      lineID: -1
-      id: 0
-    lineID: -1
-    useIconID: 0
-    binID: -1
-    isEditing: 0
-    recipeSlot: -1
-    lastInteractionIndex: 0
-    overrideUseSyntax: 0
-    hotspotPrefix1:
-      label: Use
-      lineID: -1
-    hotspotPrefix2:
-      label: on
-      lineID: -1
-    useActionList: {fileID: 0}
-    lookActionList: {fileID: 0}
-    interactions: []
-    combineActionList: []
-    combineID: 
-    unhandledActionList: {fileID: 0}
-    unhandledCombineActionList: {fileID: 0}
-    showInFilter: 0
-  - label: Twig
-    id: 2
-    altLabel: 
-    carryOnStart: 0
-    carryOnStartNotDefault: 0
-    carryOnStartID: 0
-    vars: []
-    canCarryMultiple: 0
-    count: 1
-    useSeparateSlots: 0
-    selectSingle: 0
-    tex: {fileID: 2800000, guid: bad4a1f3d485844d5ab572715c9fbc8e, type: 3}
-    activeTex: {fileID: 0}
-    selectedTex: {fileID: 0}
-    linkedPrefab: {fileID: 0}
-    cursorIcon:
-      texture: {fileID: 0}
-      isAnimated: 0
-      numFrames: 1
-      numRows: 1
-      numCols: 1
-      size: 0.04
-      animSpeed: 4
-      endAnimOnLastFrame: 0
-      skipFirstFrameWhenLooping: 0
-      clickOffset: {x: 0, y: 0}
-      frameSpeeds: []
-      alwaysAnimate: 0
-      dontCycle: 0
-      label: Icon 1
-      lineID: -1
-      id: 0
-    lineID: -1
-    useIconID: 0
-    binID: -1
-    isEditing: 0
-    recipeSlot: -1
-    lastInteractionIndex: 0
-    overrideUseSyntax: 0
-    hotspotPrefix1:
-      label: Use
-      lineID: -1
-    hotspotPrefix2:
-      label: on
-      lineID: -1
-    useActionList: {fileID: 0}
-    lookActionList: {fileID: 0}
-    interactions: []
-    combineActionList: []
-    combineID: 
-    unhandledActionList: {fileID: 0}
-    unhandledCombineActionList: {fileID: 0}
-    showInFilter: 0
-  - label: Dart
-    id: 3
-    altLabel: 
-    carryOnStart: 0
-    carryOnStartNotDefault: 0
-    carryOnStartID: 0
-    vars: []
-    canCarryMultiple: 0
-    count: 1
-    useSeparateSlots: 0
-    selectSingle: 0
-    tex: {fileID: 2800000, guid: fdca6c9d578584012aa89caa5b75bc70, type: 3}
-    activeTex: {fileID: 0}
-    selectedTex: {fileID: 0}
-    linkedPrefab: {fileID: 0}
-    cursorIcon:
-      texture: {fileID: 0}
-      isAnimated: 0
-      numFrames: 1
-      numRows: 1
-      numCols: 1
-      size: 0.04
-      animSpeed: 4
-      endAnimOnLastFrame: 0
-      skipFirstFrameWhenLooping: 0
-      clickOffset: {x: 0, y: 0}
-      frameSpeeds: []
-      alwaysAnimate: 0
-      dontCycle: 0
-      label: Icon 1
-      lineID: -1
-      id: 0
-    lineID: -1
-    useIconID: 0
-    binID: -1
-    isEditing: 0
-    recipeSlot: -1
-    lastInteractionIndex: 0
-    overrideUseSyntax: 0
-    hotspotPrefix1:
-      label: Use
-      lineID: -1
-    hotspotPrefix2:
-      label: on
-      lineID: -1
-    useActionList: {fileID: 0}
-    lookActionList: {fileID: 0}
-    interactions: []
-    combineActionList: []
-    combineID: 
-    unhandledActionList: {fileID: 0}
-    unhandledCombineActionList: {fileID: 0}
-    showInFilter: 0
-  - label: Moonshine
-    id: 4
-    altLabel: 
-    carryOnStart: 0
-    carryOnStartNotDefault: 0
-    carryOnStartID: 0
-    vars: []
-    canCarryMultiple: 0
-    count: 1
-    useSeparateSlots: 0
-    selectSingle: 0
-    tex: {fileID: 2800000, guid: a3042a2c4bbf1413ead7d22b260c8b89, type: 3}
-    activeTex: {fileID: 0}
-    selectedTex: {fileID: 0}
-    linkedPrefab: {fileID: 0}
-    cursorIcon:
-      texture: {fileID: 0}
-      isAnimated: 0
-      numFrames: 1
-      numRows: 1
-      numCols: 1
-      size: 0.04
-      animSpeed: 4
-      endAnimOnLastFrame: 0
-      skipFirstFrameWhenLooping: 0
-      clickOffset: {x: 0, y: 0}
-      frameSpeeds: []
-      alwaysAnimate: 0
-      dontCycle: 0
-      label: Icon 1
-      lineID: -1
-      id: 0
-    lineID: -1
-    useIconID: 0
-    binID: -1
-    isEditing: 0
-    recipeSlot: -1
-    lastInteractionIndex: 0
-    overrideUseSyntax: 0
-    hotspotPrefix1:
-      label: Use
-      lineID: -1
-    hotspotPrefix2:
-      label: on
-      lineID: -1
-    useActionList: {fileID: 0}
-    lookActionList: {fileID: 0}
-    interactions: []
-    combineActionList: []
-    combineID: 
-    unhandledActionList: {fileID: 0}
-    unhandledCombineActionList: {fileID: 0}
-    showInFilter: 0
-  - label: Hook
-    id: 5
-    altLabel: 
-    carryOnStart: 0
-    carryOnStartNotDefault: 0
-    carryOnStartID: 0
-    vars: []
-    canCarryMultiple: 0
-    count: 1
-    useSeparateSlots: 0
-    selectSingle: 0
-    tex: {fileID: 2800000, guid: 15eeb84d6dc3e4d17ac12ed405a8e1b2, type: 3}
-    activeTex: {fileID: 0}
-    selectedTex: {fileID: 0}
-    linkedPrefab: {fileID: 0}
-    cursorIcon:
-      texture: {fileID: 0}
-      isAnimated: 0
-      numFrames: 1
-      numRows: 1
-      numCols: 1
-      size: 0.04
-      animSpeed: 4
-      endAnimOnLastFrame: 0
-      skipFirstFrameWhenLooping: 0
-      clickOffset: {x: 0, y: 0}
-      frameSpeeds: []
-      alwaysAnimate: 0
-      dontCycle: 0
-      label: Icon 1
-      lineID: -1
-      id: 0
-    lineID: -1
-    useIconID: 0
-    binID: -1
-    isEditing: 0
-    recipeSlot: -1
-    lastInteractionIndex: 0
-    overrideUseSyntax: 0
-    hotspotPrefix1:
-      label: Use
-      lineID: -1
-    hotspotPrefix2:
-      label: on
-      lineID: -1
-    useActionList: {fileID: 0}
-    lookActionList: {fileID: 0}
-    interactions: []
-    combineActionList: []
-    combineID: 
-    unhandledActionList: {fileID: 0}
-    unhandledCombineActionList: {fileID: 0}
-    showInFilter: 0
-  - label: Blunderbuss
-    id: 6
-    altLabel: 
-    carryOnStart: 0
-    carryOnStartNotDefault: 0
-    carryOnStartID: 0
-    vars: []
-    canCarryMultiple: 0
-    count: 1
-    useSeparateSlots: 0
-    selectSingle: 0
-    tex: {fileID: 2800000, guid: b21726976ba2b406f986b2e2e903f0b0, type: 3}
-    activeTex: {fileID: 0}
-    selectedTex: {fileID: 0}
-    linkedPrefab: {fileID: 0}
-    cursorIcon:
-      texture: {fileID: 0}
-      isAnimated: 0
-      numFrames: 1
-      numRows: 1
-      numCols: 1
-      size: 0.04
-      animSpeed: 4
-      endAnimOnLastFrame: 0
-      skipFirstFrameWhenLooping: 0
-      clickOffset: {x: 0, y: 0}
-      frameSpeeds: []
-      alwaysAnimate: 0
-      dontCycle: 0
-      label: Icon 1
-      lineID: -1
-      id: 0
-    lineID: -1
-    useIconID: 0
-    binID: -1
-    isEditing: 0
-    recipeSlot: -1
-    lastInteractionIndex: 0
-    overrideUseSyntax: 0
-    hotspotPrefix1:
-      label: Use
-      lineID: -1
-    hotspotPrefix2:
-      label: on
-      lineID: -1
-    useActionList: {fileID: 0}
-    lookActionList: {fileID: 0}
-    interactions: []
-    combineActionList: []
-    combineID: 
-    unhandledActionList: {fileID: 0}
-    unhandledCombineActionList: {fileID: 0}
-    showInFilter: 0
-  - label: Fishbowl
-    id: 7
-    altLabel: 
-    carryOnStart: 0
-    carryOnStartNotDefault: 0
-    carryOnStartID: 0
-    vars: []
-    canCarryMultiple: 0
-    count: 1
-    useSeparateSlots: 0
-    selectSingle: 0
-    tex: {fileID: 2800000, guid: 97dfb9e01baef43bbae6547feca5ee7e, type: 3}
-    activeTex: {fileID: 0}
-    selectedTex: {fileID: 0}
-    linkedPrefab: {fileID: 0}
-    cursorIcon:
-      texture: {fileID: 0}
-      isAnimated: 0
-      numFrames: 1
-      numRows: 1
-      numCols: 1
-      size: 0.04
-      animSpeed: 4
-      endAnimOnLastFrame: 0
-      skipFirstFrameWhenLooping: 0
-      clickOffset: {x: 0, y: 0}
-      frameSpeeds: []
-      alwaysAnimate: 0
-      dontCycle: 0
-      label: Icon 1
-      lineID: -1
-      id: 0
-    lineID: -1
-    useIconID: 0
-    binID: -1
-    isEditing: 0
-    recipeSlot: -1
-    lastInteractionIndex: 0
-    overrideUseSyntax: 0
-    hotspotPrefix1:
-      label: Use
-      lineID: -1
-    hotspotPrefix2:
-      label: on
-      lineID: -1
-    useActionList: {fileID: 0}
-    lookActionList: {fileID: 0}
-    interactions: []
-    combineActionList: []
-    combineID: 
-    unhandledActionList: {fileID: 0}
-    unhandledCombineActionList: {fileID: 0}
-    showInFilter: 0
-  - label: Engine Room Key
-    id: 8
-    altLabel: 
-    carryOnStart: 0
-    carryOnStartNotDefault: 0
-    carryOnStartID: 0
-    vars: []
-    canCarryMultiple: 0
-    count: 1
-    useSeparateSlots: 0
-    selectSingle: 0
-    tex: {fileID: 2800000, guid: 1d8d00fb112224341bd038b4b7075ffa, type: 3}
-    activeTex: {fileID: 0}
-    selectedTex: {fileID: 0}
-    linkedPrefab: {fileID: 0}
-    cursorIcon:
-      texture: {fileID: 0}
-      isAnimated: 0
-      numFrames: 1
-      numRows: 1
-      numCols: 1
-      size: 0.04
-      animSpeed: 4
-      endAnimOnLastFrame: 0
-      skipFirstFrameWhenLooping: 0
-      clickOffset: {x: 0, y: 0}
-      frameSpeeds: []
-      alwaysAnimate: 0
-      dontCycle: 0
-      label: Icon 1
-      lineID: -1
-      id: 0
-    lineID: -1
-    useIconID: 0
-    binID: -1
-    isEditing: 0
-    recipeSlot: -1
-    lastInteractionIndex: 0
-    overrideUseSyntax: 0
-    hotspotPrefix1:
-      label: Use
-      lineID: -1
-    hotspotPrefix2:
-      label: on
-      lineID: -1
-    useActionList: {fileID: 0}
-    lookActionList: {fileID: 0}
-    interactions: []
-    combineActionList: []
-    combineID: 
-    unhandledActionList: {fileID: 0}
-    unhandledCombineActionList: {fileID: 0}
-    showInFilter: 0
-  - label: Bucket
-    id: 9
-    altLabel: 
-    carryOnStart: 0
-    carryOnStartNotDefault: 0
-    carryOnStartID: 0
-    vars: []
-    canCarryMultiple: 0
-    count: 1
-    useSeparateSlots: 0
-    selectSingle: 0
-    tex: {fileID: 2800000, guid: 3682327d58cbc40a3a2560d49e9dec9b, type: 3}
-    activeTex: {fileID: 0}
-    selectedTex: {fileID: 0}
-    linkedPrefab: {fileID: 0}
-    cursorIcon:
-      texture: {fileID: 0}
-      isAnimated: 0
-      numFrames: 1
-      numRows: 1
-      numCols: 1
-      size: 0.04
-      animSpeed: 4
-      endAnimOnLastFrame: 0
-      skipFirstFrameWhenLooping: 0
-      clickOffset: {x: 0, y: 0}
-      frameSpeeds: []
-      alwaysAnimate: 0
-      dontCycle: 0
-      label: Icon 1
-      lineID: -1
-      id: 0
-    lineID: -1
-    useIconID: 0
-    binID: -1
-    isEditing: 0
-    recipeSlot: -1
-    lastInteractionIndex: 0
-    overrideUseSyntax: 0
-    hotspotPrefix1:
-      label: Use
-      lineID: -1
-    hotspotPrefix2:
-      label: on
-      lineID: -1
-    useActionList: {fileID: 0}
-    lookActionList: {fileID: 0}
-    interactions: []
-    combineActionList: []
-    combineID: 
-    unhandledActionList: {fileID: 0}
-    unhandledCombineActionList: {fileID: 0}
-    showInFilter: 0
-  - label: Wetsuit
-    id: 10
-    altLabel: 
-    carryOnStart: 0
-    carryOnStartNotDefault: 0
-    carryOnStartID: 0
-    vars: []
-    canCarryMultiple: 0
-    count: 1
-    useSeparateSlots: 0
-    selectSingle: 0
-    tex: {fileID: 2800000, guid: 4c2464cdab7764cd5ae6cec55ad50cf2, type: 3}
-    activeTex: {fileID: 0}
-    selectedTex: {fileID: 0}
-    linkedPrefab: {fileID: 0}
-    cursorIcon:
-      texture: {fileID: 0}
-      isAnimated: 0
-      numFrames: 1
-      numRows: 1
-      numCols: 1
-      size: 0.04
-      animSpeed: 4
-      endAnimOnLastFrame: 0
-      skipFirstFrameWhenLooping: 0
-      clickOffset: {x: 0, y: 0}
-      frameSpeeds: []
-      alwaysAnimate: 0
-      dontCycle: 0
-      label: Icon 1
-      lineID: -1
-      id: 0
-    lineID: -1
-    useIconID: 0
-    binID: -1
-    isEditing: 0
-    recipeSlot: -1
-    lastInteractionIndex: 0
-    overrideUseSyntax: 0
-    hotspotPrefix1:
-      label: Use
-      lineID: -1
-    hotspotPrefix2:
-      label: on
-      lineID: -1
-    useActionList: {fileID: 0}
-    lookActionList: {fileID: 0}
-    interactions: []
-    combineActionList: []
-    combineID: 
-    unhandledActionList: {fileID: 0}
-    unhandledCombineActionList: {fileID: 0}
-    showInFilter: 0
-  - label: Sticky Tape
-    id: 11
-    altLabel: 
-    carryOnStart: 0
-    carryOnStartNotDefault: 0
-    carryOnStartID: 0
-    vars: []
-    canCarryMultiple: 0
-    count: 1
-    useSeparateSlots: 0
-    selectSingle: 0
-    tex: {fileID: 0}
-    activeTex: {fileID: 0}
-    selectedTex: {fileID: 0}
-    linkedPrefab: {fileID: 0}
-    cursorIcon:
-      texture: {fileID: 0}
-      isAnimated: 0
-      numFrames: 1
-      numRows: 1
-      numCols: 1
-      size: 0.04
-      animSpeed: 4
-      endAnimOnLastFrame: 0
-      skipFirstFrameWhenLooping: 0
-      clickOffset: {x: 0, y: 0}
-      frameSpeeds: []
-      alwaysAnimate: 0
-      dontCycle: 0
-      label: Icon 1
-      lineID: -1
-      id: 0
-    lineID: -1
-    useIconID: 0
-    binID: -1
-    isEditing: 0
-    recipeSlot: -1
-    lastInteractionIndex: 0
-    overrideUseSyntax: 0
-    hotspotPrefix1:
-      label: Use
-      lineID: -1
-    hotspotPrefix2:
-      label: on
-      lineID: -1
-    useActionList: {fileID: 0}
-    lookActionList: {fileID: 0}
-    interactions: []
-    combineActionList: []
-    combineID: 
-    unhandledActionList: {fileID: 0}
-    unhandledCombineActionList: {fileID: 0}
-    showInFilter: 0
-  - label: String
-    id: 12
-    altLabel: 
-    carryOnStart: 0
-    carryOnStartNotDefault: 0
-    carryOnStartID: 0
-    vars: []
-    canCarryMultiple: 0
-    count: 1
-    useSeparateSlots: 0
-    selectSingle: 0
-    tex: {fileID: 0}
+    tex: {fileID: 2800000, guid: dc008b16a8cbf4215a275efe13cba3e5, type: 3}
     activeTex: {fileID: 0}
     selectedTex: {fileID: 0}
     linkedPrefab: {fileID: 0}
@@ -4026,14 +3341,32 @@ MonoBehaviour:
     lastInteractionIndex: 0
     overrideUseSyntax: 0
     hotspotPrefix1:
-      label: Use
-      lineID: -1
+      label: 
+      lineID: 0
     hotspotPrefix2:
-      label: on
-      lineID: -1
-    useActionList: {fileID: 0}
-    lookActionList: {fileID: 0}
-    interactions: []
+      label: 
+      lineID: 0
+    useActionList: {fileID: 11400000, guid: b75e0091c65f04251bfbea6836c4b3c1, type: 2}
+    lookActionList: {fileID: 11400000, guid: b75e0091c65f04251bfbea6836c4b3c1, type: 2}
+    interactions:
+    - actionList: {fileID: 11400000, guid: b75e0091c65f04251bfbea6836c4b3c1, type: 2}
+      icon:
+        texture: {fileID: 2800000, guid: e0394f989f329496584e377a81d4031f, type: 3}
+        isAnimated: 0
+        numFrames: 1
+        numRows: 1
+        numCols: 1
+        size: 0.04
+        animSpeed: 4
+        endAnimOnLastFrame: 0
+        skipFirstFrameWhenLooping: 0
+        clickOffset: {x: 0, y: 0}
+        frameSpeeds: []
+        alwaysAnimate: 0
+        dontCycle: 0
+        label: Look at
+        lineID: 65
+        id: 2
     combineActionList: []
     combineID: 
     unhandledActionList: {fileID: 0}
@@ -4047,8 +3380,7 @@ MonoBehaviour:
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -4105,8 +3437,7 @@ MonoBehaviour:
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -4167,8 +3498,7 @@ MonoBehaviour:
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -4237,8 +3567,7 @@ MonoBehaviour:
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -4258,7 +3587,7 @@ MonoBehaviour:
   title: Container
   manualSize: {x: 55.656563, y: 40.297825}
   positionType: 0
-  manualPosition: {x: 353.5, y: 199}
+  manualPosition: {x: 352, y: 198}
   positionSmoothing: 0
   alignment: 4
   toggleKey: 
@@ -4270,7 +3599,6 @@ MonoBehaviour:
   actionListOnTurnOn: {fileID: 0}
   actionListOnTurnOff: {fileID: 0}
   updateWhenFadeOut: 1
-  hideDuringSaveScreenshots: 1
   fitWithinScreen: 1
   backgroundTexture: {fileID: 2800000, guid: 5f4f3dd6223164fe49aea7eb6c0bc529, type: 3}
   visibleElements:
@@ -4348,17 +3676,16 @@ MonoBehaviour:
   biggestElementSize: {x: 0, y: 0}
   rect:
     serializedVersion: 2
-    x: 187.36516
-    y: 118.80733
-    width: 332.26968
-    height: 160.38535
+    x: 186.7
+    y: 118.21031
+    width: 330.6
+    height: 159.57938
   showInFilter: 1
 --- !u!114 &11400100
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -4392,10 +3719,10 @@ MonoBehaviour:
   linkedUiID: 0
   relativeRect:
     serializedVersion: 2
-    x: 2.985
-    y: 2.985
-    width: 325.96198
-    height: 12.222649
+    x: 2.97
+    y: 2.97
+    width: 324.324
+    height: 12.161228
   relativePosition: {x: 0, y: 0}
   numSlots: 1
   uiText: {fileID: 0}
@@ -4416,8 +3743,7 @@ MonoBehaviour:
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -4451,10 +3777,10 @@ MonoBehaviour:
   linkedUiID: 0
   relativeRect:
     serializedVersion: 2
-    x: 19.936182
-    y: 20.850096
-    width: 298.5
-    height: 39.8
+    x: 19.836
+    y: 20.74532
+    width: 297
+    height: 39.6
   relativePosition: {x: 6, y: 13}
   numSlots: 5
   uiSlots: []
@@ -4470,7 +3796,6 @@ MonoBehaviour:
   categoryIDs: 
   linkUIGraphic: 0
   preventInteractions: 0
-  limitMaxScroll: 1
   updateHotspotLabelWhenHover: 0
   items:
   - label: Worm
@@ -4552,8 +3877,7 @@ MonoBehaviour:
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -4587,10 +3911,10 @@ MonoBehaviour:
   linkedUiID: 0
   relativeRect:
     serializedVersion: 2
-    x: 282.42923
-    y: 144.66757
-    width: 45.968998
-    height: 12.337999
+    x: 281.01
+    y: 143.94058
+    width: 45.738
+    height: 12.276
   relativePosition: {x: 85, y: 90.2}
   numSlots: 1
   uiButton: {fileID: 0}
@@ -4622,8 +3946,7 @@ MonoBehaviour:
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -4657,10 +3980,10 @@ MonoBehaviour:
   linkedUiID: 0
   relativeRect:
     serializedVersion: 2
-    x: 270.7998
-    y: 66.23914
-    width: 57.908997
-    height: 12.337999
+    x: 269.439
+    y: 65.90628
+    width: 57.618
+    height: 12.276
   relativePosition: {x: 81.5, y: 41.3}
   numSlots: 1
   uiButton: {fileID: 0}
@@ -4692,8 +4015,7 @@ MonoBehaviour:
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -4727,10 +4049,10 @@ MonoBehaviour:
   linkedUiID: 0
   relativeRect:
     serializedVersion: 2
-    x: 19.936182
-    y: 102.64662
-    width: 59.699997
-    height: 39.8
+    x: 19.836
+    y: 102.1308
+    width: 59.4
+    height: 39.6
   relativePosition: {x: 6, y: 64}
   numSlots: 1
   uiSlots: []
@@ -4746,7 +4068,6 @@ MonoBehaviour:
   categoryIDs: 
   linkUIGraphic: 0
   preventInteractions: 0
-  limitMaxScroll: 1
   updateHotspotLabelWhenHover: 0
   items:
   - label: Worm
@@ -4828,8 +4149,7 @@ MonoBehaviour:
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -4863,10 +4183,10 @@ MonoBehaviour:
   linkedUiID: 0
   relativeRect:
     serializedVersion: 2
-    x: 3.322697
-    y: 86.608086
-    width: 325.96198
-    height: 11.458733
+    x: 3.306
+    y: 86.17286
+    width: 324.324
+    height: 11.401152
   relativePosition: {x: 1, y: 54}
   numSlots: 1
   uiText: {fileID: 0}
@@ -4887,8 +4207,7 @@ MonoBehaviour:
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -4922,10 +4241,10 @@ MonoBehaviour:
   linkedUiID: 0
   relativeRect:
     serializedVersion: 2
-    x: 4.9840455
-    y: 21.652021
-    width: 11.94
-    height: 39.8
+    x: 4.959
+    y: 21.543215
+    width: 11.88
+    height: 39.6
   relativePosition: {x: 1.5, y: 13.5}
   numSlots: 1
   uiButton: {fileID: 0}
@@ -4957,8 +4276,7 @@ MonoBehaviour:
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -4992,10 +4310,10 @@ MonoBehaviour:
   linkedUiID: 0
   relativeRect:
     serializedVersion: 2
-    x: 315.65622
-    y: 21.652021
-    width: 11.94
-    height: 39.8
+    x: 314.07
+    y: 21.543215
+    width: 11.88
+    height: 39.6
   relativePosition: {x: 95, y: 13.5}
   numSlots: 1
   uiButton: {fileID: 0}
@@ -5027,8 +4345,7 @@ MonoBehaviour:
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -5062,10 +4379,10 @@ MonoBehaviour:
   linkedUiID: 0
   relativeRect:
     serializedVersion: 2
-    x: 4.9840455
-    y: 102.64662
-    width: 11.94
-    height: 39.8
+    x: 4.959
+    y: 102.1308
+    width: 11.88
+    height: 39.6
   relativePosition: {x: 1.5, y: 64}
   numSlots: 1
   uiButton: {fileID: 0}
@@ -5097,8 +4414,7 @@ MonoBehaviour:
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -5132,10 +4448,10 @@ MonoBehaviour:
   linkedUiID: 0
   relativeRect:
     serializedVersion: 2
-    x: 315.65622
-    y: 102.64662
-    width: 11.94
-    height: 39.8
+    x: 314.07
+    y: 102.1308
+    width: 11.88
+    height: 39.6
   relativePosition: {x: 95, y: 64}
   numSlots: 1
   uiButton: {fileID: 0}
@@ -5167,8 +4483,7 @@ MonoBehaviour:
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -5186,7 +4501,7 @@ MonoBehaviour:
   isLocked: 0
   id: 11
   title: Hotspot
-  manualSize: {x: 38.799995, y: 6.331471}
+  manualSize: {x: 38.8, y: 6.3314714}
   positionType: 3
   manualPosition: {x: 50, y: 43.6}
   positionSmoothing: 0
@@ -5200,7 +4515,6 @@ MonoBehaviour:
   actionListOnTurnOn: {fileID: 0}
   actionListOnTurnOff: {fileID: 0}
   updateWhenFadeOut: 1
-  hideDuringSaveScreenshots: 1
   fitWithinScreen: 1
   backgroundTexture: {fileID: 0}
   visibleElements:
@@ -5257,20 +4571,19 @@ MonoBehaviour:
   speechProximityLimit: 0
   speechProximityDistance: 10
   deleteUIWhenTurnOff: 0
-  biggestElementSize: {x: 160.63199, y: 14.752327}
+  biggestElementSize: {x: 230.472, y: 25.072626}
   rect:
     serializedVersion: 2
-    x: 126.684006
-    y: 94.21184
-    width: 160.63199
-    height: 14.752327
+    x: 236.764
+    y: 160.11967
+    width: 230.472
+    height: 25.072626
   showInFilter: 1
 --- !u!114 &11400122
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -5306,8 +4619,8 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 160.63199
-    height: 14.752327
+    width: 230.472
+    height: 25.072626
   relativePosition: {x: 0, y: 0}
   numSlots: 1
   uiText: {fileID: 0}
@@ -5328,8 +4641,7 @@ MonoBehaviour:
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -5453,8 +4765,7 @@ MonoBehaviour:
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -5523,8 +4834,7 @@ MonoBehaviour:
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -5593,8 +4903,7 @@ MonoBehaviour:
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -5718,8 +5027,7 @@ MonoBehaviour:
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -5788,8 +5096,7 @@ MonoBehaviour:
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -5858,8 +5165,7 @@ MonoBehaviour:
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -5917,8 +5223,7 @@ MonoBehaviour:
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -5976,8 +5281,7 @@ MonoBehaviour:
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0

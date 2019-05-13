@@ -1,7 +1,7 @@
 /*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2019
+ *	by Chris Burton, 2013-2018
  *	
  *	"ActionScene.cs"
  * 
@@ -32,7 +32,6 @@ namespace AC
 
 		public bool relativePosition = false;
 		public Marker relativeMarker;
-		protected Marker runtimeRelativeMarker;
 		public int relativeMarkerID;
 		public int relativeMarkerParameterID = -1;
 		public bool forceReload = false;
@@ -51,7 +50,7 @@ namespace AC
 		{
 			sceneNumber = AssignInteger (parameters, sceneNumberParameterID, sceneNumber);
 			sceneName = AssignString (parameters, sceneNameParameterID, sceneName);
-			runtimeRelativeMarker = AssignFile <Marker> (parameters, relativeMarkerParameterID, relativeMarkerID, relativeMarker);
+			relativeMarker = AssignFile <Marker> (parameters, relativeMarkerParameterID, relativeMarkerID, relativeMarker);
 		}
 		
 		
@@ -90,9 +89,9 @@ namespace AC
 			{
 				SceneInfo sceneInfo = new SceneInfo (chooseSceneBy, AdvGame.ConvertTokens (sceneName), sceneNumber);
 
-				if (!onlyPreload && relativePosition && runtimeRelativeMarker != null)
+				if (!onlyPreload && relativePosition && relativeMarker != null)
 				{
-					KickStarter.sceneChanger.SetRelativePosition (runtimeRelativeMarker.transform);
+					KickStarter.sceneChanger.SetRelativePosition (relativeMarker.transform);
 				}
 
 				if (onlyPreload && !relativePosition)
@@ -207,7 +206,7 @@ namespace AC
 		}
 
 
-		override public void AssignConstantIDs (bool saveScriptsToo, bool fromAssetFile)
+		override public void AssignConstantIDs (bool saveScriptsToo)
 		{
 			AssignConstantID (relativeMarker, relativeMarkerID, relativeMarkerParameterID);
 		}
@@ -217,9 +216,9 @@ namespace AC
 		{
 			if (chooseSceneBy == ChooseSceneBy.Name)
 			{
-				return sceneName;
+				return (" (" + sceneName + ")");
 			}
-			return sceneNumber.ToString ();
+			return (" (" + sceneNumber + ")");
 		}
 
 		#endif

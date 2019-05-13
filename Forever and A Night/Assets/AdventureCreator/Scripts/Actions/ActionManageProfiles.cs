@@ -1,7 +1,7 @@
 ﻿/*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2019
+ *	by Chris Burton, 2013-2018
  *	
  *	"ActionManageProfiles.cs"
  * 
@@ -259,7 +259,7 @@ namespace AC
 		
 		public override string SetLabel ()
 		{
-			return manageProfileType.ToString ();
+			return (" (" + manageProfileType.ToString () + ")");
 		}
 		
 		#endif

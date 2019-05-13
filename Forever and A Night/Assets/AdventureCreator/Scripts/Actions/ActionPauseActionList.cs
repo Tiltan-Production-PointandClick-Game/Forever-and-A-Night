@@ -1,7 +1,7 @@
 ﻿/*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2019
+ *	by Chris Burton, 2013-2018
  *	
  *	"ActionPauseActionList.cs"
  * 
@@ -31,12 +31,10 @@ namespace AC
 		public bool rerunPausedActions;
 
 		public ActionList actionList;
-		protected ActionList _runtimeActionList;
-
 		public int constantID = 0;
 		public int parameterID = -1;
 
-		protected RuntimeActionList[] runtimeActionLists = new RuntimeActionList[0];
+		private RuntimeActionList[] runtimeActionLists = new RuntimeActionList[0];
 
 		
 		public ActionPauseActionList ()
@@ -52,7 +50,7 @@ namespace AC
 		{
 			if (listSource == ActionRunActionList.ListSource.InScene)
 			{
-				_runtimeActionList = AssignFile <ActionList> (parameters, parameterID, constantID, actionList);
+				actionList = AssignFile <ActionList> (parameters, parameterID, constantID, actionList);
 			}
 		}
 		
@@ -75,9 +73,9 @@ namespace AC
 							return defaultPauseTime;
 						}
 					}
-					else if (listSource == ActionRunActionList.ListSource.InScene && _runtimeActionList != null && !_runtimeActionList.actions.Contains (this))
+					else if (listSource == ActionRunActionList.ListSource.InScene && actionList != null && !actionList.actions.Contains (this))
 					{
-						_runtimeActionList.Pause ();
+						actionList.Pause ();
 
 						if (willWait)
 						{
@@ -91,9 +89,9 @@ namespace AC
 					{
 						KickStarter.actionListAssetManager.Resume (actionListAsset, rerunPausedActions);
 					}
-					else if (listSource == ActionRunActionList.ListSource.InScene && _runtimeActionList != null && !_runtimeActionList.actions.Contains (this))
+					else if (listSource == ActionRunActionList.ListSource.InScene && actionList != null && !actionList.actions.Contains (this))
 					{
-						KickStarter.actionListManager.Resume (_runtimeActionList, rerunPausedActions);
+						KickStarter.actionListManager.Resume (actionList, rerunPausedActions);
 					}
 				}
 			}
@@ -111,7 +109,7 @@ namespace AC
 				}
 				else if (listSource == ActionRunActionList.ListSource.InScene)
 				{
-					if (KickStarter.actionListManager.IsListRunning (_runtimeActionList))
+					if (KickStarter.actionListManager.IsListRunning (actionList))
 					{
 						return defaultPauseTime;
 					}
@@ -171,7 +169,7 @@ namespace AC
 		}
 
 
-		override public void AssignConstantIDs (bool saveScriptsToo, bool fromAssetFile)
+		override public void AssignConstantIDs (bool saveScriptsToo)
 		{
 			if (listSource == ActionRunActionList.ListSource.InScene)
 			{
@@ -182,15 +180,18 @@ namespace AC
 		
 		public override string SetLabel ()
 		{
+			string labelAdd = "";
+			
 			if (listSource == ActionRunActionList.ListSource.InScene && actionList != null)
 			{
-				return pauseResume.ToString () + " " + actionList.name;
+				labelAdd += " (" + pauseResume.ToString () + " " + actionList.name + ")";
 			}
 			else if (listSource == ActionRunActionList.ListSource.AssetFile && actionList != null)
 			{
-				return pauseResume.ToString () + " " + actionList.name;
+				labelAdd += " (" + pauseResume.ToString () + " " + actionList.name + ")";
 			}
-			return string.Empty;
+			
+			return labelAdd;
 		}
 		
 		#endif

@@ -7,6 +7,7 @@ namespace AC
 {
 
 	[CustomEditor (typeof (ActionList))]
+
 	[System.Serializable]
 	public class ActionListEditor : Editor
 	{
@@ -620,39 +621,27 @@ namespace AC
 			foreach (ActionParameter _parameter in parameters)
 			{
 				EditorGUILayout.BeginHorizontal ();
+				EditorGUILayout.LabelField (_parameter.ID.ToString (), GUILayout.Width (10f));
+				_parameter.label = EditorGUILayout.TextField (_parameter.label);
+				_parameter.parameterType = (ParameterType) EditorGUILayout.EnumPopup (_parameter.parameterType);
 
-				if (Application.isPlaying)
+				if (GUILayout.Button ("", CustomStyles.IconCog))
 				{
-					EditorGUILayout.LabelField (_parameter.ID.ToString () + ": " + _parameter.parameterType.ToString () + " '" + _parameter.label + "'");
-					EditorGUILayout.LabelField ("Current value: '" + _parameter.GetLabel () + "'");
-				}
-				else
-				{
-					EditorGUILayout.LabelField (_parameter.ID.ToString (), GUILayout.Width (10f));
-					_parameter.label = EditorGUILayout.TextField (_parameter.label);
-					_parameter.parameterType = (ParameterType) EditorGUILayout.EnumPopup (_parameter.parameterType);
-					
-					if (GUILayout.Button ("", CustomStyles.IconCog))
-					{
-						ParameterSideMenu (actionList, actionListAsset, parameters.Count, parameters.IndexOf (_parameter));
-					}
+					ParameterSideMenu (actionList, actionListAsset, parameters.Count, parameters.IndexOf (_parameter));
 				}
 
 				EditorGUILayout.EndHorizontal ();
 			}
 
-			if (!Application.isPlaying)
+			if (parameters.Count > 0)
 			{
-				if (parameters.Count > 0)
-				{
-					EditorGUILayout.Space ();
-				}
+				EditorGUILayout.Space ();
+			}
 
-				if (GUILayout.Button ("Create new parameter", EditorStyles.miniButton))
-				{
-					ActionParameter newParameter = new ActionParameter (ActionListEditor.GetParameterIDArray (parameters));
-					parameters.Add (newParameter);
-				}
+			if (GUILayout.Button ("Create new parameter", EditorStyles.miniButton))
+			{
+				ActionParameter newParameter = new ActionParameter (ActionListEditor.GetParameterIDArray (parameters));
+				parameters.Add (newParameter);
 			}
 		}
 

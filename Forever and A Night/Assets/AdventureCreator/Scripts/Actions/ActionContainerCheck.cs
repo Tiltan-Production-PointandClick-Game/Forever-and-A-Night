@@ -1,7 +1,7 @@
 /*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2019
+ *	by Chris Burton, 2013-2018
  *	
  *	"ActionContainerCheck.cs"
  * 
@@ -32,7 +32,6 @@ namespace AC
 		public int parameterID = -1;
 		public int constantID = 0;
 		public Container container;
-		protected Container runtimeContainer;
 
 		public bool doCount;
 		public int intValue = 1;
@@ -55,24 +54,24 @@ namespace AC
 
 		override public void AssignValues (List<ActionParameter> parameters)
 		{
-			runtimeContainer = AssignFile <Container> (parameters, parameterID, constantID, container);
+			container = AssignFile <Container> (parameters, parameterID, constantID, container);
 			invID = AssignInvItemID (parameters, invParameterID, invID);
 
 			if (useActive)
 			{
-				runtimeContainer = KickStarter.playerInput.activeContainer;
+				container = KickStarter.playerInput.activeContainer;
 			}
 		}
 
 		
 		override public bool CheckCondition ()
 		{
-			if (runtimeContainer == null)
+			if (container == null)
 			{
 				return false;
 			}
 
-			int count = runtimeContainer.GetCount (invID);
+			int count = container.GetCount (invID);
 			
 			if (doCount)
 			{
@@ -228,7 +227,7 @@ namespace AC
 		}
 
 
-		override public void AssignConstantIDs (bool saveScriptsToo, bool fromAssetFile)
+		override public void AssignConstantIDs (bool saveScriptsToo)
 		{
 			AssignConstantID <Container> (container, constantID, parameterID);
 		}
@@ -236,20 +235,20 @@ namespace AC
 		
 		override public string SetLabel ()
 		{
-			if (inventoryManager == null)
+			if (!inventoryManager)
 			{
 				inventoryManager = AdvGame.GetReferences ().inventoryManager;
 			}
 
-			if (inventoryManager != null)
+			if (inventoryManager)
 			{
 				if (inventoryManager.items.Count > 0 && inventoryManager.items.Count > invNumber && invNumber > -1)
 				{
-					return inventoryManager.items[invNumber].label;
+					return (" (" + inventoryManager.items[invNumber].label + ")");
 				}
 			}
 			
-			return string.Empty;
+			return "";
 		}
 
 		#endif

@@ -1,7 +1,7 @@
 ﻿/*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2019
+ *	by Chris Burton, 2013-2018
  *	
  *	"MenuJournal.cs"
  * 
@@ -252,9 +252,8 @@ namespace AC
 			}
 			else if (journalType == JournalType.NewJournal)
 			{
-				if (pages == null)
+				if (pages == null || pages.Count == 0)
 				{
-					pages = new List<JournalPage>();
 					pages.Clear ();
 					pages.Add (new JournalPage ());
 				}
@@ -300,13 +299,9 @@ namespace AC
 					showPage = CustomGUILayout.IntSlider ("Preview page #:", showPage, 1, numPages, apiPrefix + ".showPage", "The index number of the current page being shown ");
 					startFromPage = CustomGUILayout.Toggle ("Start from this page?", startFromPage, apiPrefix + ".startFromPage", "If True, then the page index above will be the first open when the game begins");
 				}
-				else if (numPages == 1)
-				{
-					showPage = 1;
-				}
 				else
 				{
-					showPage = 0;
+					showPage = 1;
 				}
 			}
 
@@ -347,7 +342,10 @@ namespace AC
 			GenericMenu menu = new GenericMenu ();
 
 			menu.AddItem (new GUIContent ("Insert after"), false, MenuCallback, "Insert after");
-			menu.AddItem (new GUIContent ("Delete"), false, MenuCallback, "Delete");
+			if (pages.Count > 1)
+			{
+				menu.AddItem (new GUIContent ("Delete"), false, MenuCallback, "Delete");
+			}
 
 			menu.AddSeparator ("");
 

@@ -1,7 +1,7 @@
 ﻿/*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2019
+ *	by Chris Burton, 2013-2018
  *	
  *	"ActionComment.cs"
  * 
@@ -85,11 +85,11 @@ namespace AC
 				int i = commentText.IndexOf ("\n");
 				if (i > 0)
 				{
-					return commentText.Substring (0, i);
+					return (" (" + commentText.Substring (0, i) + ")");
 				}
-				return commentText;
+				return (" (" + commentText + ")");
 			}
-			return string.Empty;
+			return "";
 		}
 
 

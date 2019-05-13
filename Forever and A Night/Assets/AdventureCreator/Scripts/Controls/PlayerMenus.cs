@@ -1,7 +1,7 @@
 /*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2019
+ *	by Chris Burton, 2013-2018
  *	
  *	"PlayerMenus.cs"
  * 
@@ -29,8 +29,8 @@ namespace AC
 	public class PlayerMenus : MonoBehaviour
 	{
 
-		private bool isMouseOverMenu = false;
-		private bool isMouseOverInteractionMenu = false;
+		private bool mouseOverMenu = false;
+		private bool mouseOverInteractionMenu = false;
 		private bool canKeyboardControl = false;
 		private bool interactionMenuIsOn = false;
 		private bool interactionMenuPauses = false;
@@ -42,7 +42,7 @@ namespace AC
 		private bool foundMouseOverInteractionMenu = false;
 		private bool foundMouseOverInventory = false;
 		private bool foundCanKeyboardControl = false;
-		private bool isMouseOverInventory = false;
+		private bool mouseOverInventory = false;
 
 		private bool isPaused;
 		private string hotspotLabel = string.Empty;
@@ -63,8 +63,8 @@ namespace AC
 		private InvItem oldHoverItem;
 		private int doResizeMenus = 0;
 
-		private Menu mouseOverMenu;
-		private MenuElement mouseOverElement;
+		private Menu mouseOverMenuName;
+		private MenuElement mouseOverElementName;
 		private int mouseOverElementSlot;
 		
 		private Menu crossFadeTo;
@@ -102,10 +102,7 @@ namespace AC
 
 			foreach (Menu menu in menus)
 			{
-				if (menu.menuSource == MenuSource.UnityUiPrefab &&
-					menu.canvas != null &&
-					menu.canvas.gameObject != null &&
-					!menu.GetsDuplicated ())
+				if (menu.menuSource == MenuSource.UnityUiPrefab && menu.canvas != null && menu.canvas.gameObject != null)
 				{
 					Destroy (menu.canvas.gameObject);
 				}
@@ -390,7 +387,7 @@ namespace AC
 					Event currentEvent = Event.current;
 					if (currentEvent.isKey && currentEvent.type == EventType.KeyDown)
 					{
-						selectedInputBox.CheckForInput (currentEvent.keyCode.ToString (), currentEvent.character.ToString (), currentEvent.shift, selectedInputBoxMenuName);
+						selectedInputBox.CheckForInput (currentEvent.keyCode.ToString (), currentEvent.shift, selectedInputBoxMenuName);
 					}
 				}
 				
@@ -473,11 +470,6 @@ namespace AC
 				if (!menu.HasTransition () && menu.IsFading ())
 				{
 					// Stop until no longer "fading" so that it appears in right place
-					return;
-				}
-
-				if (menu.hideDuringSaveScreenshots && KickStarter.saveSystem.IsTakingSaveScreenshot)
-				{
 					return;
 				}
 				
@@ -698,7 +690,7 @@ namespace AC
 					}
 					else if (menu.uiPositionType == UIPositionType.OnHotspot)
 					{
-						if (isMouseOverMenu || canKeyboardControl) // Should be isMouseOverInventory, not isMouseOverMenu?
+						if (mouseOverMenu || canKeyboardControl) // Should be mouseOverInventory, not mouseOverMenu?
 						{
 							if (/*menu.appearType == AppearType.OnInteraction &&*/
 							    menu.GetTargetInvItem () == null &&
@@ -833,7 +825,7 @@ namespace AC
 			}
 			else if (menu.positionType == AC_PositionType.OnHotspot)
 			{
-				if (isMouseOverInventory)
+				if (mouseOverInventory)
 				{
 					if (/*menu.appearType == AppearType.OnInteraction &&*/
 					    menu.GetTargetInvItem () == null &&
@@ -1327,7 +1319,7 @@ namespace AC
 			
 			else if (menu.appearType == AppearType.OnInteraction)
 			{
-				if (KickStarter.player != null && KickStarter.settingsManager.hotspotDetection != HotspotDetection.MouseOver && KickStarter.player.hotspotDetector != null && KickStarter.settingsManager.closeInteractionMenusIfPlayerLeavesVicinity)
+				if (KickStarter.player != null && KickStarter.player.hotspotDetector != null && KickStarter.settingsManager.closeInteractionMenusIfPlayerLeavesVicinity)
 				{
 					if (menu.GetTargetHotspot () != null && !KickStarter.player.hotspotDetector.IsHotspotInTrigger (menu.GetTargetHotspot ()))
 					{
@@ -1504,7 +1496,7 @@ namespace AC
 			if (KickStarter.settingsManager.inputMethod == InputMethod.MouseAndKeyboard && menu.IsPointInside (KickStarter.playerInput.GetInvertedMouse ()))
 			{
 				menuIdentifier = menu.IDString;
-				mouseOverMenu = menu;
+				mouseOverMenuName = menu;
 			}
 
 			for (int j=0; j<menu.NumElements; j++)
@@ -1574,7 +1566,7 @@ namespace AC
 							}
 							
 							elementIdentifier = menu.IDString + menu.elements[j].IDString + i.ToString ();
-							mouseOverElement = menu.elements[j];
+							mouseOverElementName = menu.elements[j];
 							mouseOverElementSlot = i;
 						}
 
@@ -1611,7 +1603,7 @@ namespace AC
 									else
 									{
 										foundMouseOverInventory = true;
-										if (!isMouseOverInteractionMenu)
+										if (!mouseOverInteractionMenu)
 										{
 											InvItem newHoverItem = inventoryBox.GetItem (i);
 											KickStarter.runtimeInventory.SetHoverItem (newHoverItem, inventoryBox);
@@ -1904,7 +1896,7 @@ namespace AC
 
 			return false;
 		}
-
+		
 		
 		private void CheckClicks (AC.Menu menu)
 		{
@@ -1917,8 +1909,8 @@ namespace AC
 			if (KickStarter.settingsManager.inputMethod == InputMethod.MouseAndKeyboard && menu.IsPointInside (KickStarter.playerInput.GetInvertedMouse ()))
 			{
 				menuIdentifier = menu.IDString;
-				mouseOverMenu = menu;
-				mouseOverElement = null;
+				mouseOverMenuName = menu;
+				mouseOverElementName = null;
 				mouseOverElementSlot = 0;
 			}
 
@@ -2084,7 +2076,7 @@ namespace AC
 				int languageNumber = Options.GetLanguage ();
 				hotspotLabel = KickStarter.playerInteraction.GetLabel (languageNumber);
 
-				if (!interactionMenuIsOn || !isMouseOverInteractionMenu)
+				if (!interactionMenuIsOn || !mouseOverInteractionMenu)
 				{
 					oldHoverItem = KickStarter.runtimeInventory.hoverItem;
 					KickStarter.runtimeInventory.hoverItem = null;
@@ -2139,14 +2131,14 @@ namespace AC
 					}
 				}
 
-				isMouseOverMenu = foundMouseOverMenu;
-				isMouseOverInteractionMenu = foundMouseOverInteractionMenu;
-				isMouseOverInventory = foundMouseOverInventory;
+				mouseOverMenu = foundMouseOverMenu;
+				mouseOverInteractionMenu = foundMouseOverInteractionMenu;
+				mouseOverInventory = foundMouseOverInventory;
 				canKeyboardControl = foundCanKeyboardControl;
 
-				if (mouseOverMenu != null && (lastElementIdentifier != elementIdentifier || lastMenuIdentifier != menuIdentifier))
+				if (mouseOverMenuName != null && (lastElementIdentifier != elementIdentifier || lastMenuIdentifier != menuIdentifier))
 				{
-					KickStarter.eventManager.Call_OnMouseOverMenuElement (mouseOverMenu, mouseOverElement, mouseOverElementSlot);
+					KickStarter.eventManager.Call_OnMouseOverMenuElement (mouseOverMenuName, mouseOverElementName, mouseOverElementSlot);
 				}
 
 				lastElementIdentifier = elementIdentifier;
@@ -2191,19 +2183,17 @@ namespace AC
 		public void SelectInputBox (MenuInput input)
 		{
 			selectedInputBox = input;
-
+			
 			// Mobile keyboard
 			#if (UNITY_IPHONE || UNITY_ANDROID) && !UNITY_EDITOR
-			TouchScreenKeyboardType keyboardType = (input.inputType == AC_InputType.NumbericOnly)
-													? TouchScreenKeyboardType.NumberPad
-													: TouchScreenKeyboardType.ASCIICapable;
-			
-			#if UNITY_2018_3_OR_NEWER
-			keyboard.characterLimit = input.characterLimit;
-			#endif
-
-			keyboard = TouchScreenKeyboard.Open (input.label, keyboardType, false, false, false, false, string.Empty);
-
+			if (input.inputType == AC_InputType.NumbericOnly)
+			{
+				keyboard = TouchScreenKeyboard.Open (input.label, TouchScreenKeyboardType.NumberPad, false, false, false, false, "");
+			}
+			else
+			{
+				keyboard = TouchScreenKeyboard.Open (input.label, TouchScreenKeyboardType.ASCIICapable, false, false, false, false, "");
+			}
 			#endif
 		}
 
@@ -2364,13 +2354,12 @@ namespace AC
 						Menu dupMenu = ScriptableObject.CreateInstance <Menu>();
 						dupSpeechMenus.Add (dupMenu);
 						dupMenu.DuplicateInGame (menu);
-						dupMenu.SetSpeech (speech);
-
 						if (dupMenu.IsUnityUI ())
 						{
 							dupMenu.LoadUnityUI ();
 						}
 						dupMenu.Recalculate ();
+						dupMenu.SetSpeech (speech);
 						dupMenu.TurnOn (true);
 					}
 				}
@@ -2651,10 +2640,9 @@ namespace AC
 
 		/**
 		 * <summary>Gets a List of all defined Menus.</summary>
-		 * <param name = "includeDuplicatesAndCustom">If True, then duplicate and custom Menus will also be included in the returned List</param>
 		 * <returns>A List of all defined Menus</returns>
 		 */
-		public static List<Menu> GetMenus (bool includeDuplicatesAndCustom = false)
+		public static List<Menu> GetMenus ()
 		{
 			if (KickStarter.playerMenus)
 			{
@@ -2664,25 +2652,7 @@ namespace AC
 					return null;
 				}
 
-				if (!includeDuplicatesAndCustom)
-				{
-					return KickStarter.playerMenus.menus;
-				}
-
-				List<Menu> allMenus = new List<Menu>();
-				foreach (Menu menu in KickStarter.playerMenus.menus)
-				{
-					allMenus.Add (menu);
-				}
-				foreach (Menu menu in KickStarter.playerMenus.dupSpeechMenus)
-				{
-					allMenus.Add (menu);
-				}
-				foreach (Menu menu in KickStarter.playerMenus.customMenus)
-				{
-					allMenus.Add (menu);
-				}
-				return allMenus;
+				return KickStarter.playerMenus.menus;
 			}
 			return null;
 		}
@@ -3166,7 +3136,7 @@ namespace AC
 		 */
 		public bool IsMouseOverMenu ()
 		{
-			return isMouseOverMenu;
+			return mouseOverMenu;
 		}
 
 
@@ -3175,7 +3145,7 @@ namespace AC
 		 */
 		public bool IsMouseOverInventory ()
 		{
-			return isMouseOverInventory;
+			return mouseOverInventory;
 		}
 
 
@@ -3185,9 +3155,8 @@ namespace AC
 		 */
 		public bool IsMouseOverInteractionMenu ()
 		{
-			return isMouseOverInteractionMenu;
+			return mouseOverInteractionMenu;
 		}
-
 
 		/**
 		 * <summary>Checks if any Menu with appearType = AppearType.OnInteraction is on.</summary>
@@ -3671,50 +3640,6 @@ namespace AC
 						}
 					}
 				}
-			}
-		}
-
-
-		/**
-		 * Backs up the state of the menu and cursor systems, and disables them, before taking a screenshot.
-		 */
-		public void PreScreenshotBackup ()
-		{
-			foreach (Menu menu in menus)
-			{
-				menu.PreScreenshotBackup ();
-			}
-
-			foreach (Menu dupSpeechMenu in dupSpeechMenus)
-			{
-				dupSpeechMenu.PreScreenshotBackup ();
-			}
-
-			foreach (Menu customMenu in customMenus)
-			{
-				customMenu.PreScreenshotBackup ();
-			}
-		}
-
-
-		/**
-		 * Restores the menu and cursor systems to their former states, after taking a screenshot.
-		 */
-		public void PostScreenshotBackup ()
-		{
-			foreach (Menu menu in menus)
-			{
-				menu.PostScreenshotBackup ();
-			}
-
-			foreach (Menu dupSpeechMenu in dupSpeechMenus)
-			{
-				dupSpeechMenu.PostScreenshotBackup ();
-			}
-
-			foreach (Menu customMenu in customMenus)
-			{
-				customMenu.PostScreenshotBackup ();
 			}
 		}
 

@@ -1,7 +1,7 @@
 ﻿/*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2019
+ *	by Chris Burton, 2013-2018
  *	
  *	"ActionMusic.cs"
  * 
@@ -35,10 +35,7 @@ namespace AC
 		public bool resumeFromStart = true;
 		public bool resumeIfPlayedBefore = false;
 
-		public bool willWaitComplete;
 		public MusicAction musicAction;
-
-		private Music music;
 
 		
 		public ActionMusic ()
@@ -54,24 +51,15 @@ namespace AC
 		{
 			trackID = AssignInteger (parameters, trackIDParameterID, trackID);
 			fadeTime = AssignFloat (parameters, fadeTimeParameterID, fadeTime);
-
-			music = KickStarter.stateHandler.GetMusicEngine ();
 		}
 		
 		
 		override public float Run ()
 		{
-			if (music == null) return 0f;
-
 			if (!isRunning)
 			{
 				isRunning = true;
 				float waitTime = Perform (fadeTime);
-
-				if (CanWaitComplete () && willWaitComplete)
-				{
-					return defaultPauseTime;
-				}
 
 				if (willWait && waitTime > 0f && !isQueued)
 				{
@@ -80,47 +68,39 @@ namespace AC
 			}
 			else
 			{
-				if (CanWaitComplete () && willWaitComplete && music.GetCurrentTrackID () == trackID && music.IsPlaying ())
-				{
-					return defaultPauseTime;
-				}
-
 				isRunning = false;
 			}
 			return 0f;
 		}
-
-
+		
+		
 		override public void Skip ()
 		{
-			if (music == null) return;	
 			Perform (0f);
-		}
-
-
-		private bool CanWaitComplete ()
-		{
-			return (!loop && !isQueued && (musicAction == MusicAction.Play || musicAction == MusicAction.Crossfade));
 		}
 
 
 		private float Perform (float _time)
 		{
-			if (musicAction == MusicAction.Play)
+			Music music = KickStarter.stateHandler.GetMusicEngine ();
+			if (music != null)
 			{
-				return music.Play (trackID, loop, isQueued, _time, resumeIfPlayedBefore);
-			}
-			else if (musicAction == MusicAction.Crossfade)
-			{
-				return music.Crossfade (trackID, loop, isQueued, _time, resumeIfPlayedBefore);
-			}
-			else if (musicAction == MusicAction.Stop)
-			{
-				return music.StopAll (_time);
-			}
-			else if (musicAction == MusicAction.ResumeLastStopped)
-			{
-				return music.ResumeLastQueue (_time, resumeFromStart);
+				if (musicAction == MusicAction.Play)
+				{
+					return music.Play (trackID, loop, isQueued, _time, resumeIfPlayedBefore);
+				}
+				else if (musicAction == MusicAction.Crossfade)
+				{
+					return music.Crossfade (trackID, loop, isQueued, _time, resumeIfPlayedBefore);
+				}
+				else if (musicAction == MusicAction.Stop)
+				{
+					return music.StopAll (_time);
+				}
+				else if (musicAction == MusicAction.ResumeLastStopped)
+				{
+					return music.ResumeLastQueue (_time, resumeFromStart);
+				}
 			}
 			return 0f;
 		}
@@ -165,23 +145,15 @@ namespace AC
 					resumeFromStart = EditorGUILayout.Toggle ("Restart track?", resumeFromStart);
 				}
 
-				if (CanWaitComplete ())
-				{
-					willWaitComplete = EditorGUILayout.Toggle ("Wait until track completes?", willWaitComplete);
-				}
-
 				fadeTimeParameterID = Action.ChooseParameterGUI (fadeLabel, parameters, fadeTimeParameterID, ParameterType.Float);
 				if (fadeTimeParameterID < 0)
 				{
 					fadeTime = EditorGUILayout.Slider (fadeLabel, fadeTime, 0f, 10f);
 				}
 
-				if (!CanWaitComplete () || !willWaitComplete)
+				if (fadeTime > 0f && !isQueued)
 				{
-					if (fadeTime > 0f && !isQueued)
-					{
-						willWait = EditorGUILayout.Toggle ("Wait until transition ends?", willWait);
-					}
+					willWait = EditorGUILayout.Toggle ("Wait until transition ends?", willWait);
 				}
 			}
 			else
@@ -246,7 +218,7 @@ namespace AC
 		
 		override public string SetLabel ()
 		{
-			string labelAdd = musicAction.ToString ();
+			string labelAdd = " (" + musicAction.ToString ();
 			if (musicAction == MusicAction.Play &&
 			    AdvGame.GetReferences ().settingsManager != null &&
 			    AdvGame.GetReferences ().settingsManager.musicStorages != null)
@@ -257,6 +229,7 @@ namespace AC
 					labelAdd += " " + AdvGame.GetReferences ().settingsManager.musicStorages[trackIndex].audioClip.name.ToString ();
 				}
 			}
+			labelAdd += ")";
 
 			return labelAdd;
 		}

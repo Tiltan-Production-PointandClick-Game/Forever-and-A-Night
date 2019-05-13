@@ -1,7 +1,7 @@
 /*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2019
+ *	by Chris Burton, 2013-2018
  *	
  *	"ActionInventorySet.cs"
  * 
@@ -261,7 +261,8 @@ namespace AC
 		
 		override public string SetLabel ()
 		{
-			string labelItem = string.Empty;
+			string labelAdd = "";
+			string labelItem = "";
 
 			if (!inventoryManager)
 			{
@@ -275,12 +276,14 @@ namespace AC
 			
 			if (invAction == InvAction.Remove)
 			{
-				return "Remove" + labelItem;
+				labelAdd = " (Remove" + labelItem + ")";
 			}
 			else
 			{
-				return "Add" + labelItem;
+				labelAdd = " (Add" + labelItem + ")";
 			}
+		
+			return labelAdd;
 		}
 
 
@@ -335,19 +338,11 @@ namespace AC
 
 		public override int GetInventoryReferences (List<ActionParameter> parameters, int _invID)
 		{
-			int numFound = 0;
-
-			if (parameterID < 0 && invID == _invID)
+			if (invID == _invID)
 			{
-				numFound ++;
+				return 1;
 			}
-
-			if (invAction == InvAction.Replace && replaceParameterID < 0 && invIDReplace == _invID)
-			{
-				numFound ++;
-			}
-
-			return numFound;
+			return 0;
 		}
 
 		#endif

@@ -1,7 +1,7 @@
 ﻿/*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2019
+ *	by Chris Burton, 2013-2018
  *	
  *	"ActionTransformRecord.cs"
  * 
@@ -26,7 +26,6 @@ namespace AC
 		public GameObject obToRead;
 		public int obToReadParameterID = -1;
 		public int obToReadConstantID = 0;
-		protected GameObject runtimeObToRead;
 
 		public TransformRecordType transformRecordType = TransformRecordType.Position;
 		public enum TransformRecordType { Position, Rotation, Scale };
@@ -47,13 +46,13 @@ namespace AC
 
 		override public void AssignValues (List<ActionParameter> parameters)
 		{
-			runtimeObToRead = AssignFile (parameters, obToReadParameterID, obToReadConstantID, obToRead);
+			obToRead = AssignFile (parameters, obToReadParameterID, obToReadConstantID, obToRead);
 		}
 
 
 		override public float Run ()	
 		{
-			if (runtimeObToRead != null)
+			if (obToRead != null)
 			{
 				GVar variable = null;
 				if (variableLocation == VariableLocation.Global)
@@ -72,33 +71,33 @@ namespace AC
 						case TransformRecordType.Position:
 						if (transformLocation == VariableLocation.Global)
 						{
-							variable.SetVector3Value (runtimeObToRead.transform.position);
+							variable.SetVector3Value (obToRead.transform.position);
 						}
 						else if (transformLocation == VariableLocation.Local)
 						{
-							variable.SetVector3Value (runtimeObToRead.transform.localPosition);
+							variable.SetVector3Value (obToRead.transform.localPosition);
 						}
 						break;
 
 						case TransformRecordType.Rotation:
 						if (transformLocation == VariableLocation.Global)
 						{
-							variable.SetVector3Value (runtimeObToRead.transform.eulerAngles);
+							variable.SetVector3Value (obToRead.transform.eulerAngles);
 						}
 						else if (transformLocation == VariableLocation.Local)
 						{
-							variable.SetVector3Value (runtimeObToRead.transform.localEulerAngles);
+							variable.SetVector3Value (obToRead.transform.localEulerAngles);
 						}
 						break;
 
 						case TransformRecordType.Scale:
 						if (transformLocation == VariableLocation.Global)
 						{
-							variable.SetVector3Value (runtimeObToRead.transform.lossyScale);
+							variable.SetVector3Value (obToRead.transform.lossyScale);
 						}
 						else if (transformLocation == VariableLocation.Local)
 						{
-							variable.SetVector3Value (runtimeObToRead.transform.localScale);
+							variable.SetVector3Value (obToRead.transform.localScale);
 						}
 						break;
 					}
@@ -155,7 +154,7 @@ namespace AC
 		}
 
 
-		override public void AssignConstantIDs (bool saveScriptsToo, bool fromAssetFile)
+		override public void AssignConstantIDs (bool saveScriptsToo = false)
 		{
 			AssignConstantID (obToRead, obToReadConstantID, obToReadParameterID);
 		}
@@ -163,11 +162,13 @@ namespace AC
 
 		override public string SetLabel ()
 		{
-			if (obToRead != null)
+			string labelAdd = "";
+			if (obToRead)
 			{
-				return obToRead.name + " " + transformRecordType.ToString ();
+				labelAdd = " (" + obToRead.name + " " + transformRecordType.ToString () + ")";
 			}
-			return string.Empty;
+			
+			return labelAdd;
 		}
 
 		#endif

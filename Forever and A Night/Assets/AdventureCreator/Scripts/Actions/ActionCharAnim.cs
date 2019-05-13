@@ -1,7 +1,7 @@
 /*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2019
+ *	by Chris Burton, 2013-2018
  *	
  *	"ActionCharAnim.cs"
  * 
@@ -29,7 +29,6 @@ namespace AC
 
 		public bool isPlayer;
 		public Char animChar;
-		protected Char runtimeAnimChar;
 		public AnimationClip clip;
 		public string clip2D;
 		public int clip2DParameterID = -1;
@@ -64,10 +63,8 @@ namespace AC
 		public string parameterName;
 		public int parameterNameID = -1;
 		public float parameterValue;
-		public int parameterValueParameterID = -1;
 
 		public bool hideHead = false;
-		public bool doLoop; // Ignored by official animation engines
 
 		
 		public ActionCharAnim ()
@@ -81,34 +78,29 @@ namespace AC
 
 		override public void AssignValues (List<ActionParameter> parameters)
 		{
-			runtimeAnimChar = AssignFile <Char> (parameters, parameterID, constantID, animChar);
+			animChar = AssignFile <Char> (parameters, parameterID, constantID, animChar);
 			newSound = (AudioClip) AssignObject <AudioClip> (parameters, newSoundParameterID, newSound);
 			parameterName = AssignString (parameters, parameterNameID, parameterName);
 			clip2D = AssignString (parameters, clip2DParameterID, clip2D);
 
 			if (isPlayer)
 			{
-				runtimeAnimChar = KickStarter.player;
-			}
-
-			if (runtimeAnimChar != null && runtimeAnimChar.GetAnimEngine () != null)
-			{
-				runtimeAnimChar.GetAnimEngine ().ActionCharAnimAssignValues (this, parameters);
+				animChar = KickStarter.player;
 			}
 		}
 
 		
 		override public float Run ()
 		{
-			if (runtimeAnimChar != null)
+			if (animChar)
 			{
-				if (runtimeAnimChar.GetAnimEngine () != null)
+				if (animChar.GetAnimEngine () != null)
 				{
-					return runtimeAnimChar.GetAnimEngine ().ActionCharAnimRun (this);
+					return animChar.GetAnimEngine ().ActionCharAnimRun (this);
 				}
 				else
 				{
-					ACDebug.LogWarning ("Could not create animation engine for " + runtimeAnimChar.name, runtimeAnimChar);
+					ACDebug.LogWarning ("Could not create animation engine for " + animChar.name);
 				}
 			}
 			else
@@ -122,11 +114,11 @@ namespace AC
 
 		override public void Skip ()
 		{
-			if (runtimeAnimChar != null)
+			if (animChar)
 			{
-				if (runtimeAnimChar.GetAnimEngine () != null)
+				if (animChar.GetAnimEngine () != null)
 				{
-					runtimeAnimChar.GetAnimEngine ().ActionCharAnimSkip (this);
+					animChar.GetAnimEngine ().ActionCharAnimSkip (this);
 				}
 			}
 		}
@@ -185,42 +177,36 @@ namespace AC
 		
 		override public string SetLabel ()
 		{
+			string labelAdd = "";
+			
 			if (isPlayer)
 			{
-				return "Player";
+				labelAdd = " (Player)";
 			}
-			else if (animChar != null)
+			else if (animChar)
 			{
-				return animChar.name;
+				labelAdd = " (" + animChar.name + ")";
 			}
-			return string.Empty;
+			
+			return labelAdd;
 		}
 
 
-		override public void AssignConstantIDs (bool saveScriptsToo, bool fromAssetFile)
+		override public void AssignConstantIDs (bool saveScriptsToo)
 		{
-			if (isPlayer)
+			if (!isPlayer)
 			{
-				if (!fromAssetFile && GameObject.FindObjectOfType <Player>() != null)
+				if (saveScriptsToo && method == AnimMethodChar.PlayCustom)
 				{
-					animChar = GameObject.FindObjectOfType <Player>();
+					if (animChar)
+					{
+						ResetAnimationEngine (animChar.animationEngine, animChar.customAnimationClass);
+					}
+					if (editingAnimEngine != null)
+					{
+						editingAnimEngine.AddSaveScript (this, animChar.gameObject);
+					}
 				}
-
-				if (animChar == null && AdvGame.GetReferences ().settingsManager != null)
-				{
-					animChar = AdvGame.GetReferences ().settingsManager.GetDefaultPlayer ();
-				}
-			}
-
-			if (animChar != null)
-			{
-				ResetAnimationEngine (animChar.animationEngine, animChar.customAnimationClass);
-
-				if (saveScriptsToo && editingAnimEngine != null && editingAnimEngine.RequiresRememberAnimator (this))
-				{
-					editingAnimEngine.AddSaveScript (this, animChar.gameObject);
-				}
-
 				AssignConstantID <Char> (animChar, constantID, parameterID);
 			}
 		}
@@ -246,15 +232,6 @@ namespace AC
 
 		
 		#endif
-
-
-		public Char RuntimeAnimChar
-		{
-			get
-			{
-				return runtimeAnimChar;
-			}
-		}
 
 	}
 

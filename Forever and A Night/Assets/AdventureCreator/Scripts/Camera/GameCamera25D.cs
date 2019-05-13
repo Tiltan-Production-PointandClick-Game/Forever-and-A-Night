@@ -5,7 +5,7 @@
 /*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2019
+ *	by Chris Burton, 2013-2018
  *	
  *	"GameCamera25D.cs"
  * 
@@ -42,11 +42,6 @@ namespace AC
 		{
 			if (backgroundImage)
 			{
-				if (BackgroundCamera.Instance != null && BackgroundImageUI.Instance != null)
-				{
-					// Update mask/layers
-				}
-
 				// Move background images onto correct layer
 				BackgroundImage[] backgroundImages = FindObjectsOfType (typeof (BackgroundImage)) as BackgroundImage[];
 				foreach (BackgroundImage image in backgroundImages)
@@ -63,6 +58,11 @@ namespace AC
 				
 				// Set MainCamera's Clear Flags
 				KickStarter.mainCamera.PrepareForBackground ();
+
+				if (BackgroundCamera.Instance != null && BackgroundImageUI.Instance != null)
+				{
+					// Update mask/layers
+				}
 			}
 
 			#if UNITY_EDITOR
@@ -150,17 +150,6 @@ namespace AC
 					Camera.main.projectionMatrix = AdvGame.SetVanishingPoint (Camera.main, perspectiveOffset, true);
 				}
 			}
-		}
-
-		#endif
-
-
-		#if UNITY_EDITOR
-
-		[ContextMenu ("Make active")]
-		private void LocalMakeActive ()
-		{
-			MakeActive ();
 		}
 
 		#endif

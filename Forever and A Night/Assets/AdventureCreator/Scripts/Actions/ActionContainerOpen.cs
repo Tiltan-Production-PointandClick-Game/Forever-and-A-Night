@@ -1,7 +1,7 @@
 /*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2019
+ *	by Chris Burton, 2013-2018
  *	
  *	"ActionContainerOpen.cs"
  * 
@@ -28,7 +28,6 @@ namespace AC
 		public int parameterID = -1;
 		public int constantID = 0;
 		public Container container;
-		protected Container runtimeContainer;
 		
 		
 		public ActionContainerOpen ()
@@ -42,23 +41,23 @@ namespace AC
 
 		override public void AssignValues (List<ActionParameter> parameters)
 		{
+			container = AssignFile <Container> (parameters, parameterID, constantID, container);
+
 			if (useActive)
 			{
-				runtimeContainer = KickStarter.playerInput.activeContainer;
-			}
-			else
-			{
-				runtimeContainer = AssignFile <Container> (parameters, parameterID, constantID, container);
+				container = KickStarter.playerInput.activeContainer;
 			}
 		}
 
 		
 		override public float Run ()
 		{
-			if (runtimeContainer != null)
+			if (container == null)
 			{
-				runtimeContainer.Interact ();
+				return 0f;
 			}
+
+			container.Interact ();
 
 			return 0f;
 		}
@@ -90,7 +89,7 @@ namespace AC
 		}
 
 
-		override public void AssignConstantIDs (bool saveScriptsToo, bool fromAssetFile)
+		override public void AssignConstantIDs (bool saveScriptsToo)
 		{
 			if (saveScriptsToo)
 			{
@@ -102,11 +101,14 @@ namespace AC
 		
 		override public string SetLabel ()
 		{
-			if (container != null)
+			string labelAdd = "";
+			
+			if (container)
 			{
-				return container.name;
+				labelAdd = " (" + container + ")";
 			}
-			return string.Empty;
+			
+			return labelAdd;
 		}
 
 		#endif

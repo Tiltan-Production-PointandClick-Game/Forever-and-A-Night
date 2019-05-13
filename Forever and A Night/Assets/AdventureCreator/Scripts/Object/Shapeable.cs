@@ -1,7 +1,7 @@
 ﻿/*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2019
+ *	by Chris Burton, 2013-2018
  *	
  *	"Shapeable.cs"
  * 
@@ -317,8 +317,6 @@ namespace AC
 				{
 					shapeKey.targetValue = 0f;
 				}
-
-				shapeKey.ResetInitialValue ();
 			}
 			
 			moveMethod = _moveMethod;
@@ -355,8 +353,6 @@ namespace AC
 				{
 					shapeKey.targetValue = 0f;
 				}
-
-				shapeKey.ResetInitialValue ();
 			}
 			
 			moveMethod = _moveMethod;
@@ -380,7 +376,7 @@ namespace AC
 			{
 				if (changeTime > 0f)
 				{
-					float newValue = Mathf.Lerp (shapeKey.InitialValue, shapeKey.targetValue, AdvGame.Interpolate (startTime, changeTime, moveMethod, timeCurve));
+					float newValue = Mathf.Lerp (shapeKey.value, shapeKey.targetValue, AdvGame.Interpolate (startTime, changeTime, moveMethod, timeCurve));
 					shapeKey.SetValue (newValue, smr);
 					if ((startTime + changeTime) < Time.time)
 					{
@@ -414,9 +410,7 @@ namespace AC
 		public float value = 0;
 		/** The intended value of the blendshape */
 		public float targetValue = 0;
-
-		private float initialValue;
-
+		
 
 		/**
 		 * <summary>The default Constructor.</summary>
@@ -445,21 +439,6 @@ namespace AC
 		{
 			value = _value;
 			smr.SetBlendShapeWeight (index, value);
-		}
-
-
-		public float InitialValue
-		{
-			get
-			{
-				return initialValue;
-			}
-		}
-
-
-		public void ResetInitialValue ()
-		{
-			initialValue = value;
 		}
 		
 	}

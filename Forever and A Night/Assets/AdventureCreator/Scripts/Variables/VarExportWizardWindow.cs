@@ -16,7 +16,6 @@ namespace AC
 		private VariablesManager variablesManager;
 		private List<ExportColumn> exportColumns = new List<ExportColumn>();
 		private int sideMenuIndex = -1;
-		private bool replaceForwardSlashes;
 
 		private Vector2 scroll;
 
@@ -101,11 +100,6 @@ namespace AC
 					SideMenu (i);
 				}
 				EditorGUILayout.EndHorizontal ();
-
-				if (exportColumns[i].GetHeader () == "Label")
-				{
-					replaceForwardSlashes = EditorGUILayout.Toggle ("Replace '/' with '.'?", replaceForwardSlashes);
-				}
 
 				EditorGUILayout.EndVertical ();
 			}
@@ -236,7 +230,7 @@ namespace AC
 				rowList.Add (exportVar.id.ToString ());
 				foreach (ExportColumn exportColumn in exportColumns)
 				{
-					string cellText = exportColumn.GetCellText (exportVar, VariableLocation.Global, replaceForwardSlashes);
+					string cellText = exportColumn.GetCellText (exportVar, VariableLocation.Global);
 					rowList.Add (cellText);
 
 					if (cellText.Contains (CSVReader.csvDelimiter))
@@ -275,7 +269,7 @@ namespace AC
 						rowList.Add (localExportVar.id.ToString ());
 						foreach (ExportColumn exportColumn in exportColumns)
 						{
-							string cellText = exportColumn.GetCellText (localExportVar, VariableLocation.Local, replaceForwardSlashes, sceneName);
+							string cellText = exportColumn.GetCellText (localExportVar, VariableLocation.Local, sceneName);
 							rowList.Add (cellText);
 
 							if (cellText.Contains (CSVReader.csvDelimiter))
@@ -350,7 +344,7 @@ namespace AC
 			}
 
 
-			public string GetCellText (GVar variable, VariableLocation location, bool replaceForwardSlashes, string sceneName = "")
+			public string GetCellText (GVar variable, VariableLocation location, string sceneName = "")
 			{
 				string cellText = " ";
 
@@ -369,10 +363,6 @@ namespace AC
 
 					case ColumnType.Label:
 						cellText = variable.label;
-						if (replaceForwardSlashes)
-						{
-							cellText = cellText.Replace ("/", ".");
-						}
 						break;
 
 					case ColumnType.Type:

@@ -1,7 +1,7 @@
 /*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2019
+ *	by Chris Burton, 2013-2018
  *	
  *	"ActionSound.cs"
  * 
@@ -37,7 +37,7 @@ namespace AC
 		public SoundAction soundAction;
 		public bool affectChildren = false;
 
-		protected Sound runtimeSound;
+		private Sound runtimeSound;
 		
 		
 		public ActionSound ()
@@ -52,8 +52,9 @@ namespace AC
 		override public void AssignValues (List<ActionParameter> parameters)
 		{
 			audioClip = (AudioClip) AssignObject <AudioClip> (parameters, audioClipParameterID, audioClip);
+			soundObject = AssignFile <Sound> (parameters, parameterID, constantID, soundObject);
 
-			runtimeSound = AssignFile <Sound> (parameters, parameterID, constantID, soundObject);
+			runtimeSound = soundObject;
 			if (runtimeSound == null && audioClip != null)
 			{
 				runtimeSound = KickStarter.sceneSettings.defaultSound;
@@ -243,7 +244,7 @@ namespace AC
 		}
 
 
-		override public void AssignConstantIDs (bool saveScriptsToo, bool fromAssetFile)
+		override public void AssignConstantIDs (bool saveScriptsToo)
 		{
 			if (saveScriptsToo)
 			{
@@ -255,11 +256,14 @@ namespace AC
 		
 		override public string SetLabel ()
 		{
-			if (soundObject != null)
+			string labelAdd = "";
+			if (soundObject)
 			{
-				return soundAction.ToString () + " " + soundObject.name;
+				labelAdd = " (" + soundAction.ToString ();
+				labelAdd += " " + soundObject.name + ")";
 			}
-			return string.Empty;
+			
+			return labelAdd;
 		}
 
 		#endif

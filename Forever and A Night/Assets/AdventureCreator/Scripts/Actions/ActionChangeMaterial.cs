@@ -1,7 +1,7 @@
 ﻿/*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2019
+ *	by Chris Burton, 2013-2018
  *	
  *	"ActionChangeMaterial.cs"
  * 
@@ -28,7 +28,6 @@ namespace AC
 
 		public bool isPlayer;
 		public GameObject obToAffect;
-		private GameObject runtimeObToAffect;
 		public int materialIndex;
 		public Material newMaterial;
 		public int newMaterialParameterID = -1;
@@ -47,11 +46,23 @@ namespace AC
 		{
 			if (isPlayer)
 			{
-				runtimeObToAffect = GetPlayerRenderer (KickStarter.player);
+				if (KickStarter.player.GetComponentInChildren <Renderer>())
+				{
+					obToAffect = KickStarter.player.gameObject.GetComponentInChildren <Renderer>().gameObject;
+				}
+				else
+				{
+					obToAffect = KickStarter.player.gameObject;
+				}
+
+				if (KickStarter.player && KickStarter.player.spriteChild && KickStarter.player.spriteChild.GetComponent <Renderer>())
+				{
+				    obToAffect = KickStarter.player.spriteChild.gameObject;
+				}
 			}
 			else
 			{
-				runtimeObToAffect = AssignFile (parameters, parameterID, constantID, obToAffect);
+				obToAffect = AssignFile (parameters, parameterID, constantID, obToAffect);
 			}
 
 			newMaterial = (Material) AssignObject <Material> (parameters, newMaterialParameterID, newMaterial);
@@ -60,15 +71,11 @@ namespace AC
 		
 		override public float Run ()
 		{
-			if (runtimeObToAffect && newMaterial)
+			if (obToAffect && obToAffect.GetComponent <Renderer>() && newMaterial)
 			{
-				Renderer _renderer = runtimeObToAffect.GetComponent <Renderer>();
-				if (_renderer != null)
-				{
-					Material[] mats = _renderer.materials;
-					mats[materialIndex] = newMaterial;
-					runtimeObToAffect.GetComponent <Renderer>().materials = mats;
-				}
+				Material[] mats = obToAffect.GetComponent <Renderer>().materials;
+				mats[materialIndex] = newMaterial;
+				obToAffect.GetComponent <Renderer>().materials = mats;
 			}
 			return 0f;
 		}
@@ -89,7 +96,7 @@ namespace AC
 				}
 				else
 				{
-					obToAffect = (GameObject) EditorGUILayout.ObjectField ("Renderer:", obToAffect, typeof (GameObject), true);
+					obToAffect = (GameObject) EditorGUILayout.ObjectField ("Mesh renderer:", obToAffect, typeof (GameObject), true);
 					
 					constantID = FieldToID (obToAffect, constantID);
 					obToAffect = IDToField (obToAffect, constantID, true, false);
@@ -108,71 +115,36 @@ namespace AC
 		}
 
 
-		override public void AssignConstantIDs (bool saveScriptsToo, bool fromAssetFile)
+		override public void AssignConstantIDs (bool saveScriptsToo)
 		{
-			GameObject obToUpdate = obToAffect;
-
-			if (isPlayer)
+			if (!isPlayer)
 			{
-				if (!fromAssetFile && GameObject.FindObjectOfType <Player>() != null)
+				if (saveScriptsToo)
 				{
-					obToUpdate = GetPlayerRenderer (GameObject.FindObjectOfType <Player>());
+					AddSaveScript <RememberMaterial> (obToAffect);
 				}
-
-				if (obToUpdate == null && AdvGame.GetReferences ().settingsManager != null)
-				{
-					Player player = AdvGame.GetReferences ().settingsManager.GetDefaultPlayer ();
-					obToUpdate = GetPlayerRenderer (player);
-				}
+				AssignConstantID (obToAffect, constantID, parameterID);
 			}
-
-			if (saveScriptsToo)
-			{
-				AddSaveScript <RememberMaterial> (obToUpdate);
-			}
-			AssignConstantID (obToUpdate, constantID, parameterID);
 		}
-
-
+		
+		
 		public override string SetLabel ()
 		{
-			if (obToAffect != null)
+			if (obToAffect)
 			{
-				string labelAdd = obToAffect.gameObject.name;
-				if (newMaterial != null)
+				string labelAdd = " (" + obToAffect.gameObject.name;
+				if (newMaterial)
 				{
 					labelAdd += " - " + newMaterial;
 				}
+				labelAdd += ")";
 				return labelAdd;
 			}
-			return string.Empty;
+			return "";
 		}
 		
 		#endif
-
-
-		private GameObject GetPlayerRenderer (Player player)
-		{
-			if (player == null)
-			{
-				return null;
-			}
-
-			if (player.spriteChild != null && player.spriteChild.GetComponent <Renderer>())
-			{
-			    return player.spriteChild.gameObject;
-			}
-
-			if (player.GetComponentInChildren <Renderer>())
-			{
-				return player.gameObject.GetComponentInChildren <Renderer>().gameObject;
-			}
-			else
-			{
-				return player.gameObject;
-			}
-		}
-
+		
 	}
 	
 }

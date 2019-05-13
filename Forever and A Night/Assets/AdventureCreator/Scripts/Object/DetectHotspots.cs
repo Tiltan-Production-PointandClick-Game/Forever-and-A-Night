@@ -1,7 +1,7 @@
 ﻿/*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2019
+ *	by Chris Burton, 2013-2018
  *	
  *	"DetectHotspots.cs"
  * 
@@ -56,7 +56,6 @@ namespace AC
 		public void AfterLoad ()
 		{
 			hotspots.Clear ();
-			hotspots = KickStarter.eventManager.Call_OnModifyHotspotDetectorCollection (this, hotspots);
 			selected = 0;
 		}
 
@@ -91,7 +90,6 @@ namespace AC
 						{
 							nearestHotspot = null;
 							hotspots.Remove (nearestHotspot);
-							hotspots = KickStarter.eventManager.Call_OnModifyHotspotDetectorCollection (this, hotspots);
 						}
 					}
 				}
@@ -118,7 +116,6 @@ namespace AC
 						}
 
 						hotspots.RemoveAt (selected);
-						hotspots = KickStarter.eventManager.Call_OnModifyHotspotDetectorCollection (this, hotspots);
 					}
 				}
 			}
@@ -147,7 +144,6 @@ namespace AC
 				}
 
 				hotspots.Add (otherHotspot);
-				hotspots = KickStarter.eventManager.Call_OnModifyHotspotDetectorCollection (this, hotspots);
 			}
         }
 
@@ -171,7 +167,6 @@ namespace AC
 					}
 				}
 				hotspots.Add (otherHotspot);
-				hotspots = KickStarter.eventManager.Call_OnModifyHotspotDetectorCollection (this, hotspots);
 			}
 		}
 
@@ -221,7 +216,6 @@ namespace AC
 			if (IsHotspotInTrigger (_hotspot))
 			{
 				hotspots.Remove (_hotspot);
-				hotspots = KickStarter.eventManager.Call_OnModifyHotspotDetectorCollection (this, hotspots);
 			}
 			
 			if (_hotspot.highlight != null)

@@ -1,7 +1,7 @@
 /*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2019
+ *	by Chris Burton, 2013-2018
  *	
  *	"AdvGame.cs"
  * 
@@ -168,7 +168,7 @@ namespace AC
 					}
 					else
 					{
-						ACDebug.LogWarning ("Cannot update " + actionListAsset.name + "'s parameter '" + parameter.label + "' because it's value is not integer-based.", actionListAsset);
+						ACDebug.LogWarning ("Cannot update " + actionListAsset.name + "'s parameter '" + parameter.label + "' because it's value is not integer-based.");
 					}
 				}
 			}
@@ -193,7 +193,7 @@ namespace AC
 				}
 				else
 				{
-					ACDebug.LogWarning ("Cannot update " + actionListAsset.name + "'s parameter '" + actionListAsset.parameters[0].label + "' because it is not a GameObject!", actionListAsset);
+					ACDebug.LogWarning ("Cannot update " + actionListAsset.name + "'s parameter '" + actionListAsset.parameters[0].label + "' because it is not a GameObject!");
 				}
 			}
 			
@@ -622,7 +622,7 @@ namespace AC
 						{
 							if (idObject.constantID == _constantID)
 							{
-								ACDebug.Log ("Found Constant ID: " + _constantID + " on '" + idObject.gameObject.name + "' in scene: " + sceneFile, idObject.gameObject);
+								ACDebug.Log ("Found Constant ID: " + _constantID + " on '" + idObject.gameObject.name + "' in scene: " + sceneFile);
 								EditorGUIUtility.PingObject (idObject.gameObject);
 								EditorGUIUtility.ExitGUI ();
 								return;

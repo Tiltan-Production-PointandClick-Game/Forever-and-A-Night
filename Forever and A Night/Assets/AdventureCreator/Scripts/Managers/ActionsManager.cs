@@ -1,7 +1,7 @@
 /*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2019
+ *	by Chris Burton, 2013-2018
  *	
  *	"ActionsManager.cs"
  * 
@@ -47,8 +47,6 @@ namespace AC
 		public bool invertPanning = false;
 		/** The speed factor for panning/zooming */
 		public float panSpeed = 1f;
-		/** If True, the ActionList Editor will pan automatically when dragging the cursor near the window's edge */
-		public bool autoPanNearWindowEdge = true;
 		/** The index number of the default Action (deprecated) */
 		public int defaultClass;
 		/** The class name of the default Action */
@@ -203,28 +201,18 @@ namespace AC
 			showEditing = CustomGUILayout.ToggleHeader (showEditing, "ActionList editing settings");
 			if (showEditing)
 			{
-				displayActionsInInspector = CustomGUILayout.Toggle ("List Actions in Inspector?", displayActionsInInspector, "AC.KickStarter.actionsManager.displayActionsInInspector", "If True, then Actions can be displayed in an ActionList's Inspector window");
+				displayActionsInInspector = CustomGUILayout.ToggleLeft ("List Actions in Inspector window?", displayActionsInInspector, "AC.KickStarter.actionsManager.displayActionsInInspector", "If True, then Actions can be displayed in an ActionList's Inspector window");
 				displayActionsInEditor = (DisplayActionsInEditor) CustomGUILayout.EnumPopup ("Actions in Editor are:", displayActionsInEditor, "AC.KickStarter.actionsManager.displayActionsInEditor", "How Actions are arranged in the ActionList Editor window");
 				actionListEditorScrollWheel = (ActionListEditorScrollWheel) CustomGUILayout.EnumPopup ("Using scroll-wheel:", actionListEditorScrollWheel, "AC.KickStarter.actionsManager.actionListEditorScrollWheel", "The effect the mouse scrollwheel has inside the ActionList Editor window");
 
-				#if UNITY_EDITOR_OSX
-				string altKey = "Option";
-				#else
-				string altKey = "Alt";
-				#endif
 				if (actionListEditorScrollWheel == ActionListEditorScrollWheel.ZoomsWindow)
 				{
-					EditorGUILayout.HelpBox ("Panning is possible by holding down the middle-mouse button, or by scrolling with the " + altKey + " key pressed.", MessageType.Info);
-				}
-				else
-				{
-					EditorGUILayout.HelpBox ("Zooming is possible by scrolling with the " + altKey + " key pressed.", MessageType.Info);
+					EditorGUILayout.HelpBox ("Panning is possible by holding down the middle-mouse button.", MessageType.Info);
 				}
 
-				autoPanNearWindowEdge = CustomGUILayout.Toggle ("Auto-panning in Editor?", autoPanNearWindowEdge, "AC.KickStarter.actionListManager.autoPanNearWindowEdge", "If True, the ActionList Editor will pan automatically when dragging the cursor near the window's edge");
 				panSpeed = CustomGUILayout.FloatField ((actionListEditorScrollWheel == ActionListEditorScrollWheel.PansWindow) ? "Panning speed:" : "Zoom speed:", panSpeed, "AC.KickStarter.actionsManager.panSpeed", "The speed factor for panning/zooming");
-				invertPanning = CustomGUILayout.Toggle ("Invert panning in Editor?", invertPanning, "AC.KickStarter.actionsManager.invertPanning", "If True, then panning is inverted in the ActionList Editor window (useful for Macbooks)");
-				allowMultipleActionListWindows = CustomGUILayout.Toggle ("Allow multiple Editors?", allowMultipleActionListWindows, "AC.KickStarter.actionsManager.allowMultipleActionListWindows", "If True, then multiple ActionList Editor windows can be opened at once");
+				invertPanning = CustomGUILayout.ToggleLeft ("Invert panning in ActionList Editor?", invertPanning, "AC.KickStarter.actionsManager.invertPanning", "If True, then panning is inverted in the ActionList Editor window (useful for Macbooks)");
+				allowMultipleActionListWindows = CustomGUILayout.ToggleLeft ("Allow multiple ActionList Editor windows?", allowMultipleActionListWindows, "AC.KickStarter.actionsManager.allowMultipleActionListWindows", "If True, then multiple ActionList Editor windows can be opened at once");
 			}
 			EditorGUILayout.EndVertical ();
 		}
@@ -238,7 +226,7 @@ namespace AC
 			{
 				GUILayout.BeginHorizontal ();
 				GUILayout.Label ("Folder to search:", GUILayout.Width (110f));
-				GUILayout.Label (customFolderPath, EditorStyles.textField, GUILayout.MaxWidth (220f));
+				GUILayout.Label (customFolderPath, EditorStyles.textField);
 				GUILayout.EndHorizontal ();
 				GUILayout.BeginHorizontal ();
 				if (GUILayout.Button ("Set directory", EditorStyles.miniButtonLeft))
@@ -387,56 +375,43 @@ namespace AC
 
 		private void SearchForInstances (bool justLocal, ActionType actionType)
 		{
-			bool foundInstance = false;
 			if (justLocal)
 			{
-				foundInstance = SearchSceneForType (string.Empty, actionType);
+				SearchSceneForType ("", actionType);
+				return;
+			}
+			
+			// First look for lines that already have an assigned lineID
+			string[] sceneFiles = AdvGame.GetSceneFiles ();
+			if (sceneFiles == null || sceneFiles.Length == 0)
+			{
+				Debug.LogWarning ("Cannot search scenes - no enabled scenes could be found in the Build Settings.");
 			}
 			else
 			{
-				// First look for lines that already have an assigned lineID
-				string[] sceneFiles = AdvGame.GetSceneFiles ();
-				if (sceneFiles == null || sceneFiles.Length == 0)
+				foreach (string sceneFile in sceneFiles)
 				{
-					Debug.LogWarning ("Cannot search scenes - no enabled scenes could be found in the Build Settings.");
-				}
-				else
-				{
-					foreach (string sceneFile in sceneFiles)
-					{
-						bool foundSceneInstance = SearchSceneForType (sceneFile, actionType);
-						if (foundSceneInstance)
-						{
-							foundInstance = true;
-						}
-					}
-				}
-
-				ActionListAsset[] allActionListAssets = AdvGame.GetReferences ().speechManager.GetAllActionListAssets ();
-				foreach (ActionListAsset actionListAsset in allActionListAssets)
-				{
-					int[] foundIDs = SearchActionsForType (actionListAsset.actions, actionType);
-					if (foundIDs != null && foundIDs.Length > 0)
-					{
-						ACDebug.Log ("(Asset: " + actionListAsset.name + ") Found " + foundIDs.Length + " instances of '" + actionType.GetFullTitle () + "' " + CreateIDReport (foundIDs), actionListAsset);
-						foundInstance = true;
-					}
+					SearchSceneForType (sceneFile, actionType);
 				}
 			}
 
-			if (!foundInstance)
+			ActionListAsset[] allActionListAssets = AdvGame.GetReferences ().speechManager.GetAllActionListAssets ();
+			foreach (ActionListAsset actionListAsset in allActionListAssets)
 			{
-				ACDebug.Log ("No instances of '" + actionType.GetFullTitle () + "' were found.");
+				int[] foundIDs = SearchActionsForType (actionListAsset.actions, actionType);
+				if (foundIDs != null && foundIDs.Length > 0)
+				{
+					ACDebug.Log ("(Asset: " + actionListAsset.name + ") Found " + foundIDs.Length + " instances of '" + actionType.GetFullTitle () + "' " + CreateIDReport (foundIDs), actionListAsset);
+				}
 			}
 		}
 		
 		
-		private bool SearchSceneForType (string sceneFile, ActionType actionType)
+		private void SearchSceneForType (string sceneFile, ActionType actionType)
 		{
-			string sceneLabel = string.Empty;
-			bool foundInstance = false;
-
-			if (sceneFile != string.Empty)
+			string sceneLabel = "";
+			
+			if (sceneFile != "")
 			{
 				sceneLabel = "(Scene: " + sceneFile + ") ";
 				UnityVersionHandler.OpenScene (sceneFile);
@@ -450,11 +425,8 @@ namespace AC
 				if (foundIDs != null && foundIDs.Length > 0)
 				{
 					ACDebug.Log (sceneLabel + " Found " + foundIDs.Length + " instances in '" + list.gameObject.name + "' " + CreateIDReport (foundIDs), list.gameObject);
-					foundInstance = true;
 				}
 			}
-
-			return foundInstance;
 		}
 
 
@@ -515,18 +487,8 @@ namespace AC
 
 		public string GetActionTypeLabel (Action _action, bool includeLabel)
 		{
-			if (!includeLabel)
-			{
-				return GetActionTypeLabel (_action);
-			}
-
 			int index = GetActionTypeIndex (_action);
 			string suffix = (includeLabel) ? _action.SetLabel () : string.Empty;
-
-			if (!string.IsNullOrEmpty (suffix))
-			{
-				suffix = " (" + suffix + ")";
-			}
 
 			if (index >= 0 && AllActions != null && index < AllActions.Count)
 			{
@@ -536,18 +498,6 @@ namespace AC
 		}
 		
 		#endif
-
-
-		public string GetActionTypeLabel (Action _action)
-		{
-			int index = GetActionTypeIndex (_action);
-
-			if (index >= 0 && AllActions != null && index < AllActions.Count)
-			{
-				return AllActions[index].GetFullTitle ();
-			}
-			return _action.category + ": " + _action.title;
-		}
 
 
 		/**

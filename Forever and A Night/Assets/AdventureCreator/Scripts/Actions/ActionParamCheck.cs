@@ -1,7 +1,7 @@
 ﻿/*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2019
+ *	by Chris Burton, 2013-2018
  *	
  *	"ActionParamCheck.cs"
  * 
@@ -36,7 +36,6 @@ namespace AC
 
 		public GameObject compareObject;
 		public int compareObjectConstantID;
-		protected GameObject runtimeCompareObject;
 
 		public Object compareUnityObject;
 
@@ -64,7 +63,7 @@ namespace AC
 		{
 			_parameter = GetParameterWithID (parameters, parameterID);
 			_compareParameter = (compareParameterID != parameterID) ? GetParameterWithID (parameters, compareParameterID) : null;
-			runtimeCompareObject = AssignFile (compareObjectConstantID, compareObject);
+			compareObject = AssignFile (compareObjectConstantID, compareObject);
 		}
 		
 		
@@ -77,12 +76,8 @@ namespace AC
 
 			GVar compareVar = null;
 			InvItem compareItem = null;
-			Document compareDoc = null;
 
-			if (_parameter.parameterType == ParameterType.GlobalVariable ||
-				_parameter.parameterType == ParameterType.LocalVariable ||
-				_parameter.parameterType == ParameterType.InventoryItem ||
-				_parameter.parameterType == ParameterType.Document)
+			if (_parameter.parameterType == ParameterType.GlobalVariable || _parameter.parameterType == ParameterType.LocalVariable || _parameter.parameterType == ParameterType.InventoryItem)
 			{
 				if (compareVariableID == -1)
 				{
@@ -102,17 +97,13 @@ namespace AC
 				{
 					compareItem = KickStarter.inventoryManager.GetItem (compareVariableID);
 				}
-				else if (_parameter.parameterType == ParameterType.Document)
-				{
-					compareDoc = KickStarter.inventoryManager.GetDocument (compareVariableID);
-				}
 			}
 
-			return ProcessResult (CheckCondition (compareItem, compareVar, compareDoc), actions);
+			return ProcessResult (CheckCondition (compareItem, compareVar), actions);
 		}
 		
 		
-		private bool CheckCondition (InvItem _compareItem, GVar _compareVar, Document _compareDoc)
+		private bool CheckCondition (InvItem _compareItem, GVar _compareVar)
 		{
 			if (_parameter == null)
 			{
@@ -278,15 +269,15 @@ namespace AC
 				if (_compareParameter != null && _compareParameter.parameterType == _parameter.parameterType)
 				{
 					compareObjectConstantID = _compareParameter.intValue;
-					runtimeCompareObject = _compareParameter.gameObject;
+					compareObject = _compareParameter.gameObject;
 				}
 
-				if ((runtimeCompareObject != null && _parameter.gameObject == runtimeCompareObject) ||
+				if ((compareObject != null && _parameter.gameObject == compareObject) ||
 					(compareObjectConstantID != 0 && _parameter.intValue == compareObjectConstantID))
 				{
 					return true;
 				}
-				if (runtimeCompareObject == null && _parameter.gameObject == null)
+				if (compareObject == null && _parameter.gameObject == null)
 				{
 					return true;
 				}
@@ -330,19 +321,6 @@ namespace AC
 				}
 
 				if (_compareItem != null && _parameter.intValue == _compareItem.id)
-				{
-					return true;
-				}
-			}
-
-			else if (_parameter.parameterType == ParameterType.Document)
-			{
-				if (_compareParameter != null && _compareParameter.parameterType == _parameter.parameterType)
-				{
-					return (_compareParameter.intValue == _parameter.intValue);
-				}
-
-				if (_compareDoc != null && _parameter.intValue == _compareDoc.ID)
 				{
 					return true;
 				}
@@ -471,7 +449,7 @@ namespace AC
 			}
 			else if (parameter.parameterType == ParameterType.GlobalVariable)
 			{
-				compareParameterID = Action.ChooseParameterGUI ("Is global variable:", parameters, compareParameterID, parameter.parameterType, parameter.ID);
+				compareParameterID = Action.ChooseParameterGUI ("Variable:", parameters, compareParameterID, parameter.parameterType, parameter.ID);
 				EditorGUILayout.EndHorizontal ();
 				EditorGUILayout.BeginHorizontal ();
 				if (compareParameterID < 0)
@@ -488,7 +466,7 @@ namespace AC
 			}
 			else if (parameter.parameterType == ParameterType.InventoryItem)
 			{
-				compareParameterID = Action.ChooseParameterGUI ("Is inventory item:", parameters, compareParameterID, parameter.parameterType, parameter.ID);
+				compareParameterID = Action.ChooseParameterGUI ("Inventory item:", parameters, compareParameterID, parameter.parameterType, parameter.ID);
 				EditorGUILayout.EndHorizontal ();
 				EditorGUILayout.BeginHorizontal ();
 				if (compareParameterID < 0)
@@ -496,19 +474,9 @@ namespace AC
 					compareVariableID = ShowInvSelectorGUI (compareVariableID);
 				}
 			}
-			else if (parameter.parameterType == ParameterType.Document)
-			{
-				compareParameterID = Action.ChooseParameterGUI ("Is document:", parameters, compareParameterID, parameter.parameterType, parameter.ID);
-				EditorGUILayout.EndHorizontal ();
-				EditorGUILayout.BeginHorizontal ();
-				if (compareParameterID < 0)
-				{
-					compareVariableID = ShowDocSelectorGUI (compareVariableID);
-				}
-			}
 			else if (parameter.parameterType == ParameterType.LocalVariable)
 			{
-				compareParameterID = Action.ChooseParameterGUI ("Is local variable:", parameters, compareParameterID, parameter.parameterType, parameter.ID);
+				compareParameterID = Action.ChooseParameterGUI ("Inventory item:", parameters, compareParameterID, parameter.parameterType, parameter.ID);
 				EditorGUILayout.EndHorizontal ();
 				EditorGUILayout.BeginHorizontal ();
 				if (compareParameterID < 0)
@@ -532,7 +500,7 @@ namespace AC
 		}
 
 
-		override public void AssignConstantIDs (bool saveScriptsToo, bool fromAssetFile)
+		override public void AssignConstantIDs (bool saveScriptsToo)
 		{
 			AssignConstantID (compareObject, compareObjectConstantID, 0);
 		}
@@ -540,7 +508,11 @@ namespace AC
 		
 		override public string SetLabel ()
 		{
-			return parameterLabel;
+			if (parameterLabel != "")
+			{
+				return (" (" + parameterLabel + ")");
+			}
+			return "";
 		}
 
 
@@ -604,48 +576,8 @@ namespace AC
 				ID = 0;
 			}
 			
-			invNumber = EditorGUILayout.Popup ("Is inventory item:", invNumber, labelList.ToArray());
+			invNumber = EditorGUILayout.Popup ("Inventory item:", invNumber, labelList.ToArray());
 			ID = inventoryManager.items[invNumber].id;
-			
-			return ID;
-		}
-
-
-		private int ShowDocSelectorGUI (int ID)
-		{
-			InventoryManager inventoryManager = AdvGame.GetReferences ().inventoryManager;
-			if (inventoryManager == null)
-			{
-				return ID;
-			}
-			
-			int docNumber = -1;
-			List<string> labelList = new List<string>();
-			int i=0;
-			foreach (Document _document in inventoryManager.documents)
-			{
-				labelList.Add (_document.Title);
-				
-				// If an item has been removed, make sure selected variable is still valid
-				if (_document.ID == ID)
-				{
-					docNumber = i;
-				}
-				
-				i++;
-			}
-			
-			if (docNumber == -1)
-			{
-				// Wasn't found (item was possibly deleted), so revert to zero
-				ACDebug.LogWarning ("Previously chosen Document no longer exists!");
-				
-				docNumber = 0;
-				ID = 0;
-			}
-			
-			docNumber = EditorGUILayout.Popup ("Is document:", docNumber, labelList.ToArray());
-			ID = inventoryManager.documents[docNumber].ID;
 			
 			return ID;
 		}
@@ -690,17 +622,6 @@ namespace AC
 		{
 			ActionParameter _param = GetParameterWithID (parameters, parameterID);
 			if (_param != null && _param.parameterType == ParameterType.InventoryItem && _invID == intValue)
-			{
-				return 1;
-			}
-			return 0;
-		}
-
-
-		public override int GetDocumentReferences (List<ActionParameter> parameters, int _docID)
-		{
-			ActionParameter _param = GetParameterWithID (parameters, parameterID);
-			if (_param != null && _param.parameterType == ParameterType.Document && _docID == intValue)
 			{
 				return 1;
 			}

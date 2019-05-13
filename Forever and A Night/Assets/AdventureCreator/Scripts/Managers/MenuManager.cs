@@ -1,7 +1,7 @@
 ﻿/*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2019
+ *	by Chris Burton, 2013-2018
  *	
  *	"MenuManager.cs"
  * 
@@ -101,11 +101,11 @@ namespace AC
 						doWindowsPreviewFix = CustomGUILayout.Toggle ("Apply outline offset fix?", doWindowsPreviewFix, "", "In some versions of Windows, preview outlines can appear offset. Checking this box should fix this.");
 					}
 				}
-				scaleTextEffects = CustomGUILayout.Toggle ("Scale text effects?", scaleTextEffects, "AC.KickStarter.menuManager.scaleTextEffects", "If True, then the size of text effects (shadows, outlines) will be based on the size of the text, rather than fixed");
 				EditorGUILayout.BeginHorizontal ();
 				EditorGUILayout.LabelField (new GUIContent ("Pause background texture:", "A texture to apply full-screen when a 'Pause' Menu is enabled"), GUILayout.Width (255f));
 				pauseTexture = (Texture2D) CustomGUILayout.ObjectField <Texture2D> (pauseTexture, false, GUILayout.Width (70f), GUILayout.Height (30f), "AC.Kickstarter.menuManager.pauseTexture");
 				EditorGUILayout.EndHorizontal ();
+				scaleTextEffects = CustomGUILayout.Toggle ("Scale text effects?", scaleTextEffects, "AC.KickStarter.menuManager.scaleTextEffects", "If True, then the size of text effects (shadows, outlines) will be based on the size of the text, rather than fixed");
 				globalDepth = CustomGUILayout.IntField ("GUI depth:", globalDepth, "AC.KickStarter.menuManager.globalDepth", "The depth at which to draw OnGUI-based (Adventure Creator) menus");
 				eventSystem = (UnityEngine.EventSystems.EventSystem) CustomGUILayout.ObjectField <UnityEngine.EventSystems.EventSystem> ("Event system prefab:", eventSystem, false, "AC.KickStarter.menuManager.eventSystem", "The EventSystem to instantiate when Unity UI-based Menus are used. If none is set, a default one will be used");
 
@@ -305,7 +305,6 @@ namespace AC
 					}
 
 					EditorGUILayout.EndScrollView ();
-					EditorGUILayout.HelpBox ("Filtering " + numInFilter + " out of " + menus.Count + " menus.", MessageType.Info);
 				}
 				else if (menus.Count > 0)
 				{
@@ -1082,11 +1081,6 @@ namespace AC
 		}
 
 
-		/**
-		 * <summary>Gets a Menu by ID number</summary>
-		 * <param name = "id">The ID number of the Menu to get.  This is the number to the left of the Menu's name in the Menu Manager.</param>
-		 * <returns>The Menu with the ID supplied</returns>
-		 */
 		public Menu GetMenuWithID (int id)
 		{
 			foreach (Menu menu in menus)
@@ -1094,34 +1088,6 @@ namespace AC
 				if (menu != null && menu.id == id)
 				{
 					return menu;
-				}
-			}
-			return null;
-		}
-
-
-		/**
-		 * <summary>Creates a Menu to be used as a preview for subtitles in Timeline</summary>
-		 * <param name = "previewMenuName">The name of the Menu to use</param>
-		 * <returns>The Menu to preview subtitles with.  If the Menu relies on Unity UI, this copy will be converted to use Adventure Creator</returns>
-		 */
-		public Menu CreatePreviewMenu (string previewMenuName)
-		{
-			if (KickStarter.speechManager != null && !string.IsNullOrEmpty (previewMenuName))
-			{
-				foreach (Menu menu in menus)
-				{
-					if (menu != null && menu.title == previewMenuName)
-					{
-						Menu newMenu = ScriptableObject.CreateInstance <Menu>();
-						newMenu.Copy (menu, false);
-						if (newMenu.menuSource != MenuSource.AdventureCreator)
-						{
-							newMenu.menuSource = MenuSource.AdventureCreator;
-							ACDebug.LogWarning ("Cannot preview subtitles menu ;" + newMenu.title + "' in Unity UI - switching its Source to Adventure Creator!");
-						}
-						return newMenu;
-					}
 				}
 			}
 			return null;

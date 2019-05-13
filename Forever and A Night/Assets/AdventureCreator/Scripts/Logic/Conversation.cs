@@ -1,7 +1,7 @@
 /*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2019
+ *	by Chris Burton, 2013-2018
  *	
  *	"Conversation.cs"
  * 
@@ -250,7 +250,7 @@ namespace AC
 				}
 				else
 				{
-					RunOption (defaultOption, true);
+					RunOption (defaultOption);
 				}
 			}
 		}
@@ -272,12 +272,11 @@ namespace AC
 		/**
 		 * <summary>Runs a dialogue option.</summary>
 		 * <param name = "slot">The index number of the dialogue option to run</param>
-		 * <param name = "force">If True, then the option will be run regardless of whether it's enabled or valid</param>
 		 */
-		public void RunOption (int slot, bool force = false)
+		public void RunOption (int slot)
 		{
 			CancelInvoke ("RunDefault");
-			int i = ConvertSlotToOption (slot, force);
+			int i = ConvertSlotToOption (slot);
 			if (i == -1)
 			{
 				return;
@@ -306,12 +305,12 @@ namespace AC
 		}
 		
 		
-		private int ConvertSlotToOption (int slot, bool force = false)
+		private int ConvertSlotToOption (int slot)
 		{
 			int foundSlots = 0;
 			for (int j=0; j<options.Count; j++)
 			{
-				if (force || options[j].CanShow ())
+				if (options[j].CanShow ())
 				{
 					foundSlots ++;
 					if (foundSlots == (slot+1))
@@ -424,7 +423,7 @@ namespace AC
 					}
 					else
 					{
-						ACDebug.Log (gameObject.name + "'s option '" + option.label + "' cannot be turned on as it is locked.", this);
+						ACDebug.Log (gameObject.name + "'s option '" + option.label + "' cannot be turned on as it is locked.");
 					}
 					return;
 				}
@@ -448,7 +447,7 @@ namespace AC
 					}
 					else
 					{
-						ACDebug.LogWarning (gameObject.name + "'s option '" + option.label + "' cannot be turned off as it is locked.", this);
+						ACDebug.LogWarning (gameObject.name + "'s option '" + option.label + "' cannot be turned off as it is locked.");
 					}
 					return;
 				}
@@ -550,7 +549,7 @@ namespace AC
 				#if UNITY_EDITOR
 				if (Application.isPlaying)
 				{
-					ACDebug.LogWarning ("Conversation '" + gameObject.name + "' has been temporarily upgraded - please view its Inspector when the game ends and save the scene.", this);
+					ACDebug.LogWarning ("Conversation '" + gameObject.name + "' has been temporarily upgraded - please view its Inspector when the game ends and save the scene.");
 				}
 				else
 				{
@@ -560,7 +559,7 @@ namespace AC
 						// Asset file
 						UnityEditor.AssetDatabase.SaveAssets ();
 					}
-					ACDebug.LogWarning ("Upgraded Conversation '" + gameObject.name + "', please save the scene.", this);
+					ACDebug.LogWarning ("Upgraded Conversation '" + gameObject.name + "', please save the scene.");
 				}
 				#endif
 			}

@@ -1,7 +1,7 @@
 /*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2019
+ *	by Chris Burton, 2013-2018
  *	
  *	"AC_Trigger.cs"
  * 
@@ -10,7 +10,6 @@
  */
 
 using UnityEngine;
-using System.Collections.Generic;
 
 namespace AC
 {
@@ -25,11 +24,11 @@ namespace AC
 	public class AC_Trigger : ActionList
 	{
 
-		/** If detectionMethod = TriggerDetectionMethod.RigidbodyCollision, what the Trigger will react to (Player, SetObject, AnyObject, AnyObjectWithComponent) */
+		/** What the Trigger will react to (Player, SetObject, AnyObject, AnyObjectWithComponent) */
 		public TriggerDetects detects = TriggerDetects.Player;
-		/** The GameObject that the Trigger reacts to, if detectionMethod = TriggerDetectionMethod.RigidbodyCollision and detects = TriggerDetects.SetObject */
+		/** The GameObject that the Trigger reacts to, if detects = TriggerDetects.SetObject */
 		public GameObject obToDetect;
-		/** The component that must be attached to an object for the Trigger to react to, if detectionMethod = TriggerDetectionMethod.RigidbodyCollision and detects = TriggerDetects.AnyObjectWithComponent */
+		/** The component that must be attached to an object for the Trigger to react to, if detects = TriggerDetects.AnyObjectWithComponent */
 		public string detectComponent = "";
 
 		/** What kind of contact the Trigger reacts to (0 = "On enter", 1 = "Continuous", 2 = "On exit") */
@@ -40,62 +39,7 @@ namespace AC
 		public bool cancelInteractions = false;
 		/** The state of the game under which the trigger reacts (OnlyDuringGameplay, OnlyDuringCutscenes, DuringCutscenesAndGameplay) */
 		public TriggerReacts triggerReacts = TriggerReacts.OnlyDuringGameplay;
-		/** The way in which objects are detected (RigidbodyCollision, TransformPosition) */
-		public TriggerDetectionMethod detectionMethod = TriggerDetectionMethod.RigidbodyCollision;
-
-		/** If True, and detectionMethod = TriggerDetectionMethod.TransformPosition, then the Trigger will react to the active Player */
-		public bool detectsPlayer = true;
-		/** The GameObjects that the Trigger reacts to, if detectionMethod = TriggerDetectionMethod.TransformPosition */
-		public List<GameObject> obsToDetect = new List<GameObject>();
-
-		private Collider2D _collider2D;
-		private Collider _collider;
-		private bool[] lastFrameWithins;
-
-
-		private void OnEnable ()
-		{
-			if (KickStarter.stateHandler) KickStarter.stateHandler.Register (this);
-
-			_collider2D = GetComponent <Collider2D>();
-			_collider = GetComponent <Collider>();
-			lastFrameWithins = (detectsPlayer) ? new bool[obsToDetect.Count + 1] : new bool[obsToDetect.Count];
-
-			if (_collider == null && _collider2D == null)
-			{
-				ACDebug.LogWarning ("Trigger '" + gameObject.name + " cannot detect collisions because it has no Collider!", this);
-			}
-		}
-
-
-		private void Start ()
-		{
-			if (KickStarter.stateHandler) KickStarter.stateHandler.Register (this);
-		}
-
-
-		private void OnDisable ()
-		{
-			if (KickStarter.stateHandler) KickStarter.stateHandler.Unregister (this);
-		}
-
-
-		public void _Update ()
-		{
-			if (detectionMethod == TriggerDetectionMethod.TransformPosition)
-			{
-				for (int i=0; i<obsToDetect.Count; i++)
-				{
-					ProcessObject (obsToDetect[i], i);
-				}
-
-				if (detectsPlayer && KickStarter.player != null)
-				{
-					ProcessObject (KickStarter.player.gameObject, lastFrameWithins.Length - 1);
-				}
-			}
-		}
-
+		
 
 		private void Interact (GameObject collisionOb)
 		{
@@ -118,19 +62,17 @@ namespace AC
 				}
 				else
 				{
-					ACDebug.Log ("Cannot set the value of parameter 0 ('" + parameters[0].label + "') as it is not of the type 'Game Object'.", this);
+					ACDebug.Log ("Cannot set the value of parameter 0 ('" + parameters[0].label + "') as it is not of the type 'Game Object'.");
 				}
 			}
-
-			KickStarter.eventManager.Call_OnRunTrigger (this, collisionOb);
-
+			
 			Interact ();
 		}
 		
 		
 		private void OnTriggerEnter (Collider other)
 		{
-			if (detectionMethod == TriggerDetectionMethod.RigidbodyCollision && triggerType == 0 && IsObjectCorrect (other.gameObject))
+			if (triggerType == 0 && IsObjectCorrect (other.gameObject))
 			{
 				Interact (other.gameObject);
 			}
@@ -139,7 +81,7 @@ namespace AC
 		
 		private void OnTriggerEnter2D (Collider2D other)
 		{
-			if (detectionMethod == TriggerDetectionMethod.RigidbodyCollision && triggerType == 0 && IsObjectCorrect (other.gameObject))
+			if (triggerType == 0 && IsObjectCorrect (other.gameObject))
 			{
 				Interact (other.gameObject);
 			}
@@ -148,7 +90,7 @@ namespace AC
 		
 		private void OnTriggerStay (Collider other)
 		{
-			if (detectionMethod == TriggerDetectionMethod.RigidbodyCollision && triggerType == 1 && IsObjectCorrect (other.gameObject))
+			if (triggerType == 1 && IsObjectCorrect (other.gameObject))
 			{
 				Interact (other.gameObject);
 			}
@@ -157,7 +99,7 @@ namespace AC
 		
 		private void OnTriggerStay2D (Collider2D other)
 		{
-			if (detectionMethod == TriggerDetectionMethod.RigidbodyCollision && triggerType == 1 && IsObjectCorrect (other.gameObject))
+			if (triggerType == 1 && IsObjectCorrect (other.gameObject))
 			{
 				Interact (other.gameObject);
 			}
@@ -166,7 +108,7 @@ namespace AC
 		
 		private void OnTriggerExit (Collider other)
 		{
-			if (detectionMethod == TriggerDetectionMethod.RigidbodyCollision && triggerType == 2 && IsObjectCorrect (other.gameObject))
+			if (triggerType == 2 && IsObjectCorrect (other.gameObject))
 			{
 				Interact (other.gameObject);
 			}
@@ -175,7 +117,7 @@ namespace AC
 		
 		private void OnTriggerExit2D (Collider2D other)
 		{
-			if (detectionMethod == TriggerDetectionMethod.RigidbodyCollision && triggerType == 2 && IsObjectCorrect (other.gameObject))
+			if (triggerType == 2 && IsObjectCorrect (other.gameObject))
 			{
 				Interact (other.gameObject);
 			}
@@ -215,7 +157,7 @@ namespace AC
 			}
 			else
 			{
-				ACDebug.LogWarning ("Cannot turn " + this.name + " on because it has no Collider component.", this);
+				ACDebug.LogWarning ("Cannot turn " + this.name + " on because it has no Collider component.");
 			}
 		}
 		
@@ -235,15 +177,7 @@ namespace AC
 			}
 			else
 			{
-				ACDebug.LogWarning ("Cannot turn " + this.name + " off because it has no Collider component.", this);
-			}
-
-			if (lastFrameWithins != null)
-			{
-				for (int i=0; i<lastFrameWithins.Length; i++)
-				{
-					lastFrameWithins[i] = false;
-				}
+				ACDebug.LogWarning ("Cannot turn " + this.name + " off because it has no Collider component.");
 			}
 		}
 		
@@ -251,11 +185,6 @@ namespace AC
 		private bool IsObjectCorrect (GameObject obToCheck)
 		{
 			if (KickStarter.stateHandler == null || KickStarter.stateHandler.gameState == GameState.Paused || obToCheck == null)
-			{
-				return false;
-			}
-
-			if (KickStarter.saveSystem.loadingGame != LoadingGame.No)
 			{
 				return false;
 			}
@@ -272,11 +201,6 @@ namespace AC
 			if (KickStarter.stateHandler != null && KickStarter.stateHandler.AreTriggersDisabled ())
 			{
 				return false;
-			}
-
-			if (detectionMethod == TriggerDetectionMethod.TransformPosition)
-			{
-				return true;
 			}
 
 			if (detects == TriggerDetects.Player)
@@ -370,78 +294,6 @@ namespace AC
 		}
 
 		#endif
-
-
-		private void ProcessObject (GameObject objectToCheck, int i)
-		{
-			if (objectToCheck != null)
-			{
-				bool isInside = CheckForPoint (objectToCheck.transform.position);
-				if (DetermineValidity (isInside, i))
-				{
-					if (IsObjectCorrect (objectToCheck))
-					{
-						Interact (objectToCheck);
-					}
-				}
-			}
-		}
-
-
-		private bool DetermineValidity (bool thisFrameWithin, int i)
-		{
-			bool isValid = false;
-
-			switch (triggerType)
-			{
-				case 0:
-					// OnEnter
-					if (thisFrameWithin && !lastFrameWithins[i])
-					{
-						isValid = true;
-					}
-					break;
-
-				case 1:
-					// Continuous
-					isValid = thisFrameWithin;
-					break;
-
-				case 2:
-					// OnExit
-					if (!thisFrameWithin && lastFrameWithins[i])
-					{
-						isValid = true;
-					}
-					break;
-
-				default:
-					break;
-			}
-
-			lastFrameWithins[i] = thisFrameWithin;
-			return isValid;
-		}
-
-
-		private bool CheckForPoint (Vector3 position)
-		{
-			if (_collider2D != null)
-			{
-				if (_collider2D.enabled)
-				{
-					return _collider2D.OverlapPoint (position);
-				}
-				return false;
-			}
-
-			if (_collider != null && _collider.enabled)
-			{
-				return _collider.bounds.Contains (position);
-			}
-
-			return false;
-		}
 
 	}
 	

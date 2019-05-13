@@ -1,7 +1,7 @@
 ﻿/*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2019
+ *	by Chris Burton, 2013-2018
  *	
  *	"ActionSoundShot.cs"
  * 
@@ -26,7 +26,6 @@ namespace AC
 		public int constantID = 0;
 		public int parameterID = -1;
 		public Transform origin;
-		protected Transform runtimeOrigin;
 
 		public AudioClip audioClip;
 		public int audioClipParameterID = -1;
@@ -43,7 +42,7 @@ namespace AC
 		
 		override public void AssignValues (List<ActionParameter> parameters)
 		{
-			runtimeOrigin = AssignFile (parameters, parameterID, constantID, origin);
+			origin = AssignFile (parameters, parameterID, constantID, origin);
 			audioClip = (AudioClip) AssignObject <AudioClip> (parameters, audioClipParameterID, audioClip);
 		}
 		
@@ -60,9 +59,9 @@ namespace AC
 				isRunning = true;
 
 				Vector3 originPos = Camera.main.transform.position;
-				if (runtimeOrigin != null)
+				if (origin != null)
 				{
-					originPos = runtimeOrigin.position;
+					originPos = origin.position;
 				}
 
 				float volume = Options.GetSFXVolume ();
@@ -128,7 +127,7 @@ namespace AC
 		}
 
 
-		override public void AssignConstantIDs (bool saveScriptsToo, bool fromAssetFile)
+		override public void AssignConstantIDs (bool saveScriptsToo)
 		{
 			AssignConstantID (origin, constantID, parameterID);
 		}
@@ -136,11 +135,13 @@ namespace AC
 		
 		override public string SetLabel ()
 		{
+			string labelAdd = "";
 			if (audioClip != null)
 			{
-				return audioClip.name;
+				labelAdd = " (" + audioClip.name + ")";
 			}
-			return string.Empty;
+			
+			return labelAdd;
 		}
 		
 		#endif

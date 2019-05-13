@@ -1,7 +1,7 @@
 /*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2019
+ *	by Chris Burton, 2013-2018
  *	
  *	"ActionTimescale.cs"
  * 
@@ -11,7 +11,6 @@
  */
 
 using UnityEngine;
-using System.Collections.Generic;
 #if UNITY_EDITOR
 using UnityEditor;
 #endif
@@ -24,7 +23,6 @@ namespace AC
 	{
 		
 		public float timeScale;
-		public int parameterID = -1;
 		public bool useTimeCurve = false;
 		public AnimationCurve timeCurve;
 		
@@ -36,14 +34,7 @@ namespace AC
 			title = "Change timescale";
 			description = "Changes the timescale to a value between 0 and 1. This allows for slow-motion effects.";
 		}
-
-
-		override public void AssignValues (List<ActionParameter> parameters)
-		{
-			timeScale = AssignFloat (parameters, parameterID, timeScale);
-			if (timeScale < 0f) timeScale = 0f;
-		}
-
+		
 		
 		override public float Run ()
 		{
@@ -88,7 +79,7 @@ namespace AC
 		
 		#if UNITY_EDITOR
 
-		override public void ShowGUI (List<ActionParameter> parameters)
+		override public void ShowGUI ()
 		{
 			useTimeCurve = EditorGUILayout.Toggle ("Use time curve?", useTimeCurve);
 			if (useTimeCurve)
@@ -103,11 +94,7 @@ namespace AC
 			}
 			else
 			{
-				parameterID = Action.ChooseParameterGUI ("Timescale:", parameters, parameterID, ParameterType.Float);
-				if (parameterID < 0)
-				{
-					timeScale = EditorGUILayout.Slider ("Timescale:", timeScale, 0f, 1f);
-				}
+				timeScale = EditorGUILayout.Slider ("Timescale:", timeScale, 0f, 1f);
 			}
 			
 			AfterRunningOption ();

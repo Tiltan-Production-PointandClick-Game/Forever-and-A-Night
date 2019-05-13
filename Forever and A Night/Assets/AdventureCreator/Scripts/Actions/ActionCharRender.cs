@@ -1,7 +1,7 @@
 ﻿/*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2019
+ *	by Chris Burton, 2013-2018
  *	
  *	"ActionCharRender.cs"
  * 
@@ -28,7 +28,6 @@ namespace AC
 		public int constantID = 0;
 		public bool isPlayer;
 		public Char _char;
-		protected Char runtimeChar;
 
 		public RenderLock renderLock_sorting;
 		public SortingMapType mapType;
@@ -59,10 +58,10 @@ namespace AC
 
 		override public void AssignValues (List<ActionParameter> parameters)
 		{
-			runtimeChar = AssignFile <Char> (parameters, parameterID, constantID, _char);
+			_char = AssignFile <Char> (parameters, parameterID, constantID, _char);
 			if (isPlayer)
 			{
-				runtimeChar = KickStarter.player;
+				_char = KickStarter.player;
 			}
 
 			sortingOrder = AssignInteger (parameters, sortingOrderParameterID, sortingOrder);
@@ -72,27 +71,27 @@ namespace AC
 		
 		override public float Run ()
 		{
-			if (runtimeChar != null)
+			if (_char)
 			{
 				if (renderLock_sorting == RenderLock.Set)
 				{
 					if (mapType == SortingMapType.OrderInLayer)
 					{
-						runtimeChar.SetSorting (sortingOrder);
+						_char.SetSorting (sortingOrder);
 					}
 					else if (mapType == SortingMapType.SortingLayer)
 					{
-						runtimeChar.SetSorting (sortingLayer);
+						_char.SetSorting (sortingLayer);
 					}
 				}
 				else if (renderLock_sorting == RenderLock.Release)
 				{
-					runtimeChar.ReleaseSorting ();
+					_char.ReleaseSorting ();
 				}
 
-				if (runtimeChar.GetAnimEngine () != null)
+				if (_char.GetAnimEngine () != null)
 				{
-					runtimeChar.GetAnimEngine ().ActionCharRenderRun (this);
+					_char.GetAnimEngine ().ActionCharRenderRun (this);
 				}
 			}
 
@@ -174,7 +173,7 @@ namespace AC
 		}
 
 
-		override public void AssignConstantIDs (bool saveScriptsToo, bool fromAssetFile)
+		override public void AssignConstantIDs (bool saveScriptsToo)
 		{
 			if (!isPlayer)
 			{
@@ -193,15 +192,18 @@ namespace AC
 		
 		public override string SetLabel ()
 		{
+			string labelAdd = "";
+			
 			if (isPlayer)
 			{
-				return "Player";
+				labelAdd = " (Player)";
 			}
-			else if (_char != null)
+			else if (_char)
 			{
-				return "_char.name";
+				labelAdd = " (" + _char.name + ")";
 			}
-			return string.Empty;
+
+			return labelAdd;
 		}
 		
 		#endif

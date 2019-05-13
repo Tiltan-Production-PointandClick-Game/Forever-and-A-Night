@@ -1,7 +1,7 @@
 /*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2019
+ *	by Chris Burton, 2013-2018
  *	
  *	"Moveable.cs"
  * 
@@ -224,7 +224,6 @@ namespace AC
 					if (character != null)
 					{
 						character.SetLookDirection (character.TransformRotation * Vector3.forward, true);
-						character.StopTurning ();
 					}
 
 					rotateChangeTime = 0f;

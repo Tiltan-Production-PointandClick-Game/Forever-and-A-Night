@@ -31,7 +31,6 @@ MonoBehaviour:
   onlyWalkWhenOverNavMesh: 0
   onlyShowInventoryLabelOverHotspots: 0
   inventoryCursorSize: 0.06
-  allowIconInput: 1
   waitIcon:
     texture: {fileID: 0}
     isAnimated: 0

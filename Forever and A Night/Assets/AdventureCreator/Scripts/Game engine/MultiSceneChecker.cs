@@ -36,7 +36,7 @@ namespace AC
 				if (taggedMainCamera.GetComponent <MainCamera>() == null &&
 					taggedMainCamera.GetComponentInParent <MainCamera>() == null)
 				{
-					ACDebug.LogError ("MainCamera has no MainCamera component.", taggedMainCamera);
+					ACDebug.LogError ("MainCamera has no MainCamera component.");
 				}
 			}
 
@@ -55,7 +55,7 @@ namespace AC
 			}
 			else
 			{
-				ACDebug.LogError ("No KickStarter component found in the scene!", gameObject);
+				ACDebug.LogError ("No KickStarter component found in the scene!");
 			}
 		}
 

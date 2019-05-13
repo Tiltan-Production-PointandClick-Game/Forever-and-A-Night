@@ -1,7 +1,7 @@
 ﻿/*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2019
+ *	by Chris Burton, 2013-2018
  *	
  *	"ActionMixerSnapshot.cs"
  * 
@@ -149,14 +149,14 @@ namespace AC
 			#if UNITY_5 || UNITY_2017_1_OR_NEWER
 			if (numSnapshots == 1 && snapshot != null)
 			{
-				return snapshot.name;
+				return " (" + snapshot.name + ")";
 			}
 			if (numSnapshots > 1 && audioMixer != null)
 			{
-				return audioMixer.name;
+				return " (" + audioMixer.name + ")";
 			}
 			#endif
-			return string.Empty;
+			return "";
 		}
 		
 		#endif

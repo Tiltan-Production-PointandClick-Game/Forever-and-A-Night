@@ -2,7 +2,7 @@
 /*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2019
+ *	by Chris Burton, 2013-2018
  *	
  *	"ActionCheckMultiple.cs"
  * 
@@ -157,8 +157,8 @@ namespace AC
 				
 				for (int i = 0; i < actions.Count; i++)
 				{
-					labelList.Add ("(" + i.ToString () + ") " + ((KickStarter.actionsManager != null) ? KickStarter.actionsManager.GetActionTypeLabel (actions[i]) : string.Empty));
-
+					labelList.Add (i.ToString () + ": " + actions [i].title);
+					
 					if (ending.skipActionActual == actions [i])
 					{
 						ending.skipAction = i;
@@ -182,7 +182,7 @@ namespace AC
 				if (actions.Count > 1)
 				{
 					EditorGUILayout.BeginHorizontal();
-					EditorGUILayout.LabelField ("  Action to skip to:", GUILayout.Width (155f));
+					EditorGUILayout.LabelField ("  Action to skip to:");
 					tempSkipAction = EditorGUILayout.Popup (ending.skipAction, labelList.ToArray());
 					ending.skipAction = tempSkipAction;
 					EditorGUILayout.EndHorizontal();

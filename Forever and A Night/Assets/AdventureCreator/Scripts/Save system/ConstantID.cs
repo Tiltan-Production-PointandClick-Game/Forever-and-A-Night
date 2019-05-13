@@ -1,7 +1,7 @@
 /*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2019
+ *	by Chris Burton, 2013-2018
  *	
  *	"ConstantID.cs"
  * 
@@ -166,14 +166,6 @@ namespace AC
 				}
 			}
 
-			if (UnityVersionHandler.IsPrefabFile (gameObject) &&
-				UnityVersionHandler.IsPrefabEditing (gameObject) &&
-				!retainInPrefab)
-			{
-				// Avoid setting ID to a prefab that shouldn't have one
-				return;
-			}
-
 			constantID = GetInstanceID ();
 			if (constantID < 0)
 			{
@@ -181,7 +173,7 @@ namespace AC
 			}
 
 			UnityVersionHandler.CustomSetDirty (this, true);
-			ACDebug.Log ("Set new ID for " + this.GetType ().ToString () + " to " + gameObject.name + ": " + constantID, gameObject);
+			ACDebug.Log ("Set new ID for " + this.name + ": " + constantID, gameObject);
 		}
 		
 		
@@ -324,7 +316,7 @@ namespace AC
 	 * A subclass of ConstantID, that is used to distinguish further subclasses from ConstantID components.
 	 */
 	[System.Serializable]
-	public abstract class Remember : ConstantID
+	public class Remember : ConstantID
 	{
 
 		protected bool savePrevented = false;

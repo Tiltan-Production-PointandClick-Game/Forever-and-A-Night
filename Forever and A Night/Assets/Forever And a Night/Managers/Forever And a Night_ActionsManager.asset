@@ -19,7 +19,6 @@ MonoBehaviour:
   actionListEditorScrollWheel: 0
   invertPanning: 0
   panSpeed: 1
-  autoPanNearWindowEdge: 1
   defaultClass: -1
   defaultClassName: ActionPause
   AllActions:
@@ -272,16 +271,10 @@ MonoBehaviour:
       all of them.
     isEnabled: 1
     color: {r: 1, g: 1, b: 1, a: 1}
-  - fileName: ActionDocumentCheck
-    category: 5
-    title: Check
-    description: Checks to see if a particular Document is in the Player's possession.
-    isEnabled: 1
-    color: {r: 1, g: 1, b: 1, a: 1}
   - fileName: ActionDocumentOpen
     category: 5
     title: Open
-    description: 'Opens a document, causing any Menu of ''Appear type: On View Document''
+    description: 'Openss a document, causing any Menu of Appear type: On Container
       to open.'
     isEnabled: 1
     color: {r: 1, g: 1, b: 1, a: 1}
@@ -530,12 +523,6 @@ MonoBehaviour:
       in the current scene.
     isEnabled: 1
     color: {r: 1, g: 1, b: 1, a: 1}
-  - fileName: ActionTagCheck
-    category: 12
-    title: Check tag
-    description: This action checks which tag has been assigned to a given GameObject.
-    isEnabled: 1
-    color: {r: 1, g: 1, b: 1, a: 1}
   - fileName: ActionVisibleCheck
     category: 12
     title: Check visibility
@@ -649,12 +636,6 @@ MonoBehaviour:
     category: 14
     title: Save or load
     description: Saves and loads save-game files
-    isEnabled: 1
-    color: {r: 1, g: 1, b: 1, a: 1}
-  - fileName: ActionOptionSet
-    category: 14
-    title: Set Option
-    description: Set an Options variable to a specific value
     isEnabled: 1
     color: {r: 1, g: 1, b: 1, a: 1}
   - fileName: ActionSceneAdd

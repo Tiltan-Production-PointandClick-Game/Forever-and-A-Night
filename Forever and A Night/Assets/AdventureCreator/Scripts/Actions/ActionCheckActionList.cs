@@ -1,7 +1,7 @@
 ﻿/*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2019
+ *	by Chris Burton, 2013-2018
  *	
  *	"ActionCheckActionList.cs"
  * 
@@ -28,7 +28,6 @@ namespace AC
 
 		public bool checkSelfSkipping = false;
 		public ActionList actionList;
-		protected ActionList runtimeActionList;
 		public ActionListAsset actionListAsset;
 		public int constantID = 0;
 		public int parameterID = -1;
@@ -62,7 +61,7 @@ namespace AC
 		{
 			if (listSource == ListSource.InScene)
 			{
-				runtimeActionList = AssignFile <ActionList> (parameters, parameterID, constantID, actionList);
+				actionList = AssignFile <ActionList> (parameters, parameterID, constantID, actionList);
 			}
 		}
 
@@ -79,9 +78,9 @@ namespace AC
 				return false;
 			}
 
-			if (listSource == ListSource.InScene && runtimeActionList != null)
+			if (listSource == ListSource.InScene && actionList != null)
 			{
-				return KickStarter.actionListManager.IsListRunning (runtimeActionList);
+				return KickStarter.actionListManager.IsListRunning (actionList);
 			}
 			else if (listSource == ListSource.AssetFile && actionListAsset != null)
 			{
@@ -126,7 +125,7 @@ namespace AC
 		}
 
 
-		override public void AssignConstantIDs (bool saveScriptsToo, bool fromAssetFile)
+		override public void AssignConstantIDs (bool saveScriptsToo)
 		{
 			if (listSource == ListSource.InScene)
 			{
@@ -137,15 +136,18 @@ namespace AC
 
 		public override string SetLabel ()
 		{
+			string labelAdd = "";
+			
 			if (listSource == ListSource.InScene && actionList != null)
 			{
-				return actionList.name;
+				labelAdd += " (" + actionList.name + ")";
 			}
 			else if (listSource == ListSource.AssetFile && actionListAsset != null)
 			{
-				return actionListAsset.name;
+				labelAdd += " (" + actionListAsset.name + ")";
 			}
-			return string.Empty;
+			
+			return labelAdd;
 		}
 
 		#endif

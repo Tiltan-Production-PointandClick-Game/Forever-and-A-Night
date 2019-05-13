@@ -1,7 +1,7 @@
 ﻿/*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2019
+ *	by Chris Burton, 2013-2018
  *	
  *	"ActionMenuState.cs"
  * 
@@ -109,7 +109,7 @@ namespace AC
 						}
 						else
 						{
-							ACDebug.LogWarning ("Can only turn on Menus with an Appear Type of Manual, OnInputKey, OnContainer or OnViewDocument - did you mean 'Unlock Menu'?");
+							ACDebug.LogWarning ("Can only turn on Menus with an Appear Type of Manual, OnInputKey or OnContainer - did you mean 'Unlock Menu'?");
 						}
 					}
 					else if (changeType == MenuChangeType.TurnOffMenu)
@@ -130,7 +130,7 @@ namespace AC
 						}
 						else
 						{
-							ACDebug.LogWarning ("Can only turn off Menus with an Appear Type of Manual, OnInputKey, OnContainer or OnViewDocument - did you mean 'Lock Menu'?");
+							ACDebug.LogWarning ("Can only turn off Menus with an Appear Type of Manual, OnInputKey or OnContainer - did you mean 'Lock Menu'?");
 						}
 					}
 					else if (changeType == MenuChangeType.LockMenu)
@@ -453,11 +453,12 @@ namespace AC
 		
 		public override string SetLabel ()
 		{
-			string labelAdd = changeType.ToString () + " '" + menuToChange;
+			string labelAdd = " (" + changeType.ToString () + " '" + menuToChange;
 			if (changeType == MenuChangeType.HideMenuElement || changeType == MenuChangeType.ShowMenuElement)
 			{
 				labelAdd += " " + elementToChange;
 			}
+			labelAdd += "')";
 			return labelAdd;
 		}
 

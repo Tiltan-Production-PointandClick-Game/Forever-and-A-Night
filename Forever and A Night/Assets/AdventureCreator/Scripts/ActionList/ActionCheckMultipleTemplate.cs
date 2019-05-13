@@ -1,7 +1,7 @@
 ﻿/*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2019
+ *	by Chris Burton, 2013-2018
  *	
  *	"ActionCheckMultipleTemplate.cs"
  * 
@@ -58,16 +58,14 @@ namespace AC
 
 		public override string SetLabel ()
 		{
-			// (Optional) Return a string used to describe the specific action's job.
-
-			return string.Empty;
+			// Optional.  Return a string used to describe the specific action's job.
+			return "";
 		}
 
 
 		protected override string GetSocketLabel (int i)
 		{
-			// (Optional) Return an output socket's label, given the index number (starting from 0).
-
+			// Optional.  Return an output socket's label, given the index number (starting from 0).
 			return "Option " + i.ToString () + ":";
 		}
 

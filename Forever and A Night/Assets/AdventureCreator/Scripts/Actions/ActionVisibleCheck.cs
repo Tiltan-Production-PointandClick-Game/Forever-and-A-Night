@@ -1,7 +1,7 @@
 ﻿/*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2019
+ *	by Chris Burton, 2013-2018
  *	
  *	"ActionVisibleCheck.cs"
  * 
@@ -26,7 +26,6 @@ namespace AC
 		public int parameterID = -1;
 		public int constantID = 0;
 		public GameObject obToAffect;
-		protected GameObject runtimeObToAffect;
 
 		public CheckVisState checkVisState = CheckVisState.InScene;
 
@@ -42,27 +41,26 @@ namespace AC
 		
 		override public void AssignValues (List<ActionParameter> parameters)
 		{
-			runtimeObToAffect = AssignFile (parameters, parameterID, constantID, obToAffect);
+			obToAffect = AssignFile (parameters, parameterID, constantID, obToAffect);
 		}
 
 
 		override public bool CheckCondition ()
 		{
-			if (runtimeObToAffect)
+			if (obToAffect)
 			{
-				Renderer _renderer = runtimeObToAffect.GetComponent <Renderer>();
-				if (_renderer != null)
+				if (obToAffect.GetComponent <Renderer>())
 				{
 					if (checkVisState == CheckVisState.InCamera)
 					{
-						return _renderer.isVisible;
+						return obToAffect.GetComponent <Renderer>().isVisible;
 					}
 					else if (checkVisState == CheckVisState.InScene)
 					{
-						return _renderer.enabled;
+						return obToAffect.GetComponent <Renderer>().enabled;
 					}
 				}
-				ACDebug.LogWarning ("Cannot check visibility of " + runtimeObToAffect.name + " as it has no renderer component");
+				ACDebug.LogWarning ("Cannot check visibility of " + obToAffect.name + " as it has no renderer component");
 			}
 			return false;
 		}
@@ -90,7 +88,7 @@ namespace AC
 		}
 
 
-		override public void AssignConstantIDs (bool saveScriptsToo, bool fromAssetFile)
+		override public void AssignConstantIDs (bool saveScriptsToo)
 		{
 			AssignConstantID (obToAffect, constantID, parameterID);
 		}
@@ -98,11 +96,12 @@ namespace AC
 		
 		override public string SetLabel ()
 		{
-			if (obToAffect != null)
-			{
-				return obToAffect.name;
-			}
-			return string.Empty;
+			string labelAdd = "";
+			
+			if (obToAffect)
+				labelAdd = " (" + obToAffect.name + ")";
+			
+			return labelAdd;
 		}
 		
 		#endif

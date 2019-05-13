@@ -1,7 +1,7 @@
 /*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2019
+ *	by Chris Burton, 2013-2018
  *	
  *	"SceneSettings.cs"
  * 
@@ -214,25 +214,10 @@ namespace AC
 		 */
 		public PlayerStart GetPlayerStart ()
 		{
-			PlayerStart[] startersArray = FindObjectsOfType (typeof (PlayerStart)) as PlayerStart[];
-
-			List<PlayerStart> starters = new List<PlayerStart>();
-			foreach (PlayerStart starter in startersArray)
-			{
-				if (defaultPlayerStart == null || starter != defaultPlayerStart)
-				{
-					starters.Add (starter);
-				}
-			}
-
-			if (defaultPlayerStart != null && !starters.Contains (defaultPlayerStart))
-			{
-				starters.Add (defaultPlayerStart);
-			}
-
+			PlayerStart[] starters = FindObjectsOfType (typeof (PlayerStart)) as PlayerStart[];
 			foreach (PlayerStart starter in starters)
 			{
-				if (starter.chooseSceneBy == ChooseSceneBy.Name && !string.IsNullOrEmpty (starter.previousSceneName) && starter.previousSceneName == KickStarter.sceneChanger.GetPreviousSceneInfo ().name)
+				if (starter.chooseSceneBy == ChooseSceneBy.Name && starter.previousSceneName != "" && starter.previousSceneName == KickStarter.sceneChanger.GetPreviousSceneInfo ().name)
 				{
 					return starter;
 				}
@@ -282,7 +267,7 @@ namespace AC
 		{
 			if (defaultSound == null)
 			{
-				ACDebug.Log ("Cannot play sound since no Default Sound is defined in the scene - please assign one in the Scene Manager.");
+				ACDebug.Log ("Cannot play sound since no Default Sound Prefab is defined - please set one in the Scene Manager.");
 				return;
 			}
 			
@@ -372,7 +357,6 @@ namespace AC
 			}
 			#endif
 		}
-
 
 		/**
 		 * <summary>Gets how much slower vertical movement is compared to horizontal movement, if the game is in 2D.</summary>

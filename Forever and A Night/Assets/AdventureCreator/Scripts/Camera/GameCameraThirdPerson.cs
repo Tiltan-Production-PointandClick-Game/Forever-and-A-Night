@@ -1,7 +1,7 @@
 ﻿/*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2019
+ *	by Chris Burton, 2013-2018
  *	
  *	"GameCameraThirdPerson.cs"
  * 
@@ -45,10 +45,10 @@ namespace AC
 		public bool allowMouseWheelZooming = false;
 		/** If True, then the camera will detect Colliders to try to avoid clipping through walls */
 		public bool detectCollisions = true;
-		/** The size of the SphereCast to use when detecting collisions */
-		public float collisionRadius = 0.3f;
 		/** The LayerMask used to detect collisions, if detectCollisions = True */
 		public LayerMask collisionLayerMask;
+		/** The distance to keep away from Colliders, if detectCollisions = True */
+		public float collisionOffset = 0f;
 		/** The minimum distance to keep from its target */
 		public float minDistance = 1f;
 		/** The maximum distance to keep from its target */
@@ -99,7 +99,7 @@ namespace AC
 		/** If True, then the magnitude of the input vector affects the magnitude of the rotation speed */
 		public bool inputAffectsSpeed = false;
 
-		private Vector3 actualCollisionOffset;
+		private float actualCollisionOffset = 0f;
 
 		private float deltaDistance = 0f;
 		private float deltaSpin = 0f;
@@ -173,19 +173,14 @@ namespace AC
 		{
 			if (detectCollisions && target != null)
 			{
-				Vector3 direction = target.position + new Vector3 (0, verticalOffset, 0f) - targetPosition;
-
 				RaycastHit hit;
-				if (Physics.SphereCast (direction + targetPosition, collisionRadius, -direction.normalized, out hit, direction.magnitude, collisionLayerMask))
+				if (Physics.Linecast (target.position + new Vector3 (0, verticalOffset, 0f), targetPosition, out hit, collisionLayerMask))
 				{
-					float counterDist = (direction.magnitude - hit.distance);
-					float maxDist = direction.magnitude - minDistance;
-					counterDist = Mathf.Min (counterDist, maxDist);
-					actualCollisionOffset = direction.normalized * counterDist;
+					actualCollisionOffset = (targetPosition - hit.point).magnitude + collisionOffset;
 				}
 				else
 				{
-					actualCollisionOffset = Vector3.zero;
+					actualCollisionOffset = 0f;
 				}
 			}
 		}
@@ -202,8 +197,8 @@ namespace AC
 
 		private void UpdateSelf ()
 		{
-			transform.rotation = targetRotation;
-			transform.position = targetPosition + actualCollisionOffset;
+			transform.rotation = Quaternion.Lerp (transform.rotation, targetRotation, Time.deltaTime * 10f);
+			transform.position = Vector3.Lerp (transform.position, targetPosition - (targetPosition - centrePosition).normalized * actualCollisionOffset, Time.deltaTime * 10f);
 		}
 
 
@@ -306,7 +301,7 @@ namespace AC
 								deltaSpin = Mathf.Lerp (deltaSpin, -spinSpeed * scaleFactor, spinAccleration * Time.deltaTime * -inputMovement.x);
 							}
 						}
-
+						
 						if (spinLock == RotationLock.Limited)
 						{
 							if ((invertSpin && deltaSpin > 0f) || (!invertSpin && deltaSpin < 0f))

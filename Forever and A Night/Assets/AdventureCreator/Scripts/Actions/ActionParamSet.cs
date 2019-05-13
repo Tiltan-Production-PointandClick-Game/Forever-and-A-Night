@@ -1,7 +1,7 @@
 ﻿/*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2019
+ *	by Chris Burton, 2013-2018
  *	
  *	"ActionParamSet.cs"
  * 
@@ -38,7 +38,6 @@ namespace AC
 		public string stringValue;
 
 		public GameObject gameobjectValue;
-		protected GameObject runtimeGameobjectValue;
 		public int gameObjectConstantID;
 
 		public Object unityObjectValue;
@@ -134,7 +133,7 @@ namespace AC
 				}
 			}
 
-			runtimeGameobjectValue = AssignFile (gameObjectConstantID, gameobjectValue);
+			gameobjectValue = AssignFile (gameObjectConstantID, gameobjectValue);
 
 			if (setParamMethod == SetParamMethod.EnteredHere && _parameter != null)
 			{
@@ -151,7 +150,7 @@ namespace AC
 						break;
 
 					case ParameterType.GameObject:
-						runtimeGameobjectValue = AssignFile (parameters, ownParamID, gameObjectConstantID, gameobjectValue);
+						gameobjectValue = AssignFile (parameters, ownParamID, gameObjectConstantID, gameobjectValue);
 						break;
 
 					case ParameterType.GlobalVariable:
@@ -165,10 +164,6 @@ namespace AC
 
 					case ParameterType.InventoryItem:
 						intValue = AssignInvItemID (parameters, ownParamID, intValue);
-						break;
-
-					case ParameterType.Document:
-						intValue = AssignDocumentID (parameters, ownParamID, intValue);
 						break;
 
 					case ParameterType.String:
@@ -225,8 +220,7 @@ namespace AC
 				    _parameter.parameterType == ParameterType.Integer ||
 				    _parameter.parameterType == ParameterType.GlobalVariable ||
 				    _parameter.parameterType == ParameterType.LocalVariable ||
-				    _parameter.parameterType == ParameterType.InventoryItem ||
-				    _parameter.parameterType == ParameterType.Document)
+				    _parameter.parameterType == ParameterType.InventoryItem)
 				{
 					_parameter.intValue = intValue;
 				}
@@ -240,7 +234,7 @@ namespace AC
 				}
 				else if (_parameter.parameterType == ParameterType.GameObject)
 				{
-					_parameter.gameObject = runtimeGameobjectValue;
+					_parameter.gameObject = gameobjectValue;
 					_parameter.intValue = gameObjectConstantID;
 				}
 				else if (_parameter.parameterType == ParameterType.UnityObject)
@@ -441,10 +435,6 @@ namespace AC
 				{
 					intValue = ShowInvSelectorGUI (intValue);
 				}
-				else if (_parameter.parameterType == ParameterType.Document)
-				{
-					intValue = ShowDocSelectorGUI (intValue);
-				}
 				else if (_parameter.parameterType == ParameterType.LocalVariable)
 				{
 					if (isAssetFile)
@@ -494,12 +484,7 @@ namespace AC
 					{
 						globalVariableID = AdvGame.GlobalVariableGUI ("Vector3 variable:", globalVariableID, VariableType.Vector3);
 					}
-					else if (_parameter.parameterType == ParameterType.GameObject ||
-							_parameter.parameterType == ParameterType.GlobalVariable ||
-							_parameter.parameterType == ParameterType.InventoryItem ||
-							_parameter.parameterType == ParameterType.LocalVariable ||
-							_parameter.parameterType == ParameterType.UnityObject ||
-							_parameter.parameterType == ParameterType.Document)
+					else if (_parameter.parameterType == ParameterType.GameObject || _parameter.parameterType == ParameterType.GlobalVariable || _parameter.parameterType == ParameterType.InventoryItem || _parameter.parameterType == ParameterType.LocalVariable || _parameter.parameterType == ParameterType.UnityObject)
 					{
 						EditorGUILayout.HelpBox ("Parameters of type '" + _parameter.parameterType + "' cannot have values transferred from Global Variables.", MessageType.Warning);
 					}
@@ -550,7 +535,7 @@ namespace AC
 		}
 		
 		
-		override public void AssignConstantIDs (bool saveScriptsToo, bool fromAssetFile)
+		override public void AssignConstantIDs (bool saveScriptsToo)
 		{
 			AssignConstantID (gameobjectValue, gameObjectConstantID, 0);
 		}
@@ -558,7 +543,11 @@ namespace AC
 		
 		override public string SetLabel ()
 		{
-			return parameterLabel;
+			if (parameterLabel != "")
+			{
+				return (" (" + parameterLabel + ")");
+			}
+			return "";
 		}
 
 
@@ -624,46 +613,6 @@ namespace AC
 			
 			invNumber = EditorGUILayout.Popup ("Inventory item:", invNumber, labelList.ToArray());
 			ID = inventoryManager.items[invNumber].id;
-			
-			return ID;
-		}
-
-
-		private int ShowDocSelectorGUI (int ID)
-		{
-			InventoryManager inventoryManager = AdvGame.GetReferences ().inventoryManager;
-			if (inventoryManager == null)
-			{
-				return ID;
-			}
-			
-			int docNumber = -1;
-			List<string> labelList = new List<string>();
-			int i=0;
-			foreach (Document _document in inventoryManager.documents)
-			{
-				labelList.Add (_document.Title);
-				
-				// If an item has been removed, make sure selected variable is still valid
-				if (_document.ID == ID)
-				{
-					docNumber = i;
-				}
-				
-				i++;
-			}
-			
-			if (docNumber == -1)
-			{
-				// Wasn't found (item was possibly deleted), so revert to zero
-				ACDebug.LogWarning ("Previously chosen document no longer exists!");
-				
-				docNumber = 0;
-				ID = 0;
-			}
-			
-			docNumber = EditorGUILayout.Popup ("Document:", docNumber, labelList.ToArray());
-			ID = inventoryManager.documents[docNumber].ID;
 			
 			return ID;
 		}
@@ -736,18 +685,6 @@ namespace AC
 
 		public override int GetInventoryReferences (List<ActionParameter> parameters, int _invID)
 		{
-			return GetParamReferences (parameters, _invID, ParameterType.InventoryItem);
-		}
-
-
-		public override int GetDocumentReferences (List<ActionParameter> parameters, int _docID)
-		{
-			return GetParamReferences (parameters, _docID, ParameterType.Document);
-		}
-
-
-		private int GetParamReferences (List<ActionParameter> parameters, int _ID, ParameterType _paramType)
-		{
 			if (setParamMethod == SetParamMethod.EnteredHere)
 			{
 				ActionParameter _param = null;
@@ -775,7 +712,7 @@ namespace AC
 					}
 				}
 
-				if (_param != null && _param.parameterType == _paramType && _ID == intValue)
+				if (_param != null && _param.parameterType == ParameterType.InventoryItem && _invID == intValue)
 				{
 					return 1;
 				}

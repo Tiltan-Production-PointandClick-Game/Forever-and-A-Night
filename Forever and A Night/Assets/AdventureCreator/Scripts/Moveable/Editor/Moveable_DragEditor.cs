@@ -16,8 +16,8 @@ namespace AC
 			EditorGUILayout.BeginVertical ("Button");
 			EditorGUILayout.LabelField ("Movment settings:", EditorStyles.boldLabel);
 			_target.maxSpeed = CustomGUILayout.FloatField ("Max speed:", _target.maxSpeed, "", "The maximum force magnitude that can be applied to itself");
-			_target.playerMovementReductionFactor = CustomGUILayout.Slider ("Player motion reduction:", _target.playerMovementReductionFactor, 0f, 1f, "", "How much player movement is reduced by when the object is being dragged");
-			_target.playerMovementInfluence = CustomGUILayout.FloatField ("Player motion influence:", _target.playerMovementInfluence, "", "The influence that player movement has on the drag force");
+			_target.playerMovementReductionFactor = CustomGUILayout.Slider ("Player movement reduction:", _target.playerMovementReductionFactor, 0f, 1f, "", "How much player movement is reduced by when the object is being dragged");
+			_target.playerMovementInfluence = CustomGUILayout.FloatField ("Player movement influence:", _target.playerMovementInfluence, "", "The influence that player movement has on the drag force");
 			_target.invertInput = CustomGUILayout.Toggle ("Invert input?", _target.invertInput, "", "If True, input vectors will be inverted");
 			EditorGUILayout.EndVertical ();
 

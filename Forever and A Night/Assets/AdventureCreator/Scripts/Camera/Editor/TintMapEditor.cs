@@ -17,7 +17,6 @@ namespace AC
 			{
 				EditorGUILayout.HelpBox ("The supplied texture will be applied to the Mesh Renderer's material when the game begins.", MessageType.Info);
 			}
-			_target.colorModifier = EditorGUILayout.ColorField ("Color modifier:", _target.colorModifier);
 			_target.disableRenderer = CustomGUILayout.Toggle ("Disable mesh renderer?", _target.disableRenderer, "", "If True, then the MeshRenderer component will be disabled automatically when the game begins");
 
 			UnityVersionHandler.CustomSetDirty (_target);

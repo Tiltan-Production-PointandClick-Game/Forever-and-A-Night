@@ -1,7 +1,7 @@
 /*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2019
+ *	by Chris Burton, 2013-2018
  *	
  *	"ActionSpeech.cs"
  * 
@@ -75,39 +75,6 @@ namespace AC
 			if (parameters != null) ownParameters = parameters;
 
 			runtimeSpeaker = AssignFile <Char> (parameters, parameterID, constantID, speaker);
-
-			// Special case: Use associated NPC
-			if (runtimeSpeaker != null &&
-				runtimeSpeaker is Player &&
-				KickStarter.settingsManager.playerSwitching == PlayerSwitching.Allow &&
-				KickStarter.player != null)
-			{
-				// Make sure not the active Player
-				ConstantID speakerID = speaker.GetComponent <ConstantID>();
-				ConstantID playerID = KickStarter.player.GetComponent <ConstantID>();
-				if ((speakerID == null && playerID != null) ||
-					(speakerID != null && playerID == null) ||
-					(speakerID != null && playerID != null && speakerID.constantID != playerID.constantID))
-				{
-					Player speakerPlayer = runtimeSpeaker as Player;
-					foreach (PlayerPrefab playerPrefab in KickStarter.settingsManager.players)
-					{
-						if (playerPrefab != null && playerPrefab.playerOb == speakerPlayer)
-						{
-							if (speakerPlayer.associatedNPCPrefab != null)
-							{
-								ConstantID npcConstantID = speakerPlayer.associatedNPCPrefab.GetComponent <ConstantID>();
-								if (npcConstantID != null)
-								{
-									runtimeSpeaker = AssignFile <Char> (parameters, parameterID, npcConstantID.constantID, runtimeSpeaker);
-								}
-							}
-							break;
-						}
-					}
-				}
-			}
-
 			messageText = AssignString (parameters, messageParameterID, messageText);
 			
 			if (isPlayer)
@@ -393,7 +360,7 @@ namespace AC
 		}
 
 
-		override public void AssignConstantIDs (bool saveScriptsToo, bool fromAssetFile)
+		override public void AssignConstantIDs (bool saveScriptsToo)
 		{
 			AssignConstantID <Char> (speaker, constantID, parameterID);
 		}
@@ -403,20 +370,20 @@ namespace AC
 		{
 			if (parameterID == -1)
 			{
-				if (isPlayer)
+				if (speaker)
 				{
-					return "Player";
+					return " (" + speaker.gameObject.name + ")";
 				}
-				else if (speaker != null)
+				else if (isPlayer)
 				{
-					return speaker.gameObject.name;
+					return " (Player)";
 				}
 				else
 				{
-					return "Narrator";
+					return " (Narrator)";
 				}
 			}
-			return string.Empty;
+			return "";
 		}
 
 
@@ -456,7 +423,7 @@ namespace AC
 			int thisCount = 0;
 			string tokenText = (location == VariableLocation.Local) ? "[localvar:" + varID.ToString () + "]"
 																		: "[var:" + varID.ToString () + "]";
-			if (!string.IsNullOrEmpty (messageText) && messageText.Contains (tokenText) && messageParameterID < 0)
+			if (messageText.Contains (tokenText) && messageParameterID < 0)
 			{
 				thisCount ++;
 			}
@@ -471,11 +438,7 @@ namespace AC
 
 		public string GetTranslatableString (int index)
 		{
-			if (KickStarter.speechManager.separateLines)
-			{
-				return GetSpeechArray () [index];
-			}
-			return messageText;
+			return GetSpeechArray () [index];
 		}
 
 

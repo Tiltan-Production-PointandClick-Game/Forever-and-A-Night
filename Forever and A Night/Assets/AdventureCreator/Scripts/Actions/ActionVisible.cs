@@ -1,7 +1,7 @@
 /*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2019
+ *	by Chris Burton, 2013-2018
  *	
  *	"ActionVisible.cs"
  * 
@@ -26,8 +26,6 @@ namespace AC
 		public int parameterID = -1;
 		public int constantID = 0;
 		public GameObject obToAffect;
-		protected GameObject runtimeObToAffect;
-
 		public bool affectChildren;
 		public VisState visState = 0;
 		
@@ -43,7 +41,7 @@ namespace AC
 
 		override public void AssignValues (List<ActionParameter> parameters)
 		{
-			runtimeObToAffect = AssignFile (parameters, parameterID, constantID, obToAffect);
+			obToAffect = AssignFile (parameters, parameterID, constantID, obToAffect);
 		}
 		
 		
@@ -55,20 +53,20 @@ namespace AC
 				state = true;
 			}
 			
-			if (runtimeObToAffect != null)
+			if (obToAffect)
 			{
-				if (runtimeObToAffect.GetComponent <LimitVisibility>())
+				if (obToAffect.GetComponent <LimitVisibility>())
 				{
-					runtimeObToAffect.GetComponent <LimitVisibility>().isLockedOff = !state;
+					obToAffect.GetComponent <LimitVisibility>().isLockedOff = !state;
 				}
-				else if (runtimeObToAffect.GetComponent <Renderer>())
+				else if (obToAffect.GetComponent <Renderer>())
 				{
-					runtimeObToAffect.GetComponent <Renderer>().enabled = state;
+					obToAffect.GetComponent <Renderer>().enabled = state;
 				}
 
 				if (affectChildren)
 				{
-					foreach (Renderer _renderer in runtimeObToAffect.GetComponentsInChildren <Renderer>())
+					foreach (Renderer _renderer in obToAffect.GetComponentsInChildren <Renderer>())
 					{
 						_renderer.enabled = state;
 					}
@@ -105,7 +103,7 @@ namespace AC
 		}
 
 
-		override public void AssignConstantIDs (bool saveScriptsToo, bool fromAssetFile)
+		override public void AssignConstantIDs (bool saveScriptsToo)
 		{
 			if (saveScriptsToo)
 			{
@@ -117,11 +115,12 @@ namespace AC
 		
 		override public string SetLabel ()
 		{
-			if (obToAffect != null)
-			{
-				return obToAffect.name;
-			}
-			return string.Empty;
+			string labelAdd = "";
+			
+			if (obToAffect)
+					labelAdd = " (" + obToAffect.name + ")";
+			
+			return labelAdd;
 		}
 
 		#endif

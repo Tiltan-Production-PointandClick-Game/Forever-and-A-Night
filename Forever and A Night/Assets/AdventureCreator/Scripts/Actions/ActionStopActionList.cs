@@ -1,7 +1,7 @@
 ﻿/*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2019
+ *	by Chris Burton, 2013-2018
  *	
  *	"ActionStopActionList.cs"
  * 
@@ -26,8 +26,6 @@ namespace AC
 		public ListSource listSource = ListSource.InScene;
 		
 		public ActionList actionList;
-		protected ActionList runtimeActionList;
-
 		public ActionListAsset invActionList;
 		public int constantID = 0;
 		public int parameterID = -1;
@@ -46,16 +44,16 @@ namespace AC
 		{
 			if (listSource == ListSource.InScene)
 			{
-				runtimeActionList = AssignFile <ActionList> (parameters, parameterID, constantID, actionList);
+				actionList = AssignFile <ActionList> (parameters, parameterID, constantID, actionList);
 			}
 		}
 		
 		
 		override public float Run ()
 		{
-			if (listSource == ListSource.InScene && runtimeActionList != null)
+			if (listSource == ListSource.InScene && actionList != null)
 			{
-				KickStarter.actionListManager.EndList (runtimeActionList);
+				KickStarter.actionListManager.EndList (actionList);
 			}
 			else if (listSource == ListSource.AssetFile && invActionList != null)
 			{
@@ -97,7 +95,7 @@ namespace AC
 		}
 
 
-		override public void AssignConstantIDs (bool saveScriptsToo, bool fromAssetFile)
+		override public void AssignConstantIDs (bool saveScriptsToo)
 		{
 			AssignConstantID <ActionList> (actionList, constantID, parameterID);
 		}
@@ -105,15 +103,18 @@ namespace AC
 
 		public override string SetLabel ()
 		{
+			string labelAdd = "";
+			
 			if (listSource == ListSource.InScene && actionList != null)
 			{
-				return actionList.name;
+				labelAdd += " (" + actionList.name + ")";
 			}
 			else if (listSource == ListSource.AssetFile && invActionList != null)
 			{
-				return invActionList.name;
+				labelAdd += " (" + invActionList.name + ")";
 			}
-			return string.Empty;
+			
+			return labelAdd;
 		}
 		
 		#endif

@@ -1,7 +1,7 @@
 /*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2019
+ *	by Chris Burton, 2013-2018
  *	
  *	"ActionInventoryCheck.cs"
  * 
@@ -318,14 +318,14 @@ namespace AC
 
 			if (invCheckType == InvCheckType.NumberOfItemsCarrying)
 			{
-				return invCheckType.ToString ();
+				return (" (" + invCheckType.ToString () + ")");
 			}
 			if (inventoryManager)
 			{
-				return inventoryManager.GetLabel (invID);
+				return (" (" + inventoryManager.GetLabel (invID) + ")");
 			}
 			
-			return string.Empty;
+			return "";
 		}
 
 

@@ -1,7 +1,7 @@
 /*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2019
+ *	by Chris Burton, 2013-2018
  *	
  *	"SceneChanger.cs"
  * 
@@ -215,7 +215,7 @@ namespace AC
 		{
 			if (playerOnTransition)
 			{
-				ACDebug.Log ("New player found - " + playerOnTransition.name + " deleted");
+				ACDebug.Log ("New player prefab found - " + playerOnTransition.name + " deleted");
 				DestroyImmediate (playerOnTransition.gameObject);
 			}
 		}
@@ -448,9 +448,6 @@ namespace AC
 		{
 			int _removeNPCID = removeNPCID;
 			removeNPCID = 0;
-
-			if (KickStarter.dialog != null) KickStarter.dialog.KillDialog (true, true);
-
 			yield return new WaitForEndOfFrame ();
 			
 			if (_removeNPCID != 0)
@@ -494,9 +491,7 @@ namespace AC
 				
 				KickStarter.stateHandler.gameState = GameState.Normal;
 			}
-
-			if (KickStarter.dialog != null) KickStarter.dialog.KillDialog (true, true);
-
+			
 			Sound[] sounds = FindObjectsOfType (typeof (Sound)) as Sound[];
 			foreach (Sound sound in sounds)
 			{
@@ -504,7 +499,11 @@ namespace AC
 			}
 
 			KickStarter.playerMenus.ClearParents ();
-
+			if (KickStarter.dialog)
+			{
+				KickStarter.dialog.KillDialog (true, true);
+			}
+			
 			if (saveRoomData)
 			{
 				KickStarter.levelStorage.StoreAllOpenLevelData ();
@@ -717,28 +716,6 @@ namespace AC
 				return previousSceneInfo;
 			}
 			return previousGlobalSceneInfo;
-		}
-
-
-		/**
-		* <summary>Gets the index within the internal list of active sub-scenes that a GameObject is in.  This is not the build index of the scene, but the order in which the scene is loaded internally</summary>
-		* <param name = "gameObject">The GameObject to get the sub-scene index for</param>
-		* <returns>The index within the internal list of active sub-scenes that a GameObject is in, starting from 1.  If the gameObject is not found, or the sub-scene is not found, it will return 0</returns>
-		*/
-		public int GetSubSceneIndexOfGameObject (GameObject gameObject)
-		{
-			if (gameObject != null && subScenes != null && subScenes.Count > 0)
-			{
-				for (int i=0; i<subScenes.Count; i++)
-				{
-					if (gameObject.scene == subScenes[i].SceneSettings.gameObject.scene)
-					{
-						return i+1;
-					}
-				}
-			}
-
-			return 0;
 		}
 
 	}

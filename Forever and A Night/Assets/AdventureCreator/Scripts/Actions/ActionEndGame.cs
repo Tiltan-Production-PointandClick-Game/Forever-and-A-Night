@@ -1,7 +1,7 @@
 ﻿/*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2019
+ *	by Chris Burton, 2013-2018
  *	
  *	"ActionEndGame.cs"
  * 
@@ -124,7 +124,7 @@ namespace AC
 
 		public override string SetLabel ()
 		{
-			return endGameType.ToString ();
+			return (" (" + endGameType.ToString () + ")");
 		}
 
 		#endif

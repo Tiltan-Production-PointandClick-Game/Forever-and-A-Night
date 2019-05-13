@@ -1,7 +1,7 @@
 ﻿/*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2019
+ *	by Chris Burton, 2013-2018
  *	
  *	"ActionPlayMaker.cs"
  * 
@@ -29,7 +29,6 @@ namespace AC
 		public int constantID = 0;
 		public int parameterID = -1;
 		public GameObject linkedObject;
-		protected GameObject runtimeLinkedObject;
 
 		public string fsmName;
 		public int fsmNameParameterID = -1;
@@ -52,7 +51,7 @@ namespace AC
 			{
 				if (KickStarter.player != null)
 				{
-					runtimeLinkedObject = KickStarter.player.gameObject;
+					linkedObject = KickStarter.player.gameObject;
 				}
 				else
 				{
@@ -61,7 +60,7 @@ namespace AC
 			}
 			else
 			{
-				runtimeLinkedObject = AssignFile (parameters, parameterID, constantID, linkedObject);
+				linkedObject = AssignFile (parameters, parameterID, constantID, linkedObject);
 			}
 
 			fsmName = AssignString (parameters, fsmNameParameterID, fsmName);
@@ -71,15 +70,15 @@ namespace AC
 
 		override public float Run ()
 		{
-			if (runtimeLinkedObject != null && !string.IsNullOrEmpty (eventName))
+			if (linkedObject != null && eventName != "")
 			{
 				if (fsmName != "")
 				{
-					PlayMakerIntegration.CallEvent (runtimeLinkedObject, eventName, fsmName);
+					PlayMakerIntegration.CallEvent (linkedObject, eventName, fsmName);
 				}
 				else
 				{
-					PlayMakerIntegration.CallEvent (runtimeLinkedObject, eventName);
+					PlayMakerIntegration.CallEvent (linkedObject, eventName);
 				}
 			}
 
@@ -131,11 +130,18 @@ namespace AC
 		}
 
 
-		override public void AssignConstantIDs (bool saveScriptsToo, bool fromAssetFile)
+		override public void AssignConstantIDs (bool saveScriptsToo)
 		{
 			AssignConstantID (linkedObject, constantID, parameterID);
 		}
-
+		
+		
+		public override string SetLabel ()
+		{
+			string labelAdd = "";
+			return labelAdd;
+		}
+		
 		#endif
 	}
 

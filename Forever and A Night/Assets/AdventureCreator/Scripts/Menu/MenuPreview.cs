@@ -1,8 +1,4 @@
-﻿#if UNITY_2017_1_OR_NEWER
-#define CAN_USE_TIMELINE
-#endif
-
-using System;
+﻿using System;
 using UnityEngine;
 
 namespace AC
@@ -19,11 +15,6 @@ namespace AC
 	{
 
 		#if UNITY_EDITOR
-
-		#if CAN_USE_TIMELINE
-		private Menu previewSpeechMenu;
-		private int previewTrackID;
-		#endif
 
 		private MenuManager menuManager;
 		private GUIStyle normalStyle;
@@ -58,16 +49,30 @@ namespace AC
 					
 					if (menuManager)
 					{
-						#if CAN_USE_TIMELINE
-						if (previewSpeechMenu != null)
-						{
-							UpdatePreviewMenu (previewSpeechMenu, true);
-						}
-						#endif
 						if (menuManager.GetSelectedMenu () != null)
 						{
-							Menu menu = menuManager.GetSelectedMenu ();
-							UpdatePreviewMenu (menu);
+							AC.Menu menu = menuManager.GetSelectedMenu ();
+
+							if (menu.IsUnityUI ())
+							{
+								return;
+							}
+
+							foreach (MenuElement element in menu.visibleElements)
+							{
+								for (int i=0; i<element.GetNumSlots (); i++)
+								{
+									if (menuManager.GetSelectedElement () == element && element.isClickable && i == 0)
+									{
+										element.PreDisplay (i, 0, false);
+									}
+									
+									else
+									{
+										element.PreDisplay (i, 0, false);
+									}
+								}
+							}
 						}
 					}
 				}
@@ -83,118 +88,77 @@ namespace AC
 				{
 					menuManager = AdvGame.GetReferences ().menuManager;
 
-					if (menuManager && menuManager.drawInEditor)
+					if (menuManager && menuManager.drawInEditor && AdvGame.GetReferences ().viewingMenuManager)
 					{
-						#if CAN_USE_TIMELINE
-						if (previewSpeechMenu != null)
+						if (menuManager.GetSelectedMenu () != null)
 						{
-							DrawPreviewMenu (previewSpeechMenu);
-						}
-						#endif
-						if (menuManager.GetSelectedMenu () != null && AdvGame.GetReferences ().viewingMenuManager)
-						{
-							Menu menu = menuManager.GetSelectedMenu ();
-							DrawPreviewMenu (menu);
-						}
-					}
-				}
-			}
-		}
+							AC.Menu menu = menuManager.GetSelectedMenu ();
 
+							if (menu.IsUnityUI ())
+							{
+								return;
+							}
 
-		private void UpdatePreviewMenu (Menu menu, bool isSubtitlesPreview = false)
-		{
-			if (menu == null || menu.IsUnityUI ())
-			{
-				return;
-			}
+							if (KickStarter.mainCamera != null)
+							{
+								KickStarter.mainCamera.DrawBorders ();
+							}
 
-			foreach (MenuElement element in menu.visibleElements)
-			{
-				for (int i=0; i<element.GetNumSlots (); i++)
-				{
-					if (menuManager.GetSelectedElement () == element && element.isClickable && i == 0)
-					{
-						element.PreDisplay (i, 0, false);
-					}
-					else
-					{
-						element.PreDisplay (i, 0, false);
-					}
+							CheckScreenSize (menu);
 
-					if (isSubtitlesPreview && element is MenuLabel)
-					{
-						MenuLabel menuLabel = element as MenuLabel;
-						menuLabel.UpdateLabelText ();
-					}
-				}
-			}
-		}
-
-
-		private void DrawPreviewMenu (Menu menu)
-		{
-			if (menu == null || menu.IsUnityUI ())
-			{
-				return;
-			}
-
-			if (KickStarter.mainCamera != null)
-			{
-				KickStarter.mainCamera.DrawBorders ();
-			}
-
-			CheckScreenSize (menu);
-
-			if (menu.CanPause () && menu.pauseWhenEnabled && menuManager.pauseTexture)
-			{
-				GUI.DrawTexture (AdvGame.GUIRect (0.5f, 0.5f, 1f, 1f), menuManager.pauseTexture, ScaleMode.ScaleToFit, true, 0f);
-			}
-			
-			if ((menu.positionType == AC_PositionType.FollowCursor || menu.positionType == AC_PositionType.AppearAtCursorAndFreeze || menu.positionType == AC_PositionType.OnHotspot || menu.positionType == AC_PositionType.AboveSpeakingCharacter || menu.positionType == AC_PositionType.AbovePlayer) && AdvGame.GetReferences ().cursorManager && AdvGame.GetReferences ().cursorManager.pointerIcon.texture)
-			{
-				CursorIconBase icon = AdvGame.GetReferences ().cursorManager.pointerIcon;
-				GUI.DrawTexture (AdvGame.GUIBox (new Vector2 (AdvGame.GetMainGameViewSize ().x / 2f, AdvGame.GetMainGameViewSize ().y / 2f), icon.size), icon.texture, ScaleMode.ScaleToFit, true, 0f);
-			}
-			
-			menu.StartDisplay ();
+							if (menu.CanPause () && menu.pauseWhenEnabled && menuManager.pauseTexture)
+							{
+								GUI.DrawTexture (AdvGame.GUIRect (0.5f, 0.5f, 1f, 1f), menuManager.pauseTexture, ScaleMode.ScaleToFit, true, 0f);
+							}
 							
-			foreach (MenuElement element in menu.visibleElements)
-			{
-				SetStyles (element);
-				
-				for (int i=0; i<element.GetNumSlots (); i++)
-				{
-					if (menuManager.GetSelectedElement () == element && element.isClickable && i == 0)
-					{
-						element.Display (highlightedStyle, i, 1f, true);
-					}
-					
-					else
-					{
-						element.Display (normalStyle, i, 1f, false);
-					}
-				}
+							if ((menu.positionType == AC_PositionType.FollowCursor || menu.positionType == AC_PositionType.AppearAtCursorAndFreeze || menu.positionType == AC_PositionType.OnHotspot || menu.positionType == AC_PositionType.AboveSpeakingCharacter || menu.positionType == AC_PositionType.AbovePlayer) && AdvGame.GetReferences ().cursorManager && AdvGame.GetReferences ().cursorManager.pointerIcon.texture)
+							{
+								CursorIconBase icon = AdvGame.GetReferences ().cursorManager.pointerIcon;
+								GUI.DrawTexture (AdvGame.GUIBox (new Vector2 (AdvGame.GetMainGameViewSize ().x / 2f, AdvGame.GetMainGameViewSize ().y / 2f), icon.size), icon.texture, ScaleMode.ScaleToFit, true, 0f);
+							}
+							
+							menu.StartDisplay ();
+											
+							foreach (MenuElement element in menu.visibleElements)
+							{
+								SetStyles (element);
+								
+								for (int i=0; i<element.GetNumSlots (); i++)
+								{
+									if (menuManager.GetSelectedElement () == element && element.isClickable && i == 0)
+									{
+										element.Display (highlightedStyle, i, 1f, true);
+									}
+									
+									else
+									{
+										element.Display (normalStyle, i, 1f, false);
+									}
+								}
 
-				if (UnityEditor.EditorWindow.mouseOverWindow != null && UnityEditor.EditorWindow.mouseOverWindow.ToString () != null && UnityEditor.EditorWindow.mouseOverWindow.ToString ().Contains ("(UnityEditor.GameView)"))
-				{
-					if (menu.IsPointerOverSlot (element, 0, Event.current.mousePosition + new Vector2 (menu.GetRect ().x, menu.GetRect ().y)))
-					{
-						menuManager.SelectElementFromPreview (menu, element);
+								if (UnityEditor.EditorWindow.mouseOverWindow != null && UnityEditor.EditorWindow.mouseOverWindow.ToString () != null && UnityEditor.EditorWindow.mouseOverWindow.ToString ().Contains ("(UnityEditor.GameView)"))
+								{
+									if (menu.IsPointerOverSlot (element, 0, Event.current.mousePosition + new Vector2 (menu.GetRect ().x, menu.GetRect ().y)))
+									{
+										menuManager.SelectElementFromPreview (menu, element);
+									}
+								}
+							}
+					
+							menu.EndDisplay ();
+							
+							if (menuManager.drawOutlines)
+							{
+								menu.DrawOutline (menuManager.GetSelectedElement ());
+							}
+						}
 					}
 				}
-			}
-	
-			menu.EndDisplay ();
-			
-			if (menuManager.drawOutlines)
-			{
-				menu.DrawOutline (menuManager.GetSelectedElement ());
 			}
 		}
 
 
-		private void CheckScreenSize (Menu menu)
+		private void CheckScreenSize (AC.Menu menu)
 		{
 			#if UNITY_5_4_OR_NEWER
 			menu.Recalculate ();
@@ -206,56 +170,6 @@ namespace AC
 				menu.Recalculate ();
 			}
 		}
-
-		#if CAN_USE_TIMELINE
-
-		/**
-		 * <summary>Begins the preview of a subtitle</summary>
-		 * <param name = "speech">The Speech to preview</param>
-		 * <param name = "trackInstanceID">The Instance ID of the TrackAsset that is playing the speech</param>
-		 */
-		public void SetPreviewSpeech (Speech speech, int trackInstanceID)
-		{
-			if (speech != null && KickStarter.menuManager != null && KickStarter.speechManager != null)
-			{
-				if (trackInstanceID != previewTrackID)
-				{
-					RemovePreviewSpeechMenu ();
-				}
-
-				if (previewSpeechMenu == null)
-				{
-					previewSpeechMenu = KickStarter.menuManager.CreatePreviewMenu (KickStarter.speechManager.previewMenuName);
-					previewSpeechMenu.SetSpeech (speech);
-					previewTrackID = trackInstanceID;
-				}
-			}
-		}
-
-
-		/**
-		 * <summary>Ends the preview of a subtitle</summary>
-		 * <param name = "trackInstanceID">The Instance ID of the TrackAsset that is playing the speech</param>
-		 */
-		public void ClearPreviewSpeech (int trackInstanceID)
-		{
-			if (previewTrackID == trackInstanceID)
-			{
-				RemovePreviewSpeechMenu ();
-			}
-		}
-
-
-		private void RemovePreviewSpeechMenu ()
-		{
-			if (previewSpeechMenu != null)
-			{
-				DestroyImmediate (previewSpeechMenu);
-				previewSpeechMenu = null;
-			}
-		}
-
-		#endif
 
 		#endif
 

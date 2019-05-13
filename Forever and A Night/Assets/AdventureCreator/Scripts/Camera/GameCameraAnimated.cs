@@ -80,7 +80,7 @@ namespace AC
 		{
 			if (GetComponent <Animation>() == null)
 			{
-				ACDebug.LogError ("Cannot play animation on " + this.name + " - no Animation component is attached.", this);
+				ACDebug.LogError ("Cannot play animation on " + this.name + " - no Animation component is attached.");
 				return;
 			}
 			

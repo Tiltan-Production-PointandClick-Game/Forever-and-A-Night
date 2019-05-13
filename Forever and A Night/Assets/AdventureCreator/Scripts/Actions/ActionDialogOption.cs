@@ -1,7 +1,7 @@
 /*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2019
+ *	by Chris Burton, 2013-2018
  *	
  *	"ActionDialogOption.cs"
  * 
@@ -28,7 +28,6 @@ namespace AC
 
 		public int constantID;
 		public Conversation linkedConversation;
-		protected Conversation runtimeLinkedConversation;
 		
 		
 		public ActionDialogOption ()
@@ -42,27 +41,28 @@ namespace AC
 
 		override public void AssignValues ()
 		{
-			runtimeLinkedConversation = AssignFile <Conversation> (constantID, linkedConversation);
+			linkedConversation = AssignFile <Conversation> (constantID, linkedConversation);
 		}
 
 		
 		override public float Run ()
 		{
-			if (runtimeLinkedConversation)
+			bool setOption = false;
+			bool clampOption = false;
+			
+			if (switchType == SwitchType.On || switchType == SwitchType.OnForever)
 			{
-				bool setOption = false;
-				if (switchType == SwitchType.On || switchType == SwitchType.OnForever)
-				{
-					setOption = true;
-				}
-				
-				bool clampOption = false;
-				if (switchType == SwitchType.OffForever || switchType == SwitchType.OnForever)
-				{
-					clampOption = true;
-				}
-
-				runtimeLinkedConversation.SetOptionState (optionNumber+1, setOption, clampOption);
+				setOption = true;
+			}
+			
+			if (switchType == SwitchType.OffForever || switchType == SwitchType.OnForever)
+			{
+				clampOption = true;
+			}
+			
+			if (linkedConversation)
+			{
+				linkedConversation.SetOptionState (optionNumber+1, setOption, clampOption);
 			}
 			
 			return 0f;
@@ -145,23 +145,13 @@ namespace AC
 		}
 
 
-		override public void AssignConstantIDs (bool saveScriptsToo, bool fromAssetFile)
+		override public void AssignConstantIDs (bool saveScriptsToo)
 		{
 			if (saveScriptsToo)
 			{
 				AddSaveScript <RememberConversation> (linkedConversation);
 			}
 			AssignConstantID <Conversation> (linkedConversation, constantID, 0);
-		}
-
-
-		override public string SetLabel ()
-		{
-			if (linkedConversation != null)
-			{
-				return linkedConversation.name;
-			}
-			return string.Empty;
 		}
 		
 		#endif

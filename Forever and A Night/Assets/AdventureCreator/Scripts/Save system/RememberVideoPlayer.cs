@@ -1,9 +1,9 @@
-﻿#if UNITY_5_6_OR_NEWER && !UNITY_SWITCH
+﻿#if UNITY_5_6_OR_NEWER
 
 /*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2019
+ *	by Chris Burton, 2013-2018
  *	
  *	"RememberVideoPlayer.cs"
  * 

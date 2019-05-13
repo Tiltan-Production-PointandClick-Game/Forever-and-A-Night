@@ -1,7 +1,7 @@
 ﻿/*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2019
+ *	by Chris Burton, 2013-2018
  *	
  *	"AnimEngine_SpritesUnityComplex.cs"
  * 
@@ -29,11 +29,11 @@ namespace AC
 			character = _character;
 			turningStyle = TurningStyle.Linear;
 			isSpriteBased = true;
-			_character.frameFlipping = AC_2DFrameFlipping.None;
 			updateHeadAlways = true;
+			_character.frameFlipping = AC_2DFrameFlipping.None;
 		}
-
-
+		
+		
 		public override void CharSettingsGUI ()
 		{
 			#if UNITY_EDITOR
@@ -50,19 +50,13 @@ namespace AC
 
 			character.moveSpeedParameter = CustomGUILayout.TextField ("Move speed float:", character.moveSpeedParameter, "", "The name of the Animator float parameter set to the movement speed");
 			character.turnParameter = CustomGUILayout.TextField ("Turn float:", character.turnParameter, "", "The name of the Animator float parameter set to the turning direction");
-
-			if (character.spriteDirectionData.HasDirections ())
-			{
-				character.directionParameter = CustomGUILayout.TextField ("Direction integer:", character.directionParameter, "", "The name of the Animator integer parameter set to the sprite direction. This is set to 0 for down, 1 for left, 2 for right, 3 for up, 4 for down-left, 5 for down-right, 6 for up-left, and 7 for up-right");
-			}
+			character.directionParameter = CustomGUILayout.TextField ("Direction integer:", character.directionParameter, "", "The name of the Animator integer parameter set to the sprite direction. This is set to 0 for down, 1 for left, 2 for right, 3 for up, 4 for down-left, 5 for down-right, 6 for up-left, and 7 for up-right");
 			character.angleParameter = CustomGUILayout.TextField ("Body angle float:", character.angleParameter, "", "The name of the Animator float parameter set to the facing angle");
 			character.headYawParameter = CustomGUILayout.TextField ("Head angle float:", character.headYawParameter, "", "The name of the Animator float parameter set to the head yaw");
-
 			if (!string.IsNullOrEmpty (character.angleParameter) || !string.IsNullOrEmpty (character.headYawParameter))
 			{
 				character.angleSnapping = (AngleSnapping) CustomGUILayout.EnumPopup ("Angle snapping:", character.angleSnapping, "", "The snapping method for the 'Body angle float' and 'Head angle float' parameters");
 			}
-
 			character.talkParameter = CustomGUILayout.TextField ("Talk bool:", character.talkParameter, "", "The name of the Animator bool parameter set to True while talking");
 
 			if (AdvGame.GetReferences () && AdvGame.GetReferences ().speechManager)
@@ -87,12 +81,8 @@ namespace AC
 
 			character.verticalMovementParameter = CustomGUILayout.TextField ("Vertical movement float:", character.verticalMovementParameter, "", "The name of the Animator float parameter set to the vertical movement speed");
 			character.talkingAnimation = TalkingAnimation.Standard;
-
-			character.spriteDirectionData.ShowGUI ();
-			if (character.spriteDirectionData.HasDirections ())
-			{
-				EditorGUILayout.HelpBox ("The above field affects the 'Direction integer' parameter only.", MessageType.Info);
-			}
+			character.doDirections = true;
+			character.doDiagonals = CustomGUILayout.Toggle ("Diagonal sprites?", character.doDiagonals, "", "If True, the character will be able to face 8 directions instead of 4");
 
 			Animator charAnimator = character.GetAnimator ();
 			if (charAnimator == null || !charAnimator.applyRootMotion)
@@ -115,7 +105,7 @@ namespace AC
 				}
 			}
 
-			character.doWallReduction = EditorGUILayout.BeginToggleGroup ("Slow movement near walls?", character.doWallReduction);
+			character.doWallReduction = EditorGUILayout.BeginToggleGroup ("Slow movement near wall colliders?", character.doWallReduction);
 			character.wallLayer = EditorGUILayout.TextField ("Wall collider layer:", character.wallLayer);
 			character.wallDistance = EditorGUILayout.Slider ("Collider distance:", character.wallDistance, 0f, 2f);
 			character.wallReductionOnlyParameter = EditorGUILayout.Toggle ("Only affects Mecanim parameter?", character.wallReductionOnlyParameter);
@@ -152,34 +142,23 @@ namespace AC
 				}
 
 				action.mecanimParameterType = (MecanimParameterType) EditorGUILayout.EnumPopup ("Parameter type:", action.mecanimParameterType);
+				//action.parameterValue = EditorGUILayout.FloatField ("Set as value:", action.parameterValue);
 
 				if (action.mecanimParameterType == MecanimParameterType.Bool)
 				{
-					action.parameterValueParameterID = Action.ChooseParameterGUI ("Set as value:", parameters, action.parameterValueParameterID, ParameterType.Boolean);
-					if (action.parameterValueParameterID < 0)
-					{
-						bool value = (action.parameterValue <= 0f) ? false : true;
-						value = EditorGUILayout.Toggle ("Set as value:", value);
-						action.parameterValue = (value) ? 1f : 0f;
-					}
+					bool value = (action.parameterValue <= 0f) ? false : true;
+					value = EditorGUILayout.Toggle ("Set as value:", value);
+					action.parameterValue = (value) ? 1f : 0f;
 				}
 				else if (action.mecanimParameterType == MecanimParameterType.Int)
 				{
-					action.parameterValueParameterID = Action.ChooseParameterGUI ("Set as value:", parameters, action.parameterValueParameterID, ParameterType.Integer);
-					if (action.parameterValueParameterID < 0)
-					{
-						int value = (int) action.parameterValue;
-						value = EditorGUILayout.IntField ("Set as value:", value);
-						action.parameterValue = (float) value;
-					}
+					int value = (int) action.parameterValue;
+					value = EditorGUILayout.IntField ("Set as value:", value);
+					action.parameterValue = (float) value;
 				}
 				else if (action.mecanimParameterType == MecanimParameterType.Float)
 				{
-					action.parameterValueParameterID = Action.ChooseParameterGUI ("Set as value:", parameters, action.parameterValueParameterID, ParameterType.Float);
-					if (action.parameterValueParameterID < 0)
-					{
-						action.parameterValue = EditorGUILayout.FloatField ("Set as value:", action.parameterValue);
-					}
+					action.parameterValue = EditorGUILayout.FloatField ("Set as value:", action.parameterValue);
 				}
 				else if (action.mecanimParameterType == MecanimParameterType.Trigger)
 				{
@@ -200,27 +179,9 @@ namespace AC
 					if (action.changeSound)
 					{
 						action.standard = (AnimStandard) EditorGUILayout.EnumPopup ("Change:", action.standard);
-
 						if (action.standard == AnimStandard.Walk || action.standard == AnimStandard.Run)
 						{
-							action.newSound = (AudioClip) EditorGUILayout.ObjectField ("New " + action.standard.ToString () + " sound:", action.newSound, typeof (AudioClip), false);
-						}
-						else
-						{
-							EditorGUILayout.HelpBox ("Only Walk and Run have a standard sounds.", MessageType.Info);
-						}
-					}
-					action.changeSpeed = EditorGUILayout.Toggle ("Change speed?", action.changeSpeed);
-					if (action.changeSpeed)
-					{
-						if (!action.changeSound)
-						{
-							action.standard = (AnimStandard) EditorGUILayout.EnumPopup ("Change:", action.standard);
-						}
-
-						if (action.standard == AnimStandard.Walk || action.standard == AnimStandard.Run)
-						{
-							action.newSpeed = EditorGUILayout.FloatField ("New " + action.standard.ToString () + " speed:", action.newSpeed);
+							action.newSound = (AudioClip) EditorGUILayout.ObjectField ("New sound:", action.newSound, typeof (AudioClip), false);
 						}
 						else
 						{
@@ -251,33 +212,6 @@ namespace AC
 			
 			#endif
 		}
-
-
-		public override void ActionCharAnimAssignValues (ActionCharAnim action, List<ActionParameter> parameters)
-		{
-			if (action.methodMecanim == AnimMethodCharMecanim.ChangeParameterValue)
-			{
-				switch (action.mecanimParameterType)
-				{
-					case MecanimParameterType.Bool:
-						BoolValue boolValue = (action.parameterValue <= 0f) ? BoolValue.False : BoolValue.True;
-						boolValue = action.AssignBoolean (parameters, action.parameterValueParameterID, boolValue);
-						action.parameterValue = (boolValue == BoolValue.True) ? 1f : 0f;
-						break;
-
-					case MecanimParameterType.Int:
-						action.parameterValue = (float) action.AssignInteger (parameters, action.parameterValueParameterID, (int) action.parameterValue);
-						break;
-
-					case MecanimParameterType.Float:
-						action.parameterValue = action.AssignFloat (parameters, action.parameterValueParameterID, action.parameterValue);
-						break;
-
-					default:
-						break;
-				}
-			}
-		}
 		
 		
 		public override float ActionCharAnimRun (ActionCharAnim action)
@@ -294,45 +228,30 @@ namespace AC
 				{
 					if (action.mecanimCharParameter == MecanimCharParameter.MoveSpeedFloat)
 					{
-						character.moveSpeedParameter = action.parameterName;
+						action.animChar.moveSpeedParameter = action.parameterName;
 					}
 					else if (action.mecanimCharParameter == MecanimCharParameter.TalkBool)
 					{
-						character.talkParameter = action.parameterName;
+						action.animChar.talkParameter = action.parameterName;
 					}
 					else if (action.mecanimCharParameter == MecanimCharParameter.TurnFloat)
 					{
-						character.turnParameter = action.parameterName;
+						action.animChar.turnParameter = action.parameterName;
 					}
 				}
 
-				if (action.mecanimCharParameter == MecanimCharParameter.MoveSpeedFloat)
+				if (action.mecanimCharParameter == MecanimCharParameter.MoveSpeedFloat && action.changeSound)
 				{
-					if (action.changeSpeed)
+					if (action.standard == AnimStandard.Walk)
 					{
-						if (action.standard == AnimStandard.Walk)
-						{
-							character.walkSpeedScale = action.newSpeed;
-						}
-						else if (action.standard == AnimStandard.Run)
-						{
-							character.runSpeedScale = action.newSpeed;
-						}
+						action.animChar.walkSound = action.newSound;
 					}
-
-					if (action.changeSound)
+					else if (action.standard == AnimStandard.Run)
 					{
-						if (action.standard == AnimStandard.Walk)
-						{
-							character.walkSound = action.newSound;
-						}
-						else if (action.standard == AnimStandard.Run)
-						{
-							character.runSound = action.newSound;
-						}
+						action.animChar.runSound = action.newSound;
 					}
 				}
-
+				
 				return 0f;
 			}
 			
@@ -448,34 +367,26 @@ namespace AC
 				}
 
 				action.mecanimParameterType = (MecanimParameterType) EditorGUILayout.EnumPopup ("Parameter type:", action.mecanimParameterType);
+				/*if (action.mecanimParameterType != MecanimParameterType.Trigger)
+				{
+					action.parameterValue = EditorGUILayout.FloatField ("Set as value:", action.parameterValue);
+				}*/
 
 				if (action.mecanimParameterType == MecanimParameterType.Bool)
 				{
-					action.parameterValueParameterID = Action.ChooseParameterGUI ("Set as value:", parameters, action.parameterValueParameterID, ParameterType.Boolean);
-					if (action.parameterValueParameterID < 0)
-					{
-						bool value = (action.parameterValue <= 0f) ? false : true;
-						value = EditorGUILayout.Toggle ("Set as value:", value);
-						action.parameterValue = (value) ? 1f : 0f;
-					}
+					bool value = (action.parameterValue <= 0f) ? false : true;
+					value = EditorGUILayout.Toggle ("Set as value:", value);
+					action.parameterValue = (value) ? 1f : 0f;
 				}
 				else if (action.mecanimParameterType == MecanimParameterType.Int)
 				{
-					action.parameterValueParameterID = Action.ChooseParameterGUI ("Set as value:", parameters, action.parameterValueParameterID, ParameterType.Integer);
-					if (action.parameterValueParameterID < 0)
-					{
-						int value = (int) action.parameterValue;
-						value = EditorGUILayout.IntField ("Set as value:", value);
-						action.parameterValue = (float) value;
-					}
+					int value = (int) action.parameterValue;
+					value = EditorGUILayout.IntField ("Set as value:", value);
+					action.parameterValue = (float) value;
 				}
 				else if (action.mecanimParameterType == MecanimParameterType.Float)
 				{
-					action.parameterValueParameterID = Action.ChooseParameterGUI ("Set as value:", parameters, action.parameterValueParameterID, ParameterType.Float);
-					if (action.parameterValueParameterID < 0)
-					{
-						action.parameterValue = EditorGUILayout.FloatField ("Set as value:", action.parameterValue);
-					}
+					action.parameterValue = EditorGUILayout.FloatField ("Set as value:", action.parameterValue);
 				}
 				else if (action.mecanimParameterType == MecanimParameterType.Trigger)
 				{
@@ -530,30 +441,7 @@ namespace AC
 
 		public override void ActionAnimAssignValues (ActionAnim action, List<ActionParameter> parameters)
 		{
-			action.runtimeAnimator = action.AssignFile <Animator> (parameters, action.parameterID, action.constantID, action.animator);
-
-			if (action.methodMecanim == AnimMethodMecanim.ChangeParameterValue)
-			{
-				switch (action.mecanimParameterType)
-				{
-					case MecanimParameterType.Bool:
-						BoolValue boolValue = (action.parameterValue <= 0f) ? BoolValue.False : BoolValue.True;
-						boolValue = action.AssignBoolean (parameters, action.parameterValueParameterID, boolValue);
-						action.parameterValue = (boolValue == BoolValue.True) ? 1f : 0f;
-						break;
-
-					case MecanimParameterType.Int:
-						action.parameterValue = (float) action.AssignInteger (parameters, action.parameterValueParameterID, (int) action.parameterValue);
-						break;
-
-					case MecanimParameterType.Float:
-						action.parameterValue = action.AssignFloat (parameters, action.parameterValueParameterID, action.parameterValue);
-						break;
-
-					default:
-						break;
-				}
-			}
+			action.animator = action.AssignFile <Animator> (parameters, action.parameterID, action.constantID, action.animator);
 		}
 
 		
@@ -569,15 +457,15 @@ namespace AC
 			{
 				action.isRunning = true;
 
-				if (action.methodMecanim == AnimMethodMecanim.ChangeParameterValue && action.runtimeAnimator && !string.IsNullOrEmpty (action.parameterName))
+				if (action.methodMecanim == AnimMethodMecanim.ChangeParameterValue && action.animator && action.parameterName != "")
 				{
 					if (action.mecanimParameterType == MecanimParameterType.Float)
 					{
-						action.runtimeAnimator.SetFloat (action.parameterName, action.parameterValue);
+						action.animator.SetFloat (action.parameterName, action.parameterValue);
 					}
 					else if (action.mecanimParameterType == MecanimParameterType.Int)
 					{
-						action.runtimeAnimator.SetInteger (action.parameterName, (int) action.parameterValue);
+						action.animator.SetInteger (action.parameterName, (int) action.parameterValue);
 					}
 					else if (action.mecanimParameterType == MecanimParameterType.Bool)
 					{
@@ -586,26 +474,26 @@ namespace AC
 						{
 							paramValue = true;
 						}
-						action.runtimeAnimator.SetBool (action.parameterName, paramValue);
+						action.animator.SetBool (action.parameterName, paramValue);
 					}
 					else if (action.mecanimParameterType == MecanimParameterType.Trigger)
 					{
 						if (!isSkipping || action.parameterValue < 1f)
 						{
-							action.runtimeAnimator.SetTrigger (action.parameterName);
+							action.animator.SetTrigger (action.parameterName);
 						}
 					}
 					
 					return 0f;
 				}
 				
-				else if (action.methodMecanim == AnimMethodMecanim.PlayCustom && action.runtimeAnimator)
+				else if (action.methodMecanim == AnimMethodMecanim.PlayCustom && action.animator)
 				{
-					if (!string.IsNullOrEmpty (action.clip2D))
+					if (action.clip2D != "")
 					{
 						if (isSkipping)
 						{
-							action.runtimeAnimator.CrossFade (action.clip2D, action.fadeTime, action.layerInt);
+							action.animator.CrossFade (action.clip2D, action.fadeTime, action.layerInt);
 							
 							if (action.willWait)
 							{
@@ -614,16 +502,16 @@ namespace AC
 						}
 						else
 						{
-							action.runtimeAnimator.CrossFade (action.clip2D, 0f, action.layerInt);
+							action.animator.CrossFade (action.clip2D, 0f, action.layerInt);
 						}
 					}
 				}
 			}
 			else if (action.methodMecanim == AnimMethodMecanim.PlayCustom)
 			{
-				if (action.runtimeAnimator && !string.IsNullOrEmpty (action.clip2D))
+				if (action.animator && action.clip2D != "")
 				{
-					if (action.runtimeAnimator.GetCurrentAnimatorStateInfo (action.layerInt).normalizedTime < 1f)
+					if (action.animator.GetCurrentAnimatorStateInfo (action.layerInt).normalizedTime < 1f)
 					{
 						return (action.defaultPauseTime / 6f);
 					}
@@ -683,26 +571,26 @@ namespace AC
 		{
 			if (action.renderLock_scale == RenderLock.Set)
 			{
-				character.lockScale = true;
-				character.spriteScale = (float) action.scale / 100f;
+				action._char.lockScale = true;
+				action._char.spriteScale = (float) action.scale / 100f;
 			}
 			else if (action.renderLock_scale == RenderLock.Release)
 			{
-				character.lockScale = false;
+				action._char.lockScale = false;
 			}
 			
 			if (action.renderLock_direction == RenderLock.Set)
 			{
-				character.SetSpriteDirection (action.direction);
+				action._char.SetSpriteDirection (action.direction);
 			}
 			else if (action.renderLock_direction == RenderLock.Release)
 			{
-				character.lockDirection = false;
+				action._char.lockDirection = false;
 			}
 
-			if (action.renderLock_sortingMap != RenderLock.NoChange && character.GetComponentInChildren <FollowSortingMap>())
+			if (action.renderLock_sortingMap != RenderLock.NoChange && action._char.GetComponentInChildren <FollowSortingMap>())
 			{
-				FollowSortingMap[] followSortingMaps = character.GetComponentsInChildren <FollowSortingMap>();
+				FollowSortingMap[] followSortingMaps = action._char.GetComponentsInChildren <FollowSortingMap>();
 				SortingMap sortingMap = (action.renderLock_sortingMap == RenderLock.Set) ? action.sortingMap : KickStarter.sceneSettings.sortingMap;
 				
 				foreach (FollowSortingMap followSortingMap in followSortingMaps)
@@ -855,15 +743,6 @@ namespace AC
 				float spinAngleOffset = angles.x * Mathf.Rad2Deg;
 				float headAngle = character.GetSpriteAngle () + spinAngleOffset;
 
-				if (headAngle > 360f)
-				{
-					headAngle -= 360f;
-				}
-				if (headAngle < 0f)
-				{
-					headAngle += 360f;
-				}
-
 				if (character.angleSnapping != AngleSnapping.None)
 				{
 					headAngle = character.FlattenSpriteAngle (headAngle, character.angleSnapping);
@@ -906,30 +785,8 @@ namespace AC
 		}
 
 
-		#if UNITY_EDITOR
-
-		public override bool RequiresRememberAnimator (ActionCharAnim action)
-		{
-			if (action.methodMecanim == AnimMethodCharMecanim.ChangeParameterValue ||
-				action.methodMecanim == AnimMethodCharMecanim.PlayCustom)
-			{
-				return true;
-			}
-			return false;
-		}
-
-
-		public override bool RequiresRememberAnimator (ActionAnim action)
-		{
-			if (action.methodMecanim == AnimMethodMecanim.ChangeParameterValue ||
-				action.methodMecanim == AnimMethodMecanim.PlayCustom)
-			{
-				return true;
-			}
-			return false;
-		}
-
-
+		#if UNITY_EDITOR && (UNITY_5 || UNITY_2017_1_OR_NEWER)
+		
 		public override void AddSaveScript (Action _action, GameObject _gameObject)
 		{
 			if (_gameObject != null && _gameObject.GetComponentInChildren <Animator>())

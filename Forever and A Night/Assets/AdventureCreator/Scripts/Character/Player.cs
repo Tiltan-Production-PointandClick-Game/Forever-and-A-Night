@@ -1,7 +1,7 @@
 /*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2019
+ *	by Chris Burton, 2013-2018
  *	
  *	"Player.cs"
  * 
@@ -14,7 +14,6 @@
 #endif
 
 using UnityEngine;
-using System.Collections;
 
 namespace AC
 {
@@ -43,8 +42,12 @@ namespace AC
 		public NPC associatedNPCPrefab;
 
 		private bool lockedPath;
+		private bool isTilting = false;
+		private float actualTilt;
+		private float targetTilt;
 		private float tankTurnFloat;
-
+		private LerpUtils.FloatLerp tiltLerp = new LerpUtils.FloatLerp ();
+		
 		private bool lockHotspotHeadTurning = false;
 		private Transform fpCam;
 		private FirstPersonCamera firstPersonCamera;
@@ -80,7 +83,7 @@ namespace AC
 
 			if (gameObject.tag != Tags.player)
 			{
-				ACDebug.LogWarning ("The Player '" + gameObject.name + "' must be tagged as Player in its Inspector.", gameObject);
+				ACDebug.LogWarning ("The Player '" + gameObject.name + "' must be tagged as Player in its Inspector.");
 			}
 
 			_Awake ();
@@ -105,10 +108,9 @@ namespace AC
 
 
 		/**
-		 * <summary>Initialises the Player's animation.</summary>
-		 * <param name = "loadPersistentData">If True, then data from persistent objects will be loaded</param>
+		 * Initialises the Player's animation.
 		 */
-		public void Initialise (bool loadPersistentData = false)
+		public void Initialise ()
 		{
 			if (GetAnimation ())
 			{
@@ -124,21 +126,6 @@ namespace AC
 
 			GetAnimEngine ().TurnHead (Vector2.zero);
 			GetAnimEngine ().PlayIdle ();
-
-			if (loadPersistentData)
-			{
-				StartCoroutine (LoadPersistentData ());
-			}
-		}
-
-
-		private IEnumerator LoadPersistentData ()
-		{
-			yield return null;
-			if (KickStarter.levelStorage != null)
-			{
-				KickStarter.levelStorage.ReturnCurrentLevelPlayerData ();
-			}
 		}
 
 
@@ -167,7 +154,7 @@ namespace AC
 				{
 					if (charState == CharState.Move)
 					{
-						StartDecelerating ();
+						charState = CharState.Decelerate;
 					}
 					else if (charState == CharState.Custom)
 					{
@@ -175,8 +162,7 @@ namespace AC
 					}
 				}
 				else if ((KickStarter.stateHandler.gameState == GameState.Cutscene && !lockedPath) || 
-				         (KickStarter.settingsManager.movementMethod == MovementMethod.PointAndClick) ||
-						 (KickStarter.settingsManager.movementMethod == MovementMethod.None) ||
+				         (KickStarter.settingsManager.movementMethod == MovementMethod.PointAndClick) || 
 				         (KickStarter.settingsManager.movementMethod == MovementMethod.StraightToCursor && KickStarter.settingsManager.singleTapStraight) || 
 				         IsMovingToHotspot ())
 				{
@@ -185,7 +171,7 @@ namespace AC
 			}
 			else if (activePath == null && charState == CharState.Move && !KickStarter.stateHandler.IsInGameplay () && KickStarter.stateHandler.gameState != GameState.Paused)
 			{
-				StartDecelerating ();
+				charState = CharState.Decelerate;
 			}
 
 			if (isJumping && !jumped)
@@ -195,8 +181,22 @@ namespace AC
 					isJumping = false;
 				}
 			}
-
+			
+			if (isTilting)
+			{
+				actualTilt = tiltLerp.Update (actualTilt, targetTilt, turnSpeed);
+				if (actualTilt == targetTilt)
+				{
+					isTilting = false;
+				}
+			}
+			
 			base._Update ();
+			
+			if (isTilting)
+			{
+				UpdateTilt ();
+			}
 		}
 		
 		
@@ -293,18 +293,18 @@ namespace AC
 					{
 						if (_rigidbody != null && _rigidbody.isKinematic)
 						{
-							ACDebug.Log ("Player cannot jump without a non-kinematic Rigidbody component.", gameObject);
+							ACDebug.Log ("Player cannot jump without a non-kinematic Rigidbody component.");
 						}
 						else
 						{
-							ACDebug.Log ("Player cannot jump without a Rigidbody component.", gameObject);
+							ACDebug.Log ("Player cannot jump without a Rigidbody component.");
 						}
 					}
 				}
 			}
 			else if (_collider == null)
 			{
-				ACDebug.Log (gameObject.name + " has no Collider component", gameObject);
+				ACDebug.Log (gameObject.name + " has no Collider component");
 			}
 
 			return false;
@@ -379,7 +379,7 @@ namespace AC
 				}
 				else
 				{
-					ACDebug.LogWarning ("Path-constrained player movement is only available with Direct control.", gameObject);
+					ACDebug.LogWarning ("Path-constrained player movement is only available with Direct control.");
 				}
 			}
 		}
@@ -441,30 +441,25 @@ namespace AC
 			}
 		}
 		
-
-		/**
-		 * Checks if the Player's FirstPersonCamera is looking up or down.
-		 */
-		public bool IsTilting ()
+		
+		private void UpdateTilt ()
 		{
-			if (FirstPersonCamera != null)
+			if (firstPersonCamera != null)
 			{
-				return firstPersonCamera.IsTilting ();
+				firstPersonCamera.SetPitch (actualTilt);
 			}
-			return false;
 		}
 
 
-		/**
-		 * Gets the angle by which the Player's FirstPersonCamera is looking up or down, with negative values looking upward.
-		 */
+		public bool IsTilting ()
+		{
+			return isTilting;
+		}
+
+
 		public float GetTilt ()
 		{
-			if (FirstPersonCamera != null)
-			{
-				return firstPersonCamera.GetTilt ();;
-			}
-			return 0f;
+			return actualTilt;
 		}
 		
 
@@ -482,6 +477,8 @@ namespace AC
 			
 			if (isInstant)
 			{
+				isTilting = false;
+
 				Vector3 lookDirection = (lookAtPosition - fpCam.position).normalized;
 				float angle = Mathf.Asin (lookDirection.y) * Mathf.Rad2Deg;
 				firstPersonCamera.SetPitch (-angle);
@@ -490,32 +487,26 @@ namespace AC
 			{
 				// Base the speed of tilt change on how much horizontal rotation is needed
 				
+				actualTilt = fpCam.eulerAngles.x;
+				if (actualTilt > 180)
+				{
+					actualTilt = actualTilt - 360;
+				}
+				
 				Quaternion oldRotation = fpCam.rotation;
 				fpCam.transform.LookAt (lookAtPosition);
-				float targetTilt = fpCam.localEulerAngles.x;
+				targetTilt = fpCam.localEulerAngles.x;
 				fpCam.rotation = oldRotation;
 				if (targetTilt > 180)
 				{
 					targetTilt = targetTilt - 360;
 				}
-				firstPersonCamera.SetPitch (targetTilt, false);
+				
+				Vector3 flatLookVector = lookAtPosition - transform.position;
+				flatLookVector.y = 0f;
+				
+				isTilting = true;
 			}
-		}
-
-
-		/**
-		 * <summary>Sets the tilt of a first-person camera.</summary>
-		 * <param name = "pitchAngle">The angle to tilt the camera towards, with 0 being horizontal, positive looking downard, and negative looking upward</param>
-		 * <param name = "isInstant">If True, the camera will be rotated instantly</param>
-		 */
-		public void SetTilt (float pitchAngle, bool isInstant)
-		{
-			if (firstPersonCamera == null)
-			{
-				return;
-			}
-			
-			firstPersonCamera.SetPitch (pitchAngle, isInstant);
 		}
 
 
@@ -562,8 +553,6 @@ namespace AC
 			playerData.playerLocY = transform.position.y;
 			playerData.playerLocZ = transform.position.z;
 			playerData.playerRotY = TransformRotation.eulerAngles.y;
-
-			playerData.inCustomCharState = (charState == CharState.Custom && GetAnimator () != null && GetAnimator ().GetComponent <RememberAnimator>());
 			
 			playerData.playerWalkSpeed = walkSpeedScale;
 			playerData.playerRunSpeed = runSpeedScale;
@@ -634,7 +623,7 @@ namespace AC
 			if (GetPath ())
 			{
 				playerData.playerTargetNode = GetTargetNode ();
-				playerData.playerPrevNode = GetPreviousNode ();
+				playerData.playerPrevNode = GetPrevNode ();
 				playerData.playerIsRunning = isRunning;
 				playerData.playerPathAffectY = activePath.affectY;
 				
@@ -645,7 +634,7 @@ namespace AC
 				}
 				else
 				{
-					playerData.playerPathData = string.Empty;
+					playerData.playerPathData = "";
 					playerData.playerActivePath = Serializer.GetConstantID (GetPath ().gameObject);
 					playerData.playerLockedPath = lockedPath;
 				}
@@ -668,7 +657,7 @@ namespace AC
 				playerData.headTargetID = Serializer.GetConstantID (headTurnTarget);
 				if (playerData.headTargetID == 0)
 				{
-					ACDebug.LogWarning ("The Player's head-turning target Transform, " + headTurnTarget + ", was not saved because it has no Constant ID", gameObject);
+					ACDebug.LogWarning ("The Player's head-turning target Transform, " + headTurnTarget + ", was not saved because it has no Constant ID");
 				}
 				playerData.headTargetX = headTurnTargetOffset.x;
 				playerData.headTargetY = headTurnTargetOffset.y;
@@ -695,7 +684,7 @@ namespace AC
 					}
 					else
 					{
-						ACDebug.LogWarning ("The Player's SortingMap, " + followSortingMap.GetSortingMap ().name + ", was not saved because it has no Constant ID", gameObject);
+						ACDebug.LogWarning ("The Player's SortingMap, " + followSortingMap.GetSortingMap ().name + ", was not saved because it has no Constant ID");
 						playerData.customSortingMapID = 0;
 					}
 				}
@@ -722,8 +711,6 @@ namespace AC
 		{
 			if (!justAnimationData)
 			{
-				charState = (playerData.inCustomCharState) ? CharState.Custom : CharState.Idle;
-
 				Teleport (new Vector3 (playerData.playerLocX, playerData.playerLocY, playerData.playerLocZ));
 				SetRotation (playerData.playerRotY);
 				SetMoveDirectionAsForward ();
@@ -811,90 +798,76 @@ namespace AC
 				// Active path
 				Halt ();
 				ForceIdle ();
-			}
-
-			if (!string.IsNullOrEmpty (playerData.playerPathData) && GetComponent <Paths>())
-			{
-				Paths savedPath = GetComponent <Paths>();
-				savedPath = Serializer.RestorePathData (savedPath, playerData.playerPathData);
-				SetPath (savedPath, playerData.playerTargetNode, playerData.playerPrevNode, playerData.playerPathAffectY);
-				isRunning = playerData.playerIsRunning;
-				lockedPath = false;
-			}
-			else if (playerData.playerActivePath != 0)
-			{
-				Paths savedPath = Serializer.returnComponent <Paths> (playerData.playerActivePath);
-				if (savedPath)
+				
+				if (playerData.playerPathData != null && playerData.playerPathData != "" && GetComponent <Paths>())
 				{
-					lockedPath = playerData.playerLockedPath;
-					
-					if (lockedPath)
+					Paths savedPath = GetComponent <Paths>();
+					savedPath = Serializer.RestorePathData (savedPath, playerData.playerPathData);
+					SetPath (savedPath, playerData.playerTargetNode, playerData.playerPrevNode, playerData.playerPathAffectY);
+					isRunning = playerData.playerIsRunning;
+					lockedPath = false;
+				}
+				else if (playerData.playerActivePath != 0)
+				{
+					Paths savedPath = Serializer.returnComponent <Paths> (playerData.playerActivePath);
+					if (savedPath)
 					{
-						SetLockedPath (savedPath);
+						lockedPath = playerData.playerLockedPath;
+						
+						if (lockedPath)
+						{
+							SetLockedPath (savedPath);
+						}
+						else
+						{
+							SetPath (savedPath, playerData.playerTargetNode, playerData.playerPrevNode);
+						}
+					}
+				}
+				
+				// Previous path
+				if (playerData.lastPlayerActivePath != 0)
+				{
+					Paths savedPath = Serializer.returnComponent <Paths> (playerData.lastPlayerActivePath);
+					if (savedPath)
+					{
+						SetLastPath (savedPath, playerData.lastPlayerTargetNode, playerData.lastPlayerPrevNode);
+					}
+				}
+				
+				// Head target
+				lockHotspotHeadTurning = playerData.playerLockHotspotHeadTurning;
+				if (playerData.isHeadTurning)
+				{
+					ConstantID _headTargetID = Serializer.returnComponent <ConstantID> (playerData.headTargetID);
+					if (_headTargetID != null)
+					{
+						SetHeadTurnTarget (_headTargetID.transform, new Vector3 (playerData.headTargetX, playerData.headTargetY, playerData.headTargetZ), true);
 					}
 					else
 					{
-						SetPath (savedPath, playerData.playerTargetNode, playerData.playerPrevNode);
+						ClearHeadTurnTarget (true);
 					}
-				}
-				else
-				{
-					Halt ();
-					ForceIdle ();
-				}
-			}
-			else
-			{
-				Halt ();
-				ForceIdle ();
-			}
-			
-			// Previous path
-			if (playerData.lastPlayerActivePath != 0)
-			{
-				Paths savedPath = Serializer.returnComponent <Paths> (playerData.lastPlayerActivePath);
-				if (savedPath)
-				{
-					SetLastPath (savedPath, playerData.lastPlayerTargetNode, playerData.lastPlayerPrevNode);
-				}
-			}
-			
-			// Head target
-			lockHotspotHeadTurning = playerData.playerLockHotspotHeadTurning;
-			if (playerData.isHeadTurning)
-			{
-				ConstantID _headTargetID = Serializer.returnComponent <ConstantID> (playerData.headTargetID);
-				if (_headTargetID != null)
-				{
-					SetHeadTurnTarget (_headTargetID.transform, new Vector3 (playerData.headTargetX, playerData.headTargetY, playerData.headTargetZ), true);
 				}
 				else
 				{
 					ClearHeadTurnTarget (true);
 				}
-			}
-			else
-			{
-				ClearHeadTurnTarget (true);
-			}
-			
-			ignoreGravity = playerData.playerIgnoreGravity;
-
-			if (GetComponentsInChildren <FollowSortingMap>() != null)
-			{
-				FollowSortingMap[] followSortingMaps = GetComponentsInChildren <FollowSortingMap>();
-				SortingMap customSortingMap = Serializer.returnComponent <SortingMap> (playerData.customSortingMapID);
 				
-				foreach (FollowSortingMap followSortingMap in followSortingMaps)
+				ignoreGravity = playerData.playerIgnoreGravity;
+
+				if (GetComponentsInChildren <FollowSortingMap>() != null)
 				{
-					followSortingMap.followSortingMap = playerData.followSortingMap;
-					if (!playerData.followSortingMap && customSortingMap != null)
+					FollowSortingMap[] followSortingMaps = GetComponentsInChildren <FollowSortingMap>();
+					SortingMap customSortingMap = Serializer.returnComponent <SortingMap> (playerData.customSortingMapID);
+					
+					foreach (FollowSortingMap followSortingMap in followSortingMaps)
 					{
-						followSortingMap.SetSortingMap (customSortingMap);
-					}
-					else
-					{
-						followSortingMap.SetSortingMap (KickStarter.sceneSettings.sortingMap);
+						followSortingMap.followSortingMap = playerData.followSortingMap;
+						if (!playerData.followSortingMap)
+						{
+							followSortingMap.SetSortingMap (customSortingMap);
+						}
 					}
 				}
 			}

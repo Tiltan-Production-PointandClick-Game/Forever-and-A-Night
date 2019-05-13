@@ -1,7 +1,7 @@
 ﻿/*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2019
+ *	by Chris Burton, 2013-2018
  *	
  *	"Moveable_Drag.cs"
  * 
@@ -92,20 +92,16 @@ namespace AC
 				}
 			}
 
-			SphereCollider sphereCollider = GetComponent <SphereCollider>();
-			if (sphereCollider != null)
+			if (GetComponent <SphereCollider>())
 			{
-				colliderRadius = sphereCollider.radius * transform.localScale.x;
-			}
-			else
-			{
-				ACDebug.LogWarning ("Cannot calculate collider radius for Draggable object '" + gameObject.name + "' - it should have either a SphereCollider attached, even if it's disabled.", this);
+				colliderRadius = GetComponent <SphereCollider>().radius * transform.localScale.x;
 			}
 
 			if (dragMode == DragMode.LockToTrack)
 			{
 				StartCoroutine (InitToTrack ());
 			}
+
 		}
 
 
@@ -344,7 +340,7 @@ namespace AC
 						}
 						else
 						{
-							ACDebug.LogWarning ("No alignment plane assigned to " + this.name, this);
+							ACDebug.LogWarning ("No alignment plane assigned to " + this.name);
 						}
 					}
 					else
@@ -555,7 +551,7 @@ namespace AC
 			}
 			else
 			{
-				ACDebug.LogWarning ("Cannot move " + this.name + " along a track, because no track has been assigned to it", this);
+				ACDebug.LogWarning ("Cannot move " + this.name + " along a track, because no track has been assigned to it");
 				targetTrackSpeed = 0f;
 			}
 		}
@@ -563,14 +559,9 @@ namespace AC
 
 		private void OnCollisionEnter (Collision collision)
 		{
-			if (IsAutoMoving ())
+			if ((blockAutoLayerMask.value & 1 << collision.gameObject.layer) != 0)
 			{
-				if ((targetStartedGreater && collision.collider == maxCollider) ||
-					(!targetStartedGreater && collision.collider == minCollider))
-				{
-					StopAutoMove (false);
-				}
-				else if ((blockAutoLayerMask.value & 1 << collision.gameObject.layer) != 0)
+				if (IsAutoMoving ())
 				{
 					StopAutoMove (false);
 				}

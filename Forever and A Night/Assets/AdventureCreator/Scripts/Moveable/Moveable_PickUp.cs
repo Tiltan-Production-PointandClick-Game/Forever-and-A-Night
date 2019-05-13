@@ -1,7 +1,7 @@
 ﻿/*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2019
+ *	by Chris Burton, 2013-2018
  *	
  *	"Moveable_PickUp.cs"
  * 
@@ -182,7 +182,7 @@ namespace AC
 			}
 			else if (!isChargingThrow)
 			{
-				_rigidbody.AddForce (deltaMovement * Time.deltaTime / Time.fixedDeltaTime * 7f);
+				_rigidbody.AddForce (deltaMovement * Time.deltaTime / Time.fixedDeltaTime * 10f);
 			}
 
 			_rigidbody.useGravity = true;
@@ -317,7 +317,7 @@ namespace AC
 			worldMousePosition = GetWorldMousePosition ();
 		
 			Vector3 deltaPositionRaw = (worldMousePosition - fixedJointOffset - fixedJoint.transform.position) * 100f;
-			deltaMovement = Vector3.Lerp (deltaMovement, deltaPositionRaw, Time.deltaTime * 6f);
+			deltaMovement = Vector3.Lerp (deltaMovement, deltaPositionRaw, Time.deltaTime * 2f);
 		}
 
 

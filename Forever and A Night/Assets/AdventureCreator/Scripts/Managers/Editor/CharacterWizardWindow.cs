@@ -251,8 +251,7 @@ namespace AC
 
 			if (newBaseObject.GetComponent <AudioSource>() == null)
 			{
-				AudioSource baseAudioSource = newBaseObject.AddComponent <AudioSource>();
-				baseAudioSource.playOnAwake = false;
+				newBaseObject.AddComponent <AudioSource>();
 			}
 
 			if (newBaseObject.GetComponent <Paths>() == null)
@@ -354,8 +353,7 @@ namespace AC
 			GameObject soundChild = new GameObject ("Sound child");
 			soundChild.transform.parent = newBaseObject.transform;
 			soundChild.transform.localPosition = Vector3.zero;
-			AudioSource childAudioSource = soundChild.AddComponent <AudioSource>();
-			childAudioSource.playOnAwake = false;
+			soundChild.AddComponent <AudioSource>();
 			Sound sound = soundChild.AddComponent <Sound>();
 			charScript.soundChild = sound;
 
@@ -401,7 +399,7 @@ namespace AC
 					}
 				}
 
-				GUILayout.Label ("Assign your character's base GameObject (such as a Skinned Mesh Renderer or 'idle' sprite):");
+				GUILayout.Label ("Assign your character's base GameObject (such as a skinned mesh renderer or 'idle' sprite):");
 				baseObject = (GameObject) EditorGUILayout.ObjectField (baseObject, typeof (GameObject), true);
 
 				if (baseObject != null && !IsFirstPerson ())
@@ -419,7 +417,7 @@ namespace AC
 			
 			else if (pageNumber == 2)
 			{
-				GUILayout.Label ("How should '" + charType.ToString () + "' should be animated?");
+				GUILayout.Label ("How should your " + charType.ToString () + "' should be animated?");
 				animationEngine = (AnimationEngine) EditorGUILayout.EnumPopup (animationEngine);
 
 				if (animationEngine == AnimationEngine.Custom)
@@ -471,7 +469,7 @@ namespace AC
 						}
 						else
 						{
-							EditorGUILayout.HelpBox ("This chosen method will make use of an Animator component, and one has already been detected on the base object.\nThis will be assumed to be the Animator to animate the character with.", MessageType.Info);
+							EditorGUILayout.HelpBox ("This chosen method will make use of an Animator component, and one has already been detected on the base object.\nThis will be assumed to be the correct Animator to make use of.", MessageType.Info);
 						}
 					}
 

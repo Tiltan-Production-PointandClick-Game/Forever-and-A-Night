@@ -1,7 +1,7 @@
 /*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2019
+ *	by Chris Burton, 2013-2018
  *	
  *	"ActionCharFace.cs"
  * 
@@ -31,9 +31,7 @@ namespace AC
 
 		public bool isInstant;
 		public Char charToMove;
-		protected Char runtimeCharToMove;
 		public GameObject faceObject;
-		protected GameObject runtimeFaceObject;
 		public bool copyRotation;
 		public bool facePlayer;
 		
@@ -56,16 +54,16 @@ namespace AC
 
 		public override void AssignValues (List<ActionParameter> parameters)
 		{
-			runtimeCharToMove = AssignFile <Char> (parameters, charToMoveParameterID, charToMoveID, charToMove);
-			runtimeFaceObject = AssignFile (parameters, faceObjectParameterID, faceObjectID, faceObject);
+			charToMove = AssignFile <Char> (parameters, charToMoveParameterID, charToMoveID, charToMove);
+			faceObject = AssignFile (parameters, faceObjectParameterID, faceObjectID, faceObject);
 
 			if (isPlayer)
 			{
-				runtimeCharToMove = KickStarter.player;
+				charToMove = KickStarter.player;
 			}
 			else if (facePlayer && KickStarter.player)
 			{
-				runtimeFaceObject = KickStarter.player.gameObject;
+				faceObject = KickStarter.player.gameObject;
 			}
 		}
 
@@ -76,58 +74,58 @@ namespace AC
 			{
 				isRunning = true;
 			
-				if (runtimeFaceObject == null && (faceType == CharFaceType.Body || (faceType == CharFaceType.Head && !stopLooking)))
+				if (faceObject == null && (faceType == CharFaceType.Body || (faceType == CharFaceType.Head && !stopLooking)))
 				{
 					return 0f;
 				}
 
-				if (runtimeCharToMove)
+				if (charToMove)
 				{
 					if (faceType == CharFaceType.Body)
 					{
-						if (!isInstant && runtimeCharToMove.IsMovingAlongPath ())
+						if (!isInstant && charToMove.IsMovingAlongPath ())
 						{
-							runtimeCharToMove.EndPath ();
+							charToMove.EndPath ();
 						}
 
 						if (lookUpDown && isPlayer && KickStarter.settingsManager.IsInFirstPerson ())
 						{
-							Player player = (Player) runtimeCharToMove;
-							player.SetTilt (runtimeFaceObject.transform.position, isInstant);
+							Player player = (Player) charToMove;
+							player.SetTilt (faceObject.transform.position, isInstant);
 						}
 
-						runtimeCharToMove.SetLookDirection (GetLookVector (KickStarter.settingsManager), isInstant);
+						charToMove.SetLookDirection (GetLookVector (KickStarter.settingsManager), isInstant);
 					}
 					else if (faceType == CharFaceType.Head)
 					{
 						if (stopLooking)
 						{
-							runtimeCharToMove.ClearHeadTurnTarget (isInstant, HeadFacing.Manual);
+							charToMove.ClearHeadTurnTarget (isInstant, HeadFacing.Manual);
 						}
 						else
 						{
 							Vector3 offset = Vector3.zero;
 
-							Hotspot faceObjectHotspot = runtimeFaceObject.GetComponent <Hotspot>();
-							Char faceObjectChar = runtimeFaceObject.GetComponent <Char>();
+							Hotspot faceObjectHotspot = faceObject.GetComponent <Hotspot>();
+							Char faceObjectChar = faceObject.GetComponent <Char>();
 
 							if (lookAtHead && faceObjectChar != null)
 							{
 								Transform neckBone = faceObjectChar.neckBone;
 								if (neckBone != null)
 								{
-									runtimeFaceObject = neckBone.gameObject;
+									faceObject = neckBone.gameObject;
 								}
 								else
 								{
-									ACDebug.Log ("Cannot look at " + faceObjectChar.name + "'s head as their 'Neck bone' has not been defined.", faceObjectChar);
+									ACDebug.Log ("Cannot look at " + faceObject.name + "'s head as their 'Neck bone' has not been defined.");
 								}
 							}
 							else if (faceObjectHotspot != null)
 							{
 								if (faceObjectHotspot.centrePoint != null)
 								{
-									runtimeFaceObject = faceObjectHotspot.centrePoint.gameObject;
+									faceObject = faceObjectHotspot.centrePoint.gameObject;
 								}
 								else
 								{
@@ -135,7 +133,7 @@ namespace AC
 								}
 							}
 
-							runtimeCharToMove.SetHeadTurnTarget (runtimeFaceObject.transform, offset, isInstant);
+							charToMove.SetHeadTurnTarget (faceObject.transform, offset, isInstant);
 						}
 					}
 
@@ -160,11 +158,11 @@ namespace AC
 			}
 			else
 			{
-				if (faceType == CharFaceType.Head && runtimeCharToMove.IsMovingHead ())
+				if (faceType == CharFaceType.Head && charToMove.IsMovingHead ())
 				{
 					return defaultPauseTime;
 				}
-				else if (faceType == CharFaceType.Body && runtimeCharToMove.IsTurning ())
+				else if (faceType == CharFaceType.Body && charToMove.IsTurning ())
 				{
 					return defaultPauseTime;
 				}
@@ -179,21 +177,21 @@ namespace AC
 
 		override public void Skip ()
 		{
-			if (runtimeFaceObject == null && (faceType == CharFaceType.Body || (faceType == CharFaceType.Head && !stopLooking)))
+			if (faceObject == null && (faceType == CharFaceType.Body || (faceType == CharFaceType.Head && !stopLooking)))
 			{
 				return;
 			}
 			
-			if (runtimeCharToMove)
+			if (charToMove)
 			{
 				if (faceType == CharFaceType.Body)
 				{
-					runtimeCharToMove.SetLookDirection (GetLookVector (KickStarter.settingsManager), true);
+					charToMove.SetLookDirection (GetLookVector (KickStarter.settingsManager), true);
 					
 					if (lookUpDown && isPlayer && KickStarter.settingsManager.IsInFirstPerson ())
 					{
-						Player player = (Player) runtimeCharToMove;
-						player.SetTilt (runtimeFaceObject.transform.position, true);
+						Player player = (Player) charToMove;
+						player.SetTilt (faceObject.transform.position, true);
 					}
 				}
 
@@ -201,29 +199,29 @@ namespace AC
 				{
 					if (stopLooking)
 					{
-						runtimeCharToMove.ClearHeadTurnTarget (true, HeadFacing.Manual);
+						charToMove.ClearHeadTurnTarget (true, HeadFacing.Manual);
 					}
 					else
 					{
 						Vector3 offset = Vector3.zero;
-						if (runtimeFaceObject.GetComponent <Hotspot>())
+						if (faceObject.GetComponent <Hotspot>())
 						{
-							offset = runtimeFaceObject.GetComponent <Hotspot>().GetIconPosition (true);
+							offset = faceObject.GetComponent <Hotspot>().GetIconPosition (true);
 						}
-						else if (lookAtHead && runtimeFaceObject.GetComponent <Char>())
+						else if (lookAtHead && faceObject.GetComponent <Char>())
 						{
-							Transform neckBone = runtimeFaceObject.GetComponent <Char>().neckBone;
+							Transform neckBone = faceObject.GetComponent <Char>().neckBone;
 							if (neckBone != null)
 							{
-								runtimeFaceObject = neckBone.gameObject;
+								faceObject = neckBone.gameObject;
 							}
 							else
 							{
-								ACDebug.Log ("Cannot look at " + runtimeFaceObject.name + "'s head as their 'Neck bone' has not been defined.", runtimeFaceObject);
+								ACDebug.Log ("Cannot look at " + faceObject.name + "'s head as their 'Neck bone' has not been defined.");
 							}
 						}
 
-						runtimeCharToMove.SetHeadTurnTarget (runtimeFaceObject.transform, offset, true);
+						charToMove.SetHeadTurnTarget (faceObject.transform, offset, true);
 					}
 				}
 			}
@@ -232,14 +230,14 @@ namespace AC
 		
 		private Vector3 GetLookVector (SettingsManager settingsManager)
 		{
-			Vector3 lookVector = runtimeFaceObject.transform.position - runtimeCharToMove.transform.position;
+			Vector3 lookVector = faceObject.transform.position - charToMove.transform.position;
 			if (copyRotation)
 			{
-				lookVector = runtimeFaceObject.transform.forward;
+				lookVector = faceObject.transform.forward;
 			}
 			else if (SceneSettings.ActInScreenSpace ())
 			{
-				lookVector = AdvGame.GetScreenDirection (runtimeCharToMove.transform.position, runtimeFaceObject.transform.position);
+				lookVector = AdvGame.GetScreenDirection (charToMove.transform.position, faceObject.transform.position);
 			}
 
 			return lookVector;
@@ -266,20 +264,13 @@ namespace AC
 					charToMoveID = FieldToID <Char> (charToMove, charToMoveID);
 					charToMove = IDToField <Char> (charToMove, charToMoveID, false);
 				}
-			}
-			else
-			{
-				facePlayer = false;
-			}
 
-			faceType = (CharFaceType) EditorGUILayout.EnumPopup ("Face with:", faceType);
-
-			if (!isPlayer)
-			{
 				facePlayer = EditorGUILayout.Toggle ("Face player?", facePlayer);
 			}
 			else
 			{
+				facePlayer = false;
+				
 				SettingsManager settingsManager = AdvGame.GetReferences ().settingsManager;
 				if (faceType == CharFaceType.Body && settingsManager && settingsManager.IsInFirstPerson ())
 				{
@@ -287,6 +278,7 @@ namespace AC
 				}
 			}
 
+			faceType = (CharFaceType) EditorGUILayout.EnumPopup ("Face with:", faceType);
 			if (faceType == CharFaceType.Head)
 			{
 				stopLooking = EditorGUILayout.Toggle ("Stop looking?", stopLooking);
@@ -333,7 +325,7 @@ namespace AC
 		}
 
 
-		override public void AssignConstantIDs (bool saveScriptsToo, bool fromAssetFile)
+		override public void AssignConstantIDs (bool saveScriptsToo)
 		{
 			if (saveScriptsToo)
 			{
@@ -357,18 +349,18 @@ namespace AC
 		
 		override public string SetLabel ()
 		{
-			if (faceObject != null)
+			string labelAdd = "";
+			
+			if (charToMove && faceObject)
 			{
-				if (charToMove != null)
-				{
-					return charToMove.name + " to " + faceObject.name;
-				}
-				else if (isPlayer)
-				{
-					return "Player to " + faceObject.name;
-				}
+				labelAdd = " (" + charToMove.name + " to " + faceObject.name + ")";
 			}
-			return string.Empty;
+			else if (isPlayer && faceObject)
+			{
+				labelAdd = " (Player to " + faceObject.name + ")";
+			}
+			
+			return labelAdd;
 		}
 
 		#endif

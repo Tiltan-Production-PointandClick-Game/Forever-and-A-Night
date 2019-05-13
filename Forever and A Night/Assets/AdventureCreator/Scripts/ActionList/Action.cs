@@ -1,7 +1,7 @@
 /*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2019
+ *	by Chris Burton, 2013-2018
  *	
  *	"Action.cs"
  * 
@@ -140,7 +140,7 @@ namespace AC
 			if (showComment && !string.IsNullOrEmpty (comment))
 			{
 				string log = AdvGame.ConvertTokens (comment, 0, null, actionList.parameters);
-				log += "\n" + "(From Action '(" + actionList.actions.IndexOf (this) + ") " + KickStarter.actionsManager.GetActionTypeLabel (this) + "' in ActionList '" + actionList.gameObject.name + "')";
+				log += "\n" + "(From " + actionList.gameObject.name + " , " + category.ToString () + ": " + title + ")";
 				ACDebug.Log (log, actionList);
 			}
 		}
@@ -209,8 +209,7 @@ namespace AC
 
 				for (int i = 0; i < actions.Count; i++)
 				{
-					//labelList.Add ("(" + i.ToString () + ") " + actions[i].category.ToString () + ": " + actions [i].title);
-					labelList.Add ("(" + i.ToString () + ") " + ((KickStarter.actionsManager != null) ? KickStarter.actionsManager.GetActionTypeLabel (actions[i]) : string.Empty));
+					labelList.Add ("(" + i.ToString () + ") " + actions[i].category.ToString () + ": " + actions [i].title);
 
 					if (skipActionActual == actions [i])
 					{
@@ -255,9 +254,8 @@ namespace AC
 		 * <summary>Called when an ActionList has been converted from a scene-based object to an asset file.
 		 * Within it, AssignConstantID should be called for each of the Action's Constant ID numbers, which will assign a new number if one does not already exist, based on the referenced scene object.</summary>
 		 * <param name = "saveScriptsToo">If True, then the Action shall attempt to add the appropriate 'Remember' script to reference GameObjects as well.</param>
-		 * <param name = "fromAssetFile">If True, then the Action is placed in an ActionListAsset file</param>
 		 */
-		public virtual void AssignConstantIDs (bool saveScriptsToo = false, bool fromAssetFile = false)
+		public virtual void AssignConstantIDs (bool saveScriptsToo = false)
 		{ }
 
 
@@ -812,12 +810,6 @@ namespace AC
 			return 0;
 		}
 
-
-		public virtual int GetDocumentReferences (List<ActionParameter> parameters, int invID)
-		{
-			return 0;
-		}
-
 		#endif
 
 
@@ -883,14 +875,7 @@ namespace AC
 		}
 
 
-		/**
-		 * <summary>Replaces a boolean based on an ActionParameter, if appropriate.</summary>
-		 * <param name = "parameters">A List of ActionParameters that may override the Transform</param>
-		 * <param name = "_parameterID">The ID of the ActionParameter to search for within parameters that will replace the float</param>
-		 * <param name = "field">The bool to replace</param>
-		 * <returns>The replaced BoolValue enum, or field if no replacements were found</returns>
-		 */
-		public BoolValue AssignBoolean (List<ActionParameter> parameters, int _parameterID, BoolValue field)
+		protected BoolValue AssignBoolean (List<ActionParameter> parameters, int _parameterID, BoolValue field)
 		{
 			ActionParameter parameter = GetParameterWithID (parameters, _parameterID);
 			if (parameter != null && parameter.parameterType == ParameterType.Boolean)
@@ -905,14 +890,7 @@ namespace AC
 		}
 
 
-		/**
-		 * <summary>Replaces an integer based on an ActionParameter, if appropriate.</summary>
-		 * <param name = "parameters">A List of ActionParameters that may override the Transform</param>
-		 * <param name = "_parameterID">The ID of the ActionParameter to search for within parameters that will replace the float</param>
-		 * <param name = "field">The integer to replace</param>
-		 * <returns>The replaced integer, or field if no replacements were found</returns>
-		 */
-		public int AssignInteger (List<ActionParameter> parameters, int _parameterID, int field)
+		protected int AssignInteger (List<ActionParameter> parameters, int _parameterID, int field)
 		{
 			ActionParameter parameter = GetParameterWithID (parameters, _parameterID);
 			if (parameter != null && parameter.parameterType == ParameterType.Integer)
@@ -923,14 +901,7 @@ namespace AC
 		}
 
 
-		/**
-		 * <summary>Replaces a float based on an ActionParameter, if appropriate.</summary>
-		 * <param name = "parameters">A List of ActionParameters that may override the Transform</param>
-		 * <param name = "_parameterID">The ID of the ActionParameter to search for within parameters that will replace the float</param>
-		 * <param name = "field">The float to replace</param>
-		 * <returns>The replaced float, or field if no replacements were found</returns>
-		 */
-		public float AssignFloat (List<ActionParameter> parameters, int _parameterID, float field)
+		protected float AssignFloat (List<ActionParameter> parameters, int _parameterID, float field)
 		{
 			ActionParameter parameter = GetParameterWithID (parameters, _parameterID);
 			if (parameter != null && parameter.parameterType == ParameterType.Float)
@@ -967,17 +938,6 @@ namespace AC
 		{
 			ActionParameter parameter = GetParameterWithID (parameters, _parameterID);
 			if (parameter != null && parameter.parameterType == ParameterType.InventoryItem)
-			{
-				return (parameter.intValue);
-			}
-			return field;
-		}
-
-
-		protected int AssignDocumentID (List<ActionParameter> parameters, int _parameterID, int field)
-		{
-			ActionParameter parameter = GetParameterWithID (parameters, _parameterID);
-			if (parameter != null && parameter.parameterType == ParameterType.Document)
 			{
 				return (parameter.intValue);
 			}
@@ -1189,11 +1149,6 @@ namespace AC
 				if (parameter.intValue != 0)
 				{
 					file = Serializer.returnComponent <T> (parameter.intValue);
-
-					if (file == null && parameter.gameObject != null && parameter.intValue != -1)
-					{
-						ACDebug.LogWarning ("No " + typeof(T) + " component attached to " + parameter.gameObject + "!", parameter.gameObject);
-					}
 				}
 				if (file == null)
 				{
@@ -1218,8 +1173,8 @@ namespace AC
 				{
 					file = newField;
 				}
-			}
 
+			}
 			return file;
 		}
 

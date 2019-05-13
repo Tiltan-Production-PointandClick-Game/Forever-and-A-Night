@@ -1,7 +1,7 @@
 /*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2019
+ *	by Chris Burton, 2013-2018
  *	
  *	"ActionCheckTemplate.cs"
  * 
@@ -51,9 +51,10 @@ namespace AC
 
 		public override string SetLabel ()
 		{
-			// (Optional) Return a string used to describe the specific action's job.
+			// Return a string used to describe the specific action's job.
 			
-			return string.Empty;
+			string labelAdd = "";
+			return labelAdd;
 		}
 
 		#endif

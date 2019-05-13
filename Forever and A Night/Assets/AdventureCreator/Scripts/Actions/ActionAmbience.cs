@@ -1,7 +1,7 @@
 ﻿/*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2019
+ *	by Chris Burton, 2013-2018
  *	
  *	"ActionAmbience.cs"
  * 
@@ -35,11 +35,8 @@ namespace AC
 		public bool resumeFromStart = true;
 		public bool resumeIfPlayedBefore = false;
 
-		public bool willWaitComplete;
 		public MusicAction musicAction;
 
-		private Ambience ambience;
-			
 		
 		public ActionAmbience ()
 		{
@@ -54,37 +51,23 @@ namespace AC
 		{
 			trackID = AssignInteger (parameters, trackIDParameterID, trackID);
 			fadeTime = AssignFloat (parameters, fadeTimeParameterID, fadeTime);
-
-			ambience = KickStarter.stateHandler.GetAmbienceEngine ();
 		}
 		
 		
 		override public float Run ()
 		{
-			if (ambience == null) return 0f;
-
 			if (!isRunning)
 			{
 				isRunning = true;
 				float waitTime = Perform (fadeTime);
 
-				if (CanWaitComplete () && willWaitComplete)
-				{
-					return defaultPauseTime;
-				}
-
 				if (willWait && waitTime > 0f && !isQueued)
 				{
-					return waitTime;
+					return (waitTime);
 				}
 			}
 			else
 			{
-				if (CanWaitComplete () && willWaitComplete && ambience.GetCurrentTrackID () == trackID && ambience.IsPlaying ())
-				{
-					return defaultPauseTime;
-				}
-
 				isRunning = false;
 			}
 			return 0f;
@@ -93,20 +76,13 @@ namespace AC
 		
 		override public void Skip ()
 		{
-			if (ambience == null) return;
-
 			Perform (0f);
-		}
-
-
-		private bool CanWaitComplete ()
-		{
-			return (!loop && !isQueued && (musicAction == MusicAction.Play || musicAction == MusicAction.Crossfade));
 		}
 
 
 		private float Perform (float _time)
 		{
+			Ambience ambience = KickStarter.stateHandler.GetAmbienceEngine ();
 			if (ambience != null)
 			{
 				if (musicAction == MusicAction.Play)
@@ -169,23 +145,15 @@ namespace AC
 					resumeFromStart = EditorGUILayout.Toggle ("Restart track?", resumeFromStart);
 				}
 
-				if (CanWaitComplete ())
-				{
-					willWaitComplete = EditorGUILayout.Toggle ("Wait until track completes?", willWaitComplete);
-				}
-
 				fadeTimeParameterID = Action.ChooseParameterGUI (fadeLabel, parameters, fadeTimeParameterID, ParameterType.Float);
 				if (fadeTimeParameterID < 0)
 				{
 					fadeTime = EditorGUILayout.Slider (fadeLabel, fadeTime, 0f, 10f);
 				}
 
-				if (!CanWaitComplete () || !willWaitComplete)
+				if (fadeTime > 0f && !isQueued)
 				{
-					if (fadeTime > 0f && !isQueued)
-					{
-						willWait = EditorGUILayout.Toggle ("Wait until transition ends?", willWait);
-					}
+					willWait = EditorGUILayout.Toggle ("Wait until transition ends?", willWait);
 				}
 			}
 			else
@@ -250,7 +218,7 @@ namespace AC
 		
 		override public string SetLabel ()
 		{
-			string labelAdd = musicAction.ToString ();
+			string labelAdd = " (" + musicAction.ToString ();
 			if (musicAction == MusicAction.Play &&
 			    AdvGame.GetReferences ().settingsManager != null &&
 			    AdvGame.GetReferences ().settingsManager.ambienceStorages != null)
@@ -261,6 +229,7 @@ namespace AC
 					labelAdd += " " + AdvGame.GetReferences ().settingsManager.ambienceStorages[trackIndex].audioClip.name.ToString ();
 				}
 			}
+			labelAdd += ")";
 
 			return labelAdd;
 		}

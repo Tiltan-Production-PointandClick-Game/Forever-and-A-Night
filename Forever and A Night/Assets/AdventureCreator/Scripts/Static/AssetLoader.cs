@@ -1,7 +1,7 @@
 ﻿/*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2019
+ *	by Chris Burton, 2013-2018
  *	
  *	"AssetLoader.cs"
  * 
@@ -36,7 +36,7 @@ namespace AC
 		#if UNITY_2017_1_OR_NEWER
 		private static Object[] timelineAssets;
 		#endif
-		#if UNITY_5_6_OR_NEWER && !UNITY_SWITCH
+		#if UNITY_5_6_OR_NEWER
 		private static Object[] videoAssets;
 		#endif
 
@@ -104,7 +104,7 @@ namespace AC
 				newFile = RetrieveTimelines (_name);
 			}
 			#endif
-			#if UNITY_5_6_OR_NEWER && !UNITY_SWITCH
+			#if UNITY_5_6_OR_NEWER
 			else if (originalFile is VideoClip)
 			{
 				newFile = RetrieveVideoClips (_name);
@@ -164,7 +164,7 @@ namespace AC
 		#endif
 
 
-		#if UNITY_5_6_OR_NEWER && !UNITY_SWITCH
+		#if UNITY_5_6_OR_NEWER
 		private static VideoClip RetrieveVideoClips (string _name)
 		{
 			videoAssets = RetrieveAssetFiles <VideoClip> (videoAssets, "VideoClips");

@@ -1,7 +1,7 @@
 /*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2019
+ *	by Chris Burton, 2013-2018
  *	
  *	"PlayerInput.cs"
  * 
@@ -154,8 +154,9 @@ namespace AC
 			}
 		
 			ResetClick ();
-
-			xboxCursor = new Vector2 (Screen.width / 2f, Screen.height / 2f);
+			
+			xboxCursor.x = Screen.width / 2;
+			xboxCursor.y = Screen.height / 2;
 
 			if (KickStarter.settingsManager != null && KickStarter.settingsManager.CanDragCursor ())
 			{
@@ -598,17 +599,9 @@ namespace AC
 					}
 					else
 					{
-						if (KickStarter.settingsManager.scaleCursorSpeedWithScreen)
-						{
-							xboxCursor.x += InputGetAxis ("CursorHorizontal") * cursorMoveSpeed * GetDeltaTime () * Screen.width * 0.5f;
-							xboxCursor.y += InputGetAxis ("CursorVertical") * cursorMoveSpeed * GetDeltaTime () * Screen.height * 0.5f;
-						}
-						else
-						{
-							xboxCursor.x += InputGetAxis ("CursorHorizontal") * cursorMoveSpeed * GetDeltaTime () * 300f;
-							xboxCursor.y += InputGetAxis ("CursorVertical") * cursorMoveSpeed * GetDeltaTime () * 300f;
-						}
-
+						xboxCursor.x += InputGetAxis ("CursorHorizontal") * cursorMoveSpeed / Screen.width * 5000f;
+						xboxCursor.y += InputGetAxis ("CursorVertical") * cursorMoveSpeed / Screen.height * 5000f;
+						
 						xboxCursor.x = Mathf.Clamp (xboxCursor.x, 0f, Screen.width);
 						xboxCursor.y = Mathf.Clamp (xboxCursor.y, 0f, Screen.height);
 						
@@ -832,7 +825,7 @@ namespace AC
 
 		private void DetectCursorInputs ()
 		{
-			if (KickStarter.settingsManager.interactionMethod == AC_InteractionMethod.ChooseInteractionThenHotspot && KickStarter.cursorManager.allowIconInput)
+			if (KickStarter.settingsManager.interactionMethod == AC_InteractionMethod.ChooseInteractionThenHotspot)
 			{
 				if (KickStarter.cursorManager.allowWalkCursor)
 				{
@@ -884,11 +877,6 @@ namespace AC
 		public void SetSimulatedCursorPosition (Vector2 newPosition)
 		{
 			xboxCursor = newPosition;
-
-			if (!cursorIsLocked)
-			{
-				mousePosition = xboxCursor;
-			}
 		}
 
 
@@ -1904,6 +1892,10 @@ namespace AC
 					deltaDragMouse = (mousePosition - lastMousePosition) / Time.deltaTime;
 				}
 			}
+			/*else
+			{
+				lastMousePosition = mousePosition;
+			}*/
 
 			if (dragObject && KickStarter.stateHandler.gameState != GameState.Normal)
 			{
@@ -1996,11 +1988,11 @@ namespace AC
 				
 				if (Physics.Raycast (ray, out hit, KickStarter.settingsManager.moveableRaycastLength))
 				{
-					DragBase dragBase = hit.transform.GetComponent <DragBase>();
-					if (dragBase != null && dragBase.PlayerIsWithinBoundary ())
+					if (hit.transform.GetComponent <DragBase>())
 					{
-						dragObject = dragBase;
+						dragObject = hit.transform.GetComponent <DragBase>();
 						dragObject.Grab (hit.point);
+						//lastMousePosition = mousePosition;
 						lastCameraPosition = Camera.main.transform.position;
 
 						KickStarter.eventManager.Call_OnGrabMoveable (dragObject);

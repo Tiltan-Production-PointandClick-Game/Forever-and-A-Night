@@ -1,7 +1,7 @@
 ﻿/*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2019
+ *	by Chris Burton, 2013-2018
  *	
  *	"ActionCameraCrossfade.cs"
  * 
@@ -26,7 +26,6 @@ namespace AC
 		public int parameterID = -1;
 		public int constantID = 0;
 		public _Camera linkedCamera;
-		protected _Camera runtimeLinkedCamera;
 
 		public float transitionTime;
 		public int transitionTimeParameterID = -1;
@@ -45,7 +44,7 @@ namespace AC
 
 		override public void AssignValues (List<ActionParameter> parameters)
 		{
-			runtimeLinkedCamera = AssignFile <_Camera> (parameters, parameterID, constantID, linkedCamera);
+			linkedCamera = AssignFile <_Camera> (parameters, parameterID, constantID, linkedCamera);
 			transitionTime = AssignFloat (parameters, transitionTimeParameterID, transitionTime);
 
 			if (returnToLast)
@@ -62,21 +61,21 @@ namespace AC
 				isRunning = true;
 				MainCamera mainCam = KickStarter.mainCamera;
 
-				if (runtimeLinkedCamera != null && mainCam.attachedCamera != runtimeLinkedCamera)
+				if (linkedCamera != null && mainCam.attachedCamera != linkedCamera)
 				{
-					if (runtimeLinkedCamera is GameCameraThirdPerson)
+					if (linkedCamera is GameCameraThirdPerson)
 					{
-						GameCameraThirdPerson tpCam = (GameCameraThirdPerson) runtimeLinkedCamera;
+						GameCameraThirdPerson tpCam = (GameCameraThirdPerson) linkedCamera;
 						tpCam.ResetRotation ();
 					}
-					else if (runtimeLinkedCamera is GameCameraAnimated)
+					else if (linkedCamera is GameCameraAnimated)
 					{
-						GameCameraAnimated animCam = (GameCameraAnimated) runtimeLinkedCamera;
+						GameCameraAnimated animCam = (GameCameraAnimated) linkedCamera;
 						animCam.PlayClip ();
 					}
 					
-					runtimeLinkedCamera.MoveCameraInstant ();
-					mainCam.Crossfade (transitionTime, runtimeLinkedCamera);
+					linkedCamera.MoveCameraInstant ();
+					mainCam.Crossfade (transitionTime, linkedCamera);
 						
 					if (transitionTime > 0f && willWait)
 					{
@@ -97,21 +96,21 @@ namespace AC
 		{
 			MainCamera mainCam = KickStarter.mainCamera;
 
-			if (runtimeLinkedCamera != null && mainCam.attachedCamera != runtimeLinkedCamera)
+			if (linkedCamera != null && mainCam.attachedCamera != linkedCamera)
 			{
-				if (runtimeLinkedCamera is GameCameraThirdPerson)
+				if (linkedCamera is GameCameraThirdPerson)
 				{
-					GameCameraThirdPerson tpCam = (GameCameraThirdPerson) runtimeLinkedCamera;
+					GameCameraThirdPerson tpCam = (GameCameraThirdPerson) linkedCamera;
 					tpCam.ResetRotation ();
 				}
-				else if (runtimeLinkedCamera is GameCameraAnimated)
+				else if (linkedCamera is GameCameraAnimated)
 				{
-					GameCameraAnimated animCam = (GameCameraAnimated) runtimeLinkedCamera;
+					GameCameraAnimated animCam = (GameCameraAnimated) linkedCamera;
 					animCam.PlayClip ();
 				}
 				
-				runtimeLinkedCamera.MoveCameraInstant ();
-				mainCam.SetGameCamera (runtimeLinkedCamera);
+				linkedCamera.MoveCameraInstant ();
+				mainCam.SetGameCamera (linkedCamera);
 			}
 		}
 
@@ -149,7 +148,7 @@ namespace AC
 		}
 
 
-		override public void AssignConstantIDs (bool saveScriptsToo, bool fromAssetFile)
+		override public void AssignConstantIDs (bool saveScriptsToo)
 		{
 			if (saveScriptsToo)
 			{
@@ -163,9 +162,9 @@ namespace AC
 		{
 			if (linkedCamera != null)
 			{
-				return linkedCamera.name;
+				return (" (" + linkedCamera.name + ")");
 			}
-			return string.Empty;
+			return "";
 		}
 		
 		#endif

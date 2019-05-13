@@ -1,7 +1,7 @@
 /*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2019
+ *	by Chris Burton, 2013-2018
  *	
  *	"ActionMoveableTrack.cs"
  * 
@@ -28,7 +28,6 @@ namespace AC
 		public Moveable_Drag dragObject;
 		public int dragParameterID = -1;
 		public int dragConstantID = 0;
-		protected Moveable_Drag runtimeDragObject;
 
 		public float positionAlong;
 		public int positionParameterID = -1;
@@ -52,7 +51,7 @@ namespace AC
 
 		override public void AssignValues (List<ActionParameter> parameters)
 		{
-			runtimeDragObject = AssignFile <Moveable_Drag> (parameters, dragParameterID, dragConstantID, dragObject);
+			dragObject = AssignFile <Moveable_Drag> (parameters, dragParameterID, dragConstantID, dragObject);
 
 			positionAlong = AssignFloat (parameters, positionParameterID, positionAlong);
 			positionAlong = Mathf.Max (0f, positionAlong);
@@ -62,7 +61,7 @@ namespace AC
 		
 		override public float Run ()
 		{
-			if (runtimeDragObject == null)
+			if (dragObject == null)
 			{
 				isRunning = false;
 				return 0f;
@@ -74,17 +73,17 @@ namespace AC
 
 				if (isInstant)
 				{
-					runtimeDragObject.AutoMoveAlongTrack (positionAlong, 0f, removePlayerControl);
+					dragObject.AutoMoveAlongTrack (positionAlong, 0f, removePlayerControl);
 				}
 				else
 				{
 					if (stopOnCollide)
 					{
-						runtimeDragObject.AutoMoveAlongTrack (positionAlong, speed, removePlayerControl, layerMask);
+						dragObject.AutoMoveAlongTrack (positionAlong, speed, removePlayerControl, layerMask);
 					}
 					else
 					{
-						runtimeDragObject.AutoMoveAlongTrack (positionAlong, speed, removePlayerControl);
+						dragObject.AutoMoveAlongTrack (positionAlong, speed, removePlayerControl);
 					}
 				}
 
@@ -97,7 +96,7 @@ namespace AC
 			}
 			else
 			{
-				if (runtimeDragObject.IsAutoMoving ())
+				if (dragObject.IsAutoMoving ())
 				{
 					return defaultPauseTime;
 				}
@@ -109,12 +108,12 @@ namespace AC
 
 		override public void Skip ()
 		{
-			if (runtimeDragObject == null)
+			if (dragObject == null)
 			{
 				return;
 			}
 			
-			runtimeDragObject.AutoMoveAlongTrack (positionAlong, 0f, removePlayerControl);
+			dragObject.AutoMoveAlongTrack (positionAlong, 0f, removePlayerControl);
 		}
 		
 		
@@ -165,7 +164,7 @@ namespace AC
 		}
 
 
-		override public void AssignConstantIDs (bool saveScriptsToo, bool fromAssetFile)
+		override public void AssignConstantIDs (bool saveScriptsToo)
 		{
 			if (saveScriptsToo)
 			{
@@ -177,11 +176,11 @@ namespace AC
 
 		public override string SetLabel ()
 		{
-			if (dragObject != null)
+			if (dragObject)
 			{
-				return dragObject.name + " to " + positionAlong;
+				return (" (" + dragObject.name + " to " + positionAlong);
 			}
-			return string.Empty;
+			return "";
 		}
 
 		#endif

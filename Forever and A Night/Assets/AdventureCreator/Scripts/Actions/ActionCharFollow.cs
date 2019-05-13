@@ -1,7 +1,7 @@
 /*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2019
+ *	by Chris Burton, 2013-2018
  *	
  *	"ActionCharFollow.cs"
  * 
@@ -31,9 +31,7 @@ namespace AC
 		public int charToFollowID = 0;
 
 		public NPC npcToMove;
-		protected NPC runtimeNpcToMove;
 		public Char charToFollow;
-		protected Char runtimeCharToFollow;
 		public bool followPlayer;
 		public bool faceWhenIdle;
 		public float updateFrequency = 2f;
@@ -55,24 +53,24 @@ namespace AC
 
 		override public void AssignValues (List<ActionParameter> parameters)
 		{
-			runtimeNpcToMove = AssignFile <NPC> (parameters, npcToMoveParameterID, npcToMoveID, npcToMove);
-			runtimeCharToFollow = AssignFile <Char> (parameters, charToFollowParameterID, charToFollowID, charToFollow);
+			npcToMove = AssignFile <NPC> (parameters, npcToMoveParameterID, npcToMoveID, npcToMove);
+			charToFollow = AssignFile <Char> (parameters, charToFollowParameterID, charToFollowID, charToFollow);
 		}
 		
 		
 		override public float Run ()
 		{
-			if (runtimeNpcToMove)
+			if (npcToMove)
 			{
 				if (followType == FollowType.StopFollowing)
 				{
-					runtimeNpcToMove.StopFollowing ();
+					npcToMove.StopFollowing ();
 					return 0f;
 				}
 
-				if (followPlayer || (runtimeCharToFollow != null && runtimeCharToFollow != (Char) runtimeNpcToMove))
+				if (followPlayer || charToFollow != (Char) npcToMove)
 				{
-					runtimeNpcToMove.FollowAssign (runtimeCharToFollow, followPlayer, updateFrequency, followDistance, followDistanceMax, faceWhenIdle, randomDirection);
+					npcToMove.FollowAssign (charToFollow, followPlayer, updateFrequency, followDistance, followDistanceMax, faceWhenIdle, randomDirection);
 				}
 			}
 
@@ -117,8 +115,8 @@ namespace AC
 						
 						if (charToFollow && charToFollow == (Char) npcToMove)
 						{
-							ACDebug.LogWarning ("An NPC cannot follow themselves!", charToFollow);
 							charToFollow = null;
+							ACDebug.LogWarning ("An NPC cannot follow themselves!");
 						}
 						else
 						{
@@ -160,7 +158,7 @@ namespace AC
 		}
 
 
-		override public void AssignConstantIDs (bool saveScriptsToo, bool fromAssetFile)
+		override public void AssignConstantIDs (bool saveScriptsToo)
 		{
 			if (saveScriptsToo)
 			{
@@ -181,25 +179,26 @@ namespace AC
 		
 		override public string SetLabel ()
 		{
-			if (npcToMove != null)
+			if (npcToMove)
 			{
 				if (followType == FollowType.StopFollowing)
 				{
-					return "Stop " + npcToMove;
+					return (" (Stop " + npcToMove + ")");
 				}
 				else
 				{
 					if (followPlayer)
 					{
-						return npcToMove.name + " to Player";
+						return (" (" + npcToMove.name + " to Player)");
 					}
-					else if (charToFollow != null)
+					else if (charToFollow)
 					{
-						return (npcToMove.name + " to " + charToFollow.name);
+							return (" (" + npcToMove.name + " to " + charToFollow.name + ")");
 					}
 				}
 			}
-			return string.Empty;
+
+			return "";
 		}
 
 		#endif

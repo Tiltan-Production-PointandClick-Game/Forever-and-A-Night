@@ -1,7 +1,7 @@
 ﻿/*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2019
+ *	by Chris Burton, 2013-2018
  *	
  *	"ActionInteraction.cs"
  * 
@@ -26,7 +26,6 @@ namespace AC
 		public int parameterID = -1;
 		public int constantID = 0;
 		public Hotspot hotspot;
-		protected Hotspot runtimeHotspot;
 
 		public InteractionType interactionType;
 		public ChangeType changeType = ChangeType.Enable;
@@ -44,44 +43,44 @@ namespace AC
 
 		override public void AssignValues (List<ActionParameter> parameters)
 		{
-			runtimeHotspot = AssignFile <Hotspot> (parameters, parameterID, constantID, hotspot);
+			hotspot = AssignFile <Hotspot> (parameters, parameterID, constantID, hotspot);
 		}
 
 		
 		override public float Run ()
 		{
-			if (runtimeHotspot == null)
+			if (hotspot == null)
 			{
 				return 0f;
 			}
 
 			if (interactionType == InteractionType.Use)
 			{
-				if (runtimeHotspot.useButtons.Count > number)
+				if (hotspot.useButtons.Count > number)
 				{
-					ChangeButton (runtimeHotspot.useButtons [number]);
+					ChangeButton (hotspot.useButtons [number]);
 				}
 				else
 				{
-					ACDebug.LogWarning ("Cannot change Hotspot " + runtimeHotspot.gameObject.name + "'s Use button " + number.ToString () + " because it doesn't exist!", runtimeHotspot);
+					ACDebug.LogWarning ("Cannot change Hotspot " + hotspot.gameObject.name + "'s Use button " + number.ToString () + " because it doesn't exist!");
 				}
 			}
 			else if (interactionType == InteractionType.Examine)
 			{
-				ChangeButton (runtimeHotspot.lookButton);
+				ChangeButton (hotspot.lookButton);
 			}
 			else if (interactionType == InteractionType.Inventory)
 			{
-				if (runtimeHotspot.invButtons.Count > number)
+				if (hotspot.invButtons.Count > number)
 				{
-					ChangeButton (runtimeHotspot.invButtons [number]);
+					ChangeButton (hotspot.invButtons [number]);
 				}
 				else
 				{
-					ACDebug.LogWarning ("Cannot change Hotspot " + runtimeHotspot.gameObject.name + "'s Inventory button " + number.ToString () + " because it doesn't exist!", runtimeHotspot);
+					ACDebug.LogWarning ("Cannot change Hotspot " + hotspot.gameObject.name + "'s Inventory button " + number.ToString () + " because it doesn't exist!");
 				}
 			}
-			runtimeHotspot.ResetMainIcon ();
+			hotspot.ResetMainIcon ();
 
 			return 0f;
 		}
@@ -187,7 +186,7 @@ namespace AC
 		}
 
 
-		override public void AssignConstantIDs (bool saveScriptsToo, bool fromAssetFile)
+		override public void AssignConstantIDs (bool saveScriptsToo)
 		{
 			if (saveScriptsToo)
 			{
@@ -200,11 +199,13 @@ namespace AC
 		
 		public override string SetLabel ()
 		{
+			string labelAdd = "";
 			if (hotspot != null)
 			{
-				return hotspot.name + " - " + changeType + " " + interactionType;
+				labelAdd = " (" + hotspot.name + " - " + changeType + " " + interactionType;
+				labelAdd += ")";
 			}
-			return string.Empty;
+			return labelAdd;
 		}
 		
 		#endif

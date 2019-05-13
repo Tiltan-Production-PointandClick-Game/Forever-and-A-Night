@@ -1,7 +1,7 @@
 /*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2019
+ *	by Chris Burton, 2013-2018
  *	
  *	"ActionFade.cs"
  * 
@@ -156,14 +156,18 @@ namespace AC
 		
 		override public string SetLabel ()
 		{
+			string labelAdd = "";
+			
 			if (fadeType == FadeType.fadeIn)
 			{
-				return "In";
+				labelAdd = " (In)";
 			}
 			else
 			{
-				return "Out";
+				labelAdd = " (Out)";
 			}
+			
+			return labelAdd;
 		}
 
 		#endif

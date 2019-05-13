@@ -1,7 +1,7 @@
 ﻿/*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2019
+ *	by Chris Burton, 2013-2018
  *	
  *	"ActionInventorySelect.cs"
  * 
@@ -170,14 +170,20 @@ namespace AC
 		{
 			if (selectType == InventorySelectType.DeselectActive)
 			{
-				return "Deselect active";
+				return " (Deselect active)";
 			}
 
+			string labelAdd = "";
+			string labelItem = "";
+			
 			if (inventoryManager)
 			{
-				return inventoryManager.GetLabel (invID);
+				labelItem = " " + inventoryManager.GetLabel (invID);
 			}
-			return string.Empty;
+			
+			labelAdd = " (" + labelItem + ")";
+		
+			return labelAdd;
 		}
 
 

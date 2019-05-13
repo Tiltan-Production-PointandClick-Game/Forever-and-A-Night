@@ -1,7 +1,7 @@
 /*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2019
+ *	by Chris Burton, 2013-2018
  *	
  *	"ActionCharMove.cs"
  * 
@@ -35,16 +35,13 @@ namespace AC
 
 		public bool stopInstantly;
 		public Paths movePath;
-		protected Paths runtimeMovePath;
-
 		public bool isPlayer;
 		public Char charToMove;
-
 		public bool doTeleport;
 		public bool doStop;
 		public bool startRandom = false;
 
-		protected Char runtimeChar;
+		private Char runtimeChar;
 
 		
 		public ActionCharMove ()
@@ -59,7 +56,7 @@ namespace AC
 		public override void AssignValues (List<ActionParameter> parameters)
 		{
 			runtimeChar = AssignFile <Char> (parameters, charToMoveParameterID, charToMoveID, charToMove);
-			runtimeMovePath = AssignFile <Paths> (parameters, movePathParameterID, movePathID, movePath);
+			movePath = AssignFile <Paths> (parameters, movePathParameterID, movePathID, movePath);
 
 			if (isPlayer)
 			{
@@ -93,9 +90,9 @@ namespace AC
 		{
 			UpgradeSelf ();
 
-			if (runtimeMovePath && runtimeMovePath.GetComponent <Char>())
+			if (movePath && movePath.GetComponent <Char>())
 			{
-				ACDebug.LogWarning ("Can't follow a Path attached to a Character!", runtimeMovePath);
+				ACDebug.LogWarning ("Can't follow a Path attached to a Character!");
 				return 0f;
 			}
 
@@ -126,20 +123,20 @@ namespace AC
 					}
 					else if (movePathMethod == MovePathMethod.MoveOnNewPath)
 					{
-						if (runtimeMovePath)
+						if (movePath)
 						{
 							int randomIndex = -1;
-							if (runtimeMovePath.pathType == AC_PathType.IsRandom && startRandom)
+							if (movePath.pathType == AC_PathType.IsRandom && startRandom)
 							{
-								if (runtimeMovePath.nodes.Count > 1)
+								if (movePath.nodes.Count > 1)
 								{
-									randomIndex = Random.Range (0, runtimeMovePath.nodes.Count);
+									randomIndex = Random.Range (0, movePath.nodes.Count);
 								}
 							}
 
 							PrepareCharacter (randomIndex);
 
-							if (willWait && runtimeMovePath.pathType != AC_PathType.ForwardOnly && runtimeMovePath.pathType != AC_PathType.ReverseOnly)
+							if (willWait && movePath.pathType != AC_PathType.ForwardOnly && movePath.pathType != AC_PathType.ReverseOnly)
 							{
 								willWait = false;
 								ACDebug.LogWarning ("Cannot pause while character moves along a linear path, as this will create an indefinite cutscene.");
@@ -147,11 +144,11 @@ namespace AC
 
 							if (randomIndex >= 0)
 							{
-								runtimeChar.SetPath (runtimeMovePath, randomIndex, 0);
+								runtimeChar.SetPath (movePath, randomIndex, 0);
 							}
 							else
 							{
-								runtimeChar.SetPath (runtimeMovePath);
+								runtimeChar.SetPath (movePath);
 							}
 						
 							if (willWait)
@@ -170,7 +167,7 @@ namespace AC
 			}
 			else
 			{
-				if (runtimeChar.GetPath () != runtimeMovePath)
+				if (runtimeChar.GetPath () != movePath)
 				{
 					isRunning = false;
 					return 0f;
@@ -187,7 +184,7 @@ namespace AC
 		{
 			if (runtimeChar)
 			{
-				runtimeChar.EndPath (runtimeMovePath);
+				runtimeChar.EndPath (movePath);
 
 				if (runtimeChar is NPC)
 				{
@@ -199,36 +196,36 @@ namespace AC
 				{
 					runtimeChar.EndPath ();
 				}
-				else if (runtimeMovePath)
+				else if (movePath)
 				{
 					int randomIndex = -1;
 
-					if (runtimeMovePath.pathType == AC_PathType.ForwardOnly)
+					if (movePath.pathType == AC_PathType.ForwardOnly)
 					{
 						// Place at end
-						int i = runtimeMovePath.nodes.Count-1;
-						runtimeChar.Teleport (runtimeMovePath.nodes[i]);
+						int i = movePath.nodes.Count-1;
+						runtimeChar.Teleport (movePath.nodes[i]);
 						if (i>0)
 						{
-							runtimeChar.SetLookDirection (runtimeMovePath.nodes[i] - runtimeMovePath.nodes[i-1], true);
+							runtimeChar.SetLookDirection (movePath.nodes[i] - movePath.nodes[i-1], true);
 						}
 						return;
 					}
-					else if (runtimeMovePath.pathType == AC_PathType.ReverseOnly)
+					else if (movePath.pathType == AC_PathType.ReverseOnly)
 					{
 						// Place at start
-						runtimeChar.Teleport (runtimeMovePath.transform.position);
-						if (runtimeMovePath.nodes.Count > 1)
+						runtimeChar.Teleport (movePath.transform.position);
+						if (movePath.nodes.Count > 1)
 						{
-							runtimeChar.SetLookDirection (runtimeMovePath.nodes[0] - runtimeMovePath.nodes[1], true);
+							runtimeChar.SetLookDirection (movePath.nodes[0] - movePath.nodes[1], true);
 						}
 						return;
 					}
-					else if (runtimeMovePath.pathType == AC_PathType.IsRandom && startRandom)
+					else if (movePath.pathType == AC_PathType.IsRandom && startRandom)
 					{
-						if (runtimeMovePath.nodes.Count > 1)
+						if (movePath.nodes.Count > 1)
 						{
-							randomIndex = Random.Range (0, runtimeMovePath.nodes.Count);
+							randomIndex = Random.Range (0, movePath.nodes.Count);
 						}
 					}
 
@@ -238,11 +235,11 @@ namespace AC
 					{
 						if (randomIndex >= 0)
 						{
-							runtimeChar.SetPath (runtimeMovePath, randomIndex, 0);
+							runtimeChar.SetPath (movePath, randomIndex, 0);
 						}
 						else
 						{
-							runtimeChar.SetPath (runtimeMovePath);
+							runtimeChar.SetPath (movePath);
 						}
 					}
 				}
@@ -256,30 +253,30 @@ namespace AC
 			{
 				if (randomIndex >= 0)
 				{
-					runtimeChar.Teleport (runtimeMovePath.nodes[randomIndex]);
+					runtimeChar.Teleport (movePath.nodes[randomIndex]);
 				}
 				else
 				{
-					int numNodes = runtimeMovePath.nodes.Count;
+					int numNodes = movePath.nodes.Count;
 
-					if (runtimeMovePath.pathType == AC_PathType.ReverseOnly)
+					if (movePath.pathType == AC_PathType.ReverseOnly)
 					{
-						runtimeChar.Teleport (runtimeMovePath.nodes[numNodes-1]);
+						runtimeChar.Teleport (movePath.nodes[numNodes-1]);
 
 						// Set rotation if there is more than two nodes
 						if (numNodes > 2)
 						{
-							runtimeChar.SetLookDirection (runtimeMovePath.nodes[numNodes-2] - runtimeMovePath.nodes[numNodes-1], true);
+							runtimeChar.SetLookDirection (movePath.nodes[numNodes-2] - movePath.nodes[numNodes-1], true);
 						}
 					}
 					else
 					{
-						runtimeChar.Teleport (runtimeMovePath.transform.position);
+						runtimeChar.Teleport (movePath.transform.position);
 						
 						// Set rotation if there is more than one node
 						if (numNodes > 1)
 						{
-							runtimeChar.SetLookDirection (runtimeMovePath.nodes[1] - runtimeMovePath.nodes[0], true);
+							runtimeChar.SetLookDirection (movePath.nodes[1] - movePath.nodes[0], true);
 						}
 					}
 				}
@@ -362,7 +359,7 @@ namespace AC
 		}
 
 
-		override public void AssignConstantIDs (bool saveScriptsToo, bool fromAssetFile)
+		override public void AssignConstantIDs (bool saveScriptsToo)
 		{
 			if (saveScriptsToo)
 			{
@@ -384,18 +381,18 @@ namespace AC
 		
 		override public string SetLabel ()
 		{
-			if (movePath != null)
+			string labelAdd = "";
+			
+			if (charToMove && movePath)
 			{
-				if (charToMove != null)
-				{
-					return charToMove.name + " to " + movePath.name;
-				}
-				else if (isPlayer)
-				{
-					return "Player to " + movePath.name;
-				}
+				labelAdd = " (" + charToMove.name + " to " + movePath.name + ")";
 			}
-			return string.Empty;
+			else if (isPlayer && movePath)
+			{
+				labelAdd = " (Player to " + movePath.name + ")";
+			}
+			
+			return labelAdd;
 		}
 
 		#endif

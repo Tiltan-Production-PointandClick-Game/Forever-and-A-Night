@@ -49,7 +49,7 @@ namespace AC
 
 			object jsonData = JsonUtility.FromJson (jsonString, typeof (T));
 
-				#if UNITY_5_6_OR_NEWER && !UNITY_SWITCH
+				#if UNITY_5_6_OR_NEWER
 				if (jsonData is VideoPlayerData && !jsonString.Contains ("isPlaying"))
 				{
 					return null;

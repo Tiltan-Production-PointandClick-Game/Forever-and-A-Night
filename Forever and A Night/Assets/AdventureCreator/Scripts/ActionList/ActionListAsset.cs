@@ -1,7 +1,7 @@
 ﻿/*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2019
+ *	by Chris Burton, 2013-2018
  *	
  *	"ActionListAsset.cs"
  * 
@@ -231,7 +231,7 @@ namespace AC
 
 			ScriptableObject t = CustomAssetUtility.CreateAsset <ActionListAsset> (assetName);
 			EditorGUIUtility.PingObject (t);
-			ACDebug.Log ("Created ActionList: " + assetName, t);
+			ACDebug.Log ("Created ActionList: " + assetName);
 			return (ActionListAsset) t;
 		}
 
@@ -245,7 +245,7 @@ namespace AC
 
 			ScriptableObject t = CustomAssetUtility.CreateAsset <ActionListAsset> (assetName);
 			EditorGUIUtility.PingObject (t);
-			ACDebug.Log ("Created ActionList: " + assetName, t);
+			ACDebug.Log ("Created ActionList: " + assetName);
 			return (ActionListAsset) t;
 		}
 
@@ -260,7 +260,7 @@ namespace AC
 				if (GUILayout.Button ("Create", GUILayout.MaxWidth (60f)))
 				{
 					#if !(UNITY_WP8 || UNITY_WINRT)
-					defaultName = System.Text.RegularExpressions.Regex.Replace (defaultName, "[^\\w\\._]", "");
+					defaultName = System.Text.RegularExpressions.Regex.Replace (defaultName, "[^\\w\\_]", "");
 					#else
 					defaultName = "";
 					#endif

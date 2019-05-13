@@ -1,7 +1,7 @@
 /*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2019
+ *	by Chris Burton, 2013-2018
  *	
  *	"GameCamera.cs"
  * 
@@ -247,7 +247,7 @@ namespace AC
 				{
 					if (!lockXRotAxis)
 					{
-						ACDebug.LogWarning (gameObject.name + " cannot obey Pitch rotation, since Spin rotation's 'Look At Target' is overriding.", gameObject);
+						ACDebug.LogWarning (gameObject.name + " cannot obey Pitch rotation, since Spin rotation's 'Look At Target' is overriding.");
 					}
 
 					if (target)
@@ -272,7 +272,7 @@ namespace AC
 					}
 					else if (!targetIsPlayer)
 					{
-						ACDebug.LogWarning (this.name + " has no target", gameObject);
+						ACDebug.LogWarning (this.name + " has no target");
 					}
 				}
 				else
@@ -653,17 +653,6 @@ namespace AC
 				}
 			}
 		}
-
-
-		#if UNITY_EDITOR
-
-		[ContextMenu ("Make active")]
-		private void LocalMakeActive ()
-		{
-			MakeActive ();
-		}
-
-		#endif
 		
 	}
 

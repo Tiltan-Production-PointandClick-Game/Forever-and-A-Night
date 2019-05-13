@@ -4,8 +4,7 @@
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -40,8 +39,7 @@ MonoBehaviour:
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -49,9 +47,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   menuSource: 0
-  canvas: {fileID: 22300000, guid: 963f96d923d0841df950001e9a520dd6, type: 3}
+  canvas: {fileID: 22300000, guid: 963f96d923d0841df950001e9a520dd6, type: 2}
   canvasID: 0
-  rectTransform: {fileID: 22400056, guid: 963f96d923d0841df950001e9a520dd6, type: 3}
+  rectTransform: {fileID: 22400056, guid: 963f96d923d0841df950001e9a520dd6, type: 2}
   rectTransformID: 710880
   uiTransitionType: 1
   uiPositionType: 0
@@ -59,9 +57,9 @@ MonoBehaviour:
   isLocked: 0
   id: 0
   title: Options
-  manualSize: {x: 37.000004, y: 42.111202}
+  manualSize: {x: 37, y: 42.1112}
   positionType: 0
-  manualPosition: {x: 378.5, y: 213}
+  manualPosition: {x: 472, y: 265.5}
   positionSmoothing: 0
   alignment: 0
   toggleKey: 
@@ -73,7 +71,6 @@ MonoBehaviour:
   actionListOnTurnOn: {fileID: 0}
   actionListOnTurnOff: {fileID: 0}
   updateWhenFadeOut: 1
-  hideDuringSaveScreenshots: 1
   fitWithinScreen: 1
   backgroundTexture: {fileID: 2800000, guid: 5f4f3dd6223164fe49aea7eb6c0bc529, type: 3}
   visibleElements:
@@ -142,20 +139,19 @@ MonoBehaviour:
   speechProximityLimit: 0
   speechProximityDistance: 10
   deleteUIWhenTurnOff: 0
-  biggestElementSize: {x: 276.30502, y: 175.52753}
+  biggestElementSize: {x: 344.56, y: 218.88766}
   rect:
     serializedVersion: 2
-    x: 238.45499
-    y: 123.343735
-    width: 280.09003
-    height: 179.31253
+    x: 297.36
+    y: 153.69617
+    width: 349.28
+    height: 223.60767
   showInFilter: 1
 --- !u!114 &11400004
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -163,9 +159,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   menuSource: 0
-  canvas: {fileID: 22300000, guid: 5e792997beec64d3f80fa28b65d87e65, type: 3}
+  canvas: {fileID: 22300000, guid: 5e792997beec64d3f80fa28b65d87e65, type: 2}
   canvasID: 0
-  rectTransform: {fileID: 22400024, guid: 5e792997beec64d3f80fa28b65d87e65, type: 3}
+  rectTransform: {fileID: 22400024, guid: 5e792997beec64d3f80fa28b65d87e65, type: 2}
   rectTransformID: 1313004
   uiTransitionType: 1
   uiPositionType: 0
@@ -187,7 +183,6 @@ MonoBehaviour:
   actionListOnTurnOn: {fileID: 0}
   actionListOnTurnOff: {fileID: 0}
   updateWhenFadeOut: 1
-  hideDuringSaveScreenshots: 1
   fitWithinScreen: 1
   backgroundTexture: {fileID: 2800000, guid: 5f4f3dd6223164fe49aea7eb6c0bc529, type: 3}
   visibleElements:
@@ -260,8 +255,7 @@ MonoBehaviour:
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -269,9 +263,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   menuSource: 0
-  canvas: {fileID: 22300000, guid: 24b90483076c743079b76604179f55d7, type: 3}
+  canvas: {fileID: 22300000, guid: 24b90483076c743079b76604179f55d7, type: 2}
   canvasID: 0
-  rectTransform: {fileID: 22400024, guid: 24b90483076c743079b76604179f55d7, type: 3}
+  rectTransform: {fileID: 22400024, guid: 24b90483076c743079b76604179f55d7, type: 2}
   rectTransformID: 1386510
   uiTransitionType: 1
   uiPositionType: 0
@@ -293,7 +287,6 @@ MonoBehaviour:
   actionListOnTurnOn: {fileID: 0}
   actionListOnTurnOff: {fileID: 0}
   updateWhenFadeOut: 1
-  hideDuringSaveScreenshots: 1
   fitWithinScreen: 1
   backgroundTexture: {fileID: 2800000, guid: 5f4f3dd6223164fe49aea7eb6c0bc529, type: 3}
   visibleElements:
@@ -366,8 +359,7 @@ MonoBehaviour:
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -375,9 +367,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   menuSource: 0
-  canvas: {fileID: 22300000, guid: fc08dfe766525412a9cae2c30276ca7a, type: 3}
+  canvas: {fileID: 22300000, guid: fc08dfe766525412a9cae2c30276ca7a, type: 2}
   canvasID: 0
-  rectTransform: {fileID: 22400036, guid: fc08dfe766525412a9cae2c30276ca7a, type: 3}
+  rectTransform: {fileID: 22400036, guid: fc08dfe766525412a9cae2c30276ca7a, type: 2}
   rectTransformID: 1765320
   uiTransitionType: 1
   uiPositionType: 0
@@ -399,7 +391,6 @@ MonoBehaviour:
   actionListOnTurnOn: {fileID: 0}
   actionListOnTurnOff: {fileID: 0}
   updateWhenFadeOut: 1
-  hideDuringSaveScreenshots: 1
   fitWithinScreen: 1
   backgroundTexture: {fileID: 2800000, guid: 5f4f3dd6223164fe49aea7eb6c0bc529, type: 3}
   visibleElements:
@@ -472,8 +463,7 @@ MonoBehaviour:
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -481,9 +471,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   menuSource: 0
-  canvas: {fileID: 22300000, guid: 374157d68d6a54a81a693152ca418f2e, type: 3}
+  canvas: {fileID: 22300000, guid: 374157d68d6a54a81a693152ca418f2e, type: 2}
   canvasID: 0
-  rectTransform: {fileID: 22400000, guid: 374157d68d6a54a81a693152ca418f2e, type: 3}
+  rectTransform: {fileID: 22400000, guid: 374157d68d6a54a81a693152ca418f2e, type: 2}
   rectTransformID: 13953742
   uiTransitionType: 1
   uiPositionType: 0
@@ -505,7 +495,6 @@ MonoBehaviour:
   actionListOnTurnOn: {fileID: 0}
   actionListOnTurnOff: {fileID: 0}
   updateWhenFadeOut: 1
-  hideDuringSaveScreenshots: 1
   fitWithinScreen: 1
   backgroundTexture: {fileID: 2800000, guid: 5f4f3dd6223164fe49aea7eb6c0bc529, type: 3}
   visibleElements:
@@ -574,8 +563,7 @@ MonoBehaviour:
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -583,9 +571,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   menuSource: 0
-  canvas: {fileID: 22300000, guid: a9f796d2b6b5e4ace92761edafa9cf4d, type: 3}
+  canvas: {fileID: 22300000, guid: a9f796d2b6b5e4ace92761edafa9cf4d, type: 2}
   canvasID: 0
-  rectTransform: {fileID: 22400018, guid: a9f796d2b6b5e4ace92761edafa9cf4d, type: 3}
+  rectTransform: {fileID: 22400018, guid: a9f796d2b6b5e4ace92761edafa9cf4d, type: 2}
   rectTransformID: 14169666
   uiTransitionType: 1
   uiPositionType: 0
@@ -607,7 +595,6 @@ MonoBehaviour:
   actionListOnTurnOn: {fileID: 0}
   actionListOnTurnOff: {fileID: 0}
   updateWhenFadeOut: 1
-  hideDuringSaveScreenshots: 1
   fitWithinScreen: 1
   backgroundTexture: {fileID: 2800000, guid: 5f4f3dd6223164fe49aea7eb6c0bc529, type: 3}
   visibleElements:
@@ -678,8 +665,7 @@ MonoBehaviour:
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -687,9 +673,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   menuSource: 0
-  canvas: {fileID: 22300000, guid: 33624683bf6724a1bbe5c31e07a3bb7f, type: 3}
+  canvas: {fileID: 22300000, guid: 33624683bf6724a1bbe5c31e07a3bb7f, type: 2}
   canvasID: 0
-  rectTransform: {fileID: 22400006, guid: 33624683bf6724a1bbe5c31e07a3bb7f, type: 3}
+  rectTransform: {fileID: 22400006, guid: 33624683bf6724a1bbe5c31e07a3bb7f, type: 2}
   rectTransformID: 15198304
   uiTransitionType: 1
   uiPositionType: 2
@@ -697,7 +683,7 @@ MonoBehaviour:
   isLocked: 0
   id: 6
   title: Interaction
-  manualSize: {x: 15.888255, y: 7.323501}
+  manualSize: {x: 18.767023, y: 9.029459}
   positionType: 4
   manualPosition: {x: 50, y: 50}
   positionSmoothing: 0
@@ -711,7 +697,6 @@ MonoBehaviour:
   actionListOnTurnOn: {fileID: 0}
   actionListOnTurnOff: {fileID: 0}
   updateWhenFadeOut: 1
-  hideDuringSaveScreenshots: 1
   fitWithinScreen: 1
   backgroundTexture: {fileID: 2800000, guid: 5f4f3dd6223164fe49aea7eb6c0bc529, type: 3}
   visibleElements:
@@ -774,20 +759,19 @@ MonoBehaviour:
   speechProximityLimit: 0
   speechProximityDistance: 10
   deleteUIWhenTurnOff: 0
-  biggestElementSize: {x: 139.6272, y: 34.4138}
+  biggestElementSize: {x: 130.404, y: 33.9035}
   rect:
     serializedVersion: 2
-    x: 375.9795
-    y: 233.0862
-    width: 142.041
-    height: 36.8276
+    x: 286.34625
+    y: 180.5965
+    width: 132.30751
+    height: 35.807
   showInFilter: 1
 --- !u!114 &11400018
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -795,9 +779,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   menuSource: 0
-  canvas: {fileID: 22300000, guid: f57b81c93dabb45f2a20069a40af511b, type: 3}
+  canvas: {fileID: 22300000, guid: f57b81c93dabb45f2a20069a40af511b, type: 2}
   canvasID: 0
-  rectTransform: {fileID: 22400028, guid: f57b81c93dabb45f2a20069a40af511b, type: 3}
+  rectTransform: {fileID: 22400028, guid: f57b81c93dabb45f2a20069a40af511b, type: 2}
   rectTransformID: 276360
   uiTransitionType: 1
   uiPositionType: 0
@@ -819,7 +803,6 @@ MonoBehaviour:
   actionListOnTurnOn: {fileID: 0}
   actionListOnTurnOff: {fileID: 0}
   updateWhenFadeOut: 1
-  hideDuringSaveScreenshots: 1
   fitWithinScreen: 1
   backgroundTexture: {fileID: 2800000, guid: 5f4f3dd6223164fe49aea7eb6c0bc529, type: 3}
   visibleElements:
@@ -906,8 +889,7 @@ MonoBehaviour:
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -941,10 +923,10 @@ MonoBehaviour:
   linkedUiID: 755294
   relativeRect:
     serializedVersion: 2
-    x: 3.785
-    y: 3.785
-    width: 272.52002
-    height: 21.29036
+    x: 4.72
+    y: 4.72
+    width: 339.84
+    height: 26.549667
   relativePosition: {x: 0, y: 0}
   numSlots: 1
   uiText: {fileID: 0}
@@ -965,8 +947,7 @@ MonoBehaviour:
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -1000,10 +981,10 @@ MonoBehaviour:
   linkedUiID: 734554
   relativeRect:
     serializedVersion: 2
-    x: 3.785
-    y: 28.86036
-    width: 272.52002
-    height: 21.29036
+    x: 4.72
+    y: 35.989666
+    width: 339.84
+    height: 26.549667
   relativePosition: {x: 0, y: 0}
   numSlots: 1
   uiSlider: {fileID: 0}
@@ -1027,8 +1008,7 @@ MonoBehaviour:
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -1062,10 +1042,10 @@ MonoBehaviour:
   linkedUiID: 771812
   relativeRect:
     serializedVersion: 2
-    x: 3.785
-    y: 53.93572
-    width: 272.52002
-    height: 21.29036
+    x: 4.72
+    y: 67.25933
+    width: 339.84
+    height: 26.549667
   relativePosition: {x: 0, y: 0}
   numSlots: 1
   uiSlider: {fileID: 0}
@@ -1089,8 +1069,7 @@ MonoBehaviour:
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -1098,7 +1077,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ID: 3
-  isEditing: 0
+  isEditing: 1
   title: SFXSlider
   slotSize: {x: 36, y: 5}
   sizeType: 1
@@ -1124,10 +1103,10 @@ MonoBehaviour:
   linkedUiID: 776016
   relativeRect:
     serializedVersion: 2
-    x: 3.785
-    y: 79.011086
-    width: 272.52002
-    height: 21.29036
+    x: 4.72
+    y: 98.529
+    width: 339.84
+    height: 26.549667
   relativePosition: {x: 0, y: 0}
   numSlots: 1
   uiSlider: {fileID: 0}
@@ -1151,8 +1130,7 @@ MonoBehaviour:
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -1186,10 +1164,10 @@ MonoBehaviour:
   linkedUiID: 656120
   relativeRect:
     serializedVersion: 2
-    x: 3.785
-    y: 104.08645
-    width: 272.52002
-    height: 21.29036
+    x: 4.72
+    y: 129.79866
+    width: 339.84
+    height: 26.549667
   relativePosition: {x: 0, y: 0}
   numSlots: 1
   uiButton: {fileID: 0}
@@ -1209,8 +1187,7 @@ MonoBehaviour:
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -1268,8 +1245,7 @@ MonoBehaviour:
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -1334,7 +1310,6 @@ MonoBehaviour:
   importSaveFilename: 
   checkImportBool: 0
   checkImportVar: 0
-  allowEmptySlots: 0
   fixedOption: 0
   optionToShow: 0
   parameterID: -1
@@ -1348,8 +1323,7 @@ MonoBehaviour:
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -1418,8 +1392,7 @@ MonoBehaviour:
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -1477,8 +1450,7 @@ MonoBehaviour:
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -1546,7 +1518,6 @@ MonoBehaviour:
   importSaveFilename: 
   checkImportBool: 0
   checkImportVar: 0
-  allowEmptySlots: 0
   fixedOption: 0
   optionToShow: 0
   parameterID: -1
@@ -1560,8 +1531,7 @@ MonoBehaviour:
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -1630,8 +1600,7 @@ MonoBehaviour:
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -1700,8 +1669,7 @@ MonoBehaviour:
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -1793,7 +1761,6 @@ MonoBehaviour:
   categoryIDs: 
   linkUIGraphic: 0
   preventInteractions: 0
-  limitMaxScroll: 1
   updateHotspotLabelWhenHover: 0
   items:
   - label: Prop sword
@@ -1876,8 +1843,7 @@ MonoBehaviour:
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -1946,8 +1912,7 @@ MonoBehaviour:
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -1955,9 +1920,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   menuSource: 0
-  canvas: {fileID: 22300000, guid: 1c953f9bc70064ba690a9baff756d1ff, type: 3}
+  canvas: {fileID: 22300000, guid: 1c953f9bc70064ba690a9baff756d1ff, type: 2}
   canvasID: 0
-  rectTransform: {fileID: 22400004, guid: 1c953f9bc70064ba690a9baff756d1ff, type: 3}
+  rectTransform: {fileID: 22400004, guid: 1c953f9bc70064ba690a9baff756d1ff, type: 2}
   rectTransformID: 14532472
   uiTransitionType: 1
   uiPositionType: 0
@@ -1979,7 +1944,6 @@ MonoBehaviour:
   actionListOnTurnOn: {fileID: 0}
   actionListOnTurnOff: {fileID: 0}
   updateWhenFadeOut: 1
-  hideDuringSaveScreenshots: 1
   fitWithinScreen: 1
   backgroundTexture: {fileID: 0}
   visibleElements:
@@ -2034,24 +1998,23 @@ MonoBehaviour:
   fadeSpeed: 0.2
   zoomAnchor: 4
   zoomElements: 0
-  oneMenuPerSpeech: 1
+  oneMenuPerSpeech: 0
   speechProximityLimit: 0
   speechProximityDistance: 10
   deleteUIWhenTurnOff: 0
   biggestElementSize: {x: 0, y: 0}
   rect:
     serializedVersion: 2
-    x: 189.25
-    y: 306.67758
-    width: 378.5
-    height: 119.22601
+    x: 236
+    y: 382.31854
+    width: 472
+    height: 148.67813
   showInFilter: 1
 --- !u!114 &11400050
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -2120,8 +2083,7 @@ MonoBehaviour:
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -2196,8 +2158,7 @@ MonoBehaviour:
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -2246,8 +2207,7 @@ MonoBehaviour:
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -2257,7 +2217,7 @@ MonoBehaviour:
   ID: 1
   isEditing: 1
   title: Use
-  slotSize: {x: 3.5794184, y: 6.3634896}
+  slotSize: {x: 4.539007, y: 8.0694475}
   sizeType: 0
   positionType: 0
   slotSpacing: 0
@@ -2281,8 +2241,8 @@ MonoBehaviour:
   linkedUiID: 15188550
   relativeRect:
     serializedVersion: 2
-    x: 2.4138
-    y: 2.4138
+    x: 1.9035001
+    y: 1.9035001
     width: 32
     height: 32
   relativePosition: {x: 0, y: 0}
@@ -2301,8 +2261,7 @@ MonoBehaviour:
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -2312,7 +2271,7 @@ MonoBehaviour:
   ID: 3
   isEditing: 0
   title: Talk
-  slotSize: {x: 3.5794184, y: 6.3634896}
+  slotSize: {x: 4.539007, y: 8.0694475}
   sizeType: 0
   positionType: 0
   slotSpacing: 0
@@ -2336,8 +2295,8 @@ MonoBehaviour:
   linkedUiID: 15191042
   relativeRect:
     serializedVersion: 2
-    x: 36.8276
-    y: 2.4138
+    x: 35.807
+    y: 1.9035001
     width: 32
     height: 32
   relativePosition: {x: 0, y: 0}
@@ -2356,8 +2315,7 @@ MonoBehaviour:
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -2367,7 +2325,7 @@ MonoBehaviour:
   ID: 0
   isEditing: 0
   title: Look
-  slotSize: {x: 3.5794184, y: 6.3634896}
+  slotSize: {x: 4.539007, y: 8.0694475}
   sizeType: 0
   positionType: 0
   slotSpacing: 0
@@ -2391,8 +2349,8 @@ MonoBehaviour:
   linkedUiID: 15193404
   relativeRect:
     serializedVersion: 2
-    x: 71.2414
-    y: 2.4138
+    x: 69.7105
+    y: 1.9035001
     width: 32
     height: 32
   relativePosition: {x: 0, y: 0}
@@ -2411,8 +2369,7 @@ MonoBehaviour:
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -2446,10 +2403,10 @@ MonoBehaviour:
   linkedUiID: 0
   relativeRect:
     serializedVersion: 2
-    x: 105.655205
-    y: 2.4138
-    width: 33.971996
-    height: 30.172125
+    x: 103.614006
+    y: 1.9035001
+    width: 26.79
+    height: 23.793451
   relativePosition: {x: 0, y: 0}
   numSlots: 1
   uiSlots:
@@ -2474,7 +2431,6 @@ MonoBehaviour:
   categoryIDs: 
   linkUIGraphic: 0
   preventInteractions: 0
-  limitMaxScroll: 1
   updateHotspotLabelWhenHover: 0
   items:
   - label: Prop sword
@@ -2558,8 +2514,7 @@ MonoBehaviour:
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -2567,7 +2522,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ID: 0
-  isEditing: 1
+  isEditing: 0
   title: SubsSpeakerLabel
   slotSize: {x: 50, y: 7}
   sizeType: 1
@@ -2595,8 +2550,8 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 378.5
-    height: 29.806503
+    width: 471.99997
+    height: 37.169537
   relativePosition: {x: 0, y: 0}
   numSlots: 1
   uiText: {fileID: 0}
@@ -2617,8 +2572,7 @@ MonoBehaviour:
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -2676,8 +2630,7 @@ MonoBehaviour:
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -2745,7 +2698,6 @@ MonoBehaviour:
   categoryIDs: 
   linkUIGraphic: 0
   preventInteractions: 0
-  limitMaxScroll: 1
   updateHotspotLabelWhenHover: 0
   items:
   - label: Prop sword
@@ -2829,8 +2781,7 @@ MonoBehaviour:
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -2838,7 +2789,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ID: 1
-  isEditing: 0
+  isEditing: 1
   title: SubsLineLabel
   slotSize: {x: 50, y: 6}
   sizeType: 1
@@ -2865,9 +2816,9 @@ MonoBehaviour:
   relativeRect:
     serializedVersion: 2
     x: 0
-    y: 29.806503
-    width: 378.5
-    height: 25.548431
+    y: 37.169537
+    width: 471.99997
+    height: 31.859602
   relativePosition: {x: 0, y: 0}
   numSlots: 1
   uiText: {fileID: 0}
@@ -2888,8 +2839,7 @@ MonoBehaviour:
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -2958,8 +2908,7 @@ MonoBehaviour:
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -3028,8 +2977,7 @@ MonoBehaviour:
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -3097,7 +3045,6 @@ MonoBehaviour:
   categoryIDs: 
   linkUIGraphic: 0
   preventInteractions: 0
-  limitMaxScroll: 1
   updateHotspotLabelWhenHover: 0
   items:
   - label: Prop sword
@@ -3181,8 +3128,7 @@ MonoBehaviour:
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -3240,8 +3186,7 @@ MonoBehaviour:
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -3310,8 +3255,7 @@ MonoBehaviour:
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -3319,9 +3263,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   menuSource: 0
-  canvas: {fileID: 22300000, guid: f61dfb626ba9246158c8c8b08be99482, type: 3}
+  canvas: {fileID: 22300000, guid: f61dfb626ba9246158c8c8b08be99482, type: 2}
   canvasID: 0
-  rectTransform: {fileID: 22400014, guid: f61dfb626ba9246158c8c8b08be99482, type: 3}
+  rectTransform: {fileID: 22400014, guid: f61dfb626ba9246158c8c8b08be99482, type: 2}
   rectTransformID: 698818
   uiTransitionType: 1
   uiPositionType: 0
@@ -3343,7 +3287,6 @@ MonoBehaviour:
   actionListOnTurnOn: {fileID: 0}
   actionListOnTurnOff: {fileID: 0}
   updateWhenFadeOut: 1
-  hideDuringSaveScreenshots: 1
   fitWithinScreen: 1
   backgroundTexture: {fileID: 2800000, guid: 5f4f3dd6223164fe49aea7eb6c0bc529, type: 3}
   visibleElements:
@@ -3430,8 +3373,7 @@ MonoBehaviour:
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -3496,7 +3438,6 @@ MonoBehaviour:
   categoryIDs: 
   linkUIGraphic: 0
   preventInteractions: 0
-  limitMaxScroll: 1
   updateHotspotLabelWhenHover: 0
   items:
   - label: Prop sword
@@ -3580,8 +3521,7 @@ MonoBehaviour:
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -3719,8 +3659,7 @@ MonoBehaviour:
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -3789,8 +3728,7 @@ MonoBehaviour:
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -3859,8 +3797,7 @@ MonoBehaviour:
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -3989,8 +3926,7 @@ MonoBehaviour:
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -4059,8 +3995,7 @@ MonoBehaviour:
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -4129,8 +4064,7 @@ MonoBehaviour:
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -4188,8 +4122,7 @@ MonoBehaviour:
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -4247,8 +4180,7 @@ MonoBehaviour:
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -4306,8 +4238,7 @@ MonoBehaviour:
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -4315,9 +4246,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   menuSource: 0
-  canvas: {fileID: 22300000, guid: 9ff029ce3035b4a21aaeade75531bcd6, type: 3}
+  canvas: {fileID: 22300000, guid: 9ff029ce3035b4a21aaeade75531bcd6, type: 2}
   canvasID: 0
-  rectTransform: {fileID: 22400000, guid: 9ff029ce3035b4a21aaeade75531bcd6, type: 3}
+  rectTransform: {fileID: 22400000, guid: 9ff029ce3035b4a21aaeade75531bcd6, type: 2}
   rectTransformID: 14243318
   uiTransitionType: 1
   uiPositionType: 1
@@ -4339,7 +4270,6 @@ MonoBehaviour:
   actionListOnTurnOn: {fileID: 0}
   actionListOnTurnOff: {fileID: 0}
   updateWhenFadeOut: 1
-  hideDuringSaveScreenshots: 1
   fitWithinScreen: 1
   backgroundTexture: {fileID: 0}
   visibleElements:
@@ -4408,8 +4338,7 @@ MonoBehaviour:
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -4467,8 +4396,7 @@ MonoBehaviour:
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -4476,7 +4404,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   menuSource: 0
-  canvas: {fileID: 22300000, guid: 8d97dc672cafd430c87a06eafb939c49, type: 3}
+  canvas: {fileID: 22300000, guid: 8d97dc672cafd430c87a06eafb939c49, type: 2}
   canvasID: 0
   rectTransform: {fileID: 0}
   rectTransformID: 310968
@@ -4486,9 +4414,9 @@ MonoBehaviour:
   isLocked: 0
   id: 12
   title: Pause
-  manualSize: {x: 17, y: 30.3334}
+  manualSize: {x: 17, y: 30.333403}
   positionType: 0
-  manualPosition: {x: 378.5, y: 213}
+  manualPosition: {x: 352.5, y: 198.5}
   positionSmoothing: 0
   alignment: 4
   toggleKey: Menu
@@ -4500,7 +4428,6 @@ MonoBehaviour:
   actionListOnTurnOn: {fileID: 11400000, guid: c6e29f6ea3d084d049c474742119836c, type: 2}
   actionListOnTurnOff: {fileID: 0}
   updateWhenFadeOut: 1
-  hideDuringSaveScreenshots: 1
   fitWithinScreen: 1
   backgroundTexture: {fileID: 2800000, guid: 5f4f3dd6223164fe49aea7eb6c0bc529, type: 3}
   visibleElements:
@@ -4566,20 +4493,19 @@ MonoBehaviour:
   speechProximityLimit: 0
   speechProximityDistance: 10
   deleteUIWhenTurnOff: 0
-  biggestElementSize: {x: 124.90501, y: 125.37681}
+  biggestElementSize: {x: 116.325005, y: 116.76439}
   rect:
     serializedVersion: 2
-    x: 314.155
-    y: 148.4191
-    width: 128.69
-    height: 129.1618
+    x: 292.575
+    y: 138.3553
+    width: 119.850006
+    height: 120.28939
   showInFilter: 1
 --- !u!114 &11400132
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -4613,10 +4539,10 @@ MonoBehaviour:
   linkedUiID: 318248
   relativeRect:
     serializedVersion: 2
-    x: 3.785
-    y: 3.785
-    width: 121.12
-    height: 21.29036
+    x: 3.525
+    y: 3.525
+    width: 112.8
+    height: 19.827877
   relativePosition: {x: 0, y: 0}
   numSlots: 1
   uiButton: {fileID: 0}
@@ -4648,8 +4574,7 @@ MonoBehaviour:
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -4657,7 +4582,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ID: 1
-  isEditing: 1
+  isEditing: 0
   title: OptionsButton
   slotSize: {x: 16, y: 5}
   sizeType: 1
@@ -4683,10 +4608,10 @@ MonoBehaviour:
   linkedUiID: 326570
   relativeRect:
     serializedVersion: 2
-    x: 3.785
-    y: 28.86036
-    width: 121.12
-    height: 21.29036
+    x: 3.525
+    y: 26.877876
+    width: 112.8
+    height: 19.827877
   relativePosition: {x: 0, y: 0}
   numSlots: 1
   uiButton: {fileID: 0}
@@ -4718,8 +4643,7 @@ MonoBehaviour:
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -4753,10 +4677,10 @@ MonoBehaviour:
   linkedUiID: 329416
   relativeRect:
     serializedVersion: 2
-    x: 3.785
-    y: 53.93572
-    width: 121.12
-    height: 21.29036
+    x: 3.525
+    y: 50.230755
+    width: 112.8
+    height: 19.827877
   relativePosition: {x: 0, y: 0}
   numSlots: 1
   uiButton: {fileID: 0}
@@ -4788,8 +4712,7 @@ MonoBehaviour:
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -4823,10 +4746,10 @@ MonoBehaviour:
   linkedUiID: 332646
   relativeRect:
     serializedVersion: 2
-    x: 3.785
-    y: 79.011086
-    width: 121.12
-    height: 21.29036
+    x: 3.525
+    y: 73.58363
+    width: 112.8
+    height: 19.827877
   relativePosition: {x: 0, y: 0}
   numSlots: 1
   uiButton: {fileID: 0}
@@ -4858,8 +4781,7 @@ MonoBehaviour:
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -4867,7 +4789,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ID: 4
-  isEditing: 0
+  isEditing: 1
   title: QuitButton
   slotSize: {x: 16, y: 5}
   sizeType: 1
@@ -4893,10 +4815,10 @@ MonoBehaviour:
   linkedUiID: 335904
   relativeRect:
     serializedVersion: 2
-    x: 3.785
-    y: 104.08645
-    width: 121.12
-    height: 21.29036
+    x: 3.525
+    y: 96.93651
+    width: 112.8
+    height: 19.827877
   relativePosition: {x: 0, y: 0}
   numSlots: 1
   uiButton: {fileID: 0}
@@ -4928,8 +4850,7 @@ MonoBehaviour:
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -4937,7 +4858,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ID: 5
-  isEditing: 1
+  isEditing: 0
   title: SubtitlesToggle
   slotSize: {x: 36, y: 5}
   sizeType: 1
@@ -4963,10 +4884,10 @@ MonoBehaviour:
   linkedUiID: 860984
   relativeRect:
     serializedVersion: 2
-    x: 3.785
-    y: 129.1618
-    width: 272.52002
-    height: 21.29036
+    x: 4.72
+    y: 161.06833
+    width: 339.84
+    height: 26.549667
   relativePosition: {x: 0, y: 0}
   numSlots: 1
   uiToggle: {fileID: 0}
@@ -4990,8 +4911,7 @@ MonoBehaviour:
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -5025,10 +4945,10 @@ MonoBehaviour:
   linkedUiID: 930818
   relativeRect:
     serializedVersion: 2
-    x: 3.785
-    y: 154.23717
-    width: 272.52002
-    height: 21.29036
+    x: 4.72
+    y: 192.338
+    width: 339.84
+    height: 26.549667
   relativePosition: {x: 0, y: 0}
   numSlots: 1
   uiButton: {fileID: 0}
@@ -5060,8 +4980,7 @@ MonoBehaviour:
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -5130,8 +5049,7 @@ MonoBehaviour:
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -5200,8 +5118,7 @@ MonoBehaviour:
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -5270,8 +5187,7 @@ MonoBehaviour:
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -5279,9 +5195,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   menuSource: 0
-  canvas: {fileID: 22306536, guid: 6ef803e02951a4e699f2847cf65466f3, type: 3}
+  canvas: {fileID: 22306536, guid: 6ef803e02951a4e699f2847cf65466f3, type: 2}
   canvasID: 0
-  rectTransform: {fileID: 22406576, guid: 6ef803e02951a4e699f2847cf65466f3, type: 3}
+  rectTransform: {fileID: 22406576, guid: 6ef803e02951a4e699f2847cf65466f3, type: 2}
   rectTransformID: 340762
   uiTransitionType: 0
   uiPositionType: 0
@@ -5303,7 +5219,6 @@ MonoBehaviour:
   actionListOnTurnOn: {fileID: 11400000, guid: f08f08e6520c746f289f229b9ffebade, type: 2}
   actionListOnTurnOff: {fileID: 0}
   updateWhenFadeOut: 1
-  hideDuringSaveScreenshots: 1
   fitWithinScreen: 1
   backgroundTexture: {fileID: 2800000, guid: 5f4f3dd6223164fe49aea7eb6c0bc529, type: 3}
   visibleElements:
@@ -5388,8 +5303,7 @@ MonoBehaviour:
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -5447,8 +5361,7 @@ MonoBehaviour:
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -5517,8 +5430,7 @@ MonoBehaviour:
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -5554,8 +5466,8 @@ MonoBehaviour:
     serializedVersion: 2
     x: 3.695
     y: 101.675
-    width: 121.12
-    height: 21.29036
+    width: 112.8
+    height: 19.827877
   relativePosition: {x: 0, y: 0}
   numSlots: 1
   uiButton: {fileID: 0}
@@ -5587,8 +5499,7 @@ MonoBehaviour:
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -5657,8 +5568,7 @@ MonoBehaviour:
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -5727,8 +5637,7 @@ MonoBehaviour:
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -5786,8 +5695,7 @@ MonoBehaviour:
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -5856,8 +5764,7 @@ MonoBehaviour:
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -5915,8 +5822,7 @@ MonoBehaviour:
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -5985,8 +5891,7 @@ MonoBehaviour:
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0

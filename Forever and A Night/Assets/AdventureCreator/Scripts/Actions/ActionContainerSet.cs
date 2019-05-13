@@ -1,7 +1,7 @@
 /*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2019
+ *	by Chris Burton, 2013-2018
  *	
  *	"ActionContainerSet.cs"
  * 
@@ -35,7 +35,6 @@ namespace AC
 		public int constantID = 0;
 		public int parameterID = -1;
 		public Container container;
-		protected Container runtimeContainer;
 
 		public bool setAmount = false;
 		public int amountParameterID = -1;
@@ -58,23 +57,20 @@ namespace AC
 
 		override public void AssignValues (List<ActionParameter> parameters)
 		{
+			container = AssignFile <Container> (parameters, parameterID, constantID, container);
 			invID = AssignInvItemID (parameters, invParameterID, invID);
 			amount = AssignInteger (parameters, amountParameterID, amount);
 
 			if (useActive)
 			{
-				runtimeContainer = KickStarter.playerInput.activeContainer;
-			}
-			else
-			{
-				runtimeContainer = AssignFile <Container> (parameters, parameterID, constantID, container);
+				container = KickStarter.playerInput.activeContainer;
 			}
 		}
 
 		
 		override public float Run ()
 		{
-			if (runtimeContainer == null)
+			if (container == null)
 			{
 				return 0f;
 			}
@@ -86,7 +82,7 @@ namespace AC
 
 			if (containerAction == ContainerAction.Add)
 			{
-				runtimeContainer.Add (invID, amount);
+				container.Add (invID, amount);
 			}
 			else if (containerAction == ContainerAction.Remove)
 			{
@@ -95,15 +91,15 @@ namespace AC
 					KickStarter.runtimeInventory.Add (invID, amount, false, -1);
 				}
 
-				runtimeContainer.Remove (invID, amount);
+				container.Remove (invID, amount);
 			}
 			else if (containerAction == ContainerAction.RemoveAll)
 			{
 				if (transferToPlayer)
 				{
-					for (int i=0; i<runtimeContainer.items.Count; i++)
+					for (int i=0; i<container.items.Count; i++)
 					{
-						ContainerItem containerItem = runtimeContainer.items[i];
+						ContainerItem containerItem = container.items[i];
 
 						// Prevent if player is already carrying one, and multiple can't be carried
 						InvItem invItem = KickStarter.inventoryManager.GetItem (containerItem.linkedID);
@@ -119,7 +115,7 @@ namespace AC
 				}
 				else
 				{
-					runtimeContainer.RemoveAll ();
+					container.RemoveAll ();
 				}
 			}
 
@@ -244,7 +240,7 @@ namespace AC
 		}
 
 
-		override public void AssignConstantIDs (bool saveScriptsToo, bool fromAssetFile)
+		override public void AssignConstantIDs (bool saveScriptsToo)
 		{
 			if (saveScriptsToo)
 			{
@@ -256,14 +252,15 @@ namespace AC
 		
 		override public string SetLabel ()
 		{
-			string labelItem = string.Empty;
+			string labelAdd = "";
+			string labelItem = "";
 
-			if (inventoryManager == null)
+			if (!inventoryManager)
 			{
 				inventoryManager = AdvGame.GetReferences ().inventoryManager;
 			}
 
-			if (inventoryManager != null)
+			if (inventoryManager)
 			{
 				if (inventoryManager.items.Count > 0)
 				{
@@ -276,17 +273,18 @@ namespace AC
 			
 			if (containerAction == ContainerAction.Add)
 			{
-				return "Add" + labelItem;
+				labelAdd = " (Add" + labelItem + ")";
 			}
 			else if (containerAction == ContainerAction.Remove)
 			{
-				return "Remove" + labelItem;
+				labelAdd = " (Remove" + labelItem + ")";
 			}
 			else if (containerAction == ContainerAction.RemoveAll)
 			{
-				return "Remove all";
+				labelAdd = " (Remove all)";
 			}
-			return string.Empty;
+		
+			return labelAdd;
 		}
 
 		#endif

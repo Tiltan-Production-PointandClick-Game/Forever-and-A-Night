@@ -35,7 +35,7 @@ namespace AC
 			}
 			else if (_target.footstepPlayMethod == FootstepSounds.FootstepPlayMethod.ViaAnimationEvents)
 			{
-				EditorGUILayout.HelpBox ("A sound will be played whenever this component's PlayFootstep function is run. This component should be placed on the same GameObject as the Animator.", MessageType.Info);
+				EditorGUILayout.HelpBox ("A sound will be played whenever this component's PlayFootstep function is run.", MessageType.Info);
 			}
 			EditorGUILayout.EndVertical ();
 

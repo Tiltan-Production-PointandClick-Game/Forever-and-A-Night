@@ -24,7 +24,7 @@ namespace AC
 			_target.GetAnimEngine ();
 
 			EditorGUILayout.BeginVertical ("Button");
-			EditorGUILayout.LabelField ("Animation settings", EditorStyles.boldLabel);
+			EditorGUILayout.LabelField ("Animation settings:", EditorStyles.boldLabel);
 			_target.animationEngine = (AnimationEngine) CustomGUILayout.EnumPopup ("Animation engine:", _target.animationEngine, "", "The animation engine that the character relies on for animation playback");
 			if (_target.animationEngine == AnimationEngine.Custom)
 			{
@@ -36,7 +36,7 @@ namespace AC
 			_target.GetAnimEngine ().CharSettingsGUI ();
 
 			EditorGUILayout.BeginVertical ("Button");
-			EditorGUILayout.LabelField ("Movement settings", EditorStyles.boldLabel);
+			EditorGUILayout.LabelField ("Movement settings:", EditorStyles.boldLabel);
 
 			if (_target.GetMotionControl () == MotionControl.Automatic)
 			{
@@ -71,7 +71,7 @@ namespace AC
 		protected void SharedGUITwo (AC.Char _target)
 		{
 			EditorGUILayout.BeginVertical ("Button");
-			EditorGUILayout.LabelField ("Physics settings", EditorStyles.boldLabel);
+			EditorGUILayout.LabelField ("Physics settings:", EditorStyles.boldLabel);
 			_target.ignoreGravity = CustomGUILayout.Toggle ("Ignore gravity?", _target.ignoreGravity, "", "If True, the character will ignore the effects of gravity");
 			if (_target.GetComponent <Rigidbody>() != null || _target.GetComponent <Rigidbody2D>() != null)
 			{
@@ -84,7 +84,7 @@ namespace AC
 					{
 						if (_target.GetAnimator () != null && _target.GetAnimator ().applyRootMotion)
 						{
-							EditorGUILayout.HelpBox ("Rigidbody movement will be disabled as 'Root motion' is enabled in the Animator.", MessageType.Warning);
+							EditorGUILayout.HelpBox ("Rigidbody movement will be disabled as 'Root motion' is enabled in the Animator.", MessageType.Info);
 						}
 						else if (_target.GetComponent <Rigidbody>().interpolation == RigidbodyInterpolation.None)
 						{
@@ -100,7 +100,7 @@ namespace AC
 					{
 						if (_target.GetAnimator () != null && _target.GetAnimator ().applyRootMotion)
 						{
-							EditorGUILayout.HelpBox ("Rigidbody movement will be disabled as 'Root motion' is enabled in the Animator.", MessageType.Warning);
+							EditorGUILayout.HelpBox ("Rigidbody movement will be disabled as 'Root motion' is enabled in the Animator.", MessageType.Info);
 						}
 						else if (_target.GetComponent <Rigidbody2D>().interpolation == RigidbodyInterpolation2D.None)
 						{
@@ -130,7 +130,7 @@ namespace AC
 			
 			
 			EditorGUILayout.BeginVertical ("Button");
-			EditorGUILayout.LabelField ("Audio clips", EditorStyles.boldLabel);
+			EditorGUILayout.LabelField ("Audio clips:", EditorStyles.boldLabel);
 		
 			_target.walkSound = (AudioClip) CustomGUILayout.ObjectField <AudioClip> ("Walk sound:", _target.walkSound, false, "", "The sound to play when walking");
 			_target.runSound = (AudioClip) CustomGUILayout.ObjectField <AudioClip> ("Run sound:", _target.runSound, false, "", "The sound to play when running");
@@ -143,7 +143,7 @@ namespace AC
 			EditorGUILayout.EndVertical ();
 			
 			EditorGUILayout.BeginVertical ("Button");
-			EditorGUILayout.LabelField ("Dialogue settings", EditorStyles.boldLabel);
+			EditorGUILayout.LabelField ("Dialogue settings:", EditorStyles.boldLabel);
 
 			_target.speechColor = CustomGUILayout.ColorField ("Speech text colour:", _target.speechColor, "", "");
 			_target.speechLabel = CustomGUILayout.TextField ("Speaker label:", _target.speechLabel, "", "");

@@ -1,7 +1,7 @@
 /*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2019
+ *	by Chris Burton, 2013-2018
  *	
  *	"CursorManager.cs"
  * 
@@ -65,8 +65,6 @@ namespace AC
 		public bool onlyShowInventoryLabelOverHotspots = false;
 		/** The size of selected inventory item graphics when used as a cursor */
 		public float inventoryCursorSize = 0.06f;
-		/** If True, and interactionMethod = AC_InteractionMethod.ChooseInteractionThenHotspot in SettingsManager, then the player can switch the active "interaction" icon by invoking a specific input */
-		public bool allowIconInput = true;
 
 		/** The cursor while the game is running a gameplay-blocking cutscene */
 		public CursorIconBase waitIcon = new CursorIcon ();
@@ -177,7 +175,7 @@ namespace AC
 					allowWalkCursor = CustomGUILayout.Toggle ("Provide walk cursor?", allowWalkCursor, "AC.KickStarter.cursorManager.allowWalkCursor", "If True, then a separate cursor will display when in 'walk mode'");
 					if (allowWalkCursor)
 					{
-						if (KickStarter.settingsManager.interactionMethod == AC_InteractionMethod.ChooseInteractionThenHotspot && allowIconInput)
+						if (KickStarter.settingsManager.interactionMethod == AC_InteractionMethod.ChooseInteractionThenHotspot)
 						{
 							EditorGUILayout.LabelField ("Input button:", "Icon_Walk");
 						}
@@ -252,7 +250,6 @@ namespace AC
 					if (settingsManager && settingsManager.interactionMethod == AC_InteractionMethod.ChooseInteractionThenHotspot)
 					{
 						cycleCursors = CustomGUILayout.ToggleLeft ("Cycle Interactions with right-click?", cycleCursors, "AC.KickStarter.cursorManager.cycleCursors", "If True, then cursor modes can by clicked by right-clicking");
-						allowIconInput = CustomGUILayout.ToggleLeft ("Set Interaction with specific inputs?", allowIconInput, "AC.KickStarter.cursorManager.allowIconInput", "then the player can switch the active icon by invoking a specific input");
 						onlyAnimateOverHotspots = CustomGUILayout.ToggleLeft ("Only animate icons when over Hotspots?", onlyAnimateOverHotspots, "AC.KickStarter.cursorManager.onlyAnimateOverHotspots", "If True, then animated cursors will only animate if the cursor is over a Hotspot");
 					}
 				}
@@ -355,7 +352,7 @@ namespace AC
 				EditorGUILayout.EndHorizontal ();
 
 				_cursorIcon.label = CustomGUILayout.TextField ("Label:", _cursorIcon.label, "AC.KickStarter.cursorManager.GetCursorIconFromID (" + i + ").label", "The display name of the icon");
-				if (KickStarter.settingsManager != null && KickStarter.settingsManager.interactionMethod == AC_InteractionMethod.ChooseInteractionThenHotspot && allowIconInput)
+				if (KickStarter.settingsManager != null && KickStarter.settingsManager.interactionMethod == AC_InteractionMethod.ChooseInteractionThenHotspot)
 				{
 					EditorGUILayout.LabelField ("Input button:", _cursorIcon.GetButtonName ());
 				}
@@ -489,7 +486,7 @@ namespace AC
 				}
 			}
 			
-			return (string.Empty);
+			return ("");
 		}
 		
 

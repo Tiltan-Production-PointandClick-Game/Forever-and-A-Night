@@ -1,7 +1,7 @@
 /*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2019
+ *	by Chris Burton, 2013-2018
  *	
  *	"Sound.cs"
  * 
@@ -151,7 +151,7 @@ namespace AC
 			}
 			else
 			{
-				ACDebug.LogWarning ("Sound object " + this.name + " has no AudioSource component.", this);
+				ACDebug.LogWarning ("Sound object " + this.name + " has no AudioSource component.");
 			}
 		}
 		
@@ -571,7 +571,7 @@ namespace AC
 					GetComponent <Player>() == null &&
 					GetComponentInChildren <Player>() == null)
 				{
-					ACDebug.Log ("Deleting Sound object '" + gameObject + "' as it is not currently playing any sound.", gameObject);
+					ACDebug.Log ("Deleting Sound object '" + gameObject + "' as it is not currently playing any sound.");
 					DestroyImmediate (gameObject);
 				}
 			}

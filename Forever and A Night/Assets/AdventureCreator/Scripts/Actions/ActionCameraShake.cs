@@ -1,7 +1,7 @@
 ﻿/*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2019
+ *	by Chris Burton, 2013-2018
  *	
  *	"ActionCameraShake.cs"
  * 
@@ -136,6 +136,12 @@ namespace AC
 			willWait = EditorGUILayout.Toggle ("Wait until finish?", willWait);
 			
 			AfterRunningOption ();
+		}
+		
+		
+		override public string SetLabel ()
+		{
+			return "";
 		}
 
 		#endif

@@ -1,7 +1,7 @@
 ﻿/*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2019
+ *	by Chris Burton, 2013-2018
  *	
  *	"ActionMenuCheck.cs"
  * 
@@ -127,11 +127,12 @@ namespace AC
 		
 		public override string SetLabel ()
 		{
-			string labelAdd = checkType.ToString () + " '" + menuToCheck;
+			string labelAdd = " (" + checkType.ToString () + " '" + menuToCheck;
 			if (checkType == MenuCheckType.ElementIsVisible)
 			{
 				labelAdd += " " + elementToCheck;
 			}
+			labelAdd += "')";
 			return labelAdd;
 		}
 		

@@ -1,7 +1,7 @@
 ﻿/*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2019
+ *	by Chris Burton, 2013-2018
  *	
  *	"ActionCameraTP.cs"
  * 
@@ -26,7 +26,6 @@ namespace AC
 		public int constantID = 0;
 		public int parameterID = -1;
 		public GameCameraThirdPerson linkedCamera;
-		protected GameCameraThirdPerson runtimeLinkedCamera;
 		
 		public float transitionTime;
 		public int transitionTimeParameterID = -1;
@@ -54,7 +53,7 @@ namespace AC
 		
 		override public void AssignValues (List<ActionParameter> parameters)
 		{
-			runtimeLinkedCamera = AssignFile <GameCameraThirdPerson> (parameters, parameterID, constantID, linkedCamera);
+			linkedCamera = AssignFile <GameCameraThirdPerson> (parameters, parameterID, constantID, linkedCamera);
 			transitionTime = AssignFloat (parameters, transitionTimeParameterID, transitionTime);
 		}
 		
@@ -88,7 +87,7 @@ namespace AC
 
 		private bool DoRotation (float _transitionTime)
 		{
-			if (runtimeLinkedCamera != null && (controlPitch || controlSpin))
+			if (linkedCamera != null && (controlPitch || controlSpin))
 			{
 				float _newPitchAngle = newPitchAngle;
 				float _newSpinAngle = newSpinAngle;
@@ -97,7 +96,7 @@ namespace AC
 				{
 					if (isRelativeToTarget)
 					{
-						_newSpinAngle += runtimeLinkedCamera.target.localEulerAngles.y;
+						_newSpinAngle += linkedCamera.target.localEulerAngles.y;
 					}
 					else
 					{
@@ -112,11 +111,11 @@ namespace AC
 
 				if (_transitionTime > 0f)
 				{
-					runtimeLinkedCamera.ForceRotation (controlPitch, _newPitchAngle, controlSpin, _newSpinAngle, _transitionTime, moveMethod, timeCurve);
+					linkedCamera.ForceRotation (controlPitch, _newPitchAngle, controlSpin, _newSpinAngle, _transitionTime, moveMethod, timeCurve);
 				}
 				else
 				{
-					runtimeLinkedCamera.ForceRotation (controlPitch, _newPitchAngle, controlSpin, _newSpinAngle);
+					linkedCamera.ForceRotation (controlPitch, _newPitchAngle, controlSpin, _newSpinAngle);
 				}
 
 				return true;
@@ -182,7 +181,7 @@ namespace AC
 		}
 
 
-		override public void AssignConstantIDs (bool saveScriptsToo, bool fromAssetFile)
+		override public void AssignConstantIDs (bool saveScriptsToo)
 		{
 			if (saveScriptsToo)
 			{
@@ -194,11 +193,13 @@ namespace AC
 		
 		override public string SetLabel ()
 		{
+			string labelAdd = "";
 			if (linkedCamera)
 			{
-				return linkedCamera.name;
+				labelAdd = " (" + linkedCamera.name + ")";
 			}
-			return string.Empty;
+			
+			return labelAdd;
 		}
 		
 		#endif

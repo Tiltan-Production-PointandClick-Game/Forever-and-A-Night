@@ -1,7 +1,7 @@
 ﻿/*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2019
+ *	by Chris Burton, 2013-2018
  *	
  *	"ActionCharRename.cs"
  * 
@@ -26,7 +26,6 @@ namespace AC
 		public int _charID = 0;
 		public Char _char;
 		public bool isPlayer;
-		protected Char runtimeChar;
 
 		public string newName;
 		public int lineID = -1;
@@ -44,20 +43,20 @@ namespace AC
 		
 		override public void AssignValues (List<ActionParameter> parameters)
 		{
-			runtimeChar = AssignFile <Char> (_charID, _char);
+			_char = AssignFile <Char> (_charID, _char);
 
 			if (isPlayer)
 			{
-				runtimeChar = KickStarter.player;
+				_char = KickStarter.player;
 			}
 		}
 		
 		
 		override public float Run ()
 		{
-			if (runtimeChar && !string.IsNullOrEmpty (newName))
+			if (_char && !string.IsNullOrEmpty (newName))
 			{
-				runtimeChar.SetName (newName, lineID);
+				_char.SetName (newName, lineID);
 			}
 			
 			return 0f;
@@ -83,7 +82,7 @@ namespace AC
 		}
 
 
-		override public void AssignConstantIDs (bool saveScriptsToo, bool fromAssetFile)
+		override public void AssignConstantIDs (bool saveScriptsToo)
 		{
 			if (!isPlayer)
 			{
@@ -102,11 +101,14 @@ namespace AC
 		
 		override public string SetLabel ()
 		{
-			if (_char != null && !string.IsNullOrEmpty (newName))
+			string labelAdd = "";
+			
+			if (_char && newName != "")
 			{
-				return _char.name + " to " + newName;
+				labelAdd = " (" + _char.name + " to " + newName + ")";
 			}
-			return string.Empty;
+			
+			return labelAdd;
 		}
 
 		#endif

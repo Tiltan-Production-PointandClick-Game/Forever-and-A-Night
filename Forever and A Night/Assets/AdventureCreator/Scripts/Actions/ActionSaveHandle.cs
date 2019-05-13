@@ -1,7 +1,7 @@
 ﻿/*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2019
+ *	by Chris Burton, 2013-2018
  *	
  *	"ActionSaveHandle.cs"
  * 
@@ -84,13 +84,13 @@ namespace AC
 
 			if (saveHandling == SaveHandling.ContinueFromLastSave || saveHandling == SaveHandling.LoadGame)
 			{
-				EventManager.OnFinishLoading += OnFinishLoading;
-				EventManager.OnFailLoading += OnFail;
+				EventManager.OnFinishLoading += OnComplete;
+				EventManager.OnFailLoading += OnComplete;
 			}
 			else if (saveHandling == SaveHandling.OverwriteExistingSave || saveHandling == SaveHandling.SaveNewGame)
 			{
-				EventManager.OnFinishSaving += OnFinishSaving;
-				EventManager.OnFailSaving += OnFail;
+				EventManager.OnFinishSaving += OnComplete;
+				EventManager.OnFailSaving += OnComplete;
 			}
 
 			if ((saveHandling == SaveHandling.LoadGame || saveHandling == SaveHandling.ContinueFromLastSave) && doSelectiveLoad)
@@ -135,14 +135,13 @@ namespace AC
 					}
 					else
 					{
-						if (PlayerMenus.IsSavingLocked (this))
+						if (!PlayerMenus.IsSavingLocked (this))
 						{
-							ACDebug.LogWarning ("Cannot save at this time - either blocking ActionLists, a Conversation is active, or saving has been manually locked.");
-							OnComplete ();
+							SaveSystem.SaveAutoSave ();
 						}
 						else
 						{
-							SaveSystem.SaveAutoSave ();
+							ACDebug.LogWarning ("Cannot save at this time - either blocking ActionLists, a Conversation is active, or saving has been manually locked.");
 						}
 						return;
 					}
@@ -186,12 +185,7 @@ namespace AC
 			}
 			else if (saveHandling == SaveHandling.OverwriteExistingSave || saveHandling == SaveHandling.SaveNewGame)
 			{
-				if (PlayerMenus.IsSavingLocked (this))
-				{
-					ACDebug.LogWarning ("Cannot save at this time - either blocking ActionLists, a Conversation is active, or saving has been manually locked.");
-					OnComplete ();
-				}
-				else
+				if (!PlayerMenus.IsSavingLocked (this))
 				{
 					if (saveHandling == SaveHandling.OverwriteExistingSave)
 					{
@@ -202,20 +196,13 @@ namespace AC
 						SaveSystem.SaveNewGame (updateLabel, newSaveLabel);
 					}
 				}
+				else
+				{
+					ACDebug.LogWarning ("Cannot save at this time - either blocking ActionLists, a Conversation is active, or saving has been manually locked.");
+				}
 			}
 		}
 
-
-		private void OnFinishLoading ()
-		{
-			OnComplete ();
-		}
-
-
-		private void OnFinishSaving (SaveFile saveFile)
-		{
-			OnComplete ();
-		}
 
 
 		private void OnComplete ()
@@ -225,19 +212,13 @@ namespace AC
 		}
 
 
-		private void OnFail (int saveID)
-		{
-			OnComplete ();
-		}
-
-
 		private void ClearAllEvents ()
 		{
-			EventManager.OnFinishLoading -= OnFinishLoading;
-			EventManager.OnFailLoading -= OnFail;
+			EventManager.OnFinishLoading -= OnComplete;
+			EventManager.OnFailLoading -= OnComplete;
 
-			EventManager.OnFinishSaving -= OnFinishSaving;
-			EventManager.OnFailSaving -= OnFail;
+			EventManager.OnFinishLoading -= OnComplete;
+			EventManager.OnFailLoading -= OnComplete;
 		}
 
 
@@ -322,7 +303,7 @@ namespace AC
 		
 		public override string SetLabel ()
 		{
-			return saveHandling.ToString ();
+			return (" (" + saveHandling.ToString () + ")");
 		}
 		
 		#endif
