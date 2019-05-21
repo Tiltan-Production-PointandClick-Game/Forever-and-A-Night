@@ -1,0 +1,866 @@
+fileFormatVersion: 2
+guid: f821e8a5b1c0a1145b20977a77e67218
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: 3QBackWalk_SpriteSheet
+    21300002: Armature_walk3quartersback_00
+    21300004: Armature_walk3quartersback_01
+    21300006: Armature_walk3quartersback_02
+    21300008: Armature_walk3quartersback_03
+    21300010: Armature_walk3quartersback_04
+    21300012: Armature_walk3quartersback_05
+    21300014: Armature_walk3quartersback_06
+    21300016: Armature_walk3quartersback_07
+    21300018: Armature_walk3quartersback_08
+    21300020: Armature_walk3quartersback_09
+    21300022: Armature_walk3quartersback_10
+    21300024: Armature_walk3quartersback_11
+    21300026: Armature_walk3quartersback_12
+    21300028: Armature_walk3quartersback_13
+    21300030: Armature_walk3quartersback_14
+    21300032: Armature_walk3quartersback_15
+    21300034: Armature_walk3quartersback_16
+    21300036: Armature_walk3quartersback_17
+    21300038: Armature_walk3quartersback_18
+    21300040: Armature_walk3quartersback_19
+    21300042: Armature_walk3quartersback_20
+    21300044: Armature_walk3quartersback_21
+    21300046: Armature_walk3quartersback_22
+    21300048: Armature_walk3quartersback_23
+    21300050: Armature_walk3quartersback_24
+    21300052: Armature_walk3quartersback_25
+    21300054: Armature_walk3quartersback_26
+    21300056: Armature_walk3quartersback_27
+    21300058: Armature_walk3quartersback_28
+    21300060: Armature_walk3quartersback_29
+    21300062: Armature_walk3quartersback_30
+    21300064: Armature_walk3quartersback_31
+    21300066: Armature_walk3quartersback_32
+    21300068: Armature_walk3quartersback_33
+    21300070: Armature_walk3quartersback_34
+    21300072: Armature_walk3quartersback_35
+    21300074: Armature_walk3quartersback_36
+  externalObjects: {}
+  serializedVersion: 9
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Armature_walk3quartersback_00
+      rect:
+        serializedVersion: 2
+        x: 547
+        y: 1176
+        width: 180
+        height: 434
+      alignment: 9
+      pivot: {x: 0.5, y: 0.49769586}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df80048da20ba404fb983afaf06b363d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Armature_walk3quartersback_01
+      rect:
+        serializedVersion: 2
+        x: 1820
+        y: 1615
+        width: 180
+        height: 432
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4976852}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e31c6ddb18f111741aad5ac24aef03d4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Armature_walk3quartersback_02
+      rect:
+        serializedVersion: 2
+        x: 1093
+        y: 742
+        width: 180
+        height: 433
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4965358}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31a21c591686ffc4383d259ea64a263c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Armature_walk3quartersback_03
+      rect:
+        serializedVersion: 2
+        x: 547
+        y: 740
+        width: 180
+        height: 434
+      alignment: 9
+      pivot: {x: 0.5, y: 0.49769586}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72297d76c556c4d4bbcec1686d3664ca
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Armature_walk3quartersback_04
+      rect:
+        serializedVersion: 2
+        x: 728
+        y: 304
+        width: 180
+        height: 434
+      alignment: 9
+      pivot: {x: 0.5, y: 0.49769586}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: abc83bba1fbee7e4781967586e3fe62a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Armature_walk3quartersback_05
+      rect:
+        serializedVersion: 2
+        x: 1275
+        y: 746
+        width: 179
+        height: 433
+      alignment: 9
+      pivot: {x: 0.5027933, y: 0.4965358}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa037e023e54c9c41a9bd40a7f1e376c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Armature_walk3quartersback_06
+      rect:
+        serializedVersion: 2
+        x: 1274
+        y: 307
+        width: 180
+        height: 433
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4965358}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ffc5050406a290443a646b40c036d014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Armature_walk3quartersback_07
+      rect:
+        serializedVersion: 2
+        x: 729
+        y: 1613
+        width: 180
+        height: 434
+      alignment: 9
+      pivot: {x: 0.5, y: 0.49769586}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9fac977fc5021e94182de1b6ebc4e653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Armature_walk3quartersback_08
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1611
+        width: 180
+        height: 436
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b06b0fbf591a814c918ead402499e94
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Armature_walk3quartersback_09
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1173
+        width: 180
+        height: 436
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72edb8a51d9fc6648a588694d51c669d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Armature_walk3quartersback_10
+      rect:
+        serializedVersion: 2
+        x: 364
+        y: 298
+        width: 180
+        height: 435
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5011494}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6fbefca289e4364b8ca4ddcce7ac8f0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Armature_walk3quartersback_11
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 735
+        width: 180
+        height: 436
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40ed20d4c3db1e3429cf5c9a1c67481c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Armature_walk3quartersback_12
+      rect:
+        serializedVersion: 2
+        x: 729
+        y: 1177
+        width: 180
+        height: 434
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ae43f8284ee37c4c907bf84c43de13a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Armature_walk3quartersback_13
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 297
+        width: 180
+        height: 436
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b91a4c1e528a184eb59b1294bfbbce8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Armature_walk3quartersback_14
+      rect:
+        serializedVersion: 2
+        x: 729
+        y: 741
+        width: 180
+        height: 434
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2da4de7fbecead740880a6acd7a6bb01
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Armature_walk3quartersback_15
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 1612
+        width: 180
+        height: 435
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5011494}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32e7d18c236cac2498e97e06558dc421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Armature_walk3quartersback_16
+      rect:
+        serializedVersion: 2
+        x: 1820
+        y: 1181
+        width: 180
+        height: 432
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4976852}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d4a3c836087b434e844716ef8e092bc
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Armature_walk3quartersback_17
+      rect:
+        serializedVersion: 2
+        x: 911
+        y: 1613
+        width: 179
+        height: 434
+      alignment: 9
+      pivot: {x: 0.5027933, y: 0.49769586}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1cfb5ca76be50d64d85eee046198a127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Armature_walk3quartersback_18
+      rect:
+        serializedVersion: 2
+        x: 1456
+        y: 1614
+        width: 180
+        height: 433
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4965358}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a837af3fe98d75044801ba92b3546338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Armature_walk3quartersback_19
+      rect:
+        serializedVersion: 2
+        x: 910
+        y: 305
+        width: 180
+        height: 434
+      alignment: 9
+      pivot: {x: 0.5, y: 0.49769586}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69f0ebea03109ae49b61d80f3ccba406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Armature_walk3quartersback_20
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 1175
+        width: 180
+        height: 435
+      alignment: 9
+      pivot: {x: 0.5, y: 0.49885058}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7dde6da8106dfc24b9360be316c3e65f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Armature_walk3quartersback_21
+      rect:
+        serializedVersion: 2
+        x: 1638
+        y: 1614
+        width: 180
+        height: 433
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4965358}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d80f1c0d8a20244ea1d6106052fbc31
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Armature_walk3quartersback_22
+      rect:
+        serializedVersion: 2
+        x: 1092
+        y: 1613
+        width: 180
+        height: 434
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8706902611084594bbc1a3bdc01f2e28
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Armature_walk3quartersback_23
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 738
+        width: 180
+        height: 435
+      alignment: 9
+      pivot: {x: 0.5, y: 0.49885058}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa7ce45196fc4214daf41e38229d81e2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Armature_walk3quartersback_24
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 1611
+        width: 180
+        height: 436
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa1e98189c2ffa244bd3716d7bf5f2e2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Armature_walk3quartersback_25
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 1173
+        width: 180
+        height: 436
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b628e34fcb52bb42b9b0cd9978d7674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Armature_walk3quartersback_26
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 297
+        width: 179
+        height: 436
+      alignment: 9
+      pivot: {x: 0.5027933, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d99a14ba91c6b344abf6eb4fbbc77eb6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Armature_walk3quartersback_27
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 735
+        width: 180
+        height: 436
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b83e615f1f34df64a97b37331de385cd
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Armature_walk3quartersback_28
+      rect:
+        serializedVersion: 2
+        x: 911
+        y: 1177
+        width: 180
+        height: 434
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52ba26fb17a9c6b4eb220704e0f5549d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Armature_walk3quartersback_29
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 301
+        width: 180
+        height: 435
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5011494}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cbde90adce67b5944960c71705b934e6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Armature_walk3quartersback_30
+      rect:
+        serializedVersion: 2
+        x: 547
+        y: 1612
+        width: 180
+        height: 435
+      alignment: 9
+      pivot: {x: 0.5, y: 0.49885058}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4785db3f35cc6a149a30457026893b13
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Armature_walk3quartersback_31
+      rect:
+        serializedVersion: 2
+        x: 911
+        y: 741
+        width: 180
+        height: 434
+      alignment: 9
+      pivot: {x: 0.5, y: 0.50230414}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 551c310db4c188849999b01654662c48
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Armature_walk3quartersback_32
+      rect:
+        serializedVersion: 2
+        x: 1092
+        y: 305
+        width: 180
+        height: 434
+      alignment: 9
+      pivot: {x: 0.5, y: 0.50230414}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f7ce914d62abd94daab2d65c62eb86d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Armature_walk3quartersback_33
+      rect:
+        serializedVersion: 2
+        x: 1093
+        y: 1177
+        width: 180
+        height: 434
+      alignment: 9
+      pivot: {x: 0.5, y: 0.50230414}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d8c415fb06693743afa40e2e5e74ab6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Armature_walk3quartersback_34
+      rect:
+        serializedVersion: 2
+        x: 1274
+        y: 1613
+        width: 180
+        height: 434
+      alignment: 9
+      pivot: {x: 0.5, y: 0.49769586}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f2d3eff166342648b133e77632f4031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Armature_walk3quartersback_35
+      rect:
+        serializedVersion: 2
+        x: 1456
+        y: 1180
+        width: 180
+        height: 432
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4976852}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4c9cb9179086004aa4e35422ac63c89
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Armature_walk3quartersback_36
+      rect:
+        serializedVersion: 2
+        x: 547
+        y: 1176
+        width: 180
+        height: 434
+      alignment: 9
+      pivot: {x: 0.5, y: 0.49769586}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dfabe2178c0aba84a94c96dedf71938b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: d9254e584c2094a4e995c5931c056185
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
