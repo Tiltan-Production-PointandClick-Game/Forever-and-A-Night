@@ -1,0 +1,2190 @@
+fileFormatVersion: 2
+guid: f87641d1f777c294eaa1283c75d09e22
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: ShopKeepIdle_SpriteSheet
+    21300002: ShopKeepIdle (1)
+    21300004: ShopKeepIdle (2)
+    21300006: ShopKeepIdle (3)
+    21300008: ShopKeepIdle (4)
+    21300010: ShopKeepIdle (5)
+    21300012: ShopKeepIdle (6)
+    21300014: ShopKeepIdle (7)
+    21300016: ShopKeepIdle (8)
+    21300018: ShopKeepIdle (9)
+    21300020: ShopKeepIdle (10)
+    21300022: ShopKeepIdle (11)
+    21300024: ShopKeepIdle (12)
+    21300026: ShopKeepIdle (13)
+    21300028: ShopKeepIdle (14)
+    21300030: ShopKeepIdle (15)
+    21300032: ShopKeepIdle (16)
+    21300034: ShopKeepIdle (17)
+    21300036: ShopKeepIdle (18)
+    21300038: ShopKeepIdle (19)
+    21300040: ShopKeepIdle (20)
+    21300042: ShopKeepIdle (21)
+    21300044: ShopKeepIdle (22)
+    21300046: ShopKeepIdle (23)
+    21300048: ShopKeepIdle (24)
+    21300050: ShopKeepIdle (25)
+    21300052: ShopKeepIdle (26)
+    21300054: ShopKeepIdle (27)
+    21300056: ShopKeepIdle (28)
+    21300058: ShopKeepIdle (29)
+    21300060: ShopKeepIdle (30)
+    21300062: ShopKeepIdle (31)
+    21300064: ShopKeepIdle (32)
+    21300066: ShopKeepIdle (33)
+    21300068: ShopKeepIdle (34)
+    21300070: ShopKeepIdle (35)
+    21300072: ShopKeepIdle (36)
+    21300074: ShopKeepIdle (37)
+    21300076: ShopKeepIdle (38)
+    21300078: ShopKeepIdle (39)
+    21300080: ShopKeepIdle (40)
+    21300082: ShopKeepIdle (41)
+    21300084: ShopKeepIdle (42)
+    21300086: ShopKeepIdle (43)
+    21300088: ShopKeepIdle (44)
+    21300090: ShopKeepIdle (45)
+    21300092: ShopKeepIdle (46)
+    21300094: ShopKeepIdle (47)
+    21300096: ShopKeepIdle (48)
+    21300098: ShopKeepIdle (49)
+    21300100: ShopKeepIdle (50)
+    21300102: ShopKeepIdle (51)
+    21300104: ShopKeepIdle (52)
+    21300106: ShopKeepIdle (53)
+    21300108: ShopKeepIdle (54)
+    21300110: ShopKeepIdle (55)
+    21300112: ShopKeepIdle (56)
+    21300114: ShopKeepIdle (57)
+    21300116: ShopKeepIdle (58)
+    21300118: ShopKeepIdle (59)
+    21300120: ShopKeepIdle (60)
+    21300122: ShopKeepIdle (61)
+    21300124: ShopKeepIdle (62)
+    21300126: ShopKeepIdle (63)
+    21300128: ShopKeepIdle (64)
+    21300130: ShopKeepIdle (65)
+    21300132: ShopKeepIdle (66)
+    21300134: ShopKeepIdle (67)
+    21300136: ShopKeepIdle (68)
+    21300138: ShopKeepIdle (69)
+    21300140: ShopKeepIdle (70)
+    21300142: ShopKeepIdle (71)
+    21300144: ShopKeepIdle (72)
+    21300146: ShopKeepIdle (73)
+    21300148: ShopKeepIdle (74)
+    21300150: ShopKeepIdle (75)
+    21300152: ShopKeepIdle (76)
+    21300154: ShopKeepIdle (77)
+    21300156: ShopKeepIdle (78)
+    21300158: ShopKeepIdle (79)
+    21300160: ShopKeepIdle (80)
+    21300162: ShopKeepIdle (81)
+    21300164: ShopKeepIdle (82)
+    21300166: ShopKeepIdle (83)
+    21300168: ShopKeepIdle (84)
+    21300170: ShopKeepIdle (85)
+    21300172: ShopKeepIdle (86)
+    21300174: ShopKeepIdle (87)
+    21300176: ShopKeepIdle (88)
+    21300178: ShopKeepIdle (89)
+    21300180: ShopKeepIdle (90)
+    21300182: ShopKeepIdle (91)
+    21300184: ShopKeepIdle (92)
+    21300186: ShopKeepIdle (93)
+    21300188: ShopKeepIdle (94)
+    21300190: ShopKeepIdle (95)
+    21300192: ShopKeepIdle (96)
+    21300194: ShopKeepIdle (97)
+    21300196: ShopKeepIdle (98)
+    21300198: ShopKeepIdle (99)
+  externalObjects: {}
+  serializedVersion: 9
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 2
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Android
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ShopKeepIdle (1)
+      rect:
+        serializedVersion: 2
+        x: 1256
+        y: 1101
+        width: 201
+        height: 426
+      alignment: 9
+      pivot: {x: 0.51492536, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c497d5e7a3a3cc74e809b775220d8e14
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShopKeepIdle (2)
+      rect:
+        serializedVersion: 2
+        x: 633
+        y: 2813
+        width: 207
+        height: 426
+      alignment: 9
+      pivot: {x: 0.5048309, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 541847a8b5635aa4f925009a0f4dd234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShopKeepIdle (3)
+      rect:
+        serializedVersion: 2
+        x: 423
+        y: 3669
+        width: 208
+        height: 426
+      alignment: 9
+      pivot: {x: 0.50240386, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74ad703b343dd4d46a86d53371eb09bb
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShopKeepIdle (4)
+      rect:
+        serializedVersion: 2
+        x: 2501
+        y: 3241
+        width: 205
+        height: 426
+      alignment: 9
+      pivot: {x: 0.5097561, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 376117277e8a3d64ab76f059a87a6f78
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShopKeepIdle (5)
+      rect:
+        serializedVersion: 2
+        x: 3741
+        y: 3241
+        width: 204
+        height: 426
+      alignment: 9
+      pivot: {x: 0.5122549, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d01da143de8423a479665dd35132d55c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShopKeepIdle (6)
+      rect:
+        serializedVersion: 2
+        x: 423
+        y: 2385
+        width: 208
+        height: 426
+      alignment: 9
+      pivot: {x: 0.50240386, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d92995f4e986ea4a80c60dc4fd59c57
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShopKeepIdle (7)
+      rect:
+        serializedVersion: 2
+        x: 1050
+        y: 1957
+        width: 204
+        height: 426
+      alignment: 9
+      pivot: {x: 0.5122549, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2779520667696346b3e66aa1b13b74d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShopKeepIdle (8)
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 1957
+        width: 209
+        height: 426
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a25e9de2f53b76409e35e764cb21625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShopKeepIdle (9)
+      rect:
+        serializedVersion: 2
+        x: 2724
+        y: 3669
+        width: 207
+        height: 426
+      alignment: 9
+      pivot: {x: 0.5048309, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f6a292d580d84343bd0e14bacc433f9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShopKeepIdle (10)
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 3669
+        width: 209
+        height: 426
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8561f5faed29c3f42945df9e79916133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShopKeepIdle (11)
+      rect:
+        serializedVersion: 2
+        x: 1466
+        y: 3241
+        width: 205
+        height: 426
+      alignment: 9
+      pivot: {x: 0.5097561, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5669b28bd732b5449fd4a949203d560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShopKeepIdle (12)
+      rect:
+        serializedVersion: 2
+        x: 3329
+        y: 3241
+        width: 204
+        height: 426
+      alignment: 9
+      pivot: {x: 0.50735295, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ccfe94c7e9d274e439a275ba7f321271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShopKeepIdle (13)
+      rect:
+        serializedVersion: 2
+        x: 1673
+        y: 3241
+        width: 205
+        height: 426
+      alignment: 9
+      pivot: {x: 0.50487804, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1ee5f6be9cab794284a195a7e21ed73
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShopKeepIdle (14)
+      rect:
+        serializedVersion: 2
+        x: 633
+        y: 3241
+        width: 207
+        height: 426
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf4a75bf16520194c927afe5af26c272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShopKeepIdle (15)
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 673
+        width: 208
+        height: 426
+      alignment: 9
+      pivot: {x: 0.50240386, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1afd9a9d707db6b43bba8fb473d665f1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShopKeepIdle (16)
+      rect:
+        serializedVersion: 2
+        x: 3560
+        y: 3669
+        width: 206
+        height: 426
+      alignment: 9
+      pivot: {x: 0.50728154, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6e2a22a6cdb2f14e92e00ee42cb70cd
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShopKeepIdle (17)
+      rect:
+        serializedVersion: 2
+        x: 3768
+        y: 3669
+        width: 206
+        height: 426
+      alignment: 9
+      pivot: {x: 0.50728154, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec9ea4528f6c7b64eb5d02081435a8b1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShopKeepIdle (18)
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 3241
+        width: 209
+        height: 426
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ddb447ec5c34edd4ea383d6072caa2ab
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShopKeepIdle (19)
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 2813
+        width: 209
+        height: 426
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8e8c40c60fef7f4c85f5fe413c8bc59
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShopKeepIdle (20)
+      rect:
+        serializedVersion: 2
+        x: 842
+        y: 3241
+        width: 206
+        height: 426
+      alignment: 9
+      pivot: {x: 0.50728154, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89bb4880642686a439dca248d0aa38d1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShopKeepIdle (21)
+      rect:
+        serializedVersion: 2
+        x: 842
+        y: 2813
+        width: 206
+        height: 426
+      alignment: 9
+      pivot: {x: 0.50728154, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd47539288b29c94f9b1a42516ebc83a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShopKeepIdle (22)
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 2385
+        width: 209
+        height: 426
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a669d55056d68b40b072214ead33b88
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShopKeepIdle (23)
+      rect:
+        serializedVersion: 2
+        x: 842
+        y: 2385
+        width: 206
+        height: 426
+      alignment: 9
+      pivot: {x: 0.50728154, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b99def8238e1cc49928445488d3b1a9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShopKeepIdle (24)
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 245
+        width: 208
+        height: 426
+      alignment: 9
+      pivot: {x: 0.50240386, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a83c98a520506e5468dfa97e0933a15a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShopKeepIdle (25)
+      rect:
+        serializedVersion: 2
+        x: 422
+        y: 673
+        width: 208
+        height: 426
+      alignment: 9
+      pivot: {x: 0.50240386, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a9f57c3e2b6ab04685b4833c8a32f82
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShopKeepIdle (26)
+      rect:
+        serializedVersion: 2
+        x: 1880
+        y: 3241
+        width: 205
+        height: 426
+      alignment: 9
+      pivot: {x: 0.5097561, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c81651d0ed6272745a647627cdc19118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShopKeepIdle (27)
+      rect:
+        serializedVersion: 2
+        x: 2087
+        y: 3241
+        width: 205
+        height: 426
+      alignment: 9
+      pivot: {x: 0.5097561, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19ac51a9dcdf4754da1d22884cb00235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShopKeepIdle (28)
+      rect:
+        serializedVersion: 2
+        x: 422
+        y: 245
+        width: 208
+        height: 426
+      alignment: 9
+      pivot: {x: 0.50240386, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 917547c56a6b7d544bd9bf241ca0a032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShopKeepIdle (29)
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1957
+        width: 209
+        height: 426
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1418e88219273de458c333e447e42d28
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShopKeepIdle (30)
+      rect:
+        serializedVersion: 2
+        x: 1050
+        y: 673
+        width: 203
+        height: 426
+      alignment: 9
+      pivot: {x: 0.5147783, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa22d8550d1deeb44a7d8c6d663a9b21
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShopKeepIdle (31)
+      rect:
+        serializedVersion: 2
+        x: 633
+        y: 2385
+        width: 207
+        height: 426
+      alignment: 9
+      pivot: {x: 0.5048309, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ec2f6291ca26c34cbaadfc00200ccfc
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShopKeepIdle (32)
+      rect:
+        serializedVersion: 2
+        x: 842
+        y: 1957
+        width: 206
+        height: 426
+      alignment: 9
+      pivot: {x: 0.50728154, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5cbe5ae31b3f884696fff73281c8f3a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShopKeepIdle (33)
+      rect:
+        serializedVersion: 2
+        x: 2294
+        y: 3241
+        width: 205
+        height: 426
+      alignment: 9
+      pivot: {x: 0.5097561, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 258aa261b95ad7247abbe069aa23d4e6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShopKeepIdle (34)
+      rect:
+        serializedVersion: 2
+        x: 1255
+        y: 673
+        width: 202
+        height: 426
+      alignment: 9
+      pivot: {x: 0.5173267, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f2dcefb09ebb634479a9468920f2c4da
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShopKeepIdle (35)
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1529
+        width: 209
+        height: 426
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: edb3fe2a0d8c98b4b839002590763b2d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShopKeepIdle (36)
+      rect:
+        serializedVersion: 2
+        x: 1460
+        y: 2813
+        width: 199
+        height: 426
+      alignment: 9
+      pivot: {x: 0.5201005, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b6446605ac347e24d92e4b7fb4eb1cb3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShopKeepIdle (37)
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1101
+        width: 209
+        height: 426
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b1f234a07c48e04e923f717b5d91ed1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShopKeepIdle (38)
+      rect:
+        serializedVersion: 2
+        x: 423
+        y: 3241
+        width: 208
+        height: 426
+      alignment: 9
+      pivot: {x: 0.50240386, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8c0d2d59bb88374e909f88f7d12b366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShopKeepIdle (39)
+      rect:
+        serializedVersion: 2
+        x: 1460
+        y: 2385
+        width: 198
+        height: 426
+      alignment: 9
+      pivot: {x: 0.5277778, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12d0fcce8c0b6d645aaf3db2d9b3bd91
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShopKeepIdle (40)
+      rect:
+        serializedVersion: 2
+        x: 3535
+        y: 3241
+        width: 204
+        height: 426
+      alignment: 9
+      pivot: {x: 0.50735295, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 294e6fdd4f6d3154ea50c6e89d24fcbf
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShopKeepIdle (41)
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 673
+        width: 209
+        height: 426
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc739f41a1e8ee3478f1ab004253e249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShopKeepIdle (42)
+      rect:
+        serializedVersion: 2
+        x: 1460
+        y: 1529
+        width: 196
+        height: 426
+      alignment: 9
+      pivot: {x: 0.53316325, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7546b9bbcf2fa1a43b7fb69e17343666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShopKeepIdle (43)
+      rect:
+        serializedVersion: 2
+        x: 1255
+        y: 245
+        width: 202
+        height: 426
+      alignment: 9
+      pivot: {x: 0.5074257, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5469c0581c9d2046b140b6428f8c448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShopKeepIdle (44)
+      rect:
+        serializedVersion: 2
+        x: 1459
+        y: 245
+        width: 200
+        height: 426
+      alignment: 9
+      pivot: {x: 0.5125, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d107e49fae4611340a3b59ed7174712c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShopKeepIdle (45)
+      rect:
+        serializedVersion: 2
+        x: 1050
+        y: 245
+        width: 203
+        height: 426
+      alignment: 9
+      pivot: {x: 0.50985223, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc80fb2c922763543a8b6b182140966d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShopKeepIdle (46)
+      rect:
+        serializedVersion: 2
+        x: 1256
+        y: 2813
+        width: 202
+        height: 426
+      alignment: 9
+      pivot: {x: 0.5173267, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2967e0de370e1a940ba5c86feb3c7b35
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShopKeepIdle (47)
+      rect:
+        serializedVersion: 2
+        x: 1661
+        y: 245
+        width: 200
+        height: 426
+      alignment: 9
+      pivot: {x: 0.5175, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eceeea3209259e14fa2bce1f6af581e0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShopKeepIdle (48)
+      rect:
+        serializedVersion: 2
+        x: 1661
+        y: 2813
+        width: 191
+        height: 426
+      alignment: 9
+      pivot: {x: 0.5471204, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd760464856ad9446bc4b4f118f357b7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShopKeepIdle (49)
+      rect:
+        serializedVersion: 2
+        x: 1659
+        y: 1957
+        width: 193
+        height: 426
+      alignment: 9
+      pivot: {x: 0.53108805, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a8ce4ff40e1d55449fbf2e597ee6c69
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShopKeepIdle (50)
+      rect:
+        serializedVersion: 2
+        x: 1460
+        y: 1957
+        width: 197
+        height: 426
+      alignment: 9
+      pivot: {x: 0.53045684, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11759b90d02153e4c9fc9ebc83ef5696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShopKeepIdle (51)
+      rect:
+        serializedVersion: 2
+        x: 1660
+        y: 2385
+        width: 192
+        height: 426
+      alignment: 9
+      pivot: {x: 0.5442708, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15d66d494c691094186aa2288acc0cc8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShopKeepIdle (52)
+      rect:
+        serializedVersion: 2
+        x: 1459
+        y: 1101
+        width: 201
+        height: 426
+      alignment: 9
+      pivot: {x: 0.5199005, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b33bb7739fcfe6f44a1ab07db9cf6545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShopKeepIdle (53)
+      rect:
+        serializedVersion: 2
+        x: 1256
+        y: 2385
+        width: 202
+        height: 426
+      alignment: 9
+      pivot: {x: 0.5173267, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8592d7615d69ed643aba5e6fbcd3e1f5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShopKeepIdle (54)
+      rect:
+        serializedVersion: 2
+        x: 1050
+        y: 2813
+        width: 204
+        height: 426
+      alignment: 9
+      pivot: {x: 0.5122549, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8a828d8e3fa29a45bad2784a42b4042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShopKeepIdle (55)
+      rect:
+        serializedVersion: 2
+        x: 1256
+        y: 1957
+        width: 202
+        height: 426
+      alignment: 9
+      pivot: {x: 0.5074257, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73a3bab0e7e5a7841b12913eda6127ea
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShopKeepIdle (56)
+      rect:
+        serializedVersion: 2
+        x: 1658
+        y: 1529
+        width: 196
+        height: 426
+      alignment: 9
+      pivot: {x: 0.53316325, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a796809517bd9c343a78aa1a7cb850bc
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShopKeepIdle (57)
+      rect:
+        serializedVersion: 2
+        x: 2708
+        y: 3241
+        width: 205
+        height: 426
+      alignment: 9
+      pivot: {x: 0.5097561, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ee2bc5565631bc459e8b6788abe157f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShopKeepIdle (58)
+      rect:
+        serializedVersion: 2
+        x: 2915
+        y: 3241
+        width: 205
+        height: 426
+      alignment: 9
+      pivot: {x: 0.5097561, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a69212c129ead44a8f202921a5feb6f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShopKeepIdle (59)
+      rect:
+        serializedVersion: 2
+        x: 423
+        y: 2813
+        width: 208
+        height: 426
+      alignment: 9
+      pivot: {x: 0.50240386, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47e0f236e7319fa46b16de639866b16a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShopKeepIdle (60)
+      rect:
+        serializedVersion: 2
+        x: 842
+        y: 1529
+        width: 206
+        height: 426
+      alignment: 9
+      pivot: {x: 0.50242716, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 323b9aac10a529e4297cd140d5822d80
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShopKeepIdle (61)
+      rect:
+        serializedVersion: 2
+        x: 633
+        y: 1957
+        width: 207
+        height: 426
+      alignment: 9
+      pivot: {x: 0.5048309, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7bd8e4238997ad243a988599290295d6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShopKeepIdle (62)
+      rect:
+        serializedVersion: 2
+        x: 633
+        y: 1529
+        width: 207
+        height: 426
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 993069e99742f0d4e9c2e51c920bbe39
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShopKeepIdle (63)
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 245
+        width: 209
+        height: 426
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56e755af42c2e0a49be898e749b7f17c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShopKeepIdle (64)
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 3669
+        width: 209
+        height: 426
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09b52a43f4a8a1447bae21080409157e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShopKeepIdle (65)
+      rect:
+        serializedVersion: 2
+        x: 423
+        y: 1957
+        width: 208
+        height: 426
+      alignment: 9
+      pivot: {x: 0.49759614, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0594573dda83064285fb8eaa1dd9e0a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShopKeepIdle (66)
+      rect:
+        serializedVersion: 2
+        x: 423
+        y: 1529
+        width: 208
+        height: 426
+      alignment: 9
+      pivot: {x: 0.50240386, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35247c2a39d5f754d983f8d865919674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShopKeepIdle (67)
+      rect:
+        serializedVersion: 2
+        x: 1050
+        y: 2385
+        width: 204
+        height: 426
+      alignment: 9
+      pivot: {x: 0.5122549, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d6346db4b700b748b711610783c064b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShopKeepIdle (68)
+      rect:
+        serializedVersion: 2
+        x: 423
+        y: 1101
+        width: 208
+        height: 426
+      alignment: 9
+      pivot: {x: 0.50240386, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 712a351a5ec85d1478fc86c7b016b0e5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShopKeepIdle (69)
+      rect:
+        serializedVersion: 2
+        x: 842
+        y: 1101
+        width: 206
+        height: 426
+      alignment: 9
+      pivot: {x: 0.50728154, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89b468b927e124749a85fae57ed1c940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShopKeepIdle (70)
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 3241
+        width: 209
+        height: 426
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63925ad1d7883494badab6a823e7f09e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShopKeepIdle (71)
+      rect:
+        serializedVersion: 2
+        x: 842
+        y: 673
+        width: 206
+        height: 426
+      alignment: 9
+      pivot: {x: 0.50728154, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 397022fea7d174441aeab31f22afd954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShopKeepIdle (72)
+      rect:
+        serializedVersion: 2
+        x: 842
+        y: 245
+        width: 206
+        height: 426
+      alignment: 9
+      pivot: {x: 0.50728154, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 250f54662a6aeb64b871a59f556b47e8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShopKeepIdle (73)
+      rect:
+        serializedVersion: 2
+        x: 633
+        y: 1101
+        width: 207
+        height: 426
+      alignment: 9
+      pivot: {x: 0.5048309, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a9aa6f2685c9204a9a8ee428c347480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShopKeepIdle (74)
+      rect:
+        serializedVersion: 2
+        x: 843
+        y: 3669
+        width: 207
+        height: 426
+      alignment: 9
+      pivot: {x: 0.5048309, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf5ac5fa5d8b45343a55f8e7ceae7b71
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShopKeepIdle (75)
+      rect:
+        serializedVersion: 2
+        x: 1052
+        y: 3669
+        width: 207
+        height: 426
+      alignment: 9
+      pivot: {x: 0.5048309, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3caffb43bc009da44b8ae9d6c55bd89b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShopKeepIdle (76)
+      rect:
+        serializedVersion: 2
+        x: 1261
+        y: 3669
+        width: 207
+        height: 426
+      alignment: 9
+      pivot: {x: 0.5048309, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 10d504e46fa1c7a4ca7b13edcb6d780e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShopKeepIdle (77)
+      rect:
+        serializedVersion: 2
+        x: 1470
+        y: 3669
+        width: 207
+        height: 426
+      alignment: 9
+      pivot: {x: 0.5048309, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 233ae7e32d1b70540a97934b9789bef4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShopKeepIdle (78)
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 2813
+        width: 209
+        height: 426
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f276ebde390a2814ca4132f6f05448f2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShopKeepIdle (79)
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 2385
+        width: 209
+        height: 426
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93b951710fa1f814894df7df91c2723c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShopKeepIdle (80)
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 1529
+        width: 209
+        height: 426
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 074390e9329461f409b3a25a11676d98
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShopKeepIdle (81)
+      rect:
+        serializedVersion: 2
+        x: 1679
+        y: 3669
+        width: 207
+        height: 426
+      alignment: 9
+      pivot: {x: 0.5048309, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0bd688e0444a92b409ff874699f983dc
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShopKeepIdle (82)
+      rect:
+        serializedVersion: 2
+        x: 1888
+        y: 3669
+        width: 207
+        height: 426
+      alignment: 9
+      pivot: {x: 0.5048309, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74d492f135beac2418fbe745b0dc5b44
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShopKeepIdle (83)
+      rect:
+        serializedVersion: 2
+        x: 632
+        y: 673
+        width: 208
+        height: 426
+      alignment: 9
+      pivot: {x: 0.50240386, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f3f098eb4b96c643949229bc55f2f67
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShopKeepIdle (84)
+      rect:
+        serializedVersion: 2
+        x: 2097
+        y: 3669
+        width: 207
+        height: 426
+      alignment: 9
+      pivot: {x: 0.5048309, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86826c21c92b13d4199eadb9934755f5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShopKeepIdle (85)
+      rect:
+        serializedVersion: 2
+        x: 2306
+        y: 3669
+        width: 207
+        height: 426
+      alignment: 9
+      pivot: {x: 0.5048309, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43be978cc0eb6cd438a8f829497627d0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShopKeepIdle (86)
+      rect:
+        serializedVersion: 2
+        x: 2515
+        y: 3669
+        width: 207
+        height: 426
+      alignment: 9
+      pivot: {x: 0.5048309, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe954543955dccd448e02b79a3516b4b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShopKeepIdle (87)
+      rect:
+        serializedVersion: 2
+        x: 1050
+        y: 3241
+        width: 206
+        height: 426
+      alignment: 9
+      pivot: {x: 0.50728154, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2e21d354fb715e489134003d6ffd569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShopKeepIdle (88)
+      rect:
+        serializedVersion: 2
+        x: 632
+        y: 245
+        width: 208
+        height: 426
+      alignment: 9
+      pivot: {x: 0.50240386, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01ea364f415aedd408f692bc9f175db9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShopKeepIdle (89)
+      rect:
+        serializedVersion: 2
+        x: 3122
+        y: 3241
+        width: 205
+        height: 426
+      alignment: 9
+      pivot: {x: 0.50487804, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77d1759064ce9324bb2b5a96bef5dbc6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShopKeepIdle (90)
+      rect:
+        serializedVersion: 2
+        x: 1050
+        y: 1529
+        width: 204
+        height: 426
+      alignment: 9
+      pivot: {x: 0.50735295, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e58196dfefc4fe54aaee2e75c31017a9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShopKeepIdle (91)
+      rect:
+        serializedVersion: 2
+        x: 1050
+        y: 1101
+        width: 204
+        height: 426
+      alignment: 9
+      pivot: {x: 0.50735295, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e86c4c3a2cdd3d24d8911f75fd29fed6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShopKeepIdle (92)
+      rect:
+        serializedVersion: 2
+        x: 2933
+        y: 3669
+        width: 207
+        height: 426
+      alignment: 9
+      pivot: {x: 0.5048309, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 188bec23d75bf4747bbf0f82be4b2b44
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShopKeepIdle (93)
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 1101
+        width: 209
+        height: 426
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0c456e80c169ec4083a5dc6829c7b03
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShopKeepIdle (94)
+      rect:
+        serializedVersion: 2
+        x: 1258
+        y: 3241
+        width: 206
+        height: 426
+      alignment: 9
+      pivot: {x: 0.50728154, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea368f21208c4c64c9e9c169f2098d05
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShopKeepIdle (95)
+      rect:
+        serializedVersion: 2
+        x: 633
+        y: 3669
+        width: 208
+        height: 426
+      alignment: 9
+      pivot: {x: 0.50240386, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74450f9d1f503464a9bdd8dcc263034c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShopKeepIdle (96)
+      rect:
+        serializedVersion: 2
+        x: 3142
+        y: 3669
+        width: 207
+        height: 426
+      alignment: 9
+      pivot: {x: 0.5048309, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: baf0d039a0f0e5545894c4e6dcbff3b2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShopKeepIdle (97)
+      rect:
+        serializedVersion: 2
+        x: 1256
+        y: 1529
+        width: 202
+        height: 426
+      alignment: 9
+      pivot: {x: 0.5173267, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8621d56c7a49ad4e906da4016bf7ec0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShopKeepIdle (98)
+      rect:
+        serializedVersion: 2
+        x: 3351
+        y: 3669
+        width: 207
+        height: 426
+      alignment: 9
+      pivot: {x: 0.5048309, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f61854341916e640bb983625b657115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShopKeepIdle (99)
+      rect:
+        serializedVersion: 2
+        x: 1459
+        y: 673
+        width: 201
+        height: 426
+      alignment: 9
+      pivot: {x: 0.5199005, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 590365387b5415f429ef6020551352ec
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 25f8fdb5bb3c2c741ab0af3767d4b4f2
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

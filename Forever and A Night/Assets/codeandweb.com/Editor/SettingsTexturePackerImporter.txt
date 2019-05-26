@@ -2,9 +2,15 @@ version: 2
 importPivots: 1
 tpsheetFileNames:
 - Assets/codeandweb.com/Example/SpriteSheet/sprites.tpsheet
+- Assets/Forever And a Night/Art&Graphics/Characters/NPC's/Sprites/BoyIdle_SpriteSheets/BoyIdle_SpriteSheet.tpsheet
+- Assets/Forever And a Night/Art&Graphics/Characters/NPC's/Sprites/LibrarianIdle_SpriteSheets/LibrarianIdle_SpriteSheet.tpsheet
+- Assets/Forever And a Night/Art&Graphics/Characters/NPC's/Sprites/MadamIdle_SpriteSheets/MadamIdle_SpriteSheets.tpsheet
+- Assets/Forever And a Night/Art&Graphics/Characters/NPC's/Sprites/MoonLoverIdle_SpriteSheets/MoonLoverIdle_SpriteSheet.tpsheet
+- Assets/Forever And a Night/Art&Graphics/Characters/NPC's/Sprites/ShopKeepIdle_SpriteSheets/ShopKeepIdle_SpriteSheet.tpsheet
 - Assets/Forever And a Night/Art&Graphics/Characters/Player/Animations/Sprites/3QBackIdle_SpriteSheet/3QBackIdle_SpriteSheet.tpsheet
 - Assets/Forever And a Night/Art&Graphics/Characters/Player/Animations/Sprites/3QBackWalk_SpriteSheets/3QBackWalk_SpriteSheet.tpsheet
-- Assets/Forever And a Night/Art&Graphics/Characters/Player/Animations/Sprites/3QFrontWalk_SpriteSheets/3QFrontWalk_SpriteSheet.tpsheet
+- Assets/Forever And a Night/Art&Graphics/Characters/Player/Animations/Sprites/3QFrontIdle_SpriteSheets/3QFrontIdle_TP.tpsheet
+- Assets/Forever And a Night/Art&Graphics/Characters/Player/Animations/Sprites/3QFWalk_SpriteSheets/3QFWalk_SpriteSheet.tpsheet
 - Assets/Forever And a Night/Art&Graphics/Characters/Player/Animations/Sprites/BackIdle_SpriteSheet/BackIdleSpriteSheeet.tpsheet
 - Assets/Forever And a Night/Art&Graphics/Characters/Player/Animations/Sprites/BackWalk_SpriteSheet/BackWalk_SpriteSheet.tpsheet
 - Assets/Forever And a Night/Art&Graphics/Characters/Player/Animations/Sprites/FrontIdle_SpriteSheets/frontIdleSpriteS.tpsheet
@@ -13,9 +19,15 @@ tpsheetFileNames:
 - Assets/Forever And a Night/Art&Graphics/Characters/Player/Animations/Sprites/SidleIdle_SpriteSheet/SideIdleSpriteSheet.tpsheet
 textureFileNames:
 - Assets/codeandweb.com/Example/SpriteSheet/sprites.png
+- Assets/Forever And a Night/Art&Graphics/Characters/NPC's/Sprites/BoyIdle_SpriteSheets/BoyIdle_SpriteSheet.png
+- Assets/Forever And a Night/Art&Graphics/Characters/NPC's/Sprites/LibrarianIdle_SpriteSheets/LibrarianIdle_SpriteSheet.png
+- Assets/Forever And a Night/Art&Graphics/Characters/NPC's/Sprites/MadamIdle_SpriteSheets/MadamIdle_SpriteSheets.png
+- Assets/Forever And a Night/Art&Graphics/Characters/NPC's/Sprites/MoonLoverIdle_SpriteSheets/MoonLoverIdle_SpriteSheet.png
+- Assets/Forever And a Night/Art&Graphics/Characters/NPC's/Sprites/ShopKeepIdle_SpriteSheets/ShopKeepIdle_SpriteSheet.png
 - Assets/Forever And a Night/Art&Graphics/Characters/Player/Animations/Sprites/3QBackIdle_SpriteSheet/3QBackIdle_SpriteSheet.png
 - Assets/Forever And a Night/Art&Graphics/Characters/Player/Animations/Sprites/3QBackWalk_SpriteSheets/3QBackWalk_SpriteSheet.png
-- Assets/Forever And a Night/Art&Graphics/Characters/Player/Animations/Sprites/3QFrontWalk_SpriteSheets/3QFrontWalk_SpriteSheet.png
+- Assets/Forever And a Night/Art&Graphics/Characters/Player/Animations/Sprites/3QFrontIdle_SpriteSheets/3QFrontIdle_TP.png
+- Assets/Forever And a Night/Art&Graphics/Characters/Player/Animations/Sprites/3QFWalk_SpriteSheets/3QFrontWalk_SpriteSheet.png
 - Assets/Forever And a Night/Art&Graphics/Characters/Player/Animations/Sprites/BackIdle_SpriteSheet/BackIdleSpriteSheeet.png
 - Assets/Forever And a Night/Art&Graphics/Characters/Player/Animations/Sprites/BackWalk_SpriteSheet/BackWalk_SpriteSheet.png
 - Assets/Forever And a Night/Art&Graphics/Characters/Player/Animations/Sprites/FrontIdle_SpriteSheets/frontIdleSpriteS.png
@@ -24,9 +36,15 @@ textureFileNames:
 - Assets/Forever And a Night/Art&Graphics/Characters/Player/Animations/Sprites/SidleIdle_SpriteSheet/SideIdleSpriteSheet.png
 normalmapFileNames:
 - Assets/codeandweb.com/Example/SpriteSheet/sprites_n.png
+- Assets/Forever And a Night/Art&Graphics/Characters/NPC's/Sprites/BoyIdle_SpriteSheets/BoyIdle_SpriteSheet_n.png
+- Assets/Forever And a Night/Art&Graphics/Characters/NPC's/Sprites/LibrarianIdle_SpriteSheets/LibrarianIdle_SpriteSheet_n.png
+- Assets/Forever And a Night/Art&Graphics/Characters/NPC's/Sprites/MadamIdle_SpriteSheets/MadamIdle_SpriteSheets_n.png
+- Assets/Forever And a Night/Art&Graphics/Characters/NPC's/Sprites/MoonLoverIdle_SpriteSheets/MoonLoverIdle_SpriteSheet_n.png
+- Assets/Forever And a Night/Art&Graphics/Characters/NPC's/Sprites/ShopKeepIdle_SpriteSheets/ShopKeepIdle_SpriteSheet_n.png
 - Assets/Forever And a Night/Art&Graphics/Characters/Player/Animations/Sprites/3QBackIdle_SpriteSheet/3QBackIdle_SpriteSheet_n.png
 - Assets/Forever And a Night/Art&Graphics/Characters/Player/Animations/Sprites/3QBackWalk_SpriteSheets/3QBackWalk_SpriteSheet_n.png
-- Assets/Forever And a Night/Art&Graphics/Characters/Player/Animations/Sprites/3QFrontWalk_SpriteSheets/3QFrontWalk_SpriteSheet_n.png
+- Assets/Forever And a Night/Art&Graphics/Characters/Player/Animations/Sprites/3QFrontIdle_SpriteSheets/3QFrontIdle_TP_n.png
+- Assets/Forever And a Night/Art&Graphics/Characters/Player/Animations/Sprites/3QFWalk_SpriteSheets/3QFrontWalk_SpriteSheet_n.png
 - Assets/Forever And a Night/Art&Graphics/Characters/Player/Animations/Sprites/BackIdle_SpriteSheet/BackIdleSpriteSheeet_n.png
 - Assets/Forever And a Night/Art&Graphics/Characters/Player/Animations/Sprites/BackWalk_SpriteSheet/BackWalk_SpriteSheet_n.png
 - Assets/Forever And a Night/Art&Graphics/Characters/Player/Animations/Sprites/FrontIdle_SpriteSheets/frontIdleSpriteS_n.png
