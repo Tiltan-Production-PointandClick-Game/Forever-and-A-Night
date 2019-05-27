@@ -1,0 +1,866 @@
+fileFormatVersion: 2
+guid: 67f45cdeec548d1459356b7bea3124a8
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: 3QBackWalkSpriteSheet
+    21300002: 3QBackWalk (1)
+    21300004: 3QBackWalk (2)
+    21300006: 3QBackWalk (3)
+    21300008: 3QBackWalk (4)
+    21300010: 3QBackWalk (5)
+    21300012: 3QBackWalk (6)
+    21300014: 3QBackWalk (7)
+    21300016: 3QBackWalk (8)
+    21300018: 3QBackWalk (9)
+    21300020: 3QBackWalk (10)
+    21300022: 3QBackWalk (11)
+    21300024: 3QBackWalk (12)
+    21300026: 3QBackWalk (13)
+    21300028: 3QBackWalk (14)
+    21300030: 3QBackWalk (15)
+    21300032: 3QBackWalk (16)
+    21300034: 3QBackWalk (17)
+    21300036: 3QBackWalk (18)
+    21300038: 3QBackWalk (19)
+    21300040: 3QBackWalk (20)
+    21300042: 3QBackWalk (21)
+    21300044: 3QBackWalk (22)
+    21300046: 3QBackWalk (23)
+    21300048: 3QBackWalk (24)
+    21300050: 3QBackWalk (25)
+    21300052: 3QBackWalk (26)
+    21300054: 3QBackWalk (27)
+    21300056: 3QBackWalk (28)
+    21300058: 3QBackWalk (29)
+    21300060: 3QBackWalk (30)
+    21300062: 3QBackWalk (31)
+    21300064: 3QBackWalk (32)
+    21300066: 3QBackWalk (33)
+    21300068: 3QBackWalk (34)
+    21300070: 3QBackWalk (35)
+    21300072: 3QBackWalk (36)
+    21300074: 3QBackWalk (37)
+  externalObjects: {}
+  serializedVersion: 9
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: 3QBackWalk (1)
+      rect:
+        serializedVersion: 2
+        x: 547
+        y: 1176
+        width: 180
+        height: 434
+      alignment: 9
+      pivot: {x: 0.5, y: 0.49769586}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d29b789d58c4d84c8e697df8fcf86e6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3QBackWalk (2)
+      rect:
+        serializedVersion: 2
+        x: 1820
+        y: 1181
+        width: 180
+        height: 432
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4976852}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd4dd5bbcdbf152459c99b9849cfd0bd
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3QBackWalk (3)
+      rect:
+        serializedVersion: 2
+        x: 1456
+        y: 1614
+        width: 180
+        height: 433
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4965358}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: edcc6366b82ede4478480b89348aeb72
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3QBackWalk (4)
+      rect:
+        serializedVersion: 2
+        x: 1092
+        y: 305
+        width: 180
+        height: 434
+      alignment: 9
+      pivot: {x: 0.5, y: 0.49769586}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df509f7b7d5447142b79ad94b7687e5c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3QBackWalk (5)
+      rect:
+        serializedVersion: 2
+        x: 1093
+        y: 1177
+        width: 180
+        height: 434
+      alignment: 9
+      pivot: {x: 0.5, y: 0.49769586}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77e5423642ef98648840934b14835e7f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3QBackWalk (6)
+      rect:
+        serializedVersion: 2
+        x: 1275
+        y: 746
+        width: 179
+        height: 433
+      alignment: 9
+      pivot: {x: 0.5027933, y: 0.4965358}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52550d5e0d9b1cc4481e71e0cbf2d09b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3QBackWalk (7)
+      rect:
+        serializedVersion: 2
+        x: 1638
+        y: 1614
+        width: 180
+        height: 433
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4965358}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c5f054300b90ef459537b1d99dd39d2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3QBackWalk (8)
+      rect:
+        serializedVersion: 2
+        x: 1274
+        y: 1613
+        width: 180
+        height: 434
+      alignment: 9
+      pivot: {x: 0.5, y: 0.49769586}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 479837548b0fbe941a2f39f9c8c3b3f0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3QBackWalk (9)
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 735
+        width: 180
+        height: 436
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2599cf296913e5459640702c11788b2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3QBackWalk (10)
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1611
+        width: 180
+        height: 436
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef79cc2abde5bb540b02121d9a165b6e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3QBackWalk (11)
+      rect:
+        serializedVersion: 2
+        x: 364
+        y: 298
+        width: 180
+        height: 435
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5011494}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d090a9e08805c3a4188345a3c625ec30
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3QBackWalk (12)
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1173
+        width: 180
+        height: 436
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: afea9830b9bbf504e860311d356b9537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3QBackWalk (13)
+      rect:
+        serializedVersion: 2
+        x: 547
+        y: 740
+        width: 180
+        height: 434
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7cb28545eeccd244399394d28b74ed29
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3QBackWalk (14)
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 735
+        width: 180
+        height: 436
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bfb5341a6069452478cf6151b2f9ca60
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3QBackWalk (15)
+      rect:
+        serializedVersion: 2
+        x: 728
+        y: 304
+        width: 180
+        height: 434
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2123b668302636948bc8ad9c9174c27b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3QBackWalk (16)
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 1612
+        width: 180
+        height: 435
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5011494}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8fb32c5a7d22dc64aa767756484a3a60
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3QBackWalk (17)
+      rect:
+        serializedVersion: 2
+        x: 1820
+        y: 1615
+        width: 180
+        height: 432
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4976852}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f483dfa2dd6167446939ed225816548c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3QBackWalk (18)
+      rect:
+        serializedVersion: 2
+        x: 911
+        y: 1613
+        width: 179
+        height: 434
+      alignment: 9
+      pivot: {x: 0.5027933, y: 0.49769586}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab298d0b8e9b7e04e8dd419480cd88da
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3QBackWalk (19)
+      rect:
+        serializedVersion: 2
+        x: 1093
+        y: 742
+        width: 180
+        height: 433
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4965358}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f55a8106a4ca23a45898344e83c44ede
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3QBackWalk (20)
+      rect:
+        serializedVersion: 2
+        x: 729
+        y: 1613
+        width: 180
+        height: 434
+      alignment: 9
+      pivot: {x: 0.5, y: 0.49769586}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b0c4a2bac09f7d4ebc74d1e066966f5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3QBackWalk (21)
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 1175
+        width: 180
+        height: 435
+      alignment: 9
+      pivot: {x: 0.5, y: 0.49885058}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bef37d79bb96f4146b40694b033ed7ca
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3QBackWalk (22)
+      rect:
+        serializedVersion: 2
+        x: 1274
+        y: 307
+        width: 180
+        height: 433
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4965358}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d297ab8f46492f40892614e3084362a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3QBackWalk (23)
+      rect:
+        serializedVersion: 2
+        x: 729
+        y: 1177
+        width: 180
+        height: 434
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4731e2993764f8a48867bd8d64ea82f1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3QBackWalk (24)
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 738
+        width: 180
+        height: 435
+      alignment: 9
+      pivot: {x: 0.5, y: 0.49885058}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd75b800f31af5640ac02dcf329df600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3QBackWalk (25)
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 297
+        width: 180
+        height: 436
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c9cb06be9227d042a4438b5f32b4596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3QBackWalk (26)
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 1611
+        width: 180
+        height: 436
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 730c28133653bc044a99e3c1df9f2195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3QBackWalk (27)
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 297
+        width: 179
+        height: 436
+      alignment: 9
+      pivot: {x: 0.5027933, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2cbc99f2044ec254290e8fdd06fc2a65
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3QBackWalk (28)
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 1173
+        width: 180
+        height: 436
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e59eeb17c694594fb28f0f0c2dece10
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3QBackWalk (29)
+      rect:
+        serializedVersion: 2
+        x: 729
+        y: 741
+        width: 180
+        height: 434
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dcdca8176c7fe3a45ab8ef4af70f9a6d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3QBackWalk (30)
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 301
+        width: 180
+        height: 435
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5011494}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7b9d7bea952edc40b44187b7daa7698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3QBackWalk (31)
+      rect:
+        serializedVersion: 2
+        x: 547
+        y: 1612
+        width: 180
+        height: 435
+      alignment: 9
+      pivot: {x: 0.5, y: 0.49885058}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62231c8b9e01ed041bf51d03ab8a0423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3QBackWalk (32)
+      rect:
+        serializedVersion: 2
+        x: 910
+        y: 305
+        width: 180
+        height: 434
+      alignment: 9
+      pivot: {x: 0.5, y: 0.50230414}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f00b59eba73b964693514533cf6d673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3QBackWalk (33)
+      rect:
+        serializedVersion: 2
+        x: 1092
+        y: 1613
+        width: 180
+        height: 434
+      alignment: 9
+      pivot: {x: 0.5, y: 0.50230414}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5af16625d7446b9418d8dd16e2b936d3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3QBackWalk (34)
+      rect:
+        serializedVersion: 2
+        x: 911
+        y: 1177
+        width: 180
+        height: 434
+      alignment: 9
+      pivot: {x: 0.5, y: 0.50230414}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd1580ecc57a9cd4abd5f410d6b97efa
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3QBackWalk (35)
+      rect:
+        serializedVersion: 2
+        x: 911
+        y: 741
+        width: 180
+        height: 434
+      alignment: 9
+      pivot: {x: 0.5, y: 0.49769586}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67e5b509d689da14b80d8a8536bf7b88
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3QBackWalk (36)
+      rect:
+        serializedVersion: 2
+        x: 1456
+        y: 1180
+        width: 180
+        height: 432
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4976852}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 017ccdc5d5b42ca40807635c0fbf51eb
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3QBackWalk (37)
+      rect:
+        serializedVersion: 2
+        x: 547
+        y: 1176
+        width: 180
+        height: 434
+      alignment: 9
+      pivot: {x: 0.5, y: 0.49769586}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2c079ff149cfa446b77953379b2aeab
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 3e55f90544223934c8c04d876b47e450
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

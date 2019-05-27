@@ -1,0 +1,1118 @@
+fileFormatVersion: 2
+guid: dcd9e3c34ff7f664fbdb12645e2c0196
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: BackIdleSS
+    21300002: BackIdle (1)
+    21300004: BackIdle (2)
+    21300006: BackIdle (3)
+    21300008: BackIdle (4)
+    21300010: BackIdle (5)
+    21300012: BackIdle (6)
+    21300014: BackIdle (7)
+    21300016: BackIdle (8)
+    21300018: BackIdle (9)
+    21300020: BackIdle (10)
+    21300022: BackIdle (11)
+    21300024: BackIdle (12)
+    21300026: BackIdle (13)
+    21300028: BackIdle (14)
+    21300030: BackIdle (15)
+    21300032: BackIdle (16)
+    21300034: BackIdle (17)
+    21300036: BackIdle (18)
+    21300038: BackIdle (19)
+    21300040: BackIdle (20)
+    21300042: BackIdle (21)
+    21300044: BackIdle (22)
+    21300046: BackIdle (23)
+    21300048: BackIdle (24)
+    21300050: BackIdle (25)
+    21300052: BackIdle (26)
+    21300054: BackIdle (27)
+    21300056: BackIdle (28)
+    21300058: BackIdle (29)
+    21300060: BackIdle (30)
+    21300062: BackIdle (31)
+    21300064: BackIdle (32)
+    21300066: BackIdle (33)
+    21300068: BackIdle (34)
+    21300070: BackIdle (35)
+    21300072: BackIdle (36)
+    21300074: BackIdle (37)
+    21300076: BackIdle (38)
+    21300078: BackIdle (39)
+    21300080: BackIdle (40)
+    21300082: BackIdle (41)
+    21300084: BackIdle (42)
+    21300086: BackIdle (43)
+    21300088: BackIdle (44)
+    21300090: BackIdle (45)
+    21300092: BackIdle (46)
+    21300094: BackIdle (47)
+    21300096: BackIdle (48)
+    21300098: BackIdle (49)
+  externalObjects: {}
+  serializedVersion: 9
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: BackIdle (1)
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 871
+        width: 171
+        height: 432
+      alignment: 9
+      pivot: {x: 0.50292397, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bca951b996f87f34fbe3575839885c3d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackIdle (2)
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 871
+        width: 172
+        height: 432
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 036c0ca24be43e14794ed79a682ce04a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackIdle (3)
+      rect:
+        serializedVersion: 2
+        x: 361
+        y: 437
+        width: 179
+        height: 432
+      alignment: 9
+      pivot: {x: 0.51955307, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 027de17bf017a8a499dbbb0ba198fa4e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackIdle (4)
+      rect:
+        serializedVersion: 2
+        x: 1237
+        y: 871
+        width: 178
+        height: 432
+      alignment: 9
+      pivot: {x: 0.5168539, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a00156e4b8fb82f4f85ec1168aeb2cfb
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackIdle (5)
+      rect:
+        serializedVersion: 2
+        x: 1087
+        y: 437
+        width: 180
+        height: 432
+      alignment: 9
+      pivot: {x: 0.5222222, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dfce20f44e6eba243a5e9d7e37fb4b65
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackIdle (6)
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 872
+        width: 173
+        height: 431
+      alignment: 9
+      pivot: {x: 0.50289017, y: 0.5011601}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97dcdf7799bf18c4eb6603f10d8f0ec6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackIdle (7)
+      rect:
+        serializedVersion: 2
+        x: 523
+        y: 871
+        width: 176
+        height: 432
+      alignment: 9
+      pivot: {x: 0.5113636, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1588ec7307468f5418d408eede126647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackIdle (8)
+      rect:
+        serializedVersion: 2
+        x: 701
+        y: 871
+        width: 176
+        height: 432
+      alignment: 9
+      pivot: {x: 0.5113636, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ad3b8ced9c194649874a5475553ae52
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackIdle (9)
+      rect:
+        serializedVersion: 2
+        x: 879
+        y: 871
+        width: 177
+        height: 432
+      alignment: 9
+      pivot: {x: 0.5141243, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e81a1409c22046439d8507f424944d7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackIdle (10)
+      rect:
+        serializedVersion: 2
+        x: 1058
+        y: 871
+        width: 177
+        height: 432
+      alignment: 9
+      pivot: {x: 0.5141243, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 20eb49385325dba419da0b5f8dd4bf90
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackIdle (11)
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 437
+        width: 178
+        height: 432
+      alignment: 9
+      pivot: {x: 0.5168539, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51444ed762c3f5149a0fcfd7be657eb2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackIdle (12)
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 437
+        width: 178
+        height: 432
+      alignment: 9
+      pivot: {x: 0.5168539, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3edb82a0bbde23a4e880d26d0a5f5b9e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackIdle (13)
+      rect:
+        serializedVersion: 2
+        x: 542
+        y: 437
+        width: 179
+        height: 432
+      alignment: 9
+      pivot: {x: 0.5139665, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db8f61bc20b9b794693be9f53dd48639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackIdle (14)
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 3
+        width: 181
+        height: 432
+      alignment: 9
+      pivot: {x: 0.49723756, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6298a6c28c55eb41ae611468320e932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackIdle (15)
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 3
+        width: 181
+        height: 432
+      alignment: 9
+      pivot: {x: 0.49723756, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6a6281cf177e794fae00a5fee9e9394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackIdle (16)
+      rect:
+        serializedVersion: 2
+        x: 905
+        y: 437
+        width: 180
+        height: 432
+      alignment: 9
+      pivot: {x: 0.4888889, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9fd557ee6bcc31d429b91e5aae33f663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackIdle (17)
+      rect:
+        serializedVersion: 2
+        x: 1104
+        y: 3
+        width: 185
+        height: 432
+      alignment: 9
+      pivot: {x: 0.5027027, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f1ceb65c94ea4047ad5b01ee3b420d4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackIdle (18)
+      rect:
+        serializedVersion: 2
+        x: 917
+        y: 3
+        width: 185
+        height: 432
+      alignment: 9
+      pivot: {x: 0.5027027, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8bf9e06bab9dd4e45bec37b5b5d3b57c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackIdle (19)
+      rect:
+        serializedVersion: 2
+        x: 733
+        y: 3
+        width: 182
+        height: 432
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f833556ba83fd049a883e0fbc438d31
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackIdle (20)
+      rect:
+        serializedVersion: 2
+        x: 1417
+        y: 871
+        width: 178
+        height: 432
+      alignment: 9
+      pivot: {x: 0.51123595, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef5793cf95cbf3647868a846fb7aff71
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackIdle (21)
+      rect:
+        serializedVersion: 2
+        x: 1269
+        y: 437
+        width: 180
+        height: 432
+      alignment: 9
+      pivot: {x: 0.51666665, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2fec573e9b4e72b44a1f496656a7372f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackIdle (22)
+      rect:
+        serializedVersion: 2
+        x: 723
+        y: 437
+        width: 180
+        height: 432
+      alignment: 9
+      pivot: {x: 0.51666665, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 536bebce868f83a41919e1b70636ae44
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackIdle (23)
+      rect:
+        serializedVersion: 2
+        x: 367
+        y: 3
+        width: 181
+        height: 432
+      alignment: 9
+      pivot: {x: 0.5138122, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4bb7d0eba682d734aac6924e2937ca35
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackIdle (24)
+      rect:
+        serializedVersion: 2
+        x: 1291
+        y: 3
+        width: 188
+        height: 432
+      alignment: 9
+      pivot: {x: 0.49468085, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 526b1f3e63b3f704ebe3fd1189c657c2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackIdle (25)
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 3
+        width: 181
+        height: 432
+      alignment: 9
+      pivot: {x: 0.5138122, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2115d4a845d5ab747b000f351f81a3e1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackIdle (26)
+      rect:
+        serializedVersion: 2
+        x: 1291
+        y: 3
+        width: 188
+        height: 432
+      alignment: 9
+      pivot: {x: 0.49468085, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4a1453f2e2578d4d83811f45a6825c0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackIdle (27)
+      rect:
+        serializedVersion: 2
+        x: 367
+        y: 3
+        width: 181
+        height: 432
+      alignment: 9
+      pivot: {x: 0.5138122, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ecc6bea5f347fd498d6378b5013d636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackIdle (28)
+      rect:
+        serializedVersion: 2
+        x: 723
+        y: 437
+        width: 180
+        height: 432
+      alignment: 9
+      pivot: {x: 0.51666665, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2eab163e0f07aa345bfe21a85102e0ef
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackIdle (29)
+      rect:
+        serializedVersion: 2
+        x: 1269
+        y: 437
+        width: 180
+        height: 432
+      alignment: 9
+      pivot: {x: 0.51666665, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23e79e21af0eacc48b6b089062fac788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackIdle (30)
+      rect:
+        serializedVersion: 2
+        x: 1417
+        y: 871
+        width: 178
+        height: 432
+      alignment: 9
+      pivot: {x: 0.51123595, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e8b6d6aa3a558743bb5599f6520ad6a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackIdle (31)
+      rect:
+        serializedVersion: 2
+        x: 733
+        y: 3
+        width: 182
+        height: 432
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca142b6d4d7b2df41989723f6d2cb075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackIdle (32)
+      rect:
+        serializedVersion: 2
+        x: 917
+        y: 3
+        width: 185
+        height: 432
+      alignment: 9
+      pivot: {x: 0.5027027, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e46f85994f764d4990d8f3ffc867e7e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackIdle (33)
+      rect:
+        serializedVersion: 2
+        x: 1104
+        y: 3
+        width: 185
+        height: 432
+      alignment: 9
+      pivot: {x: 0.5027027, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f74b0d300521a9947b50c406a570e004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackIdle (34)
+      rect:
+        serializedVersion: 2
+        x: 905
+        y: 437
+        width: 180
+        height: 432
+      alignment: 9
+      pivot: {x: 0.4888889, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5541bf8ab9e0a54685436a51e238e7e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackIdle (35)
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 3
+        width: 181
+        height: 432
+      alignment: 9
+      pivot: {x: 0.49723756, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3cefc7ed3c6a5f4bab03a069204f47b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackIdle (36)
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 3
+        width: 181
+        height: 432
+      alignment: 9
+      pivot: {x: 0.49723756, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 03869c0891a9de448bbcb6e8f50c4f6a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackIdle (37)
+      rect:
+        serializedVersion: 2
+        x: 542
+        y: 437
+        width: 179
+        height: 432
+      alignment: 9
+      pivot: {x: 0.5139665, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 990024794ff2dc847960d1faa8946d6c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackIdle (38)
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 437
+        width: 178
+        height: 432
+      alignment: 9
+      pivot: {x: 0.5168539, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 542ec010b076c6c488a0f8d2257945e6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackIdle (39)
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 437
+        width: 178
+        height: 432
+      alignment: 9
+      pivot: {x: 0.5168539, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 309c927d8eee4704a87673a53fa62aef
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackIdle (40)
+      rect:
+        serializedVersion: 2
+        x: 1058
+        y: 871
+        width: 177
+        height: 432
+      alignment: 9
+      pivot: {x: 0.5141243, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66bb600af2bc7af45922f143e582b881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackIdle (41)
+      rect:
+        serializedVersion: 2
+        x: 879
+        y: 871
+        width: 177
+        height: 432
+      alignment: 9
+      pivot: {x: 0.5141243, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77bc46c054b2bfc46bd481c10ff6c2fa
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackIdle (42)
+      rect:
+        serializedVersion: 2
+        x: 701
+        y: 871
+        width: 176
+        height: 432
+      alignment: 9
+      pivot: {x: 0.5113636, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b616e17971172a48a3d8fa81e11c014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackIdle (43)
+      rect:
+        serializedVersion: 2
+        x: 523
+        y: 871
+        width: 176
+        height: 432
+      alignment: 9
+      pivot: {x: 0.5113636, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac96e7824c6a34648a39a9bc4a355936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackIdle (44)
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 872
+        width: 173
+        height: 431
+      alignment: 9
+      pivot: {x: 0.50289017, y: 0.5011601}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f9771db736a396a4fa0ac38d15ddb940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackIdle (45)
+      rect:
+        serializedVersion: 2
+        x: 1087
+        y: 437
+        width: 180
+        height: 432
+      alignment: 9
+      pivot: {x: 0.5222222, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3494cc79c3cd3a34fb3bcf24c25670b5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackIdle (46)
+      rect:
+        serializedVersion: 2
+        x: 1237
+        y: 871
+        width: 178
+        height: 432
+      alignment: 9
+      pivot: {x: 0.5168539, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dff3a6e9a01a0ca4cb7ffefafa262aea
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackIdle (47)
+      rect:
+        serializedVersion: 2
+        x: 361
+        y: 437
+        width: 179
+        height: 432
+      alignment: 9
+      pivot: {x: 0.51955307, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b699ddade4603ae4aa2d4540a9e3a54e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackIdle (48)
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 871
+        width: 172
+        height: 432
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2c06ff6ef0cbe348bbbc053d482360b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackIdle (49)
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 871
+        width: 171
+        height: 432
+      alignment: 9
+      pivot: {x: 0.50292397, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93f8ef46d967c7640b448c22b0a10db3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 65e398f03ffa8884a8dbe52f740b3444
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

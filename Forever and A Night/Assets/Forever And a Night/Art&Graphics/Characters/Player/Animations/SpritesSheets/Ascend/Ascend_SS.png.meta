@@ -1,0 +1,2462 @@
+fileFormatVersion: 2
+guid: a2c13bb43c68fc34aa15d926ee3e2e35
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Ascend_SS
+    21300002: Ascend (1)
+    21300004: Ascend (2)
+    21300006: Ascend (3)
+    21300008: Ascend (4)
+    21300010: Ascend (5)
+    21300012: Ascend (6)
+    21300014: Ascend (7)
+    21300016: Ascend (8)
+    21300018: Ascend (9)
+    21300020: Ascend (10)
+    21300022: Ascend (11)
+    21300024: Ascend (12)
+    21300026: Ascend (13)
+    21300028: Ascend (14)
+    21300030: Ascend (15)
+    21300032: Ascend (16)
+    21300034: Ascend (17)
+    21300036: Ascend (18)
+    21300038: Ascend (19)
+    21300040: Ascend (20)
+    21300042: Ascend (21)
+    21300044: Ascend (22)
+    21300046: Ascend (23)
+    21300048: Ascend (24)
+    21300050: Ascend (25)
+    21300052: Ascend (26)
+    21300054: Ascend (27)
+    21300056: Ascend (28)
+    21300058: Ascend (29)
+    21300060: Ascend (30)
+    21300062: Ascend (31)
+    21300064: Ascend (32)
+    21300066: Ascend (33)
+    21300068: Ascend (34)
+    21300070: Ascend (35)
+    21300072: Ascend (36)
+    21300074: Ascend (37)
+    21300076: Ascend (38)
+    21300078: Ascend (39)
+    21300080: Ascend (40)
+    21300082: Ascend (41)
+    21300084: Ascend (42)
+    21300086: Ascend (43)
+    21300088: Ascend (44)
+    21300090: Ascend (45)
+    21300092: Ascend (46)
+    21300094: Ascend (47)
+    21300096: Ascend (48)
+    21300098: Ascend (49)
+    21300100: Ascend (50)
+    21300102: Ascend (51)
+    21300104: Ascend (52)
+    21300106: Ascend (53)
+    21300108: Ascend (54)
+    21300110: Ascend (55)
+    21300112: Ascend (56)
+    21300114: Ascend (57)
+    21300116: Ascend (58)
+    21300118: Ascend (59)
+    21300120: Ascend (60)
+    21300122: Ascend (61)
+    21300124: Ascend (62)
+    21300126: Ascend (63)
+    21300128: Ascend (64)
+    21300130: Ascend (65)
+    21300132: Ascend (66)
+    21300134: Ascend (67)
+    21300136: Ascend (68)
+    21300138: Ascend (69)
+    21300140: Ascend (70)
+    21300142: Ascend (71)
+    21300144: Ascend (72)
+    21300146: Ascend (73)
+    21300148: Ascend (74)
+    21300150: Ascend (75)
+    21300152: Ascend (76)
+    21300154: Ascend (77)
+    21300156: Ascend (78)
+    21300158: Ascend (79)
+    21300160: Ascend (80)
+    21300162: Ascend (81)
+    21300164: Ascend (82)
+    21300166: Ascend (83)
+    21300168: Ascend (84)
+    21300170: Ascend (85)
+    21300172: Ascend (86)
+    21300174: Ascend (87)
+    21300176: Ascend (88)
+    21300178: Ascend (89)
+    21300180: Ascend (90)
+    21300182: Ascend (91)
+    21300184: Ascend (92)
+    21300186: Ascend (93)
+    21300188: Ascend (94)
+    21300190: Ascend (95)
+    21300192: Ascend (96)
+    21300194: Ascend (97)
+    21300196: Ascend (98)
+    21300198: Ascend (99)
+    21300200: Ascend (100)
+    21300202: Ascend (101)
+    21300204: Ascend (102)
+    21300206: Ascend (103)
+    21300208: Ascend (104)
+    21300210: Ascend (105)
+    21300212: Ascend (106)
+    21300214: Ascend (107)
+    21300216: Ascend (108)
+    21300218: Ascend (109)
+    21300220: Ascend (110)
+    21300222: Ascend (111)
+    21300224: Ascend (112)
+    21300226: Ascend (113)
+  externalObjects: {}
+  serializedVersion: 9
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Ascend (1)
+      rect:
+        serializedVersion: 2
+        x: 982
+        y: 3576
+        width: 170
+        height: 435
+      alignment: 9
+      pivot: {x: 0.46470588, y: 0.53333336}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eba87148007b38748876081d38e74e1d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ascend (2)
+      rect:
+        serializedVersion: 2
+        x: 1154
+        y: 3576
+        width: 178
+        height: 435
+      alignment: 9
+      pivot: {x: 0.4550562, y: 0.53333336}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c2614c6ad4c5e44db03f3f6cae4e8c4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ascend (3)
+      rect:
+        serializedVersion: 2
+        x: 2170
+        y: 3576
+        width: 178
+        height: 435
+      alignment: 9
+      pivot: {x: 0.46629214, y: 0.53333336}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09cf2937ee7c70b4883b4a07ec739862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ascend (4)
+      rect:
+        serializedVersion: 2
+        x: 395
+        y: 3577
+        width: 186
+        height: 434
+      alignment: 9
+      pivot: {x: 0.46774194, y: 0.53456223}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f7916bb8f7ad884faf027c2782f87c0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ascend (5)
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 3578
+        width: 183
+        height: 433
+      alignment: 9
+      pivot: {x: 0.45355192, y: 0.53579676}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da7b25a0558ffaf4cb6723866cd990f3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ascend (6)
+      rect:
+        serializedVersion: 2
+        x: 583
+        y: 3577
+        width: 190
+        height: 434
+      alignment: 9
+      pivot: {x: 0.4526316, y: 0.53456223}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce02a1cc55152c34a9b449ea492026a8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ascend (7)
+      rect:
+        serializedVersion: 2
+        x: 775
+        y: 3577
+        width: 205
+        height: 434
+      alignment: 9
+      pivot: {x: 0.46341464, y: 0.53456223}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9197a47a307ae4c4099eb41efab1d96b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ascend (8)
+      rect:
+        serializedVersion: 2
+        x: 2106
+        y: 2693
+        width: 202
+        height: 440
+      alignment: 9
+      pivot: {x: 0.45544556, y: 0.5272727}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5adec52a9fe7ec42a72f3824004b0ad
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ascend (9)
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 3578
+        width: 207
+        height: 433
+      alignment: 9
+      pivot: {x: 0.44927537, y: 0.53579676}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 826d2b86b89818d4bb7ef478a4cdf7e0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ascend (10)
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 2696
+        width: 215
+        height: 440
+      alignment: 9
+      pivot: {x: 0.44651163, y: 0.5272727}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7130bc214244b8429cb7a6c1e531494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ascend (11)
+      rect:
+        serializedVersion: 2
+        x: 3560
+        y: 3573
+        width: 222
+        height: 438
+      alignment: 9
+      pivot: {x: 0.45495495, y: 0.5296804}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49ecfae483a0a044c930aa081f45dee6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ascend (12)
+      rect:
+        serializedVersion: 2
+        x: 3784
+        y: 3573
+        width: 230
+        height: 438
+      alignment: 9
+      pivot: {x: 0.46521738, y: 0.5296804}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 369f5e6f9c593394580d362e14272175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ascend (13)
+      rect:
+        serializedVersion: 2
+        x: 2350
+        y: 3574
+        width: 228
+        height: 437
+      alignment: 9
+      pivot: {x: 0.4473684, y: 0.53089243}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3cf319a01ad383744b5a41dbd1255bb7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ascend (14)
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 3138
+        width: 239
+        height: 438
+      alignment: 9
+      pivot: {x: 0.46443516, y: 0.5296804}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dff506ec8c169b54494bb638f27f45f0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ascend (15)
+      rect:
+        serializedVersion: 2
+        x: 484
+        y: 2695
+        width: 245
+        height: 440
+      alignment: 9
+      pivot: {x: 0.46530613, y: 0.5272727}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8903888a014dde458f3f31ba0d93de9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ascend (16)
+      rect:
+        serializedVersion: 2
+        x: 2105
+        y: 3135
+        width: 243
+        height: 439
+      alignment: 9
+      pivot: {x: 0.47325101, y: 0.5284738}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cfcfe22b23ba82c47af25aed15b292d0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ascend (17)
+      rect:
+        serializedVersion: 2
+        x: 3728
+        y: 3132
+        width: 251
+        height: 439
+      alignment: 9
+      pivot: {x: 0.45019922, y: 0.5284738}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b27d21f8df7947a488911a29494c2c46
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ascend (18)
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 3137
+        width: 251
+        height: 438
+      alignment: 9
+      pivot: {x: 0.48207173, y: 0.5296804}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3e343afed6bd7f4c8c9e12c893d3534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ascend (19)
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 2696
+        width: 264
+        height: 439
+      alignment: 9
+      pivot: {x: 0.45454547, y: 0.5284738}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e66aacf985ef5db4d8e980af775d3efc
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ascend (20)
+      rect:
+        serializedVersion: 2
+        x: 495
+        y: 3137
+        width: 268
+        height: 438
+      alignment: 9
+      pivot: {x: 0.4664179, y: 0.5296804}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67d77b47498fcac479c030c96fd606be
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ascend (21)
+      rect:
+        serializedVersion: 2
+        x: 1334
+        y: 3576
+        width: 277
+        height: 435
+      alignment: 9
+      pivot: {x: 0.46931407, y: 0.53333336}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 96e49b272a5f5a642b347d5d02a256b2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ascend (22)
+      rect:
+        serializedVersion: 2
+        x: 1994
+        y: 2249
+        width: 277
+        height: 442
+      alignment: 9
+      pivot: {x: 0.46209386, y: 0.5248869}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33d3455a39c93d24aa0ccccf5ad32425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ascend (23)
+      rect:
+        serializedVersion: 2
+        x: 1613
+        y: 3576
+        width: 273
+        height: 435
+      alignment: 9
+      pivot: {x: 0.47619048, y: 0.53333336}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc02d064ef1ee3e40bbba7c465042b18
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ascend (24)
+      rect:
+        serializedVersion: 2
+        x: 1888
+        y: 3576
+        width: 280
+        height: 435
+      alignment: 9
+      pivot: {x: 0.4892857, y: 0.53333336}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5611fbe214d92184da44ca5a2baa821b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ascend (25)
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1810
+        width: 298
+        height: 442
+      alignment: 9
+      pivot: {x: 0.47651008, y: 0.5248869}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7fbcafa115d4804408cbb0e888c15993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ascend (26)
+      rect:
+        serializedVersion: 2
+        x: 3361
+        y: 1802
+        width: 297
+        height: 443
+      alignment: 9
+      pivot: {x: 0.46464646, y: 0.523702}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 623f9820f308cec488387963eaa67295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ascend (27)
+      rect:
+        serializedVersion: 2
+        x: 3660
+        y: 1802
+        width: 292
+        height: 443
+      alignment: 9
+      pivot: {x: 0.5, y: 0.523702}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f31796b358c977b4091ffda3d2c98afe
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ascend (28)
+      rect:
+        serializedVersion: 2
+        x: 1378
+        y: 2251
+        width: 295
+        height: 441
+      alignment: 9
+      pivot: {x: 0.4779661, y: 0.5260771}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c95511cdeacb1f04ab24d8f210575690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ascend (29)
+      rect:
+        serializedVersion: 2
+        x: 765
+        y: 3136
+        width: 311
+        height: 438
+      alignment: 9
+      pivot: {x: 0.4790997, y: 0.5296804}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19ea5b1534ff87841bb5471cdc875724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ascend (30)
+      rect:
+        serializedVersion: 2
+        x: 3342
+        y: 2690
+        width: 303
+        height: 440
+      alignment: 9
+      pivot: {x: 0.49174917, y: 0.5272727}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5a61b5d28f4f25419440233b5dd560c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ascend (31)
+      rect:
+        serializedVersion: 2
+        x: 3766
+        y: 908
+        width: 299
+        height: 446
+      alignment: 9
+      pivot: {x: 0.4882943, y: 0.5201794}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee42d7c512471ca4cbf5141dcdfcbb66
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ascend (32)
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 469
+        width: 306
+        height: 446
+      alignment: 9
+      pivot: {x: 0.4869281, y: 0.5201794}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a900824f13fd734dbe69306bf6b8b66
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ascend (33)
+      rect:
+        serializedVersion: 2
+        x: 301
+        y: 1809
+        width: 306
+        height: 442
+      alignment: 9
+      pivot: {x: 0.49019608, y: 0.52262443}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69c158d61057832489484b70a294096b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ascend (34)
+      rect:
+        serializedVersion: 2
+        x: 2580
+        y: 3574
+        width: 311
+        height: 437
+      alignment: 9
+      pivot: {x: 0.488746, y: 0.52402747}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8445be90da697042915711e67bf1723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ascend (35)
+      rect:
+        serializedVersion: 2
+        x: 1675
+        y: 2250
+        width: 317
+        height: 441
+      alignment: 9
+      pivot: {x: 0.47949526, y: 0.52380955}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4fc85c046c46fb438cc0a549315b129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ascend (36)
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 917
+        width: 334
+        height: 445
+      alignment: 9
+      pivot: {x: 0.49101797, y: 0.5168539}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb4ad093855fa704b893420af55129cd
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ascend (37)
+      rect:
+        serializedVersion: 2
+        x: 2893
+        y: 3574
+        width: 320
+        height: 437
+      alignment: 9
+      pivot: {x: 0.490625, y: 0.5217391}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c1d73f536aa0c44b8dcf29a832f7701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ascend (38)
+      rect:
+        serializedVersion: 2
+        x: 2273
+        y: 2248
+        width: 343
+        height: 441
+      alignment: 9
+      pivot: {x: 0.50145775, y: 0.52154195}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a82c7966fb36ec45b4253a2a47010d6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ascend (39)
+      rect:
+        serializedVersion: 2
+        x: 682
+        y: 916
+        width: 329
+        height: 445
+      alignment: 9
+      pivot: {x: 0.49848023, y: 0.5146067}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b37725ff42975bd43913a14c9feed0df
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ascend (40)
+      rect:
+        serializedVersion: 2
+        x: 3647
+        y: 2690
+        width: 332
+        height: 440
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5204545}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23c5b48d15ceca04e8587877d2611d7c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ascend (41)
+      rect:
+        serializedVersion: 2
+        x: 2618
+        y: 2248
+        width: 330
+        height: 441
+      alignment: 9
+      pivot: {x: 0.4939394, y: 0.5124717}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 815e251247fe79945b9a2f2761b9c35e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ascend (42)
+      rect:
+        serializedVersion: 2
+        x: 2024
+        y: 462
+        width: 335
+        height: 447
+      alignment: 9
+      pivot: {x: 0.50149256, y: 0.5100671}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2757623403ecf24eb07081ddd072c0e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ascend (43)
+      rect:
+        serializedVersion: 2
+        x: 3046
+        y: 458
+        width: 334
+        height: 449
+      alignment: 9
+      pivot: {x: 0.49101797, y: 0.5077951}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae5f0b45b983f5d4d9f9516793479237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ascend (44)
+      rect:
+        serializedVersion: 2
+        x: 997
+        y: 467
+        width: 333
+        height: 446
+      alignment: 9
+      pivot: {x: 0.4864865, y: 0.50672644}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 911c528aab9e5234a92e81832534a735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ascend (45)
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1364
+        width: 340
+        height: 443
+      alignment: 9
+      pivot: {x: 0.4970588, y: 0.5146727}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bad3cfa0f0aec4948a3016c30bfe60cf
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ascend (46)
+      rect:
+        serializedVersion: 2
+        x: 1078
+        y: 3136
+        width: 339
+        height: 438
+      alignment: 9
+      pivot: {x: 0.48967552, y: 0.51826483}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0a156334466a9f42889bcbad93cf779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ascend (47)
+      rect:
+        serializedVersion: 2
+        x: 2950
+        y: 2247
+        width: 336
+        height: 441
+      alignment: 9
+      pivot: {x: 0.5029762, y: 0.5102041}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d5f6cde70eee259459ad6df420a424f2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ascend (48)
+      rect:
+        serializedVersion: 2
+        x: 1332
+        y: 466
+        width: 345
+        height: 446
+      alignment: 9
+      pivot: {x: 0.4985507, y: 0.50672644}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0795d50015ec594fb5f425aa8e2c3ec
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ascend (49)
+      rect:
+        serializedVersion: 2
+        x: 3382
+        y: 458
+        width: 344
+        height: 449
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5011136}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41c10d8e2b5ab4c42875a9e592cb532a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ascend (50)
+      rect:
+        serializedVersion: 2
+        x: 2064
+        y: 1358
+        width: 342
+        height: 444
+      alignment: 9
+      pivot: {x: 0.49707603, y: 0.5067568}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6cb55d5be3986243bc243eb959d4342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ascend (51)
+      rect:
+        serializedVersion: 2
+        x: 2413
+        y: 4
+        width: 345
+        height: 453
+      alignment: 9
+      pivot: {x: 0.4985507, y: 0.49668875}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4da8236562775794a9975030a08c01f3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ascend (52)
+      rect:
+        serializedVersion: 2
+        x: 2067
+        y: 8
+        width: 344
+        height: 451
+      alignment: 9
+      pivot: {x: 0.5, y: 0.50110865}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a19f792934eb0f64faefee868d18f8ec
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ascend (53)
+      rect:
+        serializedVersion: 2
+        x: 2408
+        y: 1357
+        width: 339
+        height: 444
+      alignment: 9
+      pivot: {x: 0.5014749, y: 0.5045045}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ff77cb221dbfa742b4f160d06cdff82
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ascend (54)
+      rect:
+        serializedVersion: 2
+        x: 2760
+        y: 3
+        width: 345
+        height: 453
+      alignment: 9
+      pivot: {x: 0.4985507, y: 0.49448124}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd0b78eb4fe471643b41106b05b42275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ascend (55)
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 18
+        width: 343
+        height: 449
+      alignment: 9
+      pivot: {x: 0.49562684, y: 0.49665925}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7d367c0909f6ac40bd2eb9b56eb3d62
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ascend (56)
+      rect:
+        serializedVersion: 2
+        x: 1013
+        y: 915
+        width: 339
+        height: 445
+      alignment: 9
+      pivot: {x: 0.5014749, y: 0.5011236}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb86aca9e1bb48c41b0edb6355274dc3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ascend (57)
+      rect:
+        serializedVersion: 2
+        x: 3107
+        y: 3
+        width: 345
+        height: 453
+      alignment: 9
+      pivot: {x: 0.4985507, y: 0.49227372}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d0fe3237effcdd4a85cc58ff9f89acb
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ascend (58)
+      rect:
+        serializedVersion: 2
+        x: 346
+        y: 18
+        width: 343
+        height: 449
+      alignment: 9
+      pivot: {x: 0.49562684, y: 0.49443206}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0bc588a33a6641847bb8730a99b97b4c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ascend (59)
+      rect:
+        serializedVersion: 2
+        x: 1354
+        y: 914
+        width: 339
+        height: 445
+      alignment: 9
+      pivot: {x: 0.5014749, y: 0.4988764}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b3801b780d32364e81cca41f5307ba4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ascend (60)
+      rect:
+        serializedVersion: 2
+        x: 3454
+        y: 2
+        width: 345
+        height: 453
+      alignment: 9
+      pivot: {x: 0.4985507, y: 0.49006623}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49bbc9e4cb37e0648b65ba3f3c62311e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ascend (61)
+      rect:
+        serializedVersion: 2
+        x: 1036
+        y: 14
+        width: 343
+        height: 450
+      alignment: 9
+      pivot: {x: 0.49562684, y: 0.49333334}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 76b0b2c22dec18948930f7d0c0262697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ascend (62)
+      rect:
+        serializedVersion: 2
+        x: 1695
+        y: 912
+        width: 343
+        height: 445
+      alignment: 9
+      pivot: {x: 0.49562684, y: 0.4966292}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dad1b1363ffbdd4409b45b707ea925c9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ascend (63)
+      rect:
+        serializedVersion: 2
+        x: 2040
+        y: 911
+        width: 345
+        height: 445
+      alignment: 9
+      pivot: {x: 0.4985507, y: 0.4966292}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a304c077b11cebb47bef651c7b560d9d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ascend (64)
+      rect:
+        serializedVersion: 2
+        x: 1381
+        y: 12
+        width: 339
+        height: 450
+      alignment: 9
+      pivot: {x: 0.5014749, y: 0.4911111}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e87af9d41c0fda94ca2beacc42f8ce67
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ascend (65)
+      rect:
+        serializedVersion: 2
+        x: 2387
+        y: 910
+        width: 343
+        height: 445
+      alignment: 9
+      pivot: {x: 0.49562684, y: 0.49438202}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 03b5d9e6e74ccd140a6d0a23d1a0859a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ascend (66)
+      rect:
+        serializedVersion: 2
+        x: 2732
+        y: 909
+        width: 342
+        height: 445
+      alignment: 9
+      pivot: {x: 0.50292397, y: 0.49438202}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54fb81ab05c4255498f76ffac53a5fc1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ascend (67)
+      rect:
+        serializedVersion: 2
+        x: 3728
+        y: 457
+        width: 339
+        height: 449
+      alignment: 9
+      pivot: {x: 0.5014749, y: 0.48775056}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 05d3e6415bd481649a07325236a6a395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ascend (68)
+      rect:
+        serializedVersion: 2
+        x: 3076
+        y: 909
+        width: 343
+        height: 445
+      alignment: 9
+      pivot: {x: 0.49562684, y: 0.49213484}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed42f7e4070b933408c40d2aac94f89f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ascend (69)
+      rect:
+        serializedVersion: 2
+        x: 609
+        y: 1808
+        width: 342
+        height: 442
+      alignment: 9
+      pivot: {x: 0.50292397, y: 0.49095023}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01a812f034b26fe408898721aaa627f3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ascend (70)
+      rect:
+        serializedVersion: 2
+        x: 2361
+        y: 461
+        width: 339
+        height: 447
+      alignment: 9
+      pivot: {x: 0.5014749, y: 0.4854586}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f550b414c08e58545b790398679afc72
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ascend (71)
+      rect:
+        serializedVersion: 2
+        x: 3421
+        y: 909
+        width: 343
+        height: 445
+      alignment: 9
+      pivot: {x: 0.49562684, y: 0.48988765}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b23fd111b0e97e40b2a75441060f32a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ascend (72)
+      rect:
+        serializedVersion: 2
+        x: 2749
+        y: 1356
+        width: 342
+        height: 444
+      alignment: 9
+      pivot: {x: 0.50292397, y: 0.490991}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48a24f28afdbf74488aa25877a804927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ascend (73)
+      rect:
+        serializedVersion: 2
+        x: 1722
+        y: 10
+        width: 343
+        height: 450
+      alignment: 9
+      pivot: {x: 0.49562684, y: 0.48444444}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f4efd67d0d60514387c4778362167b7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ascend (74)
+      rect:
+        serializedVersion: 2
+        x: 691
+        y: 16
+        width: 343
+        height: 449
+      alignment: 9
+      pivot: {x: 0.49562684, y: 0.48329622}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0dcac502bd6fe94fbbcb2948889bd13
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ascend (75)
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 470
+        width: 342
+        height: 445
+      alignment: 9
+      pivot: {x: 0.50292397, y: 0.48764044}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69414db325543494690bc7b24bea8000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ascend (76)
+      rect:
+        serializedVersion: 2
+        x: 953
+        y: 1808
+        width: 342
+        height: 442
+      alignment: 9
+      pivot: {x: 0.50292397, y: 0.48868778}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97cf5829be2c7464cb78294e2deb5903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ascend (77)
+      rect:
+        serializedVersion: 2
+        x: 1297
+        y: 1807
+        width: 341
+        height: 442
+      alignment: 9
+      pivot: {x: 0.5014663, y: 0.49095023}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c84a86dd6db61a547a7abc9522079b16
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ascend (78)
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 2254
+        width: 343
+        height: 440
+      alignment: 9
+      pivot: {x: 0.5043732, y: 0.4909091}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 786e49ee7810f8948900dc0c06cdc912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ascend (79)
+      rect:
+        serializedVersion: 2
+        x: 2702
+        y: 459
+        width: 342
+        height: 448
+      alignment: 9
+      pivot: {x: 0.50292397, y: 0.48214287}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a37497e2e99e7a4e92f0dc5b5b957a0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ascend (80)
+      rect:
+        serializedVersion: 2
+        x: 3093
+        y: 1356
+        width: 341
+        height: 444
+      alignment: 9
+      pivot: {x: 0.5014663, y: 0.48873875}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e381c858ba75b964b89d03c04ae5728d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ascend (81)
+      rect:
+        serializedVersion: 2
+        x: 1679
+        y: 464
+        width: 343
+        height: 446
+      alignment: 9
+      pivot: {x: 0.5043732, y: 0.4820628}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2a3db9668770f54ba528a463770b16a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ascend (82)
+      rect:
+        serializedVersion: 2
+        x: 3436
+        y: 1356
+        width: 342
+        height: 444
+      alignment: 9
+      pivot: {x: 0.50292397, y: 0.481982}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0dc79ca05a75dec43a01e381110ffc96
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ascend (83)
+      rect:
+        serializedVersion: 2
+        x: 1640
+        y: 1806
+        width: 341
+        height: 442
+      alignment: 9
+      pivot: {x: 0.5014663, y: 0.48642534}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2a8ff61aaa19bc4ab364582ec6bb440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ascend (84)
+      rect:
+        serializedVersion: 2
+        x: 1983
+        y: 1804
+        width: 342
+        height: 442
+      alignment: 9
+      pivot: {x: 0.50292397, y: 0.48642534}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b59e9234ae048f641b6a5af969a5eb40
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ascend (85)
+      rect:
+        serializedVersion: 2
+        x: 3288
+        y: 2247
+        width: 344
+        height: 441
+      alignment: 9
+      pivot: {x: 0.49709302, y: 0.48526078}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 411fc2752617bc64da107798467d7a3d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ascend (86)
+      rect:
+        serializedVersion: 2
+        x: 731
+        y: 2695
+        width: 341
+        height: 439
+      alignment: 9
+      pivot: {x: 0.5014663, y: 0.4851936}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0736361a55167040b4d835ab65cae56
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ascend (87)
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 1363
+        width: 342
+        height: 443
+      alignment: 9
+      pivot: {x: 0.50292397, y: 0.4853273}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 17b19cc2f2a55ed40bad4e68abdb3b4d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ascend (88)
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 917
+        width: 343
+        height: 444
+      alignment: 9
+      pivot: {x: 0.5043732, y: 0.47972974}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ae70d0f3a6a09f429c82436e543762d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ascend (89)
+      rect:
+        serializedVersion: 2
+        x: 653
+        y: 469
+        width: 342
+        height: 445
+      alignment: 9
+      pivot: {x: 0.50292397, y: 0.47865167}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed7981d853336ed4cba3334feb754bde
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ascend (90)
+      rect:
+        serializedVersion: 2
+        x: 687
+        y: 1363
+        width: 342
+        height: 443
+      alignment: 9
+      pivot: {x: 0.50292397, y: 0.48081264}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e56064522dfa0ed4eb3c286b8e3779fd
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ascend (91)
+      rect:
+        serializedVersion: 2
+        x: 2327
+        y: 1804
+        width: 343
+        height: 442
+      alignment: 9
+      pivot: {x: 0.5043732, y: 0.479638}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df907f3d058c3094d9e64d4a784d497a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ascend (92)
+      rect:
+        serializedVersion: 2
+        x: 1074
+        y: 2695
+        width: 342
+        height: 439
+      alignment: 9
+      pivot: {x: 0.50292397, y: 0.48063782}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d175eee812111c4b9a93a0f86ce42ac
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ascend (93)
+      rect:
+        serializedVersion: 2
+        x: 1031
+        y: 1362
+        width: 343
+        height: 443
+      alignment: 9
+      pivot: {x: 0.5043732, y: 0.47629797}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e6e6878b861116469bddd4d6200fcf4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ascend (94)
+      rect:
+        serializedVersion: 2
+        x: 2672
+        y: 1803
+        width: 342
+        height: 442
+      alignment: 9
+      pivot: {x: 0.50292397, y: 0.479638}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33dc737a464f8c94cabfc3281b43985b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ascend (95)
+      rect:
+        serializedVersion: 2
+        x: 3634
+        y: 2247
+        width: 342
+        height: 441
+      alignment: 9
+      pivot: {x: 0.50292397, y: 0.47845805}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6019012047ec00146bd5eefcd53ce9a1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ascend (96)
+      rect:
+        serializedVersion: 2
+        x: 1376
+        y: 1361
+        width: 342
+        height: 443
+      alignment: 9
+      pivot: {x: 0.50292397, y: 0.47629797}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f830ec4a7ab955b4a8f398fe88d89175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ascend (97)
+      rect:
+        serializedVersion: 2
+        x: 1720
+        y: 1359
+        width: 342
+        height: 443
+      alignment: 9
+      pivot: {x: 0.50292397, y: 0.4785553}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a79b1989e73c5204ea342c8fd709d7c2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ascend (98)
+      rect:
+        serializedVersion: 2
+        x: 346
+        y: 2253
+        width: 342
+        height: 440
+      alignment: 9
+      pivot: {x: 0.50292397, y: 0.47954544}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3da7408c8c3fb449803d1fbb53de2db
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ascend (99)
+      rect:
+        serializedVersion: 2
+        x: 1418
+        y: 2694
+        width: 341
+        height: 439
+      alignment: 9
+      pivot: {x: 0.5014663, y: 0.4783599}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f9dfbda40b64a945af1ba12d070ec9a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ascend (100)
+      rect:
+        serializedVersion: 2
+        x: 1419
+        y: 3135
+        width: 341
+        height: 439
+      alignment: 9
+      pivot: {x: 0.5014663, y: 0.4783599}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd5526aff4e73984883ff51148fb137b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ascend (101)
+      rect:
+        serializedVersion: 2
+        x: 1762
+        y: 3135
+        width: 341
+        height: 439
+      alignment: 9
+      pivot: {x: 0.5014663, y: 0.476082}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12436eec213795243a6bdfeea4d06904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ascend (102)
+      rect:
+        serializedVersion: 2
+        x: 2350
+        y: 3133
+        width: 342
+        height: 439
+      alignment: 9
+      pivot: {x: 0.50292397, y: 0.476082}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3dfe6437beca81429d810ad124edf7b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ascend (103)
+      rect:
+        serializedVersion: 2
+        x: 3215
+        y: 3573
+        width: 343
+        height: 438
+      alignment: 9
+      pivot: {x: 0.5043732, y: 0.47945204}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77d64698926c99e4f85e1a9adbfad5c0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ascend (104)
+      rect:
+        serializedVersion: 2
+        x: 3016
+        y: 1802
+        width: 343
+        height: 443
+      alignment: 9
+      pivot: {x: 0.5043732, y: 0.47629797}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d580047ae7c35c7488bcd7e8055a9650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ascend (105)
+      rect:
+        serializedVersion: 2
+        x: 690
+        y: 2252
+        width: 341
+        height: 441
+      alignment: 9
+      pivot: {x: 0.5014663, y: 0.47619048}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a1044595b4aa9fa43b364317dcc48c86
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ascend (106)
+      rect:
+        serializedVersion: 2
+        x: 1761
+        y: 2693
+        width: 343
+        height: 440
+      alignment: 9
+      pivot: {x: 0.5043732, y: 0.475}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a95434fd6574f18488ded63c1a33237d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ascend (107)
+      rect:
+        serializedVersion: 2
+        x: 2694
+        y: 3133
+        width: 342
+        height: 439
+      alignment: 9
+      pivot: {x: 0.50292397, y: 0.476082}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 964dd55ba018ea34fbd3b78c5b8b6346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ascend (108)
+      rect:
+        serializedVersion: 2
+        x: 2310
+        y: 2691
+        width: 342
+        height: 440
+      alignment: 9
+      pivot: {x: 0.50292397, y: 0.475}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec473c5d75643b54c97d1e2751db1972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ascend (109)
+      rect:
+        serializedVersion: 2
+        x: 3038
+        y: 3132
+        width: 343
+        height: 439
+      alignment: 9
+      pivot: {x: 0.5043732, y: 0.4738041}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08cca917e4c0c634f8fc23481358aa96
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ascend (110)
+      rect:
+        serializedVersion: 2
+        x: 1033
+        y: 2252
+        width: 343
+        height: 441
+      alignment: 9
+      pivot: {x: 0.5043732, y: 0.4739229}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d1ce3fd01d608b14187e27a507485793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ascend (111)
+      rect:
+        serializedVersion: 2
+        x: 2654
+        y: 2691
+        width: 343
+        height: 440
+      alignment: 9
+      pivot: {x: 0.5043732, y: 0.47727272}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fd0286219b52a8c49b59fd5cd8e53206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ascend (112)
+      rect:
+        serializedVersion: 2
+        x: 2999
+        y: 2690
+        width: 341
+        height: 440
+      alignment: 9
+      pivot: {x: 0.5014663, y: 0.475}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36a4fe3d29b475145b4f19fe6c42b85e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ascend (113)
+      rect:
+        serializedVersion: 2
+        x: 3383
+        y: 3132
+        width: 343
+        height: 439
+      alignment: 9
+      pivot: {x: 0.5043732, y: 0.4738041}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a1b5ef44cf46ae44f96621d4e945a8de
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 77e80d194b7354741aaa9a8f8b7a70fe
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

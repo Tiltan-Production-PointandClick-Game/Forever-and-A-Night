@@ -1,0 +1,782 @@
+fileFormatVersion: 2
+guid: b04430bdc4caa3d45a4b31e9d2a06488
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: BackWalkSS
+    21300002: BackWalk (1)
+    21300004: BackWalk (2)
+    21300006: BackWalk (3)
+    21300008: BackWalk (4)
+    21300010: BackWalk (5)
+    21300012: BackWalk (6)
+    21300014: BackWalk (7)
+    21300016: BackWalk (8)
+    21300018: BackWalk (9)
+    21300020: BackWalk (10)
+    21300022: BackWalk (11)
+    21300024: BackWalk (12)
+    21300026: BackWalk (13)
+    21300028: BackWalk (14)
+    21300030: BackWalk (15)
+    21300032: BackWalk (16)
+    21300034: BackWalk (17)
+    21300036: BackWalk (18)
+    21300038: BackWalk (19)
+    21300040: BackWalk (20)
+    21300042: BackWalk (21)
+    21300044: BackWalk (22)
+    21300046: BackWalk (23)
+    21300048: BackWalk (24)
+    21300050: BackWalk (25)
+    21300052: BackWalk (26)
+    21300054: BackWalk (27)
+    21300056: BackWalk (28)
+    21300058: BackWalk (29)
+    21300060: BackWalk (30)
+    21300062: BackWalk (31)
+    21300064: BackWalk (32)
+    21300066: BackWalk (33)
+  externalObjects: {}
+  serializedVersion: 9
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: BackWalk (1)
+      rect:
+        serializedVersion: 2
+        x: 950
+        y: 1314
+        width: 195
+        height: 433
+      alignment: 9
+      pivot: {x: 0.43076923, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 178e8cc55c4879e419f7da5334985b65
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackWalk (2)
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 438
+        width: 194
+        height: 435
+      alignment: 9
+      pivot: {x: 0.4329897, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04cdd4b38d5e41148ba7e28717f1ac33
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackWalk (3)
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 1312
+        width: 191
+        height: 435
+      alignment: 9
+      pivot: {x: 0.43455496, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4a785fdaa7ec7f4aadadc84f73e44a2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackWalk (4)
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 1
+        width: 193
+        height: 435
+      alignment: 9
+      pivot: {x: 0.4300518, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e64c8f5acb7f16641871078c020d3d28
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackWalk (5)
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 875
+        width: 198
+        height: 435
+      alignment: 9
+      pivot: {x: 0.42424244, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6b4696f68781664caa9d30fbf14b49f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackWalk (6)
+      rect:
+        serializedVersion: 2
+        x: 582
+        y: 1312
+        width: 186
+        height: 435
+      alignment: 9
+      pivot: {x: 0.44623655, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21a9ac0ab645e91449d52add18334533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackWalk (7)
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 438
+        width: 192
+        height: 435
+      alignment: 9
+      pivot: {x: 0.4375, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6ee10359763f654fb584c862a297b9d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackWalk (8)
+      rect:
+        serializedVersion: 2
+        x: 583
+        y: 438
+        width: 185
+        height: 435
+      alignment: 9
+      pivot: {x: 0.45945945, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8088c37e33de8a048a8a4278d47f1615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackWalk (9)
+      rect:
+        serializedVersion: 2
+        x: 770
+        y: 876
+        width: 176
+        height: 435
+      alignment: 9
+      pivot: {x: 0.48863637, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1323089fa35c2cd43bf3fac1a40b6294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackWalk (10)
+      rect:
+        serializedVersion: 2
+        x: 394
+        y: 1312
+        width: 186
+        height: 435
+      alignment: 9
+      pivot: {x: 0.48924732, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd95c4ee372b96547a2e444bdf198ec3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackWalk (11)
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 875
+        width: 188
+        height: 435
+      alignment: 9
+      pivot: {x: 0.5159575, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a496aee386c13834e8d37813c7944ab8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackWalk (12)
+      rect:
+        serializedVersion: 2
+        x: 1146
+        y: 442
+        width: 187
+        height: 434
+      alignment: 9
+      pivot: {x: 0.5294118, y: 0.49884793}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e69156d27328f24d82748ac662d640f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackWalk (13)
+      rect:
+        serializedVersion: 2
+        x: 1338
+        y: 876
+        width: 188
+        height: 434
+      alignment: 9
+      pivot: {x: 0.5531915, y: 0.49884793}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e17271c181fdea548bddde505602abc7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackWalk (14)
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 875
+        width: 190
+        height: 435
+      alignment: 9
+      pivot: {x: 0.54210526, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25f4c9aa361c8d640ae836c13f474780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackWalk (15)
+      rect:
+        serializedVersion: 2
+        x: 1144
+        y: 878
+        width: 192
+        height: 433
+      alignment: 9
+      pivot: {x: 0.5625, y: 0.49769053}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9210b4af82045b34fb28172bcd38c96c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackWalk (16)
+      rect:
+        serializedVersion: 2
+        x: 1147
+        y: 1313
+        width: 194
+        height: 434
+      alignment: 9
+      pivot: {x: 0.57216495, y: 0.5011521}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 103fbd520e4c5cd40b3ebcc52627c1af
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackWalk (17)
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1312
+        width: 198
+        height: 435
+      alignment: 9
+      pivot: {x: 0.56565654, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9331a4d18532b484bb567f7964b2f524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackWalk (18)
+      rect:
+        serializedVersion: 2
+        x: 950
+        y: 878
+        width: 192
+        height: 434
+      alignment: 9
+      pivot: {x: 0.5677083, y: 0.5011521}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c32707dfade7c9f4b8c4b6faaa857ac8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackWalk (19)
+      rect:
+        serializedVersion: 2
+        x: 950
+        y: 3
+        width: 192
+        height: 434
+      alignment: 9
+      pivot: {x: 0.5677083, y: 0.5011521}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c47435e4b041bbe49b180a7bd51b5c24
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackWalk (20)
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1
+        width: 193
+        height: 435
+      alignment: 9
+      pivot: {x: 0.5699482, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d3a25475408ccd489f6265c75bcb145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackWalk (21)
+      rect:
+        serializedVersion: 2
+        x: 391
+        y: 438
+        width: 190
+        height: 435
+      alignment: 9
+      pivot: {x: 0.5631579, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b0ef565b4296c34a97d977bb07e06c9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackWalk (22)
+      rect:
+        serializedVersion: 2
+        x: 391
+        y: 1
+        width: 185
+        height: 435
+      alignment: 9
+      pivot: {x: 0.55135137, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43c829938d96b374aaf20f698c082d7f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackWalk (23)
+      rect:
+        serializedVersion: 2
+        x: 765
+        y: 1
+        width: 183
+        height: 435
+      alignment: 9
+      pivot: {x: 0.5409836, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9abf7bee5e5d667429620a8d7ade71b0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackWalk (24)
+      rect:
+        serializedVersion: 2
+        x: 1343
+        y: 1312
+        width: 183
+        height: 435
+      alignment: 9
+      pivot: {x: 0.5136612, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8287d9663dae6eb43a4b86ed84b6b885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackWalk (25)
+      rect:
+        serializedVersion: 2
+        x: 770
+        y: 439
+        width: 182
+        height: 435
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c10ce20733cb49459bb95bcf63b9e79
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackWalk (26)
+      rect:
+        serializedVersion: 2
+        x: 770
+        y: 1313
+        width: 178
+        height: 434
+      alignment: 9
+      pivot: {x: 0.4775281, y: 0.5011521}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 20014be08c660604abe4bfb70a78f962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackWalk (27)
+      rect:
+        serializedVersion: 2
+        x: 578
+        y: 1
+        width: 185
+        height: 435
+      alignment: 9
+      pivot: {x: 0.47567567, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3615288f69c1db48b48c86d9d932635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackWalk (28)
+      rect:
+        serializedVersion: 2
+        x: 1333
+        y: 6
+        width: 186
+        height: 434
+      alignment: 9
+      pivot: {x: 0.46774194, y: 0.5011521}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5ca45893f401994c997d376ce6bb2f5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackWalk (29)
+      rect:
+        serializedVersion: 2
+        x: 1144
+        y: 6
+        width: 187
+        height: 434
+      alignment: 9
+      pivot: {x: 0.45454547, y: 0.5011521}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eba55cf46bc2e8a4e84339b66a5d9508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackWalk (30)
+      rect:
+        serializedVersion: 2
+        x: 1335
+        y: 442
+        width: 187
+        height: 432
+      alignment: 9
+      pivot: {x: 0.44385028, y: 0.5034722}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 18c5e8438b462ba408d33d8cbab51682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackWalk (31)
+      rect:
+        serializedVersion: 2
+        x: 954
+        y: 442
+        width: 190
+        height: 434
+      alignment: 9
+      pivot: {x: 0.4473684, y: 0.5011521}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da2b0bc2b3b549144b42b25ec9f5092a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackWalk (32)
+      rect:
+        serializedVersion: 2
+        x: 583
+        y: 875
+        width: 185
+        height: 435
+      alignment: 9
+      pivot: {x: 0.44864866, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ccc1f38035a9cd34da8779e54f578461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackWalk (33)
+      rect:
+        serializedVersion: 2
+        x: 950
+        y: 1314
+        width: 195
+        height: 433
+      alignment: 9
+      pivot: {x: 0.43076923, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fbe507cc3b33baf41912c6fa6f103ede
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: b653fa5234f2312488c8074fb25403b4
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

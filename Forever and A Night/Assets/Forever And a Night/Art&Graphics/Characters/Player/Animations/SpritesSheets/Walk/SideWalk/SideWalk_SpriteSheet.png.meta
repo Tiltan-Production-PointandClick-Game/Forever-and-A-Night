@@ -1,0 +1,845 @@
+fileFormatVersion: 2
+guid: abc8aaccb29b48b418f90a34b8ae8dde
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: SideWalk_SpriteSheet
+    21300002: SideWalk (1)
+    21300004: SideWalk (2)
+    21300006: SideWalk (3)
+    21300008: SideWalk (4)
+    21300010: SideWalk (5)
+    21300012: SideWalk (6)
+    21300014: SideWalk (7)
+    21300016: SideWalk (8)
+    21300018: SideWalk (9)
+    21300020: SideWalk (10)
+    21300022: SideWalk (11)
+    21300024: SideWalk (12)
+    21300026: SideWalk (13)
+    21300028: SideWalk (14)
+    21300030: SideWalk (15)
+    21300032: SideWalk (16)
+    21300034: SideWalk (17)
+    21300036: SideWalk (18)
+    21300038: SideWalk (19)
+    21300040: SideWalk (20)
+    21300042: SideWalk (21)
+    21300044: SideWalk (22)
+    21300046: SideWalk (23)
+    21300048: SideWalk (24)
+    21300050: SideWalk (25)
+    21300052: SideWalk (26)
+    21300054: SideWalk (27)
+    21300056: SideWalk (28)
+    21300058: SideWalk (29)
+    21300060: SideWalk (30)
+    21300062: SideWalk (31)
+    21300064: SideWalk (32)
+    21300066: SideWalk (33)
+    21300068: SideWalk (34)
+    21300070: SideWalk (35)
+    21300072: SideWalk (36)
+  externalObjects: {}
+  serializedVersion: 9
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: SideWalk (1)
+      rect:
+        serializedVersion: 2
+        x: 517
+        y: 786
+        width: 160
+        height: 419
+      alignment: 9
+      pivot: {x: 0.56875, y: 0.4988067}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 522a0055179ada043aeb304c7fb2b650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SideWalk (2)
+      rect:
+        serializedVersion: 2
+        x: 839
+        y: 789
+        width: 162
+        height: 418
+      alignment: 9
+      pivot: {x: 0.5617284, y: 0.49760765}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a4863c5a0cb1a44a90b312bad7ef996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SideWalk (3)
+      rect:
+        serializedVersion: 2
+        x: 1472
+        y: 1630
+        width: 161
+        height: 417
+      alignment: 9
+      pivot: {x: 0.5652174, y: 0.50119907}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb522b42267fe864a83e34b905ec90c3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SideWalk (4)
+      rect:
+        serializedVersion: 2
+        x: 1312
+        y: 369
+        width: 158
+        height: 418
+      alignment: 9
+      pivot: {x: 0.556962, y: 0.49760765}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4699c3d91b402ea468d50f6af478e2df
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SideWalk (5)
+      rect:
+        serializedVersion: 2
+        x: 1326
+        y: 794
+        width: 160
+        height: 415
+      alignment: 9
+      pivot: {x: 0.55, y: 0.49879518}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8df2198ca434192449511a53c85ba544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SideWalk (6)
+      rect:
+        serializedVersion: 2
+        x: 1184
+        y: 1211
+        width: 161
+        height: 417
+      alignment: 9
+      pivot: {x: 0.5652174, y: 0.49880096}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f5a1d7b38a79b91459398bd4d753b967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SideWalk (7)
+      rect:
+        serializedVersion: 2
+        x: 1021
+        y: 1209
+        width: 161
+        height: 418
+      alignment: 9
+      pivot: {x: 0.5652174, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e954a975190524a40a4e5ab2b2476791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SideWalk (8)
+      rect:
+        serializedVersion: 2
+        x: 1184
+        y: 1630
+        width: 161
+        height: 417
+      alignment: 9
+      pivot: {x: 0.5652174, y: 0.49880096}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44e16d05c8b424241af47d1e01065b51
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SideWalk (9)
+      rect:
+        serializedVersion: 2
+        x: 663
+        y: 365
+        width: 160
+        height: 419
+      alignment: 9
+      pivot: {x: 0.56875, y: 0.50119334}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e60655182beff24429b1fc05afb044e5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SideWalk (10)
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 783
+        width: 161
+        height: 420
+      alignment: 9
+      pivot: {x: 0.5652174, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f23f6000f30a9d04a8ec228778a43c8f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SideWalk (11)
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 1206
+        width: 167
+        height: 419
+      alignment: 9
+      pivot: {x: 0.5449102, y: 0.50119334}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ae7c679a49bca543b93f02643f01306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SideWalk (12)
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 784
+        width: 172
+        height: 419
+      alignment: 9
+      pivot: {x: 0.5290698, y: 0.4988067}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de62b30c92fbeaf439eff34fb3d1fc7c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SideWalk (13)
+      rect:
+        serializedVersion: 2
+        x: 839
+        y: 1629
+        width: 180
+        height: 418
+      alignment: 9
+      pivot: {x: 0.50555557, y: 0.50239235}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b02685a70180bdc4aa0e048e83748bbe
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SideWalk (14)
+      rect:
+        serializedVersion: 2
+        x: 839
+        y: 1209
+        width: 180
+        height: 418
+      alignment: 9
+      pivot: {x: 0.50555557, y: 0.50239235}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 348c2630066ffa14a93d87f5ae5ff05d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SideWalk (15)
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 361
+        width: 168
+        height: 420
+      alignment: 9
+      pivot: {x: 0.5416667, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5812e0724159ed6448ebf8329da92aa8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SideWalk (16)
+      rect:
+        serializedVersion: 2
+        x: 347
+        y: 1628
+        width: 164
+        height: 419
+      alignment: 9
+      pivot: {x: 0.55487806, y: 0.50119334}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b6eec89dba1fe44bb1ea9144d2aa4bd
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SideWalk (17)
+      rect:
+        serializedVersion: 2
+        x: 1003
+        y: 789
+        width: 161
+        height: 418
+      alignment: 9
+      pivot: {x: 0.5652174, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3ac45f483ab0fd448daf2ab55c5ec67
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SideWalk (18)
+      rect:
+        serializedVersion: 2
+        x: 1149
+        y: 369
+        width: 161
+        height: 418
+      alignment: 9
+      pivot: {x: 0.5652174, y: 0.49760765}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30e7db68d457f6346b39df8884e66801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SideWalk (19)
+      rect:
+        serializedVersion: 2
+        x: 513
+        y: 1628
+        width: 161
+        height: 419
+      alignment: 9
+      pivot: {x: 0.5652174, y: 0.4988067}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13590519a6b18444699f3df4a6b261f1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SideWalk (20)
+      rect:
+        serializedVersion: 2
+        x: 985
+        y: 369
+        width: 162
+        height: 418
+      alignment: 9
+      pivot: {x: 0.5617284, y: 0.49760765}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5012ad81649f0f94b8d105696198759e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SideWalk (21)
+      rect:
+        serializedVersion: 2
+        x: 1166
+        y: 789
+        width: 158
+        height: 418
+      alignment: 9
+      pivot: {x: 0.556962, y: 0.49760765}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 18b862bea59d83945a66ac4251f8e5c4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SideWalk (22)
+      rect:
+        serializedVersion: 2
+        x: 514
+        y: 1207
+        width: 161
+        height: 419
+      alignment: 9
+      pivot: {x: 0.5652174, y: 0.4988067}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea25f61ad78110f4ca058c9db298363e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SideWalk (23)
+      rect:
+        serializedVersion: 2
+        x: 679
+        y: 786
+        width: 158
+        height: 419
+      alignment: 9
+      pivot: {x: 0.556962, y: 0.4988067}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff6798d63d2b4ff4c9eb4fa95bac9c5a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SideWalk (24)
+      rect:
+        serializedVersion: 2
+        x: 676
+        y: 1628
+        width: 161
+        height: 419
+      alignment: 9
+      pivot: {x: 0.5590062, y: 0.4988067}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 999788cea16d91c4b9ac06ae4a1c0442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SideWalk (25)
+      rect:
+        serializedVersion: 2
+        x: 677
+        y: 1207
+        width: 160
+        height: 419
+      alignment: 9
+      pivot: {x: 0.56875, y: 0.4988067}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0bc09cba6b46e0f4f9e1c4ac0e655e3b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SideWalk (26)
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 363
+        width: 161
+        height: 419
+      alignment: 9
+      pivot: {x: 0.5652174, y: 0.4988067}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 91497c2d61b933f429144ec800a643d4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SideWalk (27)
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 1205
+        width: 160
+        height: 420
+      alignment: 9
+      pivot: {x: 0.56875, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ab1808deb2a6334796ba8caa08c0961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SideWalk (28)
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 783
+        width: 177
+        height: 420
+      alignment: 9
+      pivot: {x: 0.5141243, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8fdaa7dffdbb75498c652984b3d11f9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SideWalk (29)
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1627
+        width: 182
+        height: 420
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b9e17e8fd3aa7d40af7f441da3fc662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SideWalk (30)
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1205
+        width: 180
+        height: 420
+      alignment: 9
+      pivot: {x: 0.50555557, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94250eba9d2d1cf46addaf6769c266f2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SideWalk (31)
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 361
+        width: 165
+        height: 420
+      alignment: 9
+      pivot: {x: 0.55151516, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66f3a4f1aa7147641a760cce1ef8257c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SideWalk (32)
+      rect:
+        serializedVersion: 2
+        x: 825
+        y: 365
+        width: 158
+        height: 419
+      alignment: 9
+      pivot: {x: 0.556962, y: 0.50119334}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 92e358a61692eac41a3949fdfc6fd9d0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SideWalk (33)
+      rect:
+        serializedVersion: 2
+        x: 185
+        y: 1627
+        width: 160
+        height: 420
+      alignment: 9
+      pivot: {x: 0.55625, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d69721632d235a84fa51e5d52468130c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SideWalk (34)
+      rect:
+        serializedVersion: 2
+        x: 1021
+        y: 1629
+        width: 161
+        height: 418
+      alignment: 9
+      pivot: {x: 0.5652174, y: 0.50239235}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e20926f1535f6d4ea9d5f8b00a60d26
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SideWalk (35)
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 361
+        width: 160
+        height: 420
+      alignment: 9
+      pivot: {x: 0.56875, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e808d46ba87e98649b2886c0919df709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SideWalk (36)
+      rect:
+        serializedVersion: 2
+        x: 517
+        y: 786
+        width: 160
+        height: 419
+      alignment: 9
+      pivot: {x: 0.56875, y: 0.4988067}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8bf2c963fc156ea43b52739fd6ed1b21
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: aee322c162f1b62418a92edef276ade3
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

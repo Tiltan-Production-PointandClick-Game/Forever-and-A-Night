@@ -1,0 +1,1097 @@
+fileFormatVersion: 2
+guid: 4eebce049e0150b4284b12a1b3c3a9ab
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: SideIdle_SS
+    21300002: SideIdle (1)
+    21300004: SideIdle (2)
+    21300006: SideIdle (3)
+    21300008: SideIdle (4)
+    21300010: SideIdle (5)
+    21300012: SideIdle (6)
+    21300014: SideIdle (7)
+    21300016: SideIdle (8)
+    21300018: SideIdle (9)
+    21300020: SideIdle (10)
+    21300022: SideIdle (11)
+    21300024: SideIdle (12)
+    21300026: SideIdle (13)
+    21300028: SideIdle (14)
+    21300030: SideIdle (15)
+    21300032: SideIdle (16)
+    21300034: SideIdle (17)
+    21300036: SideIdle (18)
+    21300038: SideIdle (19)
+    21300040: SideIdle (20)
+    21300042: SideIdle (21)
+    21300044: SideIdle (22)
+    21300046: SideIdle (23)
+    21300048: SideIdle (24)
+    21300050: SideIdle (25)
+    21300052: SideIdle (26)
+    21300054: SideIdle (27)
+    21300056: SideIdle (28)
+    21300058: SideIdle (29)
+    21300060: SideIdle (30)
+    21300062: SideIdle (31)
+    21300064: SideIdle (32)
+    21300066: SideIdle (33)
+    21300068: SideIdle (34)
+    21300070: SideIdle (35)
+    21300072: SideIdle (36)
+    21300074: SideIdle (37)
+    21300076: SideIdle (38)
+    21300078: SideIdle (39)
+    21300080: SideIdle (40)
+    21300082: SideIdle (41)
+    21300084: SideIdle (42)
+    21300086: SideIdle (43)
+    21300088: SideIdle (44)
+    21300090: SideIdle (45)
+    21300092: SideIdle (46)
+    21300094: SideIdle (47)
+    21300096: SideIdle (48)
+  externalObjects: {}
+  serializedVersion: 9
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: SideIdle (1)
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1243
+        width: 158
+        height: 412
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ebcff9ebeb223ec4c8cbd170d5853da4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SideIdle (2)
+      rect:
+        serializedVersion: 2
+        x: 1281
+        y: 2
+        width: 158
+        height: 411
+      alignment: 9
+      pivot: {x: 0.5, y: 0.49878347}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d697522bf07bbe49bae96b9bed05d34
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SideIdle (3)
+      rect:
+        serializedVersion: 2
+        x: 1441
+        y: 416
+        width: 158
+        height: 411
+      alignment: 9
+      pivot: {x: 0.5, y: 0.49878347}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a09ec5168fab784fad3c189604f438e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SideIdle (4)
+      rect:
+        serializedVersion: 2
+        x: 1441
+        y: 3
+        width: 158
+        height: 411
+      alignment: 9
+      pivot: {x: 0.5, y: 0.49878347}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02eaa208b6d35e74bbcccdcc55c232da
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SideIdle (5)
+      rect:
+        serializedVersion: 2
+        x: 1760
+        y: 830
+        width: 158
+        height: 411
+      alignment: 9
+      pivot: {x: 0.5, y: 0.49878347}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9ae07f18d7500c4eb1d21cceede081e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SideIdle (6)
+      rect:
+        serializedVersion: 2
+        x: 1601
+        y: 416
+        width: 158
+        height: 411
+      alignment: 9
+      pivot: {x: 0.5, y: 0.49878347}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f9d87a6bb7d9794f8d0bb8caba4f2e1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SideIdle (7)
+      rect:
+        serializedVersion: 2
+        x: 1601
+        y: 3
+        width: 158
+        height: 411
+      alignment: 9
+      pivot: {x: 0.5, y: 0.49878347}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 05e626ebb585b494397ce3747e0c72d9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SideIdle (8)
+      rect:
+        serializedVersion: 2
+        x: 1441
+        y: 829
+        width: 158
+        height: 412
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a658d35a94ca7e43a9a587460d19598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SideIdle (9)
+      rect:
+        serializedVersion: 2
+        x: 1601
+        y: 1243
+        width: 158
+        height: 412
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04d501a88cf8d3d439031c92b83461ec
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SideIdle (10)
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 829
+        width: 158
+        height: 412
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0fc20d16a868cfb4889bc6042ffc2c16
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SideIdle (11)
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 1243
+        width: 158
+        height: 412
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9bf1328cc594d064a9e54aa959efa124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SideIdle (12)
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 415
+        width: 158
+        height: 412
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e8fd9cb316fec34e8f9023206866804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SideIdle (13)
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 829
+        width: 158
+        height: 412
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0570e2acfa403e147bc182c0ffc5fb52
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SideIdle (14)
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 1243
+        width: 158
+        height: 412
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f79acc9e6af27f64bb6ed4366fb1c8b6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SideIdle (15)
+      rect:
+        serializedVersion: 2
+        x: 1761
+        y: 417
+        width: 156
+        height: 411
+      alignment: 9
+      pivot: {x: 0.49358973, y: 0.49878347}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f53d21afb8712641b00e8fefbb9f011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SideIdle (16)
+      rect:
+        serializedVersion: 2
+        x: 1761
+        y: 4
+        width: 156
+        height: 411
+      alignment: 9
+      pivot: {x: 0.49358973, y: 0.49878347}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c7fb7219729ce847bd4c55659ad2488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SideIdle (17)
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1
+        width: 158
+        height: 412
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d4a98c383a232f04389b4a5faa2781d8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SideIdle (18)
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 415
+        width: 158
+        height: 412
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe14b5b4b1948994cbb2b5f611871165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SideIdle (19)
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 829
+        width: 158
+        height: 412
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d5f0bfc5d0243b54b9a0cf05194c9c4e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SideIdle (20)
+      rect:
+        serializedVersion: 2
+        x: 481
+        y: 1243
+        width: 158
+        height: 412
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b6b801cc52360547aee353dfb442863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SideIdle (21)
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 1
+        width: 158
+        height: 412
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 971880c10ada3c34fbea1eca079d7ac5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SideIdle (22)
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 415
+        width: 158
+        height: 412
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1feb77c3fc0a5174aa0d8c8f9d6326f6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SideIdle (23)
+      rect:
+        serializedVersion: 2
+        x: 481
+        y: 829
+        width: 158
+        height: 412
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89ef067ef1e869e4b8248e1dc1fa25b6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SideIdle (24)
+      rect:
+        serializedVersion: 2
+        x: 641
+        y: 1243
+        width: 158
+        height: 412
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b32c5adc69f2f241a6ade5f91dd7ace
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SideIdle (25)
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 1
+        width: 158
+        height: 412
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ddccf8678f8a6a04a8a397af5e23fa07
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SideIdle (26)
+      rect:
+        serializedVersion: 2
+        x: 481
+        y: 415
+        width: 158
+        height: 412
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e093a89be970f3e478f3e471390db1c7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SideIdle (27)
+      rect:
+        serializedVersion: 2
+        x: 641
+        y: 829
+        width: 158
+        height: 412
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09e8503fa6af0f5428200827ba30bc2f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SideIdle (28)
+      rect:
+        serializedVersion: 2
+        x: 801
+        y: 1243
+        width: 158
+        height: 412
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fbf67e4c9c83aef4587e15295b7968c3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SideIdle (29)
+      rect:
+        serializedVersion: 2
+        x: 481
+        y: 1
+        width: 158
+        height: 412
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: edfac1861c5fb404bb9a2a02d994cef0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SideIdle (30)
+      rect:
+        serializedVersion: 2
+        x: 641
+        y: 415
+        width: 158
+        height: 412
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22dfb8cf4f6fcd848b1a9480b4dab5d8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SideIdle (31)
+      rect:
+        serializedVersion: 2
+        x: 801
+        y: 829
+        width: 158
+        height: 412
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e07b6d7161d798e47abf0dea8afe3b6d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SideIdle (32)
+      rect:
+        serializedVersion: 2
+        x: 961
+        y: 1243
+        width: 158
+        height: 412
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 896bd4fe24c72144daaef2b5d6401a02
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SideIdle (33)
+      rect:
+        serializedVersion: 2
+        x: 641
+        y: 1
+        width: 158
+        height: 412
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c55c5a4e785d904bba8673702f66eb7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SideIdle (34)
+      rect:
+        serializedVersion: 2
+        x: 1601
+        y: 829
+        width: 157
+        height: 412
+      alignment: 9
+      pivot: {x: 0.4968153, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f424efcd6583824d8e8fd6c0a6a89e6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SideIdle (35)
+      rect:
+        serializedVersion: 2
+        x: 1761
+        y: 1243
+        width: 157
+        height: 412
+      alignment: 9
+      pivot: {x: 0.4968153, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1e6a6342569ea0479c2800a72f9d9f4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SideIdle (36)
+      rect:
+        serializedVersion: 2
+        x: 801
+        y: 415
+        width: 158
+        height: 412
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72332dea31940f441a3ad325cc83b85f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SideIdle (37)
+      rect:
+        serializedVersion: 2
+        x: 961
+        y: 829
+        width: 158
+        height: 412
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eec64efa4a1e14d4b866fcffac0c52de
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SideIdle (38)
+      rect:
+        serializedVersion: 2
+        x: 1121
+        y: 1243
+        width: 158
+        height: 412
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d981d2060d76b643b1dad14172a2a08
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SideIdle (39)
+      rect:
+        serializedVersion: 2
+        x: 801
+        y: 1
+        width: 158
+        height: 412
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d04dac1c77fdca4a972055055136e82
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SideIdle (40)
+      rect:
+        serializedVersion: 2
+        x: 961
+        y: 415
+        width: 158
+        height: 412
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1f08962fde2eda48876f5b118b6a309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SideIdle (41)
+      rect:
+        serializedVersion: 2
+        x: 1121
+        y: 829
+        width: 158
+        height: 412
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b97ca2b43c0722a4e9fe45fe49470d1e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SideIdle (42)
+      rect:
+        serializedVersion: 2
+        x: 1281
+        y: 1243
+        width: 158
+        height: 412
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4853c3acac010b54684b1089b7dd82fb
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SideIdle (43)
+      rect:
+        serializedVersion: 2
+        x: 961
+        y: 1
+        width: 158
+        height: 412
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe49548d3869743419ee6c300c72e718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SideIdle (44)
+      rect:
+        serializedVersion: 2
+        x: 1121
+        y: 415
+        width: 158
+        height: 412
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb12b0dba8894d949a57f4be36b51f5a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SideIdle (45)
+      rect:
+        serializedVersion: 2
+        x: 1281
+        y: 829
+        width: 158
+        height: 412
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f416cdb0858ffe74d8d4291e3170dd2b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SideIdle (46)
+      rect:
+        serializedVersion: 2
+        x: 1441
+        y: 1243
+        width: 158
+        height: 412
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a45a872e70bf0c14188f638498c3aed1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SideIdle (47)
+      rect:
+        serializedVersion: 2
+        x: 1121
+        y: 1
+        width: 158
+        height: 412
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8280e6f50d77b714580a86a15cd870dc
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SideIdle (48)
+      rect:
+        serializedVersion: 2
+        x: 1281
+        y: 415
+        width: 158
+        height: 412
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1aaffcd443f02284f9b5d899e1126740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 89fba680c823aba458e9ada6ade191f2
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

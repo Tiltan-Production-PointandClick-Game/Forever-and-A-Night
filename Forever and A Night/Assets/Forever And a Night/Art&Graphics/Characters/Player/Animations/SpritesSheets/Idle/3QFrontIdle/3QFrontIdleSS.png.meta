@@ -1,0 +1,1118 @@
+fileFormatVersion: 2
+guid: e6e6dc02d2d7fa948a0ba5c8e4dac302
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: 3QFrontIdleSS
+    21300002: 3QFrontIdle (1)
+    21300004: 3QFrontIdle (2)
+    21300006: 3QFrontIdle (3)
+    21300008: 3QFrontIdle (4)
+    21300010: 3QFrontIdle (5)
+    21300012: 3QFrontIdle (6)
+    21300014: 3QFrontIdle (7)
+    21300016: 3QFrontIdle (8)
+    21300018: 3QFrontIdle (9)
+    21300020: 3QFrontIdle (10)
+    21300022: 3QFrontIdle (11)
+    21300024: 3QFrontIdle (12)
+    21300026: 3QFrontIdle (13)
+    21300028: 3QFrontIdle (14)
+    21300030: 3QFrontIdle (15)
+    21300032: 3QFrontIdle (16)
+    21300034: 3QFrontIdle (17)
+    21300036: 3QFrontIdle (18)
+    21300038: 3QFrontIdle (19)
+    21300040: 3QFrontIdle (20)
+    21300042: 3QFrontIdle (21)
+    21300044: 3QFrontIdle (22)
+    21300046: 3QFrontIdle (23)
+    21300048: 3QFrontIdle (24)
+    21300050: 3QFrontIdle (25)
+    21300052: 3QFrontIdle (26)
+    21300054: 3QFrontIdle (27)
+    21300056: 3QFrontIdle (28)
+    21300058: 3QFrontIdle (29)
+    21300060: 3QFrontIdle (30)
+    21300062: 3QFrontIdle (31)
+    21300064: 3QFrontIdle (32)
+    21300066: 3QFrontIdle (33)
+    21300068: 3QFrontIdle (34)
+    21300070: 3QFrontIdle (35)
+    21300072: 3QFrontIdle (36)
+    21300074: 3QFrontIdle (37)
+    21300076: 3QFrontIdle (38)
+    21300078: 3QFrontIdle (39)
+    21300080: 3QFrontIdle (40)
+    21300082: 3QFrontIdle (41)
+    21300084: 3QFrontIdle (42)
+    21300086: 3QFrontIdle (43)
+    21300088: 3QFrontIdle (44)
+    21300090: 3QFrontIdle (45)
+    21300092: 3QFrontIdle (46)
+    21300094: 3QFrontIdle (47)
+    21300096: 3QFrontIdle (48)
+    21300098: 3QFrontIdle (49)
+  externalObjects: {}
+  serializedVersion: 9
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: 3QFrontIdle (1)
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1632
+        width: 178
+        height: 415
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ab811d8206c3e8458b2ef7e41980f95
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3QFrontIdle (2)
+      rect:
+        serializedVersion: 2
+        x: 361
+        y: 381
+        width: 178
+        height: 415
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f20f90d863f9d714bb6af733e720f88e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3QFrontIdle (3)
+      rect:
+        serializedVersion: 2
+        x: 1621
+        y: 1632
+        width: 178
+        height: 415
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 612e86adc81b9c1479ef5c67eb4a43a9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3QFrontIdle (4)
+      rect:
+        serializedVersion: 2
+        x: 1801
+        y: 1632
+        width: 178
+        height: 415
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0bb12eb06801ab41bc6a9e5e39dee21
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3QFrontIdle (5)
+      rect:
+        serializedVersion: 2
+        x: 721
+        y: 798
+        width: 178
+        height: 415
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2cadd17310e81a4a8195851a046dc29
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3QFrontIdle (6)
+      rect:
+        serializedVersion: 2
+        x: 721
+        y: 1215
+        width: 178
+        height: 415
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca3753b157a335b45874e0ca39d76157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3QFrontIdle (7)
+      rect:
+        serializedVersion: 2
+        x: 541
+        y: 381
+        width: 178
+        height: 415
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b0f6acf97bdb3b49aa215cc65da6c92
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3QFrontIdle (8)
+      rect:
+        serializedVersion: 2
+        x: 541
+        y: 798
+        width: 178
+        height: 415
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b15351508c51f314d9baf56d58ae4c49
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3QFrontIdle (9)
+      rect:
+        serializedVersion: 2
+        x: 541
+        y: 1215
+        width: 178
+        height: 415
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22aae5fc49d2fe746a4030454482e680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3QFrontIdle (10)
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1215
+        width: 178
+        height: 415
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f2059b172b50ef4290db099d54260eb
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3QFrontIdle (11)
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 798
+        width: 178
+        height: 415
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48f3000a7b2b1164d915e5348c474d9d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3QFrontIdle (12)
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 381
+        width: 178
+        height: 415
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35925d05214009640b2b2ee07b90189c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3QFrontIdle (13)
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 1632
+        width: 178
+        height: 415
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3107a9f9ceba2584981ac540dcb3c5ba
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3QFrontIdle (14)
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 1215
+        width: 178
+        height: 415
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7432e6bff95ac274da212982d93a4aa6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3QFrontIdle (15)
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 798
+        width: 178
+        height: 415
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4cca54a0183468d4eb6360dbd5b5d891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3QFrontIdle (16)
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 381
+        width: 178
+        height: 415
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0dfe2a46830452d45859ea7d9bd69724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3QFrontIdle (17)
+      rect:
+        serializedVersion: 2
+        x: 361
+        y: 1632
+        width: 178
+        height: 415
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9310faeb0daa01046a0798e538b8fe5f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3QFrontIdle (18)
+      rect:
+        serializedVersion: 2
+        x: 361
+        y: 1215
+        width: 178
+        height: 415
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f798510e08b05bc47951ff2ab8db075b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3QFrontIdle (19)
+      rect:
+        serializedVersion: 2
+        x: 361
+        y: 798
+        width: 178
+        height: 415
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a92a38ece3dbfff49930c6114e729957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3QFrontIdle (20)
+      rect:
+        serializedVersion: 2
+        x: 541
+        y: 1632
+        width: 178
+        height: 415
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c58ad92090f69de48bbcb9f6c2947227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3QFrontIdle (21)
+      rect:
+        serializedVersion: 2
+        x: 721
+        y: 1632
+        width: 178
+        height: 415
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5980a1396d536b24ba087ed2aba9bbea
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3QFrontIdle (22)
+      rect:
+        serializedVersion: 2
+        x: 901
+        y: 1632
+        width: 178
+        height: 415
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1de3c282356f9244080289ad013007d6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3QFrontIdle (23)
+      rect:
+        serializedVersion: 2
+        x: 1081
+        y: 1632
+        width: 178
+        height: 415
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9010130e4e696246b4bd869d24dc0bb
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3QFrontIdle (24)
+      rect:
+        serializedVersion: 2
+        x: 1261
+        y: 1632
+        width: 178
+        height: 415
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9cc69dac1cb44094691861d68d263254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3QFrontIdle (25)
+      rect:
+        serializedVersion: 2
+        x: 1441
+        y: 1632
+        width: 178
+        height: 415
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa47bd43d5297c547861f9e6e139839f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3QFrontIdle (26)
+      rect:
+        serializedVersion: 2
+        x: 1261
+        y: 1632
+        width: 178
+        height: 415
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52e3333de1220134284499040337e678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3QFrontIdle (27)
+      rect:
+        serializedVersion: 2
+        x: 1081
+        y: 1632
+        width: 178
+        height: 415
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ad3bb438a3cc564495102d1ce3cf95d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3QFrontIdle (28)
+      rect:
+        serializedVersion: 2
+        x: 901
+        y: 1632
+        width: 178
+        height: 415
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f5331a197bd71064a9cc77d944f7463d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3QFrontIdle (29)
+      rect:
+        serializedVersion: 2
+        x: 721
+        y: 1632
+        width: 178
+        height: 415
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e641718fe85f4b46aeb2142fb41fa45
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3QFrontIdle (30)
+      rect:
+        serializedVersion: 2
+        x: 541
+        y: 1632
+        width: 178
+        height: 415
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e437a7454192f54f94babb75bb98bb2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3QFrontIdle (31)
+      rect:
+        serializedVersion: 2
+        x: 361
+        y: 798
+        width: 178
+        height: 415
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1fedd61cfa40ab4478f073536abe4e79
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3QFrontIdle (32)
+      rect:
+        serializedVersion: 2
+        x: 361
+        y: 1215
+        width: 178
+        height: 415
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87d5120ca56cae04aa3f285551b144e5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3QFrontIdle (33)
+      rect:
+        serializedVersion: 2
+        x: 361
+        y: 1632
+        width: 178
+        height: 415
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7fcd74b048c54854b922388cec74908e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3QFrontIdle (34)
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 381
+        width: 178
+        height: 415
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 109af61e920b57644938182fef7c3b38
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3QFrontIdle (35)
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 798
+        width: 178
+        height: 415
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f983fdb30e7753642a16dfcc0b29291a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3QFrontIdle (36)
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 1215
+        width: 178
+        height: 415
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e66e0114b27a101488e00e326495142c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3QFrontIdle (37)
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 1632
+        width: 178
+        height: 415
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6f53322e2a11cf4f8e74743ed30018a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3QFrontIdle (38)
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 381
+        width: 178
+        height: 415
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 353f280f892c7a44c9aa6cd17e4da466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3QFrontIdle (39)
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 798
+        width: 178
+        height: 415
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19753e8c47c0daf4a8e6bacb7820e9c4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3QFrontIdle (40)
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1215
+        width: 178
+        height: 415
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a8d5f57b4cee3e4f9031092366dfb46
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3QFrontIdle (41)
+      rect:
+        serializedVersion: 2
+        x: 541
+        y: 1215
+        width: 178
+        height: 415
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 054cef3f44cf28a49b43bc5d51b219fd
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3QFrontIdle (42)
+      rect:
+        serializedVersion: 2
+        x: 541
+        y: 798
+        width: 178
+        height: 415
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 526db5de7a1231e47bbb2d361829891a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3QFrontIdle (43)
+      rect:
+        serializedVersion: 2
+        x: 541
+        y: 381
+        width: 178
+        height: 415
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 792a1d36de857214f966aeb7abc34185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3QFrontIdle (44)
+      rect:
+        serializedVersion: 2
+        x: 721
+        y: 1215
+        width: 178
+        height: 415
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36d5fd41a3a5ca640a70237bef9ff029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3QFrontIdle (45)
+      rect:
+        serializedVersion: 2
+        x: 721
+        y: 798
+        width: 178
+        height: 415
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2374ec87eeee8f47aa8282111a96a92
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3QFrontIdle (46)
+      rect:
+        serializedVersion: 2
+        x: 1801
+        y: 1632
+        width: 178
+        height: 415
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d421d6eaca20751469775ecac41f6e4f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3QFrontIdle (47)
+      rect:
+        serializedVersion: 2
+        x: 1621
+        y: 1632
+        width: 178
+        height: 415
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 90f7353bc6097944fb6481eddf4f2bff
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3QFrontIdle (48)
+      rect:
+        serializedVersion: 2
+        x: 361
+        y: 381
+        width: 178
+        height: 415
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d3b0034f0d876a4aacf43a50d72c451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3QFrontIdle (49)
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1632
+        width: 178
+        height: 415
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e51944cff806365439517ad5f13ebc4f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 576ff4fde1e80e546898b06a97b6172d
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

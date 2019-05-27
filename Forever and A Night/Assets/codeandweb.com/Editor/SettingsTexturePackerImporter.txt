@@ -2,53 +2,47 @@ version: 2
 importPivots: 1
 tpsheetFileNames:
 - Assets/codeandweb.com/Example/SpriteSheet/sprites.tpsheet
-- Assets/Forever And a Night/Art&Graphics/Characters/NPC's/Sprites/BoyIdle_SpriteSheets/BoyIdle_SpriteSheet.tpsheet
-- Assets/Forever And a Night/Art&Graphics/Characters/NPC's/Sprites/LibrarianIdle_SpriteSheets/LibrarianIdle_SpriteSheet.tpsheet
-- Assets/Forever And a Night/Art&Graphics/Characters/NPC's/Sprites/MadamIdle_SpriteSheets/MadamIdle_SpriteSheets.tpsheet
-- Assets/Forever And a Night/Art&Graphics/Characters/NPC's/Sprites/MoonLoverIdle_SpriteSheets/MoonLoverIdle_SpriteSheet.tpsheet
-- Assets/Forever And a Night/Art&Graphics/Characters/NPC's/Sprites/ShopKeepIdle_SpriteSheets/ShopKeepIdle_SpriteSheet.tpsheet
-- Assets/Forever And a Night/Art&Graphics/Characters/Player/Animations/Sprites/3QBackIdle_SpriteSheet/3QBackIdle_SpriteSheet.tpsheet
-- Assets/Forever And a Night/Art&Graphics/Characters/Player/Animations/Sprites/3QBackWalk_SpriteSheets/3QBackWalk_SpriteSheet.tpsheet
-- Assets/Forever And a Night/Art&Graphics/Characters/Player/Animations/Sprites/3QFrontIdle_SpriteSheets/3QFrontIdle_TP.tpsheet
-- Assets/Forever And a Night/Art&Graphics/Characters/Player/Animations/Sprites/3QFrontWalk_SpriteSheets/3QFWalk_SpriteSheet.tpsheet
-- Assets/Forever And a Night/Art&Graphics/Characters/Player/Animations/Sprites/BackIdle_SpriteSheet/BackIdleSpriteSheeet.tpsheet
-- Assets/Forever And a Night/Art&Graphics/Characters/Player/Animations/Sprites/BackWalk_SpriteSheet/BackWalk_SpriteSheet.tpsheet
-- Assets/Forever And a Night/Art&Graphics/Characters/Player/Animations/Sprites/FrontIdle_SpriteSheets/frontIdleSpriteS.tpsheet
-- Assets/Forever And a Night/Art&Graphics/Characters/Player/Animations/Sprites/FrontWalk_SpriteSheets/FrontWalk_SpriteSheet.tpsheet
-- Assets/Forever And a Night/Art&Graphics/Characters/Player/Animations/Sprites/SideWalk_SpriteSheet/Sidewalk.tpsheet
-- Assets/Forever And a Night/Art&Graphics/Characters/Player/Animations/Sprites/SidleIdle_SpriteSheet/SideIdleSpriteSheet.tpsheet
+- Assets/Forever And a Night/Art&Graphics/Characters/NPC's/Sprites/Monster/MonsterIdle_SpriteSheet/MonsterIdle_SS.tpsheet
+- Assets/Forever And a Night/Art&Graphics/Characters/NPC's/Sprites/Monster/MonsterWalk_SpriteSheet/MonsterWalk_SS.tpsheet
+- Assets/Forever And a Night/Art&Graphics/Characters/Player/Animations/SpritesSheets/Ascend/Ascend_SS.tpsheet
+- Assets/Forever And a Night/Art&Graphics/Characters/Player/Animations/SpritesSheets/Idle/3QBIdle/3QBackIdleSpriteSheet.tpsheet
+- Assets/Forever And a Night/Art&Graphics/Characters/Player/Animations/SpritesSheets/Idle/3QFrontIdle/3QFrontIdleSS.tpsheet
+- Assets/Forever And a Night/Art&Graphics/Characters/Player/Animations/SpritesSheets/Idle/BackIdle/BackIdleSS.tpsheet
+- Assets/Forever And a Night/Art&Graphics/Characters/Player/Animations/SpritesSheets/Idle/FrontIdle/FrontIdle_SS.tpsheet
+- Assets/Forever And a Night/Art&Graphics/Characters/Player/Animations/SpritesSheets/Idle/SidleIdle/SideIdle_SS.tpsheet
+- Assets/Forever And a Night/Art&Graphics/Characters/Player/Animations/SpritesSheets/Walk/3QBackWalk/3QBackWalkSpriteSheet.tpsheet
+- Assets/Forever And a Night/Art&Graphics/Characters/Player/Animations/SpritesSheets/Walk/3QFWalk/3QFWalk_SpriteSheet.tpsheet
+- Assets/Forever And a Night/Art&Graphics/Characters/Player/Animations/SpritesSheets/Walk/BackWalk/BackWalkSS.tpsheet
+- Assets/Forever And a Night/Art&Graphics/Characters/Player/Animations/SpritesSheets/Walk/FrontWalk/FrontWalk_SpriteSheet.tpsheet
+- Assets/Forever And a Night/Art&Graphics/Characters/Player/Animations/SpritesSheets/Walk/SideWalk/SideWalk_SpriteSheet.tpsheet
 textureFileNames:
 - Assets/codeandweb.com/Example/SpriteSheet/sprites.png
-- Assets/Forever And a Night/Art&Graphics/Characters/NPC's/Sprites/BoyIdle_SpriteSheets/BoyIdle_SpriteSheet.png
-- Assets/Forever And a Night/Art&Graphics/Characters/NPC's/Sprites/LibrarianIdle_SpriteSheets/LibrarianIdle_SpriteSheet.png
-- Assets/Forever And a Night/Art&Graphics/Characters/NPC's/Sprites/MadamIdle_SpriteSheets/MadamIdle_SpriteSheets.png
-- Assets/Forever And a Night/Art&Graphics/Characters/NPC's/Sprites/MoonLoverIdle_SpriteSheets/MoonLoverIdle_SpriteSheet.png
-- Assets/Forever And a Night/Art&Graphics/Characters/NPC's/Sprites/ShopKeepIdle_SpriteSheets/ShopKeepIdle_SpriteSheet.png
-- Assets/Forever And a Night/Art&Graphics/Characters/Player/Animations/Sprites/3QBackIdle_SpriteSheet/3QBackIdle_SpriteSheet.png
-- Assets/Forever And a Night/Art&Graphics/Characters/Player/Animations/Sprites/3QBackWalk_SpriteSheets/3QBackWalk_SpriteSheet.png
-- Assets/Forever And a Night/Art&Graphics/Characters/Player/Animations/Sprites/3QFrontIdle_SpriteSheets/3QFrontIdle_TP.png
-- Assets/Forever And a Night/Art&Graphics/Characters/Player/Animations/Sprites/3QFrontWalk_SpriteSheets/3QFrontWalk_SpriteSheet.png
-- Assets/Forever And a Night/Art&Graphics/Characters/Player/Animations/Sprites/BackIdle_SpriteSheet/BackIdleSpriteSheeet.png
-- Assets/Forever And a Night/Art&Graphics/Characters/Player/Animations/Sprites/BackWalk_SpriteSheet/BackWalk_SpriteSheet.png
-- Assets/Forever And a Night/Art&Graphics/Characters/Player/Animations/Sprites/FrontIdle_SpriteSheets/frontIdleSpriteS.png
-- Assets/Forever And a Night/Art&Graphics/Characters/Player/Animations/Sprites/FrontWalk_SpriteSheets/FrontWalk_SpriteSheet.png
-- Assets/Forever And a Night/Art&Graphics/Characters/Player/Animations/Sprites/SideWalk_SpriteSheet/Sidewalk.png
-- Assets/Forever And a Night/Art&Graphics/Characters/Player/Animations/Sprites/SidleIdle_SpriteSheet/SideIdleSpriteSheet.png
+- Assets/Forever And a Night/Art&Graphics/Characters/NPC's/Sprites/Monster/MonsterIdle_SpriteSheet/MonsterIdle_SS.png
+- Assets/Forever And a Night/Art&Graphics/Characters/NPC's/Sprites/Monster/MonsterWalk_SpriteSheet/MonsterWalk_SS.png
+- Assets/Forever And a Night/Art&Graphics/Characters/Player/Animations/SpritesSheets/Ascend/Ascend_SS.png
+- Assets/Forever And a Night/Art&Graphics/Characters/Player/Animations/SpritesSheets/Idle/3QBIdle/3QBackIdleSpriteSheet.png
+- Assets/Forever And a Night/Art&Graphics/Characters/Player/Animations/SpritesSheets/Idle/3QFrontIdle/3QFrontIdleSS.png
+- Assets/Forever And a Night/Art&Graphics/Characters/Player/Animations/SpritesSheets/Idle/BackIdle/BackIdleSS.png
+- Assets/Forever And a Night/Art&Graphics/Characters/Player/Animations/SpritesSheets/Idle/FrontIdle/FrontIdle_SS.png
+- Assets/Forever And a Night/Art&Graphics/Characters/Player/Animations/SpritesSheets/Idle/SidleIdle/SideIdle_SS.png
+- Assets/Forever And a Night/Art&Graphics/Characters/Player/Animations/SpritesSheets/Walk/3QBackWalk/3QBackWalkSpriteSheet.png
+- Assets/Forever And a Night/Art&Graphics/Characters/Player/Animations/SpritesSheets/Walk/3QFWalk/3QFWalk_SpriteSheet.png
+- Assets/Forever And a Night/Art&Graphics/Characters/Player/Animations/SpritesSheets/Walk/BackWalk/BackWalkSS.png
+- Assets/Forever And a Night/Art&Graphics/Characters/Player/Animations/SpritesSheets/Walk/FrontWalk/FrontWalk_SpriteSheet.png
+- Assets/Forever And a Night/Art&Graphics/Characters/Player/Animations/SpritesSheets/Walk/SideWalk/SideWalk_SpriteSheet.png
 normalmapFileNames:
 - Assets/codeandweb.com/Example/SpriteSheet/sprites_n.png
-- Assets/Forever And a Night/Art&Graphics/Characters/NPC's/Sprites/BoyIdle_SpriteSheets/BoyIdle_SpriteSheet_n.png
-- Assets/Forever And a Night/Art&Graphics/Characters/NPC's/Sprites/LibrarianIdle_SpriteSheets/LibrarianIdle_SpriteSheet_n.png
-- Assets/Forever And a Night/Art&Graphics/Characters/NPC's/Sprites/MadamIdle_SpriteSheets/MadamIdle_SpriteSheets_n.png
-- Assets/Forever And a Night/Art&Graphics/Characters/NPC's/Sprites/MoonLoverIdle_SpriteSheets/MoonLoverIdle_SpriteSheet_n.png
-- Assets/Forever And a Night/Art&Graphics/Characters/NPC's/Sprites/ShopKeepIdle_SpriteSheets/ShopKeepIdle_SpriteSheet_n.png
-- Assets/Forever And a Night/Art&Graphics/Characters/Player/Animations/Sprites/3QBackIdle_SpriteSheet/3QBackIdle_SpriteSheet_n.png
-- Assets/Forever And a Night/Art&Graphics/Characters/Player/Animations/Sprites/3QBackWalk_SpriteSheets/3QBackWalk_SpriteSheet_n.png
-- Assets/Forever And a Night/Art&Graphics/Characters/Player/Animations/Sprites/3QFrontIdle_SpriteSheets/3QFrontIdle_TP_n.png
-- Assets/Forever And a Night/Art&Graphics/Characters/Player/Animations/Sprites/3QFrontWalk_SpriteSheets/3QFrontWalk_SpriteSheet_n.png
-- Assets/Forever And a Night/Art&Graphics/Characters/Player/Animations/Sprites/BackIdle_SpriteSheet/BackIdleSpriteSheeet_n.png
-- Assets/Forever And a Night/Art&Graphics/Characters/Player/Animations/Sprites/BackWalk_SpriteSheet/BackWalk_SpriteSheet_n.png
-- Assets/Forever And a Night/Art&Graphics/Characters/Player/Animations/Sprites/FrontIdle_SpriteSheets/frontIdleSpriteS_n.png
-- Assets/Forever And a Night/Art&Graphics/Characters/Player/Animations/Sprites/FrontWalk_SpriteSheets/FrontWalk_SpriteSheet_n.png
-- Assets/Forever And a Night/Art&Graphics/Characters/Player/Animations/Sprites/SideWalk_SpriteSheet/Sidewalk_n.png
-- Assets/Forever And a Night/Art&Graphics/Characters/Player/Animations/Sprites/SidleIdle_SpriteSheet/SideIdleSpriteSheet_n.png
+- Assets/Forever And a Night/Art&Graphics/Characters/NPC's/Sprites/Monster/MonsterIdle_SpriteSheet/MonsterIdle_SS_n.png
+- Assets/Forever And a Night/Art&Graphics/Characters/NPC's/Sprites/Monster/MonsterWalk_SpriteSheet/MonsterWalk_SS_n.png
+- Assets/Forever And a Night/Art&Graphics/Characters/Player/Animations/SpritesSheets/Ascend/Ascend_SS_n.png
+- Assets/Forever And a Night/Art&Graphics/Characters/Player/Animations/SpritesSheets/Idle/3QBIdle/3QBackIdleSpriteSheet_n.png
+- Assets/Forever And a Night/Art&Graphics/Characters/Player/Animations/SpritesSheets/Idle/3QFrontIdle/3QFrontIdleSS_n.png
+- Assets/Forever And a Night/Art&Graphics/Characters/Player/Animations/SpritesSheets/Idle/BackIdle/BackIdleSS_n.png
+- Assets/Forever And a Night/Art&Graphics/Characters/Player/Animations/SpritesSheets/Idle/FrontIdle/FrontIdle_SS_n.png
+- Assets/Forever And a Night/Art&Graphics/Characters/Player/Animations/SpritesSheets/Idle/SidleIdle/SideIdle_SS_n.png
+- Assets/Forever And a Night/Art&Graphics/Characters/Player/Animations/SpritesSheets/Walk/3QBackWalk/3QBackWalkSpriteSheet_n.png
+- Assets/Forever And a Night/Art&Graphics/Characters/Player/Animations/SpritesSheets/Walk/3QFWalk/3QFWalk_SpriteSheet_n.png
+- Assets/Forever And a Night/Art&Graphics/Characters/Player/Animations/SpritesSheets/Walk/BackWalk/BackWalkSS_n.png
+- Assets/Forever And a Night/Art&Graphics/Characters/Player/Animations/SpritesSheets/Walk/FrontWalk/FrontWalk_SpriteSheet_n.png
+- Assets/Forever And a Night/Art&Graphics/Characters/Player/Animations/SpritesSheets/Walk/SideWalk/SideWalk_SpriteSheet_n.png
 enableDebugOutput: 0

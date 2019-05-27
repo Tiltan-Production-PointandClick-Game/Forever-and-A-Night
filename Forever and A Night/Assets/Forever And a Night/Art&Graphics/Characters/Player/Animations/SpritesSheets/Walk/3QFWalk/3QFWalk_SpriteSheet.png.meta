@@ -1,0 +1,698 @@
+fileFormatVersion: 2
+guid: 3a1d9ccd9be9d7647a5473703bd7491c
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: 3QFWalk_SpriteSheet
+    21300002: 3QFWalk (1)
+    21300004: 3QFWalk (2)
+    21300006: 3QFWalk (3)
+    21300008: 3QFWalk (4)
+    21300010: 3QFWalk (5)
+    21300012: 3QFWalk (6)
+    21300014: 3QFWalk (7)
+    21300016: 3QFWalk (8)
+    21300018: 3QFWalk (9)
+    21300020: 3QFWalk (10)
+    21300022: 3QFWalk (11)
+    21300024: 3QFWalk (12)
+    21300026: 3QFWalk (13)
+    21300028: 3QFWalk (14)
+    21300030: 3QFWalk (15)
+    21300032: 3QFWalk (16)
+    21300034: 3QFWalk (17)
+    21300036: 3QFWalk (18)
+    21300038: 3QFWalk (19)
+    21300040: 3QFWalk (20)
+    21300042: 3QFWalk (21)
+    21300044: 3QFWalk (22)
+    21300046: 3QFWalk (23)
+    21300048: 3QFWalk (24)
+    21300050: 3QFWalk (25)
+    21300052: 3QFWalk (26)
+    21300054: 3QFWalk (27)
+    21300056: 3QFWalk (28)
+    21300058: 3QFWalk (29)
+  externalObjects: {}
+  serializedVersion: 9
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: 3QFWalk (1)
+      rect:
+        serializedVersion: 2
+        x: 739
+        y: 791
+        width: 184
+        height: 417
+      alignment: 9
+      pivot: {x: 0.5054348, y: 0.49880096}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4b9cc5edeb0d6845856598cbad148f8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3QFWalk (2)
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 1629
+        width: 183
+        height: 418
+      alignment: 9
+      pivot: {x: 0.5081967, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a1a4c36b3b1f0c4ca01dcbbf9738a20
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3QFWalk (3)
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 369
+        width: 183
+        height: 418
+      alignment: 9
+      pivot: {x: 0.5081967, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de77cd499513bbd4ebfd659812ed9420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3QFWalk (4)
+      rect:
+        serializedVersion: 2
+        x: 372
+        y: 789
+        width: 182
+        height: 418
+      alignment: 9
+      pivot: {x: 0.510989, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4cc1e66f5daba914ea70ceda67bbe877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3QFWalk (5)
+      rect:
+        serializedVersion: 2
+        x: 926
+        y: 372
+        width: 183
+        height: 417
+      alignment: 9
+      pivot: {x: 0.5081967, y: 0.49880096}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8e4bc6f107b5ba49b1b530a6e9c1792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3QFWalk (6)
+      rect:
+        serializedVersion: 2
+        x: 739
+        y: 1210
+        width: 186
+        height: 417
+      alignment: 9
+      pivot: {x: 0.5, y: 0.49880096}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1aedd36692eb3645b162473fdb3527c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3QFWalk (7)
+      rect:
+        serializedVersion: 2
+        x: 1114
+        y: 1630
+        width: 183
+        height: 417
+      alignment: 9
+      pivot: {x: 0.5081967, y: 0.49880096}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f9a931679347ab489d49a09eb319d45
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3QFWalk (8)
+      rect:
+        serializedVersion: 2
+        x: 1299
+        y: 1213
+        width: 181
+        height: 417
+      alignment: 9
+      pivot: {x: 0.5138122, y: 0.49880096}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 98e8a66ce74cd2d4eb455ae59ab82cc9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3QFWalk (9)
+      rect:
+        serializedVersion: 2
+        x: 741
+        y: 1630
+        width: 186
+        height: 417
+      alignment: 9
+      pivot: {x: 0.5, y: 0.50119907}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f80aea632a38f8448af2c293392741f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3QFWalk (10)
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1209
+        width: 184
+        height: 418
+      alignment: 9
+      pivot: {x: 0.5054348, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d1cffed22dfe13441aff4b521e37c664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3QFWalk (11)
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 789
+        width: 184
+        height: 418
+      alignment: 9
+      pivot: {x: 0.5054348, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59790d5e33897f84782302a9330c2e55
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3QFWalk (12)
+      rect:
+        serializedVersion: 2
+        x: 1112
+        y: 1212
+        width: 181
+        height: 416
+      alignment: 9
+      pivot: {x: 0.5138122, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 202b3ec1c2cb7644abb55934dc046ebd
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3QFWalk (13)
+      rect:
+        serializedVersion: 2
+        x: 1299
+        y: 1632
+        width: 183
+        height: 415
+      alignment: 9
+      pivot: {x: 0.5081967, y: 0.49879518}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2b202b4c92f95b41b43847aceb58e00
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3QFWalk (14)
+      rect:
+        serializedVersion: 2
+        x: 1484
+        y: 1631
+        width: 182
+        height: 416
+      alignment: 9
+      pivot: {x: 0.510989, y: 0.49759614}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa0229bde2e83d0458d763fa5b0bae1d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3QFWalk (15)
+      rect:
+        serializedVersion: 2
+        x: 738
+        y: 370
+        width: 186
+        height: 417
+      alignment: 9
+      pivot: {x: 0.5, y: 0.50119907}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c152376afe49d804cb43e52d882e7217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3QFWalk (16)
+      rect:
+        serializedVersion: 2
+        x: 372
+        y: 369
+        width: 181
+        height: 418
+      alignment: 9
+      pivot: {x: 0.5138122, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3fa4acc64142704da2cc4d9094b016f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3QFWalk (17)
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 1209
+        width: 183
+        height: 418
+      alignment: 9
+      pivot: {x: 0.5081967, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56101b54c082cda408b197614706cdb6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3QFWalk (18)
+      rect:
+        serializedVersion: 2
+        x: 555
+        y: 369
+        width: 181
+        height: 418
+      alignment: 9
+      pivot: {x: 0.5138122, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6bd86ae5fcf3847418016d191c41b218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3QFWalk (19)
+      rect:
+        serializedVersion: 2
+        x: 556
+        y: 1209
+        width: 181
+        height: 418
+      alignment: 9
+      pivot: {x: 0.5138122, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15502d3c125fe544981d7bc80be8a8b2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3QFWalk (20)
+      rect:
+        serializedVersion: 2
+        x: 372
+        y: 1209
+        width: 182
+        height: 418
+      alignment: 9
+      pivot: {x: 0.510989, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ab975436cab5674a8000f072c852d6b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3QFWalk (21)
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 1629
+        width: 182
+        height: 418
+      alignment: 9
+      pivot: {x: 0.510989, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c40d2b079b96566409c10c4e7a663a2b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3QFWalk (22)
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1629
+        width: 186
+        height: 418
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73947659b0912d94592afe217b30b3e1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3QFWalk (23)
+      rect:
+        serializedVersion: 2
+        x: 558
+        y: 1629
+        width: 181
+        height: 418
+      alignment: 9
+      pivot: {x: 0.5138122, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09068f5269374a145b41e75df1961c31
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3QFWalk (24)
+      rect:
+        serializedVersion: 2
+        x: 925
+        y: 791
+        width: 184
+        height: 417
+      alignment: 9
+      pivot: {x: 0.5054348, y: 0.49880096}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb7e78ef5ecea4e4ca900a01f34fef11
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3QFWalk (25)
+      rect:
+        serializedVersion: 2
+        x: 927
+        y: 1211
+        width: 183
+        height: 417
+      alignment: 9
+      pivot: {x: 0.5081967, y: 0.50119907}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6b4a1f15d0810d47aad8c8c630e0270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3QFWalk (26)
+      rect:
+        serializedVersion: 2
+        x: 929
+        y: 1630
+        width: 183
+        height: 417
+      alignment: 9
+      pivot: {x: 0.5081967, y: 0.49880096}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6794c08cb9d73cb44a91f4fb8d4c064d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3QFWalk (27)
+      rect:
+        serializedVersion: 2
+        x: 556
+        y: 789
+        width: 181
+        height: 418
+      alignment: 9
+      pivot: {x: 0.5138122, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d228de52cbca8ef4db8297bcfb4961a2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3QFWalk (28)
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 789
+        width: 183
+        height: 418
+      alignment: 9
+      pivot: {x: 0.5081967, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba636f5e1ef1c2f44bc5356a21c6c159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3QFWalk (29)
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 369
+        width: 184
+        height: 418
+      alignment: 9
+      pivot: {x: 0.5054348, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 291d7c5f5588831468378b8920370204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: d31bdf999bc35ab489be76ded7a96d85
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
