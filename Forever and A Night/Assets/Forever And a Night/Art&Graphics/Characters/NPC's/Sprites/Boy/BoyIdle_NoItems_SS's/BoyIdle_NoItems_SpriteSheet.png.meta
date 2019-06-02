@@ -1,0 +1,2084 @@
+fileFormatVersion: 2
+guid: 52b520d8d44c4164b8e9daee23406f45
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: BoyIdle_NoItems_SpriteSheet
+    21300002: BoyIdle_NoItems (1)
+    21300004: BoyIdle_NoItems (2)
+    21300006: BoyIdle_NoItems (3)
+    21300008: BoyIdle_NoItems (4)
+    21300010: BoyIdle_NoItems (5)
+    21300012: BoyIdle_NoItems (6)
+    21300014: BoyIdle_NoItems (7)
+    21300016: BoyIdle_NoItems (8)
+    21300018: BoyIdle_NoItems (9)
+    21300020: BoyIdle_NoItems (10)
+    21300022: BoyIdle_NoItems (11)
+    21300024: BoyIdle_NoItems (12)
+    21300026: BoyIdle_NoItems (13)
+    21300028: BoyIdle_NoItems (14)
+    21300030: BoyIdle_NoItems (15)
+    21300032: BoyIdle_NoItems (16)
+    21300034: BoyIdle_NoItems (17)
+    21300036: BoyIdle_NoItems (18)
+    21300038: BoyIdle_NoItems (19)
+    21300040: BoyIdle_NoItems (20)
+    21300042: BoyIdle_NoItems (21)
+    21300044: BoyIdle_NoItems (22)
+    21300046: BoyIdle_NoItems (23)
+    21300048: BoyIdle_NoItems (24)
+    21300050: BoyIdle_NoItems (25)
+    21300052: BoyIdle_NoItems (26)
+    21300054: BoyIdle_NoItems (27)
+    21300056: BoyIdle_NoItems (28)
+    21300058: BoyIdle_NoItems (29)
+    21300060: BoyIdle_NoItems (30)
+    21300062: BoyIdle_NoItems (31)
+    21300064: BoyIdle_NoItems (32)
+    21300066: BoyIdle_NoItems (33)
+    21300068: BoyIdle_NoItems (34)
+    21300070: BoyIdle_NoItems (35)
+    21300072: BoyIdle_NoItems (36)
+    21300074: BoyIdle_NoItems (37)
+    21300076: BoyIdle_NoItems (38)
+    21300078: BoyIdle_NoItems (39)
+    21300080: BoyIdle_NoItems (40)
+    21300082: BoyIdle_NoItems (41)
+    21300084: BoyIdle_NoItems (42)
+    21300086: BoyIdle_NoItems (43)
+    21300088: BoyIdle_NoItems (44)
+    21300090: BoyIdle_NoItems (45)
+    21300092: BoyIdle_NoItems (46)
+    21300094: BoyIdle_NoItems (47)
+    21300096: BoyIdle_NoItems (48)
+    21300098: BoyIdle_NoItems (49)
+    21300100: BoyIdle_NoItems (50)
+    21300102: BoyIdle_NoItems (51)
+    21300104: BoyIdle_NoItems (52)
+    21300106: BoyIdle_NoItems (53)
+    21300108: BoyIdle_NoItems (54)
+    21300110: BoyIdle_NoItems (55)
+    21300112: BoyIdle_NoItems (56)
+    21300114: BoyIdle_NoItems (57)
+    21300116: BoyIdle_NoItems (58)
+    21300118: BoyIdle_NoItems (59)
+    21300120: BoyIdle_NoItems (60)
+    21300122: BoyIdle_NoItems (61)
+    21300124: BoyIdle_NoItems (62)
+    21300126: BoyIdle_NoItems (63)
+    21300128: BoyIdle_NoItems (64)
+    21300130: BoyIdle_NoItems (65)
+    21300132: BoyIdle_NoItems (66)
+    21300134: BoyIdle_NoItems (67)
+    21300136: BoyIdle_NoItems (68)
+    21300138: BoyIdle_NoItems (69)
+    21300140: BoyIdle_NoItems (70)
+    21300142: BoyIdle_NoItems (71)
+    21300144: BoyIdle_NoItems (72)
+    21300146: BoyIdle_NoItems (73)
+    21300148: BoyIdle_NoItems (74)
+    21300150: BoyIdle_NoItems (75)
+    21300152: BoyIdle_NoItems (76)
+    21300154: BoyIdle_NoItems (77)
+    21300156: BoyIdle_NoItems (78)
+    21300158: BoyIdle_NoItems (79)
+    21300160: BoyIdle_NoItems (80)
+    21300162: BoyIdle_NoItems (81)
+    21300164: BoyIdle_NoItems (82)
+    21300166: BoyIdle_NoItems (83)
+    21300168: BoyIdle_NoItems (84)
+    21300170: BoyIdle_NoItems (85)
+    21300172: BoyIdle_NoItems (86)
+    21300174: BoyIdle_NoItems (87)
+    21300176: BoyIdle_NoItems (88)
+    21300178: BoyIdle_NoItems (89)
+    21300180: BoyIdle_NoItems (90)
+    21300182: BoyIdle_NoItems (91)
+    21300184: BoyIdle_NoItems (92)
+    21300186: BoyIdle_NoItems (93)
+    21300188: BoyIdle_NoItems (94)
+    21300190: BoyIdle_NoItems (95)
+  externalObjects: {}
+  serializedVersion: 9
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: BoyIdle_NoItems (1)
+      rect:
+        serializedVersion: 2
+        x: 856
+        y: 1169
+        width: 141
+        height: 386
+      alignment: 9
+      pivot: {x: 0.5035461, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7596b3605701a264c96f4459fb0102f2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoyIdle_NoItems (2)
+      rect:
+        serializedVersion: 2
+        x: 1860
+        y: 780
+        width: 141
+        height: 386
+      alignment: 9
+      pivot: {x: 0.5035461, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b77d92c998438e48a9adeb554c109bb
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoyIdle_NoItems (3)
+      rect:
+        serializedVersion: 2
+        x: 2146
+        y: 392
+        width: 141
+        height: 385
+      alignment: 9
+      pivot: {x: 0.5035461, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3699db5afa1a5da439dbe5c5715036d1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoyIdle_NoItems (4)
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 390
+        width: 141
+        height: 387
+      alignment: 9
+      pivot: {x: 0.5035461, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3885a18cec749a04ca38b5b230e1bb2c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoyIdle_NoItems (5)
+      rect:
+        serializedVersion: 2
+        x: 570
+        y: 1168
+        width: 141
+        height: 387
+      alignment: 9
+      pivot: {x: 0.5035461, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24c58a8e1ce17d5459739f10fd39d2c6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoyIdle_NoItems (6)
+      rect:
+        serializedVersion: 2
+        x: 716
+        y: 780
+        width: 141
+        height: 386
+      alignment: 9
+      pivot: {x: 0.5035461, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 792db086445050142af64a9572b4676c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoyIdle_NoItems (7)
+      rect:
+        serializedVersion: 2
+        x: 859
+        y: 782
+        width: 141
+        height: 384
+      alignment: 9
+      pivot: {x: 0.5035461, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf0024d1759a5864cbc7abbb5664a6e0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoyIdle_NoItems (8)
+      rect:
+        serializedVersion: 2
+        x: 430
+        y: 780
+        width: 141
+        height: 386
+      alignment: 9
+      pivot: {x: 0.5035461, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95ae4a35bba62584fbe42a2dc200a133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoyIdle_NoItems (9)
+      rect:
+        serializedVersion: 2
+        x: 2572
+        y: 1169
+        width: 141
+        height: 386
+      alignment: 9
+      pivot: {x: 0.5035461, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4013fc93af14a845b0d9c82cb1a8581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoyIdle_NoItems (10)
+      rect:
+        serializedVersion: 2
+        x: 2575
+        y: 780
+        width: 141
+        height: 386
+      alignment: 9
+      pivot: {x: 0.5035461, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52f565c79be9efa4eae5014b0acfb766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoyIdle_NoItems (11)
+      rect:
+        serializedVersion: 2
+        x: 2718
+        y: 783
+        width: 141
+        height: 383
+      alignment: 9
+      pivot: {x: 0.5035461, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 134a3e7475ced524cb33b0abba52ab7e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoyIdle_NoItems (12)
+      rect:
+        serializedVersion: 2
+        x: 3004
+        y: 780
+        width: 141
+        height: 386
+      alignment: 9
+      pivot: {x: 0.5035461, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd0baffc5eb84374ab94aedfef1968f5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoyIdle_NoItems (13)
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 390
+        width: 141
+        height: 387
+      alignment: 9
+      pivot: {x: 0.5035461, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 648b9946066ed6a408e6fd9e85f34f69
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoyIdle_NoItems (14)
+      rect:
+        serializedVersion: 2
+        x: 3147
+        y: 782
+        width: 141
+        height: 384
+      alignment: 9
+      pivot: {x: 0.5035461, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b28fe05cba86444c8be29d4ca425807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoyIdle_NoItems (15)
+      rect:
+        serializedVersion: 2
+        x: 3290
+        y: 780
+        width: 141
+        height: 386
+      alignment: 9
+      pivot: {x: 0.5035461, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 332cccef89365ea4cad18ec2cb78ac06
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoyIdle_NoItems (16)
+      rect:
+        serializedVersion: 2
+        x: 2861
+        y: 780
+        width: 141
+        height: 386
+      alignment: 9
+      pivot: {x: 0.5035461, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e156a1e81fe81724dbe5d64c22090863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoyIdle_NoItems (17)
+      rect:
+        serializedVersion: 2
+        x: 2432
+        y: 784
+        width: 141
+        height: 382
+      alignment: 9
+      pivot: {x: 0.5035461, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca047681c3c6d584ca680f1793d4c9ea
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoyIdle_NoItems (18)
+      rect:
+        serializedVersion: 2
+        x: 1431
+        y: 779
+        width: 141
+        height: 387
+      alignment: 9
+      pivot: {x: 0.5035461, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a1d3626b298c7f4f83d5ac57fb62ca8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoyIdle_NoItems (19)
+      rect:
+        serializedVersion: 2
+        x: 1574
+        y: 780
+        width: 141
+        height: 386
+      alignment: 9
+      pivot: {x: 0.5035461, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 026ecf1ef989e944397b3bffa0f46560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoyIdle_NoItems (20)
+      rect:
+        serializedVersion: 2
+        x: 2289
+        y: 782
+        width: 141
+        height: 384
+      alignment: 9
+      pivot: {x: 0.5035461, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c7d98942e53db4428615f58fb72f22e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoyIdle_NoItems (21)
+      rect:
+        serializedVersion: 2
+        x: 2003
+        y: 782
+        width: 141
+        height: 384
+      alignment: 9
+      pivot: {x: 0.5035461, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb1a47b98ebb3b0408a7f233e796d9d8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoyIdle_NoItems (22)
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 3
+        width: 142
+        height: 385
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a3ce9493015d454582e9f06b5e94bc0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoyIdle_NoItems (23)
+      rect:
+        serializedVersion: 2
+        x: 2146
+        y: 780
+        width: 141
+        height: 386
+      alignment: 9
+      pivot: {x: 0.5035461, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95c0212bfb145ca4ca893830304334c5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoyIdle_NoItems (24)
+      rect:
+        serializedVersion: 2
+        x: 1717
+        y: 782
+        width: 141
+        height: 384
+      alignment: 9
+      pivot: {x: 0.5035461, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aebca7935c22d8b40bf306dbaaf2c9f0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoyIdle_NoItems (25)
+      rect:
+        serializedVersion: 2
+        x: 1574
+        y: 391
+        width: 141
+        height: 386
+      alignment: 9
+      pivot: {x: 0.5035461, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0883721dadd6f1b4ba04467847c00b26
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoyIdle_NoItems (26)
+      rect:
+        serializedVersion: 2
+        x: 2289
+        y: 395
+        width: 141
+        height: 382
+      alignment: 9
+      pivot: {x: 0.5035461, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67f40c57e5876c74c86b2676bcd2421f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoyIdle_NoItems (27)
+      rect:
+        serializedVersion: 2
+        x: 1860
+        y: 391
+        width: 141
+        height: 386
+      alignment: 9
+      pivot: {x: 0.5035461, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 809ad39c851aa714e9487c73dff37f6a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoyIdle_NoItems (28)
+      rect:
+        serializedVersion: 2
+        x: 2003
+        y: 391
+        width: 141
+        height: 386
+      alignment: 9
+      pivot: {x: 0.5035461, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c71351bdc3d37314db80b50b4958121d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoyIdle_NoItems (29)
+      rect:
+        serializedVersion: 2
+        x: 1717
+        y: 391
+        width: 141
+        height: 386
+      alignment: 9
+      pivot: {x: 0.5035461, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c5b028146b90e04583120dc55a205c4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoyIdle_NoItems (30)
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 391
+        width: 141
+        height: 386
+      alignment: 9
+      pivot: {x: 0.5035461, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 05a622529740637488aa2847e6c2dd44
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoyIdle_NoItems (31)
+      rect:
+        serializedVersion: 2
+        x: 573
+        y: 391
+        width: 141
+        height: 386
+      alignment: 9
+      pivot: {x: 0.5035461, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e185d9cd2cc59b14a8a410a9178116db
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoyIdle_NoItems (32)
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1168
+        width: 140
+        height: 387
+      alignment: 9
+      pivot: {x: 0.50714284, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd32da84f4a4ae3439879e2cc05332d3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoyIdle_NoItems (33)
+      rect:
+        serializedVersion: 2
+        x: 716
+        y: 393
+        width: 141
+        height: 384
+      alignment: 9
+      pivot: {x: 0.5035461, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1ae88817cd1046468040514aaa89951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoyIdle_NoItems (34)
+      rect:
+        serializedVersion: 2
+        x: 430
+        y: 392
+        width: 141
+        height: 385
+      alignment: 9
+      pivot: {x: 0.5035461, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9ab8cd2a4745bc448a940ac75ce1934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoyIdle_NoItems (35)
+      rect:
+        serializedVersion: 2
+        x: 859
+        y: 390
+        width: 141
+        height: 387
+      alignment: 9
+      pivot: {x: 0.5035461, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7fad035bcb881a542860f1ec2e523389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoyIdle_NoItems (36)
+      rect:
+        serializedVersion: 2
+        x: 1002
+        y: 392
+        width: 141
+        height: 385
+      alignment: 9
+      pivot: {x: 0.5035461, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 46394bb52b31b2e42bfffa06f06ffd3d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoyIdle_NoItems (37)
+      rect:
+        serializedVersion: 2
+        x: 1288
+        y: 391
+        width: 141
+        height: 386
+      alignment: 9
+      pivot: {x: 0.5035461, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e94db8e1313b1d478f3791ebfeb192a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoyIdle_NoItems (38)
+      rect:
+        serializedVersion: 2
+        x: 1431
+        y: 391
+        width: 141
+        height: 386
+      alignment: 9
+      pivot: {x: 0.5035461, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 351742b50af330a44bb1061dd2631a94
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoyIdle_NoItems (39)
+      rect:
+        serializedVersion: 2
+        x: 1145
+        y: 391
+        width: 141
+        height: 386
+      alignment: 9
+      pivot: {x: 0.5035461, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3313941b2d2425e4cb2a2c82f72f55b0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoyIdle_NoItems (40)
+      rect:
+        serializedVersion: 2
+        x: 2715
+        y: 1169
+        width: 141
+        height: 386
+      alignment: 9
+      pivot: {x: 0.5035461, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7dac7d1375e6a8468f12abf2a63d282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoyIdle_NoItems (41)
+      rect:
+        serializedVersion: 2
+        x: 1428
+        y: 1169
+        width: 141
+        height: 386
+      alignment: 9
+      pivot: {x: 0.5035461, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5def086a7d5f0b44ea3300976f57be8a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoyIdle_NoItems (42)
+      rect:
+        serializedVersion: 2
+        x: 1714
+        y: 1170
+        width: 141
+        height: 385
+      alignment: 9
+      pivot: {x: 0.5035461, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f2d8464127b7c9347b2e73c78da64f45
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoyIdle_NoItems (43)
+      rect:
+        serializedVersion: 2
+        x: 2143
+        y: 1169
+        width: 141
+        height: 386
+      alignment: 9
+      pivot: {x: 0.5035461, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41a512209b063814a8f51b5b38cbf099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoyIdle_NoItems (44)
+      rect:
+        serializedVersion: 2
+        x: 1857
+        y: 1168
+        width: 141
+        height: 387
+      alignment: 9
+      pivot: {x: 0.5035461, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa14f543ddfe25b46b7a8787339a70fe
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoyIdle_NoItems (45)
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 1171
+        width: 140
+        height: 384
+      alignment: 9
+      pivot: {x: 0.50714284, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 563b204483d1b524c8ba5ba31986cc57
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoyIdle_NoItems (46)
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 1168
+        width: 141
+        height: 387
+      alignment: 9
+      pivot: {x: 0.5035461, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59b0443ea2fdcf045aedfd6ea255a19b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoyIdle_NoItems (47)
+      rect:
+        serializedVersion: 2
+        x: 1285
+        y: 1170
+        width: 141
+        height: 385
+      alignment: 9
+      pivot: {x: 0.5035461, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 101940bff491a304ea07884c39fed914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoyIdle_NoItems (48)
+      rect:
+        serializedVersion: 2
+        x: 713
+        y: 1169
+        width: 141
+        height: 386
+      alignment: 9
+      pivot: {x: 0.5035461, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d323bd48f87dac4c9f5ec850139022f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoyIdle_NoItems (49)
+      rect:
+        serializedVersion: 2
+        x: 427
+        y: 1169
+        width: 141
+        height: 386
+      alignment: 9
+      pivot: {x: 0.5035461, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a9bcf3261532b5458c12a4bf3a35c95
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoyIdle_NoItems (50)
+      rect:
+        serializedVersion: 2
+        x: 999
+        y: 1169
+        width: 141
+        height: 386
+      alignment: 9
+      pivot: {x: 0.5035461, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee0a3f8e4682f47428514b2332e8911c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoyIdle_NoItems (51)
+      rect:
+        serializedVersion: 2
+        x: 1142
+        y: 1168
+        width: 141
+        height: 387
+      alignment: 9
+      pivot: {x: 0.5035461, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72d0d8c49c634474f8fe9b8ae09a07f2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoyIdle_NoItems (52)
+      rect:
+        serializedVersion: 2
+        x: 1288
+        y: 782
+        width: 141
+        height: 384
+      alignment: 9
+      pivot: {x: 0.5035461, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf7d83beb64c77a438ea5eafaa3b8fa2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoyIdle_NoItems (53)
+      rect:
+        serializedVersion: 2
+        x: 1571
+        y: 1169
+        width: 141
+        height: 386
+      alignment: 9
+      pivot: {x: 0.5035461, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 818de15cd3eea554faaefb3625f71bf0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoyIdle_NoItems (54)
+      rect:
+        serializedVersion: 2
+        x: 2286
+        y: 1170
+        width: 141
+        height: 385
+      alignment: 9
+      pivot: {x: 0.5035461, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8094c394648dcb47b062350d5f015de
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoyIdle_NoItems (55)
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 781
+        width: 141
+        height: 385
+      alignment: 9
+      pivot: {x: 0.5035461, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a212c772bc5e7e49b94c29a19940fc7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoyIdle_NoItems (56)
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 780
+        width: 141
+        height: 386
+      alignment: 9
+      pivot: {x: 0.5035461, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 084e9f09454726044ac8547f556168dd
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoyIdle_NoItems (57)
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 2
+        width: 142
+        height: 386
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08d9c8c96d79c68408d137f96423cca3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoyIdle_NoItems (58)
+      rect:
+        serializedVersion: 2
+        x: 573
+        y: 781
+        width: 141
+        height: 385
+      alignment: 9
+      pivot: {x: 0.5035461, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72be22fbbfc61bb4d9b2554435ce8d73
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoyIdle_NoItems (59)
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 2
+        width: 142
+        height: 386
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f35c3be35b811a41b93c39ca9f1e13f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoyIdle_NoItems (60)
+      rect:
+        serializedVersion: 2
+        x: 3152
+        y: 391
+        width: 142
+        height: 386
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68c28ec646f47b147b02375e489fe58d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoyIdle_NoItems (61)
+      rect:
+        serializedVersion: 2
+        x: 865
+        y: 2
+        width: 142
+        height: 386
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bba3d0200e7ce2145af400d50afcc59a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoyIdle_NoItems (62)
+      rect:
+        serializedVersion: 2
+        x: 1002
+        y: 779
+        width: 141
+        height: 387
+      alignment: 9
+      pivot: {x: 0.5035461, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a2e3c9e50103144f83539657acf7c25
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoyIdle_NoItems (63)
+      rect:
+        serializedVersion: 2
+        x: 1145
+        y: 781
+        width: 141
+        height: 385
+      alignment: 9
+      pivot: {x: 0.5035461, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87a05fc1a1479524cb1d2c230152bef1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoyIdle_NoItems (64)
+      rect:
+        serializedVersion: 2
+        x: 433
+        y: 2
+        width: 142
+        height: 386
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c3141cd3e508c9946a2856e5205189d7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoyIdle_NoItems (65)
+      rect:
+        serializedVersion: 2
+        x: 1729
+        y: 1
+        width: 142
+        height: 387
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5db86451ef408e048bea1a1afbe74d70
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoyIdle_NoItems (66)
+      rect:
+        serializedVersion: 2
+        x: 1585
+        y: 1
+        width: 142
+        height: 387
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f2d0cdfd5f8d97a4185d6de7bde6c927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoyIdle_NoItems (67)
+      rect:
+        serializedVersion: 2
+        x: 1873
+        y: 1
+        width: 142
+        height: 387
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7531d9bfa36cdc4ebcd98c93c5c38bc
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoyIdle_NoItems (68)
+      rect:
+        serializedVersion: 2
+        x: 1441
+        y: 1
+        width: 142
+        height: 387
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b84da982a516674995bc39f499a4253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoyIdle_NoItems (69)
+      rect:
+        serializedVersion: 2
+        x: 1153
+        y: 2
+        width: 142
+        height: 386
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b228ea9cabf16d24ea0ceb8df17d57ac
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoyIdle_NoItems (70)
+      rect:
+        serializedVersion: 2
+        x: 1009
+        y: 1
+        width: 142
+        height: 387
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28c1f0951f971234586471e8239b0903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoyIdle_NoItems (71)
+      rect:
+        serializedVersion: 2
+        x: 2017
+        y: 2
+        width: 142
+        height: 386
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5cbf8e837d711843a2eacd766c73b17
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoyIdle_NoItems (72)
+      rect:
+        serializedVersion: 2
+        x: 2881
+        y: 3
+        width: 142
+        height: 385
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11020dcbb086d664ab05a5250d156685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoyIdle_NoItems (73)
+      rect:
+        serializedVersion: 2
+        x: 2737
+        y: 1
+        width: 142
+        height: 387
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b633c5b0bd997746a934a9226bbb8fe
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoyIdle_NoItems (74)
+      rect:
+        serializedVersion: 2
+        x: 3025
+        y: 1
+        width: 142
+        height: 387
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a69a59bfe4fb44744aea5c7cf4de9dac
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoyIdle_NoItems (75)
+      rect:
+        serializedVersion: 2
+        x: 2449
+        y: 3
+        width: 142
+        height: 385
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b251a5bd8c2a48c49864ab7c7639bde9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoyIdle_NoItems (76)
+      rect:
+        serializedVersion: 2
+        x: 2593
+        y: 5
+        width: 142
+        height: 383
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bef33f29fe3a4af42aec1da2ddb5c19c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoyIdle_NoItems (77)
+      rect:
+        serializedVersion: 2
+        x: 2305
+        y: 2
+        width: 142
+        height: 386
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb10283d5ad2e8645bc15287e22f64f7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoyIdle_NoItems (78)
+      rect:
+        serializedVersion: 2
+        x: 2161
+        y: 2
+        width: 142
+        height: 386
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 591ed53c6dfb6ac40b09c27686ef0f40
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoyIdle_NoItems (79)
+      rect:
+        serializedVersion: 2
+        x: 1297
+        y: 2
+        width: 142
+        height: 386
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba8ff13448ebc9741bba5c3fe90c0b18
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoyIdle_NoItems (80)
+      rect:
+        serializedVersion: 2
+        x: 2720
+        y: 392
+        width: 142
+        height: 385
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7b8ab39a20cd464aadc973dfb92a153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoyIdle_NoItems (81)
+      rect:
+        serializedVersion: 2
+        x: 2864
+        y: 392
+        width: 142
+        height: 385
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2cb0a3672a4789245b203e4da493d7aa
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoyIdle_NoItems (82)
+      rect:
+        serializedVersion: 2
+        x: 2576
+        y: 391
+        width: 142
+        height: 386
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de3fd5ef06130f04fa50230cdd85a552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoyIdle_NoItems (83)
+      rect:
+        serializedVersion: 2
+        x: 2432
+        y: 392
+        width: 142
+        height: 385
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bda9a278c47449a43b88f783f91b5556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoyIdle_NoItems (84)
+      rect:
+        serializedVersion: 2
+        x: 3008
+        y: 392
+        width: 142
+        height: 385
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d90983f8e6a86249952d66f19b19268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoyIdle_NoItems (85)
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 780
+        width: 141
+        height: 386
+      alignment: 9
+      pivot: {x: 0.5035461, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 90085d78d9649054b898f87d7ffe6099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoyIdle_NoItems (86)
+      rect:
+        serializedVersion: 2
+        x: 577
+        y: 4
+        width: 142
+        height: 384
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dfff1c8ac1a0d864ea5da6cd5251d84d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoyIdle_NoItems (87)
+      rect:
+        serializedVersion: 2
+        x: 3169
+        y: 1
+        width: 144
+        height: 387
+      alignment: 9
+      pivot: {x: 0.49305555, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 29fedc4f16781484fa4e25125db909f8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoyIdle_NoItems (88)
+      rect:
+        serializedVersion: 2
+        x: 2429
+        y: 1168
+        width: 141
+        height: 387
+      alignment: 9
+      pivot: {x: 0.5035461, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aab852be1c0240645b6bdaa58fdbce3a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoyIdle_NoItems (89)
+      rect:
+        serializedVersion: 2
+        x: 721
+        y: 2
+        width: 142
+        height: 386
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1969f178392e78c4c8db4b5cee0d6c10
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoyIdle_NoItems (90)
+      rect:
+        serializedVersion: 2
+        x: 2858
+        y: 1171
+        width: 141
+        height: 384
+      alignment: 9
+      pivot: {x: 0.5035461, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 55f3aa40911d6884cb39d02c70787160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoyIdle_NoItems (91)
+      rect:
+        serializedVersion: 2
+        x: 3287
+        y: 1171
+        width: 141
+        height: 384
+      alignment: 9
+      pivot: {x: 0.5035461, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54cf081539883294390cbb810d3e4668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoyIdle_NoItems (92)
+      rect:
+        serializedVersion: 2
+        x: 3001
+        y: 1169
+        width: 141
+        height: 386
+      alignment: 9
+      pivot: {x: 0.5035461, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57bb7b6d7a9421448ae318f3fc1e256a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoyIdle_NoItems (93)
+      rect:
+        serializedVersion: 2
+        x: 3144
+        y: 1169
+        width: 141
+        height: 386
+      alignment: 9
+      pivot: {x: 0.5035461, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8316b6c029110e048ac5c75b3d9b38c1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoyIdle_NoItems (94)
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 1169
+        width: 140
+        height: 386
+      alignment: 9
+      pivot: {x: 0.50714284, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85b6f592bbb71ba44a4912379320a4c6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoyIdle_NoItems (95)
+      rect:
+        serializedVersion: 2
+        x: 856
+        y: 1169
+        width: 141
+        height: 386
+      alignment: 9
+      pivot: {x: 0.5035461, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02fb3ef09637f5c4f87b306001365bc7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 809e551ad0d30eb4e9601c7e4360b038
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

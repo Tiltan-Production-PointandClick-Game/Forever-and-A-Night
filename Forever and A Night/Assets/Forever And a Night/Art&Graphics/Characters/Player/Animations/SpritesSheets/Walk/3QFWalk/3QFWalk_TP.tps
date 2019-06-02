@@ -102,11 +102,11 @@
         <key>algorithmSettings</key>
         <struct type="AlgorithmSettings">
             <key>algorithm</key>
-            <enum type="AlgorithmSettings::AlgorithmId">MaxRects</enum>
+            <enum type="AlgorithmSettings::AlgorithmId">Basic</enum>
             <key>freeSizeMode</key>
             <enum type="AlgorithmSettings::AlgorithmFreeSizeMode">Best</enum>
             <key>sizeConstraints</key>
-            <enum type="AlgorithmSettings::SizeConstraints">POT</enum>
+            <enum type="AlgorithmSettings::SizeConstraints">AnySize</enum>
             <key>forceSquared</key>
             <false/>
             <key>maxRects</key>
@@ -132,7 +132,7 @@
             <key>datafile</key>
             <struct type="DataFile">
                 <key>name</key>
-                <filename></filename>
+                <filename>3QFWalk_SpriteSheet.tpsheet</filename>
             </struct>
         </map>
         <key>multiPack</key>
@@ -181,64 +181,76 @@
         </struct>
         <key>individualSpriteSettings</key>
         <map type="IndividualSpriteSettingsMap">
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QFWalk/3QFWalk (1).png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QFWalk/3QFWalk (1)_n.png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QFWalk/3QFWalk (10).png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QFWalk/3QFWalk (10)_n.png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QFWalk/3QFWalk (11).png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QFWalk/3QFWalk (11)_n.png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QFWalk/3QFWalk (12).png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QFWalk/3QFWalk (12)_n.png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QFWalk/3QFWalk (13).png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QFWalk/3QFWalk (13)_n.png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QFWalk/3QFWalk (14).png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QFWalk/3QFWalk (14)_n.png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QFWalk/3QFWalk (15).png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QFWalk/3QFWalk (15)_n.png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QFWalk/3QFWalk (16).png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QFWalk/3QFWalk (16)_n.png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QFWalk/3QFWalk (17).png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QFWalk/3QFWalk (17)_n.png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QFWalk/3QFWalk (18).png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QFWalk/3QFWalk (18)_n.png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QFWalk/3QFWalk (19).png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QFWalk/3QFWalk (19)_n.png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QFWalk/3QFWalk (2).png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QFWalk/3QFWalk (2)_n.png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QFWalk/3QFWalk (20).png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QFWalk/3QFWalk (20)_n.png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QFWalk/3QFWalk (21).png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QFWalk/3QFWalk (21)_n.png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QFWalk/3QFWalk (22).png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QFWalk/3QFWalk (22)_n.png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QFWalk/3QFWalk (23).png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QFWalk/3QFWalk (23)_n.png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QFWalk/3QFWalk (24).png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QFWalk/3QFWalk (24)_n.png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QFWalk/3QFWalk (25).png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QFWalk/3QFWalk (25)_n.png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QFWalk/3QFWalk (26).png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QFWalk/3QFWalk (26)_n.png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QFWalk/3QFWalk (27).png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QFWalk/3QFWalk (27)_n.png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QFWalk/3QFWalk (28).png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QFWalk/3QFWalk (28)_n.png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QFWalk/3QFWalk (29).png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QFWalk/3QFWalk (29)_n.png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QFWalk/3QFWalk (3).png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QFWalk/3QFWalk (3)_n.png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QFWalk/3QFWalk (4).png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QFWalk/3QFWalk (4)_n.png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QFWalk/3QFWalk (5).png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QFWalk/3QFWalk (5)_n.png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QFWalk/3QFWalk (6).png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QFWalk/3QFWalk (6)_n.png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QFWalk/3QFWalk (7).png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QFWalk/3QFWalk (7)_n.png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QFWalk/3QFWalk (8).png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QFWalk/3QFWalk (8)_n.png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QFWalk/3QFWalk (9).png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QFWalk/3QFWalk (9)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/3QFWalk/3QFWalk (1).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/3QFWalk/3QFWalk (10).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/3QFWalk/3QFWalk (11).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/3QFWalk/3QFWalk (12).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/3QFWalk/3QFWalk (13).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/3QFWalk/3QFWalk (14).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/3QFWalk/3QFWalk (15).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/3QFWalk/3QFWalk (16).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/3QFWalk/3QFWalk (17).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/3QFWalk/3QFWalk (18).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/3QFWalk/3QFWalk (19).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/3QFWalk/3QFWalk (2).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/3QFWalk/3QFWalk (20).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/3QFWalk/3QFWalk (21).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/3QFWalk/3QFWalk (22).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/3QFWalk/3QFWalk (23).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/3QFWalk/3QFWalk (24).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/3QFWalk/3QFWalk (25).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/3QFWalk/3QFWalk (26).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/3QFWalk/3QFWalk (27).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/3QFWalk/3QFWalk (28).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/3QFWalk/3QFWalk (29).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/3QFWalk/3QFWalk (3).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/3QFWalk/3QFWalk (4).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/3QFWalk/3QFWalk (5).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/3QFWalk/3QFWalk (6).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/3QFWalk/3QFWalk (7).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/3QFWalk/3QFWalk (8).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/3QFWalk/3QFWalk (9).png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,1</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>93,209,185,418</rect>
+                <key>scale9Paddings</key>
+                <rect>93,209,185,418</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/3QFWalk/3QFWalk (1)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/3QFWalk/3QFWalk (10)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/3QFWalk/3QFWalk (11)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/3QFWalk/3QFWalk (12)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/3QFWalk/3QFWalk (13)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/3QFWalk/3QFWalk (14)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/3QFWalk/3QFWalk (15)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/3QFWalk/3QFWalk (16)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/3QFWalk/3QFWalk (17)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/3QFWalk/3QFWalk (18)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/3QFWalk/3QFWalk (19)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/3QFWalk/3QFWalk (2)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/3QFWalk/3QFWalk (20)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/3QFWalk/3QFWalk (21)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/3QFWalk/3QFWalk (22)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/3QFWalk/3QFWalk (23)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/3QFWalk/3QFWalk (24)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/3QFWalk/3QFWalk (25)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/3QFWalk/3QFWalk (26)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/3QFWalk/3QFWalk (27)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/3QFWalk/3QFWalk (28)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/3QFWalk/3QFWalk (29)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/3QFWalk/3QFWalk (3)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/3QFWalk/3QFWalk (4)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/3QFWalk/3QFWalk (5)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/3QFWalk/3QFWalk (6)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/3QFWalk/3QFWalk (7)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/3QFWalk/3QFWalk (8)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/3QFWalk/3QFWalk (9)_n.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
@@ -254,64 +266,64 @@
         </map>
         <key>fileList</key>
         <array>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QFWalk/3QFWalk (1).png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QFWalk/3QFWalk (1)_n.png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QFWalk/3QFWalk (2).png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QFWalk/3QFWalk (2)_n.png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QFWalk/3QFWalk (3).png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QFWalk/3QFWalk (3)_n.png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QFWalk/3QFWalk (4).png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QFWalk/3QFWalk (4)_n.png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QFWalk/3QFWalk (5).png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QFWalk/3QFWalk (5)_n.png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QFWalk/3QFWalk (6).png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QFWalk/3QFWalk (6)_n.png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QFWalk/3QFWalk (7).png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QFWalk/3QFWalk (7)_n.png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QFWalk/3QFWalk (8).png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QFWalk/3QFWalk (8)_n.png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QFWalk/3QFWalk (9).png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QFWalk/3QFWalk (9)_n.png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QFWalk/3QFWalk (10).png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QFWalk/3QFWalk (10)_n.png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QFWalk/3QFWalk (11).png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QFWalk/3QFWalk (11)_n.png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QFWalk/3QFWalk (12).png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QFWalk/3QFWalk (12)_n.png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QFWalk/3QFWalk (13).png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QFWalk/3QFWalk (13)_n.png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QFWalk/3QFWalk (14).png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QFWalk/3QFWalk (14)_n.png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QFWalk/3QFWalk (15).png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QFWalk/3QFWalk (15)_n.png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QFWalk/3QFWalk (16).png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QFWalk/3QFWalk (16)_n.png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QFWalk/3QFWalk (17).png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QFWalk/3QFWalk (17)_n.png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QFWalk/3QFWalk (18).png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QFWalk/3QFWalk (18)_n.png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QFWalk/3QFWalk (19).png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QFWalk/3QFWalk (19)_n.png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QFWalk/3QFWalk (20).png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QFWalk/3QFWalk (20)_n.png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QFWalk/3QFWalk (21).png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QFWalk/3QFWalk (21)_n.png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QFWalk/3QFWalk (22).png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QFWalk/3QFWalk (22)_n.png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QFWalk/3QFWalk (23).png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QFWalk/3QFWalk (23)_n.png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QFWalk/3QFWalk (24).png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QFWalk/3QFWalk (24)_n.png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QFWalk/3QFWalk (25).png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QFWalk/3QFWalk (25)_n.png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QFWalk/3QFWalk (26).png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QFWalk/3QFWalk (26)_n.png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QFWalk/3QFWalk (27).png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QFWalk/3QFWalk (27)_n.png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QFWalk/3QFWalk (28).png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QFWalk/3QFWalk (28)_n.png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QFWalk/3QFWalk (29).png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QFWalk/3QFWalk (29)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/3QFWalk/3QFWalk (1).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/3QFWalk/3QFWalk (1)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/3QFWalk/3QFWalk (2).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/3QFWalk/3QFWalk (2)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/3QFWalk/3QFWalk (3).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/3QFWalk/3QFWalk (3)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/3QFWalk/3QFWalk (4).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/3QFWalk/3QFWalk (4)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/3QFWalk/3QFWalk (5).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/3QFWalk/3QFWalk (5)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/3QFWalk/3QFWalk (6).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/3QFWalk/3QFWalk (6)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/3QFWalk/3QFWalk (7).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/3QFWalk/3QFWalk (7)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/3QFWalk/3QFWalk (8).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/3QFWalk/3QFWalk (8)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/3QFWalk/3QFWalk (9).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/3QFWalk/3QFWalk (9)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/3QFWalk/3QFWalk (10).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/3QFWalk/3QFWalk (10)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/3QFWalk/3QFWalk (11).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/3QFWalk/3QFWalk (11)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/3QFWalk/3QFWalk (12).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/3QFWalk/3QFWalk (12)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/3QFWalk/3QFWalk (13).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/3QFWalk/3QFWalk (13)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/3QFWalk/3QFWalk (14).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/3QFWalk/3QFWalk (14)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/3QFWalk/3QFWalk (15).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/3QFWalk/3QFWalk (15)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/3QFWalk/3QFWalk (16).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/3QFWalk/3QFWalk (16)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/3QFWalk/3QFWalk (17).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/3QFWalk/3QFWalk (17)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/3QFWalk/3QFWalk (18).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/3QFWalk/3QFWalk (18)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/3QFWalk/3QFWalk (19).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/3QFWalk/3QFWalk (19)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/3QFWalk/3QFWalk (20).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/3QFWalk/3QFWalk (20)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/3QFWalk/3QFWalk (21).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/3QFWalk/3QFWalk (21)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/3QFWalk/3QFWalk (22).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/3QFWalk/3QFWalk (22)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/3QFWalk/3QFWalk (23).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/3QFWalk/3QFWalk (23)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/3QFWalk/3QFWalk (24).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/3QFWalk/3QFWalk (24)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/3QFWalk/3QFWalk (25).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/3QFWalk/3QFWalk (25)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/3QFWalk/3QFWalk (26).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/3QFWalk/3QFWalk (26)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/3QFWalk/3QFWalk (27).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/3QFWalk/3QFWalk (27)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/3QFWalk/3QFWalk (28).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/3QFWalk/3QFWalk (28)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/3QFWalk/3QFWalk (29).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/3QFWalk/3QFWalk (29)_n.png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>

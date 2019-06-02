@@ -175,110 +175,122 @@
             <key>heuristicMask</key>
             <false/>
             <key>defaultPivotPoint</key>
-            <point_f>0.5,0.5</point_f>
+            <point_f>0.5,1</point_f>
             <key>writePivotPoints</key>
             <true/>
         </struct>
         <key>individualSpriteSettings</key>
         <map type="IndividualSpriteSettingsMap">
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (1).png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (1)_n.png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (10).png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (10)_n.png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (11).png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (11)_n.png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (12).png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (12)_n.png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (13).png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (13)_n.png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (14).png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (14)_n.png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (15).png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (15)_n.png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (16).png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (16)_n.png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (17).png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (17)_n.png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (18).png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (18)_n.png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (19).png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (19)_n.png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (2).png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (2)_n.png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (20).png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (20)_n.png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (21).png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (21)_n.png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (22).png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (22)_n.png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (23).png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (23)_n.png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (24).png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (24)_n.png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (25).png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (25)_n.png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (26).png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (26)_n.png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (27).png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (27)_n.png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (28).png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (28)_n.png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (29).png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (29)_n.png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (3).png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (3)_n.png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (30).png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (30)_n.png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (31).png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (31)_n.png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (32).png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (32)_n.png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (33).png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (33)_n.png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (34).png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (34)_n.png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (35).png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (35)_n.png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (36).png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (36)_n.png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (37).png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (37)_n.png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (38).png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (38)_n.png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (39).png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (39)_n.png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (4).png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (4)_n.png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (40).png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (40)_n.png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (41).png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (41)_n.png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (42).png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (42)_n.png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (43).png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (43)_n.png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (44).png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (44)_n.png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (45).png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (45)_n.png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (46).png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (46)_n.png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (47).png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (47)_n.png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (48).png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (48)_n.png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (49).png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (49)_n.png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (5).png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (5)_n.png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (6).png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (6)_n.png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (7).png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (7)_n.png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (8).png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (8)_n.png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (9).png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (9)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (1).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (10).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (11).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (12).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (13).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (14).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (15).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (16).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (17).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (18).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (19).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (2).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (20).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (21).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (22).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (23).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (24).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (25).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (26).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (27).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (28).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (29).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (3).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (30).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (31).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (32).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (33).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (34).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (35).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (36).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (37).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (38).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (39).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (4).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (40).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (41).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (42).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (43).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (44).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (45).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (46).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (47).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (48).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (49).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (5).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (6).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (7).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (8).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (9).png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,1</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>102,216,204,432</rect>
+                <key>scale9Paddings</key>
+                <rect>102,216,204,432</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (1)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (10)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (11)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (12)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (13)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (14)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (15)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (16)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (17)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (18)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (19)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (2)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (20)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (21)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (22)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (23)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (24)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (25)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (26)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (27)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (28)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (29)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (3)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (30)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (31)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (32)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (33)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (34)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (35)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (36)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (37)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (38)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (39)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (4)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (40)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (41)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (42)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (43)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (44)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (45)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (46)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (47)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (48)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (49)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (5)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (6)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (7)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (8)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (9)_n.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
@@ -294,104 +306,104 @@
         </map>
         <key>fileList</key>
         <array>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (1).png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (1)_n.png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (2).png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (2)_n.png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (3).png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (3)_n.png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (4).png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (4)_n.png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (5).png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (5)_n.png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (6).png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (6)_n.png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (7).png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (7)_n.png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (8).png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (8)_n.png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (9).png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (9)_n.png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (10).png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (10)_n.png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (11).png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (11)_n.png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (12).png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (12)_n.png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (13).png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (13)_n.png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (14).png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (14)_n.png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (15).png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (15)_n.png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (16).png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (16)_n.png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (17).png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (17)_n.png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (18).png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (18)_n.png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (19).png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (19)_n.png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (20).png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (20)_n.png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (21).png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (21)_n.png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (22).png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (22)_n.png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (23).png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (23)_n.png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (24).png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (24)_n.png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (25).png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (25)_n.png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (26).png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (26)_n.png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (27).png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (27)_n.png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (28).png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (28)_n.png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (29).png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (29)_n.png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (30).png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (30)_n.png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (31).png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (31)_n.png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (32).png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (32)_n.png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (33).png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (33)_n.png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (34).png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (34)_n.png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (35).png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (35)_n.png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (36).png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (36)_n.png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (37).png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (37)_n.png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (38).png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (38)_n.png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (39).png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (39)_n.png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (40).png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (40)_n.png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (41).png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (41)_n.png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (42).png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (42)_n.png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (43).png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (43)_n.png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (44).png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (44)_n.png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (45).png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (45)_n.png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (46).png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (46)_n.png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (47).png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (47)_n.png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (48).png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (48)_n.png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (49).png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (49)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (1).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (1)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (2).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (2)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (3).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (3)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (4).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (4)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (5).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (5)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (6).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (6)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (7).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (7)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (8).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (8)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (9).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (9)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (10).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (10)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (11).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (11)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (12).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (12)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (13).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (13)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (14).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (14)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (15).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (15)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (16).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (16)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (17).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (17)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (18).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (18)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (19).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (19)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (20).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (20)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (21).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (21)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (22).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (22)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (23).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (23)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (24).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (24)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (25).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (25)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (26).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (26)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (27).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (27)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (28).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (28)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (29).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (29)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (30).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (30)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (31).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (31)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (32).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (32)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (33).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (33)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (34).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (34)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (35).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (35)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (36).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (36)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (37).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (37)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (38).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (38)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (39).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (39)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (40).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (40)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (41).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (41)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (42).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (42)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (43).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (43)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (44).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (44)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (45).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (45)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (46).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (46)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (47).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (47)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (48).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (48)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (49).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/BackIdle/BackIdle (49)_n.png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>

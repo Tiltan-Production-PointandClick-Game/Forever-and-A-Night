@@ -106,18 +106,18 @@ TextureImporter:
       name: 3QFWalk (1)
       rect:
         serializedVersion: 2
-        x: 739
-        y: 791
+        x: 187
+        y: 2
         width: 184
         height: 417
       alignment: 9
-      pivot: {x: 0.5054348, y: 0.49880096}
+      pivot: {x: 0.5054348, y: -0.0023980816}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c4b9cc5edeb0d6845856598cbad148f8
+      spriteID: 237e9210c1901fd429356d4e75ef8223
       vertices: []
       indices: 
       edges: []
@@ -126,18 +126,18 @@ TextureImporter:
       name: 3QFWalk (2)
       rect:
         serializedVersion: 2
-        x: 189
-        y: 1629
+        x: 1664
+        y: 421
         width: 183
         height: 418
       alignment: 9
-      pivot: {x: 0.5081967, y: 0.5}
+      pivot: {x: 0.5081967, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6a1a4c36b3b1f0c4ca01dcbbf9738a20
+      spriteID: 0746fcdd8f2c8bf4a9caea5364788933
       vertices: []
       indices: 
       edges: []
@@ -146,18 +146,18 @@ TextureImporter:
       name: 3QFWalk (3)
       rect:
         serializedVersion: 2
-        x: 187
-        y: 369
+        x: 1109
+        y: 421
         width: 183
         height: 418
       alignment: 9
-      pivot: {x: 0.5081967, y: 0.5}
+      pivot: {x: 0.5081967, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: de77cd499513bbd4ebfd659812ed9420
+      spriteID: 06b77c91286a7b342bed46bfb6685653
       vertices: []
       indices: 
       edges: []
@@ -166,18 +166,18 @@ TextureImporter:
       name: 3QFWalk (4)
       rect:
         serializedVersion: 2
-        x: 372
-        y: 789
+        x: 1
+        y: 421
         width: 182
         height: 418
       alignment: 9
-      pivot: {x: 0.510989, y: 0.5}
+      pivot: {x: 0.510989, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4cc1e66f5daba914ea70ceda67bbe877
+      spriteID: 6e64239c92551c142bdda37893ca5d23
       vertices: []
       indices: 
       edges: []
@@ -186,18 +186,18 @@ TextureImporter:
       name: 3QFWalk (5)
       rect:
         serializedVersion: 2
-        x: 926
-        y: 372
+        x: 739
+        y: 422
         width: 183
         height: 417
       alignment: 9
-      pivot: {x: 0.5081967, y: 0.49880096}
+      pivot: {x: 0.5081967, y: -0.0023980816}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b8e4bc6f107b5ba49b1b530a6e9c1792
+      spriteID: 1f3a388ebf7f7ab41b090b8ddf68aae2
       vertices: []
       indices: 
       edges: []
@@ -206,18 +206,18 @@ TextureImporter:
       name: 3QFWalk (6)
       rect:
         serializedVersion: 2
-        x: 739
-        y: 1210
+        x: 1119
+        y: 2
         width: 186
         height: 417
       alignment: 9
-      pivot: {x: 0.5, y: 0.49880096}
+      pivot: {x: 0.5, y: -0.0023980816}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c1aedd36692eb3645b162473fdb3527c
+      spriteID: 54ec5ba66ccaba843981c96e544ecfc2
       vertices: []
       indices: 
       edges: []
@@ -226,18 +226,18 @@ TextureImporter:
       name: 3QFWalk (7)
       rect:
         serializedVersion: 2
-        x: 1114
-        y: 1630
+        x: 924
+        y: 422
         width: 183
         height: 417
       alignment: 9
-      pivot: {x: 0.5081967, y: 0.49880096}
+      pivot: {x: 0.5081967, y: -0.0023980816}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9f9a931679347ab489d49a09eb319d45
+      spriteID: f3f37de0e9ef8d440a4ed1ce1157f727
       vertices: []
       indices: 
       edges: []
@@ -246,18 +246,18 @@ TextureImporter:
       name: 3QFWalk (8)
       rect:
         serializedVersion: 2
-        x: 1299
-        y: 1213
+        x: 184
+        y: 842
         width: 181
         height: 417
       alignment: 9
-      pivot: {x: 0.5138122, y: 0.49880096}
+      pivot: {x: 0.5138122, y: -0.0023980816}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 98e8a66ce74cd2d4eb455ae59ab82cc9
+      spriteID: 977175c3036282b41b5f873069c1a343
       vertices: []
       indices: 
       edges: []
@@ -266,18 +266,18 @@ TextureImporter:
       name: 3QFWalk (9)
       rect:
         serializedVersion: 2
-        x: 741
-        y: 1630
+        x: 931
+        y: 2
         width: 186
         height: 417
-      alignment: 9
-      pivot: {x: 0.5, y: 0.50119907}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4f80aea632a38f8448af2c293392741f
+      spriteID: 067aa7a3d79903248b2fe006bea60d88
       vertices: []
       indices: 
       edges: []
@@ -286,18 +286,18 @@ TextureImporter:
       name: 3QFWalk (10)
       rect:
         serializedVersion: 2
-        x: 1
-        y: 1209
+        x: 559
+        y: 1
         width: 184
         height: 418
       alignment: 9
-      pivot: {x: 0.5054348, y: 0.5}
+      pivot: {x: 0.5054348, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d1cffed22dfe13441aff4b521e37c664
+      spriteID: c4fa9e8d86fa47644bf9f54fc0deba33
       vertices: []
       indices: 
       edges: []
@@ -306,18 +306,18 @@ TextureImporter:
       name: 3QFWalk (11)
       rect:
         serializedVersion: 2
-        x: 1
-        y: 789
+        x: 745
+        y: 1
         width: 184
         height: 418
       alignment: 9
-      pivot: {x: 0.5054348, y: 0.5}
+      pivot: {x: 0.5054348, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 59790d5e33897f84782302a9330c2e55
+      spriteID: 79a7cee263633534e877391b01881c52
       vertices: []
       indices: 
       edges: []
@@ -326,18 +326,18 @@ TextureImporter:
       name: 3QFWalk (12)
       rect:
         serializedVersion: 2
-        x: 1112
-        y: 1212
+        x: 1
+        y: 843
         width: 181
         height: 416
       alignment: 9
-      pivot: {x: 0.5138122, y: 0.5}
+      pivot: {x: 0.5138122, y: -0.0024038462}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 202b3ec1c2cb7644abb55934dc046ebd
+      spriteID: d68b3fdab293ebc4a9d6d085686ee217
       vertices: []
       indices: 
       edges: []
@@ -346,18 +346,18 @@ TextureImporter:
       name: 3QFWalk (13)
       rect:
         serializedVersion: 2
-        x: 1299
-        y: 1632
+        x: 1466
+        y: 844
         width: 183
         height: 415
       alignment: 9
-      pivot: {x: 0.5081967, y: 0.49879518}
+      pivot: {x: 0.5081967, y: -0.004819277}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d2b202b4c92f95b41b43847aceb58e00
+      spriteID: 5a52b80d4b63d5a44b7053eabc675acd
       vertices: []
       indices: 
       edges: []
@@ -366,18 +366,18 @@ TextureImporter:
       name: 3QFWalk (14)
       rect:
         serializedVersion: 2
-        x: 1484
-        y: 1631
+        x: 1282
+        y: 843
         width: 182
         height: 416
       alignment: 9
-      pivot: {x: 0.510989, y: 0.49759614}
+      pivot: {x: 0.510989, y: -0.0048076925}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: fa0229bde2e83d0458d763fa5b0bae1d
+      spriteID: fe31512d0a98bf5479462da6e8e636b3
       vertices: []
       indices: 
       edges: []
@@ -386,18 +386,18 @@ TextureImporter:
       name: 3QFWalk (15)
       rect:
         serializedVersion: 2
-        x: 738
-        y: 370
+        x: 1307
+        y: 2
         width: 186
         height: 417
-      alignment: 9
-      pivot: {x: 0.5, y: 0.50119907}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c152376afe49d804cb43e52d882e7217
+      spriteID: 06d9a9655dabc964b9bce6a42dc0d2c9
       vertices: []
       indices: 
       edges: []
@@ -406,18 +406,18 @@ TextureImporter:
       name: 3QFWalk (16)
       rect:
         serializedVersion: 2
-        x: 372
-        y: 369
+        x: 733
+        y: 841
         width: 181
         height: 418
       alignment: 9
-      pivot: {x: 0.5138122, y: 0.5}
+      pivot: {x: 0.5138122, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e3fa4acc64142704da2cc4d9094b016f
+      spriteID: 423b21c46bed0d640b6e1c7ab7ea3db1
       vertices: []
       indices: 
       edges: []
@@ -426,18 +426,18 @@ TextureImporter:
       name: 3QFWalk (17)
       rect:
         serializedVersion: 2
-        x: 187
-        y: 1209
+        x: 1294
+        y: 421
         width: 183
         height: 418
       alignment: 9
-      pivot: {x: 0.5081967, y: 0.5}
+      pivot: {x: 0.5081967, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 56101b54c082cda408b197614706cdb6
+      spriteID: 5bad4de4b1d1c6544a255a24445dbc85
       vertices: []
       indices: 
       edges: []
@@ -446,18 +446,18 @@ TextureImporter:
       name: 3QFWalk (18)
       rect:
         serializedVersion: 2
-        x: 555
-        y: 369
+        x: 550
+        y: 841
         width: 181
         height: 418
       alignment: 9
-      pivot: {x: 0.5138122, y: 0.5}
+      pivot: {x: 0.5138122, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6bd86ae5fcf3847418016d191c41b218
+      spriteID: 8c4e90dce68598d449ca1a89eb41a919
       vertices: []
       indices: 
       edges: []
@@ -466,18 +466,18 @@ TextureImporter:
       name: 3QFWalk (19)
       rect:
         serializedVersion: 2
-        x: 556
-        y: 1209
+        x: 367
+        y: 841
         width: 181
         height: 418
       alignment: 9
-      pivot: {x: 0.5138122, y: 0.5}
+      pivot: {x: 0.5138122, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 15502d3c125fe544981d7bc80be8a8b2
+      spriteID: 79db1588b7ea7f348a2f56be3048ee42
       vertices: []
       indices: 
       edges: []
@@ -486,18 +486,18 @@ TextureImporter:
       name: 3QFWalk (20)
       rect:
         serializedVersion: 2
-        x: 372
-        y: 1209
+        x: 1651
+        y: 841
         width: 182
         height: 418
       alignment: 9
-      pivot: {x: 0.510989, y: 0.5}
+      pivot: {x: 0.510989, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3ab975436cab5674a8000f072c852d6b
+      spriteID: 367aebc12ffcfc54b9a0223872fbb187
       vertices: []
       indices: 
       edges: []
@@ -506,18 +506,18 @@ TextureImporter:
       name: 3QFWalk (21)
       rect:
         serializedVersion: 2
-        x: 374
-        y: 1629
+        x: 185
+        y: 421
         width: 182
         height: 418
       alignment: 9
-      pivot: {x: 0.510989, y: 0.5}
+      pivot: {x: 0.510989, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c40d2b079b96566409c10c4e7a663a2b
+      spriteID: ee2fb8611faac82448a9afd96be86943
       vertices: []
       indices: 
       edges: []
@@ -526,18 +526,18 @@ TextureImporter:
       name: 3QFWalk (22)
       rect:
         serializedVersion: 2
-        x: 1
-        y: 1629
+        x: 1495
+        y: 1
         width: 186
         height: 418
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 73947659b0912d94592afe217b30b3e1
+      spriteID: a16bdef48d634e14a84991599bbe1c1e
       vertices: []
       indices: 
       edges: []
@@ -546,18 +546,18 @@ TextureImporter:
       name: 3QFWalk (23)
       rect:
         serializedVersion: 2
-        x: 558
-        y: 1629
+        x: 916
+        y: 841
         width: 181
         height: 418
       alignment: 9
-      pivot: {x: 0.5138122, y: 0.5}
+      pivot: {x: 0.5138122, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 09068f5269374a145b41e75df1961c31
+      spriteID: f119bff81fa872d458ece45f30a57385
       vertices: []
       indices: 
       edges: []
@@ -566,18 +566,18 @@ TextureImporter:
       name: 3QFWalk (24)
       rect:
         serializedVersion: 2
-        x: 925
-        y: 791
+        x: 1
+        y: 2
         width: 184
         height: 417
       alignment: 9
-      pivot: {x: 0.5054348, y: 0.49880096}
+      pivot: {x: 0.5054348, y: -0.0023980816}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: cb7e78ef5ecea4e4ca900a01f34fef11
+      spriteID: f373f0df621515d49983104bda0a9cca
       vertices: []
       indices: 
       edges: []
@@ -586,18 +586,18 @@ TextureImporter:
       name: 3QFWalk (25)
       rect:
         serializedVersion: 2
-        x: 927
-        y: 1211
+        x: 554
+        y: 422
         width: 183
         height: 417
       alignment: 9
-      pivot: {x: 0.5081967, y: 0.50119907}
+      pivot: {x: 0.5081967, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d6b4a1f15d0810d47aad8c8c630e0270
+      spriteID: ce8b4b8da261fce4e912c7440a1b8d0d
       vertices: []
       indices: 
       edges: []
@@ -606,18 +606,18 @@ TextureImporter:
       name: 3QFWalk (26)
       rect:
         serializedVersion: 2
-        x: 929
-        y: 1630
+        x: 369
+        y: 422
         width: 183
         height: 417
       alignment: 9
-      pivot: {x: 0.5081967, y: 0.49880096}
+      pivot: {x: 0.5081967, y: -0.0023980816}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6794c08cb9d73cb44a91f4fb8d4c064d
+      spriteID: 4bfc5352d8ede234aa88276f68568846
       vertices: []
       indices: 
       edges: []
@@ -626,18 +626,18 @@ TextureImporter:
       name: 3QFWalk (27)
       rect:
         serializedVersion: 2
-        x: 556
-        y: 789
+        x: 1099
+        y: 841
         width: 181
         height: 418
       alignment: 9
-      pivot: {x: 0.5138122, y: 0.5}
+      pivot: {x: 0.5138122, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d228de52cbca8ef4db8297bcfb4961a2
+      spriteID: 6a38b2a27010854478b27b8d02aca856
       vertices: []
       indices: 
       edges: []
@@ -646,18 +646,18 @@ TextureImporter:
       name: 3QFWalk (28)
       rect:
         serializedVersion: 2
-        x: 187
-        y: 789
+        x: 1479
+        y: 421
         width: 183
         height: 418
       alignment: 9
-      pivot: {x: 0.5081967, y: 0.5}
+      pivot: {x: 0.5081967, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ba636f5e1ef1c2f44bc5356a21c6c159
+      spriteID: 2bd6f52f370ffae419c8a59ccc1fcf1b
       vertices: []
       indices: 
       edges: []
@@ -666,18 +666,18 @@ TextureImporter:
       name: 3QFWalk (29)
       rect:
         serializedVersion: 2
-        x: 1
-        y: 369
+        x: 373
+        y: 1
         width: 184
         height: 418
       alignment: 9
-      pivot: {x: 0.5054348, y: 0.5}
+      pivot: {x: 0.5054348, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 291d7c5f5588831468378b8920370204
+      spriteID: e2a9182d312320c458e43207e10f5028
       vertices: []
       indices: 
       edges: []
@@ -685,7 +685,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: d31bdf999bc35ab489be76ded7a96d85
+    spriteID: b712aa642c9f26f45a1711296f32dd83
     vertices: []
     indices: 
     edges: []

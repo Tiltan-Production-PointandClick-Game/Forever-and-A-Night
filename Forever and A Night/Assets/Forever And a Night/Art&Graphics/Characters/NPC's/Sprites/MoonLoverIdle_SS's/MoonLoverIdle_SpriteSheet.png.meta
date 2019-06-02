@@ -1,0 +1,1118 @@
+fileFormatVersion: 2
+guid: 077428e4cb92bef4384328c951f400d5
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: MoonLoverIdle_SpriteSheet
+    21300002: MoonLover (1)
+    21300004: MoonLover (2)
+    21300006: MoonLover (3)
+    21300008: MoonLover (4)
+    21300010: MoonLover (5)
+    21300012: MoonLover (6)
+    21300014: MoonLover (7)
+    21300016: MoonLover (8)
+    21300018: MoonLover (9)
+    21300020: MoonLover (10)
+    21300022: MoonLover (11)
+    21300024: MoonLover (12)
+    21300026: MoonLover (13)
+    21300028: MoonLover (14)
+    21300030: MoonLover (15)
+    21300032: MoonLover (16)
+    21300034: MoonLover (17)
+    21300036: MoonLover (18)
+    21300038: MoonLover (19)
+    21300040: MoonLover (20)
+    21300042: MoonLover (21)
+    21300044: MoonLover (22)
+    21300046: MoonLover (23)
+    21300048: MoonLover (24)
+    21300050: MoonLover (25)
+    21300052: MoonLover (26)
+    21300054: MoonLover (27)
+    21300056: MoonLover (28)
+    21300058: MoonLover (29)
+    21300060: MoonLover (30)
+    21300062: MoonLover (31)
+    21300064: MoonLover (32)
+    21300066: MoonLover (33)
+    21300068: MoonLover (34)
+    21300070: MoonLover (35)
+    21300072: MoonLover (36)
+    21300074: MoonLover (37)
+    21300076: MoonLover (38)
+    21300078: MoonLover (39)
+    21300080: MoonLover (40)
+    21300082: MoonLover (41)
+    21300084: MoonLover (42)
+    21300086: MoonLover (43)
+    21300088: MoonLover (44)
+    21300090: MoonLover (45)
+    21300092: MoonLover (46)
+    21300094: MoonLover (47)
+    21300096: MoonLover (48)
+    21300098: MoonLover (49)
+  externalObjects: {}
+  serializedVersion: 9
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: MoonLover (1)
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1598
+        width: 317
+        height: 397
+      alignment: 9
+      pivot: {x: 0.50157726, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0bbcbb02bce99745b56c889ad700be1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MoonLover (2)
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 1598
+        width: 317
+        height: 397
+      alignment: 9
+      pivot: {x: 0.50157726, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d5212f46d3332f469f3ec2c2b3b8f93
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MoonLover (3)
+      rect:
+        serializedVersion: 2
+        x: 639
+        y: 1598
+        width: 317
+        height: 397
+      alignment: 9
+      pivot: {x: 0.50157726, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 098eeff950693e14fafeec3bd5bb287c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MoonLover (4)
+      rect:
+        serializedVersion: 2
+        x: 958
+        y: 1598
+        width: 317
+        height: 397
+      alignment: 9
+      pivot: {x: 0.50157726, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6c289403c8f5c54a8281df5e5527c72
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MoonLover (5)
+      rect:
+        serializedVersion: 2
+        x: 1281
+        y: 2
+        width: 318
+        height: 397
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5316113f90e469b43ab7d175ab25d72f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MoonLover (6)
+      rect:
+        serializedVersion: 2
+        x: 961
+        y: 2
+        width: 318
+        height: 397
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: daf5bd5117eff7e4cb49b6ccb074b157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MoonLover (7)
+      rect:
+        serializedVersion: 2
+        x: 641
+        y: 2
+        width: 318
+        height: 397
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25729df5b745e1f49a6829b6b43d77f0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MoonLover (8)
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 2
+        width: 318
+        height: 397
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 310ef480c72810d4f99dc7703b41e834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MoonLover (9)
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 2
+        width: 318
+        height: 397
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8a892fe53665d24db78cfd82326ee29
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MoonLover (10)
+      rect:
+        serializedVersion: 2
+        x: 1277
+        y: 1598
+        width: 318
+        height: 397
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 573d1b7d9b5cbff4aa296339ad1d02b0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MoonLover (11)
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1199
+        width: 318
+        height: 397
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e3a7146077760942974ef9d766b31be
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MoonLover (12)
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 1199
+        width: 318
+        height: 397
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf3acc6276cf87f429ea4a89081c426e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MoonLover (13)
+      rect:
+        serializedVersion: 2
+        x: 641
+        y: 1199
+        width: 318
+        height: 397
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12775898ffd9ece439c05f2b620d34ae
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MoonLover (14)
+      rect:
+        serializedVersion: 2
+        x: 961
+        y: 1199
+        width: 318
+        height: 397
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60957c54ddf459f49a38a8669000950d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MoonLover (15)
+      rect:
+        serializedVersion: 2
+        x: 1281
+        y: 1199
+        width: 318
+        height: 397
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2f6eabac948c6647a09e93c4c54c610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MoonLover (16)
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 800
+        width: 318
+        height: 397
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fafad740db21b214fbf661f1f4c49031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MoonLover (17)
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 800
+        width: 318
+        height: 397
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff42f8e082d01ed49975e844271453de
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MoonLover (18)
+      rect:
+        serializedVersion: 2
+        x: 641
+        y: 800
+        width: 318
+        height: 397
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16a80632c6828da4bac17ac87d7a5891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MoonLover (19)
+      rect:
+        serializedVersion: 2
+        x: 961
+        y: 800
+        width: 318
+        height: 397
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67e38cba3db3e1d46a42c61d9eba301d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MoonLover (20)
+      rect:
+        serializedVersion: 2
+        x: 1281
+        y: 800
+        width: 318
+        height: 397
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ac0475b16c4f774aa96543320a88ba8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MoonLover (21)
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 401
+        width: 318
+        height: 397
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a37b1f52c4eb34c46a2edc44a39082f4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MoonLover (22)
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 401
+        width: 318
+        height: 397
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64755a802958ef94197eb63af3d94358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MoonLover (23)
+      rect:
+        serializedVersion: 2
+        x: 641
+        y: 401
+        width: 318
+        height: 397
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99050a6c32324c34ca87c21639452e35
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MoonLover (24)
+      rect:
+        serializedVersion: 2
+        x: 961
+        y: 401
+        width: 318
+        height: 397
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50779cecb33a4a74382464a3e4f707ff
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MoonLover (25)
+      rect:
+        serializedVersion: 2
+        x: 1281
+        y: 401
+        width: 318
+        height: 397
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a95fab2b347fcd41b45475eb0c85217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MoonLover (26)
+      rect:
+        serializedVersion: 2
+        x: 961
+        y: 401
+        width: 318
+        height: 397
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 443804ca490c9e74f999abdb91aba563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MoonLover (27)
+      rect:
+        serializedVersion: 2
+        x: 641
+        y: 401
+        width: 318
+        height: 397
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9c6d4b2f5d320d4fbc92f3062d55559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MoonLover (28)
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 401
+        width: 318
+        height: 397
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e793b3e24aeffaa4785cdd8adb0479fd
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MoonLover (29)
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 401
+        width: 318
+        height: 397
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9bc28be20c9c61d4cb91b01119ee5f55
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MoonLover (30)
+      rect:
+        serializedVersion: 2
+        x: 1281
+        y: 800
+        width: 318
+        height: 397
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4a3078bbaa8417478ecc19b0ae3303a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MoonLover (31)
+      rect:
+        serializedVersion: 2
+        x: 961
+        y: 800
+        width: 318
+        height: 397
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f2ba3f66b3480af4eaafaeb9a1d30b9f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MoonLover (32)
+      rect:
+        serializedVersion: 2
+        x: 641
+        y: 800
+        width: 318
+        height: 397
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a88f9611cb13f1c43875998dfd44b6a8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MoonLover (33)
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 800
+        width: 318
+        height: 397
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6efa02e4524f68f40a688092d714dbfb
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MoonLover (34)
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 800
+        width: 318
+        height: 397
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee61c268bb20a21488b3f8bceff2bb18
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MoonLover (35)
+      rect:
+        serializedVersion: 2
+        x: 1281
+        y: 1199
+        width: 318
+        height: 397
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5349d7f22d409f42867646591cfcc44
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MoonLover (36)
+      rect:
+        serializedVersion: 2
+        x: 961
+        y: 1199
+        width: 318
+        height: 397
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07b8df30264acb34a9d25687d2737568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MoonLover (37)
+      rect:
+        serializedVersion: 2
+        x: 641
+        y: 1199
+        width: 318
+        height: 397
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c96402330b7af94797b545b014d0424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MoonLover (38)
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 1199
+        width: 318
+        height: 397
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 91056e38c82b4874baa8b67a876f262a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MoonLover (39)
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1199
+        width: 318
+        height: 397
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1327079a188a49548a01e29c0f74286c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MoonLover (40)
+      rect:
+        serializedVersion: 2
+        x: 1277
+        y: 1598
+        width: 318
+        height: 397
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a037f21ac6f3b14fb3ad1356a868e63
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MoonLover (41)
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 2
+        width: 318
+        height: 397
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e24e570ee45ed3a49b7ecd1505bbf659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MoonLover (42)
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 2
+        width: 318
+        height: 397
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c52f48758facd346aa8ed9186b589b6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MoonLover (43)
+      rect:
+        serializedVersion: 2
+        x: 641
+        y: 2
+        width: 318
+        height: 397
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e668e19f517bb034b96ac44d6be209e2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MoonLover (44)
+      rect:
+        serializedVersion: 2
+        x: 961
+        y: 2
+        width: 318
+        height: 397
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3138df16a8e2dd4095c7ca278c9872d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MoonLover (45)
+      rect:
+        serializedVersion: 2
+        x: 1281
+        y: 2
+        width: 318
+        height: 397
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b882ada740339a34a89d71c2fc2bc2fb
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MoonLover (46)
+      rect:
+        serializedVersion: 2
+        x: 958
+        y: 1598
+        width: 317
+        height: 397
+      alignment: 9
+      pivot: {x: 0.50157726, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2efce7b312f03fa47948759b675f929f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MoonLover (47)
+      rect:
+        serializedVersion: 2
+        x: 639
+        y: 1598
+        width: 317
+        height: 397
+      alignment: 9
+      pivot: {x: 0.50157726, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83a129e7a7e63704488fcc7cf53ae1a6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MoonLover (48)
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 1598
+        width: 317
+        height: 397
+      alignment: 9
+      pivot: {x: 0.50157726, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6d2e60e937c6e14d8b0dfc2e3fddd66
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MoonLover (49)
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1598
+        width: 317
+        height: 397
+      alignment: 9
+      pivot: {x: 0.50157726, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f444470de8347a43ab610b89c1bd5e9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 3076db55f3370044987fdb7c00f8ef71
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,2630 @@
+fileFormatVersion: 2
+guid: 78b7bf54a90a3a1498fdb945e19b9ade
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: LibrarianIdle_SpriteSheet
+    21300002: LibrarianIdle (1)
+    21300004: LibrarianIdle (2)
+    21300006: LibrarianIdle (3)
+    21300008: LibrarianIdle (4)
+    21300010: LibrarianIdle (5)
+    21300012: LibrarianIdle (6)
+    21300014: LibrarianIdle (7)
+    21300016: LibrarianIdle (8)
+    21300018: LibrarianIdle (9)
+    21300020: LibrarianIdle (10)
+    21300022: LibrarianIdle (11)
+    21300024: LibrarianIdle (12)
+    21300026: LibrarianIdle (13)
+    21300028: LibrarianIdle (14)
+    21300030: LibrarianIdle (15)
+    21300032: LibrarianIdle (16)
+    21300034: LibrarianIdle (17)
+    21300036: LibrarianIdle (18)
+    21300038: LibrarianIdle (19)
+    21300040: LibrarianIdle (20)
+    21300042: LibrarianIdle (21)
+    21300044: LibrarianIdle (22)
+    21300046: LibrarianIdle (23)
+    21300048: LibrarianIdle (24)
+    21300050: LibrarianIdle (25)
+    21300052: LibrarianIdle (26)
+    21300054: LibrarianIdle (27)
+    21300056: LibrarianIdle (28)
+    21300058: LibrarianIdle (29)
+    21300060: LibrarianIdle (30)
+    21300062: LibrarianIdle (31)
+    21300064: LibrarianIdle (32)
+    21300066: LibrarianIdle (33)
+    21300068: LibrarianIdle (34)
+    21300070: LibrarianIdle (35)
+    21300072: LibrarianIdle (36)
+    21300074: LibrarianIdle (37)
+    21300076: LibrarianIdle (38)
+    21300078: LibrarianIdle (39)
+    21300080: LibrarianIdle (40)
+    21300082: LibrarianIdle (41)
+    21300084: LibrarianIdle (42)
+    21300086: LibrarianIdle (43)
+    21300088: LibrarianIdle (44)
+    21300090: LibrarianIdle (45)
+    21300092: LibrarianIdle (46)
+    21300094: LibrarianIdle (47)
+    21300096: LibrarianIdle (48)
+    21300098: LibrarianIdle (49)
+    21300100: LibrarianIdle (50)
+    21300102: LibrarianIdle (51)
+    21300104: LibrarianIdle (52)
+    21300106: LibrarianIdle (53)
+    21300108: LibrarianIdle (54)
+    21300110: LibrarianIdle (55)
+    21300112: LibrarianIdle (56)
+    21300114: LibrarianIdle (57)
+    21300116: LibrarianIdle (58)
+    21300118: LibrarianIdle (59)
+    21300120: LibrarianIdle (60)
+    21300122: LibrarianIdle (61)
+    21300124: LibrarianIdle (62)
+    21300126: LibrarianIdle (63)
+    21300128: LibrarianIdle (64)
+    21300130: LibrarianIdle (65)
+    21300132: LibrarianIdle (66)
+    21300134: LibrarianIdle (67)
+    21300136: LibrarianIdle (68)
+    21300138: LibrarianIdle (69)
+    21300140: LibrarianIdle (70)
+    21300142: LibrarianIdle (71)
+    21300144: LibrarianIdle (72)
+    21300146: LibrarianIdle (73)
+    21300148: LibrarianIdle (74)
+    21300150: LibrarianIdle (75)
+    21300152: LibrarianIdle (76)
+    21300154: LibrarianIdle (77)
+    21300156: LibrarianIdle (78)
+    21300158: LibrarianIdle (79)
+    21300160: LibrarianIdle (80)
+    21300162: LibrarianIdle (81)
+    21300164: LibrarianIdle (82)
+    21300166: LibrarianIdle (83)
+    21300168: LibrarianIdle (84)
+    21300170: LibrarianIdle (85)
+    21300172: LibrarianIdle (86)
+    21300174: LibrarianIdle (87)
+    21300176: LibrarianIdle (88)
+    21300178: LibrarianIdle (89)
+    21300180: LibrarianIdle (90)
+    21300182: LibrarianIdle (91)
+    21300184: LibrarianIdle (92)
+    21300186: LibrarianIdle (93)
+    21300188: LibrarianIdle (94)
+    21300190: LibrarianIdle (95)
+    21300192: LibrarianIdle (96)
+    21300194: LibrarianIdle (97)
+    21300196: LibrarianIdle (98)
+    21300198: LibrarianIdle (99)
+    21300200: LibrarianIdle (100)
+    21300202: LibrarianIdle (101)
+    21300204: LibrarianIdle (102)
+    21300206: LibrarianIdle (103)
+    21300208: LibrarianIdle (104)
+    21300210: LibrarianIdle (105)
+    21300212: LibrarianIdle (106)
+    21300214: LibrarianIdle (107)
+    21300216: LibrarianIdle (108)
+    21300218: LibrarianIdle (109)
+    21300220: LibrarianIdle (110)
+    21300222: LibrarianIdle (111)
+    21300224: LibrarianIdle (112)
+    21300226: LibrarianIdle (113)
+    21300228: LibrarianIdle (114)
+    21300230: LibrarianIdle (115)
+    21300232: LibrarianIdle (116)
+    21300234: LibrarianIdle (117)
+    21300236: LibrarianIdle (118)
+    21300238: LibrarianIdle (119)
+    21300240: LibrarianIdle (120)
+    21300242: LibrarianIdle (121)
+  externalObjects: {}
+  serializedVersion: 9
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: LibrarianIdle (1)
+      rect:
+        serializedVersion: 2
+        x: 1965
+        y: 1530
+        width: 150
+        height: 507
+      alignment: 9
+      pivot: {x: 0.51, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73bc1d026f830a145a4fc774d7fe3410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LibrarianIdle (2)
+      rect:
+        serializedVersion: 2
+        x: 2706
+        y: 2037
+        width: 152
+        height: 507
+      alignment: 9
+      pivot: {x: 0.50328946, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac4bd30332d53f841b935d78c4099541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LibrarianIdle (3)
+      rect:
+        serializedVersion: 2
+        x: 597
+        y: 1530
+        width: 150
+        height: 507
+      alignment: 9
+      pivot: {x: 0.51, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7967cffa8230f3548b52ac833aa6ae3a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LibrarianIdle (4)
+      rect:
+        serializedVersion: 2
+        x: 1050
+        y: 514
+        width: 150
+        height: 508
+      alignment: 9
+      pivot: {x: 0.51, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af19e8e45f73e5347a672bd58c01c774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LibrarianIdle (5)
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 4
+        width: 153
+        height: 509
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b12a7fe6fbdc4b48aafcda79fc76886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LibrarianIdle (6)
+      rect:
+        serializedVersion: 2
+        x: 1954
+        y: 2038
+        width: 153
+        height: 506
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf5a6fac2929e5d47acdaf82ac85f156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LibrarianIdle (7)
+      rect:
+        serializedVersion: 2
+        x: 756
+        y: 2038
+        width: 150
+        height: 506
+      alignment: 9
+      pivot: {x: 0.51, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4eb7890ee5e01cb438f99baf237f42b8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LibrarianIdle (8)
+      rect:
+        serializedVersion: 2
+        x: 1801
+        y: 1022
+        width: 150
+        height: 508
+      alignment: 9
+      pivot: {x: 0.51, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: abf8fb89a18fb42469672a864b835f91
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LibrarianIdle (9)
+      rect:
+        serializedVersion: 2
+        x: 2255
+        y: 513
+        width: 150
+        height: 509
+      alignment: 9
+      pivot: {x: 0.51, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b4ee34d56f330d4581f15bf79d75eab
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LibrarianIdle (10)
+      rect:
+        serializedVersion: 2
+        x: 1818
+        y: 3
+        width: 150
+        height: 510
+      alignment: 9
+      pivot: {x: 0.51, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa2e2ef5d634b8b41b8977bd992f21ea
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LibrarianIdle (11)
+      rect:
+        serializedVersion: 2
+        x: 455
+        y: 2038
+        width: 150
+        height: 506
+      alignment: 9
+      pivot: {x: 0.51, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aca930e0d928b614faf025c8682947b9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LibrarianIdle (12)
+      rect:
+        serializedVersion: 2
+        x: 445
+        y: 514
+        width: 149
+        height: 508
+      alignment: 9
+      pivot: {x: 0.51342285, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f34109b67be57d4a9f08fb99acabc1b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LibrarianIdle (13)
+      rect:
+        serializedVersion: 2
+        x: 2707
+        y: 1022
+        width: 151
+        height: 508
+      alignment: 9
+      pivot: {x: 0.5066225, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 551b502568bfaf148980adbbe8535e52
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LibrarianIdle (14)
+      rect:
+        serializedVersion: 2
+        x: 3220
+        y: 1530
+        width: 152
+        height: 507
+      alignment: 9
+      pivot: {x: 0.50328946, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 10ed79b967fc209478adbaf0893521b6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LibrarianIdle (15)
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 1023
+        width: 150
+        height: 507
+      alignment: 9
+      pivot: {x: 0.51, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 656a14c57ef4ab14d9b106e9130e1e79
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LibrarianIdle (16)
+      rect:
+        serializedVersion: 2
+        x: 2106
+        y: 513
+        width: 149
+        height: 509
+      alignment: 9
+      pivot: {x: 0.51342285, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1a8ee85d2bf9d24493c06870ea70ecf
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LibrarianIdle (17)
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 1530
+        width: 149
+        height: 507
+      alignment: 9
+      pivot: {x: 0.51342285, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fbecc5fc68f9f79479fc6de6acac57b1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LibrarianIdle (18)
+      rect:
+        serializedVersion: 2
+        x: 747
+        y: 1530
+        width: 149
+        height: 507
+      alignment: 9
+      pivot: {x: 0.51342285, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de4cc70a691ca264a8730bad70239548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LibrarianIdle (19)
+      rect:
+        serializedVersion: 2
+        x: 2558
+        y: 2037
+        width: 148
+        height: 507
+      alignment: 9
+      pivot: {x: 0.5168919, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e8f3664970606a4495410d6a3dcfbab
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LibrarianIdle (20)
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 514
+        width: 148
+        height: 508
+      alignment: 9
+      pivot: {x: 0.5168919, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24f43c573d459d9489daa995acd5e09b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LibrarianIdle (21)
+      rect:
+        serializedVersion: 2
+        x: 297
+        y: 514
+        width: 148
+        height: 508
+      alignment: 9
+      pivot: {x: 0.5168919, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 196e822fc24bd304b92a68b123fb18c8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LibrarianIdle (22)
+      rect:
+        serializedVersion: 2
+        x: 3320
+        y: 3
+        width: 148
+        height: 510
+      alignment: 9
+      pivot: {x: 0.5168919, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf1abf412cea7b64ead1e13b675c7636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LibrarianIdle (23)
+      rect:
+        serializedVersion: 2
+        x: 1806
+        y: 513
+        width: 148
+        height: 509
+      alignment: 9
+      pivot: {x: 0.5168919, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef0c1cbf9e70a7640a7ce4a726bc392b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LibrarianIdle (24)
+      rect:
+        serializedVersion: 2
+        x: 3011
+        y: 1022
+        width: 148
+        height: 508
+      alignment: 9
+      pivot: {x: 0.5168919, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1248d7d0dc61d34c9b2205b84f04994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LibrarianIdle (25)
+      rect:
+        serializedVersion: 2
+        x: 903
+        y: 514
+        width: 147
+        height: 508
+      alignment: 9
+      pivot: {x: 0.52040815, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d6d79ccfa6e85c4c9464594bfed07fc
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LibrarianIdle (26)
+      rect:
+        serializedVersion: 2
+        x: 3172
+        y: 3
+        width: 148
+        height: 510
+      alignment: 9
+      pivot: {x: 0.5168919, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26ff22e93476f264889f827939dcb75d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LibrarianIdle (27)
+      rect:
+        serializedVersion: 2
+        x: 3308
+        y: 1022
+        width: 152
+        height: 508
+      alignment: 9
+      pivot: {x: 0.5361842, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 252e5cef165bbbb46b01518e75e5508e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LibrarianIdle (28)
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 514
+        width: 149
+        height: 508
+      alignment: 9
+      pivot: {x: 0.5201342, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50a2a94d1fbe32d44961d128bf4d21ac
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LibrarianIdle (29)
+      rect:
+        serializedVersion: 2
+        x: 3460
+        y: 1022
+        width: 147
+        height: 508
+      alignment: 9
+      pivot: {x: 0.52040815, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa5c4cf6227b3b043b8050e7fb3846bd
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LibrarianIdle (30)
+      rect:
+        serializedVersion: 2
+        x: 2720
+        y: 3
+        width: 151
+        height: 510
+      alignment: 9
+      pivot: {x: 0.5331126, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f25ac53b1913d0746a672ff6ae40a8e8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LibrarianIdle (31)
+      rect:
+        serializedVersion: 2
+        x: 2424
+        y: 3
+        width: 147
+        height: 510
+      alignment: 9
+      pivot: {x: 0.52040815, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69ab6a57b07811648ae33f408895a2cb
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LibrarianIdle (32)
+      rect:
+        serializedVersion: 2
+        x: 3159
+        y: 1022
+        width: 149
+        height: 508
+      alignment: 9
+      pivot: {x: 0.52684563, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57ae7c5d3c85f6144bdf5f6e170067e3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LibrarianIdle (33)
+      rect:
+        serializedVersion: 2
+        x: 2407
+        y: 1022
+        width: 150
+        height: 508
+      alignment: 9
+      pivot: {x: 0.53, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df5610147bcfb7f4d8509231e4030b02
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LibrarianIdle (34)
+      rect:
+        serializedVersion: 2
+        x: 3474
+        y: 513
+        width: 150
+        height: 509
+      alignment: 9
+      pivot: {x: 0.53, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7e916b9daf5a6747a7e5be46c48cecf
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LibrarianIdle (35)
+      rect:
+        serializedVersion: 2
+        x: 2871
+        y: 3
+        width: 151
+        height: 510
+      alignment: 9
+      pivot: {x: 0.5331126, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45ddb4a9ca5353d43897098c18efc5e1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LibrarianIdle (36)
+      rect:
+        serializedVersion: 2
+        x: 3022
+        y: 3
+        width: 150
+        height: 510
+      alignment: 9
+      pivot: {x: 0.53, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b0114babe414e240a57843a4cc92e14
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LibrarianIdle (37)
+      rect:
+        serializedVersion: 2
+        x: 2557
+        y: 1022
+        width: 150
+        height: 508
+      alignment: 9
+      pivot: {x: 0.53, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8dfabe6e63978504d86d2fa6b7186760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LibrarianIdle (38)
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 514
+        width: 149
+        height: 508
+      alignment: 9
+      pivot: {x: 0.52684563, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1b0e3e739f796f41af6610835f9445e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LibrarianIdle (39)
+      rect:
+        serializedVersion: 2
+        x: 596
+        y: 4
+        width: 149
+        height: 509
+      alignment: 9
+      pivot: {x: 0.52684563, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d3bf408d61e7184ea8b0f93d02c4d4f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LibrarianIdle (40)
+      rect:
+        serializedVersion: 2
+        x: 1349
+        y: 514
+        width: 149
+        height: 508
+      alignment: 9
+      pivot: {x: 0.52684563, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7e9b7a481d627449a64a81e105ff563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LibrarianIdle (41)
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 4
+        width: 148
+        height: 509
+      alignment: 9
+      pivot: {x: 0.5236486, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60ae670a05735654897ca43a7cb6c703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LibrarianIdle (42)
+      rect:
+        serializedVersion: 2
+        x: 2276
+        y: 3
+        width: 148
+        height: 510
+      alignment: 9
+      pivot: {x: 0.5236486, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 006fd8d35fe548941b8e7566fd5269a3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LibrarianIdle (43)
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 514
+        width: 151
+        height: 508
+      alignment: 9
+      pivot: {x: 0.5331126, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 752ac61162611414ba59e92686da947b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LibrarianIdle (44)
+      rect:
+        serializedVersion: 2
+        x: 2260
+        y: 1022
+        width: 147
+        height: 508
+      alignment: 9
+      pivot: {x: 0.52040815, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ca65be783be8d24e9a7593d0a5b8f10
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LibrarianIdle (45)
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 4
+        width: 148
+        height: 509
+      alignment: 9
+      pivot: {x: 0.5236486, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9245060304893234a89206b44fd392e2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LibrarianIdle (46)
+      rect:
+        serializedVersion: 2
+        x: 1968
+        y: 3
+        width: 148
+        height: 510
+      alignment: 9
+      pivot: {x: 0.5236486, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df30c507a94dd72408ff99e74d8912b6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LibrarianIdle (47)
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4
+        width: 147
+        height: 509
+      alignment: 9
+      pivot: {x: 0.52040815, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94e78d515add0934aa5ee2d3aa3d00e9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LibrarianIdle (48)
+      rect:
+        serializedVersion: 2
+        x: 3179
+        y: 513
+        width: 147
+        height: 509
+      alignment: 9
+      pivot: {x: 0.52040815, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6dd7f37e71dfa7646a04b7395fe4f93b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LibrarianIdle (49)
+      rect:
+        serializedVersion: 2
+        x: 598
+        y: 1022
+        width: 147
+        height: 508
+      alignment: 9
+      pivot: {x: 0.52040815, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e7d9fbce84a25241951774d94f6268b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LibrarianIdle (50)
+      rect:
+        serializedVersion: 2
+        x: 2858
+        y: 2037
+        width: 147
+        height: 507
+      alignment: 9
+      pivot: {x: 0.52040815, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 013d85f1aa7441a4bb1d3bd5e5985252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LibrarianIdle (51)
+      rect:
+        serializedVersion: 2
+        x: 1512
+        y: 2038
+        width: 147
+        height: 506
+      alignment: 9
+      pivot: {x: 0.52040815, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25295c2420da2544095a0e2297b9b37b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LibrarianIdle (52)
+      rect:
+        serializedVersion: 2
+        x: 3306
+        y: 2037
+        width: 148
+        height: 507
+      alignment: 9
+      pivot: {x: 0.5236486, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed413bf2dfe46394288ebe687e067936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LibrarianIdle (53)
+      rect:
+        serializedVersion: 2
+        x: 1659
+        y: 2038
+        width: 147
+        height: 506
+      alignment: 9
+      pivot: {x: 0.52040815, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e6cc54982bd9e0429584310579f2479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LibrarianIdle (54)
+      rect:
+        serializedVersion: 2
+        x: 451
+        y: 1022
+        width: 147
+        height: 508
+      alignment: 9
+      pivot: {x: 0.52040815, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83d18be5e2835d848a78f9aa772c6bcc
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LibrarianIdle (55)
+      rect:
+        serializedVersion: 2
+        x: 3454
+        y: 2037
+        width: 147
+        height: 507
+      alignment: 9
+      pivot: {x: 0.52040815, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 90bf2eae8fd1be4419b82d51b904fc3c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LibrarianIdle (56)
+      rect:
+        serializedVersion: 2
+        x: 745
+        y: 1022
+        width: 147
+        height: 508
+      alignment: 9
+      pivot: {x: 0.52040815, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 532d5e67cab7cbb49b3acf6ea097e660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LibrarianIdle (57)
+      rect:
+        serializedVersion: 2
+        x: 1504
+        y: 1022
+        width: 147
+        height: 508
+      alignment: 9
+      pivot: {x: 0.52040815, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84de7b63f21460a4f8da9187b5eb505e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LibrarianIdle (58)
+      rect:
+        serializedVersion: 2
+        x: 2257
+        y: 2038
+        width: 147
+        height: 506
+      alignment: 9
+      pivot: {x: 0.52040815, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a104aeca6e03d347adb25e08e125036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LibrarianIdle (59)
+      rect:
+        serializedVersion: 2
+        x: 3159
+        y: 2037
+        width: 147
+        height: 507
+      alignment: 9
+      pivot: {x: 0.52040815, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4cfab1a4709557a438a5604259c5fffc
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LibrarianIdle (60)
+      rect:
+        serializedVersion: 2
+        x: 3326
+        y: 513
+        width: 148
+        height: 509
+      alignment: 9
+      pivot: {x: 0.5168919, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 53568f76de5e22e41a00dfba73d2249b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LibrarianIdle (61)
+      rect:
+        serializedVersion: 2
+        x: 1806
+        y: 2038
+        width: 148
+        height: 506
+      alignment: 9
+      pivot: {x: 0.5168919, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87f176bbdd3011e4689ef35b60b53d17
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LibrarianIdle (62)
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1530
+        width: 149
+        height: 507
+      alignment: 9
+      pivot: {x: 0.51342285, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 544745c31e7e03847a291dae14d044ef
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LibrarianIdle (63)
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 1530
+        width: 149
+        height: 507
+      alignment: 9
+      pivot: {x: 0.51342285, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69be3c3ec3a5e994abdd3657657ad0ee
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LibrarianIdle (64)
+      rect:
+        serializedVersion: 2
+        x: 1354
+        y: 1022
+        width: 150
+        height: 508
+      alignment: 9
+      pivot: {x: 0.51, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d3d668415a230a4598d3688767177d0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LibrarianIdle (65)
+      rect:
+        serializedVersion: 2
+        x: 605
+        y: 2038
+        width: 151
+        height: 506
+      alignment: 9
+      pivot: {x: 0.5066225, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39c6711b8f6e55c44b8f527d05963b2e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LibrarianIdle (66)
+      rect:
+        serializedVersion: 2
+        x: 1363
+        y: 2038
+        width: 149
+        height: 506
+      alignment: 9
+      pivot: {x: 0.51342285, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f9058239eaf607945a21d45ddfcbd922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LibrarianIdle (67)
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 1530
+        width: 150
+        height: 507
+      alignment: 9
+      pivot: {x: 0.51, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b1bc5b8d4ed4164ea0858d4b9d34187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LibrarianIdle (68)
+      rect:
+        serializedVersion: 2
+        x: 1050
+        y: 4
+        width: 151
+        height: 509
+      alignment: 9
+      pivot: {x: 0.5066225, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a425120200c000e4f8395aff7feaf084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LibrarianIdle (69)
+      rect:
+        serializedVersion: 2
+        x: 897
+        y: 4
+        width: 153
+        height: 509
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a456687e43044e147bd93fb74ef99910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LibrarianIdle (70)
+      rect:
+        serializedVersion: 2
+        x: 1951
+        y: 1022
+        width: 153
+        height: 508
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ba14ca21320e68498620c2e6b19a07a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LibrarianIdle (71)
+      rect:
+        serializedVersion: 2
+        x: 3005
+        y: 2037
+        width: 154
+        height: 507
+      alignment: 9
+      pivot: {x: 0.49675325, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a29b6195f6f4e242a46c5ee91712a34
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LibrarianIdle (72)
+      rect:
+        serializedVersion: 2
+        x: 745
+        y: 4
+        width: 152
+        height: 509
+      alignment: 9
+      pivot: {x: 0.50328946, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fec68fdb76c27e0478d4a52c941a82c7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LibrarianIdle (73)
+      rect:
+        serializedVersion: 2
+        x: 302
+        y: 2038
+        width: 153
+        height: 506
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a895e5bb3b679c448117e11f91493f1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LibrarianIdle (74)
+      rect:
+        serializedVersion: 2
+        x: 2404
+        y: 2037
+        width: 154
+        height: 507
+      alignment: 9
+      pivot: {x: 0.49675325, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42b4ea440fa5c024c8815c2d0739cc3c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LibrarianIdle (75)
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2038
+        width: 152
+        height: 506
+      alignment: 9
+      pivot: {x: 0.50328946, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 780aac82c8b110543b7574be9fe80749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LibrarianIdle (76)
+      rect:
+        serializedVersion: 2
+        x: 1354
+        y: 3
+        width: 155
+        height: 510
+      alignment: 9
+      pivot: {x: 0.4935484, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5217fe28e2edab4788457be32d5bc44
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LibrarianIdle (77)
+      rect:
+        serializedVersion: 2
+        x: 1954
+        y: 513
+        width: 152
+        height: 509
+      alignment: 9
+      pivot: {x: 0.50328946, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cacfead7b780c81439cc1736023fcf84
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LibrarianIdle (78)
+      rect:
+        serializedVersion: 2
+        x: 2104
+        y: 1022
+        width: 156
+        height: 508
+      alignment: 9
+      pivot: {x: 0.4903846, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5337a27d18117d745b5e66e6f229b6f9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LibrarianIdle (79)
+      rect:
+        serializedVersion: 2
+        x: 2107
+        y: 2038
+        width: 150
+        height: 506
+      alignment: 9
+      pivot: {x: 0.51, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1dcc4af2361ee7428cac245767a41dd
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LibrarianIdle (80)
+      rect:
+        serializedVersion: 2
+        x: 2571
+        y: 3
+        width: 149
+        height: 510
+      alignment: 9
+      pivot: {x: 0.52684563, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af365b5182ba5a5458011b6a8ba969b9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LibrarianIdle (81)
+      rect:
+        serializedVersion: 2
+        x: 1049
+        y: 1022
+        width: 149
+        height: 508
+      alignment: 9
+      pivot: {x: 0.52684563, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3388b1258c373c84a838ca621a003fe4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LibrarianIdle (82)
+      rect:
+        serializedVersion: 2
+        x: 1656
+        y: 1530
+        width: 155
+        height: 507
+      alignment: 9
+      pivot: {x: 0.4935484, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a71a714267be584f95616778770fab3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LibrarianIdle (83)
+      rect:
+        serializedVersion: 2
+        x: 2718
+        y: 513
+        width: 156
+        height: 509
+      alignment: 9
+      pivot: {x: 0.4903846, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f9403752078cbab4688aac20cab65821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LibrarianIdle (84)
+      rect:
+        serializedVersion: 2
+        x: 2561
+        y: 513
+        width: 157
+        height: 509
+      alignment: 9
+      pivot: {x: 0.48726115, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2dbdf84e3515e7745a6ad4aa41dd9634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LibrarianIdle (85)
+      rect:
+        serializedVersion: 2
+        x: 3062
+        y: 1530
+        width: 158
+        height: 507
+      alignment: 9
+      pivot: {x: 0.4841772, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2afb1a02190f7e40a622c507f17343e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LibrarianIdle (86)
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 2038
+        width: 150
+        height: 506
+      alignment: 9
+      pivot: {x: 0.51, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ed07931f3031f846bc75ee38f956a82
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LibrarianIdle (87)
+      rect:
+        serializedVersion: 2
+        x: 1198
+        y: 1022
+        width: 156
+        height: 508
+      alignment: 9
+      pivot: {x: 0.4903846, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa45224c783950b4da343ca0765251f5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LibrarianIdle (88)
+      rect:
+        serializedVersion: 2
+        x: 297
+        y: 1023
+        width: 154
+        height: 507
+      alignment: 9
+      pivot: {x: 0.49675325, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 615bb22c9b8be1848a32dec8e67f2632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LibrarianIdle (89)
+      rect:
+        serializedVersion: 2
+        x: 1355
+        y: 1530
+        width: 150
+        height: 507
+      alignment: 9
+      pivot: {x: 0.51, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae1b8f55bc3899b42b2f04b3e98a58b6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LibrarianIdle (90)
+      rect:
+        serializedVersion: 2
+        x: 1651
+        y: 1022
+        width: 150
+        height: 508
+      alignment: 9
+      pivot: {x: 0.51, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9144dd5e610383d45b708b06a4410760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LibrarianIdle (91)
+      rect:
+        serializedVersion: 2
+        x: 1664
+        y: 3
+        width: 154
+        height: 510
+      alignment: 9
+      pivot: {x: 0.49675325, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 762dade9b09b58f449b8bc2450ad2a5c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LibrarianIdle (92)
+      rect:
+        serializedVersion: 2
+        x: 1201
+        y: 1530
+        width: 154
+        height: 507
+      alignment: 9
+      pivot: {x: 0.49675325, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b9d6d5b28d23334cad885fe5e8656aa
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LibrarianIdle (93)
+      rect:
+        serializedVersion: 2
+        x: 1201
+        y: 3
+        width: 153
+        height: 510
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0d4a43da6e140a4f8c8a97148b5b1a4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LibrarianIdle (94)
+      rect:
+        serializedVersion: 2
+        x: 1811
+        y: 1530
+        width: 154
+        height: 507
+      alignment: 9
+      pivot: {x: 0.5032467, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f9e40cc7b74f2b24098f654d6be3de32
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LibrarianIdle (95)
+      rect:
+        serializedVersion: 2
+        x: 1509
+        y: 3
+        width: 155
+        height: 510
+      alignment: 9
+      pivot: {x: 0.5064516, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e45931b4f0af4fe40a64dc9a49d17e9b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LibrarianIdle (96)
+      rect:
+        serializedVersion: 2
+        x: 2434
+        y: 1530
+        width: 160
+        height: 507
+      alignment: 9
+      pivot: {x: 0.490625, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57dd29c6e7602f1488508214e16848c4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LibrarianIdle (97)
+      rect:
+        serializedVersion: 2
+        x: 2273
+        y: 1530
+        width: 161
+        height: 507
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7157c17f629ff1345aa84336fa7afc76
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LibrarianIdle (98)
+      rect:
+        serializedVersion: 2
+        x: 892
+        y: 1022
+        width: 157
+        height: 508
+      alignment: 9
+      pivot: {x: 0.5063694, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83b66392d1a337245990ff6da8cba905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LibrarianIdle (99)
+      rect:
+        serializedVersion: 2
+        x: 745
+        y: 514
+        width: 158
+        height: 508
+      alignment: 9
+      pivot: {x: 0.5031645, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58dc000c58898134db9bd016faf4585c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LibrarianIdle (100)
+      rect:
+        serializedVersion: 2
+        x: 2116
+        y: 3
+        width: 160
+        height: 510
+      alignment: 9
+      pivot: {x: 0.509375, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a482a6dca11dd1d4fbb12a0510f061dd
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LibrarianIdle (101)
+      rect:
+        serializedVersion: 2
+        x: 2745
+        y: 1530
+        width: 162
+        height: 507
+      alignment: 9
+      pivot: {x: 0.50308645, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fbff59f73db821c45bce428cac228f66
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LibrarianIdle (102)
+      rect:
+        serializedVersion: 2
+        x: 1652
+        y: 513
+        width: 154
+        height: 509
+      alignment: 9
+      pivot: {x: 0.5032467, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea471b7234da72649b614739daf8be88
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LibrarianIdle (103)
+      rect:
+        serializedVersion: 2
+        x: 2594
+        y: 1530
+        width: 151
+        height: 507
+      alignment: 9
+      pivot: {x: 0.51324505, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7678cb895068d940a98a4208aa6e9b9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LibrarianIdle (104)
+      rect:
+        serializedVersion: 2
+        x: 2115
+        y: 1530
+        width: 158
+        height: 507
+      alignment: 9
+      pivot: {x: 0.49683544, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 733dd8aaee8b48d45ba2927c3ae81563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LibrarianIdle (105)
+      rect:
+        serializedVersion: 2
+        x: 1498
+        y: 513
+        width: 154
+        height: 509
+      alignment: 9
+      pivot: {x: 0.52272725, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8c58c1f3630f514e9b2fe2754f407a2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LibrarianIdle (106)
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 1530
+        width: 158
+        height: 507
+      alignment: 9
+      pivot: {x: 0.50949365, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae850884d8e71e24d8190ac6a81c4de0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LibrarianIdle (107)
+      rect:
+        serializedVersion: 2
+        x: 1210
+        y: 2038
+        width: 153
+        height: 506
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f804e10ecae39e540811fcf31f8a2b24
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LibrarianIdle (108)
+      rect:
+        serializedVersion: 2
+        x: 2405
+        y: 513
+        width: 156
+        height: 509
+      alignment: 9
+      pivot: {x: 0.4903846, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42885e1cd05cde04792f571a0b48972c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LibrarianIdle (109)
+      rect:
+        serializedVersion: 2
+        x: 3026
+        y: 513
+        width: 153
+        height: 509
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7bed447efe38f2142bbc321fbdb39ede
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LibrarianIdle (110)
+      rect:
+        serializedVersion: 2
+        x: 2907
+        y: 1530
+        width: 155
+        height: 507
+      alignment: 9
+      pivot: {x: 0.4935484, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1544b9ab180ece84aa10c4423442efb1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LibrarianIdle (111)
+      rect:
+        serializedVersion: 2
+        x: 3468
+        y: 3
+        width: 152
+        height: 510
+      alignment: 9
+      pivot: {x: 0.50328946, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff5f50015885b494fa541f28149ba9f7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LibrarianIdle (112)
+      rect:
+        serializedVersion: 2
+        x: 1505
+        y: 1530
+        width: 151
+        height: 507
+      alignment: 9
+      pivot: {x: 0.5066225, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ce66430c93c1d34dab9f8c129541693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LibrarianIdle (113)
+      rect:
+        serializedVersion: 2
+        x: 1054
+        y: 1530
+        width: 147
+        height: 507
+      alignment: 9
+      pivot: {x: 0.52040815, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b8e786a894261145bc52dc441900486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LibrarianIdle (114)
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1023
+        width: 147
+        height: 507
+      alignment: 9
+      pivot: {x: 0.52040815, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d374e8200a359d44841acfca00f0132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LibrarianIdle (115)
+      rect:
+        serializedVersion: 2
+        x: 2874
+        y: 513
+        width: 152
+        height: 509
+      alignment: 9
+      pivot: {x: 0.50328946, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c2c57fd31d61d64dae68d6eb9d93cfd
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LibrarianIdle (116)
+      rect:
+        serializedVersion: 2
+        x: 2858
+        y: 1022
+        width: 153
+        height: 508
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 703c4b1a5a9164f4989c0ab61a8007c7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LibrarianIdle (117)
+      rect:
+        serializedVersion: 2
+        x: 1056
+        y: 2038
+        width: 154
+        height: 506
+      alignment: 9
+      pivot: {x: 0.49675325, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e515067a05ae1346b8d98540ab95645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LibrarianIdle (118)
+      rect:
+        serializedVersion: 2
+        x: 906
+        y: 2038
+        width: 150
+        height: 506
+      alignment: 9
+      pivot: {x: 0.51, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1234bd9af5657a48b02a68af93345fc
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LibrarianIdle (119)
+      rect:
+        serializedVersion: 2
+        x: 3525
+        y: 1530
+        width: 154
+        height: 507
+      alignment: 9
+      pivot: {x: 0.49675325, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6ef9878309d47a43bc11464cfcc4eea
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LibrarianIdle (120)
+      rect:
+        serializedVersion: 2
+        x: 3372
+        y: 1530
+        width: 153
+        height: 507
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ebdd8b36be43e945a4299c8e1ed4c77
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LibrarianIdle (121)
+      rect:
+        serializedVersion: 2
+        x: 2107
+        y: 2038
+        width: 150
+        height: 506
+      alignment: 9
+      pivot: {x: 0.51, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d1b0566ad94ab84eae4b8374b033e64
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 795f04b574ace8c4a9cfe7a4790c79e3
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

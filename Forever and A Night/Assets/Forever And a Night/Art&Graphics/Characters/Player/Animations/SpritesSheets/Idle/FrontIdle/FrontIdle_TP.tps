@@ -88,9 +88,9 @@
         <key>maxTextureSize</key>
         <QSize>
             <key>width</key>
-            <int>2048</int>
+            <int>4096</int>
             <key>height</key>
-            <int>2048</int>
+            <int>4096</int>
         </QSize>
         <key>fixedTextureSize</key>
         <QSize>
@@ -102,7 +102,7 @@
         <key>algorithmSettings</key>
         <struct type="AlgorithmSettings">
             <key>algorithm</key>
-            <enum type="AlgorithmSettings::AlgorithmId">MaxRects</enum>
+            <enum type="AlgorithmSettings::AlgorithmId">Basic</enum>
             <key>freeSizeMode</key>
             <enum type="AlgorithmSettings::AlgorithmFreeSizeMode">Best</enum>
             <key>sizeConstraints</key>
@@ -159,7 +159,7 @@
         <key>globalSpriteSettings</key>
         <struct type="SpriteSettings">
             <key>scale</key>
-            <double>0.5</double>
+            <double>1</double>
             <key>scaleMode</key>
             <enum type="ScaleMode">Smooth</enum>
             <key>extrude</key>
@@ -175,109 +175,121 @@
             <key>heuristicMask</key>
             <false/>
             <key>defaultPivotPoint</key>
-            <point_f>0.5,0.5</point_f>
+            <point_f>0.5,1</point_f>
             <key>writePivotPoints</key>
             <true/>
         </struct>
         <key>individualSpriteSettings</key>
         <map type="IndividualSpriteSettingsMap">
             <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/FrontIdle/FrontIdle (1).png</key>
-            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/FrontIdle/FrontIdle (1)_n.png</key>
             <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/FrontIdle/FrontIdle (10).png</key>
-            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/FrontIdle/FrontIdle (10)_n.png</key>
             <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/FrontIdle/FrontIdle (11).png</key>
-            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/FrontIdle/FrontIdle (11)_n.png</key>
             <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/FrontIdle/FrontIdle (12).png</key>
-            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/FrontIdle/FrontIdle (12)_n.png</key>
             <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/FrontIdle/FrontIdle (13).png</key>
-            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/FrontIdle/FrontIdle (13)_n.png</key>
             <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/FrontIdle/FrontIdle (14).png</key>
-            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/FrontIdle/FrontIdle (14)_n.png</key>
             <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/FrontIdle/FrontIdle (15).png</key>
-            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/FrontIdle/FrontIdle (15)_n.png</key>
             <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/FrontIdle/FrontIdle (16).png</key>
-            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/FrontIdle/FrontIdle (16)_n.png</key>
             <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/FrontIdle/FrontIdle (17).png</key>
-            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/FrontIdle/FrontIdle (17)_n.png</key>
             <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/FrontIdle/FrontIdle (18).png</key>
-            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/FrontIdle/FrontIdle (18)_n.png</key>
             <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/FrontIdle/FrontIdle (19).png</key>
-            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/FrontIdle/FrontIdle (19)_n.png</key>
             <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/FrontIdle/FrontIdle (2).png</key>
-            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/FrontIdle/FrontIdle (2)_n.png</key>
             <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/FrontIdle/FrontIdle (20).png</key>
-            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/FrontIdle/FrontIdle (20)_n.png</key>
             <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/FrontIdle/FrontIdle (21).png</key>
-            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/FrontIdle/FrontIdle (21)_n.png</key>
             <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/FrontIdle/FrontIdle (22).png</key>
-            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/FrontIdle/FrontIdle (22)_n.png</key>
             <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/FrontIdle/FrontIdle (23).png</key>
-            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/FrontIdle/FrontIdle (23)_n.png</key>
             <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/FrontIdle/FrontIdle (24).png</key>
-            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/FrontIdle/FrontIdle (24)_n.png</key>
             <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/FrontIdle/FrontIdle (25).png</key>
-            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/FrontIdle/FrontIdle (25)_n.png</key>
             <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/FrontIdle/FrontIdle (26).png</key>
-            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/FrontIdle/FrontIdle (26)_n.png</key>
             <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/FrontIdle/FrontIdle (27).png</key>
-            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/FrontIdle/FrontIdle (27)_n.png</key>
             <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/FrontIdle/FrontIdle (28).png</key>
-            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/FrontIdle/FrontIdle (28)_n.png</key>
             <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/FrontIdle/FrontIdle (29).png</key>
-            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/FrontIdle/FrontIdle (29)_n.png</key>
             <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/FrontIdle/FrontIdle (3).png</key>
-            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/FrontIdle/FrontIdle (3)_n.png</key>
             <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/FrontIdle/FrontIdle (30).png</key>
-            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/FrontIdle/FrontIdle (30)_n.png</key>
             <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/FrontIdle/FrontIdle (31).png</key>
-            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/FrontIdle/FrontIdle (31)_n.png</key>
             <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/FrontIdle/FrontIdle (32).png</key>
-            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/FrontIdle/FrontIdle (32)_n.png</key>
             <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/FrontIdle/FrontIdle (33).png</key>
-            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/FrontIdle/FrontIdle (33)_n.png</key>
             <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/FrontIdle/FrontIdle (34).png</key>
-            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/FrontIdle/FrontIdle (34)_n.png</key>
             <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/FrontIdle/FrontIdle (35).png</key>
-            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/FrontIdle/FrontIdle (35)_n.png</key>
             <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/FrontIdle/FrontIdle (36).png</key>
-            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/FrontIdle/FrontIdle (36)_n.png</key>
             <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/FrontIdle/FrontIdle (37).png</key>
-            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/FrontIdle/FrontIdle (37)_n.png</key>
             <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/FrontIdle/FrontIdle (38).png</key>
-            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/FrontIdle/FrontIdle (38)_n.png</key>
             <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/FrontIdle/FrontIdle (39).png</key>
-            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/FrontIdle/FrontIdle (39)_n.png</key>
             <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/FrontIdle/FrontIdle (4).png</key>
-            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/FrontIdle/FrontIdle (4)_n.png</key>
             <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/FrontIdle/FrontIdle (40).png</key>
-            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/FrontIdle/FrontIdle (40)_n.png</key>
             <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/FrontIdle/FrontIdle (41).png</key>
-            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/FrontIdle/FrontIdle (41)_n.png</key>
             <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/FrontIdle/FrontIdle (42).png</key>
-            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/FrontIdle/FrontIdle (42)_n.png</key>
             <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/FrontIdle/FrontIdle (43).png</key>
-            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/FrontIdle/FrontIdle (43)_n.png</key>
             <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/FrontIdle/FrontIdle (44).png</key>
-            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/FrontIdle/FrontIdle (44)_n.png</key>
             <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/FrontIdle/FrontIdle (45).png</key>
-            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/FrontIdle/FrontIdle (45)_n.png</key>
             <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/FrontIdle/FrontIdle (46).png</key>
-            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/FrontIdle/FrontIdle (46)_n.png</key>
             <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/FrontIdle/FrontIdle (47).png</key>
-            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/FrontIdle/FrontIdle (47)_n.png</key>
             <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/FrontIdle/FrontIdle (48).png</key>
-            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/FrontIdle/FrontIdle (48)_n.png</key>
             <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/FrontIdle/FrontIdle (49).png</key>
-            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/FrontIdle/FrontIdle (49)_n.png</key>
             <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/FrontIdle/FrontIdle (5).png</key>
-            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/FrontIdle/FrontIdle (5)_n.png</key>
             <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/FrontIdle/FrontIdle (6).png</key>
-            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/FrontIdle/FrontIdle (6)_n.png</key>
             <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/FrontIdle/FrontIdle (7).png</key>
-            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/FrontIdle/FrontIdle (7)_n.png</key>
             <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/FrontIdle/FrontIdle (8).png</key>
-            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/FrontIdle/FrontIdle (8)_n.png</key>
             <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/FrontIdle/FrontIdle (9).png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,1</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>94,215,187,429</rect>
+                <key>scale9Paddings</key>
+                <rect>94,215,187,429</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/FrontIdle/FrontIdle (1)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/FrontIdle/FrontIdle (10)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/FrontIdle/FrontIdle (11)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/FrontIdle/FrontIdle (12)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/FrontIdle/FrontIdle (13)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/FrontIdle/FrontIdle (14)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/FrontIdle/FrontIdle (15)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/FrontIdle/FrontIdle (16)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/FrontIdle/FrontIdle (17)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/FrontIdle/FrontIdle (18)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/FrontIdle/FrontIdle (19)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/FrontIdle/FrontIdle (2)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/FrontIdle/FrontIdle (20)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/FrontIdle/FrontIdle (21)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/FrontIdle/FrontIdle (22)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/FrontIdle/FrontIdle (23)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/FrontIdle/FrontIdle (24)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/FrontIdle/FrontIdle (25)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/FrontIdle/FrontIdle (26)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/FrontIdle/FrontIdle (27)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/FrontIdle/FrontIdle (28)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/FrontIdle/FrontIdle (29)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/FrontIdle/FrontIdle (3)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/FrontIdle/FrontIdle (30)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/FrontIdle/FrontIdle (31)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/FrontIdle/FrontIdle (32)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/FrontIdle/FrontIdle (33)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/FrontIdle/FrontIdle (34)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/FrontIdle/FrontIdle (35)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/FrontIdle/FrontIdle (36)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/FrontIdle/FrontIdle (37)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/FrontIdle/FrontIdle (38)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/FrontIdle/FrontIdle (39)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/FrontIdle/FrontIdle (4)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/FrontIdle/FrontIdle (40)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/FrontIdle/FrontIdle (41)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/FrontIdle/FrontIdle (42)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/FrontIdle/FrontIdle (43)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/FrontIdle/FrontIdle (44)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/FrontIdle/FrontIdle (45)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/FrontIdle/FrontIdle (46)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/FrontIdle/FrontIdle (47)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/FrontIdle/FrontIdle (48)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/FrontIdle/FrontIdle (49)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/FrontIdle/FrontIdle (5)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/FrontIdle/FrontIdle (6)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/FrontIdle/FrontIdle (7)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/FrontIdle/FrontIdle (8)_n.png</key>
             <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/FrontIdle/FrontIdle (9)_n.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>

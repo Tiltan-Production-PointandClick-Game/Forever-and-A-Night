@@ -1,0 +1,782 @@
+fileFormatVersion: 2
+guid: 83d3caf34525c8e4f96780d1996eff22
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: FrontWalk_SS.sip
+    21300002: FrontWalk (1)
+    21300004: FrontWalk (2)
+    21300006: FrontWalk (3)
+    21300008: FrontWalk (4)
+    21300010: FrontWalk (5)
+    21300012: FrontWalk (6)
+    21300014: FrontWalk (7)
+    21300016: FrontWalk (8)
+    21300018: FrontWalk (9)
+    21300020: FrontWalk (10)
+    21300022: FrontWalk (11)
+    21300024: FrontWalk (12)
+    21300026: FrontWalk (13)
+    21300028: FrontWalk (14)
+    21300030: FrontWalk (15)
+    21300032: FrontWalk (16)
+    21300034: FrontWalk (17)
+    21300036: FrontWalk (18)
+    21300038: FrontWalk (19)
+    21300040: FrontWalk (20)
+    21300042: FrontWalk (21)
+    21300044: FrontWalk (22)
+    21300046: FrontWalk (23)
+    21300048: FrontWalk (24)
+    21300050: FrontWalk (25)
+    21300052: FrontWalk (26)
+    21300054: FrontWalk (27)
+    21300056: FrontWalk (28)
+    21300058: FrontWalk (29)
+    21300060: FrontWalk (30)
+    21300062: FrontWalk (31)
+    21300064: FrontWalk (32)
+    21300066: FrontWalk (33)
+  externalObjects: {}
+  serializedVersion: 9
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: FrontWalk (1)
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 436
+        width: 184
+        height: 433
+      alignment: 9
+      pivot: {x: 0.48641303, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e08e9712369086449974e02fe45f5f06
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FrontWalk (2)
+      rect:
+        serializedVersion: 2
+        x: 588
+        y: 1306
+        width: 189
+        height: 433
+      alignment: 9
+      pivot: {x: 0.51058203, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2d49803e255b3b4f9df3d551bc79439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FrontWalk (3)
+      rect:
+        serializedVersion: 2
+        x: 779
+        y: 1306
+        width: 189
+        height: 433
+      alignment: 9
+      pivot: {x: 0.51058203, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1bfdfd5d0a3dc84681abb4e724afa51
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FrontWalk (4)
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 871
+        width: 196
+        height: 433
+      alignment: 9
+      pivot: {x: 0.50765306, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c8f2f693d2d01042aba3c3f1d4ad5a5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FrontWalk (5)
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1
+        width: 192
+        height: 433
+      alignment: 9
+      pivot: {x: 0.5182292, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24e36ced0f4ec7f45bf0176e521d1062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FrontWalk (6)
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 872
+        width: 193
+        height: 432
+      alignment: 9
+      pivot: {x: 0.52590674, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fbe11ca9b4575044196cb8cf88840158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FrontWalk (7)
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 1306
+        width: 190
+        height: 433
+      alignment: 9
+      pivot: {x: 0.52894735, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db493aefcaa0b6c49b53ec9a88a8a349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FrontWalk (8)
+      rect:
+        serializedVersion: 2
+        x: 381
+        y: 437
+        width: 183
+        height: 433
+      alignment: 9
+      pivot: {x: 0.5601093, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6eb244535388254ea72b72ecb08033f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FrontWalk (9)
+      rect:
+        serializedVersion: 2
+        x: 967
+        y: 873
+        width: 189
+        height: 431
+      alignment: 9
+      pivot: {x: 0.53174603, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e6bde4d2adc8354987a5682ee075db8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FrontWalk (10)
+      rect:
+        serializedVersion: 2
+        x: 1160
+        y: 1306
+        width: 187
+        height: 433
+      alignment: 9
+      pivot: {x: 0.54812837, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b6f60db258a78141bbd15e823e733f9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FrontWalk (11)
+      rect:
+        serializedVersion: 2
+        x: 566
+        y: 437
+        width: 181
+        height: 433
+      alignment: 9
+      pivot: {x: 0.5607735, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 53669c5ad7c27e64fb1af8f08d1d02aa
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FrontWalk (12)
+      rect:
+        serializedVersion: 2
+        x: 381
+        y: 2
+        width: 182
+        height: 433
+      alignment: 9
+      pivot: {x: 0.5631868, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 283b9b85ee0f9ce489d67a41b4c75806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FrontWalk (13)
+      rect:
+        serializedVersion: 2
+        x: 565
+        y: 2
+        width: 181
+        height: 433
+      alignment: 9
+      pivot: {x: 0.56629837, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60035a93323528743b5de43df418bcf1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FrontWalk (14)
+      rect:
+        serializedVersion: 2
+        x: 933
+        y: 437
+        width: 180
+        height: 433
+      alignment: 9
+      pivot: {x: 0.5638889, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d350f8f163d60474b9c89efd9b09d0e1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FrontWalk (15)
+      rect:
+        serializedVersion: 2
+        x: 970
+        y: 1306
+        width: 188
+        height: 433
+      alignment: 9
+      pivot: {x: 0.52393615, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 441b401f4daaad24ebf33d5e1b4cf820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FrontWalk (16)
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 1
+        width: 184
+        height: 433
+      alignment: 9
+      pivot: {x: 0.51902175, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9b7f8364ff9a724aa0743a11483cde2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FrontWalk (17)
+      rect:
+        serializedVersion: 2
+        x: 1346
+        y: 871
+        width: 185
+        height: 433
+      alignment: 9
+      pivot: {x: 0.5108108, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d41f7203176a2b947889c11fff4c2a72
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FrontWalk (18)
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1306
+        width: 198
+        height: 433
+      alignment: 9
+      pivot: {x: 0.50757575, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c01c27732c71cd04099c49188e927cc1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FrontWalk (19)
+      rect:
+        serializedVersion: 2
+        x: 394
+        y: 872
+        width: 190
+        height: 432
+      alignment: 9
+      pivot: {x: 0.48157895, y: -0.0023148148}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30c83207bbd1b544287ba54edc57ba7f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FrontWalk (20)
+      rect:
+        serializedVersion: 2
+        x: 777
+        y: 872
+        width: 188
+        height: 432
+      alignment: 9
+      pivot: {x: 0.47606382, y: -0.0023148148}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4879da351c9ea21469ebb611d4fb8b9e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FrontWalk (21)
+      rect:
+        serializedVersion: 2
+        x: 749
+        y: 438
+        width: 182
+        height: 432
+      alignment: 9
+      pivot: {x: 0.50274724, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5bce408df01877047a3aab1425bc5ada
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FrontWalk (22)
+      rect:
+        serializedVersion: 2
+        x: 1115
+        y: 439
+        width: 179
+        height: 432
+      alignment: 9
+      pivot: {x: 0.48324022, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e736fa326b9bfeb4f9011d516aee9fdd
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FrontWalk (23)
+      rect:
+        serializedVersion: 2
+        x: 748
+        y: 2
+        width: 178
+        height: 433
+      alignment: 9
+      pivot: {x: 0.48595506, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64d2838e18725b042a2c17c421227b23
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FrontWalk (24)
+      rect:
+        serializedVersion: 2
+        x: 1287
+        y: 9
+        width: 181
+        height: 428
+      alignment: 9
+      pivot: {x: 0.47790056, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32435da54b1a1d84c872a4e0930ce774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FrontWalk (25)
+      rect:
+        serializedVersion: 2
+        x: 928
+        y: 3
+        width: 178
+        height: 432
+      alignment: 9
+      pivot: {x: 0.48033708, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ecd0e81b50ef87489eabf7c6f26656e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FrontWalk (26)
+      rect:
+        serializedVersion: 2
+        x: 1470
+        y: 10
+        width: 180
+        height: 427
+      alignment: 9
+      pivot: {x: 0.4861111, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a535b9773d9ca94585e52d4ef687c14
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FrontWalk (27)
+      rect:
+        serializedVersion: 2
+        x: 1296
+        y: 439
+        width: 180
+        height: 430
+      alignment: 9
+      pivot: {x: 0.475, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59e48b09e7acea14f855c710dc88f6b5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FrontWalk (28)
+      rect:
+        serializedVersion: 2
+        x: 1108
+        y: 4
+        width: 177
+        height: 431
+      alignment: 9
+      pivot: {x: 0.48305085, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b151150e719b1cf46b3f248b5f040377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FrontWalk (29)
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 436
+        width: 192
+        height: 433
+      alignment: 9
+      pivot: {x: 0.47135416, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b300b356c0d219645ae7e6edaea88987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FrontWalk (30)
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 1306
+        width: 193
+        height: 433
+      alignment: 9
+      pivot: {x: 0.4792746, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0bb1651267c288f4582d4e5dc4018975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FrontWalk (31)
+      rect:
+        serializedVersion: 2
+        x: 1158
+        y: 873
+        width: 186
+        height: 431
+      alignment: 9
+      pivot: {x: 0.48655915, y: -0.0023201855}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd7bdf710089e2347b300d7e8365fac2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FrontWalk (32)
+      rect:
+        serializedVersion: 2
+        x: 1349
+        y: 1306
+        width: 187
+        height: 433
+      alignment: 9
+      pivot: {x: 0.49465242, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1cff492c7864e1488e64bc269162928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FrontWalk (33)
+      rect:
+        serializedVersion: 2
+        x: 586
+        y: 872
+        width: 189
+        height: 432
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 690e67c54f7a13f48b9579f372973282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: ad4dbde15ba2c3d4caca29760b95d17a
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

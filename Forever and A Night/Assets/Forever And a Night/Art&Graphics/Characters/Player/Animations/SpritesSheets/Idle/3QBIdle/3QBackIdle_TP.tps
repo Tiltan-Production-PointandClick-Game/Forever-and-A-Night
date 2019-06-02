@@ -132,7 +132,7 @@
             <key>datafile</key>
             <struct type="DataFile">
                 <key>name</key>
-                <filename></filename>
+                <filename>3QBackIdleSpriteSheet.tpsheet</filename>
             </struct>
         </map>
         <key>multiPack</key>
@@ -175,110 +175,122 @@
             <key>heuristicMask</key>
             <false/>
             <key>defaultPivotPoint</key>
-            <point_f>0.5,0.5</point_f>
+            <point_f>0.5,1</point_f>
             <key>writePivotPoints</key>
             <true/>
         </struct>
         <key>individualSpriteSettings</key>
         <map type="IndividualSpriteSettingsMap">
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (1).png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (1)_n.png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (10).png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (10)_n.png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (11).png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (11)_n.png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (12).png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (12)_n.png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (13).png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (13)_n.png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (14).png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (14)_n.png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (15).png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (15)_n.png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (16).png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (16)_n.png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (17).png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (17)_n.png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (18).png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (18)_n.png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (19).png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (19)_n.png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (2).png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (2)_n.png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (20).png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (20)_n.png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (21).png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (21)_n.png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (22).png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (22)_n.png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (23).png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (23)_n.png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (24).png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (24)_n.png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (25).png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (25)_n.png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (26).png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (26)_n.png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (27).png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (27)_n.png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (28).png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (28)_n.png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (29).png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (29)_n.png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (3).png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (3)_n.png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (30).png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (30)_n.png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (31).png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (31)_n.png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (32).png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (32)_n.png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (33).png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (33)_n.png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (34).png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (34)_n.png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (35).png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (35)_n.png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (36).png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (36)_n.png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (37).png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (37)_n.png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (38).png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (38)_n.png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (39).png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (39)_n.png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (4).png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (4)_n.png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (40).png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (40)_n.png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (41).png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (41)_n.png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (42).png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (42)_n.png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (43).png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (43)_n.png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (44).png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (44)_n.png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (45).png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (45)_n.png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (46).png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (46)_n.png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (47).png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (47)_n.png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (48).png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (48)_n.png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (49).png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (49)_n.png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (5).png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (5)_n.png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (6).png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (6)_n.png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (7).png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (7)_n.png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (8).png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (8)_n.png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (9).png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (9)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (1).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (10).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (11).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (12).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (13).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (14).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (15).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (16).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (17).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (18).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (19).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (2).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (20).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (21).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (22).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (23).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (24).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (25).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (26).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (27).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (28).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (29).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (3).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (30).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (31).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (32).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (33).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (34).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (35).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (36).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (37).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (38).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (39).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (4).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (40).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (41).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (42).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (43).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (44).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (45).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (46).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (47).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (48).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (49).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (5).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (6).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (7).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (8).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (9).png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,1</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>89,215,179,430</rect>
+                <key>scale9Paddings</key>
+                <rect>89,215,179,430</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (1)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (10)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (11)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (12)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (13)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (14)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (15)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (16)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (17)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (18)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (19)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (2)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (20)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (21)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (22)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (23)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (24)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (25)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (26)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (27)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (28)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (29)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (3)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (30)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (31)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (32)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (33)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (34)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (35)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (36)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (37)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (38)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (39)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (4)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (40)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (41)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (42)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (43)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (44)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (45)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (46)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (47)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (48)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (49)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (5)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (6)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (7)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (8)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (9)_n.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
@@ -294,104 +306,104 @@
         </map>
         <key>fileList</key>
         <array>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (1).png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (1)_n.png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (2).png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (2)_n.png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (3).png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (3)_n.png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (4).png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (4)_n.png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (5).png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (5)_n.png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (6).png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (6)_n.png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (7).png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (7)_n.png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (8).png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (8)_n.png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (9).png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (9)_n.png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (10).png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (10)_n.png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (11).png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (11)_n.png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (12).png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (12)_n.png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (13).png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (13)_n.png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (14).png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (14)_n.png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (15).png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (15)_n.png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (16).png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (16)_n.png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (17).png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (17)_n.png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (18).png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (18)_n.png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (19).png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (19)_n.png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (20).png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (20)_n.png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (21).png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (21)_n.png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (22).png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (22)_n.png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (23).png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (23)_n.png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (24).png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (24)_n.png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (25).png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (25)_n.png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (26).png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (26)_n.png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (27).png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (27)_n.png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (28).png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (28)_n.png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (29).png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (29)_n.png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (30).png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (30)_n.png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (31).png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (31)_n.png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (32).png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (32)_n.png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (33).png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (33)_n.png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (34).png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (34)_n.png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (35).png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (35)_n.png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (36).png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (36)_n.png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (37).png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (37)_n.png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (38).png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (38)_n.png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (39).png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (39)_n.png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (40).png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (40)_n.png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (41).png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (41)_n.png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (42).png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (42)_n.png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (43).png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (43)_n.png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (44).png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (44)_n.png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (45).png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (45)_n.png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (46).png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (46)_n.png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (47).png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (47)_n.png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (48).png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (48)_n.png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (49).png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/3QBackIdle/3QBackIdle (49)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (1).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (1)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (2).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (2)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (3).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (3)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (4).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (4)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (5).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (5)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (6).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (6)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (7).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (7)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (8).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (8)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (9).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (9)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (10).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (10)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (11).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (11)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (12).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (12)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (13).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (13)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (14).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (14)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (15).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (15)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (16).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (16)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (17).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (17)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (18).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (18)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (19).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (19)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (20).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (20)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (21).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (21)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (22).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (22)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (23).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (23)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (24).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (24)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (25).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (25)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (26).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (26)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (27).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (27)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (28).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (28)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (29).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (29)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (30).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (30)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (31).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (31)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (32).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (32)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (33).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (33)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (34).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (34)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (35).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (35)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (36).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (36)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (37).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (37)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (38).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (38)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (39).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (39)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (40).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (40)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (41).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (41)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (42).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (42)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (43).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (43)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (44).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (44)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (45).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (45)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (46).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (46)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (47).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (47)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (48).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (48)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (49).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Idle/3QBackIdle/3QBackIdle (49)_n.png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>

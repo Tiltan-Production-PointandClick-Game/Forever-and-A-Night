@@ -106,7 +106,7 @@
             <key>freeSizeMode</key>
             <enum type="AlgorithmSettings::AlgorithmFreeSizeMode">Best</enum>
             <key>sizeConstraints</key>
-            <enum type="AlgorithmSettings::SizeConstraints">POT</enum>
+            <enum type="AlgorithmSettings::SizeConstraints">AnySize</enum>
             <key>forceSquared</key>
             <false/>
             <key>maxRects</key>
@@ -132,7 +132,7 @@
             <key>datafile</key>
             <struct type="DataFile">
                 <key>name</key>
-                <filename>FrontWalk_SpriteSheet.tpsheet</filename>
+                <filename>FrontWalk_SS.sip.tpsheet</filename>
             </struct>
         </map>
         <key>multiPack</key>
@@ -175,78 +175,90 @@
             <key>heuristicMask</key>
             <false/>
             <key>defaultPivotPoint</key>
-            <point_f>0.5,0.5</point_f>
+            <point_f>0.5,1</point_f>
             <key>writePivotPoints</key>
             <true/>
         </struct>
         <key>individualSpriteSettings</key>
         <map type="IndividualSpriteSettingsMap">
-            <key type="filename">../../../../Animations/Animations/New animations_Animations only/___moon game/Front walk/Armature_animtion0_00.png</key>
-            <key type="filename">../../../../Animations/Animations/New animations_Animations only/___moon game/Front walk/Armature_animtion0_00_n.png</key>
-            <key type="filename">../../../../Animations/Animations/New animations_Animations only/___moon game/Front walk/Armature_animtion0_01.png</key>
-            <key type="filename">../../../../Animations/Animations/New animations_Animations only/___moon game/Front walk/Armature_animtion0_01_n.png</key>
-            <key type="filename">../../../../Animations/Animations/New animations_Animations only/___moon game/Front walk/Armature_animtion0_02.png</key>
-            <key type="filename">../../../../Animations/Animations/New animations_Animations only/___moon game/Front walk/Armature_animtion0_02_n.png</key>
-            <key type="filename">../../../../Animations/Animations/New animations_Animations only/___moon game/Front walk/Armature_animtion0_03.png</key>
-            <key type="filename">../../../../Animations/Animations/New animations_Animations only/___moon game/Front walk/Armature_animtion0_03_n.png</key>
-            <key type="filename">../../../../Animations/Animations/New animations_Animations only/___moon game/Front walk/Armature_animtion0_04.png</key>
-            <key type="filename">../../../../Animations/Animations/New animations_Animations only/___moon game/Front walk/Armature_animtion0_04_n.png</key>
-            <key type="filename">../../../../Animations/Animations/New animations_Animations only/___moon game/Front walk/Armature_animtion0_05.png</key>
-            <key type="filename">../../../../Animations/Animations/New animations_Animations only/___moon game/Front walk/Armature_animtion0_05_n.png</key>
-            <key type="filename">../../../../Animations/Animations/New animations_Animations only/___moon game/Front walk/Armature_animtion0_06.png</key>
-            <key type="filename">../../../../Animations/Animations/New animations_Animations only/___moon game/Front walk/Armature_animtion0_06_n.png</key>
-            <key type="filename">../../../../Animations/Animations/New animations_Animations only/___moon game/Front walk/Armature_animtion0_07.png</key>
-            <key type="filename">../../../../Animations/Animations/New animations_Animations only/___moon game/Front walk/Armature_animtion0_07_n.png</key>
-            <key type="filename">../../../../Animations/Animations/New animations_Animations only/___moon game/Front walk/Armature_animtion0_08.png</key>
-            <key type="filename">../../../../Animations/Animations/New animations_Animations only/___moon game/Front walk/Armature_animtion0_08_n.png</key>
-            <key type="filename">../../../../Animations/Animations/New animations_Animations only/___moon game/Front walk/Armature_animtion0_09.png</key>
-            <key type="filename">../../../../Animations/Animations/New animations_Animations only/___moon game/Front walk/Armature_animtion0_09_n.png</key>
-            <key type="filename">../../../../Animations/Animations/New animations_Animations only/___moon game/Front walk/Armature_animtion0_10.png</key>
-            <key type="filename">../../../../Animations/Animations/New animations_Animations only/___moon game/Front walk/Armature_animtion0_10_n.png</key>
-            <key type="filename">../../../../Animations/Animations/New animations_Animations only/___moon game/Front walk/Armature_animtion0_11.png</key>
-            <key type="filename">../../../../Animations/Animations/New animations_Animations only/___moon game/Front walk/Armature_animtion0_11_n.png</key>
-            <key type="filename">../../../../Animations/Animations/New animations_Animations only/___moon game/Front walk/Armature_animtion0_12.png</key>
-            <key type="filename">../../../../Animations/Animations/New animations_Animations only/___moon game/Front walk/Armature_animtion0_12_n.png</key>
-            <key type="filename">../../../../Animations/Animations/New animations_Animations only/___moon game/Front walk/Armature_animtion0_13.png</key>
-            <key type="filename">../../../../Animations/Animations/New animations_Animations only/___moon game/Front walk/Armature_animtion0_13_n.png</key>
-            <key type="filename">../../../../Animations/Animations/New animations_Animations only/___moon game/Front walk/Armature_animtion0_14.png</key>
-            <key type="filename">../../../../Animations/Animations/New animations_Animations only/___moon game/Front walk/Armature_animtion0_14_n.png</key>
-            <key type="filename">../../../../Animations/Animations/New animations_Animations only/___moon game/Front walk/Armature_animtion0_15.png</key>
-            <key type="filename">../../../../Animations/Animations/New animations_Animations only/___moon game/Front walk/Armature_animtion0_15_n.png</key>
-            <key type="filename">../../../../Animations/Animations/New animations_Animations only/___moon game/Front walk/Armature_animtion0_16.png</key>
-            <key type="filename">../../../../Animations/Animations/New animations_Animations only/___moon game/Front walk/Armature_animtion0_16_n.png</key>
-            <key type="filename">../../../../Animations/Animations/New animations_Animations only/___moon game/Front walk/Armature_animtion0_17.png</key>
-            <key type="filename">../../../../Animations/Animations/New animations_Animations only/___moon game/Front walk/Armature_animtion0_17_n.png</key>
-            <key type="filename">../../../../Animations/Animations/New animations_Animations only/___moon game/Front walk/Armature_animtion0_18.png</key>
-            <key type="filename">../../../../Animations/Animations/New animations_Animations only/___moon game/Front walk/Armature_animtion0_18_n.png</key>
-            <key type="filename">../../../../Animations/Animations/New animations_Animations only/___moon game/Front walk/Armature_animtion0_19.png</key>
-            <key type="filename">../../../../Animations/Animations/New animations_Animations only/___moon game/Front walk/Armature_animtion0_19_n.png</key>
-            <key type="filename">../../../../Animations/Animations/New animations_Animations only/___moon game/Front walk/Armature_animtion0_20.png</key>
-            <key type="filename">../../../../Animations/Animations/New animations_Animations only/___moon game/Front walk/Armature_animtion0_20_n.png</key>
-            <key type="filename">../../../../Animations/Animations/New animations_Animations only/___moon game/Front walk/Armature_animtion0_21.png</key>
-            <key type="filename">../../../../Animations/Animations/New animations_Animations only/___moon game/Front walk/Armature_animtion0_21_n.png</key>
-            <key type="filename">../../../../Animations/Animations/New animations_Animations only/___moon game/Front walk/Armature_animtion0_22.png</key>
-            <key type="filename">../../../../Animations/Animations/New animations_Animations only/___moon game/Front walk/Armature_animtion0_22_n.png</key>
-            <key type="filename">../../../../Animations/Animations/New animations_Animations only/___moon game/Front walk/Armature_animtion0_23.png</key>
-            <key type="filename">../../../../Animations/Animations/New animations_Animations only/___moon game/Front walk/Armature_animtion0_23_n.png</key>
-            <key type="filename">../../../../Animations/Animations/New animations_Animations only/___moon game/Front walk/Armature_animtion0_24.png</key>
-            <key type="filename">../../../../Animations/Animations/New animations_Animations only/___moon game/Front walk/Armature_animtion0_24_n.png</key>
-            <key type="filename">../../../../Animations/Animations/New animations_Animations only/___moon game/Front walk/Armature_animtion0_25.png</key>
-            <key type="filename">../../../../Animations/Animations/New animations_Animations only/___moon game/Front walk/Armature_animtion0_25_n.png</key>
-            <key type="filename">../../../../Animations/Animations/New animations_Animations only/___moon game/Front walk/Armature_animtion0_26.png</key>
-            <key type="filename">../../../../Animations/Animations/New animations_Animations only/___moon game/Front walk/Armature_animtion0_26_n.png</key>
-            <key type="filename">../../../../Animations/Animations/New animations_Animations only/___moon game/Front walk/Armature_animtion0_27.png</key>
-            <key type="filename">../../../../Animations/Animations/New animations_Animations only/___moon game/Front walk/Armature_animtion0_27_n.png</key>
-            <key type="filename">../../../../Animations/Animations/New animations_Animations only/___moon game/Front walk/Armature_animtion0_28.png</key>
-            <key type="filename">../../../../Animations/Animations/New animations_Animations only/___moon game/Front walk/Armature_animtion0_28_n.png</key>
-            <key type="filename">../../../../Animations/Animations/New animations_Animations only/___moon game/Front walk/Armature_animtion0_29.png</key>
-            <key type="filename">../../../../Animations/Animations/New animations_Animations only/___moon game/Front walk/Armature_animtion0_29_n.png</key>
-            <key type="filename">../../../../Animations/Animations/New animations_Animations only/___moon game/Front walk/Armature_animtion0_30.png</key>
-            <key type="filename">../../../../Animations/Animations/New animations_Animations only/___moon game/Front walk/Armature_animtion0_30_n.png</key>
-            <key type="filename">../../../../Animations/Animations/New animations_Animations only/___moon game/Front walk/Armature_animtion0_31.png</key>
-            <key type="filename">../../../../Animations/Animations/New animations_Animations only/___moon game/Front walk/Armature_animtion0_31_n.png</key>
-            <key type="filename">../../../../Animations/Animations/New animations_Animations only/___moon game/Front walk/Armature_animtion0_32.png</key>
-            <key type="filename">../../../../Animations/Animations/New animations_Animations only/___moon game/Front walk/Armature_animtion0_32_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/Front walk/FrontWalk (1).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/Front walk/FrontWalk (10).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/Front walk/FrontWalk (11).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/Front walk/FrontWalk (12).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/Front walk/FrontWalk (13).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/Front walk/FrontWalk (14).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/Front walk/FrontWalk (15).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/Front walk/FrontWalk (16).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/Front walk/FrontWalk (17).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/Front walk/FrontWalk (18).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/Front walk/FrontWalk (19).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/Front walk/FrontWalk (2).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/Front walk/FrontWalk (20).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/Front walk/FrontWalk (21).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/Front walk/FrontWalk (22).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/Front walk/FrontWalk (23).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/Front walk/FrontWalk (24).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/Front walk/FrontWalk (25).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/Front walk/FrontWalk (26).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/Front walk/FrontWalk (27).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/Front walk/FrontWalk (28).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/Front walk/FrontWalk (29).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/Front walk/FrontWalk (3).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/Front walk/FrontWalk (30).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/Front walk/FrontWalk (31).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/Front walk/FrontWalk (32).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/Front walk/FrontWalk (33).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/Front walk/FrontWalk (4).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/Front walk/FrontWalk (5).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/Front walk/FrontWalk (6).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/Front walk/FrontWalk (7).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/Front walk/FrontWalk (8).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/Front walk/FrontWalk (9).png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,1</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>102,217,205,433</rect>
+                <key>scale9Paddings</key>
+                <rect>102,217,205,433</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/Front walk/FrontWalk (1)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/Front walk/FrontWalk (10)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/Front walk/FrontWalk (11)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/Front walk/FrontWalk (12)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/Front walk/FrontWalk (13)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/Front walk/FrontWalk (14)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/Front walk/FrontWalk (15)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/Front walk/FrontWalk (16)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/Front walk/FrontWalk (17)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/Front walk/FrontWalk (18)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/Front walk/FrontWalk (19)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/Front walk/FrontWalk (2)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/Front walk/FrontWalk (20)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/Front walk/FrontWalk (21)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/Front walk/FrontWalk (22)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/Front walk/FrontWalk (23)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/Front walk/FrontWalk (24)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/Front walk/FrontWalk (25)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/Front walk/FrontWalk (26)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/Front walk/FrontWalk (27)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/Front walk/FrontWalk (28)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/Front walk/FrontWalk (29)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/Front walk/FrontWalk (3)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/Front walk/FrontWalk (30)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/Front walk/FrontWalk (31)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/Front walk/FrontWalk (32)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/Front walk/FrontWalk (33)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/Front walk/FrontWalk (4)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/Front walk/FrontWalk (5)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/Front walk/FrontWalk (6)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/Front walk/FrontWalk (7)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/Front walk/FrontWalk (8)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/Front walk/FrontWalk (9)_n.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
@@ -262,72 +274,72 @@
         </map>
         <key>fileList</key>
         <array>
-            <filename>../../../../Animations/Animations/New animations_Animations only/___moon game/Front walk/Armature_animtion0_00.png</filename>
-            <filename>../../../../Animations/Animations/New animations_Animations only/___moon game/Front walk/Armature_animtion0_00_n.png</filename>
-            <filename>../../../../Animations/Animations/New animations_Animations only/___moon game/Front walk/Armature_animtion0_01.png</filename>
-            <filename>../../../../Animations/Animations/New animations_Animations only/___moon game/Front walk/Armature_animtion0_01_n.png</filename>
-            <filename>../../../../Animations/Animations/New animations_Animations only/___moon game/Front walk/Armature_animtion0_02.png</filename>
-            <filename>../../../../Animations/Animations/New animations_Animations only/___moon game/Front walk/Armature_animtion0_02_n.png</filename>
-            <filename>../../../../Animations/Animations/New animations_Animations only/___moon game/Front walk/Armature_animtion0_03.png</filename>
-            <filename>../../../../Animations/Animations/New animations_Animations only/___moon game/Front walk/Armature_animtion0_03_n.png</filename>
-            <filename>../../../../Animations/Animations/New animations_Animations only/___moon game/Front walk/Armature_animtion0_04.png</filename>
-            <filename>../../../../Animations/Animations/New animations_Animations only/___moon game/Front walk/Armature_animtion0_04_n.png</filename>
-            <filename>../../../../Animations/Animations/New animations_Animations only/___moon game/Front walk/Armature_animtion0_05.png</filename>
-            <filename>../../../../Animations/Animations/New animations_Animations only/___moon game/Front walk/Armature_animtion0_05_n.png</filename>
-            <filename>../../../../Animations/Animations/New animations_Animations only/___moon game/Front walk/Armature_animtion0_06.png</filename>
-            <filename>../../../../Animations/Animations/New animations_Animations only/___moon game/Front walk/Armature_animtion0_06_n.png</filename>
-            <filename>../../../../Animations/Animations/New animations_Animations only/___moon game/Front walk/Armature_animtion0_07.png</filename>
-            <filename>../../../../Animations/Animations/New animations_Animations only/___moon game/Front walk/Armature_animtion0_07_n.png</filename>
-            <filename>../../../../Animations/Animations/New animations_Animations only/___moon game/Front walk/Armature_animtion0_08.png</filename>
-            <filename>../../../../Animations/Animations/New animations_Animations only/___moon game/Front walk/Armature_animtion0_08_n.png</filename>
-            <filename>../../../../Animations/Animations/New animations_Animations only/___moon game/Front walk/Armature_animtion0_09.png</filename>
-            <filename>../../../../Animations/Animations/New animations_Animations only/___moon game/Front walk/Armature_animtion0_09_n.png</filename>
-            <filename>../../../../Animations/Animations/New animations_Animations only/___moon game/Front walk/Armature_animtion0_10.png</filename>
-            <filename>../../../../Animations/Animations/New animations_Animations only/___moon game/Front walk/Armature_animtion0_10_n.png</filename>
-            <filename>../../../../Animations/Animations/New animations_Animations only/___moon game/Front walk/Armature_animtion0_11.png</filename>
-            <filename>../../../../Animations/Animations/New animations_Animations only/___moon game/Front walk/Armature_animtion0_11_n.png</filename>
-            <filename>../../../../Animations/Animations/New animations_Animations only/___moon game/Front walk/Armature_animtion0_12.png</filename>
-            <filename>../../../../Animations/Animations/New animations_Animations only/___moon game/Front walk/Armature_animtion0_12_n.png</filename>
-            <filename>../../../../Animations/Animations/New animations_Animations only/___moon game/Front walk/Armature_animtion0_13.png</filename>
-            <filename>../../../../Animations/Animations/New animations_Animations only/___moon game/Front walk/Armature_animtion0_13_n.png</filename>
-            <filename>../../../../Animations/Animations/New animations_Animations only/___moon game/Front walk/Armature_animtion0_14.png</filename>
-            <filename>../../../../Animations/Animations/New animations_Animations only/___moon game/Front walk/Armature_animtion0_14_n.png</filename>
-            <filename>../../../../Animations/Animations/New animations_Animations only/___moon game/Front walk/Armature_animtion0_15.png</filename>
-            <filename>../../../../Animations/Animations/New animations_Animations only/___moon game/Front walk/Armature_animtion0_15_n.png</filename>
-            <filename>../../../../Animations/Animations/New animations_Animations only/___moon game/Front walk/Armature_animtion0_16.png</filename>
-            <filename>../../../../Animations/Animations/New animations_Animations only/___moon game/Front walk/Armature_animtion0_16_n.png</filename>
-            <filename>../../../../Animations/Animations/New animations_Animations only/___moon game/Front walk/Armature_animtion0_17.png</filename>
-            <filename>../../../../Animations/Animations/New animations_Animations only/___moon game/Front walk/Armature_animtion0_17_n.png</filename>
-            <filename>../../../../Animations/Animations/New animations_Animations only/___moon game/Front walk/Armature_animtion0_18.png</filename>
-            <filename>../../../../Animations/Animations/New animations_Animations only/___moon game/Front walk/Armature_animtion0_18_n.png</filename>
-            <filename>../../../../Animations/Animations/New animations_Animations only/___moon game/Front walk/Armature_animtion0_19.png</filename>
-            <filename>../../../../Animations/Animations/New animations_Animations only/___moon game/Front walk/Armature_animtion0_19_n.png</filename>
-            <filename>../../../../Animations/Animations/New animations_Animations only/___moon game/Front walk/Armature_animtion0_20.png</filename>
-            <filename>../../../../Animations/Animations/New animations_Animations only/___moon game/Front walk/Armature_animtion0_20_n.png</filename>
-            <filename>../../../../Animations/Animations/New animations_Animations only/___moon game/Front walk/Armature_animtion0_21.png</filename>
-            <filename>../../../../Animations/Animations/New animations_Animations only/___moon game/Front walk/Armature_animtion0_21_n.png</filename>
-            <filename>../../../../Animations/Animations/New animations_Animations only/___moon game/Front walk/Armature_animtion0_22.png</filename>
-            <filename>../../../../Animations/Animations/New animations_Animations only/___moon game/Front walk/Armature_animtion0_22_n.png</filename>
-            <filename>../../../../Animations/Animations/New animations_Animations only/___moon game/Front walk/Armature_animtion0_23.png</filename>
-            <filename>../../../../Animations/Animations/New animations_Animations only/___moon game/Front walk/Armature_animtion0_23_n.png</filename>
-            <filename>../../../../Animations/Animations/New animations_Animations only/___moon game/Front walk/Armature_animtion0_24.png</filename>
-            <filename>../../../../Animations/Animations/New animations_Animations only/___moon game/Front walk/Armature_animtion0_24_n.png</filename>
-            <filename>../../../../Animations/Animations/New animations_Animations only/___moon game/Front walk/Armature_animtion0_25.png</filename>
-            <filename>../../../../Animations/Animations/New animations_Animations only/___moon game/Front walk/Armature_animtion0_25_n.png</filename>
-            <filename>../../../../Animations/Animations/New animations_Animations only/___moon game/Front walk/Armature_animtion0_26.png</filename>
-            <filename>../../../../Animations/Animations/New animations_Animations only/___moon game/Front walk/Armature_animtion0_26_n.png</filename>
-            <filename>../../../../Animations/Animations/New animations_Animations only/___moon game/Front walk/Armature_animtion0_27.png</filename>
-            <filename>../../../../Animations/Animations/New animations_Animations only/___moon game/Front walk/Armature_animtion0_27_n.png</filename>
-            <filename>../../../../Animations/Animations/New animations_Animations only/___moon game/Front walk/Armature_animtion0_28.png</filename>
-            <filename>../../../../Animations/Animations/New animations_Animations only/___moon game/Front walk/Armature_animtion0_28_n.png</filename>
-            <filename>../../../../Animations/Animations/New animations_Animations only/___moon game/Front walk/Armature_animtion0_29.png</filename>
-            <filename>../../../../Animations/Animations/New animations_Animations only/___moon game/Front walk/Armature_animtion0_29_n.png</filename>
-            <filename>../../../../Animations/Animations/New animations_Animations only/___moon game/Front walk/Armature_animtion0_30.png</filename>
-            <filename>../../../../Animations/Animations/New animations_Animations only/___moon game/Front walk/Armature_animtion0_30_n.png</filename>
-            <filename>../../../../Animations/Animations/New animations_Animations only/___moon game/Front walk/Armature_animtion0_31.png</filename>
-            <filename>../../../../Animations/Animations/New animations_Animations only/___moon game/Front walk/Armature_animtion0_31_n.png</filename>
-            <filename>../../../../Animations/Animations/New animations_Animations only/___moon game/Front walk/Armature_animtion0_32.png</filename>
-            <filename>../../../../Animations/Animations/New animations_Animations only/___moon game/Front walk/Armature_animtion0_32_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/Front walk/FrontWalk (1).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/Front walk/FrontWalk (1)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/Front walk/FrontWalk (2).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/Front walk/FrontWalk (2)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/Front walk/FrontWalk (3).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/Front walk/FrontWalk (3)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/Front walk/FrontWalk (4).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/Front walk/FrontWalk (4)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/Front walk/FrontWalk (5).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/Front walk/FrontWalk (5)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/Front walk/FrontWalk (6).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/Front walk/FrontWalk (6)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/Front walk/FrontWalk (7).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/Front walk/FrontWalk (7)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/Front walk/FrontWalk (8).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/Front walk/FrontWalk (8)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/Front walk/FrontWalk (9).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/Front walk/FrontWalk (9)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/Front walk/FrontWalk (10).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/Front walk/FrontWalk (10)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/Front walk/FrontWalk (11).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/Front walk/FrontWalk (11)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/Front walk/FrontWalk (12).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/Front walk/FrontWalk (12)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/Front walk/FrontWalk (13).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/Front walk/FrontWalk (13)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/Front walk/FrontWalk (14).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/Front walk/FrontWalk (14)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/Front walk/FrontWalk (15).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/Front walk/FrontWalk (15)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/Front walk/FrontWalk (16).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/Front walk/FrontWalk (16)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/Front walk/FrontWalk (17).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/Front walk/FrontWalk (17)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/Front walk/FrontWalk (18).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/Front walk/FrontWalk (18)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/Front walk/FrontWalk (19).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/Front walk/FrontWalk (19)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/Front walk/FrontWalk (20).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/Front walk/FrontWalk (20)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/Front walk/FrontWalk (21).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/Front walk/FrontWalk (21)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/Front walk/FrontWalk (22).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/Front walk/FrontWalk (22)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/Front walk/FrontWalk (23).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/Front walk/FrontWalk (23)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/Front walk/FrontWalk (24).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/Front walk/FrontWalk (24)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/Front walk/FrontWalk (25).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/Front walk/FrontWalk (25)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/Front walk/FrontWalk (26).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/Front walk/FrontWalk (26)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/Front walk/FrontWalk (27).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/Front walk/FrontWalk (27)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/Front walk/FrontWalk (28).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/Front walk/FrontWalk (28)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/Front walk/FrontWalk (29).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/Front walk/FrontWalk (29)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/Front walk/FrontWalk (30).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/Front walk/FrontWalk (30)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/Front walk/FrontWalk (31).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/Front walk/FrontWalk (31)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/Front walk/FrontWalk (32).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/Front walk/FrontWalk (32)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/Front walk/FrontWalk (33).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/Front walk/FrontWalk (33)_n.png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>

@@ -113,29 +113,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 2
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-  - serializedVersion: 2
-    buildTarget: Standalone
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 2
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-  - serializedVersion: 2
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 2
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -148,18 +126,18 @@ TextureImporter:
       name: FrontIdle (1)
       rect:
         serializedVersion: 2
-        x: 517
-        y: 1297
+        x: 1
+        y: 433
         width: 168
         height: 430
       alignment: 9
-      pivot: {x: 0.49702382, y: 0.5}
+      pivot: {x: 0.49702382, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 460875b8070d24d4c9f688e9c5da4b88
+      spriteID: 38dbaf131c9c66b42aa7e8756b1b2622
       vertices: []
       indices: 
       edges: []
@@ -168,18 +146,18 @@ TextureImporter:
       name: FrontIdle (2)
       rect:
         serializedVersion: 2
-        x: 1
-        y: 1
+        x: 673
+        y: 865
         width: 167
         height: 430
       alignment: 9
-      pivot: {x: 0.49401197, y: 0.5}
+      pivot: {x: 0.49401197, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d4de1a4397a37c94fa14a9e5727de56f
+      spriteID: aec1d09f746f11e41b7abd906869dabe
       vertices: []
       indices: 
       edges: []
@@ -188,18 +166,18 @@ TextureImporter:
       name: FrontIdle (3)
       rect:
         serializedVersion: 2
-        x: 170
-        y: 1
+        x: 1180
+        y: 865
         width: 167
         height: 430
       alignment: 9
-      pivot: {x: 0.49401197, y: 0.5}
+      pivot: {x: 0.49401197, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6f46f7eeb3ce1cc40b22666860d2dbbd
+      spriteID: e7af202758ab6f049bffbb00a768842e
       vertices: []
       indices: 
       edges: []
@@ -208,18 +186,18 @@ TextureImporter:
       name: FrontIdle (4)
       rect:
         serializedVersion: 2
-        x: 844
-        y: 1
+        x: 169
+        y: 865
         width: 166
         height: 430
       alignment: 9
-      pivot: {x: 0.49698794, y: 0.5}
+      pivot: {x: 0.49698794, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7f042ea309731a9419f7f885b931e8a6
+      spriteID: e78aea62775c1cd4fa17b543d00c98e0
       vertices: []
       indices: 
       edges: []
@@ -228,18 +206,18 @@ TextureImporter:
       name: FrontIdle (5)
       rect:
         serializedVersion: 2
-        x: 1012
-        y: 1
+        x: 505
+        y: 865
         width: 166
         height: 430
       alignment: 9
-      pivot: {x: 0.49698794, y: 0.5}
+      pivot: {x: 0.49698794, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 033633e1be7ad644d8c8095cd1b337e1
+      spriteID: a1e587a6ebaeb2b43aaa5a6ef3680173
       vertices: []
       indices: 
       edges: []
@@ -248,18 +226,18 @@ TextureImporter:
       name: FrontIdle (6)
       rect:
         serializedVersion: 2
-        x: 339
-        y: 1
+        x: 1011
+        y: 865
         width: 167
         height: 430
       alignment: 9
-      pivot: {x: 0.49401197, y: 0.5}
+      pivot: {x: 0.49401197, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c4583923deb020e4e84adafacf833606
+      spriteID: 686181dbc3145204fbb62e8f715ebab8
       vertices: []
       indices: 
       edges: []
@@ -268,18 +246,18 @@ TextureImporter:
       name: FrontIdle (7)
       rect:
         serializedVersion: 2
-        x: 514
-        y: 433
+        x: 1
+        y: 1
         width: 169
         height: 430
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c025a7ea9300093478b49d248c1f6272
+      spriteID: b62c93afe69083c4fad1b5aa02b6372a
       vertices: []
       indices: 
       edges: []
@@ -288,18 +266,18 @@ TextureImporter:
       name: FrontIdle (8)
       rect:
         serializedVersion: 2
-        x: 346
-        y: 865
+        x: 1192
+        y: 433
         width: 169
         height: 430
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2c0d364ae8dd1c64dbeb2023fc88d506
+      spriteID: 5905cbe9d0e268f44849de00335a29ca
       vertices: []
       indices: 
       edges: []
@@ -308,18 +286,18 @@ TextureImporter:
       name: FrontIdle (9)
       rect:
         serializedVersion: 2
-        x: 346
-        y: 1297
+        x: 1021
+        y: 433
         width: 169
         height: 430
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c3dadae5abe29f349890db913bd9d728
+      spriteID: 78bf7a24b968dc64c9d465aa0af2003f
       vertices: []
       indices: 
       edges: []
@@ -328,18 +306,18 @@ TextureImporter:
       name: FrontIdle (10)
       rect:
         serializedVersion: 2
-        x: 517
-        y: 865
+        x: 511
+        y: 433
         width: 168
         height: 430
       alignment: 9
-      pivot: {x: 0.49702382, y: 0.5}
+      pivot: {x: 0.49702382, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1e38782dde2554a428928828e7adc85c
+      spriteID: 1c6ee686a02f13445ba26bf662ed3ad3
       vertices: []
       indices: 
       edges: []
@@ -348,18 +326,18 @@ TextureImporter:
       name: FrontIdle (11)
       rect:
         serializedVersion: 2
-        x: 1
-        y: 433
+        x: 343
+        y: 1
         width: 169
         height: 430
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6d96f5a85dfe56f49b3b3d3da07ba248
+      spriteID: 10b56fc8351a2af4b97197ce02c2feb1
       vertices: []
       indices: 
       edges: []
@@ -368,18 +346,18 @@ TextureImporter:
       name: FrontIdle (12)
       rect:
         serializedVersion: 2
-        x: 172
-        y: 433
+        x: 856
+        y: 1
         width: 169
         height: 430
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 725ee73cca387b54da4d083982694745
+      spriteID: 077c0bbff652adc4a9742ed253f79751
       vertices: []
       indices: 
       edges: []
@@ -388,18 +366,18 @@ TextureImporter:
       name: FrontIdle (13)
       rect:
         serializedVersion: 2
-        x: 1
-        y: 1297
+        x: 1027
+        y: 1
         width: 172
         height: 430
       alignment: 9
-      pivot: {x: 0.49127907, y: 0.5}
+      pivot: {x: 0.49127907, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: bbd23850f48003d41962c76cbda821c5
+      spriteID: 7e63b840e90128241b28a5727e7d2446
       vertices: []
       indices: 
       edges: []
@@ -408,18 +386,18 @@ TextureImporter:
       name: FrontIdle (14)
       rect:
         serializedVersion: 2
-        x: 1
-        y: 865
+        x: 1201
+        y: 1
         width: 172
         height: 430
       alignment: 9
-      pivot: {x: 0.49127907, y: 0.5}
+      pivot: {x: 0.49127907, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 437561f78ebbb814ea2f85f430914f73
+      spriteID: 9670c474df06d62469c816d871b1c61a
       vertices: []
       indices: 
       edges: []
@@ -428,18 +406,18 @@ TextureImporter:
       name: FrontIdle (15)
       rect:
         serializedVersion: 2
-        x: 857
+        x: 842
         y: 865
         width: 167
         height: 430
       alignment: 9
-      pivot: {x: 0.49401197, y: 0.5}
+      pivot: {x: 0.49401197, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 40b4cbe6c8525e34bb8ce59eb39709dc
+      spriteID: a9bf1c629b43b5d47ba1a604e20bcc5d
       vertices: []
       indices: 
       edges: []
@@ -448,18 +426,18 @@ TextureImporter:
       name: FrontIdle (16)
       rect:
         serializedVersion: 2
-        x: 685
+        x: 851
         y: 433
         width: 168
         height: 430
       alignment: 9
-      pivot: {x: 0.49702382, y: 0.5}
+      pivot: {x: 0.49702382, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 05bb35ca138a37a40bd3bdbbc97a4530
+      spriteID: a3b6b72efaf7d8d46800f96faab3a59d
       vertices: []
       indices: 
       edges: []
@@ -468,18 +446,18 @@ TextureImporter:
       name: FrontIdle (17)
       rect:
         serializedVersion: 2
-        x: 687
-        y: 1297
+        x: 681
+        y: 433
         width: 168
         height: 430
       alignment: 9
-      pivot: {x: 0.49702382, y: 0.5}
+      pivot: {x: 0.49702382, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 49b876f18c626734682b2c68151f2cd1
+      spriteID: a67601cd0019ed24a94a504b133fc337
       vertices: []
       indices: 
       edges: []
@@ -488,18 +466,18 @@ TextureImporter:
       name: FrontIdle (18)
       rect:
         serializedVersion: 2
-        x: 508
-        y: 1
+        x: 1
+        y: 865
         width: 166
         height: 430
       alignment: 9
-      pivot: {x: 0.49698794, y: 0.5}
+      pivot: {x: 0.49698794, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 755dc707b6137f74ebd88a7f5216e23f
+      spriteID: e1aee983150b9094bb1f84ae75ba3a89
       vertices: []
       indices: 
       edges: []
@@ -508,18 +486,18 @@ TextureImporter:
       name: FrontIdle (19)
       rect:
         serializedVersion: 2
-        x: 676
-        y: 1
+        x: 337
+        y: 865
         width: 166
         height: 430
       alignment: 9
-      pivot: {x: 0.49698794, y: 0.5}
+      pivot: {x: 0.49698794, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: dc3ccca405ae183479589d21c4592be8
+      spriteID: 6441846c3f03bbb4892767d0fd7cc5f1
       vertices: []
       indices: 
       edges: []
@@ -528,18 +506,18 @@ TextureImporter:
       name: FrontIdle (20)
       rect:
         serializedVersion: 2
-        x: 687
-        y: 865
+        x: 341
+        y: 433
         width: 168
         height: 430
       alignment: 9
-      pivot: {x: 0.5029762, y: 0.5}
+      pivot: {x: 0.5029762, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f26beb3699569704abba0928c5e4a324
+      spriteID: 411ce4279e997f84783abf6fe8ffad84
       vertices: []
       indices: 
       edges: []
@@ -548,18 +526,18 @@ TextureImporter:
       name: FrontIdle (21)
       rect:
         serializedVersion: 2
-        x: 175
-        y: 1297
+        x: 172
+        y: 1
         width: 169
         height: 430
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: efafa1779e8c4b044afd32a4efccbfef
+      spriteID: 35eab36195970e14bb710ac2bef4e84e
       vertices: []
       indices: 
       edges: []
@@ -568,18 +546,18 @@ TextureImporter:
       name: FrontIdle (22)
       rect:
         serializedVersion: 2
-        x: 175
-        y: 865
+        x: 514
+        y: 1
         width: 169
         height: 430
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: af63c01ba8924234ab28e6a7c0e14bc3
+      spriteID: 81838a574e87fb24d98940c85415ac0a
       vertices: []
       indices: 
       edges: []
@@ -588,18 +566,18 @@ TextureImporter:
       name: FrontIdle (23)
       rect:
         serializedVersion: 2
-        x: 343
-        y: 433
+        x: 685
+        y: 1
         width: 169
         height: 430
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: aa822515386c2734e9c53a7a2d5e6643
+      spriteID: f1b135dca8b50c848b9578acfe7732a0
       vertices: []
       indices: 
       edges: []
@@ -608,18 +586,18 @@ TextureImporter:
       name: FrontIdle (24)
       rect:
         serializedVersion: 2
-        x: 855
-        y: 433
+        x: 1349
+        y: 865
         width: 168
         height: 430
       alignment: 9
-      pivot: {x: 0.49702382, y: 0.5}
+      pivot: {x: 0.49702382, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a31c74bc182df264ea5a06b0219139c8
+      spriteID: ed21782d35053e945a6d5e3638de2ff3
       vertices: []
       indices: 
       edges: []
@@ -628,18 +606,18 @@ TextureImporter:
       name: FrontIdle (25)
       rect:
         serializedVersion: 2
-        x: 857
-        y: 1297
+        x: 171
+        y: 433
         width: 168
         height: 430
       alignment: 9
-      pivot: {x: 0.49702382, y: 0.5}
+      pivot: {x: 0.49702382, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: fda96bf7f83487045b0823e0bd1fddd1
+      spriteID: 009782908b309e04f916cf88afc5218c
       vertices: []
       indices: 
       edges: []
@@ -648,18 +626,18 @@ TextureImporter:
       name: FrontIdle (26)
       rect:
         serializedVersion: 2
-        x: 855
-        y: 433
+        x: 1349
+        y: 865
         width: 168
         height: 430
       alignment: 9
-      pivot: {x: 0.49702382, y: 0.5}
+      pivot: {x: 0.49702382, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 77384a69a867aa24cb0d4576deaf5aad
+      spriteID: 0ff76c0c363e19f429e4bc0e90804950
       vertices: []
       indices: 
       edges: []
@@ -668,18 +646,18 @@ TextureImporter:
       name: FrontIdle (27)
       rect:
         serializedVersion: 2
-        x: 343
-        y: 433
+        x: 685
+        y: 1
         width: 169
         height: 430
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3de97ef8e7192ec4ea49c99390ce8724
+      spriteID: 5582a0a2d4390ee4b82d607e18a733b6
       vertices: []
       indices: 
       edges: []
@@ -688,18 +666,18 @@ TextureImporter:
       name: FrontIdle (28)
       rect:
         serializedVersion: 2
-        x: 175
-        y: 865
+        x: 514
+        y: 1
         width: 169
         height: 430
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1f9d08a9f162be14387e9998edc6f3a0
+      spriteID: 92783f408a28c2e45b8a79c97ac823e4
       vertices: []
       indices: 
       edges: []
@@ -708,18 +686,18 @@ TextureImporter:
       name: FrontIdle (29)
       rect:
         serializedVersion: 2
-        x: 175
-        y: 1297
+        x: 172
+        y: 1
         width: 169
         height: 430
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2235fe48b3caa3e4392b3b1cbc43f1dc
+      spriteID: 597bc9a386a90e54391c52f2414ca319
       vertices: []
       indices: 
       edges: []
@@ -728,18 +706,18 @@ TextureImporter:
       name: FrontIdle (30)
       rect:
         serializedVersion: 2
-        x: 687
-        y: 865
+        x: 341
+        y: 433
         width: 168
         height: 430
       alignment: 9
-      pivot: {x: 0.5029762, y: 0.5}
+      pivot: {x: 0.5029762, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 242dcebbd0038b344a1d9ae5643e72dd
+      spriteID: 90c71f0f38f83834ab7baf01e83d4b02
       vertices: []
       indices: 
       edges: []
@@ -748,18 +726,18 @@ TextureImporter:
       name: FrontIdle (31)
       rect:
         serializedVersion: 2
-        x: 676
-        y: 1
+        x: 337
+        y: 865
         width: 166
         height: 430
       alignment: 9
-      pivot: {x: 0.49698794, y: 0.5}
+      pivot: {x: 0.49698794, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4e684f5264626b746990ba8ea13fa32c
+      spriteID: 616d182c06d75d34b9a2df4d4496afed
       vertices: []
       indices: 
       edges: []
@@ -768,18 +746,18 @@ TextureImporter:
       name: FrontIdle (32)
       rect:
         serializedVersion: 2
-        x: 508
-        y: 1
+        x: 1
+        y: 865
         width: 166
         height: 430
       alignment: 9
-      pivot: {x: 0.49698794, y: 0.5}
+      pivot: {x: 0.49698794, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d068b41d7641708468b35102cc820ba9
+      spriteID: 63a7d3e488c8a0e46ad44987fe0b53cb
       vertices: []
       indices: 
       edges: []
@@ -788,18 +766,18 @@ TextureImporter:
       name: FrontIdle (33)
       rect:
         serializedVersion: 2
-        x: 687
-        y: 1297
+        x: 681
+        y: 433
         width: 168
         height: 430
       alignment: 9
-      pivot: {x: 0.49702382, y: 0.5}
+      pivot: {x: 0.49702382, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7c2906129739ef449a2cfb695e189d6a
+      spriteID: 49844a2c08bc62f4c88c06a0c068251b
       vertices: []
       indices: 
       edges: []
@@ -808,18 +786,18 @@ TextureImporter:
       name: FrontIdle (34)
       rect:
         serializedVersion: 2
-        x: 685
+        x: 851
         y: 433
         width: 168
         height: 430
       alignment: 9
-      pivot: {x: 0.49702382, y: 0.5}
+      pivot: {x: 0.49702382, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ca01f999a9e990348a665f78a63b2f6d
+      spriteID: 04b705f67cf9508458d2cd37bc5c46d5
       vertices: []
       indices: 
       edges: []
@@ -828,18 +806,18 @@ TextureImporter:
       name: FrontIdle (35)
       rect:
         serializedVersion: 2
-        x: 857
+        x: 842
         y: 865
         width: 167
         height: 430
       alignment: 9
-      pivot: {x: 0.49401197, y: 0.5}
+      pivot: {x: 0.49401197, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8a9b243eb3781104d83c787f1d0365c0
+      spriteID: 65d5ba699151acf4cb0284336943ed73
       vertices: []
       indices: 
       edges: []
@@ -848,18 +826,18 @@ TextureImporter:
       name: FrontIdle (36)
       rect:
         serializedVersion: 2
-        x: 1
-        y: 865
+        x: 1201
+        y: 1
         width: 172
         height: 430
       alignment: 9
-      pivot: {x: 0.49127907, y: 0.5}
+      pivot: {x: 0.49127907, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9b6d3142f6c430a4b9c17dd8b16f4484
+      spriteID: 4c0f406f48c4f604c84cc9d34f05e5df
       vertices: []
       indices: 
       edges: []
@@ -868,18 +846,18 @@ TextureImporter:
       name: FrontIdle (37)
       rect:
         serializedVersion: 2
-        x: 1
-        y: 1297
+        x: 1027
+        y: 1
         width: 172
         height: 430
       alignment: 9
-      pivot: {x: 0.49127907, y: 0.5}
+      pivot: {x: 0.49127907, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: fe86b1234c6fe3044b93a7474210ebd9
+      spriteID: 095547d98fec80845a5204fc117e6559
       vertices: []
       indices: 
       edges: []
@@ -888,18 +866,18 @@ TextureImporter:
       name: FrontIdle (38)
       rect:
         serializedVersion: 2
-        x: 172
-        y: 433
+        x: 856
+        y: 1
         width: 169
         height: 430
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7df0df49a9e5f8c4990859b0713122f2
+      spriteID: 871a0517d62cb9547a20d90fcc88a981
       vertices: []
       indices: 
       edges: []
@@ -908,18 +886,18 @@ TextureImporter:
       name: FrontIdle (39)
       rect:
         serializedVersion: 2
-        x: 1
-        y: 433
+        x: 343
+        y: 1
         width: 169
         height: 430
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 170ef8884f8df674f93ea8dbe64517d8
+      spriteID: 245ef33bf14830f4d90b84549b382f89
       vertices: []
       indices: 
       edges: []
@@ -928,18 +906,18 @@ TextureImporter:
       name: FrontIdle (40)
       rect:
         serializedVersion: 2
-        x: 517
-        y: 865
+        x: 511
+        y: 433
         width: 168
         height: 430
       alignment: 9
-      pivot: {x: 0.49702382, y: 0.5}
+      pivot: {x: 0.49702382, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 81a82ca032e462d45a92d53c2c955d37
+      spriteID: 5fe7123a1c905a64ebe3c9b1dc0bfbbe
       vertices: []
       indices: 
       edges: []
@@ -948,18 +926,18 @@ TextureImporter:
       name: FrontIdle (41)
       rect:
         serializedVersion: 2
-        x: 346
-        y: 1297
+        x: 1021
+        y: 433
         width: 169
         height: 430
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 804db181f1f870044b1db40b8c69d69f
+      spriteID: f5bfbb13b84520943bea8e8ed8769437
       vertices: []
       indices: 
       edges: []
@@ -968,18 +946,18 @@ TextureImporter:
       name: FrontIdle (42)
       rect:
         serializedVersion: 2
-        x: 346
-        y: 865
+        x: 1192
+        y: 433
         width: 169
         height: 430
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 23e3088e4c0b1fa4b80eb37469ae7b28
+      spriteID: 976379d4aa5ef6f458676e86ff8b516d
       vertices: []
       indices: 
       edges: []
@@ -988,18 +966,18 @@ TextureImporter:
       name: FrontIdle (43)
       rect:
         serializedVersion: 2
-        x: 514
-        y: 433
+        x: 1
+        y: 1
         width: 169
         height: 430
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: dcbb2e6bc96d889459556e2e6088d79f
+      spriteID: b46d89656e6ea304f818507ba6afb5f9
       vertices: []
       indices: 
       edges: []
@@ -1008,18 +986,18 @@ TextureImporter:
       name: FrontIdle (44)
       rect:
         serializedVersion: 2
-        x: 339
-        y: 1
+        x: 1011
+        y: 865
         width: 167
         height: 430
       alignment: 9
-      pivot: {x: 0.49401197, y: 0.5}
+      pivot: {x: 0.49401197, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7649548180ccba041b7f160ab4a44f9b
+      spriteID: 86fe6e6e1183b3e45b384bbc49ba4c63
       vertices: []
       indices: 
       edges: []
@@ -1028,18 +1006,18 @@ TextureImporter:
       name: FrontIdle (45)
       rect:
         serializedVersion: 2
-        x: 1012
-        y: 1
+        x: 505
+        y: 865
         width: 166
         height: 430
       alignment: 9
-      pivot: {x: 0.49698794, y: 0.5}
+      pivot: {x: 0.49698794, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5eff5d9d04ece6448bc6a3ed03c10790
+      spriteID: 0cb0d725930c08e4f97ec19f22a0d33d
       vertices: []
       indices: 
       edges: []
@@ -1048,18 +1026,18 @@ TextureImporter:
       name: FrontIdle (46)
       rect:
         serializedVersion: 2
-        x: 844
-        y: 1
+        x: 169
+        y: 865
         width: 166
         height: 430
       alignment: 9
-      pivot: {x: 0.49698794, y: 0.5}
+      pivot: {x: 0.49698794, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a75c53018e6e27443ae0c82ae20edc0a
+      spriteID: 5fa9829b3200d2c4185a7f4f322d1509
       vertices: []
       indices: 
       edges: []
@@ -1068,18 +1046,18 @@ TextureImporter:
       name: FrontIdle (47)
       rect:
         serializedVersion: 2
-        x: 170
-        y: 1
+        x: 1180
+        y: 865
         width: 167
         height: 430
       alignment: 9
-      pivot: {x: 0.49401197, y: 0.5}
+      pivot: {x: 0.49401197, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4cb52d266a5b3cb4985f1be4eb5d42a0
+      spriteID: 037abcdd134504b4bb38c41e7d5d7654
       vertices: []
       indices: 
       edges: []
@@ -1088,18 +1066,18 @@ TextureImporter:
       name: FrontIdle (48)
       rect:
         serializedVersion: 2
-        x: 1
-        y: 1
+        x: 673
+        y: 865
         width: 167
         height: 430
       alignment: 9
-      pivot: {x: 0.49401197, y: 0.5}
+      pivot: {x: 0.49401197, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6abb604ef067eed4b83147b4c5547e50
+      spriteID: ca0db80397e62d94c91b281ea2b09273
       vertices: []
       indices: 
       edges: []
@@ -1108,18 +1086,18 @@ TextureImporter:
       name: FrontIdle (49)
       rect:
         serializedVersion: 2
-        x: 517
-        y: 1297
+        x: 1
+        y: 433
         width: 168
         height: 430
       alignment: 9
-      pivot: {x: 0.49702382, y: 0.5}
+      pivot: {x: 0.49702382, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a3f512185a7cd974eaef7bddde23300d
+      spriteID: 490d385ff0fe4a747a9bccc0839e2b1e
       vertices: []
       indices: 
       edges: []
@@ -1127,7 +1105,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: c2ac7727a50b91c44b97b5f2f7db49b9
+    spriteID: 17d425f11022cc248a5d461d13268abc
     vertices: []
     indices: 
     edges: []

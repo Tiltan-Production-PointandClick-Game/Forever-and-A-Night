@@ -132,7 +132,7 @@
             <key>datafile</key>
             <struct type="DataFile">
                 <key>name</key>
-                <filename></filename>
+                <filename>BackWalkSS.tpsheet</filename>
             </struct>
         </map>
         <key>multiPack</key>
@@ -175,78 +175,90 @@
             <key>heuristicMask</key>
             <false/>
             <key>defaultPivotPoint</key>
-            <point_f>0.5,0.5</point_f>
+            <point_f>0.5,1</point_f>
             <key>writePivotPoints</key>
             <true/>
         </struct>
         <key>individualSpriteSettings</key>
         <map type="IndividualSpriteSettingsMap">
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/BackWalk/BackWalk (1).png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/BackWalk/BackWalk (1)_n.png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/BackWalk/BackWalk (10).png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/BackWalk/BackWalk (10)_n.png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/BackWalk/BackWalk (11).png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/BackWalk/BackWalk (11)_n.png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/BackWalk/BackWalk (12).png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/BackWalk/BackWalk (12)_n.png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/BackWalk/BackWalk (13).png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/BackWalk/BackWalk (13)_n.png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/BackWalk/BackWalk (14).png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/BackWalk/BackWalk (14)_n.png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/BackWalk/BackWalk (15).png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/BackWalk/BackWalk (15)_n.png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/BackWalk/BackWalk (16).png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/BackWalk/BackWalk (16)_n.png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/BackWalk/BackWalk (17).png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/BackWalk/BackWalk (17)_n.png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/BackWalk/BackWalk (18).png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/BackWalk/BackWalk (18)_n.png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/BackWalk/BackWalk (19).png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/BackWalk/BackWalk (19)_n.png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/BackWalk/BackWalk (2).png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/BackWalk/BackWalk (2)_n.png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/BackWalk/BackWalk (20).png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/BackWalk/BackWalk (20)_n.png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/BackWalk/BackWalk (21).png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/BackWalk/BackWalk (21)_n.png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/BackWalk/BackWalk (22).png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/BackWalk/BackWalk (22)_n.png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/BackWalk/BackWalk (23).png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/BackWalk/BackWalk (23)_n.png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/BackWalk/BackWalk (24).png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/BackWalk/BackWalk (24)_n.png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/BackWalk/BackWalk (25).png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/BackWalk/BackWalk (25)_n.png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/BackWalk/BackWalk (26).png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/BackWalk/BackWalk (26)_n.png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/BackWalk/BackWalk (27).png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/BackWalk/BackWalk (27)_n.png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/BackWalk/BackWalk (28).png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/BackWalk/BackWalk (28)_n.png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/BackWalk/BackWalk (29).png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/BackWalk/BackWalk (29)_n.png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/BackWalk/BackWalk (3).png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/BackWalk/BackWalk (3)_n.png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/BackWalk/BackWalk (30).png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/BackWalk/BackWalk (30)_n.png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/BackWalk/BackWalk (31).png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/BackWalk/BackWalk (31)_n.png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/BackWalk/BackWalk (32).png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/BackWalk/BackWalk (32)_n.png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/BackWalk/BackWalk (33).png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/BackWalk/BackWalk (33)_n.png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/BackWalk/BackWalk (4).png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/BackWalk/BackWalk (4)_n.png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/BackWalk/BackWalk (5).png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/BackWalk/BackWalk (5)_n.png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/BackWalk/BackWalk (6).png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/BackWalk/BackWalk (6)_n.png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/BackWalk/BackWalk (7).png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/BackWalk/BackWalk (7)_n.png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/BackWalk/BackWalk (8).png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/BackWalk/BackWalk (8)_n.png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/BackWalk/BackWalk (9).png</key>
-            <key type="filename">../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/BackWalk/BackWalk (9)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/BackWalk/BackWalk (1).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/BackWalk/BackWalk (10).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/BackWalk/BackWalk (11).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/BackWalk/BackWalk (12).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/BackWalk/BackWalk (13).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/BackWalk/BackWalk (14).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/BackWalk/BackWalk (15).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/BackWalk/BackWalk (16).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/BackWalk/BackWalk (17).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/BackWalk/BackWalk (18).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/BackWalk/BackWalk (19).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/BackWalk/BackWalk (2).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/BackWalk/BackWalk (20).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/BackWalk/BackWalk (21).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/BackWalk/BackWalk (22).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/BackWalk/BackWalk (23).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/BackWalk/BackWalk (24).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/BackWalk/BackWalk (25).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/BackWalk/BackWalk (26).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/BackWalk/BackWalk (27).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/BackWalk/BackWalk (28).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/BackWalk/BackWalk (29).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/BackWalk/BackWalk (3).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/BackWalk/BackWalk (30).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/BackWalk/BackWalk (31).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/BackWalk/BackWalk (32).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/BackWalk/BackWalk (33).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/BackWalk/BackWalk (4).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/BackWalk/BackWalk (5).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/BackWalk/BackWalk (6).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/BackWalk/BackWalk (7).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/BackWalk/BackWalk (8).png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/BackWalk/BackWalk (9).png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,1</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>115,217,230,435</rect>
+                <key>scale9Paddings</key>
+                <rect>115,217,230,435</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/BackWalk/BackWalk (1)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/BackWalk/BackWalk (10)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/BackWalk/BackWalk (11)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/BackWalk/BackWalk (12)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/BackWalk/BackWalk (13)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/BackWalk/BackWalk (14)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/BackWalk/BackWalk (15)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/BackWalk/BackWalk (16)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/BackWalk/BackWalk (17)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/BackWalk/BackWalk (18)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/BackWalk/BackWalk (19)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/BackWalk/BackWalk (2)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/BackWalk/BackWalk (20)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/BackWalk/BackWalk (21)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/BackWalk/BackWalk (22)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/BackWalk/BackWalk (23)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/BackWalk/BackWalk (24)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/BackWalk/BackWalk (25)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/BackWalk/BackWalk (26)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/BackWalk/BackWalk (27)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/BackWalk/BackWalk (28)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/BackWalk/BackWalk (29)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/BackWalk/BackWalk (3)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/BackWalk/BackWalk (30)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/BackWalk/BackWalk (31)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/BackWalk/BackWalk (32)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/BackWalk/BackWalk (33)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/BackWalk/BackWalk (4)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/BackWalk/BackWalk (5)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/BackWalk/BackWalk (6)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/BackWalk/BackWalk (7)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/BackWalk/BackWalk (8)_n.png</key>
+            <key type="filename">../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/BackWalk/BackWalk (9)_n.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
@@ -262,72 +274,72 @@
         </map>
         <key>fileList</key>
         <array>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/BackWalk/BackWalk (1).png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/BackWalk/BackWalk (1)_n.png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/BackWalk/BackWalk (2).png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/BackWalk/BackWalk (2)_n.png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/BackWalk/BackWalk (3).png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/BackWalk/BackWalk (3)_n.png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/BackWalk/BackWalk (4).png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/BackWalk/BackWalk (4)_n.png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/BackWalk/BackWalk (5).png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/BackWalk/BackWalk (5)_n.png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/BackWalk/BackWalk (6).png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/BackWalk/BackWalk (6)_n.png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/BackWalk/BackWalk (7).png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/BackWalk/BackWalk (7)_n.png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/BackWalk/BackWalk (8).png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/BackWalk/BackWalk (8)_n.png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/BackWalk/BackWalk (9).png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/BackWalk/BackWalk (9)_n.png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/BackWalk/BackWalk (10).png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/BackWalk/BackWalk (10)_n.png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/BackWalk/BackWalk (11).png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/BackWalk/BackWalk (11)_n.png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/BackWalk/BackWalk (12).png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/BackWalk/BackWalk (12)_n.png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/BackWalk/BackWalk (13).png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/BackWalk/BackWalk (13)_n.png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/BackWalk/BackWalk (14).png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/BackWalk/BackWalk (14)_n.png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/BackWalk/BackWalk (15).png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/BackWalk/BackWalk (15)_n.png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/BackWalk/BackWalk (16).png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/BackWalk/BackWalk (16)_n.png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/BackWalk/BackWalk (17).png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/BackWalk/BackWalk (17)_n.png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/BackWalk/BackWalk (18).png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/BackWalk/BackWalk (18)_n.png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/BackWalk/BackWalk (19).png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/BackWalk/BackWalk (19)_n.png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/BackWalk/BackWalk (20).png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/BackWalk/BackWalk (20)_n.png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/BackWalk/BackWalk (21).png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/BackWalk/BackWalk (21)_n.png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/BackWalk/BackWalk (22).png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/BackWalk/BackWalk (22)_n.png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/BackWalk/BackWalk (23).png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/BackWalk/BackWalk (23)_n.png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/BackWalk/BackWalk (24).png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/BackWalk/BackWalk (24)_n.png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/BackWalk/BackWalk (25).png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/BackWalk/BackWalk (25)_n.png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/BackWalk/BackWalk (26).png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/BackWalk/BackWalk (26)_n.png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/BackWalk/BackWalk (27).png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/BackWalk/BackWalk (27)_n.png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/BackWalk/BackWalk (28).png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/BackWalk/BackWalk (28)_n.png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/BackWalk/BackWalk (29).png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/BackWalk/BackWalk (29)_n.png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/BackWalk/BackWalk (30).png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/BackWalk/BackWalk (30)_n.png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/BackWalk/BackWalk (31).png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/BackWalk/BackWalk (31)_n.png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/BackWalk/BackWalk (32).png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/BackWalk/BackWalk (32)_n.png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/BackWalk/BackWalk (33).png</filename>
-            <filename>../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/BackWalk/BackWalk (33)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/BackWalk/BackWalk (1).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/BackWalk/BackWalk (1)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/BackWalk/BackWalk (2).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/BackWalk/BackWalk (2)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/BackWalk/BackWalk (3).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/BackWalk/BackWalk (3)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/BackWalk/BackWalk (4).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/BackWalk/BackWalk (4)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/BackWalk/BackWalk (5).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/BackWalk/BackWalk (5)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/BackWalk/BackWalk (6).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/BackWalk/BackWalk (6)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/BackWalk/BackWalk (7).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/BackWalk/BackWalk (7)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/BackWalk/BackWalk (8).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/BackWalk/BackWalk (8)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/BackWalk/BackWalk (9).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/BackWalk/BackWalk (9)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/BackWalk/BackWalk (10).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/BackWalk/BackWalk (10)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/BackWalk/BackWalk (11).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/BackWalk/BackWalk (11)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/BackWalk/BackWalk (12).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/BackWalk/BackWalk (12)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/BackWalk/BackWalk (13).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/BackWalk/BackWalk (13)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/BackWalk/BackWalk (14).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/BackWalk/BackWalk (14)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/BackWalk/BackWalk (15).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/BackWalk/BackWalk (15)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/BackWalk/BackWalk (16).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/BackWalk/BackWalk (16)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/BackWalk/BackWalk (17).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/BackWalk/BackWalk (17)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/BackWalk/BackWalk (18).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/BackWalk/BackWalk (18)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/BackWalk/BackWalk (19).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/BackWalk/BackWalk (19)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/BackWalk/BackWalk (20).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/BackWalk/BackWalk (20)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/BackWalk/BackWalk (21).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/BackWalk/BackWalk (21)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/BackWalk/BackWalk (22).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/BackWalk/BackWalk (22)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/BackWalk/BackWalk (23).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/BackWalk/BackWalk (23)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/BackWalk/BackWalk (24).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/BackWalk/BackWalk (24)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/BackWalk/BackWalk (25).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/BackWalk/BackWalk (25)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/BackWalk/BackWalk (26).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/BackWalk/BackWalk (26)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/BackWalk/BackWalk (27).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/BackWalk/BackWalk (27)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/BackWalk/BackWalk (28).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/BackWalk/BackWalk (28)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/BackWalk/BackWalk (29).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/BackWalk/BackWalk (29)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/BackWalk/BackWalk (30).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/BackWalk/BackWalk (30)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/BackWalk/BackWalk (31).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/BackWalk/BackWalk (31)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/BackWalk/BackWalk (32).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/BackWalk/BackWalk (32)_n.png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/BackWalk/BackWalk (33).png</filename>
+            <filename>../../../../../Sprites for animations/Animations/New animations_Animations only/___moon game/Luna/Walk/BackWalk/BackWalk (33)_n.png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>

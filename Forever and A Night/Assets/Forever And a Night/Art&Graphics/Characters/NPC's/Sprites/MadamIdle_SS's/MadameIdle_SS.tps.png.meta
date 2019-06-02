@@ -1,0 +1,2504 @@
+fileFormatVersion: 2
+guid: d49476e155d5d754bbfeec7e07eae862
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: MadameIdle_SS.tps
+    21300002: MadamIdle (1)
+    21300004: MadamIdle (2)
+    21300006: MadamIdle (3)
+    21300008: MadamIdle (4)
+    21300010: MadamIdle (5)
+    21300012: MadamIdle (6)
+    21300014: MadamIdle (7)
+    21300016: MadamIdle (8)
+    21300018: MadamIdle (9)
+    21300020: MadamIdle (10)
+    21300022: MadamIdle (11)
+    21300024: MadamIdle (12)
+    21300026: MadamIdle (13)
+    21300028: MadamIdle (14)
+    21300030: MadamIdle (15)
+    21300032: MadamIdle (16)
+    21300034: MadamIdle (17)
+    21300036: MadamIdle (18)
+    21300038: MadamIdle (19)
+    21300040: MadamIdle (20)
+    21300042: MadamIdle (21)
+    21300044: MadamIdle (22)
+    21300046: MadamIdle (23)
+    21300048: MadamIdle (24)
+    21300050: MadamIdle (25)
+    21300052: MadamIdle (26)
+    21300054: MadamIdle (27)
+    21300056: MadamIdle (28)
+    21300058: MadamIdle (29)
+    21300060: MadamIdle (30)
+    21300062: MadamIdle (31)
+    21300064: MadamIdle (32)
+    21300066: MadamIdle (33)
+    21300068: MadamIdle (34)
+    21300070: MadamIdle (35)
+    21300072: MadamIdle (36)
+    21300074: MadamIdle (37)
+    21300076: MadamIdle (38)
+    21300078: MadamIdle (39)
+    21300080: MadamIdle (40)
+    21300082: MadamIdle (41)
+    21300084: MadamIdle (42)
+    21300086: MadamIdle (43)
+    21300088: MadamIdle (44)
+    21300090: MadamIdle (45)
+    21300092: MadamIdle (46)
+    21300094: MadamIdle (47)
+    21300096: MadamIdle (48)
+    21300098: MadamIdle (49)
+    21300100: MadamIdle (50)
+    21300102: MadamIdle (51)
+    21300104: MadamIdle (52)
+    21300106: MadamIdle (53)
+    21300108: MadamIdle (54)
+    21300110: MadamIdle (55)
+    21300112: MadamIdle (56)
+    21300114: MadamIdle (57)
+    21300116: MadamIdle (58)
+    21300118: MadamIdle (59)
+    21300120: MadamIdle (60)
+    21300122: MadamIdle (61)
+    21300124: MadamIdle (62)
+    21300126: MadamIdle (63)
+    21300128: MadamIdle (64)
+    21300130: MadamIdle (65)
+    21300132: MadamIdle (66)
+    21300134: MadamIdle (67)
+    21300136: MadamIdle (68)
+    21300138: MadamIdle (69)
+    21300140: MadamIdle (70)
+    21300142: MadamIdle (71)
+    21300144: MadamIdle (72)
+    21300146: MadamIdle (73)
+    21300148: MadamIdle (74)
+    21300150: MadamIdle (75)
+    21300152: MadamIdle (76)
+    21300154: MadamIdle (77)
+    21300156: MadamIdle (78)
+    21300158: MadamIdle (79)
+    21300160: MadamIdle (80)
+    21300162: MadamIdle (81)
+    21300164: MadamIdle (82)
+    21300166: MadamIdle (83)
+    21300168: MadamIdle (84)
+    21300170: MadamIdle (85)
+    21300172: MadamIdle (86)
+    21300174: MadamIdle (87)
+    21300176: MadamIdle (88)
+    21300178: MadamIdle (89)
+    21300180: MadamIdle (90)
+    21300182: MadamIdle (91)
+    21300184: MadamIdle (92)
+    21300186: MadamIdle (93)
+    21300188: MadamIdle (94)
+    21300190: MadamIdle (95)
+    21300192: MadamIdle (96)
+    21300194: MadamIdle (97)
+    21300196: MadamIdle (98)
+    21300198: MadamIdle (99)
+    21300200: MadamIdle (100)
+    21300202: MadamIdle (101)
+    21300204: MadamIdle (102)
+    21300206: MadamIdle (103)
+    21300208: MadamIdle (104)
+    21300210: MadamIdle (105)
+    21300212: MadamIdle (106)
+    21300214: MadamIdle (107)
+    21300216: MadamIdle (108)
+    21300218: MadamIdle (109)
+    21300220: MadamIdle (110)
+    21300222: MadamIdle (111)
+    21300224: MadamIdle (112)
+    21300226: MadamIdle (113)
+    21300228: MadamIdle (114)
+    21300230: MadamIdle (121)
+  externalObjects: {}
+  serializedVersion: 9
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: MadamIdle (1)
+      rect:
+        serializedVersion: 2
+        x: 711
+        y: 2583
+        width: 235
+        height: 509
+      alignment: 9
+      pivot: {x: 0.47659576, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f295e6655cc1f084887d17d7a8d86cf3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MadamIdle (2)
+      rect:
+        serializedVersion: 2
+        x: 3819
+        y: 2583
+        width: 238
+        height: 509
+      alignment: 9
+      pivot: {x: 0.48319328, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11f83947a21019542a1e57994947b11d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MadamIdle (3)
+      rect:
+        serializedVersion: 2
+        x: 482
+        y: 2072
+        width: 239
+        height: 509
+      alignment: 9
+      pivot: {x: 0.48535565, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63ae65ba194b20a418675337682680f4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MadamIdle (4)
+      rect:
+        serializedVersion: 2
+        x: 723
+        y: 2072
+        width: 239
+        height: 509
+      alignment: 9
+      pivot: {x: 0.48535565, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5bb41cba9b487ca46b7286cc32456346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MadamIdle (5)
+      rect:
+        serializedVersion: 2
+        x: 3340
+        y: 2583
+        width: 237
+        height: 509
+      alignment: 9
+      pivot: {x: 0.48101267, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 38b82e9a28b52994aa7b9b7422a6b52c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MadamIdle (6)
+      rect:
+        serializedVersion: 2
+        x: 1904
+        y: 2583
+        width: 237
+        height: 509
+      alignment: 9
+      pivot: {x: 0.48101267, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62465ba99ae6f08458994f416151e87a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MadamIdle (7)
+      rect:
+        serializedVersion: 2
+        x: 2487
+        y: 1560
+        width: 248
+        height: 509
+      alignment: 9
+      pivot: {x: 0.50403225, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73ecddf48ff96594886384f5fc579d09
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MadamIdle (8)
+      rect:
+        serializedVersion: 2
+        x: 2986
+        y: 1560
+        width: 248
+        height: 509
+      alignment: 9
+      pivot: {x: 0.50403225, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c71a918ed415cd4982b369cd19b8853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MadamIdle (9)
+      rect:
+        serializedVersion: 2
+        x: 1171
+        y: 3094
+        width: 232
+        height: 509
+      alignment: 9
+      pivot: {x: 0.4698276, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9627fbb4ef612a4e89cb63fa3d020ec
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MadamIdle (10)
+      rect:
+        serializedVersion: 2
+        x: 1405
+        y: 3094
+        width: 232
+        height: 509
+      alignment: 9
+      pivot: {x: 0.4698276, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 821014489a931034fb75349fc91a104f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MadamIdle (11)
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 3094
+        width: 232
+        height: 509
+      alignment: 9
+      pivot: {x: 0.4698276, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d62fb7986cb8c16419e40dc2181d7d61
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MadamIdle (12)
+      rect:
+        serializedVersion: 2
+        x: 469
+        y: 3094
+        width: 232
+        height: 509
+      alignment: 9
+      pivot: {x: 0.4698276, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2bf13f9f8c01a6d43bb373e86d632873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MadamIdle (13)
+      rect:
+        serializedVersion: 2
+        x: 703
+        y: 3094
+        width: 232
+        height: 509
+      alignment: 9
+      pivot: {x: 0.4698276, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3bc46eaf31691146a7a096060d5e635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MadamIdle (14)
+      rect:
+        serializedVersion: 2
+        x: 2577
+        y: 3094
+        width: 234
+        height: 509
+      alignment: 9
+      pivot: {x: 0.47435898, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da36764a311c96a41b546611a35c47f5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MadamIdle (15)
+      rect:
+        serializedVersion: 2
+        x: 2341
+        y: 3094
+        width: 234
+        height: 509
+      alignment: 9
+      pivot: {x: 0.47435898, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31777ab89f53194459ee9a02fdd07c59
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MadamIdle (16)
+      rect:
+        serializedVersion: 2
+        x: 1761
+        y: 1046
+        width: 250
+        height: 509
+      alignment: 9
+      pivot: {x: 0.508, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 996c136767f43c440910b6618afbca7a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MadamIdle (17)
+      rect:
+        serializedVersion: 2
+        x: 1509
+        y: 1046
+        width: 250
+        height: 509
+      alignment: 9
+      pivot: {x: 0.508, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a23f3a14bdcde9e428af73fcaf6ea57d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MadamIdle (18)
+      rect:
+        serializedVersion: 2
+        x: 2813
+        y: 3095
+        width: 235
+        height: 508
+      alignment: 9
+      pivot: {x: 0.47659576, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b958d08b94ae59429adc501ad822b98
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MadamIdle (19)
+      rect:
+        serializedVersion: 2
+        x: 3761
+        y: 3095
+        width: 235
+        height: 508
+      alignment: 9
+      pivot: {x: 0.47659576, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87ec2bc8f27328e408d517de76224198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MadamIdle (20)
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 2584
+        width: 235
+        height: 508
+      alignment: 9
+      pivot: {x: 0.47659576, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8138181e2767345448bc12bf0cb5ce66
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MadamIdle (21)
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 2073
+        width: 239
+        height: 508
+      alignment: 9
+      pivot: {x: 0.48535565, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51054c2af80f4cc4697888063b3f43f8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MadamIdle (22)
+      rect:
+        serializedVersion: 2
+        x: 1206
+        y: 2073
+        width: 242
+        height: 508
+      alignment: 9
+      pivot: {x: 0.49173555, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 832542f95cab15f4095f6cf586b0e367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MadamIdle (23)
+      rect:
+        serializedVersion: 2
+        x: 1665
+        y: 2584
+        width: 237
+        height: 508
+      alignment: 9
+      pivot: {x: 0.48101267, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40aa96354f5cf304298b3e89391dacd5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MadamIdle (24)
+      rect:
+        serializedVersion: 2
+        x: 948
+        y: 2584
+        width: 237
+        height: 508
+      alignment: 9
+      pivot: {x: 0.48101267, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0065f14b2b8bc914f800124befd66f80
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MadamIdle (25)
+      rect:
+        serializedVersion: 2
+        x: 1737
+        y: 1561
+        width: 248
+        height: 508
+      alignment: 9
+      pivot: {x: 0.50403225, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52c6444aca08aed4ea4b415547e9ed63
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MadamIdle (26)
+      rect:
+        serializedVersion: 2
+        x: 1187
+        y: 2584
+        width: 237
+        height: 508
+      alignment: 9
+      pivot: {x: 0.48101267, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc523a6b55d1e784fa3acbe26088f9b0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MadamIdle (27)
+      rect:
+        serializedVersion: 2
+        x: 1426
+        y: 2584
+        width: 237
+        height: 508
+      alignment: 9
+      pivot: {x: 0.48101267, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d32a3abab626d348807b70baad94b1b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MadamIdle (28)
+      rect:
+        serializedVersion: 2
+        x: 2143
+        y: 2584
+        width: 238
+        height: 508
+      alignment: 9
+      pivot: {x: 0.48319328, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f26dd8d9f12e164e8fe286d2ae8b19c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MadamIdle (29)
+      rect:
+        serializedVersion: 2
+        x: 2383
+        y: 2584
+        width: 238
+        height: 508
+      alignment: 9
+      pivot: {x: 0.48319328, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0dbc847c95be8ce4eb9d2b40d9978bd6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MadamIdle (30)
+      rect:
+        serializedVersion: 2
+        x: 3524
+        y: 3095
+        width: 235
+        height: 508
+      alignment: 9
+      pivot: {x: 0.47659576, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72afa77481d579b4b9e5055f41d96064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MadamIdle (31)
+      rect:
+        serializedVersion: 2
+        x: 3050
+        y: 3095
+        width: 235
+        height: 508
+      alignment: 9
+      pivot: {x: 0.47659576, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 91a75e22fffa4f249bba297b8356f3c1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MadamIdle (32)
+      rect:
+        serializedVersion: 2
+        x: 3287
+        y: 3095
+        width: 235
+        height: 508
+      alignment: 9
+      pivot: {x: 0.47659576, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0340989859db8f640b86882ac17869ce
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MadamIdle (33)
+      rect:
+        serializedVersion: 2
+        x: 1005
+        y: 1046
+        width: 250
+        height: 509
+      alignment: 9
+      pivot: {x: 0.508, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f84f609fbcf7df49a1ed86527c5c02b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MadamIdle (34)
+      rect:
+        serializedVersion: 2
+        x: 753
+        y: 1046
+        width: 250
+        height: 509
+      alignment: 9
+      pivot: {x: 0.508, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52e39f82d1e38e94597c58ce2301179c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MadamIdle (35)
+      rect:
+        serializedVersion: 2
+        x: 3579
+        y: 2583
+        width: 238
+        height: 509
+      alignment: 9
+      pivot: {x: 0.48319328, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d708dd6f731ade45993a5950f11a04f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MadamIdle (36)
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 2583
+        width: 234
+        height: 509
+      alignment: 9
+      pivot: {x: 0.47435898, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f05b8e04bbac11c4b82a9f778be75fde
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MadamIdle (37)
+      rect:
+        serializedVersion: 2
+        x: 1639
+        y: 3094
+        width: 232
+        height: 509
+      alignment: 9
+      pivot: {x: 0.4698276, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b0db8e4b64061e4eb5dbef94d5e5a0e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MadamIdle (38)
+      rect:
+        serializedVersion: 2
+        x: 2107
+        y: 3094
+        width: 232
+        height: 509
+      alignment: 9
+      pivot: {x: 0.4698276, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f730d0562e797c4eb8cb176043e4afc
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MadamIdle (39)
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 3094
+        width: 232
+        height: 509
+      alignment: 9
+      pivot: {x: 0.4698276, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8fc177402b9d08b4e945de64d82bfb1f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MadamIdle (40)
+      rect:
+        serializedVersion: 2
+        x: 1873
+        y: 3094
+        width: 232
+        height: 509
+      alignment: 9
+      pivot: {x: 0.4698276, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 664a77ece5d21c3489b4dbcdf87c338b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MadamIdle (41)
+      rect:
+        serializedVersion: 2
+        x: 937
+        y: 3094
+        width: 232
+        height: 509
+      alignment: 9
+      pivot: {x: 0.4698276, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 554763878f392b54cb5d2a75347bbffa
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MadamIdle (42)
+      rect:
+        serializedVersion: 2
+        x: 3236
+        y: 1560
+        width: 248
+        height: 509
+      alignment: 9
+      pivot: {x: 0.50403225, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06db2e3ed4be03e41a88db924ed02501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MadamIdle (43)
+      rect:
+        serializedVersion: 2
+        x: 3737
+        y: 1560
+        width: 248
+        height: 509
+      alignment: 9
+      pivot: {x: 0.50403225, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 29cd3a87efa3c4b4c8a8ea3eb9e80e88
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MadamIdle (44)
+      rect:
+        serializedVersion: 2
+        x: 2623
+        y: 2583
+        width: 237
+        height: 509
+      alignment: 9
+      pivot: {x: 0.48101267, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36caef3e6f7c03c42a72aea38c776608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MadamIdle (45)
+      rect:
+        serializedVersion: 2
+        x: 2862
+        y: 2583
+        width: 237
+        height: 509
+      alignment: 9
+      pivot: {x: 0.48101267, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c41b697450afe44bb3f18e44f938550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MadamIdle (46)
+      rect:
+        serializedVersion: 2
+        x: 2426
+        y: 2072
+        width: 242
+        height: 509
+      alignment: 9
+      pivot: {x: 0.49173555, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce4a40ebbbadf86499bf4adf5aa75271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MadamIdle (47)
+      rect:
+        serializedVersion: 2
+        x: 2182
+        y: 2072
+        width: 242
+        height: 509
+      alignment: 9
+      pivot: {x: 0.49173555, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 365411ee97b17304ebb97fb32cee5473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MadamIdle (48)
+      rect:
+        serializedVersion: 2
+        x: 2670
+        y: 2072
+        width: 242
+        height: 509
+      alignment: 9
+      pivot: {x: 0.49173555, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cbcdfa6b056db034f848ec2b785d559c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MadamIdle (49)
+      rect:
+        serializedVersion: 2
+        x: 474
+        y: 2583
+        width: 235
+        height: 509
+      alignment: 9
+      pivot: {x: 0.47659576, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eee4f8ec813abdf4eb4d23813d0386e1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MadamIdle (50)
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 1560
+        width: 246
+        height: 509
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d69b7395de0d8c4e94d2628e39eb52f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MadamIdle (51)
+      rect:
+        serializedVersion: 2
+        x: 3406
+        y: 2072
+        width: 245
+        height: 509
+      alignment: 9
+      pivot: {x: 0.4979592, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c366913995d6bc34d8db5128b1c3d7bb
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MadamIdle (52)
+      rect:
+        serializedVersion: 2
+        x: 3101
+        y: 2583
+        width: 237
+        height: 509
+      alignment: 9
+      pivot: {x: 0.48101267, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f878024e39390748b224989bd5c39fa
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MadamIdle (53)
+      rect:
+        serializedVersion: 2
+        x: 1257
+        y: 1046
+        width: 250
+        height: 509
+      alignment: 9
+      pivot: {x: 0.492, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8101f379dfb7f7d43a11d89772f23d66
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MadamIdle (54)
+      rect:
+        serializedVersion: 2
+        x: 1987
+        y: 1560
+        width: 248
+        height: 509
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8cb41f51118f4748b544c1a785a5560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MadamIdle (55)
+      rect:
+        serializedVersion: 2
+        x: 1450
+        y: 2072
+        width: 241
+        height: 509
+      alignment: 9
+      pivot: {x: 0.47302905, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c609de9686b9e44a9e3f9f2a8968c3b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MadamIdle (56)
+      rect:
+        serializedVersion: 2
+        x: 2512
+        y: 1046
+        width: 251
+        height: 509
+      alignment: 9
+      pivot: {x: 0.5059761, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66dfc8ca42acdcd48910a67cfac85239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MadamIdle (57)
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 2072
+        width: 238
+        height: 509
+      alignment: 9
+      pivot: {x: 0.4789916, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c069474843085e645917f4e068fd0389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MadamIdle (58)
+      rect:
+        serializedVersion: 2
+        x: 496
+        y: 1560
+        width: 246
+        height: 509
+      alignment: 9
+      pivot: {x: 0.49593496, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4870bf56d575648489a8fb884d66e6d0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MadamIdle (59)
+      rect:
+        serializedVersion: 2
+        x: 1239
+        y: 1560
+        width: 247
+        height: 509
+      alignment: 9
+      pivot: {x: 0.4979757, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e8824a275c5b9946b0c5d3dc377f3b3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MadamIdle (60)
+      rect:
+        serializedVersion: 2
+        x: 964
+        y: 2071
+        width: 240
+        height: 510
+      alignment: 9
+      pivot: {x: 0.48333332, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c99c07fce31f5f42b2a016d3d9b2a8c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MadamIdle (61)
+      rect:
+        serializedVersion: 2
+        x: 3159
+        y: 2072
+        width: 245
+        height: 509
+      alignment: 9
+      pivot: {x: 0.48979592, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f924dc8583ace14a8b68038f624779b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MadamIdle (62)
+      rect:
+        serializedVersion: 2
+        x: 253
+        y: 529
+        width: 253
+        height: 509
+      alignment: 9
+      pivot: {x: 0.5019763, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f324726bcbc20704b863090f11062524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MadamIdle (63)
+      rect:
+        serializedVersion: 2
+        x: 2237
+        y: 1560
+        width: 248
+        height: 509
+      alignment: 9
+      pivot: {x: 0.49596775, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c45456fb0c1f12248988428318522bb0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MadamIdle (64)
+      rect:
+        serializedVersion: 2
+        x: 1938
+        y: 2072
+        width: 242
+        height: 509
+      alignment: 9
+      pivot: {x: 0.48347107, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b471b3798a2cfcb4089c3d31970b7ef1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MadamIdle (65)
+      rect:
+        serializedVersion: 2
+        x: 1693
+        y: 2073
+        width: 243
+        height: 508
+      alignment: 9
+      pivot: {x: 0.48559672, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a1357c1c98839b94f85ab554c3e76d4d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MadamIdle (66)
+      rect:
+        serializedVersion: 2
+        x: 501
+        y: 1046
+        width: 250
+        height: 509
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b82c8425905b914e8e9c9aa5a72d262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MadamIdle (67)
+      rect:
+        serializedVersion: 2
+        x: 2914
+        y: 2072
+        width: 243
+        height: 509
+      alignment: 9
+      pivot: {x: 0.48559672, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 761ada8e5b0518d4aa2d3f9303ea7486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MadamIdle (68)
+      rect:
+        serializedVersion: 2
+        x: 1488
+        y: 1560
+        width: 247
+        height: 509
+      alignment: 9
+      pivot: {x: 0.49392712, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ddb4874d4d400194bab480ae43d7c616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MadamIdle (69)
+      rect:
+        serializedVersion: 2
+        x: 3486
+        y: 1561
+        width: 249
+        height: 508
+      alignment: 9
+      pivot: {x: 0.49799198, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb46cbad9901f6d4eb28e06889d1dff4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MadamIdle (70)
+      rect:
+        serializedVersion: 2
+        x: 3773
+        y: 1045
+        width: 252
+        height: 510
+      alignment: 9
+      pivot: {x: 0.50396824, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cfc66a8819923d54ba5bdaeb75ad5778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MadamIdle (71)
+      rect:
+        serializedVersion: 2
+        x: 3653
+        y: 2071
+        width: 245
+        height: 510
+      alignment: 9
+      pivot: {x: 0.48979592, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c3f4c556322f33846ad56ec7117cd20d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MadamIdle (72)
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1046
+        width: 249
+        height: 509
+      alignment: 9
+      pivot: {x: 0.49799198, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1fc2828597acf3a4a9764aaa55f147cd
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MadamIdle (73)
+      rect:
+        serializedVersion: 2
+        x: 990
+        y: 1560
+        width: 247
+        height: 509
+      alignment: 9
+      pivot: {x: 0.49392712, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea8210829de6b0740b7c06d7cb048026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MadamIdle (74)
+      rect:
+        serializedVersion: 2
+        x: 3521
+        y: 1044
+        width: 250
+        height: 511
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97bada269904ba64490c0bff9b72cde7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MadamIdle (75)
+      rect:
+        serializedVersion: 2
+        x: 3269
+        y: 1044
+        width: 250
+        height: 511
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4236711c7a8ce7e449b5ef3c26f2d839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MadamIdle (76)
+      rect:
+        serializedVersion: 2
+        x: 761
+        y: 527
+        width: 252
+        height: 511
+      alignment: 9
+      pivot: {x: 0.49603173, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2fbe690daee7aea47b393d71c85bd0db
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MadamIdle (77)
+      rect:
+        serializedVersion: 2
+        x: 3017
+        y: 1044
+        width: 250
+        height: 511
+      alignment: 9
+      pivot: {x: 0.496, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d79e4345d972e354bb843c6221adbd43
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MadamIdle (78)
+      rect:
+        serializedVersion: 2
+        x: 1773
+        y: 526
+        width: 252
+        height: 512
+      alignment: 9
+      pivot: {x: 0.49603173, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b878c9eb61a78748b6bf4273ea75f55
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MadamIdle (79)
+      rect:
+        serializedVersion: 2
+        x: 2532
+        y: 526
+        width: 253
+        height: 512
+      alignment: 9
+      pivot: {x: 0.5019763, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8702d24561ae8934fade12de468ee3e4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MadamIdle (80)
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 1043
+        width: 247
+        height: 512
+      alignment: 9
+      pivot: {x: 0.48987854, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3799c3cf865c7804cbacab4c7818091a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MadamIdle (81)
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 526
+        width: 250
+        height: 512
+      alignment: 9
+      pivot: {x: 0.496, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5d5b0c4ad558f14c828cb6740cd302a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MadamIdle (82)
+      rect:
+        serializedVersion: 2
+        x: 1015
+        y: 526
+        width: 251
+        height: 512
+      alignment: 9
+      pivot: {x: 0.49402392, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8562827487cade489a2632d5e2759a1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MadamIdle (83)
+      rect:
+        serializedVersion: 2
+        x: 1268
+        y: 525
+        width: 251
+        height: 513
+      alignment: 9
+      pivot: {x: 0.49402392, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 860eb9fab0c37ef4684cc30afbf5bb3a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MadamIdle (84)
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 8
+        width: 253
+        height: 513
+      alignment: 9
+      pivot: {x: 0.49802372, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ca040a7748d0db44814d55abe2c6e1a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MadamIdle (85)
+      rect:
+        serializedVersion: 2
+        x: 2787
+        y: 524
+        width: 251
+        height: 514
+      alignment: 9
+      pivot: {x: 0.49402392, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 197336530b7a3644bba692185aa04fbf
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MadamIdle (86)
+      rect:
+        serializedVersion: 2
+        x: 1780
+        y: 6
+        width: 253
+        height: 515
+      alignment: 9
+      pivot: {x: 0.49802372, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 934a354f5ce0a85498b22e2b9a300776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MadamIdle (87)
+      rect:
+        serializedVersion: 2
+        x: 3294
+        y: 525
+        width: 253
+        height: 513
+      alignment: 9
+      pivot: {x: 0.5019763, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30fc0499a01e1a84abd19e142d3b2d2d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MadamIdle (88)
+      rect:
+        serializedVersion: 2
+        x: 3549
+        y: 524
+        width: 252
+        height: 514
+      alignment: 9
+      pivot: {x: 0.49603173, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68e6cf44e0508a643b449029fee8d5d2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MadamIdle (89)
+      rect:
+        serializedVersion: 2
+        x: 1521
+        y: 524
+        width: 250
+        height: 514
+      alignment: 9
+      pivot: {x: 0.492, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 677114adf28d2e346a5a82e0060f04da
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MadamIdle (90)
+      rect:
+        serializedVersion: 2
+        x: 763
+        y: 7
+        width: 252
+        height: 514
+      alignment: 9
+      pivot: {x: 0.49603173, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c815a910f55ef946aa636459c2811f5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MadamIdle (91)
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 8
+        width: 253
+        height: 513
+      alignment: 9
+      pivot: {x: 0.49802372, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2547541821baa44f97996e8e7dbb556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MadamIdle (92)
+      rect:
+        serializedVersion: 2
+        x: 3040
+        y: 524
+        width: 252
+        height: 514
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b95ee7cd94789df46b950f2bff217c91
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MadamIdle (93)
+      rect:
+        serializedVersion: 2
+        x: 2280
+        y: 523
+        width: 250
+        height: 515
+      alignment: 9
+      pivot: {x: 0.492, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 867ba181e44e2a94da693eadbe624a31
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MadamIdle (94)
+      rect:
+        serializedVersion: 2
+        x: 1526
+        y: 6
+        width: 252
+        height: 515
+      alignment: 9
+      pivot: {x: 0.49603173, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21c374b2ce01bb9429e1af435d3da7bb
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MadamIdle (95)
+      rect:
+        serializedVersion: 2
+        x: 1017
+        y: 7
+        width: 253
+        height: 514
+      alignment: 9
+      pivot: {x: 0.49802372, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc1dcd4d3f0e8464bb9f6df37ef00cdf
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MadamIdle (96)
+      rect:
+        serializedVersion: 2
+        x: 1272
+        y: 6
+        width: 252
+        height: 515
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e42ee650f338d24aaca731692c2cbc3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MadamIdle (97)
+      rect:
+        serializedVersion: 2
+        x: 511
+        y: 5
+        width: 250
+        height: 516
+      alignment: 9
+      pivot: {x: 0.492, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7602bd5063a56144b9eb5aaabab50e7e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MadamIdle (98)
+      rect:
+        serializedVersion: 2
+        x: 2544
+        y: 5
+        width: 253
+        height: 516
+      alignment: 9
+      pivot: {x: 0.49802372, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48d00a07276993346abe3fd8200eedea
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MadamIdle (99)
+      rect:
+        serializedVersion: 2
+        x: 2035
+        y: 5
+        width: 252
+        height: 516
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c9e09fe637e0d74f9a9f602de7829ff
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MadamIdle (100)
+      rect:
+        serializedVersion: 2
+        x: 3803
+        y: 523
+        width: 251
+        height: 515
+      alignment: 9
+      pivot: {x: 0.49800798, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a96e22c65035c3e49be6dab5dc6710f9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MadamIdle (101)
+      rect:
+        serializedVersion: 2
+        x: 3309
+        y: 4
+        width: 253
+        height: 517
+      alignment: 9
+      pivot: {x: 0.5019763, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3bbcb06cf8f02e3459ffd4ca17d09b74
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MadamIdle (102)
+      rect:
+        serializedVersion: 2
+        x: 3564
+        y: 4
+        width: 253
+        height: 517
+      alignment: 9
+      pivot: {x: 0.49802372, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22c7c5ce0d5b38f4cab229e25f6fbd7d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MadamIdle (103)
+      rect:
+        serializedVersion: 2
+        x: 2799
+        y: 4
+        width: 252
+        height: 517
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a82aac4a24ffab845a2da21f1f49ca38
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MadamIdle (104)
+      rect:
+        serializedVersion: 2
+        x: 3819
+        y: 2
+        width: 252
+        height: 519
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 178c0a6b9b889cb46bba6af4b88bbf0a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MadamIdle (105)
+      rect:
+        serializedVersion: 2
+        x: 3053
+        y: 6
+        width: 254
+        height: 515
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 356966e395e500b49b79ffb43b9e4ac9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MadamIdle (106)
+      rect:
+        serializedVersion: 2
+        x: 2289
+        y: 6
+        width: 253
+        height: 515
+      alignment: 9
+      pivot: {x: 0.49802372, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bea32036b9f115e41a7a6ccf78e2c75e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MadamIdle (107)
+      rect:
+        serializedVersion: 2
+        x: 2265
+        y: 1040
+        width: 245
+        height: 515
+      alignment: 9
+      pivot: {x: 0.48979592, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d287d2546dc7f084a8d245897ae64327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MadamIdle (108)
+      rect:
+        serializedVersion: 2
+        x: 2027
+        y: 524
+        width: 251
+        height: 514
+      alignment: 9
+      pivot: {x: 0.50199205, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4921837604dd3644e8f96dfc3d5df342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MadamIdle (109)
+      rect:
+        serializedVersion: 2
+        x: 508
+        y: 526
+        width: 251
+        height: 512
+      alignment: 9
+      pivot: {x: 0.50199205, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2441416cf04c71c43bdd555cf1a73021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MadamIdle (110)
+      rect:
+        serializedVersion: 2
+        x: 744
+        y: 1557
+        width: 244
+        height: 512
+      alignment: 9
+      pivot: {x: 0.48770493, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06ad73c9e2d4c9042b11508a4f2b9064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MadamIdle (111)
+      rect:
+        serializedVersion: 2
+        x: 2765
+        y: 1044
+        width: 250
+        height: 511
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04e6edc785836e14b89c4a888bdda77c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MadamIdle (112)
+      rect:
+        serializedVersion: 2
+        x: 2013
+        y: 1045
+        width: 250
+        height: 510
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee83276fd718ebc4784bdb0904c79338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MadamIdle (113)
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1559
+        width: 245
+        height: 510
+      alignment: 9
+      pivot: {x: 0.48979592, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 61d2817435e49cc4e9650c23e40b0f81
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MadamIdle (114)
+      rect:
+        serializedVersion: 2
+        x: 2737
+        y: 1559
+        width: 247
+        height: 510
+      alignment: 9
+      pivot: {x: 0.48582995, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4315794cf845cf74e865a7dffda692cc
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MadamIdle (121)
+      rect:
+        serializedVersion: 2
+        x: 711
+        y: 2583
+        width: 235
+        height: 509
+      alignment: 9
+      pivot: {x: 0.47659576, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0d63907a186ea64c882f85c9b95c1f5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: aa069c2b4aec5994ca6a3f9614db56c7
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
