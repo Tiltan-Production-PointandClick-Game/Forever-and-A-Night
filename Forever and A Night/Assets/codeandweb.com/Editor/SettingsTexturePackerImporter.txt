@@ -20,7 +20,7 @@ tpsheetFileNames:
 - Assets/Forever And a Night/Art&Graphics/Characters/Player/Animations/SpritesSheets/Walk/3QFWalk/3QFWalk_SpriteSheet.tpsheet
 - Assets/Forever And a Night/Art&Graphics/Characters/Player/Animations/SpritesSheets/Walk/BackWalk/BackWalkSS.tpsheet
 - Assets/Forever And a Night/Art&Graphics/Characters/Player/Animations/SpritesSheets/Walk/FrontWalk/FrontWalk_SS.sip.tpsheet
-- Assets/Forever And a Night/Art&Graphics/Characters/Player/Animations/SpritesSheets/Walk/SideWalk/SideWalk_SpriteSheet.tpsheet
+- Assets/Forever And a Night/Art&Graphics/Characters/Player/Animations/SpritesSheets/Walk/SideWalk_R/SideWalk_SpriteSheet.tpsheet
 textureFileNames:
 - Assets/codeandweb.com/Example/SpriteSheet/sprites.png
 - Assets/Forever And a Night/Art&Graphics/Characters/NPC's/Sprites/Boy/BoyIdle_BothItems_SS's/BoyIdle_BothItems_SS.sip.png
@@ -41,7 +41,7 @@ textureFileNames:
 - Assets/Forever And a Night/Art&Graphics/Characters/Player/Animations/SpritesSheets/Walk/3QFWalk/3QFWalk_SpriteSheet.png
 - Assets/Forever And a Night/Art&Graphics/Characters/Player/Animations/SpritesSheets/Walk/BackWalk/BackWalkSS.png
 - Assets/Forever And a Night/Art&Graphics/Characters/Player/Animations/SpritesSheets/Walk/FrontWalk/FrontWalk_SS.sip.png
-- Assets/Forever And a Night/Art&Graphics/Characters/Player/Animations/SpritesSheets/Walk/SideWalk/SideWalk_SpriteSheet.png
+- Assets/Forever And a Night/Art&Graphics/Characters/Player/Animations/SpritesSheets/Walk/SideWalk_R/SideWalk_SpriteSheet.png
 normalmapFileNames:
 - Assets/codeandweb.com/Example/SpriteSheet/sprites_n.png
 - Assets/Forever And a Night/Art&Graphics/Characters/NPC's/Sprites/Boy/BoyIdle_BothItems_SS's/BoyIdle_BothItems_SS.sip_n.png
@@ -62,5 +62,5 @@ normalmapFileNames:
 - Assets/Forever And a Night/Art&Graphics/Characters/Player/Animations/SpritesSheets/Walk/3QFWalk/3QFWalk_SpriteSheet_n.png
 - Assets/Forever And a Night/Art&Graphics/Characters/Player/Animations/SpritesSheets/Walk/BackWalk/BackWalkSS_n.png
 - Assets/Forever And a Night/Art&Graphics/Characters/Player/Animations/SpritesSheets/Walk/FrontWalk/FrontWalk_SS.sip_n.png
-- Assets/Forever And a Night/Art&Graphics/Characters/Player/Animations/SpritesSheets/Walk/SideWalk/SideWalk_SpriteSheet_n.png
+- Assets/Forever And a Night/Art&Graphics/Characters/Player/Animations/SpritesSheets/Walk/SideWalk_R/SideWalk_SpriteSheet_n.png
 enableDebugOutput: 0

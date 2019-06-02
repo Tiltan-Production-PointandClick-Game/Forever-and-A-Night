@@ -50,7 +50,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a1100398b0adde54f991777b517314fd, type: 2}
+  - {fileID: 2100000, guid: f1bac7559e5d1df4b934f68e5cfb4812, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -109,7 +109,7 @@ Animator:
   m_GameObject: {fileID: 5472849842494521401}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: cdb0daabc94a8bd46b9ae1c69f489f84, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -346,13 +346,13 @@ MonoBehaviour:
   headLayer: 1
   mouthLayer: 2
   customAnimator: {fileID: 0}
-  turn2DCharactersIn3DSpace: 1
+  turn2DCharactersIn3DSpace: 0
   spriteChild: {fileID: 5472849842494521403}
   rotateSprite3D: 0
-  idleAnimSprite: idle
-  walkAnimSprite: walk
-  runAnimSprite: run
-  talkAnimSprite: talk
+  idleAnimSprite: Player_idle
+  walkAnimSprite: Player_walk
+  runAnimSprite: 
+  talkAnimSprite: 
   lockScale: 0
   spriteScale: 1
   lockDirection: 0
@@ -361,8 +361,44 @@ MonoBehaviour:
   crossfadeAnims: 0
   doDiagonals: 0
   isTalking: 0
-  frameFlipping: 0
-  flipCustomAnims: 0
+  frameFlipping: 1
+  flipCustomAnims: 1
+  _spriteDirectionData:
+    directions: 2
+    down: 1
+    left: 1
+    right: 1
+    up: 1
+    downLeft: 1
+    upLeft: 1
+    upRight: 1
+    downRight: 1
+    spriteDirections:
+    - suffix: D
+      angle: 0
+      maxAngle: 22.5
+    - suffix: DL
+      angle: 45
+      maxAngle: 67.5
+    - suffix: L
+      angle: 90
+      maxAngle: 112.5
+    - suffix: UL
+      angle: 135
+      maxAngle: 157.5
+    - suffix: U
+      angle: 180
+      maxAngle: 202.5
+    - suffix: UR
+      angle: 225
+      maxAngle: 247.5
+    - suffix: R
+      angle: 270
+      maxAngle: 292.5
+    - suffix: DR
+      angle: 315
+      maxAngle: 337.5
+    isUpgraded: 1
   angleSnapping: 0
   walkSpeedScale: 2
   runSpeedScale: 6
@@ -388,6 +424,9 @@ MonoBehaviour:
   textScrollClip: {fileID: 0}
   soundChild: {fileID: 5463911580431790693}
   speechAudioSource: {fileID: 0}
+  headIKTurnFactor: 1
+  bodyIKTurnFactor: 0
+  eyesIKTurnFactor: 1
   headTurnTarget: {fileID: 0}
   headTurnTargetOffset: {x: 0, y: 0, z: 0}
   headFacing: 0
