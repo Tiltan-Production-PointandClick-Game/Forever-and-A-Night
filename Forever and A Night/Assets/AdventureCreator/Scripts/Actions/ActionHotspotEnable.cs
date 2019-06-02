@@ -1,7 +1,7 @@
 ﻿/*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2018
+ *	by Chris Burton, 2013-2019
  *	
  *	"ActionHotspotEnable.cs"
  * 
@@ -25,6 +25,7 @@ namespace AC
 		public int parameterID = -1;
 		public int constantID = 0;
 		public Hotspot hotspot;
+		protected Hotspot runtimeHotspot;
 		public bool affectChildren = false;
 
 		public ChangeType changeType = ChangeType.Enable;
@@ -41,25 +42,25 @@ namespace AC
 
 		override public void AssignValues (List<ActionParameter> parameters)
 		{
-			hotspot = AssignFile <Hotspot> (parameters, parameterID, constantID, hotspot);
+			runtimeHotspot = AssignFile <Hotspot> (parameters, parameterID, constantID, hotspot);
 		}
 
 		
 		override public float Run ()
 		{
-			if (hotspot == null)
+			if (runtimeHotspot == null)
 			{
 				return 0f;
 			}
 
-			DoChange (hotspot);
+			DoChange (runtimeHotspot);
 
 			if (affectChildren)
 			{
-				Hotspot[] hotspots = hotspot.GetComponentsInChildren <Hotspot>();
+				Hotspot[] hotspots = runtimeHotspot.GetComponentsInChildren <Hotspot>();
 				foreach (Hotspot _hotspot in hotspots)
 				{
-					if (_hotspot != hotspot)
+					if (_hotspot != runtimeHotspot)
 					{
 						DoChange (_hotspot);
 					}
@@ -108,7 +109,7 @@ namespace AC
 		}
 
 
-		override public void AssignConstantIDs (bool saveScriptsToo)
+		override public void AssignConstantIDs (bool saveScriptsToo, bool fromAssetFile)
 		{
 			if (saveScriptsToo)
 			{
@@ -120,12 +121,11 @@ namespace AC
 		
 		public override string SetLabel ()
 		{
-			string labelAdd = "";
 			if (hotspot != null)
 			{
-				labelAdd = " (" + hotspot.name + " - " + changeType + ")";
+				return hotspot.name + " - " + changeType;
 			}
-			return labelAdd;
+			return string.Empty;
 		}
 		
 		#endif

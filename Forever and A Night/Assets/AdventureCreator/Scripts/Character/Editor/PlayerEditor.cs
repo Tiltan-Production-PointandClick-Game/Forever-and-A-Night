@@ -33,6 +33,66 @@ namespace AC
 
 				EditorGUILayout.EndVertical ();
 			}
+
+			if (Application.isPlaying && _target.gameObject.activeInHierarchy)
+			{
+				EditorGUILayout.BeginVertical ("Button");
+				EditorGUILayout.LabelField ("Current inventory", EditorStyles.boldLabel);
+
+				bool isCarrying = false;
+
+				if (KickStarter.runtimeInventory != null && KickStarter.runtimeInventory.localItems != null)
+				{
+					for (int i=0; i<KickStarter.runtimeInventory.localItems.Count; i++)
+					{
+						InvItem invItem = KickStarter.runtimeInventory.localItems[i];
+
+						if (invItem != null)
+						{
+							isCarrying = true;
+
+							EditorGUILayout.BeginHorizontal ();
+							EditorGUILayout.LabelField ("Item:", GUILayout.Width (80f));
+							if (invItem.canCarryMultiple)
+							{
+								EditorGUILayout.LabelField (invItem.label, EditorStyles.boldLabel, GUILayout.Width (135f));
+								EditorGUILayout.LabelField ("Count:", GUILayout.Width (50f));
+								EditorGUILayout.LabelField (invItem.count.ToString (), GUILayout.Width (44f));
+							}
+							else
+							{
+								EditorGUILayout.LabelField (invItem.label, EditorStyles.boldLabel);
+							}
+							EditorGUILayout.EndHorizontal ();
+						}
+					}
+				}
+
+				if (KickStarter.inventoryManager != null && KickStarter.runtimeDocuments != null && KickStarter.runtimeDocuments.CollectedDocumentIDs != null)
+				{
+					for (int i=0; i<KickStarter.runtimeDocuments.CollectedDocumentIDs.Length; i++)
+					{
+						Document document = KickStarter.inventoryManager.GetDocument (KickStarter.runtimeDocuments.CollectedDocumentIDs[i]);
+
+						if (document != null)
+						{
+							isCarrying = true;
+
+							EditorGUILayout.BeginHorizontal ();
+							EditorGUILayout.LabelField ("Document:", GUILayout.Width (80f));
+							EditorGUILayout.LabelField (document.Title, EditorStyles.boldLabel);
+							EditorGUILayout.EndHorizontal ();
+						}
+					}
+				}
+
+				if (!isCarrying)
+				{
+					EditorGUILayout.HelpBox ("This Player is not carrying any items.", MessageType.Info);
+				}
+
+				EditorGUILayout.EndVertical ();
+			}
 			
 			UnityVersionHandler.CustomSetDirty (_target);
 		}

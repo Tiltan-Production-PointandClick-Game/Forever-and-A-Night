@@ -1,7 +1,7 @@
 ﻿/*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2018
+ *	by Chris Burton, 2013-2019
  *	
  *	"RememberNavMesh2D.cs"
  * 
@@ -50,7 +50,7 @@ namespace AC
 					}
 					else
 					{
-						ACDebug.LogWarning ("Cannot save " + this.gameObject.name + "'s holes because " + navMesh.polygonColliderHoles[i].gameObject.name + " has no Constant ID!");
+						ACDebug.LogWarning ("Cannot save " + this.gameObject.name + "'s holes because " + navMesh.polygonColliderHoles[i].gameObject.name + " has no Constant ID!", gameObject);
 					}
 				}
 

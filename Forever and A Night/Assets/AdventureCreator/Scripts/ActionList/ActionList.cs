@@ -1,7 +1,7 @@
 /*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2018
+ *	by Chris Burton, 2013-2019
  *	
  *	"ActionList.cs"
  * 
@@ -232,6 +232,12 @@ namespace AC
 			if (!isSkipping)
 			{
 				ResetList ();
+				if (KickStarter.actionListManager.CanResetSkipVars (this))
+				{
+					// We need to reset skip vars if the ActionList is not currently in the skip queue
+					ResetSkips ();
+				}
+
 				isSkipping = true;
 
 				BeginActionList (i, false);
@@ -267,18 +273,17 @@ namespace AC
 		
 		protected virtual void BeginActionList (int i, bool addToSkipQueue)
 		{
-			KickStarter.eventManager.Call_OnBeginActionList (this, null, i, isSkipping);
-
 			pauseWhenActionFinishes = false;
 
 			if (KickStarter.actionListManager)
 			{
+				KickStarter.eventManager.Call_OnBeginActionList (this, null, i, isSkipping);
 				KickStarter.actionListManager.AddToList (this, addToSkipQueue, i);
 				ProcessAction (i);
 			}
 			else
 			{
-				ACDebug.LogWarning ("Cannot run " + this.name + " because no ActionListManager was found.");
+				ACDebug.LogWarning ("Cannot run " + this.name + " because no ActionListManager was found.", gameObject);
 			}
 		}
 
@@ -465,7 +470,7 @@ namespace AC
 			if (isSkipping && skipIteractions > (actions.Count * 3))
 			{
 				// StackOverFlow
-				ACDebug.LogWarning ("Looping ActionList '" + gameObject.name + "' detected while skipping - ending prematurely to avoid a StackOverflow exception.");
+				ACDebug.LogWarning ("Looping ActionList '" + gameObject.name + "' detected while skipping - ending prematurely to avoid a StackOverflow exception.", gameObject);
 				CheckEndCutscene ();
 				return;
 			}
@@ -619,9 +624,7 @@ namespace AC
 		public void ResetList ()
 		{
 			isSkipping = false;
-			StopCoroutine ("PauseUntilStart");
-			StopCoroutine ("RunAction");
-			StopCoroutine ("EndCutscene");
+			StopAllCoroutines ();
 
 			foreach (Action action in actions)
 			{
@@ -638,9 +641,9 @@ namespace AC
 		 */
 		public virtual void Kill ()
 		{
-			StopCoroutine ("PauseUntilStart");
-			StopCoroutine ("RunAction");
-			StopCoroutine ("EndCutscene");
+			StopAllCoroutines ();
+
+			KickStarter.eventManager.Call_OnEndActionList (this, null, isSkipping);
 
 			KickStarter.actionListManager.EndList (this);
 		}
@@ -775,6 +778,8 @@ namespace AC
 		{
 			resumeIndices.Clear ();
 			pauseWhenActionFinishes = true;
+
+			KickStarter.eventManager.Call_OnPauseActionList (this);
 		}
 		
 		
@@ -811,11 +816,13 @@ namespace AC
 
 				if (KickStarter.actionListManager == null)
 				{
-					ACDebug.LogWarning ("Cannot run " + this.name + " because no ActionListManager was found.");
+					ACDebug.LogWarning ("Cannot run " + this.name + " because no ActionListManager was found.", gameObject);
 					return;
 				}
 
 				AddResumeToManager (_startIndex);
+
+				KickStarter.eventManager.Call_OnResumeActionList (this);
 
 				foreach (int resumeIndex in resumeIndices)
 				{

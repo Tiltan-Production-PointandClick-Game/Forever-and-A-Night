@@ -1,7 +1,7 @@
 /*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2018
+ *	by Chris Burton, 2013-2019
  *	
  *	"SaveData.cs"
  * 
@@ -234,6 +234,8 @@ namespace AC
 		/** What Inventory Items (see: InvItem) the player is currently carrying */
 		public string inventoryData;
 
+		/** If True, the Player is playing a custom animation */
+		public bool inCustomCharState;
 		/** True if the Player's head is facing a Hotspot */
 		public bool playerLockHotspotHeadTurning;
 		/** True if the Player's head is facing a particular object */

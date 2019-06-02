@@ -11,7 +11,7 @@ namespace AC
 		
 		public References references;
 		
-		public static string version = "1.65.2";
+		public static string version = "1.67.5";
 	 
 		private bool showScene = true;
 		private bool showSettings = false;
@@ -490,7 +490,7 @@ namespace AC
 			// Load default Actions
 			DirectoryInfo dir = new DirectoryInfo ("Assets/" + actionsManager.FolderPath);
 			FileInfo[] info = dir.GetFiles ("*.cs");
-			
+
 			actionsManager.AllActions.Clear ();
 			foreach (FileInfo f in info) 
 			{

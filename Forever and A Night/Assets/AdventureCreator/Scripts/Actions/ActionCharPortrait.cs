@@ -1,7 +1,7 @@
 /*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2018
+ *	by Chris Burton, 2013-2019
  *	
  *	"ActionCharPortrait.cs"
  * 
@@ -28,6 +28,7 @@ namespace AC
 		public int constantID = 0;
 		public bool isPlayer;
 		public Char _char;
+		protected Char runtimeChar;
 		public Texture newPortraitGraphic;
 
 
@@ -42,22 +43,22 @@ namespace AC
 
 		override public void AssignValues (List<ActionParameter> parameters)
 		{
-			_char = AssignFile <Char> (parameters, parameterID, constantID, _char);
+			runtimeChar = AssignFile <Char> (parameters, parameterID, constantID, _char);
 
 			if (isPlayer)
 			{
-				_char = KickStarter.player;
+				runtimeChar = KickStarter.player;
 			}
 		}
 
 		
 		override public float Run ()
 		{
-			if (_char)
+			if (runtimeChar)
 			{
-				_char.portraitIcon.texture = newPortraitGraphic;
-				_char.portraitIcon.ClearSprites ();
-				_char.portraitIcon.ClearCache ();
+				runtimeChar.portraitIcon.texture = newPortraitGraphic;
+				runtimeChar.portraitIcon.ClearSprites ();
+				runtimeChar.portraitIcon.ClearCache ();
 			}
 			
 			return 0f;
@@ -103,7 +104,7 @@ namespace AC
 		}
 
 
-		override public void AssignConstantIDs (bool saveScriptsToo)
+		override public void AssignConstantIDs (bool saveScriptsToo, bool fromAssetFile)
 		{
 			if (!isPlayer)
 			{
@@ -122,18 +123,15 @@ namespace AC
 
 		public override string SetLabel ()
 		{
-			string labelAdd = "";
-
 			if (isPlayer)
 			{
-				labelAdd = " (Player)";
+				return "Player";
 			}
-			else if (_char)
+			else if (_char != null)
 			{
-				labelAdd = " (" + _char.name + ")";
+				return _char.name;
 			}
-			
-			return labelAdd;
+			return string.Empty;
 		}
 
 		#endif

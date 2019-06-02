@@ -1,7 +1,7 @@
 ﻿/*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2018
+ *	by Chris Burton, 2013-2019
  *	
  *	"ActionInventoryCheckSelected.cs"
  * 
@@ -238,12 +238,12 @@ namespace AC
 			switch (selectedCheckMethod)
 			{
 				case SelectedCheckMethod.NoneSelected:
-					return (" (Nothing)");
+					return "Nothing";
 
 				case SelectedCheckMethod.SpecificItem:
 					if (inventoryManager)
 					{
-						return (" (" + inventoryManager.GetLabel (invID) + ")");
+						return inventoryManager.GetLabel (invID);
 					}
 					break;
 
@@ -253,12 +253,12 @@ namespace AC
 						InvBin category = inventoryManager.GetCategory (binID);
 						if (category != null)
 						{
-							return (" (" + category.label + ")");
+							return category.label;
 						}
 					}
 					break;
 			}
-			return "";
+			return string.Empty;
 		}
 
 

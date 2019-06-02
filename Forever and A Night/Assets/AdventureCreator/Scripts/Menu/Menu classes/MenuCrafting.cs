@@ -1,7 +1,7 @@
 /*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2018
+ *	by Chris Burton, 2013-2019
  *	
  *	"MenuCrafting.cs"
  * 
@@ -636,7 +636,7 @@ namespace AC
 			}
 			return false;
 		}
-		
+
 
 		/**
 		 * <summary>Gets the InvItem displayed in a specific slot.</summary>

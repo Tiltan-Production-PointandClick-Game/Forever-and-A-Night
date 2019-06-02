@@ -1,7 +1,7 @@
 ﻿/*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2018
+ *	by Chris Burton, 2013-2019
  *	
  *	"NavigationEngine.cs"
  * 
@@ -47,14 +47,47 @@ namespace AC
 		/**
 		 * <summary>Calculates a path between two points.</summary>
 		 * <param name = "startPosition">The start position</param>
-		 * <param name = "targetPosition">The indended end position</param>
+		 * <param name = "targetPosition">The intended end position</param>
 		 * <param name = "_char">The character (see Char) who this path is for (only used in PolygonCollider pathfinding)</param>
 		 * <returns>The path to take, as an array of Vector3s.</returns>
 		 */
 		public virtual Vector3[] GetPointsArray (Vector3 startPosition, Vector3 targetPosition, AC.Char _char = null)
 		{
-			List <Vector3> pointsList = new List<Vector3>();
+			List<Vector3> pointsList = new List<Vector3>();
 			pointsList.Add (targetPosition);
+			return pointsList.ToArray ();
+		}
+
+
+		/**
+		 * <summary>Calculates a path between multiple points.</summary>
+		 * <param name = "startPosition">The start position</param>
+		 * <param name = "targetPositions">An array of positions to travel through along the path, with the last entry being the intended destination</param>
+		 * <param name = "_char">The character (see Char) who this path is for (only used in PolygonCollider pathfinding)</param>
+		 * <returns>The path to take, as an array of Vector3s.</returns>
+		 */
+		public Vector3[] GetPointsArray (Vector3 startPosition, Vector3[] targetPositions, AC.Char _char = null)
+		{
+			if (targetPositions == null || targetPositions.Length == 0)
+			{
+				return GetPointsArray (startPosition, startPosition, _char);
+			}
+
+			List<Vector3> pointsList = new List<Vector3>();
+			for (int i=0; i<targetPositions.Length; i++)
+			{
+				Vector3 partialStartPosition = (i > 0) ? targetPositions[i-1] : startPosition;
+				Vector3[] partialPointsArray = GetPointsArray (partialStartPosition, targetPositions[i], _char);
+
+				foreach (Vector3 partialPoint in partialPointsArray)
+				{
+					if (pointsList.Count == 0 || pointsList[pointsList.Count-1] != partialPoint)
+					{
+						pointsList.Add (partialPoint);
+					}
+				}
+			}
+
 			return pointsList.ToArray ();
 		}
 

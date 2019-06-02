@@ -1,7 +1,7 @@
 ﻿/*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2018
+ *	by Chris Burton, 2013-2019
  *	
  *	"LipSyncTexture.cs"
  * 
@@ -86,7 +86,7 @@ namespace AC
 				}
 				else
 				{
-					ACDebug.LogWarning ("Cannot find material index " + materialIndex + " on SkinnedMeshRenderer " + skinnedMeshRenderer.gameObject.name);
+					ACDebug.LogWarning ("Cannot find material index " + materialIndex + " on SkinnedMeshRenderer " + skinnedMeshRenderer.gameObject.name, skinnedMeshRenderer);
 				}
 			}
 		}

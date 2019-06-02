@@ -1,7 +1,7 @@
 ﻿/*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2018
+ *	by Chris Burton, 2013-2019
  *	
  *	"ActionMenuSelect.cs"
  * 
@@ -9,6 +9,7 @@
  * 
  */
 
+using UnityEngine;
 using System.Collections.Generic;
 
 #if UNITY_EDITOR
@@ -30,6 +31,8 @@ namespace AC
 		public int slotIndex;
 		public int slotIndexParameterID = -1;
 
+		public bool selectFirstVisible = false;
+
 
 		public ActionMenuSelect ()
 		{
@@ -50,15 +53,26 @@ namespace AC
 		
 		override public float Run ()
 		{
-			if (menuName != "" && elementName != "")
+			if (!string.IsNullOrEmpty (menuName))
 			{
 				Menu menu = PlayerMenus.GetMenuWithName (menuName);
 				if (menu != null)
 				{
-					MenuElement menuElement = PlayerMenus.GetElementWithName (menuName, elementName);
-					if (menuElement != null)
+					if (selectFirstVisible)
 					{
-						menu.Select (elementName, slotIndex);
+						GameObject elementObject = menu.GetObjectToSelect ();
+						if (elementObject != null)
+						{
+							KickStarter.playerMenus.SelectUIElement (elementObject);
+						}
+					}
+					else if (!string.IsNullOrEmpty (elementName))
+					{
+						MenuElement menuElement = PlayerMenus.GetElementWithName (menuName, elementName);
+						if (menuElement != null)
+						{
+							menu.Select (elementName, slotIndex);
+						}
 					}
 				}
 			}
@@ -76,19 +90,23 @@ namespace AC
 			{
 				menuName = EditorGUILayout.TextField ("Menu containing element:", menuName);
 			}
-			
-			elementNameParameterID = Action.ChooseParameterGUI ("Element to select:", parameters, elementNameParameterID, ParameterType.String);
-			if (elementNameParameterID < 0)
+
+			selectFirstVisible = EditorGUILayout.Toggle ("Select first-visible element?", selectFirstVisible);
+			if (!selectFirstVisible)
 			{
-				elementName = EditorGUILayout.TextField ("Element to select:", elementName);
+				elementNameParameterID = Action.ChooseParameterGUI ("Element to select:", parameters, elementNameParameterID, ParameterType.String);
+				if (elementNameParameterID < 0)
+				{
+					elementName = EditorGUILayout.TextField ("Element to select:", elementName);
+				}
+
+				slotIndexParameterID = Action.ChooseParameterGUI ("Slot index (optional):", parameters, slotIndexParameterID, ParameterType.Integer);
+				if (slotIndexParameterID < 0)
+				{
+					slotIndex = EditorGUILayout.IntField ("Slot index (optional):", slotIndex);
+				}
 			}
 
-			slotIndexParameterID = Action.ChooseParameterGUI ("Slot index (optional):", parameters, slotIndexParameterID, ParameterType.Integer);
-			if (slotIndexParameterID < 0)
-			{
-				slotIndex = EditorGUILayout.IntField ("Slot index (optional):", slotIndex);
-			}
-		
 			AfterRunningOption ();
 		}
 		
@@ -97,9 +115,9 @@ namespace AC
 		{
 			if (!string.IsNullOrEmpty (menuName) && !string.IsNullOrEmpty (elementName))
 			{
-				return (" (" + menuName + " - " + elementName + ")");
+				return menuName + " - " + elementName;
 			}
-			return "";
+			return string.Empty;
 		}
 
 		#endif

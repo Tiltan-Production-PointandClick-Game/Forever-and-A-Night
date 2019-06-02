@@ -27,6 +27,28 @@ namespace AC
 			_target.ignorePlayerCollider = CustomGUILayout.ToggleLeft ("Ignore Player's collider?", _target.ignorePlayerCollider, "", "If True, then the Physics system will ignore collisions between this object and the player");
 			_target.ignoreMoveableRigidbodies = CustomGUILayout.ToggleLeft ("Ignore Moveable Rigidbodies?", _target.ignoreMoveableRigidbodies, "", " If True, then the Physics system will ignore collisions between this object and the bounday colliders of any DragTrack that this is not locked to");
 			_target.childrenShareLayer = CustomGUILayout.ToggleLeft ("Place children on same layer?", _target.childrenShareLayer, "", "If True, then this object's children will be placed on the same layer");
+
+			EditorGUILayout.BeginHorizontal ();
+			_target.interactiveBoundary = (InteractiveBoundary) CustomGUILayout.ObjectField <InteractiveBoundary> ("Interactive boundary:", _target.interactiveBoundary, true, "", "If assigned, then the draggable will only be interactive when the player is within this Trigger Collider's boundary");
+			if (_target.interactiveBoundary == null)
+			{
+				if (GUILayout.Button ("Create", GUILayout.MaxWidth (90f)))
+				{
+					string prefabName = "InteractiveBoundary";
+					if (SceneSettings.IsUnity2D ())
+					{
+						prefabName += "2D";
+					}
+					InteractiveBoundary newInteractiveBoundary = SceneManager.AddPrefab ("Logic", prefabName, true, false, true).GetComponent <InteractiveBoundary>();
+					newInteractiveBoundary.gameObject.name += (": " + _target.gameObject.name);
+					newInteractiveBoundary.transform.position = _target.transform.position;
+					_target.interactiveBoundary = newInteractiveBoundary;
+
+					UnityVersionHandler.PutInFolder (newInteractiveBoundary.gameObject, "_Hotspots");
+				}
+			}
+			EditorGUILayout.EndHorizontal ();
+
 			EditorGUILayout.EndVertical ();
 
 			EditorGUILayout.BeginVertical ("Button");

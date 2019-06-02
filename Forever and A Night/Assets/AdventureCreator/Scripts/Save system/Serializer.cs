@@ -1,7 +1,7 @@
 /*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2018
+ *	by Chris Burton, 2013-2019
  *	
  *	"Serializer.cs"
  * 
@@ -155,12 +155,12 @@ namespace AC
 					}
 					else
 					{	
-						ACDebug.LogWarning ("GameObject " + _gameObject.name + " was not saved because it does not have a Constant ID number.");
+						ACDebug.LogWarning ("GameObject " + _gameObject.name + " was not saved because it does not have a Constant ID number.", _gameObject);
 					}
 				}
 				else
 				{
-					ACDebug.LogWarning ("GameObject " + _gameObject.name + " was not saved because it does not have a 'Constant ID' script - please exit Play mode and attach one to it.");
+					ACDebug.LogWarning ("GameObject " + _gameObject.name + " was not saved because it does not have a 'Constant ID' script - please exit Play mode and attach one to it.", _gameObject);
 				}
 			}
 			return 0;
@@ -184,12 +184,12 @@ namespace AC
 					}
 					else
 					{	
-						ACDebug.LogWarning ("GameObject " + _transform.gameObject.name + " was not saved because it does not have a Constant ID number.");
+						ACDebug.LogWarning ("GameObject " + _transform.gameObject.name + " was not saved because it does not have a Constant ID number.", _transform);
 					}
 				}
 				else
 				{
-					ACDebug.LogWarning ("GameObject " + _transform.gameObject.name + " was not saved because it does not have a 'Constant ID' script - please exit Play mode and attach one to it.");
+					ACDebug.LogWarning ("GameObject " + _transform.gameObject.name + " was not saved because it does not have a 'Constant ID' script - please exit Play mode and attach one to it.", _transform);
 				}
 			}
 			return 0;

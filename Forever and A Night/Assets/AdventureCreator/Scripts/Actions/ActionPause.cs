@@ -1,7 +1,7 @@
 /*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2018
+ *	by Chris Burton, 2013-2019
  *	
  *	"ActionPause.cs"
  * 
@@ -80,8 +80,7 @@ namespace AC
 
 		public override string SetLabel ()
 		{
-			string labelAdd = " (" + timeToPause + "s)";
-			return labelAdd;
+			return timeToPause.ToString () + "s";
 		}
 
 		#endif

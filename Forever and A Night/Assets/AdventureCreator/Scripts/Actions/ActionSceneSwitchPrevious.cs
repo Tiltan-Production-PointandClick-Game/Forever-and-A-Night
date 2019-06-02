@@ -1,7 +1,7 @@
 /*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2018
+ *	by Chris Burton, 2013-2019
  *	
  *	"ActionScene.cs"
  * 
@@ -27,6 +27,7 @@ namespace AC
 
 		public bool relativePosition = false;
 		public Marker relativeMarker;
+		protected Marker runtimeRelativeMarker;
 		public int relativeMarkerID;
 		public int relativeMarkerParameterID = -1;
 
@@ -42,7 +43,7 @@ namespace AC
 
 		override public void AssignValues (List<ActionParameter> parameters)
 		{
-			relativeMarker = AssignFile <Marker> (parameters, relativeMarkerParameterID, relativeMarkerID, relativeMarker);
+			runtimeRelativeMarker = AssignFile <Marker> (parameters, relativeMarkerParameterID, relativeMarkerID, relativeMarker);
 		}
 		
 		
@@ -90,9 +91,9 @@ namespace AC
 				return;
 			}
 
-			if (!onlyPreload && relativePosition && relativeMarker != null)
+			if (!onlyPreload && relativePosition && runtimeRelativeMarker != null)
 			{
-				KickStarter.sceneChanger.SetRelativePosition (relativeMarker.transform);
+				KickStarter.sceneChanger.SetRelativePosition (runtimeRelativeMarker.transform);
 			}
 
 			if (onlyPreload && !relativePosition)
@@ -170,7 +171,7 @@ namespace AC
 		}
 
 
-		override public void AssignConstantIDs (bool saveScriptsToo)
+		override public void AssignConstantIDs (bool saveScriptsToo, bool fromAssetFile)
 		{
 			AssignConstantID (relativeMarker, relativeMarkerID, relativeMarkerParameterID);
 		}

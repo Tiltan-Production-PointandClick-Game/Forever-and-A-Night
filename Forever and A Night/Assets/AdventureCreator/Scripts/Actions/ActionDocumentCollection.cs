@@ -1,7 +1,7 @@
 ﻿/*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2018
+ *	by Chris Burton, 2013-2019
  *	
  *	"ActionDocumentCollection.cs"
  * 
@@ -24,6 +24,7 @@ namespace AC
 	{
 
 		public int documentID;
+		public int parameterID = -1;
 
 		[SerializeField] private DocumentCollectionMethod documentCollectionMethod = DocumentCollectionMethod.Add;
 		private enum DocumentCollectionMethod { Add, Remove, Clear };
@@ -35,6 +36,12 @@ namespace AC
 			category = ActionCategory.Document;
 			title = "Add or remove";
 			description = "Adds or removes a document from the player's collection, or removes all of them.";
+		}
+
+
+		public override void AssignValues (List<ActionParameter> parameters)
+		{
+			documentID = AssignDocumentID (parameters, parameterID, documentID);
 		}
 
 
@@ -67,7 +74,12 @@ namespace AC
 		override public void ShowGUI (List<ActionParameter> parameters)
 		{
 			documentCollectionMethod = (DocumentCollectionMethod) EditorGUILayout.EnumPopup ("Method:", documentCollectionMethod);
-			documentID = InventoryManager.DocumentSelectorList (documentID);
+
+			parameterID = Action.ChooseParameterGUI ("Document:", parameters, parameterID, ParameterType.Document);
+			if (parameterID < 0)
+			{
+				documentID = InventoryManager.DocumentSelectorList (documentID);
+			}
 
 			AfterRunningOption ();
 		}
@@ -75,7 +87,17 @@ namespace AC
 
 		override public string SetLabel ()
 		{
-			return " (" + documentCollectionMethod.ToString () + ")";
+			return documentCollectionMethod.ToString ();
+		}
+
+
+		public override int GetDocumentReferences (List<ActionParameter> parameters, int _docID)
+		{
+			if (parameterID < 0 && documentID == _docID)
+			{
+				return 1;
+			}
+			return 0;
 		}
 
 		#endif

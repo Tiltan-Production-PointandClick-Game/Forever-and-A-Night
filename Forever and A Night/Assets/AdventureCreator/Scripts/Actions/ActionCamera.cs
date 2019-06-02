@@ -1,7 +1,7 @@
 /*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2018
+ *	by Chris Burton, 2013-2019
  *	
  *	"ActionCamera.cs"
  * 
@@ -27,6 +27,7 @@ namespace AC
 		public int constantID = 0;
 		public int parameterID = -1;
 		public _Camera linkedCamera;
+		protected _Camera runtimeLinkedCamera;
 		
 		public float transitionTime;
 		public int transitionTimeParameterID = -1;
@@ -48,7 +49,7 @@ namespace AC
 		
 		override public void AssignValues (List<ActionParameter> parameters)
 		{
-			linkedCamera = AssignFile <_Camera> (parameters, parameterID, constantID, linkedCamera);
+			runtimeLinkedCamera = AssignFile <_Camera> (parameters, parameterID, constantID, linkedCamera);
 			transitionTime = AssignFloat (parameters, transitionTimeParameterID, transitionTime);
 		}
 		
@@ -63,7 +64,7 @@ namespace AC
 				
 				if (mainCam)
 				{
-					_Camera cam = linkedCamera;
+					_Camera cam = runtimeLinkedCamera;
 
 					if (returnToLast)
 					{
@@ -85,10 +86,10 @@ namespace AC
 								animCam.PlayClip ();
 							}
 
-							if (transitionTime > 0f && linkedCamera is GameCamera25D)
+							if (transitionTime > 0f && runtimeLinkedCamera is GameCamera25D)
 							{
 								mainCam.SetGameCamera (cam, 0f);
-								ACDebug.LogWarning ("Switching to a 2.5D camera (" + linkedCamera.name + ") must be instantaneous.");
+								ACDebug.LogWarning ("Switching to a 2.5D camera (" + runtimeLinkedCamera.name + ") must be instantaneous.", runtimeLinkedCamera);
 							}
 							else
 							{
@@ -100,7 +101,7 @@ namespace AC
 									{
 										return (transitionTime);
 									}
-									else if (linkedCamera is GameCameraAnimated)
+									else if (runtimeLinkedCamera is GameCameraAnimated)
 									{
 										return (defaultPauseTime);
 									}
@@ -112,9 +113,9 @@ namespace AC
 			}
 			else
 			{
-				if (linkedCamera is GameCameraAnimated && willWait)
+				if (runtimeLinkedCamera is GameCameraAnimated && willWait)
 				{
-					GameCameraAnimated animatedCamera = (GameCameraAnimated) linkedCamera;
+					GameCameraAnimated animatedCamera = (GameCameraAnimated) runtimeLinkedCamera;
 					if (animatedCamera.isPlaying ())
 					{
 						return defaultPauseTime;
@@ -141,7 +142,7 @@ namespace AC
 			MainCamera mainCam = KickStarter.mainCamera;
 			if (mainCam)
 			{
-				_Camera cam = linkedCamera;
+				_Camera cam = runtimeLinkedCamera;
 				
 				if (returnToLast)
 				{
@@ -230,7 +231,7 @@ namespace AC
 		}
 
 
-		override public void AssignConstantIDs (bool saveScriptsToo)
+		override public void AssignConstantIDs (bool saveScriptsToo, bool fromAssetFile)
 		{
 			if (saveScriptsToo)
 			{
@@ -242,16 +243,14 @@ namespace AC
 		
 		override public string SetLabel ()
 		{
-			string labelAdd = "";
 			if (linkedCamera && !returnToLast)
 			{
-				labelAdd = " (" + linkedCamera.name + ")";
+				return linkedCamera.name;
 			}
-			
-			return labelAdd;
+			return string.Empty;
 		}
 		
-#endif
+		#endif
 
     }
 	

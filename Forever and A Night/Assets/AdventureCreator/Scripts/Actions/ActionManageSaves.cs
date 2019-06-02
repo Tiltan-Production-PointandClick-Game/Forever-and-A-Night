@@ -1,7 +1,7 @@
 /*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2018
+ *	by Chris Burton, 2013-2019
  *	
  *	"ActionManageSaves.cs"
  * 
@@ -156,7 +156,7 @@ namespace AC
 		
 		public override string SetLabel ()
 		{
-			return (" (" + manageSaveType.ToString () + ")");
+			return manageSaveType.ToString ();
 		}
 		
 		#endif

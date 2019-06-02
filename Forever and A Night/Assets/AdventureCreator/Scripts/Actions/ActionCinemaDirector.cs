@@ -1,7 +1,7 @@
 ﻿/*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2018
+ *	by Chris Burton, 2013-2019
  *	
  *	"ActionCinemaDirector.cs"
  * 
@@ -133,7 +133,7 @@ namespace AC
 		}
 
 
-		override public void AssignConstantIDs (bool saveScriptsToo)
+		override public void AssignConstantIDs (bool saveScriptsToo, bool fromAssetFile)
 		{
 			#if CinemaDirectorIsPresent
 			AssignConstantID <CinemaDirector.Cutscene> (cdCutscene, constantID, parameterID);
@@ -146,10 +146,10 @@ namespace AC
 			#if CinemaDirectorIsPresent
 			if (cdCutscene != null)
 			{
-				return " (" + cdCutscene.gameObject.name + ")";
+				return cdCutscene.gameObject.name;
 			}
 			#endif
-			return "";
+			return string.Empty;
 		}
 		
 		#endif

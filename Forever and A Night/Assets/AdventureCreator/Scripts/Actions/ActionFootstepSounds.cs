@@ -1,7 +1,7 @@
 ﻿/*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2018
+ *	by Chris Burton, 2013-2019
  *	
  *	"ActionFootstepSounds.cs"
  * 
@@ -26,6 +26,7 @@ namespace AC
 		public int constantID = 0;
 		public int parameterID = -1;
 		public FootstepSounds footstepSounds;
+		protected FootstepSounds runtimeFootstepSounds;
 
 		public bool isPlayer;
 
@@ -50,19 +51,19 @@ namespace AC
 			{
 				if (KickStarter.player != null)
 				{
-					footstepSounds = KickStarter.player.GetComponentInChildren <FootstepSounds>();
+					runtimeFootstepSounds = KickStarter.player.GetComponentInChildren <FootstepSounds>();
 				}
 			}
 			else
 			{
-				footstepSounds = AssignFile <FootstepSounds> (parameters, parameterID, constantID, footstepSounds);
+				runtimeFootstepSounds = AssignFile <FootstepSounds> (parameters, parameterID, constantID, footstepSounds);
 			}
 		}
 
 
 		override public float Run ()
 		{
-			if (footstepSounds == null)
+			if (runtimeFootstepSounds == null)
 			{
 				ACDebug.LogWarning ("No FootstepSounds component set.");
 			}
@@ -70,11 +71,11 @@ namespace AC
 			{
 				if (footstepSoundType == FootstepSoundType.Walk)
 				{
-					footstepSounds.footstepSounds = newSounds;
+					runtimeFootstepSounds.footstepSounds = newSounds;
 				}
 				else if (footstepSoundType == FootstepSoundType.Run)
 				{
-					footstepSounds.runSounds = newSounds;
+					runtimeFootstepSounds.runSounds = newSounds;
 				}
 			}
 
@@ -158,13 +159,28 @@ namespace AC
 		}
 
 
-		override public void AssignConstantIDs (bool saveScriptsToo)
+		override public void AssignConstantIDs (bool saveScriptsToo, bool fromAssetFile)
 		{
+			FootstepSounds obToUpdate = footstepSounds;
+			if (isPlayer)
+			{
+				if (!fromAssetFile && GameObject.FindObjectOfType <Player>() != null)
+				{
+					obToUpdate = GameObject.FindObjectOfType <Player>().GetComponentInChildren <FootstepSounds>();
+				}
+
+				if (obToUpdate == null && AdvGame.GetReferences ().settingsManager != null)
+				{
+					Player player = AdvGame.GetReferences ().settingsManager.GetDefaultPlayer ();
+					obToUpdate = player.GetComponentInChildren <FootstepSounds>();
+				}
+			}
+
 			if (saveScriptsToo)
 			{
-				AddSaveScript <RememberFootstepSounds> (footstepSounds);
+				AddSaveScript <RememberFootstepSounds> (obToUpdate);
 			}
-			AssignConstantID <FootstepSounds> (footstepSounds, constantID, parameterID);
+			AssignConstantID <FootstepSounds> (obToUpdate, constantID, parameterID);
 		}
 		
 		
@@ -174,14 +190,14 @@ namespace AC
 			{
 				if (isPlayer)
 				{
-					return " (Player)";
+					return "Player";
 				}
 				else if (footstepSounds)
 				{
-					return " (" + footstepSounds.gameObject.name + ")";
+					return footstepSounds.gameObject.name;
 				}
 			}
-			return "";
+			return string.Empty;
 		}
 		
 		#endif

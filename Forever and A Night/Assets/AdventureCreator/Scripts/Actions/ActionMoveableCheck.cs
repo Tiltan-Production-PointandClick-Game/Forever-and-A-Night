@@ -1,7 +1,7 @@
 /*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2018
+ *	by Chris Burton, 2013-2019
  *	
  *	"ActionMoveableCheck.cs"
  * 
@@ -25,6 +25,7 @@ namespace AC
 		public DragBase dragObject;
 		public int constantID = 0;
 		public int parameterID = -1;
+		protected DragBase runtimeDragObject;
 
 
 		public ActionMoveableCheck ()
@@ -38,15 +39,15 @@ namespace AC
 
 		override public void AssignValues (List<ActionParameter> parameters)
 		{
-			dragObject = AssignFile <DragBase> (parameters, parameterID, constantID, dragObject);
+			runtimeDragObject = AssignFile <DragBase> (parameters, parameterID, constantID, dragObject);
 		}
 		
 		
 		override public bool CheckCondition ()
 		{
-			if (dragObject)
+			if (runtimeDragObject != null)
 			{
-				return (KickStarter.playerInput.IsDragObjectHeld (dragObject));
+				return (KickStarter.playerInput.IsDragObjectHeld (runtimeDragObject));
 			}
 			return false;
 		}
@@ -72,7 +73,7 @@ namespace AC
 		}
 
 
-		override public void AssignConstantIDs (bool saveScriptsToo)
+		override public void AssignConstantIDs (bool saveScriptsToo, bool fromAssetFile)
 		{
 			AssignConstantID <DragBase> (dragObject, constantID, parameterID);
 		}
@@ -80,11 +81,11 @@ namespace AC
 
 		override public string SetLabel ()
 		{
-			if (dragObject)
+			if (dragObject != null)
 			{
-				return (" (" + dragObject.gameObject.name + ")");
+				return dragObject.gameObject.name;
 			}
-			return "";
+			return string.Empty;
 		}
 		
 		#endif

@@ -1,7 +1,7 @@
 ﻿/*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2018
+ *	by Chris Burton, 2013-2019
  *	
  *	"ActionVarSequence.cs"
  * 
@@ -142,27 +142,25 @@ namespace AC
 					return GetLabelString (AdvGame.GetReferences ().variablesManager.vars);
 				}
 			}
-			
-			return "";
+
+			return string.Empty;
 		}
 		
 		
 		private string GetLabelString (List<GVar> vars)
 		{
-			string labelAdd = "";
-
 			if (vars != null)
 			{
 				foreach (GVar _var in vars)
 				{
 					if (_var.id == variableID && _var.type == VariableType.PopUp)
 					{
-						labelAdd = " (" + _var.label + ")";
+						return _var.label;
 					}
 				}
 			}
 
-			return labelAdd;
+			return string.Empty;
 		}
 
 

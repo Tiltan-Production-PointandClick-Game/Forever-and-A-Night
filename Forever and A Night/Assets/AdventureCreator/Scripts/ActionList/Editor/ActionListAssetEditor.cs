@@ -275,9 +275,12 @@ namespace AC
 		
 		public static void DeleteAction (AC.Action action, ActionListAsset _target)
 		{
-			_target.actions.Remove (action);
-			Undo.DestroyObjectImmediate (action);
-			AssetDatabase.SaveAssets ();
+			if (action != null) 
+			{
+				_target.actions.Remove (action);
+				Undo.DestroyObjectImmediate (action);
+				AssetDatabase.SaveAssets ();
+			}
 		}
 		
 		
@@ -552,14 +555,18 @@ namespace AC
 				{
 					ActionListAssetEditor.DeleteAction (_targetAsset.actions[0], _targetAsset);
 				}
+
 				Action newAction = ActionList.GetDefaultAction ();
-				_targetAsset.actions.Add (newAction);
-				newAction.hideFlags = HideFlags.HideInHierarchy;
-				
-				AssetDatabase.AddObjectToAsset (newAction, _targetAsset);
-				AssetDatabase.ImportAsset (AssetDatabase.GetAssetPath (newAction));
-				AssetDatabase.SaveAssets ();
-				AssetDatabase.Refresh ();
+				if (newAction != null)
+				{
+					_targetAsset.actions.Add (newAction);
+					newAction.hideFlags = HideFlags.HideInHierarchy;
+					
+					AssetDatabase.AddObjectToAsset (newAction, _targetAsset);
+					AssetDatabase.ImportAsset (AssetDatabase.GetAssetPath (newAction));
+					AssetDatabase.SaveAssets ();
+					AssetDatabase.Refresh ();
+				}
 			}
 		}
 

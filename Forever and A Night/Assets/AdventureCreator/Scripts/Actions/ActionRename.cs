@@ -1,7 +1,7 @@
 /*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2018
+ *	by Chris Burton, 2013-2019
  *	
  *	"ActionRename.cs"
  * 
@@ -26,6 +26,7 @@ namespace AC
 		public int constantID = 0;
 		public int parameterID = -1;
 		public Hotspot hotspot;
+		protected Hotspot runtimeHotspot;
 
 		public string newName;
 		public int lineID = -1;
@@ -43,15 +44,15 @@ namespace AC
 		
 		override public void AssignValues (List<ActionParameter> parameters)
 		{
-			hotspot = AssignFile <Hotspot> (parameters, parameterID, constantID, hotspot);
+			runtimeHotspot = AssignFile <Hotspot> (parameters, parameterID, constantID, hotspot);
 		}
 		
 		
 		override public float Run ()
 		{
-			if (hotspot && newName != "")
+			if (runtimeHotspot && !string.IsNullOrEmpty (newName))
 			{
-				hotspot.SetName (newName, lineID);
+				runtimeHotspot.SetName (newName, lineID);
 			}
 			
 			return 0f;
@@ -82,7 +83,7 @@ namespace AC
 		}
 
 
-		override public void AssignConstantIDs (bool saveScriptsToo)
+		override public void AssignConstantIDs (bool saveScriptsToo, bool fromAssetFile)
 		{
 			if (saveScriptsToo)
 			{
@@ -95,14 +96,11 @@ namespace AC
 		
 		override public string SetLabel ()
 		{
-			string labelAdd = "";
-			
-			if (hotspot && newName != "")
+			if (hotspot != null && !string.IsNullOrEmpty (newName))
 			{
-				labelAdd = " (" + hotspot.name + " to " + newName + ")";
+				return hotspot.name + " to " + newName;
 			}
-			
-			return labelAdd;
+			return string.Empty;
 		}
 		
 		#endif

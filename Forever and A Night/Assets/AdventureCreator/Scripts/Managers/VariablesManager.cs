@@ -1,7 +1,7 @@
 /*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2018
+ *	by Chris Burton, 2013-2019
  *	
  *	"VariablesManager.cs"
  * 
@@ -46,7 +46,8 @@ namespace AC
 		private VariableLocation sideVarLocation = VariableLocation.Global;
 		private string[] boolType = {"False", "True"};
 		private string filter = "";
-		private enum VarFilter { Label, Description };
+		private VariableType typeFilter;
+		private enum VarFilter { Label, Description, Type };
 		private VarFilter varFilter;
 
 		private Vector2 scrollPos;
@@ -98,7 +99,14 @@ namespace AC
 				EditorGUILayout.BeginHorizontal ();
 				EditorGUILayout.LabelField ("Filter by:", GUILayout.Width (65f));
 				varFilter = (VarFilter) EditorGUILayout.EnumPopup (varFilter, GUILayout.MaxWidth (100f));
-				filter = EditorGUILayout.TextField (filter);
+				if (varFilter == VarFilter.Type)
+				{
+					typeFilter = (VariableType) EditorGUILayout.EnumPopup (typeFilter);
+				}
+				else
+				{
+					filter = EditorGUILayout.TextField (filter);
+				}
 				EditorGUILayout.EndHorizontal ();
 			}
 		
@@ -445,7 +453,7 @@ namespace AC
 								if (thisNumReferences > 0)
 								{
 									totalNumReferences += thisNumReferences;
-									ACDebug.Log ("Found " + thisNumReferences + " references to global variable '" + globalVariable.label + "' in Action #" + actionList.actions.IndexOf (action) + " of ActionList '" + actionList.name + "'", actionList);
+									ACDebug.Log ("Found " + thisNumReferences + " references to global variable '" + globalVariable.label + "' in Action #" + actionList.actions.IndexOf (action) + " of ActionList '" + actionList.name + "' in scene '" + sceneFile + "'", actionList);
 								}
 							}
 						}
@@ -457,7 +465,7 @@ namespace AC
 							if (thisNumReferences > 0)
 							{
 								totalNumReferences += thisNumReferences;
-								ACDebug.Log ("Found " + thisNumReferences + " references to global variable '" + globalVariable.label + "' in Conversation '" + conversation.name + "'", conversation);
+								ACDebug.Log ("Found " + thisNumReferences + " references to global variable '" + globalVariable.label + "' in Conversation '" + conversation.name + "' in scene '" + sceneFile + "'", conversation);
 							}
 						}
 					}
@@ -748,22 +756,21 @@ namespace AC
 
 		private bool VarMatchesFilter (GVar _var)
 		{
-			if (string.IsNullOrEmpty (filter))
-			{
-				return true;
-			}
-
 			if (_var != null)
 			{
-				if (varFilter == VarFilter.Label && _var.label.ToLower ().Contains (filter.ToLower ()))
+				switch (varFilter)
 				{
-					return true;
-				}
-				else if (varFilter == VarFilter.Description && _var.description.ToLower ().Contains (filter.ToLower ()))
-				{
-					return true;
+					case VarFilter.Label:
+						return (string.IsNullOrEmpty (filter) || _var.label.ToLower ().Contains (filter.ToLower ()));
+
+					case VarFilter.Description:
+						return (string.IsNullOrEmpty (filter) || _var.description.ToLower ().Contains (filter.ToLower ()));
+
+					case VarFilter.Type:
+						return (_var.type == typeFilter);
 				}
 			}
+
 			return false;
 		}
 
@@ -846,6 +853,7 @@ namespace AC
 					}
 
 					EditorGUILayout.EndScrollView ();
+					EditorGUILayout.HelpBox ("Filtering " + numInFilter + " out of " + _vars.Count + " variables.", MessageType.Info);
 				}
 				else if (_vars.Count > 0 && !string.IsNullOrEmpty (filter))
 				{

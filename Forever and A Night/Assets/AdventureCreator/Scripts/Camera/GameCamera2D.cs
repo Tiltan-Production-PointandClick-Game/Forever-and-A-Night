@@ -1,7 +1,7 @@
 ﻿/*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2018
+ *	by Chris Burton, 2013-2019
  *	
  *	"GameCamera2D.cs"
  * 
@@ -23,7 +23,7 @@ namespace AC
 	#if !(UNITY_4_6 || UNITY_4_7 || UNITY_5_0)
 	[HelpURL("http://www.adventurecreator.org/scripting-guide/class_a_c_1_1_game_camera2_d.html")]
 	#endif
-	public class GameCamera2D : _Camera
+	public class GameCamera2D : CursorInfluenceCamera
 	{
 
 		/** If True, then horizontal panning is prevented */
@@ -367,6 +367,17 @@ namespace AC
 		{
 			perspectiveOffset = _perspectiveOffset;
 		}
+
+
+		#if UNITY_EDITOR
+
+		[ContextMenu ("Make active")]
+		private void LocalMakeActive ()
+		{
+			MakeActive ();
+		}
+
+		#endif
 
 	}
 

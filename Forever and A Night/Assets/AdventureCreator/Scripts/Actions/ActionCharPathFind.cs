@@ -1,7 +1,7 @@
 /*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2018
+ *	by Chris Burton, 2013-2019
  *	
  *	"ActionCharPathFind.cs"
  * 
@@ -43,7 +43,7 @@ namespace AC
 		[SerializeField] private OnReachTimeLimit onReachTimeLimit = OnReachTimeLimit.TeleportToDestination;
 		private enum OnReachTimeLimit { TeleportToDestination, StopMoving };
 		private float currentTimer;
-		private Char runtimeChar;
+		protected Char runtimeChar;
 
 		
 		public ActionCharPathFind ()
@@ -89,7 +89,7 @@ namespace AC
 					Paths path = runtimeChar.GetComponent <Paths>();
 					if (path == null)
 					{
-						ACDebug.LogWarning ("Cannot move a character with no Paths component");
+						ACDebug.LogWarning ("Cannot move a character with no Paths component", runtimeChar);
 					}
 					else
 					{
@@ -310,7 +310,7 @@ namespace AC
 		}
 
 
-		override public void AssignConstantIDs (bool saveScriptsToo)
+		override public void AssignConstantIDs (bool saveScriptsToo, bool fromAssetFile)
 		{
 			if (saveScriptsToo)
 			{
@@ -330,21 +330,18 @@ namespace AC
 		
 		override public string SetLabel ()
 		{
-			string labelAdd = "";
-			
-			if (marker)
+			if (marker != null)
 			{
-				if (charToMove)
+				if (charToMove != null)
 				{
-					labelAdd = " (" + charToMove.name + " to " + marker.name + ")";
+					return charToMove.name + " to " + marker.name;
 				}
 				else if (isPlayer)
 				{
-					labelAdd = " (Player to " + marker.name + ")";
+					return "Player to " + marker.name;
 				}
 			}
-			
-			return labelAdd;
+			return string.Empty;
 		}
 
 		#endif

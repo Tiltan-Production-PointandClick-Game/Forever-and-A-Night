@@ -1,7 +1,7 @@
 /*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2018
+ *	by Chris Burton, 2013-2019
  *	
  *	"RuntimeInventory.cs"
  * 
@@ -1098,7 +1098,7 @@ namespace AC
 		public void ShowInteractions (InvItem item)
 		{
 			hoverItem = item;
-			if (KickStarter.settingsManager.seeInteractions != SeeInteractions.ViaScriptOnly)
+			if (KickStarter.settingsManager.SeeInteractions != SeeInteractions.ViaScriptOnly)
 			{
 				KickStarter.playerMenus.EnableInteractionMenus (item);
 			}

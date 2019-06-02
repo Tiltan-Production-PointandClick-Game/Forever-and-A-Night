@@ -88,10 +88,7 @@ namespace AC
 						go.name = prefabName;
 						go.transform.position = _target.transform.position;
 						_target.centrePoint = go.transform;
-						if (GameObject.Find ("_Markers"))
-						{
-							go.transform.parent = GameObject.Find ("_Markers").transform;
-						}
+						go.transform.parent = _target.transform;
 					}
 				}
 				EditorGUILayout.EndHorizontal ();
@@ -210,7 +207,7 @@ namespace AC
 			EditorGUILayout.EndHorizontal ();
 			if (_target.provideLookInteraction)
 			{
-				ButtonGUI (_target.lookButton, "Look", _target.interactionSource);
+				ButtonGUI (_target.lookButton, "Examine", _target.interactionSource);
 			}
 			EditorGUILayout.EndVertical ();
 		}
@@ -250,7 +247,7 @@ namespace AC
 					{
 						foreach (CursorIcon _icon in cursorManager.cursorIcons)
 						{
-							labelList.Add (_icon.label);
+							labelList.Add (_icon.id.ToString () + ": " + _icon.label);
 						}
 						
 						foreach (Button useButton in _target.useButtons)
@@ -485,7 +482,7 @@ namespace AC
 						string defaultName = GenerateInteractionName (suffix, true);
 
 						#if !(UNITY_WP8 || UNITY_WINRT)
-						defaultName = System.Text.RegularExpressions.Regex.Replace (defaultName, "[^\\w\\_]", "");
+						defaultName = System.Text.RegularExpressions.Regex.Replace (defaultName, "[^\\w\\._]", "");
 						#else
 						defaultName = "";
 						#endif

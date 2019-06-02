@@ -1,7 +1,7 @@
 ﻿/*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2018
+ *	by Chris Burton, 2013-2019
  *	
  *	"UnityVersionHandler.cs"
  * 
@@ -638,9 +638,10 @@ namespace AC
 		/**
 		 * <summary>Checks if a suppplied GameObject is present within the active scene.</summary>
 		 * <param name = "gameObjectName">The name of the GameObject to check for</param>
+		 * <param name = "persistentIsValid">If True, then objects marked as "DontDestroyOnLoad" will also be valid</param>
 		 * <returns>True if the GameObject is present within the active scene.</returns>
 		 */
-		public static bool ObjectIsInActiveScene (string gameObjectName)
+		public static bool ObjectIsInActiveScene (string gameObjectName, bool persistentIsValid = true)
 		{
 			if (string.IsNullOrEmpty (gameObjectName) || !GameObject.Find (gameObjectName))
 			{
@@ -653,11 +654,16 @@ namespace AC
 			UnityEngine.Object[] allObjects = Object.FindObjectsOfType (typeof (GameObject));
 			foreach (GameObject _object in allObjects)
 			{
-				if ((_object.name == gameObjectName && _object.scene == activeScene) ||
-					_object.scene.name == "DontDestroyOnLoad" ||
-					(_object.scene.name == null && _object.scene.buildIndex == -1)) // Because on Android, DontDestroyOnLoad scene has no name
+				if (_object.name == gameObjectName)
 				{
-					return true;
+					if (_object.scene == activeScene)
+					{
+						return true;
+					}
+					else if (persistentIsValid && GameObjectIsPersistent (_object))
+					{
+						return true;
+					}
 				}
 			}
 			return false;
@@ -934,9 +940,10 @@ namespace AC
 		/**
 		 * <summary>Checks if a suppplied GameObject is present within the active scene. The GameObject must be in the Hierarchy at runtime.</summary>
 		 * <param name = "gameObject">The GameObject to check for</param>
-		 * <returns>True if the GameObject is present within the active scene, or DontDestroyOnLoad.</returns>
+		 * <param name = "persistentIsValid">If True, then objects marked as "DontDestroyOnLoad" will also be valid</param>
+		 * <returns>True if the GameObject is present within the active scene</returns>
 		 */
-		public static bool ObjectIsInActiveScene (GameObject gameObject)
+		public static bool ObjectIsInActiveScene (GameObject gameObject, bool persistentIsValid = true)
 		{
 			if (gameObject == null)
 			{
@@ -950,9 +957,12 @@ namespace AC
 			#endif
 			#if UNITY_5_3 || UNITY_5_4 || UNITY_5_3_OR_NEWER
 			UnityEngine.SceneManagement.Scene activeScene = UnityEngine.SceneManagement.SceneManager.GetActiveScene ();
-			if (gameObject.scene == activeScene ||
-				gameObject.scene.name == "DontDestroyOnLoad" ||
-				(gameObject.scene.name == null && gameObject.scene.buildIndex == -1)) // Because on Android, DontDestroyOnLoad scene has no name
+			if (gameObject.scene == activeScene)
+			{
+				return true;
+			}
+
+			if (persistentIsValid && GameObjectIsPersistent (gameObject))
 			{
 				return true;
 			}
@@ -964,12 +974,29 @@ namespace AC
 
 
 		/**
+		 * <summary>Checks if a given GameObject is set to be persistent, i.e. flagged as 'DontDestroyOnLoad'</summary>
+		 * <param name = "gameObject">The GameObject to check for</param>
+		 * <returns>True if the given GameObject is set to be persistent</returns>
+		 */
+		public static bool GameObjectIsPersistent (GameObject gameObject)
+		{
+			if (gameObject.scene.name == "DontDestroyOnLoad" ||
+				(gameObject.scene.name == null && gameObject.scene.buildIndex == -1)) // Because on Android, DontDestroyOnLoad scene has no name
+			{
+				return true;
+			}
+			return false;
+		}
+
+
+		/**
 		 * <summary>Checks if a suppplied GameObject is present within a given scene. The GameObject must be in the Hierarchy at runtime.</summary>
 		 * <param name = "gameObject">The GameObject to check for</param>
 		 * <param name = "sceneIndex">The build index of the scene</param>
-		 * <returns>True if the GameObject is present within the given scene, or DontDestroyOnLoad.</returns>
+		 * <param name = "persistentIsValid">If True, then objects marked as "DontDestroyOnLoad" will also be valid</param>
+		 * <returns>True if the GameObject is present within the given scene.</returns>
 		 */
-		public static bool ObjectIsInScene (GameObject gameObject, int sceneIndex)
+		public static bool ObjectIsInScene (GameObject gameObject, int sceneIndex, bool persistentIsValid = true)
 		{
 			if (gameObject == null)
 			{
@@ -982,9 +1009,11 @@ namespace AC
 			}
 			#endif
 			#if UNITY_5_3 || UNITY_5_4 || UNITY_5_3_OR_NEWER
-			if (gameObject.scene.buildIndex == sceneIndex ||
-				gameObject.scene.name == "DontDestroyOnLoad" ||
-				(gameObject.scene.name == null && gameObject.scene.buildIndex == -1)) // Because on Android, DontDestroyOnLoad scene has no name
+			if (gameObject.scene.buildIndex == sceneIndex)
+			{
+				return true;
+			}
+			else if (persistentIsValid && GameObjectIsPersistent (gameObject))
 			{
 				return true;
 			}

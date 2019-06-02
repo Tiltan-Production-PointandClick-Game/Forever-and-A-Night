@@ -1,7 +1,11 @@
-﻿/*
+﻿#if UNITY_STANDALONE && (UNITY_5 || UNITY_2017_1_OR_NEWER || UNITY_PRO_LICENSE) && !UNITY_2018_2_OR_NEWER
+#define ALLOW_MOVIETEXTURES
+#endif
+
+/*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2018
+ *	by Chris Burton, 2013-2019
  *	
  *	"MenuGraphic.cs"
  * 
@@ -210,6 +214,23 @@ namespace AC
 			{
 				localTexture = null;
 			}
+		}
+
+
+		public override void OnMenuTurnOn (Menu menu)
+		{
+			PreDisplay (0, Options.GetLanguage (), false);
+
+			#if ALLOW_MOVIETEXTURE
+			if (localTexture != null)
+			{
+				MovieTexture movieTexture = localTexture as MovieTexture;
+				if (movieTexture != null)
+				{
+					movieTexture.Play ();
+				}
+			}
+			#endif
 		}
 
 

@@ -1,7 +1,7 @@
 /*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2018
+ *	by Chris Burton, 2013-2019
  *	
  *	"SpeechManager.cs"
  * 
@@ -75,6 +75,8 @@ namespace AC
 		/** If True, and text is scrolling, then the display time upon completion will be influenced by the length of the speech text */
 		public bool scrollingTextFactorsLength = false;
 
+		/** If True, then asset bundles will be used to store speech files */
+		public bool useAssetBundles = false;
 		/** If True, then speech audio files will play when characters speak */
 		public bool searchAudioFiles = true;
 		/** If True, then the audio files associated with speech text will be named automatically according to their ID number */
@@ -113,6 +115,10 @@ namespace AC
 		public List<string> languages = new List<string> ();
 		/** A List of whether or not each language in the game reads right-to-left (Arabic / Hebrew-style) */
 		public List<bool> languageIsRightToLeft = new List<bool> ();
+		/** A collection of AssetBundles to store each language's speech audio files */
+		public List<string> languageAudioAssetBundles = new List<string>();
+		/** A collection of AssetBundles to store each language's speech lipsync files */
+		public List<string> languageLipsyncAssetBundles = new List<string>();
 		/** If True, then the game's original text cannot be displayed in-game, and only translations will be available */
 		public bool ignoreOriginalText = false;
 	
@@ -185,6 +191,9 @@ namespace AC
 		private int numAdded = 0;
 
 		#if CAN_USE_TIMELINE
+		/** The name of the Menu to display subtitles in when previewing Speech tracks in a Timeline */
+		public string previewMenuName;
+
 		private List<TimelineAsset> allTimelineAssets = new List<TimelineAsset>();
 		#endif
 
@@ -203,6 +212,10 @@ namespace AC
 			showSubtitles = CustomGUILayout.ToggleHeader (showSubtitles, "Subtitles");
 			if (showSubtitles)
 			{
+				#if CAN_USE_TIMELINE
+				previewMenuName = CustomGUILayout.DelayedTextField ("Subtitle preview menu:", previewMenuName, "AC.KickStarter.speechManager.previewMenuName", "The name of the Menu to display subtitles in when previewing Speech tracks in a Timeline.");
+				#endif
+
 				separateLines = CustomGUILayout.ToggleLeft ("Treat carriage returns as separate speech lines?", separateLines, "AC.KickStarter.speechManager.separateLines", "If True, then a speech line will be split by carriage returns into separate speech lines");
 				if (separateLines)
 				{
@@ -312,7 +325,11 @@ namespace AC
 
 				if (autoNameSpeechFiles)
 				{
-					autoSpeechFolder = CustomGUILayout.TextField ("Speech audio directory:", autoSpeechFolder, "AC.KickStarter.speechManager.autoSpeechFolder", "The subdirectory within Resources that speech files are pulled from");
+					useAssetBundles = CustomGUILayout.ToggleLeft ("Get speech files from AssetBundles?", useAssetBundles, "AC.KickStarter.speechManager.useAssetBundles", "If True, then speech audio and lipsync files will be read from AssetBundles.");
+					if (!useAssetBundles)
+					{
+						autoSpeechFolder = CustomGUILayout.TextField ("Speech audio directory:", autoSpeechFolder, "AC.KickStarter.speechManager.autoSpeechFolder", "The subdirectory within Resources that speech files are pulled from");
+					}
 				}
 
 				#if UNITY_IOS || UNITY_ANDROID || UNITY_WEBGL
@@ -325,6 +342,7 @@ namespace AC
 				translateAudio = CustomGUILayout.ToggleLeft ("Speech audio can be translated?", translateAudio, "AC.KickStarter.speechManager.translateAudio", "If True, then each translation will have its own set of speech audio files");
 				if (translateAudio)
 				{
+					if (useAssetBundles && autoNameSpeechFiles) {} else
 					fallbackAudio = CustomGUILayout.ToggleLeft ("Use original language audio if none found?", fallbackAudio, "AC.KickStarter.speechManager.fallbackAudio", "If True, then translations that don't have speech audio files will use the audio files from the game's original language");
 				}
 				usePlayerRealName = CustomGUILayout.ToggleLeft ("Use Player prefab name in filenames?", usePlayerRealName, "AC.KickStarter.speechManager.usePlayerRealName", "If True, then speech audio spoken by the player will expect the audio filenames to be named after the player's prefab, rather than just 'Player'");
@@ -332,7 +350,7 @@ namespace AC
 				{
 					separateSharedPlayerAudio = CustomGUILayout.ToggleLeft ("'Player' lines have separate audio for each player?", separateSharedPlayerAudio, "AC.KickStarter.speechManager.separateSharedPlayerAudio", "If True, then speech lines marked as Player lines will have audio entries for each player prefab.");
 				}
-				if (autoNameSpeechFiles)
+				if (autoNameSpeechFiles && !useAssetBundles)
 				{
 					placeAudioInSubfolders = CustomGUILayout.ToggleLeft ("Place audio files in speaker subfolders?", placeAudioInSubfolders, "AC.KickStarter.speechManager.placeAudioInSubfolders", "If True, then speech audio files will need to be placed in subfolders named after the character who speaks");
 				}
@@ -350,6 +368,12 @@ namespace AC
 			if (showLipSyncing)
 			{
 				lipSyncMode = (LipSyncMode) CustomGUILayout.EnumPopup ("Lip syncing:", lipSyncMode, "AC.KickStarter.speechManager.lipSyncMode", "The game's lip-syncing method");
+
+				if (autoNameSpeechFiles && lipSyncMode != LipSyncMode.Off && lipSyncMode != LipSyncMode.FaceFX)
+				{
+					autoLipsyncFolder = CustomGUILayout.TextField ("Lipsync data directory:", autoLipsyncFolder, "AC.KickStarter.speechManager.autoLipsyncFolder", "The subdirectory within Resources that lipsync files are pulled from");
+				}
+
 				if (lipSyncMode == LipSyncMode.FromSpeechText || lipSyncMode == LipSyncMode.ReadPamelaFile || lipSyncMode == LipSyncMode.ReadSapiFile || lipSyncMode == LipSyncMode.ReadPapagayoFile)
 				{
 					lipSyncOutput = (LipSyncOutput) CustomGUILayout.EnumPopup ("Perform lipsync on:", lipSyncOutput, "AC.KickStarter.speechManager.lipSyncOutput", "What lip-syncing actually affects");
@@ -382,11 +406,6 @@ namespace AC
 				else if (lipSyncMode == LipSyncMode.RogoLipSync && !RogoLipSyncIntegration.IsDefinePresent ())
 				{
 					EditorGUILayout.HelpBox ("The 'RogoLipSyncIsPresent' preprocessor define must be declared in the Player Settings.", MessageType.Warning);
-				}
-
-				if (autoNameSpeechFiles && lipSyncMode != LipSyncMode.Off && lipSyncMode != LipSyncMode.FaceFX)
-				{
-					autoLipsyncFolder = CustomGUILayout.TextField ("Lipsync data directory:", autoLipsyncFolder, "AC.KickStarter.speechManager.autoLipsyncFolder", "The subdirectory within Resources that lipsync files are pulled from");
 				}
 			}
 			EditorGUILayout.EndVertical ();
@@ -478,16 +497,19 @@ namespace AC
 			sceneNames.Add ("(Any or no scene)");
 			foreach (string sceneFile in sceneFiles)
 			{
-				int slashPoint = sceneFile.LastIndexOf ("/") + 1;
-				string sceneName = sceneFile.Substring (slashPoint);
+				if (!string.IsNullOrEmpty (sceneFile))
+				{
+					int slashPoint = sceneFile.LastIndexOf ("/") + 1;
+					string sceneName = sceneFile.Substring (slashPoint);
 
-				if (sceneName.Length > 6)
-				{
-					sceneNames.Add (sceneName.Substring (0, sceneName.Length - 6));
-				}
-				else
-				{
-					ACDebug.LogError ("Invalid scene file name '" + sceneFile + "' is this saved and named properly in the Assets folder?");
+					if (sceneName.Length > 6)
+					{
+						sceneNames.Add (sceneName.Substring (0, sceneName.Length - 6));
+					}
+					else
+					{
+						ACDebug.LogWarning ("Invalid scene file name '" + sceneFile + "' is this saved and named properly in the Assets folder?");
+					}
 				}
 			}
 			return sceneNames.ToArray ();
@@ -512,19 +534,26 @@ namespace AC
 				sortedLines.Sort (delegate (SpeechLine a, SpeechLine b) {return a.description.CompareTo (b.description);});
 			}
 
-			string selectedScene = sceneNames[sceneFilter] + ".unity";
+			sceneFiles = AdvGame.GetSceneFiles ();
+			GetSceneNames ();
+
+			string selectedScene = string.Empty;
+			if (sceneNames != null && sceneNames.Count > 0 && sceneFilter < sceneNames.Count)
+			{
+				selectedScene = sceneNames[sceneFilter] + ".unity";
+			}
 
 			displayedLinesDictionary.Clear ();
 			foreach (SpeechLine line in sortedLines)
 			{
 				if (line.textType == typeFilter && line.Matches (textFilter, filterSpeechLine))
 				{
-					string scenePlusExtension = (line.scene != "") ? (line.scene + ".unity") : "";
+					string scenePlusExtension = (!string.IsNullOrEmpty (line.scene)) ? (line.scene + ".unity") : string.Empty;
 					
-					if ((line.scene == "" && sceneFilter == 0)
+					if ((string.IsNullOrEmpty (line.scene) && sceneFilter == 0)
 						|| sceneFilter == 1
-						|| (line.scene != "" && sceneFilter > 1 && line.scene.EndsWith (selectedScene))
-						|| (line.scene != "" && sceneFilter > 1 && scenePlusExtension.EndsWith (selectedScene)))
+						|| (!string.IsNullOrEmpty (line.scene) && !string.IsNullOrEmpty (selectedScene) && sceneFilter > 1 && line.scene.EndsWith (selectedScene))
+						|| (!string.IsNullOrEmpty (line.scene) && !string.IsNullOrEmpty (selectedScene) && sceneFilter > 1 && scenePlusExtension.EndsWith (selectedScene)))
 					{
 						if (tagFilter <= 0
 						|| ((tagFilter-1) < speechTags.Count && line.tagID == speechTags[tagFilter-1].ID))
@@ -582,17 +611,17 @@ namespace AC
 			}
 			
 			EditorGUILayout.BeginHorizontal ();
-			EditorGUILayout.LabelField ("Type filter:", GUILayout.Width (65f));
+			EditorGUILayout.LabelField ("Type filter:", GUILayout.Width (70f));
 			typeFilter = (AC_TextType) EditorGUILayout.EnumPopup (typeFilter);
 			EditorGUILayout.EndHorizontal ();
 			
 			EditorGUILayout.BeginHorizontal ();
-			EditorGUILayout.LabelField ("Scene filter:", GUILayout.Width (65f));
+			EditorGUILayout.LabelField ("Scene filter:", GUILayout.Width (70f));
 			sceneFilter = EditorGUILayout.Popup (sceneFilter, sceneNames.ToArray ());
 			EditorGUILayout.EndHorizontal ();
 			
 			EditorGUILayout.BeginHorizontal ();
-			EditorGUILayout.LabelField ("Text filter:", GUILayout.Width (65f));
+			EditorGUILayout.LabelField ("Text filter:", GUILayout.Width (70f));
 			filterSpeechLine = (FilterSpeechLine) EditorGUILayout.EnumPopup (filterSpeechLine, GUILayout.MaxWidth (100f));
 			textFilter = EditorGUILayout.TextField (textFilter);
 			EditorGUILayout.EndHorizontal ();
@@ -654,10 +683,18 @@ namespace AC
 				displayedLine.Value.ShowGUI ();
 			}
 
-			if (displayedLinesDictionary.Count == 0 && lines.Count > 0)
+			if (lines.Count > 0)
 			{
-				EditorGUILayout.HelpBox ("No lines that match the above filters have been gathered.", MessageType.Info);
+				if (displayedLinesDictionary.Count == 0)
+				{
+					EditorGUILayout.HelpBox ("No lines that match the above filters have been gathered.", MessageType.Info);
+				}
+				else
+				{
+					EditorGUILayout.HelpBox ("Filtering " + displayedLinesDictionary.Count + " out of " + lines.Count + " lines.", MessageType.Info);
+				}
 			}
+
 
 			doCache = GUI.changed;
 
@@ -703,9 +740,17 @@ namespace AC
 				{
 					ignoreOriginalText = CustomGUILayout.Toggle ("Don't use at runtime?", ignoreOriginalText, "AC.KickStarter.speechManager.ignoreOriginalText", "If True, then the game's original text cannot be displayed in-game, and only translations will be available");
 				}
-				if (languages.Count <= 1 || !ignoreOriginalText)
+				if (languages.Count <= 1 || !ignoreOriginalText || !translateAudio)
 				{
 					languageIsRightToLeft[0] = CustomGUILayout.Toggle ("Reads right-to-left?", languageIsRightToLeft[0], "AC.KickStarter.speechManager.languageIsRightToLeft[0]", "Whether or not the language reads right-to-left (Arabic / Hebrew-style)");
+					if (autoNameSpeechFiles && useAssetBundles)
+					{
+						languageAudioAssetBundles[0] = CustomGUILayout.TextField ("Audio AssetBundle name:", languageAudioAssetBundles[0], "AC.KickStarter.speechManager.languageAudioAssetBundles[0]", "An AssetBundle filename (in a StreamingAssets folder) that stores the language's speech audio files");
+						if (UseFileBasedLipSyncing ())
+						{
+							languageLipsyncAssetBundles[0] = CustomGUILayout.TextField ("Lipsync AssetBundle name:", languageLipsyncAssetBundles[0], "AC.KickStarter.speechManager.languageLipSyncAssetBundles[0]", "An AssetBundle filename (in a StreamingAssets folder) that stores the language's speech lipsync files");
+						}
+					}
 				}
 				EditorGUILayout.EndVertical ();
 
@@ -724,6 +769,15 @@ namespace AC
 						}
 						EditorGUILayout.EndHorizontal ();
 						languageIsRightToLeft[i] = CustomGUILayout.Toggle ("Reads right-to-left?", languageIsRightToLeft[i], "AC.KickStarter.speechManager.languageIsRightToLeft[" + i.ToString () + "]", "Whether or not the language reads right-to-left (Arabic / Hebrew-style)");
+
+						if (autoNameSpeechFiles && translateAudio && useAssetBundles)
+						{
+							languageAudioAssetBundles[i] = CustomGUILayout.TextField ("Audio AssetBundle name:", languageAudioAssetBundles[i], "AC.KickStarter.speechManager.languageAudioAssetBundles[0]", "An AssetBundle filename (in a StreamingAssets folder) that stores the language's speech audio files");
+							if (UseFileBasedLipSyncing ())
+							{
+								languageLipsyncAssetBundles[i] = CustomGUILayout.TextField ("Lipsync AssetBundle name:", languageLipsyncAssetBundles[i], "AC.KickStarter.speechManager.languageLipSyncAssetBundles[i]", "An AssetBundle filename (in a StreamingAssets folder) that stores the language's speech lipsync files");
+							}
+						}
 						EditorGUILayout.EndVertical ();
 					}
 				}
@@ -869,6 +923,8 @@ namespace AC
 			}
 
 			languageIsRightToLeft.Add (false);
+			languageAudioAssetBundles.Add (string.Empty);
+			languageLipsyncAssetBundles.Add (string.Empty);
 		}
 
 		
@@ -876,6 +932,8 @@ namespace AC
 		{
 			languages.RemoveAt (i);
 			languageIsRightToLeft.RemoveAt (i);
+			languageAudioAssetBundles.RemoveAt (i);
+			languageLipsyncAssetBundles.RemoveAt (i);
 			
 			foreach (SpeechLine line in lines)
 			{
@@ -902,6 +960,14 @@ namespace AC
 			bool thisLanguageIsRightToLeft = languageIsRightToLeft[i];
 			languageIsRightToLeft.Insert (i+2, thisLanguageIsRightToLeft);
 			languageIsRightToLeft.RemoveAt (i);
+
+			string thisLanguageAudioAssetBundle = languageAudioAssetBundles[i];
+			languageAudioAssetBundles.Insert (i+2, thisLanguageAudioAssetBundle);
+			languageAudioAssetBundles.RemoveAt (i);
+
+			string thisLanguageLipsyncAssetBundle = languageLipsyncAssetBundles[i];
+			languageLipsyncAssetBundles.Insert (i+2, thisLanguageLipsyncAssetBundle);
+			languageLipsyncAssetBundles.RemoveAt (i);
 
 			foreach (SpeechLine line in lines)
 			{
@@ -934,6 +1000,14 @@ namespace AC
 			bool thisLanguageIsRightToLeft = languageIsRightToLeft[i];
 			languageIsRightToLeft.Insert (i-1, thisLanguageIsRightToLeft);
 			languageIsRightToLeft.RemoveAt (i+1);
+
+			string thisLanguageAudioAssetBundle = languageAudioAssetBundles[i];
+			languageAudioAssetBundles.Insert (i-1, thisLanguageAudioAssetBundle);
+			languageAudioAssetBundles.RemoveAt (i+1);
+
+			string thisLanguageLipsyncAssetBundle = languageLipsyncAssetBundles[i];
+			languageLipsyncAssetBundles.Insert (i-1, thisLanguageLipsyncAssetBundle);
+			languageLipsyncAssetBundles.RemoveAt (i+1);
 
 			foreach (SpeechLine line in lines)
 			{
@@ -975,6 +1049,12 @@ namespace AC
 
 			languageIsRightToLeft.Clear ();
 			languageIsRightToLeft.Add (false);
+
+			languageAudioAssetBundles.Clear ();
+			languageAudioAssetBundles.Add (string.Empty);
+
+			languageLipsyncAssetBundles.Clear ();
+			languageLipsyncAssetBundles.Add (string.Empty);
 		}
 
 
@@ -1075,7 +1155,7 @@ namespace AC
 
 		private void LocateDialogueLine (SpeechLine speechLine)
 		{
-			if (speechLine.scene != "")
+			if (speechLine.scene != string.Empty)
 			{
 				// In a scene
 
@@ -1094,13 +1174,16 @@ namespace AC
 							{
 								foreach (Action action in list.actions)
 								{
-									if (action != null && action is ActionSpeech)
+									if (action != null)
 									{
-										ActionSpeech actionSpeech = (ActionSpeech) action;
-										if (actionSpeech.lineID == speechLine.lineID)
+										if (action is ActionSpeech)
 										{
-											EditorGUIUtility.PingObject (list);
-											return;
+											ActionSpeech actionSpeech = (ActionSpeech) action;
+											if (actionSpeech.lineID == speechLine.lineID)
+											{
+												EditorGUIUtility.PingObject (list);
+												return;
+											}
 										}
 									}
 								}
@@ -1120,20 +1203,87 @@ namespace AC
 				{
 					foreach (Action action in actionListAsset.actions)
 					{
-						if (action != null && action is ActionSpeech)
+						if (action != null)
 						{
-							ActionSpeech actionSpeech = (ActionSpeech) action;
-							if (actionSpeech.lineID == speechLine.lineID)
+							if (action is ActionSpeech)
 							{
-								EditorGUIUtility.PingObject (actionListAsset);
+								ActionSpeech actionSpeech = (ActionSpeech) action;
+								if (actionSpeech.lineID == speechLine.lineID)
+								{
+									EditorGUIUtility.PingObject (actionListAsset);
+									return;
+								}
+							}
+
+							#if CAN_USE_TIMELINE
+							if (action is ActionTimeline)
+							{
+								ActionTimeline actionTimeline = (ActionTimeline) action;
+								if (actionTimeline.director != null)
+								{
+									if (LocateLineInTimeline (actionTimeline.director, speechLine.lineID))
+									{
+										return;
+									}
+								}
+							}
+							#endif
+						}
+					}
+				}
+
+				#if CAN_USE_TIMELINE
+				// Still can't find, so need to search scenes - Timeline speech tracks have no scene
+				if (UnityVersionHandler.SaveSceneIfUserWants ())
+				{
+					sceneFiles = AdvGame.GetSceneFiles ();
+
+					foreach (string sceneFile in sceneFiles)
+					{
+						UnityVersionHandler.OpenScene (sceneFile);
+
+						ActionList[] actionLists = GameObject.FindObjectsOfType (typeof (ActionList)) as ActionList[];
+						foreach (ActionList list in actionLists)
+						{
+							if (list.source == ActionListSource.InScene)
+							{
+								foreach (Action action in list.actions)
+								{
+									if (action != null)
+									{
+										if (action is ActionTimeline)
+										{
+											ActionTimeline actionTimeline = (ActionTimeline) action;
+											if (actionTimeline.director != null)
+											{
+												if (LocateLineInTimeline (actionTimeline.director, speechLine.lineID))
+												{
+													return;
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+
+						PlayableDirector[] directors = GameObject.FindObjectsOfType (typeof (PlayableDirector)) as PlayableDirector[];
+						foreach (PlayableDirector director in directors)
+						{
+							if (LocateLineInTimeline (director, speechLine.lineID))
+							{
 								return;
 							}
 						}
 					}
 				}
+				#endif
 
-				ACDebug.Log ("Could not find line " + speechLine.lineID + " - is ActionList asset still present?");
+				ACDebug.Log ("Could not find line " + speechLine.lineID + " - is the asset it's a part of still present?");
 			}
+
+
+		
 		}
 
 
@@ -1325,40 +1475,6 @@ namespace AC
 			}
 		}
 
-
-		#if CAN_USE_TIMELINE
-
-		private void GetLinesFromTimelines (bool onlySeekNew)
-		{
-			foreach (TimelineAsset timelineAsset in allTimelineAssets)
-			{
-				IEnumerable<TrackAsset> trackAssets = timelineAsset.GetOutputTracks ();
-				foreach (TrackAsset trackAsset in trackAssets)
-				{
-					if (trackAsset is ITranslatable)
-					{
-						ExtractTranslatable (trackAsset as ITranslatable, onlySeekNew, false, false);
-					}
-				}
-			}
-		}
-
-
-		private void SmartAddAsset (TimelineAsset asset)
-		{
-			if (asset != null)
-			{
-				if (allTimelineAssets.Contains (asset))
-				{
-					return;
-				}
-
-				allTimelineAssets.Add (asset);
-			}
-		}
-
-		#endif
-		
 		
 		private void ExtractTranslatable (ITranslatable translatable, bool onlySeekNew, bool isInScene, bool isMonoBehaviour, string comment = "", int tagID = -1, string actionListName = "")
 		{
@@ -1869,6 +1985,14 @@ namespace AC
 				}
 			}
 
+			#if CAN_USE_TIMELINE
+			PlayableDirector[] directors = FindObjectsOfType<PlayableDirector>();
+			for (int i=0; i<directors.Length; i++)
+			{
+				ClearTimeline (directors[i]);
+			}
+			#endif
+
 			// Save the scene
 			UnityVersionHandler.SaveScene ();
 			EditorUtility.SetDirty (this);
@@ -1914,6 +2038,14 @@ namespace AC
 				{
 					ClearTranslatable (action as ITranslatable, isInScene, false);
 				}
+
+				#if CAN_USE_TIMELINE
+				if (action is ActionTimeline)
+				{
+					ActionTimeline actionTimeline = (ActionTimeline) action;
+					ClearTimeline (actionTimeline.director);
+				}
+				#endif
 			}
 		}
 
@@ -2069,6 +2201,11 @@ namespace AC
 			allActionListAssets = new List<ActionListAsset>();
 
 			// Search scenes
+			if (sceneFiles == null)
+			{
+				sceneFiles = AdvGame.GetSceneFiles ();
+			}
+
 			foreach (string sceneFile in sceneFiles)
 			{
 				UnityVersionHandler.OpenScene (sceneFile);
@@ -2258,7 +2395,123 @@ namespace AC
 			}
 		}
 
+		
 		#if CAN_USE_TIMELINE
+
+		private void SetOrderIDs (TimelineAsset timelineAsset)
+		{
+			string prefix = timelineAsset.name + "_" + timelineAsset.GetHashCode () + "_";
+
+			IEnumerable<TrackAsset> trackAssets = timelineAsset.GetOutputTracks ();
+
+			foreach (TrackAsset trackAsset in trackAssets)
+			{
+				if (trackAsset is ITranslatable)
+				{
+					IEnumerable<TimelineClip> timelineClips = trackAsset.GetClips ();
+					ITranslatable translatable = trackAsset as ITranslatable;
+
+					int i = 0;
+					foreach (TimelineClip timelineClip in timelineClips)
+					{
+						SpeechLine speechLine = GetLine (translatable.GetTranslationID (i));
+						if (speechLine != null)
+						{
+							speechLine.orderID = (int) (timelineClip.start * 10);
+							speechLine.orderPrefix = prefix;
+						}
+
+						i++;
+					}
+				}
+			}
+		}
+
+		private void GetLinesFromTimelines (bool onlySeekNew)
+		{
+			foreach (TimelineAsset timelineAsset in allTimelineAssets)
+			{
+				IEnumerable<TrackAsset> trackAssets = timelineAsset.GetOutputTracks ();
+				foreach (TrackAsset trackAsset in trackAssets)
+				{
+					if (trackAsset is ITranslatable)
+					{
+						ExtractTranslatable (trackAsset as ITranslatable, onlySeekNew, false, false, "", -1, timelineAsset.name);
+					}
+				}
+
+				if (onlySeekNew)
+				{
+					SetOrderIDs (timelineAsset);
+				}
+			}
+		}
+
+
+		private bool LocateLineInTimeline (PlayableDirector director, int lineID)
+		{
+			if (director.playableAsset != null && director.playableAsset is TimelineAsset)
+			{
+				TimelineAsset timelineAsset = director.playableAsset as TimelineAsset;
+				IEnumerable<TrackAsset> trackAssets = timelineAsset.GetOutputTracks ();
+
+				foreach (TrackAsset trackAsset in trackAssets)
+				{
+					if (trackAsset is ITranslatable)
+					{
+						ITranslatable translatable = trackAsset as ITranslatable;
+
+						int[] newIDs = new int[translatable.GetNumTranslatables ()];
+						for (int i=0; i<newIDs.Length; i++)
+						{
+							if (translatable.CanTranslate (i) && translatable.GetTranslationID (i) == lineID)
+							{
+								EditorGUIUtility.PingObject (timelineAsset);
+								return true;
+							}
+						}
+					}
+				}
+			}
+
+			return false;
+		}
+
+
+		private void SmartAddAsset (TimelineAsset asset)
+		{
+			if (asset != null)
+			{
+				if (allTimelineAssets.Contains (asset))
+				{
+					return;
+				}
+
+				allTimelineAssets.Add (asset);
+			}
+		}
+
+
+		private void ClearTimeline (PlayableDirector director)
+		{
+			if (director != null)
+			{
+				if (director.playableAsset != null && director.playableAsset is TimelineAsset)
+				{
+					TimelineAsset timelineAsset = director.playableAsset as TimelineAsset;
+					IEnumerable<TrackAsset> trackAssets = timelineAsset.GetOutputTracks ();
+
+					foreach (TrackAsset trackAsset in trackAssets)
+					{
+						if (trackAsset is ITranslatable)
+						{
+							ClearTranslatable (trackAsset as ITranslatable, false, false);
+						}
+					}
+				}
+			}
+		}
+
 
 		private void CollectAllTimelineAssets ()
 		{
@@ -2643,7 +2896,13 @@ namespace AC
 
 			ArrangeFromIndex (actions, prefix, 0);
 
+			foreach (Action action in actions)
+			{
+				action.isMarked = true;
+			}
+
 			minOrderValue ++;
+
 			foreach (Action _action in actions)
 			{
 				if (_action.isMarked)
@@ -2661,8 +2920,27 @@ namespace AC
 							speechLine.orderPrefix = prefix;
 							minOrderValue ++;
 						}
+
+						if (actionSpeech.multiLineIDs != null && actionSpeech.multiLineIDs.Length > 0)
+						{
+							foreach (int multiLineID in actionSpeech.multiLineIDs)
+							{
+								SpeechLine multiSpeechLine = GetLine (multiLineID);
+								if (multiSpeechLine != null)
+								{
+									multiSpeechLine.orderID = minOrderValue;
+									multiSpeechLine.orderPrefix = prefix;
+									minOrderValue ++;
+								} 
+							}
+						}
 					}
 				}
+			}
+
+			foreach (Action action in actions)
+			{
+				action.isMarked = false;
 			}
 		}
 
@@ -2986,6 +3264,38 @@ namespace AC
 					languageIsRightToLeft.Add (false);
 				}
 			}
+
+			if (languages.Count < languageAudioAssetBundles.Count)
+			{
+				languageAudioAssetBundles.RemoveRange (languages.Count, languageAudioAssetBundles.Count - languages.Count);
+			}
+			else if (languages.Count > languageAudioAssetBundles.Count)
+			{
+				if (languages.Count > languageAudioAssetBundles.Capacity)
+				{
+					languageAudioAssetBundles.Capacity = languages.Count;
+				}
+				for (int i=languageAudioAssetBundles.Count; i<languages.Count; i++)
+				{
+					languageAudioAssetBundles.Add (string.Empty);
+				}
+			}
+
+			if (languages.Count < languageLipsyncAssetBundles.Count)
+			{
+				languageLipsyncAssetBundles.RemoveRange (languages.Count, languageLipsyncAssetBundles.Count - languages.Count);
+			}
+			else if (languages.Count > languageLipsyncAssetBundles.Count)
+			{
+				if (languages.Count > languageLipsyncAssetBundles.Capacity)
+				{
+					languageLipsyncAssetBundles.Capacity = languages.Count;
+				}
+				for (int i=languageLipsyncAssetBundles.Count; i<languages.Count; i++)
+				{
+					languageLipsyncAssetBundles.Add (string.Empty);
+				}
+			}
 		}
 
 
@@ -3056,7 +3366,8 @@ namespace AC
 		 */
 		public bool UseFileBasedLipSyncing ()
 		{
-			if (lipSyncMode == LipSyncMode.ReadPamelaFile || lipSyncMode == LipSyncMode.ReadPapagayoFile || lipSyncMode == LipSyncMode.ReadSapiFile || lipSyncMode == LipSyncMode.RogoLipSync) {
+			if (lipSyncMode == LipSyncMode.ReadPamelaFile || lipSyncMode == LipSyncMode.ReadPapagayoFile || lipSyncMode == LipSyncMode.ReadSapiFile || lipSyncMode == LipSyncMode.RogoLipSync)
+			{
 				return true;
 			}
 			return false;

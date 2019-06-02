@@ -1,7 +1,7 @@
 ﻿/*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2018
+ *	by Chris Burton, 2013-2019
  *	
  *	"NavigationEngine_PolygonCollider.cs"
  * 
@@ -73,14 +73,19 @@ namespace AC
 				{
 					if (!polys[i].isTrigger)
 					{
-						ACDebug.LogWarning ("The PolygonCollider2D on " + navMesh.gameObject.name + " is not a Trigger.");
+						ACDebug.LogWarning ("The PolygonCollider2D on " + navMesh.gameObject.name + " is not a Trigger.", navMesh.gameObject);
+					}
+
+					if (polys[i].offset != Vector2.zero)
+					{
+						ACDebug.LogWarning ("The PolygonCollider2D on " + navMesh.gameObject.name + " has a non-zero Offset - this can cause pathfinding errors.  Clear this offset and adjust the GameObject's position if necessary.", navMesh.gameObject);
 					}
 				}
 			}
 
 			if (navMesh == null && KickStarter.settingsManager != null && KickStarter.settingsManager.movementMethod == MovementMethod.PointAndClick)
 			{
-				ACDebug.LogWarning ("Could not initialise NavMesh - was one set as the Default in the Settings Manager?");
+				ACDebug.LogWarning ("Could not initialise NavMesh - was one set as the Default in the Scene Manager?");
 			}
 		}
 
@@ -301,17 +306,17 @@ namespace AC
 					{
 						continue;
 					}
+
+					float newdist = (Mathf.Approximately (weight[current,i], -1f))
+									? Mathf.Infinity
+									: distcurr + weight[current,i];
 					
-					float newdist = distcurr + weight[current,i];
-					if (Mathf.Approximately (weight[current,i], -1f))
-					{
-						newdist = Mathf.Infinity;
-					}
 					if (newdist < distance[i])
 					{
 						distance[i] = newdist;
 						precede[i] = current;
 					}
+
 					if (distance[i] < smalldist)
 					{
 						smalldist = distance[i];
@@ -377,7 +382,7 @@ namespace AC
 					}
 					else
 					{
-						graph[i,j] = graph[j,i] = (points[i] - points[j]).magnitude; // Sqr?
+						graph[i,j] = graph[j,i] = (points[i] - points[j]).magnitude;
 					}
 				}
 			}
@@ -437,15 +442,10 @@ namespace AC
 				for (int j=0; j<path.Length; j++)
 				{
 					Vector2 startPoint = t.TransformPoint (path[j]);
-					Vector2 endPoint = Vector2.zero;
-					if (j==path.Length-1)
-					{
-						endPoint = t.TransformPoint (path[0]);
-					}
-					else
-					{
-						endPoint = t.TransformPoint (path[j+1]);
-					}
+
+					Vector2 endPoint = (j < path.Length-1)
+										? t.TransformPoint (path[j+1])
+										: t.TransformPoint (path[0]);
 
 					Vector2 direction = endPoint - startPoint;
 					for (float k=0f; k<=1f; k+=0.1f)
@@ -820,6 +820,7 @@ namespace AC
 				{
 					_target.polygonColliderHoles.RemoveAt (i);
 					i=-1;
+					continue;
 				}
 
 				EditorGUILayout.EndHorizontal ();

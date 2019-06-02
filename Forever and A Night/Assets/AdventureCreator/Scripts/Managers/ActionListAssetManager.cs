@@ -1,7 +1,7 @@
 ﻿/*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2018
+ *	by Chris Burton, 2013-2019
  *	
  *	"ActionListAssetManager.cs"
  * 
@@ -65,14 +65,19 @@ namespace AC
 		 * <param name = "addToSkipQueue">If True, then the ActionList will be added to the list of ActionLists to skip</param>
 		 * <param name = "_startIndex">The index number of the Action to start skipping from, if addToSkipQueue = True</param>
 		 */
-		public void AddToList (RuntimeActionList runtimeActionList, ActionListAsset actionListAsset, bool addToSkipQueue, int _startIndex)
+		public void AddToList (RuntimeActionList runtimeActionList, ActionListAsset actionListAsset, bool addToSkipQueue, int _startIndex, bool removeMultipleInstances = false)
 		{
-			if (!actionListAsset.canRunMultipleInstances)
+			if (!actionListAsset.canRunMultipleInstances || removeMultipleInstances)
 			{
 				for (int i=0; i<activeLists.Count; i++)
 				{
 					if (activeLists[i].IsFor (actionListAsset))
 					{
+						if (actionListAsset.canRunMultipleInstances && removeMultipleInstances)
+						{
+							activeLists[i].Reset (false);
+						}
+
 						activeLists.RemoveAt (i);
 					}
 				}

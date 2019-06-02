@@ -12,6 +12,9 @@ namespace AC
 		{
 			GameCamera2D _target = (GameCamera2D) target;
 
+			_target.ShowCursorInfluenceGUI ();
+			EditorGUILayout.Space ();
+
 			EditorGUILayout.BeginVertical ("Button");
 			EditorGUILayout.LabelField ("Horizontal movement", EditorStyles.boldLabel);
 		

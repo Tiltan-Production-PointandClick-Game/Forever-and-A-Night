@@ -1,7 +1,7 @@
 /*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2018
+ *	by Chris Burton, 2013-2019
  *	
  *	"ActionMenuSetInputBox.cs"
  * 
@@ -122,11 +122,9 @@ namespace AC
 		
 		override public string SetLabel ()
 		{
-			string labelAdd = "";
-
-			if (elementName != "")
+			if (!string.IsNullOrEmpty (elementName))
 			{
-				labelAdd = " (" + elementName + " - ";
+				string labelAdd = elementName + " - ";
 				if (setMenuInputBoxSource == SetMenuInputBoxSource.EnteredHere)
 				{
 					labelAdd += "'" + newLabel + "'";
@@ -135,9 +133,9 @@ namespace AC
 				{
 					labelAdd += "from Variable";
 				}
-				labelAdd += ")";
+				return labelAdd;
 			}
-			return labelAdd;
+			return string.Empty;
 		}
 
 

@@ -1,7 +1,7 @@
 ﻿/*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2018
+ *	by Chris Burton, 2013-2019
  *	
  *	"ActionObjectCheck.cs"
  * 
@@ -27,6 +27,7 @@ namespace AC
 		public GameObject gameObject;
 		public int parameterID = -1;
 		public int constantID = 0; 
+		protected GameObject runtimeGameObject;
 
 
 		public ActionObjectCheck ()
@@ -40,13 +41,13 @@ namespace AC
 
 		override public void AssignValues (List<ActionParameter> parameters)
 		{
-			gameObject = AssignFile (parameters, parameterID, constantID, gameObject);
+			runtimeGameObject = AssignFile (parameters, parameterID, constantID, gameObject);
 		}
 		
 		
 		override public bool CheckCondition ()
 		{
-			if (gameObject != null && gameObject.activeInHierarchy)
+			if (runtimeGameObject != null && runtimeGameObject.activeInHierarchy)
 			{
 				return true;
 			}
@@ -74,7 +75,17 @@ namespace AC
 		}
 
 
-		override public void AssignConstantIDs (bool saveScriptsToo)
+		public override string SetLabel ()
+		{
+			if (gameObject != null)
+			{
+				return gameObject.name;
+			}
+			return string.Empty;
+		}
+
+
+		override public void AssignConstantIDs (bool saveScriptsToo, bool fromAssetFile)
 		{
 			AssignConstantID (gameObject, constantID, parameterID);
 		}

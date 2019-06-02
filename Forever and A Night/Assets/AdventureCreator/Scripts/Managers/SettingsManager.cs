@@ -1,7 +1,7 @@
 /*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2018
+ *	by Chris Burton, 2013-2019
  *	
  *	"SettingsManager.cs"
  * 
@@ -126,6 +126,8 @@ namespace AC
 		public bool stopPlayerOnClickHotspot = false;
 		/** If True, then inventory items will be included in Interaction menus / cursor cycles, if interactionMethod = AC_InteractionMethod.ChooseHotspotThenInteraction */
 		public bool cycleInventoryCursors = true;
+		/** If True, and inputMethod = InputMethod.KeyboardOrController, then the speed of the cursor will be proportional to the size of the screen */
+		public bool scaleCursorSpeedWithScreen = true;
 		/** If True, then triggering an Interaction will cycle the cursor mode, if interactionMethod = AC_InteractionMethod.ChooseHotspotThenInteraction */
 		public bool autoCycleWhenInteract = false;
 		/** If True, and interactionMethod = AC_InteractionMethod.ChooseInteractionThenHotspot, then the Hotspot label will show the name of the interaction icon being hovered over */
@@ -616,7 +618,7 @@ namespace AC
 						EditorGUILayout.EndHorizontal ();
 					}
 					
-					if (GUILayout.Button("Add new player"))
+					if (GUILayout.Button ("Add new player"))
 					{
 						Undo.RecordObject (this, "Add player");
 						
@@ -719,6 +721,11 @@ namespace AC
 					autoCycleWhenInteract = CustomGUILayout.ToggleLeft ("Reset cursor after an Interaction?", autoCycleWhenInteract, "AC.KickStarter.settingsManager.autoCycleWhenInteract", "If True, then triggering an Interaction will cycle the cursor mode");
 					showHoverInteractionInHotspotLabel = CustomGUILayout.ToggleLeft ("Show hover Interaction icons in Hotspot label?", showHoverInteractionInHotspotLabel, "AC.KickStarter.settingsManager.showHoverInteractionInHotspotLabel", "If True, then the Hotspot label will show the name of the interaction icon being hovered over");
 					allowDefaultinteractions = CustomGUILayout.ToggleLeft ("Set first 'Use' Hotspot interaction as default?", allowDefaultinteractions, "AC.KickStarter.settingsManager.allowDefaultinteractions", "If True, then invoking the 'DefaultInteractions' input button will run the first-enabled 'Use' interaction of the active Hotspot");
+				}
+
+				if (inputMethod == InputMethod.KeyboardOrController)
+				{
+					scaleCursorSpeedWithScreen = CustomGUILayout.ToggleLeft ("Scale cursor speed to screen size?", scaleCursorSpeedWithScreen, "AC.KickStarter.settingsManager.scaleCursorSpeedWithScreen", "If True, the cursor's movement speed will scale with the screen size, so that the time it takes to move across will be the same for all resolutions");
 				}
 
 				if (movementMethod == MovementMethod.FirstPerson && inputMethod == InputMethod.TouchScreen)
@@ -1061,13 +1068,18 @@ namespace AC
 					EditorGUILayout.HelpBox ("The current scene overrides the camera perspective - some fields only apply to the global perspective, below.", MessageType.Info);
 				}
 
-				cameraPerspective_int = (int) cameraPerspective;
-				cameraPerspective_int = CustomGUILayout.Popup ("Camera perspective:", cameraPerspective_int, cameraPerspective_list, "AC.KickStarter.settingsManager.cameraPerspective", "The game's default camera perspective, unless overridden in the scene");
-				cameraPerspective = (CameraPerspective) cameraPerspective_int;
 				if (movementMethod == MovementMethod.FirstPerson)
 				{
 					cameraPerspective = CameraPerspective.ThreeD;
+					cameraPerspective_int = (int) cameraPerspective;
 				}
+				else
+				{
+					cameraPerspective_int = (int) cameraPerspective;
+					cameraPerspective_int = CustomGUILayout.Popup ("Camera perspective:", cameraPerspective_int, cameraPerspective_list, "AC.KickStarter.settingsManager.cameraPerspective", "The game's default camera perspective, unless overridden in the scene");
+					cameraPerspective = (CameraPerspective) cameraPerspective_int;
+				}
+
 				if (cameraPerspective == CameraPerspective.TwoD)
 				{
 					movingTurning = (MovingTurning) CustomGUILayout.EnumPopup ("Moving and turning:", movingTurning, "AC.KickStarter.settingsManager.movingTurning", "The method of moving and turning in 2D games");
@@ -1295,6 +1307,20 @@ namespace AC
 		#endif
 
 
+		/** How Interaction menus are opened, if interactionMethod = AC_InteractionMethod.ChooseHotspotThenInteraction (ClickOnHotspot, CursorOverHotspot) */
+		public SeeInteractions SeeInteractions
+		{
+			get
+			{
+				if (CanUseCursor ())
+				{
+					return seeInteractions;
+				}
+				return SeeInteractions.ClickOnHotspot;
+			}
+		}
+
+
 		/** What happens when right-clicking while an inventory item is selected (ExaminesItem, DeselectsItem, DoesNothing). */
 		public RightClickInventory RightClickInventory
 		{
@@ -1359,11 +1385,8 @@ namespace AC
 				result = SmartAddInput (result, "CursorVertical (Axis)");
 			}
 
-			if (movementMethod != MovementMethod.PointAndClick && movementMethod != MovementMethod.StraightToCursor)
-			{
-				result = SmartAddInput (result, "ToggleCursor (Button)");
-			}
-			
+			result = SmartAddInput (result, "ToggleCursor (Button)");
+
 			if (movementMethod == MovementMethod.Direct || movementMethod == MovementMethod.FirstPerson || inputMethod == InputMethod.KeyboardOrController)
 			{
 				if (inputMethod != InputMethod.TouchScreen)
@@ -1415,7 +1438,7 @@ namespace AC
 					result = SmartAddInput (result, "DefaultInteraction (Button)");
 				}
 
-				if (KickStarter.cursorManager != null)
+				if (KickStarter.cursorManager != null && KickStarter.cursorManager.allowIconInput)
 				{
 					if (KickStarter.cursorManager.allowMainCursor && KickStarter.cursorManager.allowWalkCursor)
 					{
@@ -1618,6 +1641,30 @@ namespace AC
 
 
 		/**
+		 * <summary>Gets a PlayerPrefab class with a given ID number, if player-switching is allowed.</summary>
+		 * <param name = "ID">The ID number of the PlayerPrefab class to return</param>
+		 * <returns>The PlayerPrefab class with the given ID number. This will return null if playerSwitching = PlayerSwitching.DoNotAllow</returns>
+		 */
+		public PlayerPrefab GetPlayerPrefab (int ID)
+		{
+			if (playerSwitching == PlayerSwitching.DoNotAllow)
+			{
+				return null;
+			}
+			
+			foreach (PlayerPrefab _player in players)
+			{
+				if (_player.ID == ID)
+				{
+					return _player;
+				}
+			}
+			
+			return null;
+		}
+
+
+		/**
 		 * <summary>Gets the ID number of the first-assigned Player prefab.</summary>
 		 * <returns>The ID number of the first-assigned Player prefab</returns>
 		 */
@@ -1674,6 +1721,43 @@ namespace AC
 				ACDebug.LogWarning ("Cannot find default player!");
 			}
 			return null;
+		}
+
+
+		/**
+		 * <summary>Sets the default Player prefab.</summary>
+		 * <param name = "defaultPlayer">The Player prefab to assign as the default.</param>
+		 */
+		public void SetDefaultPlayer (Player defaultPlayer)
+		{
+			if (defaultPlayer == null) return;
+
+			if (playerSwitching == PlayerSwitching.DoNotAllow)
+			{
+				player = defaultPlayer;
+				return;
+			}
+
+			bool found = false;
+			foreach (PlayerPrefab _player in players)
+			{
+				if (_player.playerOb == defaultPlayer)
+				{
+					_player.isDefault = true;
+					found = true;
+				}
+				else
+				{
+					_player.isDefault = false;
+				}
+			}
+
+			if (!found)
+			{
+				PlayerPrefab newPlayer = new PlayerPrefab (GetPlayerIDArray ());
+				newPlayer.playerOb = defaultPlayer;
+				players.Add (newPlayer);
+			}
 		}
 		
 		
@@ -2171,7 +2255,7 @@ namespace AC
 		{
 			if (actionListAsset != null)
 			{
-				SaveActions (actionListAsset.actions);
+				SaveActions (actionListAsset.actions, true);
 			}
 		}
 		
@@ -2180,12 +2264,12 @@ namespace AC
 		{
 			if (actionList != null)
 			{
-				SaveActions (actionList.actions);
+				SaveActions (actionList.actions, false);
 			}
 		}
 		
 		
-		private void SaveActions (List<Action> actions)
+		private void SaveActions (List<Action> actions, bool fromAsset)
 		{
 			foreach (Action action in actions)
 			{
@@ -2194,7 +2278,7 @@ namespace AC
 					continue;
 				}
 
-				action.AssignConstantIDs (true);
+				action.AssignConstantIDs (true, fromAsset);
 
 				if (action is ActionCheck)
 				{
@@ -2277,11 +2361,12 @@ namespace AC
 	 * AC.KickStarter.TurnOnAC ();
 	 * \endcode
 	 * 
-	 * You can detect the game's current state (cutscene or gameplay) from the StateHandler:
+	 * You can detect the game's current state (cutscene, gameplay, or paused) from the StateHandler:
 	 *
 	 * \code
 	 * AC.KickStarter.stateHandler.IsInCutscene ();
 	 * AC.KickStarter.stateHandler.IsInGameplay ();
+	 * AC.KickStarter.stateHandler.IsPaused ();
 	 * \endcode
 	 * 
 	 * If you want to place the game in a scripted cutscene, the StateHandler has functions for that, too:

@@ -1,7 +1,7 @@
 ﻿/*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2018
+ *	by Chris Burton, 2013-2019
  *	
  *	"ActionParameter.cs"
  * 
@@ -166,6 +166,7 @@ namespace AC
 			    parameterType == ParameterType.Integer ||
 				parameterType == ParameterType.Boolean ||
 			    parameterType == ParameterType.InventoryItem ||
+			    parameterType == ParameterType.Document ||
 			    parameterType == ParameterType.LocalVariable)
 			{
 				return true;
@@ -306,6 +307,16 @@ namespace AC
 					if (invItem != null)
 					{
 						return invItem.GetLabel (Options.GetLanguage ());
+					}
+					return GetSaveData ();
+
+				case ParameterType.Document:
+					Document document = KickStarter.inventoryManager.GetDocument (intValue);
+					if (document != null)
+					{
+						return KickStarter.runtimeLanguages.GetTranslation (document.title,
+																			document.titleLineID,
+																			Options.GetLanguage ());
 					}
 					return GetSaveData ();
 

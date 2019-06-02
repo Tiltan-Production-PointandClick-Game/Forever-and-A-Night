@@ -1,7 +1,7 @@
 /*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2018
+ *	by Chris Burton, 2013-2019
  *	
  *	"ActionInventoryCrafting.cs"
  * 
@@ -62,13 +62,13 @@ namespace AC
 		{
 			if (craftingMethod == ActionCraftingMethod.CreateRecipe)
 			{
-				return (" (Create recipe)");
+				return "Create recipe";
 			}
 			else if (craftingMethod == ActionCraftingMethod.ClearRecipe)
 			{
-				return (" (Clear recipe)");
+				return "Clear recipe";
 			}
-			return "";
+			return string.Empty;
 		}
 		
 		#endif

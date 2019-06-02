@@ -1,7 +1,7 @@
 ﻿/*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2018
+ *	by Chris Burton, 2013-2019
  *	
  *	"ActionCharDirection.cs"
  * 
@@ -29,7 +29,9 @@ namespace AC
 
 		public bool isInstant;
 		public CharDirection direction;
+
 		public Char charToMove;
+		protected Char runtimeCharToMove;
 
 		public bool isPlayer;
 
@@ -45,11 +47,11 @@ namespace AC
 		
 		public override void AssignValues (List<ActionParameter> parameters)
 		{
-			charToMove = AssignFile <Char> (parameters, charToMoveParameterID, charToMoveID, charToMove);
+			runtimeCharToMove = AssignFile <Char> (parameters, charToMoveParameterID, charToMoveID, charToMove);
 
 			if (isPlayer)
 			{
-				charToMove = KickStarter.player;
+				runtimeCharToMove = KickStarter.player;
 			}
 		}
 
@@ -60,14 +62,14 @@ namespace AC
 			{
 				isRunning = true;
 				
-				if (charToMove)
+				if (runtimeCharToMove != null)
 				{
-					if (!isInstant && charToMove.IsMovingAlongPath ())
+					if (!isInstant && runtimeCharToMove.IsMovingAlongPath ())
 					{
-						charToMove.EndPath ();
+						runtimeCharToMove.EndPath ();
 					}
 
-					charToMove.SetLookDirection (GetLookVector (), isInstant);
+					runtimeCharToMove.SetLookDirection (GetLookVector (), isInstant);
 
 					if (!isInstant)
 					{
@@ -82,7 +84,7 @@ namespace AC
 			}
 			else
 			{
-				if (charToMove.IsTurning ())
+				if (runtimeCharToMove.IsTurning ())
 				{
 					return defaultPauseTime;
 				}
@@ -97,9 +99,9 @@ namespace AC
 		
 		override public void Skip ()
 		{
-			if (charToMove)
+			if (runtimeCharToMove != null)
 			{
-				charToMove.SetLookDirection (GetLookVector (), true);
+				runtimeCharToMove.SetLookDirection (GetLookVector (), true);
 			}
 		}
 
@@ -186,7 +188,7 @@ namespace AC
 		}
 
 
-		override public void AssignConstantIDs (bool saveScriptsToo)
+		override public void AssignConstantIDs (bool saveScriptsToo, bool fromAssetFile)
 		{
 			if (!isPlayer)
 			{
@@ -202,14 +204,11 @@ namespace AC
 		
 		override public string SetLabel ()
 		{
-			string labelAdd = "";
-			
-			if (charToMove)
+			if (charToMove != null)
 			{
-				labelAdd = " (" + charToMove.name + " - " + direction + ")";
+				return charToMove.name + " - " + direction;
 			}
-
-			return labelAdd;
+			return string.Empty;
 		}
 		
 		#endif

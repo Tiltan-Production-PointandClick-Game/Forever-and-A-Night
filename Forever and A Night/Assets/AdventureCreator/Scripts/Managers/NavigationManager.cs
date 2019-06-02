@@ -1,7 +1,7 @@
 ﻿/*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2018
+ *	by Chris Burton, 2013-2019
  *	
  *	"NavigationManager.cs"
  * 
@@ -44,7 +44,7 @@ namespace AC
 		 */
 		public void ResetEngine ()
 		{
-			string className = "";
+			string className = string.Empty;
 			if (KickStarter.sceneSettings.navigationMethod == AC_NavigationMethod.Custom)
 			{
 				className = KickStarter.sceneSettings.customNavigationClass;
@@ -54,7 +54,7 @@ namespace AC
 				className = "NavigationEngine_" + KickStarter.sceneSettings.navigationMethod.ToString ();
 			}
 
-			if (className == "" && Application.isPlaying)
+			if (string.IsNullOrEmpty (className) && Application.isPlaying)
 			{
 				ACDebug.LogWarning ("Could not initialise navigation - a custom script must be assigned if the Pathfinding method is set to Custom.");
 			}

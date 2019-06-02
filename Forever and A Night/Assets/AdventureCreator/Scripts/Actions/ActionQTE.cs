@@ -1,7 +1,7 @@
 ﻿/*
  *
  *	Adventure Creator
- *	by Chris Burton, 2013-2018
+ *	by Chris Burton, 2013-2019
  *	
  *	"ActionQTE.cs"
  * 
@@ -255,7 +255,7 @@ namespace AC
 		
 		public override string SetLabel ()
 		{
-			return (" (" + qteType.ToString () + " - " + inputName + ")");
+			return qteType.ToString () + " - " + inputName;
 		}
 		
 		#endif
