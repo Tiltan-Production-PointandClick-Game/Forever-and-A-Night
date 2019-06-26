@@ -18,6 +18,6 @@ MonoBehaviour:
   inventoryManager: {fileID: 11400000, guid: c346406e8d9874e0bbc1e25b0da00f12, type: 2}
   variablesManager: {fileID: 11400000, guid: 6ababa3efbc2e47dc92791386e5d75c0, type: 2}
   speechManager: {fileID: 11400000, guid: 3c40a08915dd9464da0065b694fbd029, type: 2}
-  cursorManager: {fileID: 11400000, guid: ad1a3453e13be9d46a02c94b6ca2b664, type: 2}
+  cursorManager: {fileID: 11400000, guid: 0d36e4b406f7444e5a6fa11efeb832fa, type: 2}
   menuManager: {fileID: 11400000, guid: 4b2999ad2ca484d0ba711a3a2e087c27, type: 2}
   viewingMenuManager: 0

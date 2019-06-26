@@ -23,15 +23,14 @@ MonoBehaviour:
     label: Walk to
     lineID: -1
   addHotspotPrefix: 0
-  allowInteractionCursor: 1
-  allowInteractionCursorForInventory: 1
+  allowInteractionCursor: 0
+  allowInteractionCursorForInventory: 0
   cycleCursors: 0
   onlyAnimateOverHotspots: 0
   leftClickExamine: 0
   onlyWalkWhenOverNavMesh: 0
   onlyShowInventoryLabelOverHotspots: 0
   inventoryCursorSize: 0.06
-  allowIconInput: 1
   waitIcon:
     texture: {fileID: 0}
     isAnimated: 0
@@ -46,7 +45,7 @@ MonoBehaviour:
     frameSpeeds: []
     alwaysAnimate: 0
   pointerIcon:
-    texture: {fileID: 2800000, guid: 0e4e2fc95798e454a935cb8317732f4d, type: 3}
+    texture: {fileID: 2800000, guid: 30b6d90cff7af844e9a5cc8e1819c6d5, type: 3}
     isAnimated: 0
     numFrames: 1
     numRows: 1
@@ -56,8 +55,7 @@ MonoBehaviour:
     endAnimOnLastFrame: 0
     skipFirstFrameWhenLooping: 0
     clickOffset: {x: 0, y: 0}
-    frameSpeeds:
-    - 1
+    frameSpeeds: []
     alwaysAnimate: 0
   walkIcon:
     texture: {fileID: 0}
@@ -73,7 +71,7 @@ MonoBehaviour:
     frameSpeeds: []
     alwaysAnimate: 0
   mouseOverIcon:
-    texture: {fileID: 2800000, guid: 0251c124ac8f7bc4f9a6b2ae5368e0fe, type: 3}
+    texture: {fileID: 2800000, guid: 22ad5cee1c5cb2a40b4b9544fad00b0c, type: 3}
     isAnimated: 0
     numFrames: 1
     numRows: 1
@@ -83,8 +81,7 @@ MonoBehaviour:
     endAnimOnLastFrame: 0
     skipFirstFrameWhenLooping: 0
     clickOffset: {x: 0, y: 0}
-    frameSpeeds:
-    - 1
+    frameSpeeds: []
     alwaysAnimate: 0
   inventoryHandling: 0
   hotspotPrefix1:
@@ -100,87 +97,78 @@ MonoBehaviour:
     label: to
     lineID: -1
   cursorIcons:
-  - texture: {fileID: 2800000, guid: 8f1dba1732a9cb7458614876fd06eedf, type: 3}
-    isAnimated: 1
-    numFrames: 2
+  - texture: {fileID: 2800000, guid: 95700204c552a3b4b839d39600d27b6e, type: 3}
+    isAnimated: 0
+    numFrames: 1
     numRows: 1
-    numCols: 2
+    numCols: 1
     size: 0.05
-    animSpeed: 50
+    animSpeed: 4
     endAnimOnLastFrame: 0
     skipFirstFrameWhenLooping: 0
     clickOffset: {x: 0, y: 0}
-    frameSpeeds:
-    - 0.01
-    - 0.01
-    alwaysAnimate: 1
+    frameSpeeds: []
+    alwaysAnimate: 0
     dontCycle: 0
     label: Use
     lineID: -1
     id: 0
-  - texture: {fileID: 2800000, guid: 986f4b498eeb77049b459827491687d0, type: 3}
+  - texture: {fileID: 2800000, guid: 33476e9df62d08f4a8a863ec164eea01, type: 3}
     isAnimated: 1
-    numFrames: 4
+    numFrames: 1
     numRows: 1
-    numCols: 4
+    numCols: 1
     size: 0.05
-    animSpeed: 2
+    animSpeed: 4
     endAnimOnLastFrame: 0
     skipFirstFrameWhenLooping: 0
     clickOffset: {x: 0, y: 0}
     frameSpeeds:
     - 1
-    - 1
-    - 1
-    - 1
-    alwaysAnimate: 1
+    alwaysAnimate: 0
     dontCycle: 0
     label: Talk to
     lineID: -1
     id: 1
-  - texture: {fileID: 2800000, guid: 89cd0abbe02955b4ba06998c24fd3eee, type: 3}
-    isAnimated: 1
-    numFrames: 2
+  - texture: {fileID: 2800000, guid: 3bdc038566d697a49abdff83a59f7bcf, type: 3}
+    isAnimated: 0
+    numFrames: 1
     numRows: 1
-    numCols: 2
+    numCols: 1
     size: 0.05
-    animSpeed: 1.2
+    animSpeed: 4
     endAnimOnLastFrame: 0
     skipFirstFrameWhenLooping: 0
     clickOffset: {x: 0, y: 0}
-    frameSpeeds:
-    - 1
-    - 1
-    alwaysAnimate: 1
+    frameSpeeds: []
+    alwaysAnimate: 0
     dontCycle: 0
     label: Look at
     lineID: -1
     id: 2
-  - texture: {fileID: 2800000, guid: 634342b933b73474aa576113387b640d, type: 3}
-    isAnimated: 1
-    numFrames: 2
+  - texture: {fileID: 2800000, guid: c3ce9104a9ec71c4385d2ef9b8b4cd5f, type: 3}
+    isAnimated: 0
+    numFrames: 1
     numRows: 1
-    numCols: 2
+    numCols: 1
     size: 0.05
-    animSpeed: 2
+    animSpeed: 4
     endAnimOnLastFrame: 0
     skipFirstFrameWhenLooping: 0
     clickOffset: {x: 0, y: 0}
-    frameSpeeds:
-    - 1
-    - 1
-    alwaysAnimate: 1
+    frameSpeeds: []
+    alwaysAnimate: 0
     dontCycle: 0
     label: Pick Up
     lineID: -1
     id: 3
-  - texture: {fileID: 2800000, guid: 1fd8bb79f4256844a972c5e1f843e7f4, type: 3}
-    isAnimated: 1
-    numFrames: 2
+  - texture: {fileID: 2800000, guid: 426871baab03c234980733b4dc732172, type: 3}
+    isAnimated: 0
+    numFrames: 1
     numRows: 1
-    numCols: 2
+    numCols: 1
     size: 0.05
-    animSpeed: 2
+    animSpeed: 4
     endAnimOnLastFrame: 0
     skipFirstFrameWhenLooping: 0
     clickOffset: {x: 0, y: 0}
@@ -190,13 +178,13 @@ MonoBehaviour:
     label: Use Item
     lineID: -1
     id: 4
-  - texture: {fileID: 2800000, guid: 184b6aded95523d418294b23df706df8, type: 3}
-    isAnimated: 1
-    numFrames: 2
+  - texture: {fileID: 2800000, guid: 548b147c50d851b43ae16be232b98ce8, type: 3}
+    isAnimated: 0
+    numFrames: 1
     numRows: 1
-    numCols: 2
+    numCols: 1
     size: 0.05
-    animSpeed: 1
+    animSpeed: 4
     endAnimOnLastFrame: 0
     skipFirstFrameWhenLooping: 0
     clickOffset: {x: 0, y: 0}
@@ -206,13 +194,13 @@ MonoBehaviour:
     label: Enter Room
     lineID: -1
     id: 5
-  - texture: {fileID: 2800000, guid: 0e53be4a17ce38e43857a2c2539d3c2d, type: 3}
-    isAnimated: 1
-    numFrames: 2
+  - texture: {fileID: 2800000, guid: 62e8655e30ca1dd4d93d2e8817b37c13, type: 3}
+    isAnimated: 0
+    numFrames: 1
     numRows: 1
-    numCols: 2
+    numCols: 1
     size: 0.05
-    animSpeed: 2
+    animSpeed: 4
     endAnimOnLastFrame: 0
     skipFirstFrameWhenLooping: 0
     clickOffset: {x: 0, y: 0}
