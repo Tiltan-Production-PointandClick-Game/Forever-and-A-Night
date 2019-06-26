@@ -4,7 +4,8 @@
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -30,6 +31,7 @@ MonoBehaviour:
   onlyWalkWhenOverNavMesh: 0
   onlyShowInventoryLabelOverHotspots: 1
   inventoryCursorSize: 0.04
+  allowIconInput: 1
   waitIcon:
     texture: {fileID: 0}
     isAnimated: 0
@@ -44,12 +46,12 @@ MonoBehaviour:
     frameSpeeds: []
     alwaysAnimate: 0
   pointerIcon:
-    texture: {fileID: 2800000, guid: 5c83780962ed843c0928648679746938, type: 3}
+    texture: {fileID: 2800000, guid: 30b6d90cff7af844e9a5cc8e1819c6d5, type: 3}
     isAnimated: 0
     numFrames: 1
     numRows: 1
     numCols: 1
-    size: 0.015
+    size: 0.07
     animSpeed: 4
     endAnimOnLastFrame: 0
     skipFirstFrameWhenLooping: 0
@@ -96,28 +98,30 @@ MonoBehaviour:
     label: to
     lineID: 106
   cursorIcons:
-  - texture: {fileID: 2800000, guid: fca3605bfa5c847a19ca115a1c925bd1, type: 3}
+  - texture: {fileID: 2800000, guid: 22ad5cee1c5cb2a40b4b9544fad00b0c, type: 3}
     isAnimated: 0
-    numFrames: 1
+    numFrames: 2
     numRows: 1
-    numCols: 1
-    size: 0.04
+    numCols: 2
+    size: 0.07
     animSpeed: 4
     endAnimOnLastFrame: 0
     skipFirstFrameWhenLooping: 0
     clickOffset: {x: 0, y: 0}
-    frameSpeeds: []
-    alwaysAnimate: 0
+    frameSpeeds:
+    - 1
+    - 1
+    alwaysAnimate: 1
     dontCycle: 0
     label: Use
     lineID: 63
     id: 0
-  - texture: {fileID: 2800000, guid: f03835de3da7f442f92582f0dd5e5863, type: 3}
+  - texture: {fileID: 2800000, guid: 33476e9df62d08f4a8a863ec164eea01, type: 3}
     isAnimated: 0
     numFrames: 1
     numRows: 1
     numCols: 1
-    size: 0.04
+    size: 0.07
     animSpeed: 4
     endAnimOnLastFrame: 0
     skipFirstFrameWhenLooping: 0
@@ -128,12 +132,12 @@ MonoBehaviour:
     label: Talk to
     lineID: 64
     id: 1
-  - texture: {fileID: 2800000, guid: e0394f989f329496584e377a81d4031f, type: 3}
+  - texture: {fileID: 2800000, guid: 3bdc038566d697a49abdff83a59f7bcf, type: 3}
     isAnimated: 0
     numFrames: 1
     numRows: 1
     numCols: 1
-    size: 0.04
+    size: 0.07
     animSpeed: 4
     endAnimOnLastFrame: 0
     skipFirstFrameWhenLooping: 0

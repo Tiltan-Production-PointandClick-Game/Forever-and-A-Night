@@ -1,0 +1,15 @@
+#
+# Sprite sheet data for Unity.
+#
+# To import these sprites into your Unity project, download "TexturePackerImporter":
+# https://www.codeandweb.com/texturepacker/unity
+#
+# $TexturePacker:SmartUpdate:df0afd692972f706a6fc72d66f023c21:80e3ae40888a56e3917b3e3e6e268d56:4276fb773a20499f216e36cb591168a7$
+#
+:format=40300
+:texture=Idle_Cursor.png
+:size=32x52
+:pivotpoints=enabled
+:borders=disabled
+
+ezgif.com-gif-maker (7);1;1;30;50; 4.1;0.52; 0;0;0;0; 11;30;32;30;12;25;7;24;0;8;0;7;7;0;14;0;34;6;34;6;50;24;50; 9;8;9;10;6;7;8;0;8;10;5;6;8;2;3;5;3;4;5;8;1;2;8;0;1;8;2;5
