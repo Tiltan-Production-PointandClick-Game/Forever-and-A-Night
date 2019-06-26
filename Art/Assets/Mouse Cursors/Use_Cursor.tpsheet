@@ -1,0 +1,16 @@
+#
+# Sprite sheet data for Unity.
+#
+# To import these sprites into your Unity project, download "TexturePackerImporter":
+# https://www.codeandweb.com/texturepacker/unity
+#
+# $TexturePacker:SmartUpdate:acad795fe4a868e75cffcf339471f669:24a3ed4f1b83356a1de17688de4e306b:a2694d0417ec1c01344524b70122d063$
+#
+:format=40300
+:texture=Use_Cursor.png
+:size=100x56
+:pivotpoints=enabled
+:borders=disabled
+
+Use-0;0;2;49;54; 0.5;0.5; 0;0;0;0
+Use-1;49;2;49;54; 0.5;0.5; 0;0;0;0

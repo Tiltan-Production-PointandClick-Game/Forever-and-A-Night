@@ -29,6 +29,7 @@ MonoBehaviour:
   skipThresholdTime: 0
   endScrollBeforeSkip: 0
   scrollingTextFactorsLength: 0
+  useAssetBundles: 0
   searchAudioFiles: 1
   autoNameSpeechFiles: 1
   autoSpeechFolder: Speech
@@ -48,6 +49,10 @@ MonoBehaviour:
   languages:
   - Original
   languageIsRightToLeft: 00
+  languageAudioAssetBundles:
+  - 
+  languageLipsyncAssetBundles:
+  - 
   ignoreOriginalText: 0
   sfxDucking: 0
   musicDucking: 0
@@ -62,3 +67,4 @@ MonoBehaviour:
   mergeMatchingSpeechIDs: 0
   useSpeechTags: 0
   speechTags: []
+  previewMenuName: 

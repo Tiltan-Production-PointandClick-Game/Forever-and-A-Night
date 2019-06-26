@@ -1,0 +1,16 @@
+#
+# Sprite sheet data for Unity.
+#
+# To import these sprites into your Unity project, download "TexturePackerImporter":
+# https://www.codeandweb.com/texturepacker/unity
+#
+# $TexturePacker:SmartUpdate:e3f109a543becc27e7b9b30087774e43:3af58fd87b10a769d5521a1884ee405d:27ea0501c51c44cfa81da28716584c0a$
+#
+:format=40300
+:texture=EnterDream_Cursor.png
+:size=108x56
+:pivotpoints=enabled
+:borders=disabled
+
+Enter Dream-0;0;2;54;54; 0.5;0.5; 0;0;0;0
+Enter Dream-1;54;2;54;54; 0.5;0.5; 0;0;0;0

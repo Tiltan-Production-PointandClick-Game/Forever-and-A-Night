@@ -1,0 +1,16 @@
+#
+# Sprite sheet data for Unity.
+#
+# To import these sprites into your Unity project, download "TexturePackerImporter":
+# https://www.codeandweb.com/texturepacker/unity
+#
+# $TexturePacker:SmartUpdate:a12f43e472cd1fa98bef99c22a0b8606:2c3bbf6bd60311b2041ca60d02191733:f723e36223612e0d1e1b3edd7e3c26cf$
+#
+:format=40300
+:texture=OpenDoor_Cursor.png
+:size=108x56
+:pivotpoints=enabled
+:borders=disabled
+
+Open Door-0;0;2;54;54; 0.5;0.5; 0;0;0;0
+Open Door-1;54;2;54;54; 0.5;0.5; 0;0;0;0

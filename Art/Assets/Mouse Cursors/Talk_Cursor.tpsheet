@@ -1,0 +1,18 @@
+#
+# Sprite sheet data for Unity.
+#
+# To import these sprites into your Unity project, download "TexturePackerImporter":
+# https://www.codeandweb.com/texturepacker/unity
+#
+# $TexturePacker:SmartUpdate:80ab4581511f40c94d2ca1293681de14:afe6e82046c566dbe5dbddeea57118cc:9c9c4c45f005c38b704e7d184949f20d$
+#
+:format=40300
+:texture=Talk_Cursor.png
+:size=216x56
+:pivotpoints=enabled
+:borders=disabled
+
+Talk-0;0;2;54;54; 0.5;0.5; 0;0;0;0
+Talk-1;54;2;54;54; 0.5;0.5; 0;0;0;0
+Talk-2;108;2;54;54; 0.5;0.5; 0;0;0;0
+Talk-3;162;2;54;54; 0.5;0.5; 0;0;0;0

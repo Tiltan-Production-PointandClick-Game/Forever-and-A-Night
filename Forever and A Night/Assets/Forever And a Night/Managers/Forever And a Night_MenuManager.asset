@@ -284,6 +284,7 @@ MonoBehaviour:
   actionListOnTurnOn: {fileID: 0}
   actionListOnTurnOff: {fileID: 0}
   updateWhenFadeOut: 1
+  hideDuringSaveScreenshots: 1
   fitWithinScreen: 1
   backgroundTexture: {fileID: 2800000, guid: 5f4f3dd6223164fe49aea7eb6c0bc529, type: 3}
   visibleElements:
@@ -1059,6 +1060,7 @@ MonoBehaviour:
   categoryIDs: 
   linkUIGraphic: 0
   preventInteractions: 1
+  limitMaxScroll: 1
   updateHotspotLabelWhenHover: 0
   items: []
   selectItemsAfterTaking: 1
@@ -1422,6 +1424,7 @@ MonoBehaviour:
   actionListOnTurnOn: {fileID: 0}
   actionListOnTurnOff: {fileID: 0}
   updateWhenFadeOut: 1
+  hideDuringSaveScreenshots: 1
   fitWithinScreen: 1
   backgroundTexture: {fileID: 2800000, guid: 5f4f3dd6223164fe49aea7eb6c0bc529, type: 3}
   visibleElements:
@@ -1661,6 +1664,7 @@ MonoBehaviour:
   actionListOnTurnOn: {fileID: 0}
   actionListOnTurnOff: {fileID: 0}
   updateWhenFadeOut: 1
+  hideDuringSaveScreenshots: 1
   fitWithinScreen: 1
   backgroundTexture: {fileID: 2800000, guid: 5f4f3dd6223164fe49aea7eb6c0bc529, type: 3}
   visibleElements:
@@ -2163,6 +2167,7 @@ MonoBehaviour:
   categoryIDs: 
   linkUIGraphic: 0
   preventInteractions: 1
+  limitMaxScroll: 1
   updateHotspotLabelWhenHover: 0
   items: []
   selectItemsAfterTaking: 1
@@ -2206,6 +2211,7 @@ MonoBehaviour:
   actionListOnTurnOn: {fileID: 0}
   actionListOnTurnOff: {fileID: 0}
   updateWhenFadeOut: 1
+  hideDuringSaveScreenshots: 1
   fitWithinScreen: 1
   backgroundTexture: {fileID: 2800000, guid: 5f4f3dd6223164fe49aea7eb6c0bc529, type: 3}
   visibleElements:
@@ -2444,6 +2450,7 @@ MonoBehaviour:
   actionListOnTurnOn: {fileID: 0}
   actionListOnTurnOff: {fileID: 0}
   updateWhenFadeOut: 1
+  hideDuringSaveScreenshots: 1
   fitWithinScreen: 1
   backgroundTexture: {fileID: 2800000, guid: 5f4f3dd6223164fe49aea7eb6c0bc529, type: 3}
   visibleElements:
@@ -2582,6 +2589,7 @@ MonoBehaviour:
   categoryIDs: 
   linkUIGraphic: 0
   preventInteractions: 1
+  limitMaxScroll: 1
   updateHotspotLabelWhenHover: 0
   items: []
   selectItemsAfterTaking: 1
@@ -2625,6 +2633,7 @@ MonoBehaviour:
   actionListOnTurnOn: {fileID: 0}
   actionListOnTurnOff: {fileID: 0}
   updateWhenFadeOut: 1
+  hideDuringSaveScreenshots: 1
   fitWithinScreen: 1
   backgroundTexture: {fileID: 2800000, guid: 5f4f3dd6223164fe49aea7eb6c0bc529, type: 3}
   visibleElements:
@@ -2796,6 +2805,7 @@ MonoBehaviour:
   actionListOnTurnOn: {fileID: 0}
   actionListOnTurnOff: {fileID: 0}
   updateWhenFadeOut: 1
+  hideDuringSaveScreenshots: 1
   fitWithinScreen: 1
   backgroundTexture: {fileID: 0}
   visibleElements:
@@ -2967,6 +2977,7 @@ MonoBehaviour:
   actionListOnTurnOn: {fileID: 11400000, guid: f08f08e6520c746f289f229b9ffebade, type: 2}
   actionListOnTurnOff: {fileID: 0}
   updateWhenFadeOut: 1
+  hideDuringSaveScreenshots: 1
   fitWithinScreen: 1
   backgroundTexture: {fileID: 2800000, guid: 5f4f3dd6223164fe49aea7eb6c0bc529, type: 3}
   visibleElements:
@@ -3594,6 +3605,7 @@ MonoBehaviour:
   importSaveFilename: 
   checkImportBool: 0
   checkImportVar: 0
+  allowEmptySlots: 0
   fixedOption: 0
   optionToShow: 0
   parameterID: -1
@@ -3958,6 +3970,7 @@ MonoBehaviour:
   categoryIDs: 
   linkUIGraphic: 0
   preventInteractions: 0
+  limitMaxScroll: 1
   updateHotspotLabelWhenHover: 0
   items:
   - label: Weird Lolipop
@@ -4090,6 +4103,7 @@ MonoBehaviour:
   importSaveFilename: 
   checkImportBool: 0
   checkImportVar: 0
+  allowEmptySlots: 0
   fixedOption: 0
   optionToShow: 0
   parameterID: -1
@@ -4136,6 +4150,7 @@ MonoBehaviour:
   actionListOnTurnOn: {fileID: 11400000, guid: c6e29f6ea3d084d049c474742119836c, type: 2}
   actionListOnTurnOff: {fileID: 0}
   updateWhenFadeOut: 1
+  hideDuringSaveScreenshots: 1
   fitWithinScreen: 1
   backgroundTexture: {fileID: 2800000, guid: 5f4f3dd6223164fe49aea7eb6c0bc529, type: 3}
   visibleElements:
@@ -4246,6 +4261,7 @@ MonoBehaviour:
   actionListOnTurnOn: {fileID: 0}
   actionListOnTurnOff: {fileID: 0}
   updateWhenFadeOut: 1
+  hideDuringSaveScreenshots: 1
   fitWithinScreen: 1
   backgroundTexture: {fileID: 2800000, guid: 5f4f3dd6223164fe49aea7eb6c0bc529, type: 3}
   visibleElements:
@@ -4494,6 +4510,7 @@ MonoBehaviour:
   actionListOnTurnOn: {fileID: 0}
   actionListOnTurnOff: {fileID: 0}
   updateWhenFadeOut: 1
+  hideDuringSaveScreenshots: 1
   fitWithinScreen: 1
   backgroundTexture: {fileID: 2800000, guid: 5f4f3dd6223164fe49aea7eb6c0bc529, type: 3}
   visibleElements:
@@ -5142,6 +5159,7 @@ MonoBehaviour:
   actionListOnTurnOn: {fileID: 0}
   actionListOnTurnOff: {fileID: 0}
   updateWhenFadeOut: 1
+  hideDuringSaveScreenshots: 1
   fitWithinScreen: 1
   backgroundTexture: {fileID: 2800000, guid: 5f4f3dd6223164fe49aea7eb6c0bc529, type: 3}
   visibleElements:
@@ -5423,6 +5441,7 @@ MonoBehaviour:
   categoryIDs: 
   linkUIGraphic: 0
   preventInteractions: 0
+  limitMaxScroll: 1
   updateHotspotLabelWhenHover: 0
   items: []
   selectItemsAfterTaking: 1
@@ -5466,6 +5485,7 @@ MonoBehaviour:
   actionListOnTurnOn: {fileID: 0}
   actionListOnTurnOff: {fileID: 0}
   updateWhenFadeOut: 1
+  hideDuringSaveScreenshots: 1
   fitWithinScreen: 1
   backgroundTexture: {fileID: 2800000, guid: 1638cf3fb902c2d45a30dac8901e8d2b, type: 3}
   visibleElements: []
@@ -5686,6 +5706,7 @@ MonoBehaviour:
   actionListOnTurnOn: {fileID: 0}
   actionListOnTurnOff: {fileID: 0}
   updateWhenFadeOut: 1
+  hideDuringSaveScreenshots: 1
   fitWithinScreen: 1
   backgroundTexture: {fileID: 0}
   visibleElements:
@@ -5789,6 +5810,7 @@ MonoBehaviour:
   actionListOnTurnOn: {fileID: 0}
   actionListOnTurnOff: {fileID: 0}
   updateWhenFadeOut: 1
+  hideDuringSaveScreenshots: 1
   fitWithinScreen: 1
   backgroundTexture: {fileID: 10916, guid: 0000000000000000f000000000000000, type: 0}
   visibleElements:
