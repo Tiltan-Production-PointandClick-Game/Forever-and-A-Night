@@ -2619,9 +2619,9 @@ MonoBehaviour:
   isLocked: 0
   id: 4
   title: InGame
-  manualSize: {x: 7.3, y: 6.580347}
+  manualSize: {x: 7.3000007, y: 6.5769424}
   positionType: 1
-  manualPosition: {x: 22.484001, y: 334.616}
+  manualPosition: {x: 25.878502, y: 385.879}
   positionSmoothing: 0
   alignment: 6
   toggleKey: 
@@ -2690,13 +2690,13 @@ MonoBehaviour:
   speechProximityLimit: 0
   speechProximityDistance: 10
   deleteUIWhenTurnOff: 0
-  biggestElementSize: {x: 41.888, y: 19.688002}
+  biggestElementSize: {x: 48.212006, y: 22.697}
   rect:
     serializedVersion: 2
     x: 0
-    y: 323.232
-    width: 44.968002
-    height: 22.768002
+    y: 372.758
+    width: 51.757004
+    height: 26.242
   showInFilter: 1
 --- !u!114 &114415566242296512
 MonoBehaviour:
@@ -4822,10 +4822,10 @@ MonoBehaviour:
   linkedUiID: 13963684
   relativeRect:
     serializedVersion: 2
-    x: 3.08
-    y: 3.08
-    width: 38.808
-    height: 16.608002
+    x: 3.545
+    y: 3.545
+    width: 44.667004
+    height: 19.152
   relativePosition: {x: 0, y: 0}
   numSlots: 1
   uiButton: {fileID: 0}
