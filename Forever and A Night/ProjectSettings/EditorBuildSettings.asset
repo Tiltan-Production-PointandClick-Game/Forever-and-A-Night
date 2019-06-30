@@ -11,9 +11,12 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
-  - enabled: 1
-    path: Assets/_Scenes/Opening CutScene.unity
+  - enabled: 0
+    path: Assets/__DELETED_GUID_Trash/bd9cc5ab77527924ab7b50f935112077
     guid: bd9cc5ab77527924ab7b50f935112077
+  - enabled: 1
+    path: Assets/_Scenes/OpeningCutScene.unity
+    guid: 70d172504b9cf184da397b1f7d1a4933
   - enabled: 1
     path: Assets/_Scenes/Game/101 - Gate.unity
     guid: e3909be17153c3249a23924f2cc7e995

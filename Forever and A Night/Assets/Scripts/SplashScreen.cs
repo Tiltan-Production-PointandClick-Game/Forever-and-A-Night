@@ -1,27 +1,18 @@
 ﻿using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
 
 public class SplashScreen : MonoBehaviour
 {
-    Image uiImage;
+    CanvasGroup currentUiElement;
     Canvas parentCanvas;
 
     [SerializeField]
-    Sprite[] images; // Pictures we want to cycle through
-
-    [SerializeField]
-    bool clickToProceed;
+    CanvasGroup[] cgElements; // Pictures we want to cycle through
 
     [SerializeField]
     float fadeTime; // amount of time it takes to fade an image
 
-    [SerializeField]
-    float displayTime; // amount of time a non-transparent image displays before fading out
-
-    [SerializeField]
-    float transparentTime; // amount of time an image stays transparent before fading in
 
     void Start()
     {
@@ -30,10 +21,16 @@ public class SplashScreen : MonoBehaviour
         if (parentCanvas.worldCamera != Camera.main)
             parentCanvas.worldCamera = Camera.main;
 
-        uiImage = GetComponentInChildren<Image>();
-        uiImage.sprite = images[0];
+        currentUiElement = GetComponentInChildren<CanvasGroup>();
 
+        currentUiElement = cgElements[0];
 
+        for (int i = 0; i < cgElements.Length; i++)
+        {
+            currentUiElement.alpha = 0;
+        }
+
+        WaitForMouseClick();
         StartCoroutine(CycleImages());
 
     }
@@ -45,77 +42,32 @@ public class SplashScreen : MonoBehaviour
 
     IEnumerator CycleImages()
     {
-        if (!clickToProceed)
+
+        for (int i = 0; i < cgElements.Length; i++)
         {
-            for (int i = 0; i < images.Length; i++)
+            currentUiElement = cgElements[i];
+
+            WaitForMouseClick();
+
+            //Fade in for loop
+            for (float a = 0; a < 1; a += Time.deltaTime / fadeTime)
             {
-                uiImage.sprite = images[i];
-                uiImage.color = new Color(uiImage.color.r, uiImage.color.g, uiImage.color.b, 0);
+                currentUiElement.alpha = a;
 
-                yield return new WaitForSeconds(transparentTime);
-
-                //Fade in for loop
-                for (float alpha = 0; alpha < 1; alpha += Time.deltaTime / fadeTime)
-                {
-                    uiImage.color = new Color(uiImage.color.r, uiImage.color.g, uiImage.color.b, alpha);
-
-                    yield return null; // Wait for frame then return to execution
-                }
-
-                yield return new WaitForSeconds(displayTime);
-
-                //Fade out for loop
-                for (float alpha = 1; alpha > 0; alpha -= Time.deltaTime / fadeTime)
-                {
-                    uiImage.color = new Color(uiImage.color.r, uiImage.color.g, uiImage.color.b, alpha);
-
-                    yield return null; // Wait for frame then return to execution
-                }
+                yield return null; // Wait for frame then return to execution
             }
 
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            yield return StartCoroutine(WaitForMouseClick());
 
-        }
-        else
-        {
-            for (int i = 0; i < images.Length; i++)
+            //Fade out for loop
+            for (float a = 1; a > 0; a -= Time.deltaTime / fadeTime)
             {
-                uiImage.sprite = images[i];
-                uiImage.color = new Color(uiImage.color.r, uiImage.color.g, uiImage.color.b, 0);
-
-                yield return StartCoroutine(WaitForMouseClick());
-
-                //yield return new WaitForSeconds(transparentTime);
-
-                //Fade in for loop
-                for (float alpha = 0; alpha < 1; alpha += Time.deltaTime / fadeTime)
-                {
-
-                    uiImage.color = new Color(uiImage.color.r, uiImage.color.g, uiImage.color.b, alpha);
-
-
-                    yield return null; // Wait for frame then return to execution
-                }
-
-                yield return StartCoroutine(WaitForMouseClick());
-
-                //Fade out for loop
-                for (float alpha = 1; alpha > 0; alpha -= Time.deltaTime / fadeTime)
-                {
-                    uiImage.color = new Color(uiImage.color.r, uiImage.color.g, uiImage.color.b, alpha);
-
-
-                    yield return null; // Wait for frame then return to execution
-                }
-
-                yield return StartCoroutine(WaitForMouseClick());
-
+                currentUiElement.alpha = a;
+                yield return null; // Wait for frame then return to execution
             }
-
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-
-
         }
+
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
 
     }
 
