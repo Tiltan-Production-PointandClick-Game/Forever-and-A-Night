@@ -58,7 +58,7 @@ MonoBehaviour:
     hotspotPrefix2:
       label: on
       lineID: -1
-    useActionList: {fileID: 11400000, guid: 8c57587fef07ef9458e9d0f647ba44d3, type: 2}
+    useActionList: {fileID: 0}
     lookActionList: {fileID: 0}
     interactions: []
     combineActionList: []
