@@ -43,7 +43,7 @@ Camera:
   m_Enabled: 0
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0.019607844}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0.019607844}
   m_projectionMatrixMode: 1
   m_SensorSize: {x: 36, y: 24}
   m_LensShift: {x: 0, y: 0}
@@ -59,7 +59,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 7.5
+  orthographic size: 7
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
@@ -93,10 +93,10 @@ MonoBehaviour:
   focalDistance: 10
   is2D: 0
   followCursor: 1
-  cursorInfluence: {x: 1.5, y: 1.5}
-  constrainCursorInfluenceX: 1
+  cursorInfluence: {x: 1.5, y: 2}
+  constrainCursorInfluenceX: 0
   limitCursorInfluenceX: {x: 0, y: 0.7}
-  constrainCursorInfluenceY: 1
+  constrainCursorInfluenceY: 0
   limitCursorInfluenceY: {x: 0, y: 0}
   followCursorSpeed: 4
   lockHorizontal: 0

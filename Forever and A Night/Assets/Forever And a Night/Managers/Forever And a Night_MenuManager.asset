@@ -940,7 +940,7 @@ MonoBehaviour:
   rectTransformID: 0
   uiTransitionType: 0
   uiPositionType: 0
-  isEditing: 1
+  isEditing: 0
   isLocked: 0
   id: 15
   title: Play Menu
@@ -3248,15 +3248,15 @@ MonoBehaviour:
   rectTransformID: 13953742
   uiTransitionType: 1
   uiPositionType: 0
-  isEditing: 0
+  isEditing: 1
   isLocked: 0
   id: 4
   title: InGame
   manualSize: {x: 31, y: 16}
   positionType: 1
-  manualPosition: {x: 100.75, y: 336.72}
+  manualPosition: {x: 119.97, y: 34.8}
   positionSmoothing: 0
-  alignment: 6
+  alignment: 0
   toggleKey: 
   ignoreMouseClicks: 0
   pauseWhenEnabled: 0
@@ -3329,9 +3329,9 @@ MonoBehaviour:
   rect:
     serializedVersion: 2
     x: 0
-    y: 307.44
-    width: 201.5
-    height: 58.559998
+    y: 0
+    width: 239.94
+    height: 69.6
   showInFilter: 1
 --- !u!114 &114462996126742616
 MonoBehaviour:
@@ -5115,10 +5115,10 @@ MonoBehaviour:
   linkedUiID: 13963684
   relativeRect:
     serializedVersion: 2
-    x: 80.600006
+    x: 95.976
     y: 0
-    width: 65
-    height: 54.9
+    width: 77.399994
+    height: 65.25
   relativePosition: {x: 40, y: 0}
   numSlots: 1
   uiButton: {fileID: 0}
@@ -5187,8 +5187,8 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 65
-    height: 54.9
+    width: 77.399994
+    height: 65.25
   relativePosition: {x: 0, y: 0}
   numSlots: 1
   uiButton: {fileID: 0}
