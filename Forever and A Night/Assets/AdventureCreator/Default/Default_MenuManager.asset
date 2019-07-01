@@ -3028,13 +3028,13 @@ MonoBehaviour:
   rectTransformID: 13953742
   uiTransitionType: 1
   uiPositionType: 0
-  isEditing: 0
+  isEditing: 1
   isLocked: 0
   id: 4
   title: InGame
-  manualSize: {x: 7.3000007, y: 6.5788465}
+  manualSize: {x: 7.3, y: 6.5759563}
   positionType: 1
-  manualPosition: {x: 27.010002, y: 402.31598}
+  manualPosition: {x: 23.725, y: 353.966}
   positionSmoothing: 0
   alignment: 6
   toggleKey: 
@@ -3103,13 +3103,13 @@ MonoBehaviour:
   speechProximityLimit: 0
   speechProximityDistance: 10
   deleteUIWhenTurnOff: 0
-  biggestElementSize: {x: 50.320004, y: 23.668001}
+  biggestElementSize: {x: 44.2, y: 20.818}
   rect:
     serializedVersion: 2
     x: 0
-    y: 388.632
-    width: 54.020004
-    height: 27.368002
+    y: 341.932
+    width: 47.45
+    height: 24.068
   showInFilter: 1
 --- !u!114 &11451452
 MonoBehaviour:
@@ -3150,10 +3150,10 @@ MonoBehaviour:
   linkedUiID: 13963684
   relativeRect:
     serializedVersion: 2
-    x: 3.7
-    y: 3.7
-    width: 46.620003
-    height: 19.968
+    x: 3.25
+    y: 3.25
+    width: 40.95
+    height: 17.568
   relativePosition: {x: 0, y: 0}
   numSlots: 1
   uiButton: {fileID: 0}
@@ -4591,10 +4591,10 @@ MonoBehaviour:
   linkedUiID: 318248
   relativeRect:
     serializedVersion: 2
-    x: 3.785
-    y: 3.785
-    width: 121.12
-    height: 21.29036
+    x: 3.25
+    y: 3.25
+    width: 104
+    height: 18.300001
   relativePosition: {x: 0, y: 0}
   numSlots: 1
   uiButton: {fileID: 0}
@@ -4661,10 +4661,10 @@ MonoBehaviour:
   linkedUiID: 326570
   relativeRect:
     serializedVersion: 2
-    x: 3.785
-    y: 28.86036
-    width: 121.12
-    height: 21.29036
+    x: 3.25
+    y: 24.800001
+    width: 104
+    height: 18.300001
   relativePosition: {x: 0, y: 0}
   numSlots: 1
   uiButton: {fileID: 0}
@@ -4731,10 +4731,10 @@ MonoBehaviour:
   linkedUiID: 329416
   relativeRect:
     serializedVersion: 2
-    x: 3.785
-    y: 53.93572
-    width: 121.12
-    height: 21.29036
+    x: 3.25
+    y: 46.350002
+    width: 104
+    height: 18.300001
   relativePosition: {x: 0, y: 0}
   numSlots: 1
   uiButton: {fileID: 0}
@@ -4801,10 +4801,10 @@ MonoBehaviour:
   linkedUiID: 332646
   relativeRect:
     serializedVersion: 2
-    x: 3.785
-    y: 79.011086
-    width: 121.12
-    height: 21.29036
+    x: 3.25
+    y: 67.9
+    width: 104
+    height: 18.300001
   relativePosition: {x: 0, y: 0}
   numSlots: 1
   uiButton: {fileID: 0}
@@ -4873,8 +4873,8 @@ MonoBehaviour:
     serializedVersion: 2
     x: 4.845
     y: 133.225
-    width: 121.12
-    height: 21.29036
+    width: 104
+    height: 18.300001
   relativePosition: {x: 0, y: 0}
   numSlots: 1
   uiButton: {fileID: 0}
@@ -4941,10 +4941,10 @@ MonoBehaviour:
   linkedUiID: 335904
   relativeRect:
     serializedVersion: 2
-    x: 3.785
-    y: 104.08645
-    width: 121.12
-    height: 21.29036
+    x: 3.25
+    y: 89.450005
+    width: 104
+    height: 18.300001
   relativePosition: {x: 0, y: 0}
   numSlots: 1
   uiButton: {fileID: 0}
@@ -4991,13 +4991,13 @@ MonoBehaviour:
   rectTransformID: 310968
   uiTransitionType: 1
   uiPositionType: 0
-  isEditing: 1
+  isEditing: 0
   isLocked: 0
   id: 12
   title: Pause
-  manualSize: {x: 17, y: 30.3334}
+  manualSize: {x: 17, y: 30.327871}
   positionType: 0
-  manualPosition: {x: 378.5, y: 213}
+  manualPosition: {x: 325, y: 183}
   positionSmoothing: 0
   alignment: 4
   toggleKey: Menu
@@ -5075,13 +5075,13 @@ MonoBehaviour:
   speechProximityLimit: 0
   speechProximityDistance: 10
   deleteUIWhenTurnOff: 0
-  biggestElementSize: {x: 124.90501, y: 125.37681}
+  biggestElementSize: {x: 107.25, y: 107.75001}
   rect:
     serializedVersion: 2
-    x: 314.155
-    y: 148.4191
-    width: 128.69
-    height: 129.1618
+    x: 269.75
+    y: 127.5
+    width: 110.5
+    height: 111.00001
   showInFilter: 1
 --- !u!114 &11458372
 MonoBehaviour:

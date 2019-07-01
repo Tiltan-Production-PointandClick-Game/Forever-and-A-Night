@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Forever And a Night_VariablesManager
   m_EditorClassIdentifier: 
   vars:
-  - label: Well Access
+  - label: isNewGameStarted
     id: 0
     type: 0
     val: 0
@@ -24,7 +24,7 @@ MonoBehaviour:
     link: 0
     pmVar: 
     updateLinkOnStart: 0
-    isEditing: 1
+    isEditing: 0
     canTranslate: 1
     textValLineID: -1
     popUpsLineID: -1
