@@ -41,6 +41,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_Scenes/Game/105 - Town Exit.unity
     guid: d210345a523bba24990ed28814755099
+  - enabled: 1
+    path: Assets/_Scenes/Game/106 - Lake.unity
+    guid: fe781a149e713ef4cbedb38fedec9cd1
   - enabled: 0
     path: Assets/__DELETED_GUID_Trash/29fca634825e0414db31438e6f335d5c
     guid: 29fca634825e0414db31438e6f335d5c

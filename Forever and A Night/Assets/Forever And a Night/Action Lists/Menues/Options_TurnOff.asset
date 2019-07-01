@@ -183,8 +183,8 @@ MonoBehaviour:
   isBreakPoint: 0
   nodeRect:
     serializedVersion: 2
-    x: 309
-    y: 263
+    x: 368
+    y: 373
     width: 300
     height: 140
   nodeHeight: 0

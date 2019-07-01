@@ -10,19 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3cc1f751990d444ef9e1381090933b8b, type: 3}
-  m_Name: OnStartGame
+  m_Name: TravelMap_106Lake_OnClick
   m_EditorClassIdentifier: 
   actions:
-  - {fileID: 114509208905878366}
+  - {fileID: 114146786273620998}
   isSkippable: 1
-  actionListType: 0
+  actionListType: 1
   unfreezePauseMenus: 1
   useParameters: 0
   canRunMultipleInstances: 0
-  canSurviveSceneChanges: 0
+  canSurviveSceneChanges: 1
   parameters: []
   tagID: 0
---- !u!114 &114509208905878366
+--- !u!114 &114146786273620998
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -31,15 +31,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f62d99af8064d446691b72ad13d423e7, type: 3}
+  m_Script: {fileID: 11500000, guid: f1d11677f69f745f88dbe9922511d53f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   id: 0
-  category: 13
-  title: Constrain
-  description: Locks and unlocks various aspects of Player control. When using Direct
-    or First Person control, can also be used to specify a Path object to restrict
-    movement to.
+  category: 15
+  title: Switch
+  description: 'Moves the Player to a new scene. The scene must be listed in Unity''s
+    Build Settings. By default, the screen will cut to black during the transition,
+    but the last frame of the current scene can instead be overlayed. This allows
+    for cinematic effects: if the next scene fades in, it will cause a crossfade effect;
+    if the next scene doesn''t fade, it will cause a straight cut.'
   isDisplayed: 1
   showComment: 0
   comment: 
@@ -67,16 +69,17 @@ MonoBehaviour:
     x: 14
     y: 14
     width: 300
-    height: 158
+    height: 221
   nodeHeight: 0
-  doUpLock: 2
-  doDownLock: 2
-  doLeftLock: 2
-  doRightLock: 2
-  doRunLock: 1
-  doJumpLock: 2
-  freeAimLock: 2
-  cursorState: 2
-  doGravityLock: 2
-  doHotspotHeadTurnLock: 2
-  movePath: {fileID: 0}
+  chooseSceneBy: 1
+  sceneNumber: 0
+  sceneNumberParameterID: -1
+  sceneName: 106 - Lake
+  sceneNameParameterID: -1
+  assignScreenOverlay: 1
+  onlyPreload: 0
+  relativePosition: 0
+  relativeMarker: {fileID: 0}
+  relativeMarkerID: 0
+  relativeMarkerParameterID: -1
+  forceReload: 0
