@@ -380,7 +380,7 @@ MonoBehaviour:
   rectTransformID: 0
   uiTransitionType: 0
   uiPositionType: 0
-  isEditing: 0
+  isEditing: 1
   isLocked: 0
   id: 4
   title: Load
@@ -649,7 +649,7 @@ MonoBehaviour:
   rectTransformID: 0
   uiTransitionType: 0
   uiPositionType: 0
-  isEditing: 1
+  isEditing: 0
   isLocked: 0
   id: 7
   title: Crafting
@@ -1887,7 +1887,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ID: 1
-  isEditing: 0
+  isEditing: 1
   title: SavesList
   slotSize: {x: 40, y: 6.331471}
   sizeType: 1

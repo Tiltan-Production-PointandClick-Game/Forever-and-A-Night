@@ -275,13 +275,13 @@ MonoBehaviour:
   rectTransformID: 1386510
   uiTransitionType: 1
   uiPositionType: 0
-  isEditing: 0
+  isEditing: 1
   isLocked: 0
   id: 2
   title: Load
-  manualSize: {x: 30.999998, y: 33.5556}
+  manualSize: {x: 31, y: 33.551914}
   positionType: 0
-  manualPosition: {x: 472, y: 265.5}
+  manualPosition: {x: 325, y: 183}
   positionSmoothing: 0
   alignment: 0
   toggleKey: 
@@ -354,13 +354,13 @@ MonoBehaviour:
   speechProximityLimit: 0
   speechProximityDistance: 10
   deleteUIWhenTurnOff: 0
-  biggestElementSize: {x: 287.91998, y: 173.45801}
+  biggestElementSize: {x: 198.25, y: 119.55001}
   rect:
     serializedVersion: 2
-    x: 325.68
-    y: 176.411
-    width: 292.63998
-    height: 178.17801
+    x: 224.25
+    y: 121.59999
+    width: 201.5
+    height: 122.80001
   showInFilter: 1
 --- !u!114 &11400008
 MonoBehaviour:
@@ -487,7 +487,7 @@ MonoBehaviour:
   rectTransformID: 13953742
   uiTransitionType: 1
   uiPositionType: 0
-  isEditing: 1
+  isEditing: 0
   isLocked: 0
   id: 4
   title: InGame
@@ -1427,7 +1427,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ID: 0
-  isEditing: 1
+  isEditing: 0
   title: TitleLabel
   slotSize: {x: 30, y: 5}
   sizeType: 1
@@ -1453,10 +1453,10 @@ MonoBehaviour:
   linkedUiID: 1402734
   relativeRect:
     serializedVersion: 2
-    x: 4.72
-    y: 4.72
-    width: 283.19998
-    height: 26.549667
+    x: 3.25
+    y: 3.25
+    width: 195
+    height: 18.300001
   relativePosition: {x: 0, y: 0}
   numSlots: 1
   uiText: {fileID: 0}
@@ -1486,7 +1486,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ID: 1
-  isEditing: 0
+  isEditing: 1
   title: SavesList
   slotSize: {x: 30, y: 5}
   sizeType: 1
@@ -1512,10 +1512,10 @@ MonoBehaviour:
   linkedUiID: 0
   relativeRect:
     serializedVersion: 2
-    x: 4.72
-    y: 35.989666
-    width: 283.19998
-    height: 106.19867
+    x: 3.25
+    y: 24.800001
+    width: 195
+    height: 73.200005
   relativePosition: {x: 0, y: 0}
   numSlots: 4
   uiSlots:
@@ -1595,10 +1595,10 @@ MonoBehaviour:
   linkedUiID: 1468400
   relativeRect:
     serializedVersion: 2
-    x: 4.72
-    y: 146.90834
-    width: 283.19998
-    height: 26.549667
+    x: 3.25
+    y: 101.25001
+    width: 195
+    height: 18.300001
   relativePosition: {x: 0, y: 0}
   numSlots: 1
   uiButton: {fileID: 0}
